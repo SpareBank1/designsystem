@@ -6,7 +6,22 @@ import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
 import { AccordionContext } from './AccordionContext';
 
-export const AccordionItem = ({
+interface AccordionItemProps extends React.ComponentPropsWithoutRef<'div'> {
+    /** The heading */
+    heading: NonNullable<React.ReactNode>;
+    /** The content to appear when expanded */
+    children: NonNullable<React.ReactNode>;
+    /** Should it be open by default */
+    defaultOpen?: boolean;
+    /** Is the item open or collapsed? Used for overriding default behaviour */
+    isOpen?: boolean;
+    /** Callback when the item is open/closed */
+    onToggleOpen?: (isOpen: boolean) => void;
+    /** aria-label for the button */
+    ariaLabel?: string;
+}
+
+export const AccordionItem: React.FC<AccordionItemProps> = ({
     children,
     heading,
     defaultOpen,
@@ -53,7 +68,9 @@ export const AccordionItem = ({
             })}
             {...rest}
         >
-            <H className="ffe-h6 ffe-accordion-item__heading">
+            {React.createElement(
+                `h${headingLevel}`,
+                { className: 'ffe-h6 ffe-accordion-item__heading' },
                 <button
                     type="button"
                     id={buttonId.current}
@@ -76,16 +93,15 @@ export const AccordionItem = ({
                         <span className="ffe-accordion-item__heading-icon-wrapper">
                             <Icon
                                 className="ffe-accordion-item__heading-icon"
-                                icon="expand_more"
                                 fileUrl={expandMoreIcon}
                                 size="sm"
                             />
                         </span>
                     </span>
-                </button>
-            </H>
+                </button>,
+            )}
             <Collapse
-                isOpen={isExpanded}
+                isOpen={!!isExpanded}
                 onRest={() => setIsAnimating(false)}
                 id={contentId.current}
                 aria-labelledby={buttonId.current}
