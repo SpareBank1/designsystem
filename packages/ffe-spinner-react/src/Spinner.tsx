@@ -1,9 +1,18 @@
-import React from 'react';
-import { bool, string, node, oneOf } from 'prop-types';
+import React, { ComponentPropsWithoutRef } from 'react';
 import classNames from 'classnames';
 import texts from './texts';
 
-const Spinner = ({
+export interface SpinnerProps extends ComponentPropsWithoutRef<'div'> {
+    immediate?: boolean;
+    large?: boolean;
+    loadingText?: React.ReactNode;
+    /** 'nb', 'nn', or 'en' */
+    locale?: 'nb' | 'nn' | 'en';
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
+}
+
+export const Spinner: React.FC<SpinnerProps> = ({
     className,
     immediate = false,
     large = false,
@@ -32,16 +41,3 @@ const Spinner = ({
         {loadingText}
     </div>
 );
-
-Spinner.propTypes = {
-    className: string,
-    immediate: bool,
-    large: bool,
-    loadingText: node,
-    /** 'nb', 'nn', or 'en' */
-    locale: oneOf(['en', 'nb', 'nn']),
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg: bool,
-};
-
-export default Spinner;

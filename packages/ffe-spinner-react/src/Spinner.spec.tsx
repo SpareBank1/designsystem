@@ -1,8 +1,8 @@
 import React from 'react';
-import Spinner from '.';
+import { Spinner, SpinnerProps } from './Spinner';
 import { render, screen } from '@testing-library/react';
 
-const renderSpinner = props => render(<Spinner {...props} />);
+const renderSpinner = (props?: SpinnerProps) => render(<Spinner {...props} />);
 
 describe('<Spinner />', () => {
     it('renders classes correctly', () => {
@@ -37,6 +37,6 @@ describe('<Spinner />', () => {
     it('set loadingText correctly', () => {
         renderSpinner({ loadingText: <p>Text</p> });
         const p = screen.getByTestId('spinner-container').querySelector('p');
-        expect(p.textContent).toBe('Text');
+        expect(p?.textContent).toBe('Text');
     });
 });

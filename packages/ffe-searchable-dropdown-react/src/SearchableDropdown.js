@@ -22,7 +22,7 @@ import {
 } from './getNewHighlightedIndex';
 import { useSetAllyMessageItemSelection } from './a11y';
 import Results from './Results';
-import Spinner from '@sb1/ffe-spinner-react';
+import { Spinner } from '@sb1/ffe-spinner-react';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';

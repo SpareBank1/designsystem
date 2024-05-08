@@ -1,9 +1,17 @@
 import React from 'react';
-import { node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 import { AccordionProvider } from './AccordionContext';
 
-export const Accordion = ({ children, headingLevel, className, ...rest }) => {
+interface AccordionProps extends React.ComponentPropsWithoutRef<'div'> {
+    headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
+}
+
+export const Accordion: React.FC<AccordionProps> = ({
+    children,
+    headingLevel,
+    className,
+    ...rest
+}) => {
     return (
         <AccordionProvider headingLevel={headingLevel}>
             <div
@@ -16,13 +24,4 @@ export const Accordion = ({ children, headingLevel, className, ...rest }) => {
             </div>
         </AccordionProvider>
     );
-};
-
-Accordion.propTypes = {
-    /** Accordion items */
-    children: node,
-    /** The level of headings in the AccordionItems */
-    headingLevel: oneOf([1, 2, 3, 4, 5, 6]).isRequired,
-    /** Class assigned the container */
-    className: string,
 };

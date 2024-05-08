@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, arrayOf, number, string, object, bool } from 'prop-types';
-import Spinner from '@sb1/ffe-spinner-react';
+import { Spinner } from '@sb1/ffe-spinner-react';
 
 import SuggestionItem from './SuggestionItem';
 

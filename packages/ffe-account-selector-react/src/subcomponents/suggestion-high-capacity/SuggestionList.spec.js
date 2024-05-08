@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Spinner from '@sb1/ffe-spinner-react';
+import { Spinner } from '@sb1/ffe-spinner-react';
 
 import SuggestionList from './SuggestionList';
 import SuggestionListContainer from './SuggestionListContainer';
