@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = function(opts) {
+module.exports = function (opts) {
     const shared = [
         '--package',
         '@babel/core',
@@ -12,6 +12,8 @@ module.exports = function(opts) {
             opts.cwd || process.cwd(),
             path.join(__dirname, '../../config/babel.config.js'),
         ),
+        '--extensions',
+        '.ts,.js,.tsx,.jsx,.cjs,.mjs',
         '--ignore',
         '**/*.spec.js',
     ];
