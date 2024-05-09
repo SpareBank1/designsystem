@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-spinner",
-    "version": "5.1.4",
+    "version": "5.1.5",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -15,10 +15,10 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.3.10"
+        "@sb1/ffe-core": "^27.3.11"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.6.0"
+        "@sb1/ffe-buildtool": "^0.6.1"
     },
     "publishConfig": {
         "access": "public"

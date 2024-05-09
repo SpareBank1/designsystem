@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-lists",
-    "version": "15.1.5",
+    "version": "15.1.6",
     "description": "Lists in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -16,10 +16,10 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.3.10"
+        "@sb1/ffe-core": "^27.3.11"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.6.0"
+        "@sb1/ffe-buildtool": "^0.6.1"
     },
     "publishConfig": {
         "access": "public"
