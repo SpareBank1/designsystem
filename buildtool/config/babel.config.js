@@ -9,6 +9,7 @@ module.exports = api => {
                 },
             ],
             '@babel/react',
+            '@babel/preset-typescript',
         ],
     };
 };
