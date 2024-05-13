@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-collapse-react",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "description": "React component for expand/collapse",
     "keywords": [
         "ffe"
@@ -30,7 +30,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.3.11",
+        "@sb1/ffe-core": "^27.3.12",
         "classnames": "^2.3.1"
     },
     "devDependencies": {

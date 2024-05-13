@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.51](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@6.0.50...@sb1/ffe-dropdown-react@6.0.51) (2024-05-13)
+
+**Note:** Version bump only for package @sb1/ffe-dropdown-react
+
 ## [6.0.50](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@6.0.49...@sb1/ffe-dropdown-react@6.0.50) (2024-05-09)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

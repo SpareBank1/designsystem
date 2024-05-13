@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-context-message-react",
-    "version": "9.0.27",
+    "version": "9.0.28",
     "description": "React implementation of ffe-context-message component",
     "keywords": [
         "ffe"
@@ -29,7 +29,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-context-message": "^8.0.16",
+        "@sb1/ffe-context-message": "^8.0.17",
         "@sb1/ffe-icons-react": "^9.0.12",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2",
