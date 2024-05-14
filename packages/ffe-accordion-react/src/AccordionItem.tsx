@@ -5,7 +5,8 @@ import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
 import { AccordionContext } from './AccordionContext';
 
-interface AccordionItemProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface AccordionItemProps
+    extends React.ComponentPropsWithoutRef<'div'> {
     /** The heading */
     heading: NonNullable<React.ReactNode>;
     /** The content to appear when expanded */
