@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@12.0.2...@sb1/ffe-accordion-react@12.0.3) (2024-05-14)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** transitionstart not triggered ([5c66df8](https://github.com/SpareBank1/designsystem/commit/5c66df8527af3bf0aafa1efb1f871abf5b6df71c))
+
 ## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@12.0.1...@sb1/ffe-accordion-react@12.0.2) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
