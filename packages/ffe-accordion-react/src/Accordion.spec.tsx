@@ -55,8 +55,12 @@ describe('<Accordion />', () => {
     it('should expand sections', () => {
         render(
             <Accordion headingLevel={3}>
-                <AccordionItem heading="heading1">content1</AccordionItem>
-                <AccordionItem heading="heading2">content2</AccordionItem>
+                <AccordionItem heading="heading1">
+                    <span data-testid="content1">content1</span>
+                </AccordionItem>
+                <AccordionItem heading="heading2">
+                    <span data-testid="content2">content2</span>
+                </AccordionItem>
             </Accordion>,
         );
 
@@ -66,12 +70,8 @@ describe('<Accordion />', () => {
         expect(firstButton.getAttribute('aria-expanded')).toEqual('false');
         expect(secondButton.getAttribute('aria-expanded')).toEqual('false');
 
-        expect(
-            screen.queryByRole('region', { name: /heading1/i }),
-        ).not.toBeInTheDocument();
-        expect(
-            screen.queryByRole('region', { name: /heading2/i }),
-        ).not.toBeInTheDocument();
+        expect(screen.queryByTestId('content1')).not.toBeInTheDocument();
+        expect(screen.queryByTestId('content2')).not.toBeInTheDocument();
 
         fireEvent.click(firstButton);
         fireEvent.click(secondButton);
@@ -79,11 +79,7 @@ describe('<Accordion />', () => {
         expect(firstButton.getAttribute('aria-expanded')).toEqual('true');
         expect(secondButton.getAttribute('aria-expanded')).toEqual('true');
 
-        expect(
-            screen.getByRole('region', { name: /heading1/i }),
-        ).toBeInTheDocument();
-        expect(
-            screen.getByRole('region', { name: /heading2/i }),
-        ).toBeInTheDocument();
+        expect(screen.queryByTestId('content1')).toBeInTheDocument();
+        expect(screen.queryByTestId('content2')).toBeInTheDocument();
     });
 });
