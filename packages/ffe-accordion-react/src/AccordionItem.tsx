@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState, useContext } from 'react';
-import { bool, func, node, string } from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
@@ -58,8 +57,6 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
 
     const collapseHidden = !isExpanded && !isAnimating;
 
-    const H = `h${headingLevel}`;
-
     return (
         <div
             className={classNames(className, 'ffe-accordion-item', {
@@ -105,7 +102,6 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
                 onRest={() => setIsAnimating(false)}
                 id={contentId.current}
                 aria-labelledby={buttonId.current}
-                hidden={collapseHidden}
                 role="region"
             >
                 {!collapseHidden && (
@@ -114,21 +110,4 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
             </Collapse>
         </div>
     );
-};
-
-AccordionItem.propTypes = {
-    /** The heading */
-    heading: node.isRequired,
-    /** The content to appear when expanded */
-    children: node.isRequired,
-    /** Should it be open by default */
-    defaultOpen: bool,
-    /** Is the item open or collapsed? Used for overriding default behaviour */
-    isOpen: bool,
-    /** Class assigned the container */
-    className: string,
-    /** Callback when the item is open/closed */
-    onToggleOpen: func,
-    /** aria-label for the button */
-    ariaLabel: string,
 };
