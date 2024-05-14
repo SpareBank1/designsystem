@@ -11,6 +11,7 @@ export type CardBaseProps<As extends ElementType = 'a'> =
         shadow?: boolean;
         noMargin?: boolean;
         textCenter?: boolean;
+        clickable?: boolean;
         bgColor?: BgColor;
         bgDarkmodeColor?: BgColorDarkmode;
     };
@@ -27,6 +28,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
         textCenter,
         bgColor,
         bgDarkmodeColor,
+        clickable,
         ...rest
     } = props;
 
@@ -38,6 +40,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
                 'ffe-card-base--box-shadow': shadow,
                 'ffe-card-base--no-margin': noMargin,
                 'ffe-card-base--text-center': textCenter,
+                'ffe-card-base--clickable': clickable,
             })}
             {...rest}
             ref={ref}
