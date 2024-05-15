@@ -1,20 +1,29 @@
 import React from 'react';
-import { func, number, object, string } from 'prop-types';
 import { Icon } from '@sb1/ffe-icons-react';
 
-export default function Header(props) {
-    const {
-        datepickerId,
-        month,
-        nextMonthHandler,
-        nextMonthLabel,
-        previousMonthHandler,
-        previousMonthLabel,
-        year,
-        prevMonthButtonElement,
-        nextMonthButtonElement,
-    } = props;
+interface HeaderProps {
+    datepickerId: string;
+    month: string;
+    nextMonthHandler: React.MouseEventHandler<HTMLButtonElement>;
+    nextMonthLabel: string;
+    previousMonthHandler: React.MouseEventHandler<HTMLButtonElement>;
+    previousMonthLabel: string;
+    year: number;
+    prevMonthButtonElement: React.RefObject<HTMLButtonElement>;
+    nextMonthButtonElement: React.RefObject<HTMLButtonElement>;
+}
 
+export const Header: React.FC<HeaderProps> = ({
+    datepickerId,
+    month,
+    nextMonthHandler,
+    nextMonthLabel,
+    previousMonthHandler,
+    previousMonthLabel,
+    year,
+    prevMonthButtonElement,
+    nextMonthButtonElement,
+}) => {
     const arrowBackIosIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0xMjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzYtMTEuOTIyIDExLjkyMy0yOC4wNzYgMTEuOTIzdC0yOC4wNzYtMTEuOTIzTDY1LjA3OC00MjguNzdRNTQuMjMtNDM5LjYxNiA0OS00NTMuMDc3IDQzLjc3LTQ2Ni41MzkgNDMuNzctNDgwcTAtMTMuNDYxIDUuMjMtMjYuOTIzIDUuMjMxLTEzLjQ2MSAxNi4wNzgtMjQuMzA3bDMwNi44NDYtMzA2Ljg0NnExMS45MjItMTEuOTIzIDI4LjM4NC0xMS42MTYgMTYuNDYxLjMwOCAyOC4zODQgMTIuMjMxIDExLjkyMyAxMS45MjMgMTEuOTIzIDI4LjA3NiAwIDE2LjE1NC0xMS45MjMgMjguMDc3TDEyNy4zODQtNDgwWiIvPjwvc3ZnPg==';
 
@@ -65,16 +74,4 @@ export default function Header(props) {
             </div>
         </div>
     );
-}
-
-Header.propTypes = {
-    datepickerId: string.isRequired,
-    month: string.isRequired,
-    nextMonthHandler: func.isRequired,
-    nextMonthLabel: string.isRequired,
-    previousMonthHandler: func.isRequired,
-    previousMonthLabel: string.isRequired,
-    year: number.isRequired,
-    prevMonthButtonElement: object.isRequired,
-    nextMonthButtonElement: object.isRequired,
 };

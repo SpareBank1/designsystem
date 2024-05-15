@@ -6,4 +6,4 @@ export default {
     nb,
     nn,
     en,
-};
+} as const;

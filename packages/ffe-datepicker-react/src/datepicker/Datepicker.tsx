@@ -1,19 +1,42 @@
 import React, { Component } from 'react';
-import { bool, func, oneOfType, shape, string, PropTypes } from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuid } from 'uuid';
-import Calendar from '../calendar';
-import KeyCode from '../util/keyCode';
-import DateInput from '../input';
-import CalendarButton from '../button';
-import SimpleDate from '../datelogic/simpledate';
-import dateErrorTypes from '../datelogic/error-types';
-import i18n from '../i18n/i18n';
+import { Calendar } from '../calendar';
+import { DateInput } from '../input';
+import { Button } from '../button';
+import { getSimpleDateFromString } from '../datelogic/simpledate';
 import { validateDate, isDateInputWithTwoDigitYear } from '../util/dateUtil';
 import debounce from 'lodash.debounce';
 
-export default class Datepicker extends Component {
-    constructor(props) {
+export interface DatepickerProps {
+    'aria-invalid'?: React.ComponentProps<'input'>['aria-invalid'];
+    ariaInvalid?: string | boolean;
+    calendarAbove?: boolean;
+    inputProps?: Pick<
+        React.ComponentPropsWithRef<'input'>,
+        'ref' | 'className' | 'id' | 'aria-describedby'
+    >;
+    locale?: 'nb' | 'nn' | 'en';
+    maxDate?: string;
+    minDate?: string;
+    onChange: (date: string) => void;
+    value: string;
+    fullWidth?: boolean;
+}
+
+interface DatepickerState {
+    lastValidDate: string;
+    displayDatePicker: boolean;
+    minDate?: string;
+    maxDate?: string;
+    calendarActiveDate: string;
+    ariaInvalid?: boolean;
+}
+
+export class Datepicker extends Component<DatepickerProps, DatepickerState> {
+    private readonly datepickerId: string;
+
+    constructor(props: DatepickerProps) {
         super(props);
 
         this.state = {
@@ -39,14 +62,13 @@ export default class Datepicker extends Component {
         this.datePickedHandler = this.datePickedHandler.bind(this);
         this.onInputKeydown = this.onInputKeydown.bind(this);
         this.onInputBlur = this.onInputBlur.bind(this);
-        this.onError = this.onError.bind(this);
     }
 
-    language = this.props.language ?? 'nb';
-    buttonRef = React.createRef();
-    dateInputRef = this.props.innerRef ?? React.createRef();
+    locale = this.props.locale ?? 'nb';
+    buttonRef = React.createRef<HTMLButtonElement>();
+    dateInputRef = this.props.inputProps?.ref ?? React.createRef();
 
-    debounceCalendar = debounce(value => {
+    debounceCalendar = debounce((value: any) => {
         if (value !== this.state.lastValidDate && validateDate(value)) {
             this.setState({ calendarActiveDate: value, lastValidDate: value });
         }
@@ -58,7 +80,7 @@ export default class Datepicker extends Component {
     }
 
     /* eslint-disable react/no-did-update-set-state */
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps: DatepickerProps, prevState: DatepickerState) {
         const valueChangedAndDatepickerIsToggled =
             prevProps.value !== this.props.value &&
             prevState.displayDatePicker &&
@@ -80,90 +102,42 @@ export default class Datepicker extends Component {
         this.debounceCalendar(this.props.value);
     }
 
-    onError(type) {
-        const { onError } = this.props;
-
-        const errorText = i18n[this.language][type];
-        return onError ? onError(type, errorText) : errorText;
-    }
-
     validateDateIntervals() {
         this.setState((prevState, props) => {
             let nextState = {};
-            const { onChange, value, onValidationComplete = () => {} } = props;
+            const { onChange, value } = props;
 
-            const error = type => {
-                const errorMessage = this.onError(type);
+            getSimpleDateFromString(value, date => {
+                nextState = {
+                    ariaInvalid: false,
+                };
+
+                const maxDate = prevState.maxDate
+                    ? getSimpleDateFromString(prevState.maxDate)
+                    : null;
+
+                // SimpleDate.fromString assumes years written as two digits
+                // are in the 20th century.  This can be unwanted behaviour
+                // when asking for dates in the past, like birth dates.
+                // This little hack should catch most of these cases.
+                if (
+                    maxDate?.isBefore(date) &&
+                    isDateInputWithTwoDigitYear(value)
+                ) {
+                    date.adjust({ period: 'Y', offset: -100 });
+                }
+
+                const formattedDate = date.format();
+
+                if (formattedDate !== value) {
+                    onChange(formattedDate);
+                }
 
                 nextState = {
-                    errorMessage,
-                    ariaInvalid: true,
+                    ...nextState,
+                    lastValidDate: formattedDate,
                 };
-            };
-
-            SimpleDate.fromString(
-                value,
-                date => {
-                    nextState = {
-                        ariaInvalid: false,
-                    };
-
-                    const maxDate = SimpleDate.fromString(prevState.maxDate);
-
-                    // SimpleDate.fromString assumes years written as two digits
-                    // are in the 20th century.  This can be unwanted behaviour
-                    // when asking for dates in the past, like birth dates.
-                    // This little hack should catch most of these cases.
-                    if (
-                        maxDate?.isBefore(date) &&
-                        isDateInputWithTwoDigitYear(value)
-                    ) {
-                        date.adjust('Y', -100);
-                    }
-
-                    const formattedDate = date.format();
-
-                    if (formattedDate !== value) {
-                        onChange(formattedDate);
-                    }
-
-                    if (
-                        SimpleDate.fromString(prevState.minDate)?.isAfter(date)
-                    ) {
-                        error(dateErrorTypes.MIN_DATE);
-                    } else if (maxDate?.isBefore(date)) {
-                        error(dateErrorTypes.MAX_DATE);
-                    }
-
-                    nextState = {
-                        ...nextState,
-                        lastValidDate: formattedDate,
-                    };
-
-                    onValidationComplete(formattedDate);
-                },
-                errorType => {
-                    const emptyValue = value === '';
-
-                    if (emptyValue && prevState.errorMessage) {
-                        nextState = {
-                            ariaInvalid: false,
-                            errorMessage: null,
-                        };
-                        onValidationComplete(value);
-                        return;
-                    } else if (emptyValue) {
-                        nextState = {
-                            ...prevState,
-                        };
-                        onValidationComplete(value);
-                        return;
-                    }
-                    error(errorType);
-
-                    onValidationComplete(value);
-                },
-            );
+            });
 
             return nextState;
         });
@@ -173,22 +147,23 @@ export default class Datepicker extends Component {
         this.validateDateIntervals();
     }
 
-    onInputKeydown(evt) {
-        if (evt.which === KeyCode.ENTER) {
+    onInputKeydown(evt: React.KeyboardEvent<HTMLInputElement>) {
+        if (evt.key === 'Enter') {
             evt.preventDefault();
             this.validateDateIntervals();
         }
     }
 
-    escKeyHandler(evt) {
-        if (evt.which === KeyCode.ESC) {
+    escKeyHandler(evt: KeyboardEvent) {
+        if (evt.key === 'Escape') {
             this.closeCalendarSetInputFocus();
         }
     }
 
-    globalClickHandler(evt) {
+    globalClickHandler(evt: MouseEvent) {
         if (
             this.state.displayDatePicker &&
+            // @ts-ignore
             evt.__datepickerID !== this.datepickerId
         ) {
             this.closeCalendar();
@@ -209,23 +184,21 @@ export default class Datepicker extends Component {
      * Adds a flag on the click event so that the globalClickHandler()
      * can determine whether or not the ID matches. Makes it so that only one datepicker can be open at the same time
      */
-    addFlagOnClickEventClickHandler(evt) {
+    addFlagOnClickEventClickHandler(evt: React.MouseEvent) {
+        // @ts-ignore
         // eslint-disable-next-line no-param-reassign
         evt.nativeEvent.__datepickerID = this.datepickerId;
     }
 
-    datePickedHandler(date) {
+    datePickedHandler(date: string) {
         this.props.onChange(date);
-        if (this.props.onValidationComplete) {
-            this.props.onValidationComplete(date);
-        }
         this.removeGlobalEventListeners();
         this.setState(
             {
                 displayDatePicker: false,
                 calendarActiveDate: date,
             },
-            () => this.buttonRef.current.focus(),
+            () => this.buttonRef.current?.focus(),
         );
     }
 
@@ -249,7 +222,7 @@ export default class Datepicker extends Component {
             {
                 displayDatePicker: false,
             },
-            () => this.buttonRef.current.focus(),
+            () => this.buttonRef.current?.focus(),
         );
         this.validateDateIntervals();
     }
@@ -274,14 +247,7 @@ export default class Datepicker extends Component {
     }
 
     render() {
-        const {
-            hideErrors,
-            inputProps = {},
-            label,
-            onChange,
-            value,
-            fullWidth = false,
-        } = this.props;
+        const { inputProps = {}, onChange, value, fullWidth } = this.props;
 
         const { minDate, maxDate } = this.state;
 
@@ -302,15 +268,6 @@ export default class Datepicker extends Component {
 
         return (
             <div>
-                {label && (
-                    <label
-                        className="ffe-form-label ffe-form-label--block"
-                        htmlFor={inputProps.id}
-                        id={`ffe-datepicker-label-${this.datepickerId}`}
-                    >
-                        {label}
-                    </label>
-                )}
                 {/*
                  * This element is not an actual button, but the onClick is something that happens under the hood,
                  * that the user is not aware of. So it is not a semantic button for the user.
@@ -318,92 +275,47 @@ export default class Datepicker extends Component {
                  */}
                 {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
                 <div
-                    aria-labelledby={
-                        label
-                            ? `ffe-datepicker-label-${this.datepickerId}`
-                            : undefined
-                    }
-                    aria-label={
-                        label ? undefined : i18n[this.language].CHOOSE_DATE
-                    }
                     className={datepickerClassName}
+                    data-testid="date-picker"
                     onClick={this.addFlagOnClickEventClickHandler}
-                    ref={c => {
-                        this._datepickerNode = c;
-                    }}
                     tabIndex={-1}
                 >
                     <div className="ffe-datepicker--wrapper">
                         <DateInput
-                            aria-invalid={this.ariaInvalid()}
-                            inputProps={inputProps}
+                            {...this.props.inputProps}
+                            ariaInvalid={this.ariaInvalid()}
                             onBlur={this.onInputBlur}
                             onChange={evt => onChange(evt.target.value)}
                             onKeyDown={this.onInputKeydown}
                             ref={this.dateInputRef}
                             value={value}
-                            fullWidth={fullWidth}
-                            language={this.language}
+                            locale={this.locale}
                         />
-                        <CalendarButton
+                        <Button
                             onClick={this.calendarButtonClickHandler}
                             value={value}
-                            language={this.language}
-                            buttonRef={this.buttonRef}
+                            locale={this.locale}
+                            ref={this.buttonRef}
                         />
                     </div>
-
                     {this.state.displayDatePicker && (
                         <Calendar
                             calendarClassName={calendarClassName}
-                            escKeyHandler={this.escKeyHandler}
-                            language={this.language}
+                            escKeyHandler={evt => {
+                                if (evt.key === 'Escape') {
+                                    this.closeCalendarSetInputFocus();
+                                }
+                            }}
+                            locale={this.locale}
                             maxDate={maxDate}
                             minDate={minDate}
                             onDatePicked={this.datePickedHandler}
                             selectedDate={this.state.calendarActiveDate}
-                            ref={c => {
-                                this.datepickerCalendar = c;
-                            }}
                             focusOnMount={true}
                         />
                     )}
                 </div>
-
-                {this.state.ariaInvalid && !hideErrors && (
-                    <div
-                        id={`date-input-validation-${this.datepickerId}`}
-                        className="ffe-body-text ffe-field-error-message"
-                        role="alert"
-                    >
-                        {this.state.errorMessage}
-                    </div>
-                )}
             </div>
         );
     }
 }
-
-Datepicker.propTypes = {
-    'aria-invalid': string,
-    ariaInvalid: oneOfType([bool, string]),
-    calendarAbove: bool,
-    hideErrors: bool,
-    onValidationComplete: func,
-    innerRef:
-        PropTypes.oneOfType([func, shape({ current: PropTypes.any })]) ||
-        undefined,
-    inputProps: shape({
-        className: string,
-        id: string,
-    }),
-    label: string,
-    language: string,
-    maxDate: string,
-    minDate: string,
-    onChange: func.isRequired,
-    onError: func,
-    value: string.isRequired,
-    keepDisplayStateOnError: bool,
-    fullWidth: bool,
-};

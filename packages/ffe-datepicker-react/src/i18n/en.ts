@@ -44,13 +44,9 @@ export default {
     PREVIOUS_MONTH: 'Previous month',
     NEXT_MONTH: 'Next month',
     FIRST_DAY_OF_WEEK: 0,
-    INVALID_DATE_FORMAT: 'Date must be in this format: dd.mm.yyyy',
-    INVALID_DATE: 'Invalid date',
-    MIN_DATE: 'Given date is too far back',
-    MAX_DATE: 'Given date is too far ahead',
     CHOOSE_DATE: 'Choose date',
     CHANGE_DATE: 'Change date',
     CHOSEN_DATE: 'chosen date is',
     DATE_FORMAT: 'dd.mm.yyyy',
     CALENDAR_LABEL: 'Calendar',
-};
+} as const;
