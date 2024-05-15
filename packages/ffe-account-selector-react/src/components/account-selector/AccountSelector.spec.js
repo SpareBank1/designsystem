@@ -541,6 +541,8 @@ describe('AccountSelector', () => {
     });
 
     it('should set a11y status message briefly on element change', async () => {
+        const user = userEvent.setup();
+
         render(
             <div>
                 <button>Knapp</button>
@@ -559,9 +561,9 @@ describe('AccountSelector', () => {
 
         const input = await screen.findByRole('combobox');
 
-        userEvent.click(input);
-        userEvent.type(input, '{arrowdown}');
-        userEvent.type(input, '{enter}');
+        await user.click(input);
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{enter}');
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -574,8 +576,8 @@ describe('AccountSelector', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.clear(input);
-        userEvent.click(screen.getByText('Knapp'));
+        await user.clear(input);
+        await user.click(screen.getByText('Knapp'));
 
         await wait(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -588,6 +590,8 @@ describe('AccountSelector', () => {
     });
 
     it('should set a11y status message briefly on state change', async () => {
+        const user = userEvent.setup();
+
         render(
             <div>
                 <button>Knapp</button>
@@ -606,7 +610,7 @@ describe('AccountSelector', () => {
 
         const input = await screen.findByRole('combobox');
 
-        userEvent.click(input);
+        await user.click(input);
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -619,7 +623,7 @@ describe('AccountSelector', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.type(input, 'spare');
+        await user.type(input, 'spare');
 
         await wait(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -630,8 +634,8 @@ describe('AccountSelector', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.clear(input);
-        userEvent.type(input, 'ingen');
+        await user.clear(input);
+        await user.type(input, 'ingen');
 
         await wait(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -642,7 +646,7 @@ describe('AccountSelector', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.click(screen.getByText('Knapp'));
+        await user.click(screen.getByText('Knapp'));
         expect(a11yStatusMessage).toHaveTextContent('');
     });
 });
