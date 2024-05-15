@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@12.0.3...@sb1/ffe-accordion-react@12.0.4) (2024-05-15)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** add missing props export ([dd9855e](https://github.com/SpareBank1/designsystem/commit/dd9855e2baab109bb35930c1f99b1d0f168ecf33))
+
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@12.0.2...@sb1/ffe-accordion-react@12.0.3) (2024-05-14)
 
 ### Bug Fixes
