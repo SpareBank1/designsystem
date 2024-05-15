@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Datepicker from '@sb1/ffe-datepicker-react';
+import { Datepicker }from '@sb1/ffe-datepicker-react';
 import Dropdown from '@sb1/ffe-dropdown-react';
 import { InputGroup, Checkbox, Input, TextArea } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
@@ -14,7 +14,7 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
                     Skru feilmeldinger av/på
                 </SecondaryButton>
             </div>
-            
+
             <InputGroup
                 label="Måned"
                 fieldMessage={showErrors ? 'Du må velge måned' : null}

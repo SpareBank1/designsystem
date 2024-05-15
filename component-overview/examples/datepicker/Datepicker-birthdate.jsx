@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Datepicker from '@sb1/ffe-datepicker-react';
+import { Datepicker } from '@sb1/ffe-datepicker-react';
 
 () => {
     const [date, setDate] = useState('');
@@ -13,7 +13,7 @@ import Datepicker from '@sb1/ffe-datepicker-react';
             <Datepicker
                 inputProps={{ id: 'datepicker-birthday-example' }}
                 label="Fødelsedato"
-                language="nb"
+                locale="nb"
                 maxDate={maxDate}
                 onChange={setDate}
                 value={date}

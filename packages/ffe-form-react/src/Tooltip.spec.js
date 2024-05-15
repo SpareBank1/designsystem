@@ -8,7 +8,9 @@ const defaultProps = { children: 'Tooltip text', 'aria-label': 'button-label' };
 const renderTooltip = props => render(<Tooltip {...defaultProps} {...props} />);
 
 describe('<Tooltip>', () => {
-    it('renders a "?" button', () => {
+    it('renders a "?" button', async () => {
+        const user = userEvent.setup();
+
         const onClick = spy();
         renderTooltip({ 'aria-label': 'button-label', onClick });
         const button = screen.getByRole('button', { name: 'button-label' });
@@ -16,7 +18,7 @@ describe('<Tooltip>', () => {
         expect(button.textContent).toBe('?');
         expect(button.classList.contains('ffe-tooltip__icon')).toBeTruthy();
 
-        userEvent.click(button);
+        await user.click(button);
         expect(onClick.calledOnce).toBe(true);
     });
 
@@ -25,7 +27,9 @@ describe('<Tooltip>', () => {
         expect(container.querySelector('.ffe-collapse')).toBeTruthy();
     });
 
-    it('toggles collapse if button is clicked', () => {
+    it('toggles collapse if button is clicked', async () => {
+        const user = userEvent.setup();
+
         const { container } = renderTooltip();
         const button = screen.getByRole('button', { name: 'button-label' });
 
@@ -34,7 +38,7 @@ describe('<Tooltip>', () => {
         ).toBeTruthy();
         expect(button.getAttribute('aria-expanded')).toBe('false');
 
-        userEvent.click(button);
+        await user.click(button);
 
         expect(
             container.querySelector('.ffe-collapse.ffe-collapse--open'),
@@ -42,13 +46,15 @@ describe('<Tooltip>', () => {
         expect(button.getAttribute('aria-expanded')).toBe('true');
     });
 
-    it('toggles active state if button is clicked', () => {
+    it('toggles active state if button is clicked', async () => {
+        const user = userEvent.setup();
+
         const { container } = renderTooltip();
         const tooltip = container.querySelector('.ffe-tooltip');
         expect(tooltip.classList.contains('ffe-tooltip--open')).toBe(false);
 
         const button = screen.getByRole('button', { name: 'button-label' });
-        userEvent.click(button);
+        await user.click(button);
 
         expect(tooltip.classList.contains('ffe-tooltip--open')).toBe(true);
     });

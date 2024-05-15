@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Datepicker from '@sb1/ffe-datepicker-react';
+import { Datepicker } from '@sb1/ffe-datepicker-react';
 import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
 
 () => {
@@ -13,7 +13,7 @@ import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
                     <Datepicker
                         inputProps={{ id: 'datepicker-1' }}
                         label="Velg dato"
-                        language="en"
+                        locale="en"
                         maxDate="31.12.2016"
                         minDate="01.01.2016"
                         onChange={setDate1}
@@ -24,7 +24,7 @@ import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
                     <Datepicker
                         inputProps={{ id: 'datepicker-2' }}
                         label="Velg dato"
-                        language="en"
+                        locale="en"
                         maxDate="31.12.2016"
                         minDate="01.01.2016"
                         onChange={setDate2}

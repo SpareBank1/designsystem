@@ -17,7 +17,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool babel",
+        "build": "ffe-buildtool tsc",
         "watch": "ffe-buildtool babel-watch",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
@@ -28,9 +28,9 @@
         "@sb1/ffe-datepicker": "^12.0.40",
         "@sb1/ffe-form": "^29.0.13",
         "@sb1/ffe-icons-react": "^9.0.12",
+        "@types/lodash.debounce": "^4.0.9",
         "classnames": "^2.3.1",
         "lodash.debounce": "^4.0.8",
-        "prop-types": "^15.7.2",
         "uuid": "^9.0.0"
     },
     "devDependencies": {

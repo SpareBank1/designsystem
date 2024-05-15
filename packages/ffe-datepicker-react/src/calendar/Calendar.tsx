@@ -1,23 +1,43 @@
 import React, { Component } from 'react';
-import { func, string, bool } from 'prop-types';
 import { v4 as uuid } from 'uuid';
-import ClickableDate from './ClickableDate';
-import NonClickableDate from './NonClickableDate';
-import Header from './Header';
-import KeyCode from '../util/keyCode';
-import simpleDate from '../datelogic/simpledate';
-import simpleCalendar from '../datelogic/simplecalendar';
+import { ClickableDate } from './ClickableDate';
+import { NonClickableDate } from './NonClickableDate';
+import { Header } from './Header';
+import {
+    getSimpleDateFromString,
+    getSimpleDateFromTimestamp,
+} from '../datelogic/simpledate';
+import { SimpleCalendar } from '../datelogic/simplecalendar';
+import { CalendarButtonState } from '../datelogic/types';
 
-export default class Calendar extends Component {
-    constructor(props) {
+export interface CalendarProps {
+    calendarClassName?: string;
+    escKeyHandler?: React.KeyboardEventHandler<HTMLDivElement>;
+    locale: 'nb' | 'nn' | 'en';
+    maxDate?: string;
+    minDate?: string;
+    onDatePicked: (date: string) => void;
+    selectedDate: string;
+    focusOnMount?: boolean;
+}
+
+interface State {
+    calendar: SimpleCalendar;
+    isFocusingHeader: boolean;
+}
+
+export class Calendar extends Component<CalendarProps, State> {
+    private readonly datepickerId: string;
+
+    constructor(props: CalendarProps) {
         super(props);
 
         this.state = {
-            calendar: simpleCalendar(
-                simpleDate.fromString(props.selectedDate),
+            calendar: new SimpleCalendar(
+                getSimpleDateFromString(props.selectedDate),
                 props.minDate,
                 props.maxDate,
-                props.language,
+                props.locale,
             ),
             isFocusingHeader: false,
         };
@@ -28,28 +48,26 @@ export default class Calendar extends Component {
         this.mouseClick = this.mouseClick.bind(this);
         this.nextMonth = this.nextMonth.bind(this);
         this.previousMonth = this.previousMonth.bind(this);
-        this.focusHandler = this.focusHandler.bind(this);
-        this.wrapperBlurHandler = this.wrapperBlurHandler.bind(this);
 
         this.renderDate = this.renderDate.bind(this);
         this.renderWeek = this.renderWeek.bind(this);
         this.renderDay = this.renderDay.bind(this);
     }
 
-    clickableDateRef = React.createRef();
-    prevMonthButtonElementRef = React.createRef();
-    nextMonthButtonElementRef = React.createRef();
+    clickableDateRef = React.createRef<HTMLTableCellElement>();
+    prevMonthButtonElementRef = React.createRef<HTMLButtonElement>();
+    nextMonthButtonElementRef = React.createRef<HTMLButtonElement>();
 
     /* eslint-disable react/no-did-update-set-state */
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps: CalendarProps) {
         if (prevProps.selectedDate !== this.props.selectedDate) {
             this.setState(
                 {
-                    calendar: simpleCalendar(
-                        simpleDate.fromString(this.props.selectedDate),
+                    calendar: new SimpleCalendar(
+                        getSimpleDateFromString(this.props.selectedDate),
                         this.props.minDate,
                         this.props.maxDate,
-                        this.props.language,
+                        this.props.locale,
                     ),
                 },
                 this.forceUpdate,
@@ -57,71 +75,70 @@ export default class Calendar extends Component {
         }
     }
 
-    shouldComponentUpdate(nextProps) {
+    shouldComponentUpdate(nextProps: CalendarProps) {
         return nextProps.selectedDate !== this.props.selectedDate;
     }
 
-    keyDown(event) {
+    keyDown(event: React.KeyboardEvent<HTMLTableElement>) {
         const calendar = this.state.calendar;
 
-        const scrollableEvents = [
-            KeyCode.PGUP,
-            KeyCode.PGDWN,
-            KeyCode.END,
-            KeyCode.HOME,
-            KeyCode.LEFT,
-            KeyCode.UP,
-            KeyCode.RIGHT,
-            KeyCode.DOWN,
-        ];
-        if (scrollableEvents.includes(event.which)) {
+        const scrollableEvents: string[] = [
+            'PageUp',
+            'PageDown',
+            'End',
+            'Home',
+            'ArrowLeft',
+            'ArrowUp',
+            'ArrowRight',
+            'ArrowDown',
+        ] as const;
+        if (!scrollableEvents.includes(event.key)) {
             event.preventDefault();
-            this.forceDateFocus = true;
         }
 
-        switch (event.which) {
-            case KeyCode.ENTER:
+        switch (event.key) {
+            case 'Enter':
                 if (calendar.isDateWithinDateRange(calendar.focusedDate)) {
                     calendar.selectFocusedDate();
                     this.props.onDatePicked(calendar.selected());
                 }
                 event.preventDefault();
                 break;
-            case KeyCode.ESC:
-                this.props.escKeyHandler(event);
+            case 'Escape':
+                this.props.escKeyHandler?.(event);
                 break;
-            case KeyCode.TAB:
+            case 'Tab':
                 break;
-            case KeyCode.PGUP:
+            case 'PageUp':
                 if (event.altKey) {
                     calendar.previousYear();
                 } else {
                     calendar.previousMonth();
                 }
                 break;
-            case KeyCode.PGDWN:
+            case 'PageDown':
                 if (event.altKey) {
                     calendar.nextYear();
                 } else {
                     calendar.nextMonth();
                 }
                 break;
-            case KeyCode.END:
+            case 'End':
                 calendar.lastDateOfMonth();
                 break;
-            case KeyCode.HOME:
+            case 'Home':
                 calendar.firstDateOfMonth();
                 break;
-            case KeyCode.LEFT:
+            case 'ArrowLeft':
                 calendar.previousDay();
                 break;
-            case KeyCode.UP:
+            case 'ArrowUp':
                 calendar.previousWeek();
                 break;
-            case KeyCode.RIGHT:
+            case 'ArrowRight':
                 calendar.nextDay();
                 break;
-            case KeyCode.DOWN:
+            case 'ArrowDown':
                 calendar.nextWeek();
                 break;
             default:
@@ -131,60 +148,59 @@ export default class Calendar extends Component {
         this.forceUpdate();
     }
 
-    mouseClick(date) {
-        const pickedDate = simpleDate.fromTimestamp(date.timestamp);
+    mouseClick(date: CalendarButtonState) {
+        const pickedDate = getSimpleDateFromTimestamp(date.timestamp);
         if (this.state.calendar.isDateWithinDateRange(pickedDate)) {
             this.state.calendar.selectTimestamp(date.timestamp);
             this.props.onDatePicked(this.state.calendar.selected());
         }
     }
 
-    focusHandler(evt) {
-        if (this._wrapper && this._wrapper.contains(evt.target)) {
-            this.forceDateFocus = true;
-        }
-    }
-
-    wrapperBlurHandler() {
-        this.forceDateFocus = false;
-    }
-
-    nextMonth(evt) {
+    nextMonth(evt: React.MouseEvent<HTMLButtonElement>) {
         evt.preventDefault();
         this.state.calendar.nextMonth();
         this.forceUpdate();
     }
 
-    previousMonth(evt) {
+    previousMonth(evt: React.MouseEvent<HTMLButtonElement>) {
         evt.preventDefault();
         this.state.calendar.previousMonth();
         this.forceUpdate();
     }
 
-    renderDate(date, index) {
+    renderDate(calendarButtonState: CalendarButtonState, index: number) {
         const { calendar } = this.state;
 
-        if (date.isNonClickableDate) {
-            return <NonClickableDate key={date.date} date={date} />;
+        if (calendarButtonState.isNonClickableDate) {
+            return (
+                <NonClickableDate
+                    key={calendarButtonState.dayInMonth}
+                    date={{ timestamp: calendarButtonState.timestamp }}
+                />
+            );
         }
 
         return (
             <ClickableDate
-                date={date}
-                month={calendar.focusedMonth()}
-                year={calendar.focusedYear()}
+                calendarButtonState={calendarButtonState}
+                month={calendar.focusedMonth}
+                year={calendar.focusedYear}
                 headers={`header__${this.datepickerId}__${index}`}
-                key={date.date}
+                key={calendarButtonState.timestamp}
                 onClick={this.mouseClick}
-                language={this.props.language}
-                dateButtonRef={date.isFocus ? this.clickableDateRef : undefined}
+                locale={this.props.locale}
+                dateButtonRef={
+                    calendarButtonState.isFocus
+                        ? this.clickableDateRef
+                        : undefined
+                }
                 isFocusingHeader={this.state.isFocusingHeader}
                 focusOnMount={this.props.focusOnMount}
             />
         );
     }
 
-    renderWeek(week) {
+    renderWeek(week: { dates: CalendarButtonState[]; number: number }) {
         return (
             <tr key={`week-${week.number}`} role="presentation">
                 {week.dates.map(this.renderDate)}
@@ -192,7 +208,7 @@ export default class Calendar extends Component {
         );
     }
 
-    renderDay(day, index) {
+    renderDay(day: { name: string; shortName: string }, index: number) {
         return (
             <th
                 aria-label={day.name}
@@ -205,34 +221,34 @@ export default class Calendar extends Component {
         );
     }
 
-    focusTrap = event => {
+    focusTrap = (event: React.KeyboardEvent<HTMLDivElement>) => {
         const activeElement = document.activeElement;
 
-        if (event.keyCode === KeyCode.TAB) {
+        if (event.key === 'Tab') {
             event.preventDefault();
             if (event.shiftKey) {
                 if (activeElement === this.clickableDateRef.current) {
-                    this.nextMonthButtonElementRef.current.focus();
+                    this.nextMonthButtonElementRef.current?.focus();
                     this.setState({ isFocusingHeader: true });
                 }
                 if (activeElement === this.nextMonthButtonElementRef.current) {
-                    this.prevMonthButtonElementRef.current.focus();
+                    this.prevMonthButtonElementRef.current?.focus();
                 }
                 if (activeElement === this.prevMonthButtonElementRef.current) {
-                    this.clickableDateRef.current.focus();
+                    this.clickableDateRef.current?.focus();
                     this.setState({ isFocusingHeader: false });
                     this.forceUpdate();
                 }
             } else {
                 if (activeElement === this.clickableDateRef.current) {
-                    this.prevMonthButtonElementRef.current.focus();
+                    this.prevMonthButtonElementRef.current?.focus();
                     this.setState({ isFocusingHeader: true });
                 }
                 if (activeElement === this.prevMonthButtonElementRef.current) {
-                    this.nextMonthButtonElementRef.current.focus();
+                    this.nextMonthButtonElementRef.current?.focus();
                 }
                 if (activeElement === this.nextMonthButtonElementRef.current) {
-                    this.clickableDateRef.current.focus();
+                    this.clickableDateRef.current?.focus();
                     this.setState({ isFocusingHeader: false });
                     this.forceUpdate();
                 }
@@ -247,24 +263,19 @@ export default class Calendar extends Component {
         return (
             <div role="dialog" aria-modal={true}>
                 <div
-                    ref={c => {
-                        this._wrapper = c;
-                    }}
                     aria-labelledby={`${this.datepickerId}-title`}
                     className={this.props.calendarClassName || 'ffe-calendar'}
-                    onFocus={this.focusHandler}
-                    onBlur={this.wrapperBlurHandler}
                     role="application"
                     onKeyDown={this.focusTrap}
                 >
                     <Header
                         datepickerId={this.datepickerId}
-                        month={calendar.focusedMonth()}
+                        month={calendar.focusedMonth}
                         nextMonthHandler={this.nextMonth}
-                        nextMonthLabel={calendar.nextName()}
+                        nextMonthLabel={calendar.nextName}
                         previousMonthHandler={this.previousMonth}
-                        previousMonthLabel={calendar.previousName()}
-                        year={calendar.focusedYear()}
+                        previousMonthLabel={calendar.previousName}
+                        year={calendar.focusedYear}
                         prevMonthButtonElement={this.prevMonthButtonElementRef}
                         nextMonthButtonElement={this.nextMonthButtonElementRef}
                     />
@@ -274,10 +285,10 @@ export default class Calendar extends Component {
                         role="presentation"
                     >
                         <thead>
-                            <tr>{calendar.dayNames().map(this.renderDay)}</tr>
+                            <tr>{calendar.dayNames.map(this.renderDay)}</tr>
                         </thead>
                         <tbody>
-                            {calendar.visibleDates().map(this.renderWeek)}
+                            {calendar.visibleDates.map(this.renderWeek)}
                         </tbody>
                     </table>
                 </div>
@@ -286,15 +297,3 @@ export default class Calendar extends Component {
         /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
     }
 }
-
-Calendar.propTypes = {
-    calendarClassName: string,
-    escKeyHandler: func,
-    language: string.isRequired,
-    maxDate: string,
-    minDate: string,
-    onBlurHandler: func,
-    onDatePicked: func.isRequired,
-    selectedDate: string,
-    focusOnMount: bool,
-};
