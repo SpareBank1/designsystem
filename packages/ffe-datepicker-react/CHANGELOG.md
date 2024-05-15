@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@7.1.33...@sb1/ffe-datepicker-react@8.0.0) (2024-05-15)
+
+### Features
+
+-   **ffe-datepicker-react:** rewrite to ts ([4ec8899](https://github.com/SpareBank1/designsystem/commit/4ec8899fe421959c38b4f3697db11334269e907d))
+
+### BREAKING CHANGES
+
+-   **ffe-datepicker-react:** label and validation props removed, default exports are now named exports
+
 ## [7.1.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@7.1.32...@sb1/ffe-datepicker-react@7.1.33) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
