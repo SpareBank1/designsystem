@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen, act, wait } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import 'regenerator-runtime';
-
 import { SearchableDropdown } from './SearchableDropdown';
 
 describe('SearchableDropdown', () => {
@@ -24,7 +23,9 @@ describe('SearchableDropdown', () => {
         },
     ];
 
-    it('should show filtered result', () => {
+    it('should show filtered result', async () => {
+        const user = userEvent.setup();
+
         render(
             <SearchableDropdown
                 id="id"
@@ -38,7 +39,7 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.type(input, 'Be');
+        await user.type(input, 'Be');
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -47,8 +48,8 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
         expect(screen.getByText('812602552')).toBeInTheDocument();
 
-        userEvent.clear(input);
-        userEvent.type(input, '8126023');
+        await user.clear(input);
+        await user.type(input, '8126023');
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -58,7 +59,8 @@ describe('SearchableDropdown', () => {
         expect(screen.queryByText('812602552')).toBeNull();
     });
 
-    it('should select clicked element', () => {
+    it('should select clicked element', async () => {
+        const user = userEvent.setup();
         const onChange = jest.fn();
         render(
             <SearchableDropdown
@@ -74,16 +76,18 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.type(input, 'Be');
+        await user.type(input, 'Be');
 
-        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        await user.click(screen.getByText('Bedriften'), { button: 1 });
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[0]);
         expect(input.value).toEqual('Bedriften');
     });
 
-    it('should be possible to select item with keyboard', () => {
+    it('should be possible to select item with keyboard', async () => {
+        const user = userEvent.setup();
+
         const onChange = jest.fn();
         render(
             <SearchableDropdown
@@ -98,18 +102,20 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
+        await user.click(input);
 
-        userEvent.type(input, '{arrowdown}');
-        userEvent.type(input, '{arrowdown}');
-        userEvent.type(input, '{enter}');
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{enter}');
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[1]);
         expect(input.value).toEqual('Sønn & co');
     });
 
-    it('should show "noMatch" values', () => {
+    it('should show "noMatch" values', async () => {
+        const user = userEvent.setup();
+
         const noMatchDropDownList = [
             {
                 organizationName: 'Rør og sånt',
@@ -140,8 +146,8 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
-        userEvent.type(input, 'some thing without a match');
+        await user.click(input);
+        await user.type(input, 'some thing without a match');
 
         expect(screen.getByText(noMatchText)).toBeInTheDocument();
         expect(screen.getByText('Rør og sånt')).toBeInTheDocument();
@@ -149,7 +155,7 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('Kaffekoppen')).toBeInTheDocument();
         expect(screen.getByText('812602222')).toBeInTheDocument();
 
-        userEvent.clear(input);
+        await user.clear(input);
 
         expect(screen.queryByText(noMatchText)).toBeNull();
         expect(screen.queryByText('Rør og sånt')).toBeNull();
@@ -158,7 +164,8 @@ describe('SearchableDropdown', () => {
         expect(screen.queryByText('812602222')).toBeNull();
     });
 
-    it('should render custom elements', () => {
+    it('should render custom elements', async () => {
+        const user = userEvent.setup();
         /* eslint-disable react/prop-types */
         const CustomListItemBody = ({ item, isHighlighted }) => {
             return (
@@ -188,9 +195,9 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
+        await user.click(input);
 
-        userEvent.type(input, '{arrowdown}');
+        await user.type(input, '{arrowdown}');
 
         const listItemBody0 = screen.getByTestId(
             companies[0].organizationNumber,
@@ -222,7 +229,9 @@ describe('SearchableDropdown', () => {
         ).toBeInTheDocument();
     });
 
-    it('should open and close', function () {
+    it('should open and close', async function () {
+        const user = userEvent.setup();
+
         render(
             <SearchableDropdown
                 id="id"
@@ -238,7 +247,7 @@ describe('SearchableDropdown', () => {
             name: /åpne alternativer/i,
         });
 
-        userEvent.click(openButton, { button: 1 });
+        await user.click(openButton, { button: 1 });
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -251,7 +260,7 @@ describe('SearchableDropdown', () => {
             name: /lukk alternativer/i,
         });
 
-        userEvent.click(closeButton, { button: 1 });
+        await user.click(closeButton, { button: 1 });
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -261,7 +270,8 @@ describe('SearchableDropdown', () => {
         expect(screen.queryByText('812602552')).toBeNull();
     });
 
-    it('should filter only when value is changed', () => {
+    it('should filter only when value is changed', async () => {
+        const user = userEvent.setup();
         render(
             <SearchableDropdown
                 id="id"
@@ -275,7 +285,7 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.click(input);
+        await user.click(input);
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -284,7 +294,7 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
         expect(screen.getByText('812602552')).toBeInTheDocument();
 
-        userEvent.type(input, 'Sønn');
+        await user.type(input, 'Sønn');
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -293,7 +303,7 @@ describe('SearchableDropdown', () => {
         expect(screen.queryByText('Beslag skytter')).toBeNull();
         expect(screen.queryByText('812602552')).toBeNull();
 
-        userEvent.clear(input);
+        await user.clear(input);
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -303,7 +313,8 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('812602552')).toBeInTheDocument();
     });
 
-    it('should be a wai-aria 1.0 combobox', () => {
+    it('should be a wai-aria 1.0 combobox', async () => {
+        const user = userEvent.setup();
         render(
             <SearchableDropdown
                 id="id"
@@ -317,9 +328,9 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.click(input);
-        userEvent.type(input, '{arrowdown}');
-        userEvent.type(input, '{arrowdown}');
+        await user.click(input);
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{arrowdown}');
 
         const listBox = screen.getByRole('listbox');
         const options = screen.getAllByRole('option');
@@ -342,6 +353,7 @@ describe('SearchableDropdown', () => {
     });
 
     it('should set a11y status message briefly on element change', async () => {
+        const user = userEvent.setup();
         render(
             <div>
                 <button>Knapp</button>
@@ -364,9 +376,9 @@ describe('SearchableDropdown', () => {
 
         const input = await screen.findByRole('combobox');
 
-        userEvent.click(input);
-        userEvent.type(input, '{arrowdown}');
-        userEvent.type(input, '{enter}');
+        await user.click(input);
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{enter}');
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -379,8 +391,8 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.clear(input);
-        userEvent.click(screen.getByText('Knapp'));
+        await user.clear(input);
+        await user.click(screen.getByText('Knapp'));
 
         await wait(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -393,6 +405,7 @@ describe('SearchableDropdown', () => {
     });
 
     it('should set a11y status message briefly on state change', async () => {
+        const user = userEvent.setup();
         render(
             <div>
                 <button>Knapp</button>
@@ -415,7 +428,7 @@ describe('SearchableDropdown', () => {
 
         const input = await screen.findByRole('combobox');
 
-        userEvent.click(input);
+        await user.click(input);
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -428,7 +441,7 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.type(input, 'be');
+        await user.type(input, 'be');
 
         await wait(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -439,8 +452,8 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.clear(input);
-        userEvent.type(input, 'ingen');
+        await user.clear(input);
+        await user.type(input, 'ingen');
 
         await wait(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -451,11 +464,12 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        userEvent.click(screen.getByText('Knapp'));
+        await user.click(screen.getByText('Knapp'));
         expect(a11yStatusMessage).toHaveTextContent('');
     });
 
-    it('should highlight the first element when typing', () => {
+    it('should highlight the first element when typing', async () => {
+        const user = userEvent.setup();
         const onChange = jest.fn();
         const { container } = render(
             <SearchableDropdown
@@ -470,9 +484,9 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
+        await user.click(input);
 
-        userEvent.type(input, 'Be');
+        await user.type(input, 'Be');
 
         const highlightedElements = container.querySelectorAll(
             '.ffe-searchable-dropdown__list-item-body--highlighted',
@@ -481,8 +495,10 @@ describe('SearchableDropdown', () => {
         expect(highlightedElements[0].innerHTML).toContain('Bedriften');
     });
 
-    it('should call onChange(null) when emptying the input field and moving focus away', () => {
+    it('should call onChange(null) when emptying the input field and moving focus away', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         render(
             <div>
                 <button>Knapp</button>
@@ -506,23 +522,22 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.type(input, 'Be');
+        await user.type(input, 'Be');
 
-        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        await user.click(screen.getByText('Bedriften'), { button: 1 });
 
-        userEvent.clear(input);
+        await user.clear(input);
 
-        act(() => {
-            userEvent.click(screen.getByText('Knapp'));
-        });
+        await user.click(screen.getByText('Knapp'));
 
         expect(onChange).toHaveBeenCalledTimes(2);
         expect(onChange).toHaveBeenCalledWith(null);
         expect(input.value).toEqual('');
     });
 
-    it('should reset the input field value to the saved selected element when pressing Escape', () => {
+    it('should reset the input field value to the saved selected element when pressing Escape', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
         render(
             <SearchableDropdown
                 id="id"
@@ -537,24 +552,26 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.type(input, 'Be');
+        await user.type(input, 'Be');
 
-        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        await user.click(screen.getByText('Bedriften'), { button: 1 });
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[0]);
         expect(input.value).toEqual('Bedriften');
 
-        userEvent.clear(input);
-        userEvent.type(input, 'B');
+        await user.clear(input);
+        await user.type(input, 'B');
         expect(input.value).toEqual('B');
 
-        userEvent.type(input, '{esc}');
+        await user.keyboard('{Esc}');
+
         expect(input.value).toEqual('Bedriften');
     });
 
-    it('should move focus to toggle button when selecting from dropdown', () => {
+    it('should move focus to toggle button when selecting from dropdown', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
         render(
             <SearchableDropdown
                 id="id"
@@ -568,15 +585,17 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
-        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        await user.click(input);
+        await user.click(screen.getByText('Bedriften'), { button: 1 });
 
         const toggleButton = screen.getByLabelText('åpne alternativer');
         expect(document.activeElement).toEqual(toggleButton);
     });
 
-    it('should select item when losing focus if there is one single match', () => {
+    it('should select item when losing focus if there is one single match', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         render(
             <div>
                 <button>Knapp</button>
@@ -600,18 +619,18 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.clear(input);
-        userEvent.type(input, 'Besla');
+        await user.clear(input);
+        await user.type(input, 'Besla');
         expect(input.value).toEqual('Besla');
 
-        act(() => {
-            userEvent.click(screen.getByText('Knapp'));
-        });
+        await user.click(screen.getByText('Knapp'));
         expect(input.value).toEqual('Beslag skytter');
     });
 
-    it('should format input value when passing formatter', () => {
+    it('should format input value when passing formatter', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         const formatter = jest.fn(text => {
             return text
                 .split('')
@@ -633,12 +652,14 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.type(input, 'H');
+        await user.type(input, 'H');
         expect(input.value).toEqual('H!?_');
     });
 
-    it('allows using a custom search matcher', () => {
+    it('allows using a custom search matcher', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         const cleanString = value => `${value}`.replace(/h/g, 'sky');
 
         const searchMatcher = jest.fn(
@@ -666,7 +687,7 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.type(input, 'Beslag htter');
+        await user.type(input, 'Beslag htter');
         expect(input.value).toEqual('Beslag htter');
 
         expect(screen.queryByText('Bedriften')).toBeNull();
@@ -677,7 +698,7 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('812602552')).toBeInTheDocument();
     });
 
-    it('allows passing a selected item', () => {
+    it('allows passing a selected item', async () => {
         const onChange = jest.fn();
 
         const { rerender } = render(
@@ -712,8 +733,10 @@ describe('SearchableDropdown', () => {
         expect(input.value).toBe('Beslag skytter');
     });
 
-    it('allows for writing and selecting even when passing selectedItem', () => {
+    it('allows for writing and selecting even when passing selectedItem', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         render(
             <SearchableDropdown
                 id="id"
@@ -731,18 +754,20 @@ describe('SearchableDropdown', () => {
 
         expect(input.value).toBe('Sønn & co');
 
-        userEvent.clear(input);
-        userEvent.type(input, 'Be');
+        await user.clear(input);
+        await user.type(input, 'Be');
 
-        userEvent.click(screen.getByText('Beslag skytter'), { button: 1 });
+        await user.click(screen.getByText('Beslag skytter'), { button: 1 });
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[2]);
         expect(input.value).toEqual('Beslag skytter');
     });
 
-    it('should not automatically change selectedItem if object structure is different from previous but the actual content is still the same content', () => {
+    it('should not automatically change selectedItem if object structure is different from previous but the actual content is still the same content', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         render(
             <div>
                 <button>Knapp</button>
@@ -770,15 +795,14 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
-        act(() => {
-            userEvent.click(screen.getByText('Knapp'));
-        });
+        await user.click(input);
+        await user.click(screen.getByText('Knapp'));
         expect(onChange).not.toHaveBeenCalled();
     });
 
-    it('should allow passing a selectedItem with same organizationName as dropdownListItems but different organizationNumber without it being changed', () => {
+    it('should allow passing a selectedItem with same organizationName as dropdownListItems but different organizationNumber without it being changed', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
 
         const noMatchDropDownList = [
             {
@@ -815,15 +839,17 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
-        act(() => {
-            userEvent.click(screen.getByText('Knapp'));
+        await user.click(input);
+        act(async () => {
+            await user.click(screen.getByText('Knapp'));
         });
         expect(onChange).not.toHaveBeenCalled();
     });
 
-    it('should not automatically change selectedItem when list contains one element if there is no highlightedIndex', () => {
+    it('should not automatically change selectedItem when list contains one element if there is no highlightedIndex', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         render(
             <div>
                 <button>Knapp</button>
@@ -846,15 +872,16 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        act(() => {
-            userEvent.click(screen.getByText('Knapp'));
+        act(async () => {
+            await user.click(screen.getByText('Knapp'));
         });
         expect(onChange).not.toHaveBeenCalled();
         expect(input.value).toEqual('');
     });
 
-    it('should show updated result list after loading completes', () => {
+    it('should show updated result list after loading completes', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
 
         const { rerender } = render(
             <div>
@@ -879,8 +906,8 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
-        userEvent.type(input, 'Beslag');
+        await user.click(input);
+        await user.type(input, 'Beslag');
 
         expect(screen.queryByText('Beslag skytter')).toBeNull();
 
@@ -911,12 +938,14 @@ describe('SearchableDropdown', () => {
             </div>,
         );
 
-        expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
+        await wait(() => {
+            expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
+        });
     });
 
     it('should broadcast loading status when dropdown list is loading', async () => {
         const onChange = jest.fn();
-
+        const user = userEvent.setup();
         render(
             <div>
                 <button>Knapp</button>
@@ -940,13 +969,15 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
+        await user.click(input);
 
         await screen.findByText('Laster inn alternativer.');
     });
 
     it('should show postListElement when postListElement is passed as props', async () => {
         const onChange = jest.fn();
+        const user = userEvent.setup();
+
         render(
             <div>
                 <button>Knapp</button>
@@ -970,7 +1001,7 @@ describe('SearchableDropdown', () => {
             </div>,
         );
         const input = screen.getByRole('combobox');
-        userEvent.click(input);
+        await user.click(input);
         await screen.findByText('Dette er et postListElement!');
     });
 });
