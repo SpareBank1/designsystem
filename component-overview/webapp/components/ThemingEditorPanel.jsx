@@ -1,7 +1,7 @@
 import React from 'react';
 import { useThemeProvider } from '../context/ThemeContext';
 import { Label, ToggleSwitch } from '@sb1/ffe-form-react';
-import Dropdown from '@sb1/ffe-dropdown-react';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
 
 export default function ThemingEditorPanel() {
     const context = useThemeProvider();
