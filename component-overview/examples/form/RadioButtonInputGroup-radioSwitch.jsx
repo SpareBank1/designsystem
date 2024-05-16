@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import {useRef, useState} from 'react';
 import {
     RadioButtonInputGroup,
     RadioSwitch,
 } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
+import { v4 as uuid } from "uuid";
 
 () => {
     const [showErrors, setShowErrors] = useState(false);
+    const switchName = useRef(`switch-${uuid()}`).current;
 
     return (
         <>
@@ -18,7 +20,7 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
             <RadioButtonInputGroup
                 description="Du kan ikke velge begge"
                 label="Velg ja eller nei"
-                name="switch"
+                name={switchName}
                 fieldMessage={showErrors ? 'Feil valg' : null}
             >
                 {inputProps => (
