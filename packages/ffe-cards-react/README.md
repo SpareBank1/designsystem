@@ -10,11 +10,6 @@ npm install --save @sb1/ffe-cards-react
 
 Full documentation on card usage is available at https://design.sparebank1.no/komponenter/kort/.
 
-## TypeScript definition files
-
-This component supports TypeScript - please update `index.d.ts` if you change any
-of the external methods or properties in this component.
-
 ## Development
 
 To start a local development server, run the following from the designsystem root folder:
