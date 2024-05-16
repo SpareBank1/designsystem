@@ -10,11 +10,6 @@ npm install --save @sb1/ffe-datepicker-react
 
 Full documentation on datepicker usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#datepicker.
 
-## TypeScript definition files
-
-This component supports TypeScript - please keep in mind updating `index.d.ts` if you change any
-of the external methods or properties in this component.
-
 ## Requirements
 
 -   ~~i18n~~
