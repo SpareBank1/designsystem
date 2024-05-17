@@ -6,7 +6,7 @@
     "module": "es/index.js",
     "types": "types/index.d.ts",
     "scripts": {
-        "build": "ffe-buildtool babel && cp src/symbolNames.ts types/symbolNames.ts",
+        "build": "ffe-buildtool tsc && cp src/symbolNames.ts types/symbolNames.ts",
         "watch": "ffe-buildtool babel-watch",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
@@ -26,8 +26,7 @@
     "dependencies": {
         "@sb1/ffe-symbols": "^4.0.3",
         "classnames": "^2.3.2",
-        "prop-types": "^15.8.1",
-        "react": "^18.2.0"
+        "react": "^16.9.0"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.6.1",
