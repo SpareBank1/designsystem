@@ -6,7 +6,7 @@ import {
 
 <div>
     <h3 className="ffe-h5">Medium</h3>
-    <DescriptionList horizontal={true} medium={true}>
+    <DescriptionList size="md" horizontal={true}>
         <DescriptionListTerm>
             This is a very long term, so I might need some extra room
         </DescriptionListTerm>
@@ -17,7 +17,7 @@ import {
     </DescriptionList>
 
     <h3 className="ffe-h5">Large</h3>
-    <DescriptionList horizontal={true} large={true}>
+    <DescriptionList size="lg" horizontal={true}>
         <DescriptionListTerm>
             This is a very long description, so I might need some extra room
         </DescriptionListTerm>
