@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@9.0.12...@sb1/ffe-icons-react@10.0.0) (2024-05-17)
+
+### Features
+
+-   **ffe-icons-react:** rewrite to ts ([8341177](https://github.com/SpareBank1/designsystem/commit/8341177a72e04882b326f589547748a15af9af04))
+
+### BREAKING CHANGES
+
+-   **ffe-icons-react:** default export -> named export
+
 ## [9.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@9.0.11...@sb1/ffe-icons-react@9.0.12) (2024-05-09)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
