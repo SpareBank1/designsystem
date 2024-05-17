@@ -1,4 +1,4 @@
-import Symbol from "@sb1/ffe-symbols-react";
+import { Symbol } from "@sb1/ffe-symbols-react";
 
 () => {
     return (
