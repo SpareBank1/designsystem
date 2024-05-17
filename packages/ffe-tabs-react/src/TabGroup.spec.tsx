@@ -1,48 +1,56 @@
 import React from 'react';
+import { TabGroup } from './TabGroup';
+import { Tab } from './Tab';
+import { render, screen } from '@testing-library/react';
 
-import { Tab, TabGroup } from './';
-
-describe('TabGroup', () => {
+describe('<TabGroup/>', () => {
     it('renders a tab group', () => {
-        const wrapper = shallow(
+        render(
             <TabGroup>
                 <Tab aria-controls="div1">En tab</Tab>
                 <Tab aria-controls="div2">En annen tab</Tab>
             </TabGroup>,
         );
-        expect(wrapper.hasClass('ffe-tab-group')).toBe(true);
+        const tabGroup = screen.getByRole('tablist');
+
+        expect(tabGroup.classList.contains('ffe-tab-group')).toBe(true);
     });
 
     it('contains a tab button', () => {
-        const wrapper = shallow(
+        render(
             <TabGroup>
                 <Tab aria-controls="div1">En tab</Tab>
                 <Tab aria-controls="div2">En annen tab</Tab>
             </TabGroup>,
         );
-        expect(wrapper.contains(<Tab aria-controls="div1">En tab</Tab>)).toBe(
-            true,
-        );
-        expect(
-            wrapper.contains(<Tab aria-controls="div2">En annen tab</Tab>),
-        ).toBe(true);
+
+        const [tab1, tab2] = screen.getAllByRole('tab');
+
+        expect(tab1.textContent).toBe('En tab');
+        expect(tab2.textContent).toBe('En annen tab');
     });
 
     it('should apply noBreak modifier class when the noBreak prop is true', () => {
-        const wrapper = shallow(
+        render(
             <TabGroup noBreak={true}>
                 <Tab aria-controls="div">En tab</Tab>
             </TabGroup>,
         );
-        expect(wrapper.hasClass('ffe-tab-group--no-break')).toBe(true);
+        const tabGroup = screen.getByRole('tablist');
+        expect(tabGroup.classList.contains('ffe-tab-group--no-break')).toBe(
+            true,
+        );
     });
 
     it('should accept custom classes', () => {
-        const wrapper = shallow(
+        render(
             <TabGroup className="some-custom-class">
                 <Tab aria-controls="div">En tab</Tab>
             </TabGroup>,
         );
-        expect(wrapper.hasClass('some-custom-class')).toBe(true);
+        const tabGroup = screen.getByRole('tablist');
+
+        expect(tabGroup.classList.contains('ffe-tab-group')).toBe(true);
+        expect(tabGroup.classList.contains('some-custom-class')).toBe(true);
     });
 });
