@@ -1,0 +1,9 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./es",
+        "module": "esnext"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["../ffe-system-message/node_modules", "src/**/*.spec.ts*"]
+}

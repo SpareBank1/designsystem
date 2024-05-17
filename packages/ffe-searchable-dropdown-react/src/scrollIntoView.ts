@@ -1,11 +1,14 @@
-import computeScrollIntoView from 'compute-scroll-into-view';
+import { compute } from 'compute-scroll-into-view';
 
-export const scrollIntoView = (node, menuNode) => {
+export const scrollIntoView = (
+    node: Element | null,
+    menuNode: Element | null,
+) => {
     if (!node) {
         return;
     }
 
-    const actions = computeScrollIntoView(node, {
+    const actions = compute(node, {
         boundary: menuNode,
         block: 'nearest',
         scrollMode: 'if-needed',
