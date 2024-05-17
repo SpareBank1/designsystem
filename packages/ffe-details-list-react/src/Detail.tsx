@@ -1,15 +1,22 @@
-import React, { Fragment } from 'react';
-import { node, string } from 'prop-types';
-
+import React from 'react';
 import { GridCol, GridRow } from '@sb1/ffe-grid-react';
 
-export default function Detail(props) {
-    const { children, label } = props;
+export interface DetailProps {
+    /**
+     * A set of `DetailsContent` components to render for this row
+     */
+    children: React.ReactNode;
+    /**
+     * A label for the data
+     */
+    label: string;
+}
 
+export const Detail: React.FC<DetailProps> = ({ children, label }) => {
     const childCount = React.Children.count(children);
 
     return (
-        <Fragment>
+        <>
             <GridRow>
                 <GridCol
                     sm={12}
@@ -20,6 +27,7 @@ export default function Detail(props) {
                     <div className="ffe-h6 ffe-h6--no-margin">{label}</div>
                 </GridCol>
                 {React.Children.map(children, (child, index) =>
+                    // @ts-ignore
                     React.cloneElement(child, { childCount, index }),
                 )}
             </GridRow>
@@ -28,17 +36,6 @@ export default function Detail(props) {
                     <hr className="ffe-divider-line" />
                 </GridCol>
             </GridRow>
-        </Fragment>
+        </>
     );
-}
-
-Detail.propTypes = {
-    /**
-     * A set of `DetailsContent` components to render for this row
-     */
-    children: node.isRequired,
-    /**
-     * A label for the data
-     */
-    label: string.isRequired,
 };
