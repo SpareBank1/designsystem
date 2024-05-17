@@ -1,9 +1,9 @@
 import React from 'react';
-import NumberedList from './NumberedList';
-import NumberedListItem from './NumberedListItem';
+import { NumberedList, NumberedListProps } from './NumberedList';
+import { NumberedListItem } from './NumberedListItem';
 import { render, screen } from '@testing-library/react';
 
-const renderNumberedList = props =>
+const renderNumberedList = (props?: NumberedListProps) =>
     render(
         <NumberedList {...props}>
             <NumberedListItem>Firstly</NumberedListItem>

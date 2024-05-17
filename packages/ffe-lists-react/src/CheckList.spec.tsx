@@ -1,9 +1,9 @@
 import React from 'react';
-import CheckList from './CheckList';
-import CheckListItem from './CheckListItem';
+import { CheckList, CheckListProps } from './CheckList';
+import { CheckListItem } from './CheckListItem';
 import { render, screen } from '@testing-library/react';
 
-const renderCheckList = props =>
+const renderCheckList = (props?: CheckListProps) =>
     render(
         <CheckList {...props}>
             <CheckListItem>Firstly</CheckListItem>
@@ -12,10 +12,6 @@ const renderCheckList = props =>
     );
 
 describe('<CheckList>', () => {
-    it('renders without exploding', () => {
-        renderCheckList();
-        expect(screen.getByRole('list')).toBeInTheDocument();
-    });
     it('has the correct class', () => {
         renderCheckList({ className: 'test-class' });
         const list = screen.getByRole('list');
@@ -36,7 +32,7 @@ describe('<CheckList>', () => {
         );
     });
     it('only supports 1 and 2 columns', () => {
-        renderCheckList({ columns: 3 });
+        renderCheckList({ columns: 3 as 2 });
         const list = screen.getByRole('list');
         expect(list.classList.contains('ffe-check-list--two-columns')).toBe(
             false,

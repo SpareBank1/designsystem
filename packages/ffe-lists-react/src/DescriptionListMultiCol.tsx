@@ -1,9 +1,13 @@
 import React from 'react';
-import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
-const DescriptionListMultiCol = ({ children, className, ...rest }) => {
-    const pairs = [];
+export interface DescriptionListMultiColProps
+    extends React.ComponentPropsWithoutRef<'dl'> {}
+
+export const DescriptionListMultiCol: React.FC<
+    DescriptionListMultiColProps
+> = ({ children, className, ...rest }) => {
+    const pairs: React.ReactNode[][] = [];
 
     React.Children.forEach(children, (child, i) => {
         const j = i % 2;
@@ -30,12 +34,3 @@ const DescriptionListMultiCol = ({ children, className, ...rest }) => {
         </dl>
     );
 };
-
-DescriptionListMultiCol.propTypes = {
-    /** List items */
-    children: node.isRequired,
-    /** Any extra classes */
-    className: string,
-};
-
-export default DescriptionListMultiCol;

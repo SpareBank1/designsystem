@@ -1,12 +1,14 @@
 import React from 'react';
-import DescriptionList from './DescriptionList';
-import DescriptionListTerm from './DescriptionListTerm';
-import DescriptionListDescription from './DescriptionListDescription';
-import { render } from '@testing-library/react';
+import { DescriptionList, DescriptionListProps } from './DescriptionList';
+import { DescriptionListTerm } from './DescriptionListTerm';
+import { DescriptionListDescription } from './DescriptionListDescription';
+import { render, screen } from '@testing-library/react';
 
-const renderDescriptionList = props =>
+const TEST_ID = 'TEST_ID';
+
+const renderDescriptionList = (props?: DescriptionListProps) =>
     render(
-        <DescriptionList {...props}>
+        <DescriptionList {...props} data-testid={TEST_ID}>
             <DescriptionListTerm>Porsche</DescriptionListTerm>
             <DescriptionListDescription>
                 German car maker
@@ -19,22 +21,18 @@ const renderDescriptionList = props =>
     );
 
 describe('<DescriptionList>', () => {
-    it('renders without exploding', () => {
-        const { container } = renderDescriptionList();
-        expect(container.querySelector('dl')).toBeTruthy();
-    });
     it('has the correct class', () => {
-        const { container } = renderDescriptionList({
+        renderDescriptionList({
             className: 'test-class',
         });
-        const dl = container.querySelector('dl');
+        const dl = screen.getByTestId(TEST_ID);
 
         expect(dl.classList.contains('ffe-description-list')).toBe(true);
         expect(dl.classList.contains('test-class')).toBe(true);
     });
     it('sets the correct class for modifier props', () => {
-        const { container, rerender } = render(
-            <DescriptionList>
+        const { rerender } = render(
+            <DescriptionList data-testid={TEST_ID}>
                 <DescriptionListTerm>Porsche</DescriptionListTerm>
                 <DescriptionListDescription>
                     German car maker
@@ -43,18 +41,18 @@ describe('<DescriptionList>', () => {
         );
 
         expect(
-            container
-                .querySelector('dl')
+            screen
+                .getByTestId(TEST_ID)
                 .classList.contains('ffe-description-list--md'),
         ).toBe(false);
         expect(
-            container
-                .querySelector('dl')
+            screen
+                .getByTestId(TEST_ID)
                 .classList.contains('ffe-description-list--lg'),
         ).toBe(false);
 
         rerender(
-            <DescriptionList medium={true} large={false}>
+            <DescriptionList size="md" data-testid={TEST_ID}>
                 <DescriptionListTerm>Porsche</DescriptionListTerm>
                 <DescriptionListDescription>
                     German car maker
@@ -63,18 +61,18 @@ describe('<DescriptionList>', () => {
         );
 
         expect(
-            container
-                .querySelector('dl')
+            screen
+                .getByTestId(TEST_ID)
                 .classList.contains('ffe-description-list--md'),
         ).toBe(true);
         expect(
-            container
-                .querySelector('dl')
+            screen
+                .getByTestId(TEST_ID)
                 .classList.contains('ffe-description-list--lg'),
         ).toBe(false);
 
         rerender(
-            <DescriptionList medium={false} large={true}>
+            <DescriptionList size="lg" data-testid={TEST_ID}>
                 <DescriptionListTerm>Porsche</DescriptionListTerm>
                 <DescriptionListDescription>
                     German car maker
@@ -83,19 +81,19 @@ describe('<DescriptionList>', () => {
         );
 
         expect(
-            container
-                .querySelector('dl')
+            screen
+                .getByTestId(TEST_ID)
                 .classList.contains('ffe-description-list--md'),
         ).toBe(false);
         expect(
-            container
-                .querySelector('dl')
+            screen
+                .getByTestId(TEST_ID)
                 .classList.contains('ffe-description-list--lg'),
         ).toBe(true);
     });
     it('passes props', () => {
-        const { container } = renderDescriptionList({ id: 'that-id' });
-        const dl = container.querySelector('dl');
+        renderDescriptionList({ id: 'that-id' });
+        const dl = screen.getByTestId(TEST_ID);
         expect(dl.getAttribute('id')).toBe('that-id');
         expect(dl.innerHTML).toContain('Porsche');
     });
