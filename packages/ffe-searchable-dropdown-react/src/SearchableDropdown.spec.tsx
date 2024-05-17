@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen, act, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import 'regenerator-runtime';
 import { SearchableDropdown } from './SearchableDropdown';
 
 describe('SearchableDropdown', () => {
@@ -29,7 +28,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 searchAttributes={['organizationName', 'organizationNumber']}
@@ -65,7 +64,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -78,11 +77,11 @@ describe('SearchableDropdown', () => {
 
         await user.type(input, 'Be');
 
-        await user.click(screen.getByText('Bedriften'), { button: 1 });
+        await user.click(screen.getByText('Bedriften'));
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[0]);
-        expect(input.value).toEqual('Bedriften');
+        expect(input.getAttribute('value')).toEqual('Bedriften');
     });
 
     it('should be possible to select item with keyboard', async () => {
@@ -92,7 +91,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -110,7 +109,7 @@ describe('SearchableDropdown', () => {
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[1]);
-        expect(input.value).toEqual('Sønn & co');
+        expect(input.getAttribute('value')).toEqual('Sønn & co');
     });
 
     it('should show "noMatch" values', async () => {
@@ -133,7 +132,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 noMatch={{
@@ -166,8 +165,13 @@ describe('SearchableDropdown', () => {
 
     it('should render custom elements', async () => {
         const user = userEvent.setup();
-        /* eslint-disable react/prop-types */
-        const CustomListItemBody = ({ item, isHighlighted }) => {
+        const CustomListItemBody = ({
+            item,
+            isHighlighted,
+        }: {
+            item: (typeof companies)[number];
+            isHighlighted: boolean;
+        }) => {
             return (
                 <div
                     data-testid={item.organizationNumber}
@@ -178,13 +182,12 @@ describe('SearchableDropdown', () => {
                 </div>
             );
         };
-        /* eslint-enable react/prop-types */
 
         const onChange = jest.fn();
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -235,7 +238,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 searchAttributes={['organizationName', 'organizationNumber']}
@@ -247,7 +250,7 @@ describe('SearchableDropdown', () => {
             name: /åpne alternativer/i,
         });
 
-        await user.click(openButton, { button: 1 });
+        await user.click(openButton);
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -260,7 +263,7 @@ describe('SearchableDropdown', () => {
             name: /lukk alternativer/i,
         });
 
-        await user.click(closeButton, { button: 1 });
+        await user.click(closeButton);
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -275,7 +278,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 searchAttributes={['organizationName', 'organizationNumber']}
@@ -318,7 +321,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 searchAttributes={['organizationName', 'organizationNumber']}
@@ -353,13 +356,14 @@ describe('SearchableDropdown', () => {
     });
 
     it('should set a11y status message briefly on element change', async () => {
-        const user = userEvent.setup();
+        const user = userEvent.setup({ delay: null });
+        jest.useFakeTimers();
         render(
             <div>
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -376,9 +380,11 @@ describe('SearchableDropdown', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await user.click(input);
-        await user.type(input, '{arrowdown}');
-        await user.type(input, '{enter}');
+        await act(async () => {
+            await user.click(input);
+            await user.type(input, '{arrowdown}');
+            await user.type(input, '{enter}');
+        });
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -391,8 +397,10 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await user.clear(input);
-        await user.click(screen.getByText('Knapp'));
+        await act(async () => {
+            await user.clear(input);
+            await user.click(screen.getByText('Knapp'));
+        });
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -402,16 +410,18 @@ describe('SearchableDropdown', () => {
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
+        jest.useRealTimers();
     });
 
     it('should set a11y status message briefly on state change', async () => {
-        const user = userEvent.setup();
+        const user = userEvent.setup({ delay: null });
+        jest.useFakeTimers();
         render(
             <div>
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -428,7 +438,9 @@ describe('SearchableDropdown', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await user.click(input);
+        await act(async () => {
+            await user.click(input);
+        });
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -441,7 +453,9 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await user.type(input, 'be');
+        await act(async () => {
+            await user.type(input, 'be');
+        });
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -452,8 +466,10 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await user.clear(input);
-        await user.type(input, 'ingen');
+        await act(async () => {
+            await user.clear(input);
+            await user.type(input, 'ingen');
+        });
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -463,9 +479,12 @@ describe('SearchableDropdown', () => {
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
+        await act(async () => {
+            await user.click(screen.getByText('Knapp'));
+        });
 
-        await user.click(screen.getByText('Knapp'));
         expect(a11yStatusMessage).toHaveTextContent('');
+        jest.useRealTimers();
     });
 
     it('should highlight the first element when typing', async () => {
@@ -474,7 +493,7 @@ describe('SearchableDropdown', () => {
         const { container } = render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -504,7 +523,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -522,17 +541,19 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        await user.type(input, 'Be');
+        await act(async () => {
+            await user.type(input, 'Be');
 
-        await user.click(screen.getByText('Bedriften'), { button: 1 });
+            await user.click(screen.getByText('Bedriften'));
 
-        await user.clear(input);
+            await user.clear(input);
 
-        await user.click(screen.getByText('Knapp'));
+            await user.click(screen.getByText('Knapp'));
+        });
 
         expect(onChange).toHaveBeenCalledTimes(2);
         expect(onChange).toHaveBeenCalledWith(null);
-        expect(input.value).toEqual('');
+        expect(input.getAttribute('value')).toEqual('');
     });
 
     it('should reset the input field value to the saved selected element when pressing Escape', async () => {
@@ -541,7 +562,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -554,19 +575,19 @@ describe('SearchableDropdown', () => {
 
         await user.type(input, 'Be');
 
-        await user.click(screen.getByText('Bedriften'), { button: 1 });
+        await user.click(screen.getByText('Bedriften'));
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[0]);
-        expect(input.value).toEqual('Bedriften');
+        expect(input.getAttribute('value')).toEqual('Bedriften');
 
         await user.clear(input);
         await user.type(input, 'B');
-        expect(input.value).toEqual('B');
+        expect(input.getAttribute('value')).toEqual('B');
 
         await user.keyboard('{Esc}');
 
-        expect(input.value).toEqual('Bedriften');
+        expect(input.getAttribute('value')).toEqual('Bedriften');
     });
 
     it('should move focus to toggle button when selecting from dropdown', async () => {
@@ -575,7 +596,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -586,7 +607,7 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
         await user.click(input);
-        await user.click(screen.getByText('Bedriften'), { button: 1 });
+        await user.click(screen.getByText('Bedriften'));
 
         const toggleButton = screen.getByLabelText('åpne alternativer');
         expect(document.activeElement).toEqual(toggleButton);
@@ -601,7 +622,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -619,12 +640,17 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        await user.clear(input);
-        await user.type(input, 'Besla');
-        expect(input.value).toEqual('Besla');
+        await act(async () => {
+            await user.clear(input);
+            await user.type(input, 'Besla');
+        });
 
-        await user.click(screen.getByText('Knapp'));
-        expect(input.value).toEqual('Beslag skytter');
+        expect(input.getAttribute('value')).toEqual('Besla');
+        await act(async () => {
+            await user.click(screen.getByText('Knapp'));
+        });
+
+        expect(input.getAttribute('value')).toEqual('Beslag skytter');
     });
 
     it('should format input value when passing formatter', async () => {
@@ -634,14 +660,14 @@ describe('SearchableDropdown', () => {
         const formatter = jest.fn(text => {
             return text
                 .split('')
-                .map(char => `${char}!?_`)
+                .map((char: string) => `${char}!?_`)
                 .join('');
         });
 
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -653,30 +679,36 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
         await user.type(input, 'H');
-        expect(input.value).toEqual('H!?_');
+        expect(input.getAttribute('value')).toEqual('H!?_');
     });
 
     it('allows using a custom search matcher', async () => {
         const onChange = jest.fn();
         const user = userEvent.setup();
 
-        const cleanString = value => `${value}`.replace(/h/g, 'sky');
+        const cleanString = (value: string | number) =>
+            `${value}`.replace(/h/g, 'sky');
 
         const searchMatcher = jest.fn(
-            (inputValue, searchAttributes) => item => {
-                const cleanedInputValue = cleanString(inputValue);
-                return searchAttributes
-                    .map(searchAttribute => cleanString(item[searchAttribute]))
-                    .some(cleanedItemAttribute =>
-                        cleanedItemAttribute.includes(cleanedInputValue),
-                    );
-            },
+            (inputValue, searchAttributes) =>
+                (item: (typeof companies)[number]) => {
+                    const cleanedInputValue = cleanString(inputValue);
+                    return searchAttributes
+                        .map(
+                            (
+                                searchAttribute: keyof (typeof companies)[number],
+                            ) => cleanString(item[searchAttribute]),
+                        )
+                        .some((cleanedItemAttribute: string) =>
+                            cleanedItemAttribute.includes(cleanedInputValue),
+                        );
+                },
         );
 
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -688,7 +720,7 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
         await user.type(input, 'Beslag htter');
-        expect(input.value).toEqual('Beslag htter');
+        expect(input.getAttribute('value')).toEqual('Beslag htter');
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -704,7 +736,7 @@ describe('SearchableDropdown', () => {
         const { rerender } = render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -715,12 +747,12 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        expect(input.value).toBe('');
+        expect(input.getAttribute('value')).toBe('');
 
         rerender(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -730,7 +762,7 @@ describe('SearchableDropdown', () => {
             />,
         );
 
-        expect(input.value).toBe('Beslag skytter');
+        expect(input.getAttribute('value')).toBe('Beslag skytter');
     });
 
     it('allows for writing and selecting even when passing selectedItem', async () => {
@@ -740,7 +772,7 @@ describe('SearchableDropdown', () => {
         render(
             <SearchableDropdown
                 id="id"
-                labelId="labelId"
+                labelledById="labelId"
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}
                 onChange={onChange}
@@ -752,16 +784,16 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        expect(input.value).toBe('Sønn & co');
+        expect(input.getAttribute('value')).toBe('Sønn & co');
 
         await user.clear(input);
         await user.type(input, 'Be');
 
-        await user.click(screen.getByText('Beslag skytter'), { button: 1 });
+        await user.click(screen.getByText('Beslag skytter'));
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[2]);
-        expect(input.value).toEqual('Beslag skytter');
+        expect(input.getAttribute('value')).toEqual('Beslag skytter');
     });
 
     it('should not automatically change selectedItem if object structure is different from previous but the actual content is still the same content', async () => {
@@ -773,7 +805,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -795,8 +827,11 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        await user.click(input);
-        await user.click(screen.getByText('Knapp'));
+        await act(async () => {
+            await user.click(input);
+            await user.click(screen.getByText('Knapp'));
+        });
+
         expect(onChange).not.toHaveBeenCalled();
     });
 
@@ -817,7 +852,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -840,7 +875,7 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
         await user.click(input);
-        act(async () => {
+        await act(async () => {
             await user.click(screen.getByText('Knapp'));
         });
         expect(onChange).not.toHaveBeenCalled();
@@ -855,7 +890,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -872,11 +907,11 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        act(async () => {
+        await act(async () => {
             await user.click(screen.getByText('Knapp'));
         });
         expect(onChange).not.toHaveBeenCalled();
-        expect(input.value).toEqual('');
+        expect(input.getAttribute('value')).toEqual('');
     });
 
     it('should show updated result list after loading completes', async () => {
@@ -888,7 +923,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -916,7 +951,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -951,7 +986,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',
@@ -983,7 +1018,7 @@ describe('SearchableDropdown', () => {
                 <button>Knapp</button>
                 <SearchableDropdown
                     id="id"
-                    labelId="labelId"
+                    labelledById="labelId"
                     dropdownAttributes={[
                         'organizationName',
                         'organizationNumber',

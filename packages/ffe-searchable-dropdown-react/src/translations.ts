@@ -1,91 +1,79 @@
-const nb = 'nb';
-const nn = 'nn';
-const en = 'en';
+import { Locale } from './types';
 
-export const locales = { nb, nn, en };
-
-export const getButtonLabelClear = locale => {
+export const getButtonLabelClose = (locale: Locale) => {
     switch (locale) {
-        case nn:
-            return 'fjern valgt';
-        case en:
-            return 'clear the field';
-        default:
-            return 'fjern valgt';
-    }
-};
-
-export const getButtonLabelClose = locale => {
-    switch (locale) {
-        case nn:
+        case 'nn':
             return 'lukk alternativer';
-        case en:
+        case 'en':
             return 'close alternatives';
         default:
             return 'lukk alternativer';
     }
 };
 
-export const getButtonLabelOpen = locale => {
+export const getButtonLabelOpen = (locale: Locale) => {
     switch (locale) {
-        case nn:
+        case 'nn':
             return 'åpne alternativer';
-        case en:
+        case 'en':
             return 'open alternatives';
         default:
             return 'åpne alternativer';
     }
 };
 
-export const getNotMatchText = locale => {
+export const getNotMatchText = (locale: Locale) => {
     switch (locale) {
-        case nn:
+        case 'nn':
             return 'Søket gav ingen treff';
-        case en:
+        case 'en':
             return 'The search gave no result';
         default:
             return 'Søket ga ingen treff';
     }
 };
 
-export const getItemClearedA11yStatus = locale => {
+export const getItemClearedA11yStatus = (locale: Locale) => {
     switch (locale) {
-        case nn:
+        case 'nn':
             return `Valt element har vorte fjerna.`;
-        case en:
+        case 'en':
             return `Selected item has been removed.`;
         default:
             return `Valgt element har blitt fjernet.`;
     }
 };
 
-export const getItemSelectedA11yStatus = (locale, item) => {
+export const getItemSelectedA11yStatus = (locale: Locale, item: string) => {
     switch (locale) {
-        case nn:
+        case 'nn':
             return `Element ${item} er valgt.`;
-        case en:
+        case 'en':
             return `Item ${item} has been selected.`;
         default:
             return `Element ${item} er valgt.`;
     }
 };
 
-export const getNoResultA11yStatus = locale => {
+export const getNoResultA11yStatus = (locale: Locale) => {
     switch (locale) {
-        case nn:
+        case 'nn':
             return 'Ingen resultat er tilgjengelege.';
-        case en:
+        case 'en':
             return 'No results are available.';
         default:
             return 'Ingen resultater er tilgjengelige.';
     }
 };
 
-export const getResultCountChangedA11yStatus = (locale, nrOfItems) => {
+export const getResultCountChangedA11yStatus = (
+    locale: Locale,
+    nrOfItems: number,
+) => {
     switch (locale) {
-        case nn:
+        case 'nn':
             return `${nrOfItems} resultat er tilgjengeleg, bruk opp- og nedpiltastene for å navigera. Trykk Enter for å velja.`;
-        case en:
+        case 'en':
             return `${nrOfItems} result${
                 nrOfItems === 1 ? ' is' : 's are'
             } available, use up and down arrow keys to navigate. Press Enter key to select.`;
@@ -96,11 +84,11 @@ export const getResultCountChangedA11yStatus = (locale, nrOfItems) => {
     }
 };
 
-export const getIsLoadingItemsA11yStatus = locale => {
+export const getIsLoadingItemsA11yStatus = (locale: Locale) => {
     switch (locale) {
-        case nn:
+        case 'nn':
             return 'Lastar inn alternativ.';
-        case en:
+        case 'en':
             return 'Loading options.';
         default:
             return 'Laster inn alternativer.';
