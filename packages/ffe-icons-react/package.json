@@ -19,15 +19,14 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool babel",
+        "build": "ffe-buildtool tsc",
         "clean": "rimraf gen-src lib es types",
-        "lint": "eslint src",
-        "lint:fix": "eslint src --fix",
+        "lint": "eslint src --ext ts,tsx",
+        "lint:fix": "eslint src --fix --ext ts,tsx",
         "test": "ffe-buildtool jest"
     },
     "dependencies": {
-        "@sb1/ffe-icons": "^14.0.1",
-        "prop-types": "^15.7.2"
+        "@sb1/ffe-icons": "^14.0.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.6.1",
