@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-datepicker-react",
-    "version": "8.0.0",
+    "version": "8.0.1",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -27,7 +27,7 @@
     "dependencies": {
         "@sb1/ffe-datepicker": "^12.0.40",
         "@sb1/ffe-form": "^29.0.13",
-        "@sb1/ffe-icons-react": "^9.0.12",
+        "@sb1/ffe-icons-react": "^10.0.0",
         "@types/lodash.debounce": "^4.0.9",
         "classnames": "^2.3.1",
         "lodash.debounce": "^4.0.8",

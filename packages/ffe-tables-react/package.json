@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tables-react",
-    "version": "8.0.27",
+    "version": "8.0.28",
     "description": "React implementation of ffe-tables",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,7 +26,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-icons-react": "^9.0.12",
+        "@sb1/ffe-icons-react": "^10.0.0",
         "@sb1/ffe-tables": "^14.0.17",
         "classnames": "^2.3.1",
         "deep-equal": "^1.0.1",

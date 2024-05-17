@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@5.0.4...@sb1/ffe-symbols-react@6.0.0) (2024-05-17)
+
+### Features
+
+-   **ffe-symbols-react:** rewrite to ts ([de2229c](https://github.com/SpareBank1/designsystem/commit/de2229c8c4a1310006a584f439999f0f2a04895b))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols-react:** no more default export
+
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@5.0.3...@sb1/ffe-symbols-react@5.0.4) (2024-05-09)
 
 **Note:** Version bump only for package @sb1/ffe-symbols-react

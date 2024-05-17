@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-form-react",
-    "version": "18.0.2",
+    "version": "18.0.3",
     "description": "React component for form elements in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -28,7 +28,7 @@
     "dependencies": {
         "@sb1/ffe-collapse-react": "^4.0.2",
         "@sb1/ffe-form": "^29.0.13",
-        "@sb1/ffe-icons-react": "^9.0.12",
+        "@sb1/ffe-icons-react": "^10.0.0",
         "classnames": "^2.3.1",
         "uuid": "^9.0.0"
     },
