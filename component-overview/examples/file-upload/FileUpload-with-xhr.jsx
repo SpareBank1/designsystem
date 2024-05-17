@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import FileUpload, { getFileContent } from '@sb1/ffe-file-upload-react';
+import { getFileContent, FileUpload } from '@sb1/ffe-file-upload-react';
 import { InputGroup, Input, Checkbox } from '@sb1/ffe-form-react';
 
 /**
