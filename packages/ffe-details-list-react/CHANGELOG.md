@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@4.0.27...@sb1/ffe-details-list-react@5.0.0) (2024-05-18)
+
+### Features
+
+-   **ffe-details-list-react:** rewrite to ts ([70173fd](https://github.com/SpareBank1/designsystem/commit/70173fd0bad620060426d7dc605cb3bcb785cbfe))
+
+### BREAKING CHANGES
+
+-   **ffe-details-list-react:** remove manual types
+
 ## [4.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@4.0.26...@sb1/ffe-details-list-react@4.0.27) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
