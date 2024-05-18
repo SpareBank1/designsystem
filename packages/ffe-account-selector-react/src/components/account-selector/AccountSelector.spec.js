@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, screen, wait } from '@testing-library/react';
+import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { AccountSelector } from './AccountSelector';
@@ -567,24 +567,24 @@ describe('AccountSelector', () => {
 
         const a11yStatusMessage = await screen.findByRole('status');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 'Element Brukskonto er valgt.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
         await user.clear(input);
         await user.click(screen.getByText('Knapp'));
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 'Valgt element har blitt fjernet.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
     });
@@ -614,35 +614,35 @@ describe('AccountSelector', () => {
 
         const a11yStatusMessage = await screen.findByRole('status');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 '4 resultater er tilgjengelig, bruk opp- og nedpiltastene for å navigere. Trykk Enter for å velge.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
         await user.type(input, 'spare');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 '1 resultat er tilgjengelig, bruk opp- og nedpiltastene for å navigere. Trykk Enter for å velge.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
         await user.clear(input);
         await user.type(input, 'ingen');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 'Ingen resultater er tilgjengelige.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 

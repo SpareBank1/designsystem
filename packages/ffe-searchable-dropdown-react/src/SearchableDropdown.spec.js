@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, act, wait } from '@testing-library/react';
+import { render, screen, act, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import 'regenerator-runtime';
 import { SearchableDropdown } from './SearchableDropdown';
@@ -382,24 +382,24 @@ describe('SearchableDropdown', () => {
 
         const a11yStatusMessage = await screen.findByRole('status');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 'Element Bedriften er valgt.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
         await user.clear(input);
         await user.click(screen.getByText('Knapp'));
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 'Valgt element har blitt fjernet.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
     });
@@ -432,35 +432,35 @@ describe('SearchableDropdown', () => {
 
         const a11yStatusMessage = await screen.findByRole('status');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 '3 resultater er tilgjengelig, bruk opp- og nedpiltastene for å navigere. Trykk Enter for å velge.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
         await user.type(input, 'be');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 '2 resultater er tilgjengelig, bruk opp- og nedpiltastene for å navigere. Trykk Enter for å velge.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
         await user.clear(input);
         await user.type(input, 'ingen');
 
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
                 'Ingen resultater er tilgjengelige.',
             );
         });
-        await wait(() => {
+        await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
@@ -938,7 +938,7 @@ describe('SearchableDropdown', () => {
             </div>,
         );
 
-        await wait(() => {
+        await waitFor(() => {
             expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
         });
     });
