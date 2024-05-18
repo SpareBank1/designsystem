@@ -1,5 +1,11 @@
 import React from 'react';
-import { render, fireEvent, screen, waitFor } from '@testing-library/react';
+import {
+    render,
+    fireEvent,
+    screen,
+    waitFor,
+    act,
+} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { AccountSelector } from './AccountSelector';
@@ -541,7 +547,8 @@ describe('AccountSelector', () => {
     });
 
     it('should set a11y status message briefly on element change', async () => {
-        const user = userEvent.setup();
+        const user = userEvent.setup({ delay: null });
+        jest.useFakeTimers();
 
         render(
             <div>
@@ -561,9 +568,11 @@ describe('AccountSelector', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await user.click(input);
-        await user.type(input, '{arrowdown}');
-        await user.type(input, '{enter}');
+        await act(async () => {
+            await user.click(input);
+            await user.type(input, '{arrowdown}');
+            await user.type(input, '{enter}');
+        });
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -575,9 +584,10 @@ describe('AccountSelector', () => {
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
-
-        await user.clear(input);
-        await user.click(screen.getByText('Knapp'));
+        await act(async () => {
+            await user.clear(input);
+            await user.click(screen.getByText('Knapp'));
+        });
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -587,10 +597,12 @@ describe('AccountSelector', () => {
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
+        jest.useRealTimers();
     });
 
     it('should set a11y status message briefly on state change', async () => {
-        const user = userEvent.setup();
+        const user = userEvent.setup({ delay: null });
+        jest.useFakeTimers();
 
         render(
             <div>
@@ -610,7 +622,9 @@ describe('AccountSelector', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await user.click(input);
+        await act(async () => {
+            await user.click(input);
+        });
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -623,7 +637,9 @@ describe('AccountSelector', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await user.type(input, 'spare');
+        await act(async () => {
+            await user.type(input, 'spare');
+        });
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -634,8 +650,10 @@ describe('AccountSelector', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await user.clear(input);
-        await user.type(input, 'ingen');
+        await act(async () => {
+            await user.clear(input);
+            await user.type(input, 'ingen');
+        });
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -646,7 +664,11 @@ describe('AccountSelector', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await user.click(screen.getByText('Knapp'));
+        await act(async () => {
+            await user.click(screen.getByText('Knapp'));
+        });
+
         expect(a11yStatusMessage).toHaveTextContent('');
+        jest.useRealTimers();
     });
 });
