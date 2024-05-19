@@ -1,8 +1,10 @@
 import React from 'react';
-import { string } from 'prop-types';
 import { Icon } from '@sb1/ffe-icons-react';
 
-export const ContextMessageIcon = ({ smallIconUrl, largeIconUrl }) => {
+export const ContextMessageIcon: React.FC<{
+    smallIconUrl: string;
+    largeIconUrl: string;
+}> = ({ smallIconUrl, largeIconUrl }) => {
     return (
         <>
             <Icon
@@ -17,9 +19,4 @@ export const ContextMessageIcon = ({ smallIconUrl, largeIconUrl }) => {
             />
         </>
     );
-};
-
-ContextMessageIcon.propTypes = {
-    smallIconUrl: string.isRequired,
-    largeIconUrl: string.isRequired,
 };
