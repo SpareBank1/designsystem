@@ -11,7 +11,7 @@ const nb = {
     tip: {
         ariaLabel: 'Tipsmelding',
     },
-};
+} as const;
 const nn = {
     error: {
         ariaLabel: 'Feilmelding',
@@ -25,7 +25,7 @@ const nn = {
     tip: {
         ariaLabel: 'Tipsmelding',
     },
-};
+} as const;
 const en = {
     error: {
         ariaLabel: 'Error message',
@@ -39,6 +39,6 @@ const en = {
     tip: {
         ariaLabel: 'Tip message',
     },
-};
+} as const;
 
-export default { nb, nn, en };
+export const texts = { nb, nn, en };
