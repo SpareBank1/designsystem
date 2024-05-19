@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@18.0.4...@sb1/ffe-searchable-dropdown-react@19.0.0) (2024-05-19)
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** rewrite in ts ([0f2565a](https://github.com/SpareBank1/designsystem/commit/0f2565a0be669ceb3395696ba7dc16da3d5e89d4))
+
+### BREAKING CHANGES
+
+-   **ffe-searchable-dropdown-react:** innerRef -> ref. Som props maunall props where wrong
+
 ## [18.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@18.0.3...@sb1/ffe-searchable-dropdown-react@18.0.4) (2024-05-18)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
