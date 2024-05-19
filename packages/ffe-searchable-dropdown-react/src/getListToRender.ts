@@ -1,14 +1,15 @@
-const toLowerCase = value => `${value}`.toLowerCase();
+import { SearchMatcher } from './types';
+const toLowerCase = (value: string) => `${value}`.toLowerCase();
 
-const filterDropdownList = (
-    dropdownList,
-    searchAttributes,
-    inputValue,
-    searchMatcher,
+const filterDropdownList = <Item extends Record<string, any>>(
+    dropdownList: Item[],
+    searchAttributes: Array<keyof Item>,
+    inputValue: string,
+    searchMatcher?: SearchMatcher<Item>,
 ) => {
     const filter = searchMatcher
         ? searchMatcher(inputValue, searchAttributes)
-        : item =>
+        : (item: Item) =>
               searchAttributes
                   .map(searchAttribute => toLowerCase(item[searchAttribute]))
                   .some(cleanItemAttribute =>
@@ -17,7 +18,7 @@ const filterDropdownList = (
     return dropdownList.filter(filter);
 };
 
-export const getListToRender = ({
+export const getListToRender = <Item extends Record<string, any>>({
     inputValue,
     searchAttributes,
     maxRenderedDropdownElements,
@@ -25,7 +26,15 @@ export const getListToRender = ({
     noMatchDropdownList,
     searchMatcher,
     showAllItemsInDropdown,
-}) => {
+}: {
+    inputValue: string;
+    searchAttributes: Array<keyof Item>;
+    maxRenderedDropdownElements: number;
+    dropdownList: Item[];
+    noMatchDropdownList: Item[] | undefined;
+    searchMatcher?: SearchMatcher<Item>;
+    showAllItemsInDropdown: boolean;
+}): { noMatch: boolean; listToRender: Item[] } => {
     const trimmedInput = inputValue ? inputValue.trim() : '';
 
     const shouldFilter = trimmedInput.length > 0;

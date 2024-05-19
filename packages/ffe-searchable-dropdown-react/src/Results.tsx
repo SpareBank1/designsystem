@@ -1,23 +1,30 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import {
-    arrayOf,
-    any,
-    bool,
-    func,
-    number,
-    object,
-    oneOf,
-    shape,
-    string,
-} from 'prop-types';
+import { ListItemContainer } from './ListItemContainer';
+import { NoMatch } from './NoMatch';
+import { Locale } from './types';
 
-import { locales } from './translations';
-import ListItemContainer from './ListItemContainer';
-import NoMatch from './NoMatch';
+interface ResultProps<Item extends Record<string, any>> {
+    noMatch?: {
+        text?: string;
+        dropdownList?: Item[];
+    };
+    listToRender: Item[];
+    noMatchMessageId: string;
+    ListItemBodyElement: React.ComponentType<{
+        item: Item;
+        isHighlighted: boolean;
+        dropdownAttributes: (keyof Item)[];
+        locale: Locale;
+    }>;
+    highlightedIndex?: number;
+    refs: React.Ref<HTMLDivElement>[];
+    dropdownAttributes: (keyof Item)[];
+    locale: Locale;
+    onChange: (item: Item) => void;
+}
 
-const Results = ({
-    isNoMatch,
+export function Results<Item extends Record<string, any>>({
     noMatch,
     listToRender,
     noMatchMessageId,
@@ -27,14 +34,15 @@ const Results = ({
     dropdownAttributes,
     locale,
     onChange,
-}) => {
+}: ResultProps<Item>) {
     return (
         <Scrollbars autoHeight={true} autoHeightMax={335}>
-            {isNoMatch && (
+            {noMatch && (
                 <NoMatch
                     noMatch={noMatch}
                     noMatchMessageId={noMatchMessageId}
                     listToRender={listToRender}
+                    locale={locale}
                 />
             )}
             {listToRender.map((item, index) => (
@@ -50,30 +58,12 @@ const Results = ({
                     {props => (
                         <ListItemBodyElement
                             {...props}
-                            dropdownAttributes={dropdownAttributes}
                             locale={locale}
+                            dropdownAttributes={dropdownAttributes}
                         />
                     )}
                 </ListItemContainer>
             ))}
         </Scrollbars>
     );
-};
-
-Results.propTypes = {
-    listToRender: arrayOf(object).isRequired,
-    noMatch: shape({
-        text: string,
-        dropdownList: arrayOf(object),
-    }),
-    noMatchMessageId: string,
-    ListItemBodyElement: func,
-    highlightedIndex: number,
-    dropdownAttributes: arrayOf(string).isRequired,
-    locale: oneOf(Object.values(locales)).isRequired,
-    refs: arrayOf(any).isRequired,
-    onChange: func.isRequired,
-    isNoMatch: bool.isRequired,
-};
-
-export default Results;
+}

@@ -5,15 +5,15 @@ import React, {
     useRef,
     useState,
     useEffect,
+    ForwardedRef,
 } from 'react';
-import { propTypes } from './propTypes';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
 
-import ListItemBody from './ListItemBody';
+import { ListItemBody } from './ListItemBody';
 import { getButtonLabelClose, getButtonLabelOpen } from './translations';
 import { v4 as uuid } from 'uuid';
-import { createReducer, stateChangeTypes } from './reducer';
+import { createReducer } from './reducer';
 import { getListToRender } from './getListToRender';
 import { scrollIntoView } from './scrollIntoView';
 import {
@@ -21,44 +21,106 @@ import {
     getNewHighlightedIndexDown,
 } from './getNewHighlightedIndex';
 import { useSetAllyMessageItemSelection } from './a11y';
-import Results from './Results';
+import { Results } from './Results';
 import { Spinner } from '@sb1/ffe-spinner-react';
+import { Locale, SearchMatcher } from './types';
+import { mergeRefs } from './mergeRefs';
+import { fixedForwardRef } from './fixedForwardRef';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
 const ESCAPE = 'Escape';
 const ENTER = 'Enter';
 
-export const SearchableDropdown = ({
-    id,
-    labelledById,
-    className,
-    dropdownList,
-    dropdownAttributes,
-    searchAttributes,
-    maxRenderedDropdownElements = Number.MAX_SAFE_INTEGER,
-    onChange = Function.prototype,
-    inputProps = {},
-    listElementBody: CustomListItemBody,
-    postListElement,
-    noMatch = {},
-    locale,
-    ariaInvalid,
-    formatter = value => value,
-    searchMatcher,
-    selectedItem,
-    isLoading = false,
-    onOpen,
-    onClose,
-    results: ResultsElement = Results,
-    innerRef,
-}) => {
+export interface SearchableDropdownProps<Item extends Record<string, any>> {
+    /** Id of drop down */
+    id: string;
+    /** Id of element that labels input field */
+    labelledById?: string;
+    /** Extra class */
+    className?: string;
+    /** List of objects to be displayed in dropdown */
+    dropdownList: Item[];
+    /** The selected item to be displayed in the input field. If not specified, uses internal state to decide. */
+    selectedItem?: Item | null;
+    /** Array of attributes to be displayed in list */
+    dropdownAttributes: (keyof Item)[];
+    /** Array of attributes used when filtering search */
+    searchAttributes: (keyof Item)[];
+    /** Props used on input field */
+    inputProps?: React.ComponentProps<'input'>;
+    /** Limits number of rendered dropdown elements */
+    maxRenderedDropdownElements?: number;
+    /** Called when a value is selected */
+    onChange?: (item: Item | null) => void;
+    /** Custom element to use for each item in dropDownList */
+    listElementBody?: React.ComponentType<{
+        item: Item;
+        isHighlighted: boolean;
+        dropdownAttributes: (keyof Item)[];
+        locale: Locale;
+    }>;
+    /** Element to be shown below dropDownList */
+    postListElement?: React.ReactNode;
+    /** Message and a dropdownList to use when no match */
+    noMatch?: {
+        text?: string;
+        dropdownList?: Item[];
+    };
+    /** Locale to use for translations */
+    locale?: Locale;
+    /** aria-invalid attribute  */
+    ariaInvalid?: React.ComponentProps<'input'>['aria-invalid'];
+    /** Function used to format the input field value */
+    formatter?: (value: string) => string;
+    /**
+     * Function used to decide if an item matches the input field value
+     * (inputValue: string, searchAttributes: string[]) => (item) => boolean
+     */
+    searchMatcher?: SearchMatcher<Item>;
+    /**
+     * For situations where the dropdownList prop will be updated at a later point in time.
+     * That is, if the consumer first sends down an initial value before sending down data
+     * that has loaded.
+     */
+    isLoading?: boolean;
+    /** Function used when dropdown opens */
+    onOpen?: () => void;
+    /**  Function used when dropdown closes */
+    onClose?: () => void;
+}
+
+function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
+    {
+        id,
+        labelledById,
+        className,
+        dropdownList,
+        dropdownAttributes,
+        searchAttributes,
+        maxRenderedDropdownElements = Number.MAX_SAFE_INTEGER,
+        onChange,
+        inputProps,
+        listElementBody: CustomListItemBody,
+        postListElement,
+        noMatch,
+        locale = 'nb',
+        ariaInvalid,
+        formatter = value => value,
+        searchMatcher,
+        selectedItem,
+        isLoading = false,
+        onOpen,
+        onClose,
+    }: SearchableDropdownProps<Item>,
+    ref: ForwardedRef<HTMLInputElement>,
+) {
     const [state, dispatch] = useReducer(
         createReducer({
             dropdownList,
             searchAttributes,
             maxRenderedDropdownElements,
-            noMatchDropdownList: noMatch.dropdownList,
+            noMatchDropdownList: noMatch?.dropdownList,
             searchMatcher,
             onChange,
         }),
@@ -76,39 +138,38 @@ export const SearchableDropdown = ({
                     searchAttributes,
                     maxRenderedDropdownElements,
                     dropdownList,
-                    noMatchDropdownList: noMatch.dropdownList,
+                    noMatchDropdownList: noMatch?.dropdownList,
                     searchMatcher,
                     showAllItemsInDropdown: !!selectedItem,
                 }),
             };
         },
     );
-    const [refs, setRefs] = useState([]);
+    const [refs, setRefs] = useState<React.RefObject<HTMLDivElement>[]>([]);
     const [hasFocus, setHasFocus] = useState(false);
-    const internalRef = useRef();
-    const inputRef = innerRef || internalRef;
-    const toggleButtonRef = useRef();
-    const containerRef = useRef();
+    const inputRef = useRef<HTMLInputElement>(null);
+    const toggleButtonRef = useRef<HTMLButtonElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const ListItemBodyElement = CustomListItemBody || ListItemBody;
-    const listBoxRef = useRef(uuid());
+    const listBoxRef = useRef<HTMLDivElement>(null);
     const noMatchMessageId = useRef(uuid());
     const shouldFocusToggleButton = useRef(false);
     const shouldFocusInput = useRef(false);
 
     const handleInputClick = () => {
-        dispatch({ type: stateChangeTypes.InputClick });
+        dispatch({ type: 'InputClick' });
     };
 
-    const handleInputBlur = e => {
-        if (inputProps.onBlur) {
+    const handleInputBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+        if (inputProps?.onBlur) {
             inputProps.onBlur(e);
         }
     };
 
     useEffect(() => {
         dispatch({
-            type: stateChangeTypes.ItemSelectedProgrammatically,
+            type: 'ItemSelectedProgrammatically',
             payload: { selectedItem },
         });
     }, [selectedItem, dispatch]);
@@ -133,17 +194,17 @@ export const SearchableDropdown = ({
 
     useLayoutEffect(() => {
         if (shouldFocusToggleButton.current) {
-            toggleButtonRef.current.focus();
+            toggleButtonRef.current?.focus();
             shouldFocusToggleButton.current = false;
         } else if (shouldFocusInput.current) {
-            inputRef.current.focus();
+            inputRef.current?.focus();
             shouldFocusInput.current = false;
         }
     });
 
     useEffect(() => {
         dispatch({
-            type: stateChangeTypes.DropdownListPropUpdated,
+            type: 'DropdownListPropUpdated',
         });
     }, [dropdownList, dispatch]);
 
@@ -160,14 +221,16 @@ export const SearchableDropdown = ({
          * event flag will only work in react v17. Therefore, we also check Element.contains()
          * to keep react v16 compatibility.
          */
-        const handleContainerFocus = e => {
+        const handleContainerFocus = (e: MouseEvent | FocusEvent) => {
             const isFocusInside =
-                containerRef.current.contains(e.target) ||
+                // @ts-ignore
+                containerRef.current?.contains(e.target) ||
+                // @ts-ignore
                 e.__eventFromFFESearchableDropdownId === id;
 
             if (!isFocusInside) {
                 dispatch({
-                    type: stateChangeTypes.FocusMovedOutSide,
+                    type: 'FocusMovedOutSide',
                 });
             }
         };
@@ -185,24 +248,25 @@ export const SearchableDropdown = ({
      * can determine whether or not this event originated from this
      * component
      */
-    function addFlagOnEventHandler(event) {
+    function addFlagOnEventHandler(event: React.SyntheticEvent) {
+        // @ts-ignore
         // eslint-disable-next-line no-param-reassign
         event.nativeEvent.__eventFromFFESearchableDropdownId = id;
     }
 
-    const handleKeyDown = event => {
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === ENTER && state.highlightedIndex >= 0) {
             event.preventDefault();
             dispatch({
-                type: stateChangeTypes.InputKeyDownEnter,
+                type: 'InputKeyDownEnter',
                 payload: {
                     selectedItem: state.listToRender[state.highlightedIndex],
                 },
             });
-            onChange(state.listToRender[state.highlightedIndex]);
+            onChange?.(state.listToRender[state.highlightedIndex]);
             return;
         } else if (event.key === ESCAPE) {
-            dispatch({ type: stateChangeTypes.InputKeyDownEscape });
+            dispatch({ type: 'InputKeyDownEscape' });
             return;
         }
 
@@ -214,7 +278,7 @@ export const SearchableDropdown = ({
                     state.listToRender.length,
                 );
                 dispatch({
-                    type: stateChangeTypes.InputKeyDownArrowUp,
+                    type: 'InputKeyDownArrowUp',
                     payload: { highlightedIndex: newHighlightedIndex },
                 });
                 scrollIntoView(
@@ -232,7 +296,7 @@ export const SearchableDropdown = ({
                     state.listToRender.length,
                 );
                 dispatch({
-                    type: stateChangeTypes.InputKeyDownArrowDown,
+                    type: 'InputKeyDownArrowDown',
                     payload: { highlightedIndex: newHighlightedIndex },
                 });
                 scrollIntoView(
@@ -254,17 +318,17 @@ export const SearchableDropdown = ({
             <div>
                 <input
                     {...inputProps}
-                    ref={inputRef}
+                    ref={mergeRefs([inputRef, ref])}
                     id={id}
                     aria-labelledby={labelledById}
                     className="ffe-input-field"
                     onClick={handleInputClick}
                     onChange={e => {
-                        if (inputProps.onChange) {
+                        if (inputProps?.onChange) {
                             inputProps.onChange(e);
                         }
                         dispatch({
-                            type: stateChangeTypes.InputChange,
+                            type: 'InputChange',
                             payload: { inputValue: e.target.value },
                         });
                     }}
@@ -272,17 +336,19 @@ export const SearchableDropdown = ({
                     onBlur={handleInputBlur}
                     aria-describedby={
                         [
-                            inputProps['aria-describedby'],
+                            inputProps?.['aria-describedby'],
                             state.noMatch && noMatchMessageId.current,
                         ]
                             .filter(Boolean)
-                            .join(' ') || null
+                            .join(' ') || undefined
                     }
                     value={formatter(state.inputValue)}
                     type="text"
                     role="combobox"
                     autoComplete="off"
-                    aria-controls={listBoxRef.current}
+                    aria-controls={
+                        listBoxRef.current?.getAttribute('id') ?? undefined
+                    }
                     aria-expanded={
                         state.isExpanded && !!state.listToRender.length
                     }
@@ -292,14 +358,10 @@ export const SearchableDropdown = ({
                         state.highlightedIndex >= 0
                             ? refs[
                                   state.highlightedIndex
-                              ]?.current?.getAttribute('id')
-                            : null
+                              ]?.current?.getAttribute('id') ?? undefined
+                            : undefined
                     }
-                    aria-invalid={
-                        typeof ariaInvalid === 'string'
-                            ? ariaInvalid
-                            : String(!!ariaInvalid)
-                    }
+                    aria-invalid={ariaInvalid}
                 />
                 <button
                     type="button"
@@ -315,7 +377,7 @@ export const SearchableDropdown = ({
                     })}
                     onClick={() => {
                         dispatch({
-                            type: stateChangeTypes.ToggleButtonPressed,
+                            type: 'ToggleButtonPressed',
                         });
                     }}
                 >
@@ -331,15 +393,14 @@ export const SearchableDropdown = ({
                 </button>
             </div>
             <div
-                tabIndex="-1"
+                tabIndex={-1}
                 className={classNames('ffe-searchable-dropdown__list', {
                     'ffe-searchable-dropdown__list--open': state.isExpanded,
                 })}
             >
-                <div id={listBoxRef.current} role="listbox">
+                <div ref={listBoxRef} id={`${id}-listbox`} role="listbox">
                     {state.isExpanded && (
-                        <ResultsElement
-                            listBoxRef={listBoxRef}
+                        <Results
                             listToRender={state.listToRender}
                             ListItemBodyElement={ListItemBodyElement}
                             highlightedIndex={state.highlightedIndex}
@@ -349,13 +410,12 @@ export const SearchableDropdown = ({
                             onChange={item => {
                                 shouldFocusToggleButton.current = true;
                                 dispatch({
-                                    type: stateChangeTypes.ItemOnClick,
+                                    type: 'ItemOnClick',
                                     payload: { selectedItem: item },
                                 });
-                                onChange(item);
+                                onChange?.(item);
                             }}
-                            isNoMatch={state.noMatch}
-                            noMatch={noMatch}
+                            noMatch={state.noMatch ? noMatch : undefined}
                             noMatchMessageId={noMatchMessageId.current}
                         />
                     )}
@@ -368,6 +428,8 @@ export const SearchableDropdown = ({
             </div>
         </div>
     );
-};
+}
 
-SearchableDropdown.propTypes = propTypes;
+export const SearchableDropdown = fixedForwardRef(
+    SearchableDropdownWithForwardRef,
+);

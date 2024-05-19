@@ -1,33 +1,44 @@
 import { getListToRender } from './getListToRender';
+import { StateChange, SearchMatcher } from './types';
 
-export const stateChangeTypes = {
-    InputFocus: 'InputFocus',
-    InputBlur: 'InputBlur',
-    InputClick: 'InputClick',
-    InputChange: 'InputChange',
-    InputKeyDownEscape: 'InputKeyDownEscape',
-    InputKeyDownEnter: 'InputKeyDownEnter',
-    InputKeyDownArrowDown: 'InputKeyDownArrowDown',
-    InputKeyDownArrowUp: 'InputKeyDownArrowUp',
-    ToggleButtonPressed: 'ToggleButtonPressed',
-    ItemOnClick: 'ItemOnMouseDown',
-    FocusMovedOutSide: 'FocusMovedOutSide',
-    ItemSelectedProgrammatically: 'ItemSelectedProgrammatically',
-    DropdownListPropUpdated: 'DropdownListPropUpdated',
+type Action<Item extends Record<string, any>> = {
+    type: StateChange;
+    payload?: {
+        inputValue?: string;
+        selectedItem?: Item | null | undefined;
+        highlightedIndex?: number;
+    };
+};
+
+type State<Item extends Record<string, any>> = {
+    noMatch: boolean;
+    isExpanded: boolean;
+    highlightedIndex: number;
+    selectedItem: Item | null | undefined;
+    inputValue: string;
+    listToRender: Item[];
+    noMatchDropdownList?: Item[] | undefined;
 };
 
 export const createReducer =
-    ({
+    <Item extends Record<string, any>>({
         searchAttributes,
         dropdownList,
         noMatchDropdownList,
         maxRenderedDropdownElements,
         searchMatcher,
         onChange,
+    }: {
+        dropdownList: Item[];
+        searchAttributes: Array<keyof Item>;
+        noMatchDropdownList: Item[] | undefined;
+        maxRenderedDropdownElements: number;
+        searchMatcher: SearchMatcher<Item> | undefined;
+        onChange: ((item: Item | null) => void) | undefined;
     }) =>
-    (state, action) => {
+    (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
-            case stateChangeTypes.InputKeyDownEscape:
+            case 'InputKeyDownEscape':
                 return {
                     ...state,
                     noMatch: false,
@@ -37,7 +48,7 @@ export const createReducer =
                         ? state.selectedItem[searchAttributes[0]]
                         : '',
                 };
-            case stateChangeTypes.InputClick: {
+            case 'InputClick': {
                 const { noMatch, listToRender } = getListToRender({
                     inputValue: state.inputValue,
                     searchAttributes,
@@ -55,9 +66,9 @@ export const createReducer =
                     noMatch,
                 };
             }
-            case stateChangeTypes.InputChange: {
+            case 'InputChange': {
                 const { noMatch, listToRender } = getListToRender({
-                    inputValue: action.payload.inputValue,
+                    inputValue: action.payload?.inputValue ?? '',
                     searchAttributes,
                     maxRenderedDropdownElements,
                     dropdownList,
@@ -69,44 +80,44 @@ export const createReducer =
                 return {
                     ...state,
                     isExpanded: true,
-                    inputValue: action.payload.inputValue,
+                    inputValue: action.payload?.inputValue ?? '',
                     listToRender,
                     highlightedIndex:
-                        action.payload.inputValue.trim() === '' ||
+                        action.payload?.inputValue?.trim() === '' ||
                         listToRender.length === 0
                             ? -1
                             : 0,
                     noMatch,
                 };
             }
-            case stateChangeTypes.ToggleButtonPressed:
+            case 'ToggleButtonPressed':
                 return {
                     ...state,
                     isExpanded: !state.isExpanded,
                 };
-            case stateChangeTypes.ItemSelectedProgrammatically:
-            case stateChangeTypes.ItemOnClick:
-            case stateChangeTypes.InputKeyDownEnter:
+            case 'ItemSelectedProgrammatically':
+            case 'ItemOnClick':
+            case 'InputKeyDownEnter':
                 return {
                     ...state,
                     isExpanded: false,
                     highlightedIndex: -1,
-                    selectedItem: action.payload.selectedItem,
+                    selectedItem: action.payload?.selectedItem,
                     inputValue:
-                        action.payload.selectedItem?.[searchAttributes[0]] ||
+                        action.payload?.selectedItem?.[searchAttributes[0]] ||
                         '',
                 };
 
-            case stateChangeTypes.InputKeyDownArrowDown:
-            case stateChangeTypes.InputKeyDownArrowUp: {
+            case 'InputKeyDownArrowDown':
+            case 'InputKeyDownArrowUp': {
                 return {
                     ...state,
                     isExpanded: true,
-                    highlightedIndex: action.payload.highlightedIndex,
+                    highlightedIndex: action.payload?.highlightedIndex ?? -1,
                 };
             }
 
-            case stateChangeTypes.FocusMovedOutSide: {
+            case 'FocusMovedOutSide': {
                 const { listToRender } = getListToRender({
                     inputValue: state.inputValue,
                     searchAttributes,
@@ -120,7 +131,7 @@ export const createReducer =
                 const shouldEmptySelectedItem =
                     state.inputValue === '' && !!state.selectedItem;
 
-                const shouldAutomaticallySetSelectedItem = !!(
+                const shouldAutomaticallySetSelectedItem =
                     state.listToRender.length === 1 &&
                     searchAttributes
                         .map(
@@ -129,16 +140,15 @@ export const createReducer =
                                 state.selectedItem?.[searchAttribute],
                         )
                         .includes(false) &&
-                    state.highlightedIndex !== -1
-                );
+                    state.highlightedIndex !== -1;
 
                 let selectedItem = state.selectedItem;
 
                 if (shouldEmptySelectedItem) {
-                    onChange(null);
+                    onChange?.(null);
                     selectedItem = null;
                 } else if (shouldAutomaticallySetSelectedItem) {
-                    onChange(state.listToRender[0]);
+                    onChange?.(state.listToRender[0]);
                     selectedItem = state.listToRender[0];
                 }
 
@@ -154,7 +164,7 @@ export const createReducer =
                     listToRender,
                 };
             }
-            case stateChangeTypes.DropdownListPropUpdated: {
+            case 'DropdownListPropUpdated': {
                 return {
                     ...state,
                     ...getListToRender({

@@ -1,14 +1,22 @@
 import React from 'react';
-import { object, arrayOf, string, bool } from 'prop-types';
 import classnames from 'classnames';
-
 import { MicroText } from '@sb1/ffe-core-react';
 
-const ListItemBody = ({ item, dropdownAttributes, isHighlighted }) => {
+interface ListItemBodyProps<Item extends Record<string, any>> {
+    item: Item;
+    dropdownAttributes: Array<keyof Item>;
+    isHighlighted: boolean;
+}
+
+export function ListItemBody<Item extends Record<string, any>>({
+    item,
+    dropdownAttributes,
+    isHighlighted,
+}: ListItemBodyProps<Item>) {
     const [titleAttribute, ...restAttributes] = dropdownAttributes;
     const title = item[titleAttribute];
-    const rest = restAttributes.map(attribute => (
-        <MicroText key={attribute}>{item[attribute]}</MicroText>
+    const rest = restAttributes.map((attribute, index) => (
+        <MicroText key={index}>{item[attribute]}</MicroText>
     ));
     return (
         <div
@@ -25,12 +33,4 @@ const ListItemBody = ({ item, dropdownAttributes, isHighlighted }) => {
             )}
         </div>
     );
-};
-
-ListItemBody.propTypes = {
-    item: object.isRequired,
-    dropdownAttributes: arrayOf(string).isRequired,
-    isHighlighted: bool.isRequired,
-};
-
-export default ListItemBody;
+}

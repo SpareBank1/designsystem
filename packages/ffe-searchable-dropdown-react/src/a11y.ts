@@ -7,6 +7,7 @@ import {
     getResultCountChangedA11yStatus,
 } from './translations';
 import debounce from 'lodash.debounce';
+import { Locale } from './types';
 
 const getStatusDiv = () => {
     const id = 'a11y-status-message';
@@ -38,7 +39,7 @@ const cleanupStatus = debounce(() => {
     getStatusDiv().textContent = '';
 }, 500);
 
-const setStatus = status => {
+const setStatus = (status: string) => {
     const div = getStatusDiv();
     if (!status) {
         return;
@@ -52,14 +53,28 @@ const updateA11yStatus = debounce(getA11yMessage => {
     setStatus(getA11yMessage());
 }, 200);
 
-const getItemSelectedMessage = ({ selectedItemValue, locale }) => {
+const getItemSelectedMessage = ({
+    selectedItemValue,
+    locale,
+}: {
+    selectedItemValue: string | undefined;
+    locale: Locale;
+}) => {
     if (!selectedItemValue) {
         return getItemClearedA11yStatus(locale);
     }
     return getItemSelectedA11yStatus(locale, selectedItemValue);
 };
 
-const getStateChangeMessage = ({ isExpanded, resultCount, locale }) => {
+const getStateChangeMessage = ({
+    isExpanded,
+    resultCount,
+    locale,
+}: {
+    isExpanded: boolean;
+    resultCount: number;
+    locale: Locale;
+}) => {
     if (!isExpanded) {
         return '';
     }
@@ -71,11 +86,13 @@ const getStateChangeMessage = ({ isExpanded, resultCount, locale }) => {
     return getResultCountChangedA11yStatus(locale, resultCount);
 };
 
-const getIsLoadingItemsMessage = locale => {
+const getIsLoadingItemsMessage = (locale: Locale) => {
     return getIsLoadingItemsA11yStatus(locale);
 };
 
-export const useSetAllyMessageItemSelection = ({
+export const useSetAllyMessageItemSelection = <
+    Item extends Record<string, any>,
+>({
     hasFocus,
     isExpanded,
     isLoading,
@@ -83,10 +100,19 @@ export const useSetAllyMessageItemSelection = ({
     resultCount,
     searchAttributes,
     selectedItem,
+}: {
+    hasFocus: boolean;
+    isExpanded: boolean;
+    isLoading: boolean;
+    locale: Locale;
+    resultCount: number;
+    searchAttributes: Array<keyof Item>;
+    selectedItem: Item | null | undefined;
 }) => {
     const isInitialMount = useRef(true);
-    const prevSelectedItemValue = useRef(null);
-    const selectedItemValue = selectedItem?.[searchAttributes[0]];
+    const prevSelectedItemValue = useRef<string>();
+    const selectedItemValue: string | undefined =
+        selectedItem?.[searchAttributes[0]];
 
     useEffect(() => {
         if (isLoading && hasFocus) {
