@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.3.6...@sb1/ffe-chart-donut-react@6.0.0) (2024-05-20)
+
+### Features
+
+-   **ffe-chart-donut-react:** rewrite to ts ([f3cac60](https://github.com/SpareBank1/designsystem/commit/f3cac60b66dc0d06f63c5bd9d1c2ae48927dbc3f))
+
+### BREAKING CHANGES
+
+-   **ffe-chart-donut-react:** default export -> named export
+
 ## [5.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.3.5...@sb1/ffe-chart-donut-react@5.3.6) (2024-05-09)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
