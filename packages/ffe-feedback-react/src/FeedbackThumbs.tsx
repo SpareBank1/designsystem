@@ -1,31 +1,37 @@
 import React from 'react';
-import i18n from './i18n/i18n';
-import { func, oneOf, string } from 'prop-types';
+import { texts } from './i18n/texts';
 import { ThumbUp, ThumbUpFill, ThumbDown, ThumbDownFill } from './icons';
 
-export const Thumbs = {
-    UP: 'THUMB_UP',
-    DOWN: 'THUMB_DOWN',
-};
+export type Thumb = 'THUMB_UP' | 'THUMB_DOWN';
 
-const FeedbackThumbs = ({ language = 'nb', onClick, headingId }) => {
+interface FeedbackThumbsProps {
+    locale: 'nb' | 'nn' | 'en';
+    onClick: (thumb: Thumb) => void;
+    headingId: string;
+}
+
+export const FeedbackThumbs: React.FC<FeedbackThumbsProps> = ({
+    locale,
+    onClick,
+    headingId,
+}) => {
     return (
         <div>
             <button
-                aria-label={i18n[language].ARIA_LABEL_THUMB_UP}
+                aria-label={texts[locale].ARIA_LABEL_THUMB_UP}
                 aria-describedby={headingId}
                 className="ffe-feedback__thumb"
-                onClick={() => onClick(Thumbs.UP)}
+                onClick={() => onClick('THUMB_UP')}
                 type="button"
             >
                 <ThumbUp className="ffe-feedback__thumb-icon" />
                 <ThumbUpFill className="ffe-feedback__thumb-icon--fill" />
             </button>
             <button
-                aria-label={i18n[language].ARIA_LABEL_THUMB_DOWN}
+                aria-label={texts[locale].ARIA_LABEL_THUMB_DOWN}
                 aria-describedby={headingId}
                 className="ffe-feedback__thumb"
-                onClick={() => onClick(Thumbs.DOWN)}
+                onClick={() => onClick('THUMB_DOWN')}
                 type="button"
             >
                 <ThumbDown className="ffe-feedback__thumb-icon" />
@@ -33,12 +39,4 @@ const FeedbackThumbs = ({ language = 'nb', onClick, headingId }) => {
             </button>
         </div>
     );
-};
-
-export default FeedbackThumbs;
-
-FeedbackThumbs.propTypes = {
-    language: oneOf(['nb', 'nn', 'en']),
-    onClick: func.isRequired,
-    headingId: string.isRequired,
 };

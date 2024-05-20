@@ -1,25 +1,35 @@
 import React, { useState, useRef } from 'react';
 import { flushSync } from 'react-dom';
-import { Animation } from './animation';
-import { func, oneOf, shape, string } from 'prop-types';
-import i18n from './i18n/i18n';
-import FeedbackThumbs, { Thumbs } from './feedback-thumbs';
+import { Animation } from './Animation';
+import { texts } from './i18n/texts';
+import { FeedbackThumbs, Thumb } from './FeedbackThumbs';
 import classNames from 'classnames';
-import FeedbackExpanded from './feedback-expanded';
+import { FeedbackExpanded, FeedbackExpandedProps } from './FeedbackExpanded';
 import { v4 as uuid } from 'uuid';
 
-export const Feedback = ({
+export interface FeedbackProps {
+    headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
+    locale?: 'nb' | 'nn' | 'en';
+    onThumbClick: (thumb: Thumb) => void;
+    onFeedbackSend: (feedbackText: string) => void;
+    /** Set the background color of the feedback container. Accepts ffe-color variables without the "ffe-farge-" bit of the name. */
+    bgColor?: 'hvit' | 'frost-30' | 'sand-30' | 'syrin-30' | 'vann-30';
+    /** Set the background color of the feedback container in darkmode */
+    bgDarkmodeColor?: 'svart' | 'natt';
+    contactLink?: FeedbackExpandedProps['contactLink'];
+}
+export const Feedback: React.FC<FeedbackProps> = ({
     headingLevel,
-    language = 'nb',
+    locale = 'nb',
     onThumbClick,
     onFeedbackSend,
     bgColor,
     bgDarkmodeColor,
-    contactLink = null,
+    contactLink,
 }) => {
-    const feedbackSentRef = useRef();
-    const expandedRef = useRef();
-    const [feedbackThumbClicked, setFeedbackThumbClicked] = useState();
+    const feedbackSentRef = useRef<HTMLHeadingElement>();
+    const expandedRef = useRef<HTMLHeadingElement>();
+    const [feedbackThumbClicked, setFeedbackThumbClicked] = useState<Thumb>();
     const [expanded, setExpanded] = useState(false);
     const [feedbackSent, setFeedbackSent] = useState(false);
     const headingId = useRef(uuid()).current;
@@ -29,20 +39,20 @@ export const Feedback = ({
         [`ffe-feedback--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,
     });
 
-    const handleThumbClicked = thumb => {
+    const handleThumbClicked = (thumb: Thumb) => {
         setFeedbackThumbClicked(thumb);
         flushSync(() => {
             setExpanded(prevState => !prevState);
         });
-        expandedRef.current.focus();
+        expandedRef.current?.focus();
         onThumbClick(thumb);
     };
 
-    const handleFeedbackSent = feedbackText => {
+    const handleFeedbackSent = (feedbackText: string) => {
         flushSync(() => {
             setFeedbackSent(true);
         });
-        feedbackSentRef.current.focus();
+        feedbackSentRef.current?.focus();
         onFeedbackSend(feedbackText);
     };
 
@@ -57,7 +67,7 @@ export const Feedback = ({
                             tabIndex: -1,
                             className: 'ffe-h4',
                         },
-                        i18n[language].FEEDBACK_SENT_HEADING,
+                        texts[locale].FEEDBACK_SENT_HEADING,
                     )}
                     <Animation />
                 </div>
@@ -72,12 +82,12 @@ export const Feedback = ({
                     {React.createElement(
                         `h${headingLevel}`,
                         { ref: expandedRef, tabIndex: -1, className: 'ffe-h5' },
-                        feedbackThumbClicked === Thumbs.UP
-                            ? i18n[language].FEEDBACK_GOOD
-                            : i18n[language].FEEDBACK_IMPROVE,
+                        feedbackThumbClicked === 'THUMB_UP'
+                            ? texts[locale].FEEDBACK_GOOD
+                            : texts[locale].FEEDBACK_IMPROVE,
                     )}
                     <FeedbackExpanded
-                        language={language}
+                        locale={locale}
                         onSend={handleFeedbackSent}
                         onCancel={() => setExpanded(false)}
                         contactLink={contactLink}
@@ -93,32 +103,14 @@ export const Feedback = ({
                 {React.createElement(
                     `h${headingLevel}`,
                     { id: headingId, className: 'ffe-h4' },
-                    i18n[language].FEEDBACK_NOT_SENT_HEADING,
+                    texts[locale].FEEDBACK_NOT_SENT_HEADING,
                 )}
                 <FeedbackThumbs
                     onClick={handleThumbClicked}
-                    language={language}
+                    locale={locale}
                     headingId={headingId}
                 />
             </div>
         </div>
     );
-};
-
-export default Feedback;
-
-Feedback.propTypes = {
-    headingLevel: oneOf([1, 2, 3, 4, 5, 6]).isRequired,
-    language: oneOf(['nb', 'nn', 'en']),
-    onThumbClick: func.isRequired,
-    onFeedbackSend: func.isRequired,
-    /** Set the background color of the feedback container. Accepts ffe-color variables without the "ffe-farge-" bit of the name. */
-    bgColor: oneOf(['hvit', 'frost-30', 'sand-30', 'syrin-30', 'vann-30']),
-    /** Set the background color of the feedback container in darkmode */
-    bgDarkmodeColor: oneOf(['svart', 'natt']),
-    contactLink: shape({
-        url: string,
-        linkText: string,
-        onClick: func,
-    }),
 };

@@ -1,4 +1,4 @@
-export default {
+export const nb = {
     ARIA_LABEL_THUMB_UP: 'Gi tommel opp',
     ARIA_LABEL_THUMB_DOWN: 'Gi tommel ned',
     FEEDBACK_NOT_SENT_HEADING: 'Hva synes du om denne siden? ',
@@ -15,4 +15,4 @@ export default {
         'Unngå å oppgi sensitiv eller personlig informasjon, for eksempel helseopplysninger, politisk tilhørighet, personnummer, navn, e-post eller telefonnummer.',
     FEEDBACK_SHORT: 'Tilbakemeldingen må være på minst tre tegn.',
     NATIVE_VIEW_HEADING: 'Kundeservice',
-};
+} as const;
