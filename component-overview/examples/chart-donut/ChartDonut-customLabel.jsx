@@ -1,4 +1,4 @@
-import ChartDonut from '@sb1/ffe-chart-donut-react';
+import { ChartDonut } from '@sb1/ffe-chart-donut-react';
 
 <ChartDonut
     label={
