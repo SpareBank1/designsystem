@@ -1,12 +1,30 @@
 import React from 'react';
-import { node, number, string } from 'prop-types';
 
 const NON_BREAKING_SPACE = '\u00A0';
 
 const RADIUS = 150;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
+export interface ChartDonutProps {
+    /** Short text labeling left value, like "empty", "said yes" etc */
+    firstLabel?: string;
+    /** Short text labeling right value, like "full", "said` no" etc */
+    lastLabel?: string;
+    /** React node to be inserted directly under the chart's name, alternative to first/last label */
+    label?: React.ReactNode;
+    /** Short text labeling the graph in total, like "percentage", "voted this year" etc */
+    name: string;
+    /** The percentage for the right-most value */
+    percentage: number;
+}
+
+export const ChartDonut: React.FC<ChartDonutProps> = ({
+    name,
+    percentage,
+    firstLabel,
+    lastLabel,
+    label,
+}) => {
     const offset = CIRCUMFERENCE - (CIRCUMFERENCE / 100) * percentage;
 
     /*
@@ -104,19 +122,4 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
             </div>
         </div>
     );
-}
-
-ChartDonut.propTypes = {
-    /** Short text labeling left value, like "empty", "said yes" etc */
-    firstLabel: string,
-    /** Short text labeling right value, like "full", "said no" etc */
-    lastLabel: string,
-    /** React node to be inserted directly under the chart's name, alternative to first/last label */
-    label: node,
-    /** Short text labeling the graph in total, like "percentage", "voted this year" etc */
-    name: string.isRequired,
-    /** The percentage for the right-most value */
-    percentage: number.isRequired,
 };
-
-export default ChartDonut;
