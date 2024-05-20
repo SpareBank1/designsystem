@@ -1,9 +1,9 @@
 import React from 'react';
-import ChartDonut from '../src';
+import { ChartDonut, ChartDonutProps } from './ChartDonut';
 
 import { render } from '@testing-library/react';
 
-const defaultProps = {
+const defaultProps: ChartDonutProps = {
     firstLabel: 'Foo',
     lastLabel: 'Bar',
     name: 'Baz',
@@ -19,7 +19,7 @@ describe('ChartDonut', () => {
     it('renders html for the name of the circle', () => {
         const { container } = render(<ChartDonut {...defaultProps} />);
         const name = container.querySelector('.ffe-chart-donut__name');
-        expect(name.textContent).toBe('Baz');
+        expect(name?.textContent).toBe('Baz');
     });
 
     it('renders html for the labels and their percentages', () => {
