@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import {useRef, useState} from 'react';
 import {
     RadioButtonInputGroup,
     RadioBlock,
 } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
+import { v4 as uuid } from "uuid";
 
 () => {
     const [showErrors, setShowErrors] = useState(false);
+    const blockName = useRef(`block-${uuid()}`).current;
+    const [yesOrNoBlockRadio, setYesOrNoBlockRadio] = useState('yes');
 
     return (
         <>
@@ -17,9 +20,10 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
             </div>
             <RadioButtonInputGroup
                 label="Velg ja eller nei"
-                name="block1"
-                selectedValue="yes"
+                name={blockName}
+                selectedValue={yesOrNoBlockRadio}
                 fieldMessage={showErrors ? 'Feil valg' : null}
+                onChange={e => setYesOrNoBlockRadio(e.target.value)}
             >
                 {inputProps => (
                     <>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {
     RadioButtonInputGroup,
     RadioBlock,
@@ -7,11 +7,18 @@ import {
     Tooltip,
 } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
+import { v4 as uuid } from 'uuid';
 
 () => {
     const [showErrors, setShowErrors] = useState(false);
     const [selectedColor, setSelectedColor] = useState('red');
     const [selectedSmell, setSelectedSmell] = useState();
+    const [yesOrNoBlockRadio, setYesOrNoBlockRadio] = useState('yes');
+
+    const colorName = useRef(`color-${uuid()}`).current;
+    const smellName = useRef(`small-${uuid()}`).current;
+    const switchName = useRef(`switch-${uuid()}`).current;
+    const blockName = useRef(`block-${uuid()}`).current;
 
     return (
         <>
@@ -24,7 +31,7 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
                 extraMargin={false}
                 label="Hva er din favorittfarge?"
                 inline={true}
-                name="color"
+                name={colorName}
                 fieldMessage={showErrors ? 'Feil farge.' : null}
                 tooltip={
                     <Tooltip>
@@ -54,7 +61,7 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
                 extraMargin={false}
                 label="Hva er din favorittlukt?"
                 inline={true}
-                name="smell"
+                name={smellName}
                 fieldMessage={showErrors ? 'Feil lukt.' : null}
                 selectedValue={selectedSmell}
                 onChange={e => setSelectedSmell(e.target.value)}
@@ -78,7 +85,7 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
                 extraMargin={false}
                 description="Du kan ikke velge begge"
                 label="Velg ja eller nei"
-                name="switch"
+                name={switchName}
                 fieldMessage={showErrors ? 'Feil valg' : null}
             >
                 {inputProps => (
@@ -95,9 +102,10 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
             <RadioButtonInputGroup
                 extraMargin={false}
                 label="Velg ja eller nei"
-                name="block1"
-                selectedValue="yes"
+                name={blockName}
+                selectedValue={yesOrNoBlockRadio}
                 fieldMessage={showErrors ? 'Feil valg' : null}
+                onChange={e => setYesOrNoBlockRadio(e.target.value)}
             >
                 {inputProps => (
                     <>
