@@ -17,6 +17,10 @@
         border-bottom: 1px solid var(--ffe-v-header-border-bottom-color);
     }
 
+    &__user-chevron--expanded {
+        transform: rotate(180deg);
+    }
+
     &__border:first-child {
         position: relative;
         z-index: 1000;
@@ -32,16 +36,6 @@
         margin: 0 auto;
         padding: 0 @ffe-spacing-sm;
         max-width: 1280px;
-
-        @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            > .ffe-header__secondary-nav,
-            > .ffe-header__logo,
-            > .ffe-header__icon-button--user-nav,
-            > .ffe-header__site-nav {
-                /* \9 is a hack to have the value only apply to IE9 */
-                display: block\9;
-            }
-        }
     }
 
     &__link {
@@ -308,7 +302,7 @@
         height: 25px;
         width: 25px;
 
-        &__bar,
+        &-bar,
         &::before,
         &::after {
             display: inline-block;
@@ -318,7 +312,7 @@
             border-radius: 2px;
         }
 
-        &__bar {
+        &-bar {
             position: absolute;
             left: 0;
             bottom: 10px;
@@ -347,7 +341,8 @@
 
         &--expanded {
             /* stylelint-disable-next-line selector-class-pattern */
-            .ffe-header__site-nav-hamburger__bar {
+
+            .ffe-header__site-nav-hamburger-bar {
                 width: 0;
                 transform: translate(12px);
             }
