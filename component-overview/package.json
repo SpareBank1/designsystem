@@ -55,7 +55,6 @@
         "@sb1/ffe-core-react": "^8.0.4",
         "@sb1/ffe-datepicker": "^12.0.40",
         "@sb1/ffe-datepicker-react": "^8.0.3",
-        "@sb1/ffe-decorators-react": "^3.0.17",
         "@sb1/ffe-details-list-react": "^5.0.1",
         "@sb1/ffe-dropdown-react": "^7.0.0",
         "@sb1/ffe-feedback": "^1.2.15",
