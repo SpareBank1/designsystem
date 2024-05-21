@@ -1,9 +1,9 @@
 import React from 'react';
-import BulletList from './BulletList';
-import BulletListItem from './BulletListItem';
+import { BulletList, BulletListProps } from './BulletList';
+import { BulletListItem } from './BulletListItem';
 import { render, screen } from '@testing-library/react';
 
-const renderBulletList = props =>
+const renderBulletList = (props?: Partial<BulletListProps>) =>
     render(
         <BulletList {...props}>
             <BulletListItem>Firstly</BulletListItem>

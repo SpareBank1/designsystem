@@ -1,9 +1,12 @@
 import React from 'react';
-import StylizedNumberedList from './StylizedNumberedList';
-import StylizedNumberedListItem from './StylizedNumberedListItem';
+import {
+    StylizedNumberedList,
+    StylizedNumberedListProps,
+} from './StylizedNumberedList';
+import { StylizedNumberedListItem } from './StylizedNumberedListItem';
 import { render, screen } from '@testing-library/react';
 
-const renderStylizedNumberedList = props =>
+const renderStylizedNumberedList = (props?: StylizedNumberedListProps) =>
     render(
         <StylizedNumberedList {...props}>
             <StylizedNumberedListItem>Firstly</StylizedNumberedListItem>
@@ -12,10 +15,6 @@ const renderStylizedNumberedList = props =>
     );
 
 describe('<StylizedNumberedList>', () => {
-    it('renders without exploding', () => {
-        renderStylizedNumberedList();
-        expect(screen.getByRole('list')).toBeInTheDocument();
-    });
     it('has the correct class', () => {
         renderStylizedNumberedList({ className: 'test-class' });
         const list = screen.getByRole('list');

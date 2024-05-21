@@ -1,9 +1,12 @@
 import React from 'react';
-import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
-const StylizedNumberedListItem = props => {
-    const { className, children, ...rest } = props;
+export interface StylizedNumberedListItemProps
+    extends React.ComponentPropsWithoutRef<'li'> {}
+
+export const StylizedNumberedListItem: React.FC<
+    StylizedNumberedListItemProps
+> = ({ className, children, ...rest }) => {
     return (
         <li
             className={classNames(
@@ -18,11 +21,3 @@ const StylizedNumberedListItem = props => {
         </li>
     );
 };
-
-StylizedNumberedListItem.propTypes = {
-    children: node,
-    /** Any extra classes */
-    className: string,
-};
-
-export default StylizedNumberedListItem;

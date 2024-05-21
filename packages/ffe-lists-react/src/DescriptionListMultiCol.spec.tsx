@@ -1,12 +1,17 @@
 import React from 'react';
-import DescriptionListMultiCol from './DescriptionListMultiCol';
-import DescriptionListTerm from './DescriptionListTerm';
-import DescriptionListDescription from './DescriptionListDescription';
-import { render } from '@testing-library/react';
+import {
+    DescriptionListMultiCol,
+    DescriptionListMultiColProps,
+} from './DescriptionListMultiCol';
+import { DescriptionListTerm } from './DescriptionListTerm';
+import { DescriptionListDescription } from './DescriptionListDescription';
+import { render, screen } from '@testing-library/react';
 
-const renderDescriptionListMultiCol = props =>
+const TEST_ID = 'TEST_ID';
+
+const renderDescriptionListMultiCol = (props?: DescriptionListMultiColProps) =>
     render(
-        <DescriptionListMultiCol {...props}>
+        <DescriptionListMultiCol {...props} data-testid={TEST_ID}>
             <DescriptionListTerm>Porsche</DescriptionListTerm>
             <DescriptionListDescription>
                 German car maker
@@ -20,14 +25,14 @@ const renderDescriptionListMultiCol = props =>
 
 describe('<DescriptionListMultiCol>', () => {
     it('renders without exploding', () => {
-        const { container } = renderDescriptionListMultiCol();
-        expect(container.querySelector('dl')).toBeTruthy();
+        renderDescriptionListMultiCol();
+        expect(screen.getByTestId(TEST_ID)).toBeTruthy();
     });
     it('has the correct class', () => {
-        const { container } = renderDescriptionListMultiCol({
+        renderDescriptionListMultiCol({
             className: 'test-class',
         });
-        const dl = container.querySelector('dl');
+        const dl = screen.getByTestId(TEST_ID);
 
         expect(dl.classList.contains('ffe-description-list-multicol')).toBe(
             true,
@@ -35,22 +40,22 @@ describe('<DescriptionListMultiCol>', () => {
         expect(dl.classList.contains('test-class')).toBe(true);
     });
     it('passes props', () => {
-        const { container } = renderDescriptionListMultiCol({ id: 'that-id' });
-        const dl = container.querySelector('dl');
+        renderDescriptionListMultiCol({ id: 'that-id' });
+        const dl = screen.getByTestId(TEST_ID);
         expect(dl.getAttribute('id')).toBe('that-id');
         expect(dl.innerHTML).toContain('Porsche');
     });
     it('wraps pairs in `div`', () => {
-        const { container } = renderDescriptionListMultiCol({ id: 'that-id' });
-        const dl = container.querySelector('dl');
+        renderDescriptionListMultiCol({ id: 'that-id' });
+        const dl = screen.getByTestId(TEST_ID);
         const tagNames = Array.from(
             dl.querySelectorAll('.ffe-description-list-multicol__avoid-break'),
         ).map(elem => elem.tagName);
         expect(tagNames).toEqual(['DIV', 'DIV']);
     });
     it('supports several columns', () => {
-        const { container } = renderDescriptionListMultiCol({ id: 'that-id' });
-        const dl = container.querySelector('dl');
+        renderDescriptionListMultiCol({ id: 'that-id' });
+        const dl = screen.getByTestId(TEST_ID);
         expect(
             dl.querySelectorAll('.ffe-description-list-multicol__avoid-break')
                 .length,
