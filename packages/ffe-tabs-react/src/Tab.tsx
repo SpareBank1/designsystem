@@ -1,9 +1,11 @@
 import React from 'react';
-import { bool, string } from 'prop-types';
 import classNames from 'classnames';
 
-export default function Tab(props) {
-    const { className, selected, ...rest } = props;
+export interface TabProps extends React.ComponentPropsWithoutRef<'button'> {
+    selected?: boolean;
+}
+
+export const Tab: React.FC<TabProps> = ({ className, selected, ...rest }) => {
     return (
         <button
             type="button"
@@ -17,11 +19,4 @@ export default function Tab(props) {
             {...rest}
         />
     );
-}
-
-Tab.propTypes = {
-    /** Selected tab button */
-    selected: bool,
-    /** Additional css classes */
-    className: string,
 };
