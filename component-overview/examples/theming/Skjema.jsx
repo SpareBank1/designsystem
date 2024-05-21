@@ -1,8 +1,19 @@
 import { useState } from 'react';
 import { Dropdown } from '@sb1/ffe-dropdown-react';
 import { LinkText, Paragraph } from '@sb1/ffe-core-react';
-import { InputGroup, Checkbox, Input, TextArea, ToggleSwitch } from '@sb1/ffe-form-react';
-import { ButtonGroup, ActionButton, PrimaryButton, SecondaryButton } from '@sb1/ffe-buttons-react';
+import {
+    InputGroup,
+    Checkbox,
+    Input,
+    TextArea,
+    ToggleSwitch,
+} from '@sb1/ffe-form-react';
+import {
+    ButtonGroup,
+    ActionButton,
+    PrimaryButton,
+    SecondaryButton,
+} from '@sb1/ffe-buttons-react';
 
 () => {
     const [themed, setThemed] = useState(false);
@@ -25,45 +36,50 @@ import { ButtonGroup, ActionButton, PrimaryButton, SecondaryButton } from '@sb1/
         --ffe-v-button-secondary-color-bg: #d6d6d6;
     }`;
 
-    return (<>
-        <style>{themed ? css : ''}</style>
-        <ButtonGroup>
-            <ToggleSwitch onChange={toggleTheme} value={themed}>Theming</ToggleSwitch>
-        </ButtonGroup>
+    return (
+        <>
+            <style>{themed ? css : ''}</style>
+            <ToggleSwitch onChange={toggleTheme} value={themed}>
+                Theming
+            </ToggleSwitch>
+            <div className="sb1ex-theme-example">
+                <InputGroup label="E-postadresse">
+                    <Input />
+                </InputGroup>
 
-        <div className="sb1ex-theme-example">
-            <InputGroup label="E-postadresse">
-                <Input />
-            </InputGroup>
+                <InputGroup label="Måned">
+                    <Dropdown defaultValue="placeholder">
+                        <option value="placeholder" disabled>
+                            Velg måned
+                        </option>
+                        <option value="jan">Januar</option>
+                        <option value="feb">Februar</option>
+                        <option value="mar">Mars</option>
+                    </Dropdown>
+                </InputGroup>
 
-            <InputGroup label="Måned">
-                <Dropdown defaultValue="placeholder">
-                    <option value="placeholder" disabled>
-                        Velg måned
-                    </option>
-                    <option value="jan">Januar</option>
-                    <option value="feb">Februar</option>
-                    <option value="mar">Mars</option>
-                </Dropdown>
-            </InputGroup>
+                <InputGroup label="Fritekst">
+                    <TextArea rows={4} />
+                </InputGroup>
 
-            <InputGroup label="Fritekst">
-                <TextArea rows={4} />
-            </InputGroup>
+                <InputGroup>
+                    <Checkbox name="check">Kryssboks</Checkbox>
+                </InputGroup>
 
-            <InputGroup>
-                <Checkbox name="check">Kryssboks</Checkbox>
-            </InputGroup>
+                <Paragraph>
+                    Les mer på{' '}
+                    <LinkText href="https://www.lofavor.no/">
+                        lofavor.no
+                    </LinkText>
+                    .
+                </Paragraph>
 
-            <Paragraph>
-                Les mer på <LinkText href="https://www.lofavor.no/">lofavor.no</LinkText>.
-            </Paragraph>
-
-            <ButtonGroup>
-                <ActionButton>Action knapp</ActionButton>
-                <PrimaryButton>Primary knapp</PrimaryButton>
-                <SecondaryButton>Secondary knapp</SecondaryButton>
-            </ButtonGroup>
-        </div>
-    </>);
+                <ButtonGroup ariaLabel="Knappegruppe">
+                    <ActionButton>Action knapp</ActionButton>
+                    <PrimaryButton>Primary knapp</PrimaryButton>
+                    <SecondaryButton>Secondary knapp</SecondaryButton>
+                </ButtonGroup>
+            </div>
+        </>
+    );
 };

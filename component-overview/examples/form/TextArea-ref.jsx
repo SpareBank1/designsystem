@@ -1,5 +1,5 @@
-import { TextArea } from '@sb1/ffe-form-react';
-import { ButtonGroup, PrimaryButton } from '@sb1/ffe-buttons-react';
+import { TextArea, InputGroup } from '@sb1/ffe-form-react';
+import { PrimaryButton } from '@sb1/ffe-buttons-react';
 
 class Example extends React.Component {
     constructor() {
@@ -13,15 +13,12 @@ class Example extends React.Component {
     render() {
         return (
             <>
-                <TextArea
-                    ref={this.inputRef}
-                    placeholder="Trykk på knappen for fokus"
-                />
-                <ButtonGroup>
-                    <PrimaryButton onClick={this.handleClick}>
-                        Klikk for å fokusere input
-                    </PrimaryButton>
-                </ButtonGroup>
+                <InputGroup label="Trykk på knappen for fokus">
+                    <TextArea ref={this.inputRef} />
+                </InputGroup>
+                <PrimaryButton onClick={this.handleClick}>
+                    Klikk for å fokusere input
+                </PrimaryButton>
             </>
         );
     }
