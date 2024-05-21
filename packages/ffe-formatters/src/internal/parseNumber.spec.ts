@@ -1,10 +1,9 @@
-import parseNumber from './parseNumber';
+import { parseNumber } from './parseNumber';
 
 describe('parseNumber', () => {
     test('noops on non-string arguments', () => {
         expect(parseNumber(null)).toBe(null);
         expect(parseNumber(undefined)).toBe(undefined);
-        expect(parseNumber(false)).toBe(false);
         expect(parseNumber('')).toBe('');
     });
 

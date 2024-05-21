@@ -1,5 +1,5 @@
 import { NON_BREAKING_SPACE as nbsp } from './internal/unicode';
-import formatDistance from './formatDistance';
+import { formatDistance } from './formatDistance';
 
 describe('format distance', () => {
     test('formats distance with spaces between thousands', () => {
@@ -30,15 +30,7 @@ describe('format distance', () => {
     test('returns an empty string for falsy inut values other than 0', () => {
         expect(formatDistance('')).toBe('');
         expect(formatDistance('hodor')).toBe('');
-        expect(formatDistance(false)).toBe('');
         expect(formatDistance(NaN)).toBe('');
-        expect(formatDistance(undefined)).toBe('');
-        expect(formatDistance(null)).toBe('');
-    });
-
-    test('returns an empty string for non-numeric non-parseable inputs (objects, arrays)', () => {
-        expect(formatDistance({ hurr: 4 })).toBe('');
-        expect(formatDistance([4, 5])).toBe('');
     });
 
     test('returns the unit specified in options', () => {

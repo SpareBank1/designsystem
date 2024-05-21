@@ -1,6 +1,6 @@
-const ensureTwoDigits = d => `00${d}`.slice(-2);
+const ensureTwoDigits = (d: number) => `00${d}`.slice(-2);
 
-export default function formatDate(timestamp) {
+export const formatDate = (timestamp: Date | number) => {
     if (!(Number.isInteger(timestamp) || timestamp instanceof Date)) {
         return null;
     }
@@ -10,4 +10,4 @@ export default function formatDate(timestamp) {
     const mm = ensureTwoDigits(date.getMonth() + 1);
     const yyyy = date.getFullYear();
     return `${dd}.${mm}.${yyyy}`;
-}
+};

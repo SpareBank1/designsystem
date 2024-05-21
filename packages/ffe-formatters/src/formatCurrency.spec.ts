@@ -1,5 +1,5 @@
 import { NON_BREAKING_SPACE } from './internal/unicode';
-import formatCurrency from './formatCurrency';
+import { formatCurrency } from './formatCurrency';
 
 describe('format currency', () => {
     test('does not show decimals for whole moneys', () => {

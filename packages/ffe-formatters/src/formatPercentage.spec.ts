@@ -1,17 +1,7 @@
 import { NON_BREAKING_SPACE } from './internal/unicode';
-import formatPercentage from './formatPercentage';
+import { formatPercentage } from './formatPercentage';
 
 describe('format percentage', () => {
-    test('returns empty string non-number values', () => {
-        expect(formatPercentage(null)).toBe('');
-        expect(formatPercentage(undefined)).toBe('');
-        expect(formatPercentage(false)).toBe('');
-        expect(formatPercentage(true)).toBe('');
-        expect(formatPercentage('invalid')).toBe('');
-        expect(formatPercentage(['invalid'])).toBe('');
-        expect(formatPercentage({ invalid: true })).toBe('');
-    });
-
     test('formats numbers as percentages', () => {
         expect(formatPercentage(30)).toBe(`30${NON_BREAKING_SPACE}%`);
         expect(formatPercentage(125)).toBe(`125${NON_BREAKING_SPACE}%`);

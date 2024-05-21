@@ -1,11 +1,17 @@
 import { NON_BREAKING_SPACE } from './internal/unicode';
 
-const defaults = {
-    minDecimals: 0,
-    maxDecimals: 2,
-};
+interface Opts {
+    minDecimals?: number;
+    maxDecimals?: number;
+}
 
-export default function formatPercentage(amount, opts = defaults) {
+export const formatPercentage = (
+    amount: number | string,
+    opts: Opts = {
+        minDecimals: 0,
+        maxDecimals: 2,
+    },
+) => {
     if (typeof amount !== 'number') {
         return '';
     }
@@ -15,4 +21,4 @@ export default function formatPercentage(amount, opts = defaults) {
         maximumFractionDigits: opts.maxDecimals,
     });
     return `${percentage.replace('.', ',')}${NON_BREAKING_SPACE}%`;
-}
+};

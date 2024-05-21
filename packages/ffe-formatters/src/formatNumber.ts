@@ -1,8 +1,11 @@
-import numberFormat from 'underscore.string/numberFormat';
+import { numberFormat } from 'underscore.string';
 import { NON_BREAKING_SPACE } from './internal/unicode';
-import parseNumber from './internal/parseNumber';
+import { parseNumber } from './internal/parseNumber';
 
-export default function formatNumber(number, opts = {}) {
+export const formatNumber = (
+    number: number | string | null | undefined,
+    opts = {},
+) => {
     const { decimals, thousandSeparator, decimalMark } = {
         decimals: 0,
         thousandSeparator: NON_BREAKING_SPACE,
@@ -20,4 +23,4 @@ export default function formatNumber(number, opts = {}) {
         decimalMark,
         thousandSeparator,
     )}`;
-}
+};

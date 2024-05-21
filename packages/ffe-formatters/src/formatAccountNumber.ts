@@ -1,6 +1,6 @@
 import { NON_BREAKING_SPACE } from './internal/unicode';
 
-function foreignAccountNumber(accountNumber) {
+const foreignAccountNumber = (accountNumber: string) => {
     let formattedAccountNumber = '';
 
     for (let i = 0; i < accountNumber.length; i++) {
@@ -12,9 +12,9 @@ function foreignAccountNumber(accountNumber) {
         }
     }
     return formattedAccountNumber;
-}
+};
 
-function domesticAccountNumber(accountNumber) {
+const domesticAccountNumber = (accountNumber: string) => {
     let formattedAccountNumber = '';
 
     if (accountNumber.length > 0) {
@@ -32,9 +32,9 @@ function domesticAccountNumber(accountNumber) {
     }
 
     return formattedAccountNumber;
-}
+};
 
-export default function formatAccountNumber(accountNumber) {
+export const formatAccountNumber = (accountNumber: string) => {
     if (!accountNumber) {
         return accountNumber;
     }
@@ -42,4 +42,4 @@ export default function formatAccountNumber(accountNumber) {
         return domesticAccountNumber(accountNumber);
     }
     return foreignAccountNumber(accountNumber);
-}
+};
