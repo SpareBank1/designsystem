@@ -1,11 +1,18 @@
 import React from 'react';
-import texts from './locale/texts';
-import ContextMessage from './ContextMessage';
+import { texts } from './texts';
+import { ContextMessage, ContextMessageProps } from './ContextMessage';
 import { ContextMessageIcon } from './ContextMessageIcon';
-import { oneOf } from 'prop-types';
-import acceptedLocales from './locale/accepted-locales';
 
-const ContextSuccessMessage = ({ locale = 'nb', ...rest }) => {
+export interface ContextSuccessMessageProps
+    extends Omit<
+        ContextMessageProps,
+        'role' | 'messageType' | 'aria-label' | 'icon'
+    > {}
+
+export const ContextSuccessMessage: React.FC<ContextSuccessMessageProps> = ({
+    locale = 'nb',
+    ...rest
+}) => {
     const checkIconSmall =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Im0zOTUtMzcyLjM4NCAyNzAuNTM5LTI2OS41MzhxNy45MjMtNy45MjMgMTcuNjkyLTcuNjE2IDkuNzY5LjMwOCAxOC4wNzYgOC42MTYgOC4zMDggOC4zMDcgOC4zMDggMTcuODg0IDAgOS41NzYtOC4zMDggMTcuODg0bC0yODMgMjgyLjk5OXEtOS44NDYgOS44NDYtMjIuODA3IDkuODQ2LTEyLjk2MSAwLTIyLjgwNy05Ljg0NmwtMTE0LTExMy45OTlxLTcuOTIzLTcuOTIzLTguMzA4LTE3LjY5Mi0uMzg0LTkuNzY5IDcuOTIzLTE4LjA3NiA4LjMwOC04LjMwOCAxNy44ODQtOC4zMDggOS41NzcgMCAxNy44ODQgOC4zMDhMMzk1LTM3Mi4zODRaIi8+PC9zdmc+';
 
@@ -28,10 +35,3 @@ const ContextSuccessMessage = ({ locale = 'nb', ...rest }) => {
         />
     );
 };
-
-ContextSuccessMessage.propTypes = {
-    /** Decides the language */
-    locale: oneOf(acceptedLocales),
-};
-
-export default ContextSuccessMessage;

@@ -1,16 +1,17 @@
 import React from 'react';
-import { number, node, string, bool, oneOf, func, object } from 'prop-types';
-import acceptedLocales from './locale/accepted-locales';
-import texts from './locale/texts';
-import ContextMessage from './ContextMessage';
+import { texts } from './texts';
+import { ContextMessage, ContextMessageProps } from './ContextMessage';
 import { ContextMessageIcon } from './ContextMessageIcon';
 
-const ContextErrorMessage = ({
-    animationLengthMs = 300,
-    compact = false,
-    onClose = () => {},
-    showCloseButton = false,
-    style = {},
+export interface ContextErrorMessageProps
+    extends Omit<
+        ContextMessageProps,
+        'role' | 'messageType' | 'aria-label' | 'icon'
+    > {
+    alert?: boolean;
+}
+
+export const ContextErrorMessage: React.FC<ContextErrorMessageProps> = ({
     alert = true,
     locale = 'nb',
     ...rest
@@ -24,7 +25,6 @@ const ContextErrorMessage = ({
     return (
         <ContextMessage
             {...rest}
-            locale={locale}
             messageType="error"
             role={alert ? 'alert' : 'group'}
             aria-label={texts[locale].error.ariaLabel}
@@ -37,29 +37,3 @@ const ContextErrorMessage = ({
         />
     );
 };
-
-ContextErrorMessage.propTypes = {
-    animationLengthMs: number,
-    /** The content shown in the context box */
-    children: node.isRequired,
-    /** Classes are added in addition to the relevant context message classes */
-    className: string,
-    /** Renders a more compact version of the context message */
-    compact: bool,
-    /** ID for the children container */
-    contentElementId: string,
-    header: string,
-    /** ID for the header container */
-    headerElementId: string,
-    /** Decides the language */
-    locale: oneOf(acceptedLocales),
-    /** Callback for when the context message has been closed (after the animation) */
-    onClose: func,
-    showCloseButton: bool,
-    /** Styles applied to the outermost element. `height` will be overridden */
-    style: object,
-    /** When false, role is not set to alert, avoids message from being read up immediately after page load. Default value is true. */
-    alert: bool,
-};
-
-export default ContextErrorMessage;
