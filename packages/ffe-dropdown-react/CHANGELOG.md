@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@6.0.51...@sb1/ffe-dropdown-react@7.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-dropdown-react:** rewrite to ts ([0d29a53](https://github.com/SpareBank1/designsystem/commit/0d29a53c6f997d0268044a8d21a1ac252d3efaca))
+
+### BREAKING CHANGES
+
+-   **ffe-dropdown-react:** innerRef -> refm default export -> named export
+
 ## [6.0.51](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@6.0.50...@sb1/ffe-dropdown-react@6.0.51) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

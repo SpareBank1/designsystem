@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@10.0.53...@sb1/ffe-file-upload-react@11.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-file-upload-react:** rewrite to ts ([218a198](https://github.com/SpareBank1/designsystem/commit/218a19842bf544e6656590335b1fb549004914af))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload-react:** default export -> named export
+
 ## [10.0.53](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@10.0.52...@sb1/ffe-file-upload-react@10.0.53) (2024-05-18)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react

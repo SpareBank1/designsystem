@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@18.0.3...@sb1/ffe-cards@18.1.0) (2024-05-21)
+
+### Features
+
+-   **ffe-cards:** add clickable modifier ([110e634](https://github.com/SpareBank1/designsystem/commit/110e634df5fbea726bd031ffc242edfa8843fc25))
+
 ## [18.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@18.0.2...@sb1/ffe-cards@18.0.3) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-cards

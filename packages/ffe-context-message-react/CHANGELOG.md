@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.30...@sb1/ffe-context-message-react@10.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-context-message-react:** rewrite to ts ([f4eb27b](https://github.com/SpareBank1/designsystem/commit/f4eb27be3400b9bb4454c19f9e0cf2fa4a96ae4c))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message-react:** see above
+
 ## [9.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.29...@sb1/ffe-context-message-react@9.0.30) (2024-05-18)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@8.0.22...@sb1/ffe-tabs-react@9.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-tabs-react:** rewrite to ts ([5c0d31c](https://github.com/SpareBank1/designsystem/commit/5c0d31c60bbc7436a812a3891d9cd99a2dedd0c6))
+
+### BREAKING CHANGES
+
+-   **ffe-tabs-react:** some manual props where wrong
+
 ## [8.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@8.0.21...@sb1/ffe-tabs-react@8.0.22) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react

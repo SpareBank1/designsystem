@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.2.15...@sb1/ffe-grid-react@14.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-grid-react:** rewrite to ts ([192e27d](https://github.com/SpareBank1/designsystem/commit/192e27d85df48458bb1d20c179ccdb032c293e6b))
+
+### BREAKING CHANGES
+
+-   **ffe-grid-react:** does not throw for invalid colors
+
 ## [13.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.2.14...@sb1/ffe-grid-react@13.2.15) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react

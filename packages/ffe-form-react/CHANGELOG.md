@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@18.0.4...@sb1/ffe-form-react@19.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-form-react:** rewrite to ts ([31063a0](https://github.com/SpareBank1/designsystem/commit/31063a0911436232fed4094a8f6f5aa0467c3e75))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** som props where changed
+
 ## [18.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@18.0.3...@sb1/ffe-form-react@18.0.4) (2024-05-18)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

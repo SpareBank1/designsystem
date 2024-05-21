@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@8.0.2...@sb1/ffe-datepicker-react@8.0.3) (2024-05-21)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** add the id to input ([a32881c](https://github.com/SpareBank1/designsystem/commit/a32881c5c0f25e3c531846ca08c0d063a69b1ee2))
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@8.0.1...@sb1/ffe-datepicker-react@8.0.2) (2024-05-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

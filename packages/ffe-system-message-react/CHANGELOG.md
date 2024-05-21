@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.33...@sb1/ffe-system-message-react@9.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-system-message-react:** rewrite to ts ([63e1f7f](https://github.com/SpareBank1/designsystem/commit/63e1f7ff547444774261e36c646e4a01c979a5f3))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message-react:** changed props
+
 ## [8.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.32...@sb1/ffe-system-message-react@8.0.33) (2024-05-18)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
