@@ -12,6 +12,7 @@ export interface DatepickerProps {
     'aria-invalid'?: React.ComponentProps<'input'>['aria-invalid'];
     ariaInvalid?: string | boolean;
     calendarAbove?: boolean;
+    id?: string;
     inputProps?: Pick<
         React.ComponentPropsWithRef<'input'>,
         'ref' | 'className' | 'id' | 'aria-describedby'
@@ -282,6 +283,7 @@ export class Datepicker extends Component<DatepickerProps, DatepickerState> {
                 >
                     <div className="ffe-datepicker--wrapper">
                         <DateInput
+                            id={this.props.id}
                             {...this.props.inputProps}
                             ariaInvalid={this.ariaInvalid()}
                             onBlur={this.onInputBlur}
