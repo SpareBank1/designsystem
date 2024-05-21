@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.0.11...@sb1/ffe-component-index@7.1.0) (2024-05-21)
+
+### Features
+
+-   remove ffe-decorators-react ([c2a1afd](https://github.com/SpareBank1/designsystem/commit/c2a1afd14147739a40016158c5ddf1a7af44b96b))
+
 ## [7.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.0.10...@sb1/ffe-component-index@7.0.11) (2024-05-21)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
