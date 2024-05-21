@@ -1,13 +1,15 @@
-import formatAccountNumber from './formatAccountNumber';
+import { formatAccountNumber } from './formatAccountNumber';
 import { NON_BREAKING_SPACE } from './internal/unicode';
 
 describe('format account number', () => {
     test('returns input when account number is undefined', () => {
-        expect(formatAccountNumber(undefined)).toBe(undefined);
+        expect(formatAccountNumber(undefined as unknown as string)).toBe(
+            undefined,
+        );
     });
 
     test('returns input when account number is null', () => {
-        expect(formatAccountNumber(null)).toBe(null);
+        expect(formatAccountNumber(null as unknown as string)).toBe(null);
     });
 
     test('returns input when account number is empty', () => {

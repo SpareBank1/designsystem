@@ -1,19 +1,13 @@
-import formatNumber from './formatNumber';
+import { formatNumber } from './formatNumber';
 
 describe('formatNumber with default options', () => {
     test('noops on falsy values', () => {
         expect(formatNumber(null)).toBe(null);
         expect(formatNumber(undefined)).toBe(undefined);
-        expect(formatNumber(false)).toBe(false);
     });
 
     test('noops on non-numeric strings', () => {
         expect(formatNumber('invalid')).toBe('invalid');
-    });
-
-    test('noops on arrays and objects', () => {
-        expect(formatNumber(['invalid'])).toEqual(['invalid']);
-        expect(formatNumber({ invalid: true })).toEqual({ invalid: true });
     });
 
     test('formats regular numbers', () => {
@@ -56,18 +50,10 @@ describe('formatNumber with options', () => {
     test('noops on falsy values', () => {
         expect(formatNumber(null, opts)).toBe(null);
         expect(formatNumber(undefined, opts)).toBe(undefined);
-        expect(formatNumber(false, opts)).toBe(false);
     });
 
     test('noops on non-numeric strings', () => {
         expect(formatNumber('invalid', opts)).toBe('invalid');
-    });
-
-    test('noops on arrays and objects', () => {
-        expect(formatNumber(['invalid'], opts)).toEqual(['invalid']);
-        expect(formatNumber({ invalid: true }, opts)).toEqual({
-            invalid: true,
-        });
     });
 
     test('formats regular numbers', () => {

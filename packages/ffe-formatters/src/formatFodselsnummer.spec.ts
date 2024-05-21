@@ -1,15 +1,7 @@
-import formatFodselsnummer from './formatFodselsnummer';
+import { formatFodselsnummer } from './formatFodselsnummer';
 import { NON_BREAKING_SPACE } from './internal/unicode';
 
 describe('formatFodselsnummer', () => {
-    test('returns input when ssn is undefined', () => {
-        expect(formatFodselsnummer(undefined)).toBe(undefined);
-    });
-
-    test('returns input when ssn is null', () => {
-        expect(formatFodselsnummer(null)).toBe(null);
-    });
-
     test('returns input when ssn is empty', () => {
         expect(formatFodselsnummer('')).toBe('');
     });
