@@ -1,4 +1,4 @@
-import FileUpload from '@sb1/ffe-file-upload-react';
+import { FileUpload } from '@sb1/ffe-file-upload-react';
 
 <FileUpload
     id="ffe-file-upload-example"
