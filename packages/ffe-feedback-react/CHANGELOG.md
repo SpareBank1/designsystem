@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@2.0.45...@sb1/ffe-feedback-react@3.0.0) (2024-05-21)
+
+### Features
+
+-   **ffe-feedback-react:** rewrite to ts ([9f2baeb](https://github.com/SpareBank1/designsystem/commit/9f2baeb19784249eab2f2ab09865814d6e2f01fe))
+
+### BREAKING CHANGES
+
+-   **ffe-feedback-react:** see above
+
 ## [2.0.45](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@2.0.44...@sb1/ffe-feedback-react@2.0.45) (2024-05-18)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
