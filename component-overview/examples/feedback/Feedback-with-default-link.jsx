@@ -1,7 +1,7 @@
-import Feedback from '@sb1/ffe-feedback-react';
+import { Feedback } from '@sb1/ffe-feedback-react';
 
 <Feedback
-  language="nn"
+  locale="nn"
   onThumbClick={console.log}
   onFeedbackSend={console.log}
   contactLink={{

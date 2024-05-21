@@ -1,4 +1,4 @@
-export default {
+export const en = {
     ARIA_LABEL_THUMB_UP: 'Give thumbs up',
     ARIA_LABEL_THUMB_DOWN: 'Give thumbs down',
     FEEDBACK_NOT_SENT_HEADING: 'What do you think of this page? ',
@@ -15,4 +15,4 @@ export default {
         'Please do not send sensitive or personal information, for example: Health information, political affiliation, social security number, name, email or telephone number.',
     FEEDBACK_SHORT: 'Feedback must be at least three characters.',
     NATIVE_VIEW_HEADING: 'Customer service',
-};
+} as const;

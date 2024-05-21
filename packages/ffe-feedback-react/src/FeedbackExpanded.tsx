@@ -1,54 +1,61 @@
 import React, { useState } from 'react';
 import { Paragraph } from '@sb1/ffe-core-react';
-import i18n from './i18n/i18n';
+import { texts } from './i18n/texts';
 import { InputGroup, TextArea } from '@sb1/ffe-form-react';
 import {
     ActionButton,
     ButtonGroup,
     TertiaryButton,
 } from '@sb1/ffe-buttons-react';
-import { func, oneOf, shape, string } from 'prop-types';
 
-const FeedbackExpanded = ({
-    language = 'nb',
+export interface FeedbackExpandedProps {
+    locale: 'nb' | 'nn' | 'en';
+    onSend: (feedbackText: string) => void;
+    onCancel: () => void;
+    contactLink?: {
+        url: string;
+        onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+        linkText?: string;
+    };
+}
+
+export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
+    locale,
     onSend,
     onCancel,
-    contactLink = null,
+    contactLink,
 }) => {
-    const [feedbackText, setFeedbackText] = useState('');
-    const [fieldMessage, setFieldMessage] = useState(undefined);
+    const [feedbackText, setFeedbackText] = useState<string>();
+    const [fieldMessage, setFieldMessage] = useState<string>();
 
     const validateMessage = () => {
-        if (feedbackText.length < 3) {
-            setFieldMessage(i18n[language].FEEDBACK_SHORT);
-            return false;
+        if (feedbackText && feedbackText?.length >= 3) {
+            setFieldMessage(undefined);
+            return true;
         }
-        setFieldMessage(undefined);
-        return true;
+        setFieldMessage(texts[locale].FEEDBACK_SHORT);
+        return false;
     };
 
-    const isValidContactLink =
-        contactLink && (contactLink.url || contactLink.onClick);
-
-    const getLinkButton = () => (
+    const contactLinkElement = contactLink ? (
         <TertiaryButton
-            element={'a'}
+            as="a"
             href={contactLink.url}
             className="ffe-feedback__link-button"
-            onClick={contactLink.onClick}
+            onClick={contactLink?.onClick}
         >
-            {contactLink.linkText ?? i18n[language].FEEDBACK_LINKTEXT}
+            {contactLink.linkText ?? texts[locale].FEEDBACK_LINKTEXT}
         </TertiaryButton>
-    );
+    ) : null;
 
     return (
         <>
             <Paragraph>
-                {i18n[language].FEEDBACK_ANSWER}
-                {isValidContactLink && i18n[language].QUESTIONS}
-                {isValidContactLink && getLinkButton()}
+                {texts[locale].FEEDBACK_ANSWER}
+                {contactLinkElement && texts[locale].QUESTIONS}
+                {contactLinkElement}
             </Paragraph>
-            <Paragraph>{i18n[language].FEEDBACK_SENSITIVE}</Paragraph>
+            <Paragraph>{texts[locale].FEEDBACK_SENSITIVE}</Paragraph>
             <InputGroup
                 className="ffe-feedback__textarea-container"
                 fieldMessage={fieldMessage}
@@ -61,36 +68,23 @@ const FeedbackExpanded = ({
                     maxLength={1000}
                     id="textarea-feedback"
                     onBlur={validateMessage}
-                    title={i18n[language].FEEDBACK_IMPROVE}
+                    title={texts[locale].FEEDBACK_IMPROVE}
                 />
             </InputGroup>
             <ButtonGroup className="ffe-feedback__button-group">
                 <ActionButton
                     onClick={() => {
-                        if (validateMessage()) {
+                        if (validateMessage() && feedbackText) {
                             onSend(feedbackText);
                         }
                     }}
                 >
-                    {i18n[language].FEEDBACK_BUTTON_SEND}
+                    {texts[locale].FEEDBACK_BUTTON_SEND}
                 </ActionButton>
                 <TertiaryButton onClick={onCancel}>
-                    {i18n[language].FEEDBACK_BUTTON_CANCEL}
+                    {texts[locale].FEEDBACK_BUTTON_CANCEL}
                 </TertiaryButton>
             </ButtonGroup>
         </>
     );
-};
-
-export default FeedbackExpanded;
-
-FeedbackExpanded.propTypes = {
-    language: oneOf(['nb', 'nn', 'en']),
-    onSend: func.isRequired,
-    onCancel: func.isRequired,
-    contactLink: shape({
-        url: string,
-        linkText: string,
-        onClick: func,
-    }),
 };
