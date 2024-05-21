@@ -4,9 +4,10 @@ import { render, screen } from '@testing-library/react';
 
 const defaultProps = {
     thin: false,
+    ariaLabel: 'A group of buttons',
 };
 
-const renderButtonGroup = (props?: ButtonGroupProps) =>
+const renderButtonGroup = (props?: Partial<ButtonGroupProps>) =>
     render(<ButtonGroup {...defaultProps} {...props} />);
 
 describe('<ButtonGroup />', () => {
@@ -14,7 +15,7 @@ describe('<ButtonGroup />', () => {
         renderButtonGroup({
             thin: false,
         });
-        const buttonGroup = screen.getByTestId('button-group');
+        const buttonGroup = screen.getByRole('group');
         expect(buttonGroup.classList.contains('ffe-button-group')).toBe(true);
         expect(buttonGroup.classList.contains('ffe-button-group--thin')).toBe(
             false,
@@ -25,7 +26,7 @@ describe('<ButtonGroup />', () => {
         renderButtonGroup({
             thin: true,
         });
-        const buttonGroup = screen.getByTestId('button-group');
+        const buttonGroup = screen.getByRole('group');
         expect(buttonGroup.classList.contains('ffe-button-group')).toBe(true);
         expect(buttonGroup.classList.contains('ffe-button-group--thin')).toBe(
             true,
@@ -36,7 +37,7 @@ describe('<ButtonGroup />', () => {
         renderButtonGroup({
             inline: true,
         });
-        const buttonGroup = screen.getByTestId('button-group');
+        const buttonGroup = screen.getByRole('group');
         expect(buttonGroup.classList.contains('ffe-button-group')).toBe(true);
         expect(buttonGroup.classList.contains('ffe-button-group--inline')).toBe(
             true,
@@ -47,8 +48,18 @@ describe('<ButtonGroup />', () => {
         renderButtonGroup({
             className: 'my-class',
         });
-        const buttonGroup = screen.getByTestId('button-group');
+        const buttonGroup = screen.getByRole('group');
         expect(buttonGroup.classList.contains('ffe-button-group')).toBe(true);
         expect(buttonGroup.classList.contains('my-class')).toBe(true);
+    });
+
+    it('should use aria-label', () => {
+        renderButtonGroup({
+            ariaLabel: 'My amazing buttons',
+        });
+        const buttonGroup = screen.getByRole('group');
+        expect(buttonGroup.getAttribute('aria-label')).toBe(
+            'My amazing buttons',
+        );
     });
 });
