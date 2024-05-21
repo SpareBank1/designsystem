@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
-import Dropdown from '@sb1/ffe-dropdown-react';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
 import { Label } from '@sb1/ffe-form-react';
 
 () => {

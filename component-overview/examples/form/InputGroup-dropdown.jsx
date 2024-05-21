@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Dropdown from '@sb1/ffe-dropdown-react';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
 import { InputGroup } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
 

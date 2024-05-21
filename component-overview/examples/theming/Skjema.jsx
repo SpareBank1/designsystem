@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Dropdown from '@sb1/ffe-dropdown-react';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
 import { LinkText, Paragraph } from '@sb1/ffe-core-react';
 import { InputGroup, Checkbox, Input, TextArea, ToggleSwitch } from '@sb1/ffe-form-react';
 import { ButtonGroup, ActionButton, PrimaryButton, SecondaryButton } from '@sb1/ffe-buttons-react';

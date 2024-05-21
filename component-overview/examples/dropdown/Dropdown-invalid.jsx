@@ -1,4 +1,4 @@
-import Dropdown from '@sb1/ffe-dropdown-react';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
 import { InputGroup } from '@sb1/ffe-form-react';
 
 <InputGroup label="Måned" fieldMessage="Du må velge måned">
