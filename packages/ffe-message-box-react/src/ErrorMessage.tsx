@@ -3,8 +3,7 @@ import { Icon } from '@sb1/ffe-icons-react';
 import { BaseMessage, BaseMessageProps } from './BaseMessage';
 import { texts } from './texts';
 
-export interface ErrorMessageProps
-    extends Omit<BaseMessageProps, 'type' | 'icon'> {
+export interface ErrorMessageProps extends Omit<BaseMessageProps, 'type'> {
     /** When false, role is not set to alert, avoids message from being read up immediately after page load. Default value is true. */
     alert?: boolean;
     locale?: 'nb' | 'nn' | 'en';
