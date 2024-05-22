@@ -32,11 +32,7 @@ import { v4 as uuid } from 'uuid';
                 inline={true}
                 name={colorName}
                 fieldMessage={showErrors ? 'Feil farge.' : null}
-                tooltip={
-                    <Tooltip>
-                        Din favorittfarge er viktig for oss. Vår er blå!
-                    </Tooltip>
-                }
+                tooltip=" Din favorittfarge er viktig for oss. Vår er blå!"
                 selectedValue={selectedColor}
                 onChange={e => setSelectedColor(e.target.value)}
             >
@@ -119,4 +115,4 @@ import { v4 as uuid } from 'uuid';
             </RadioButtonInputGroup>
         </>
     );
-}
+};

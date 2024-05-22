@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { ErrorFieldMessage } from './message';
 import { Tooltip } from './Tooltip';
+import { Collapse } from '@sb1/ffe-collapse-react';
 
 export interface RadioButtonInputGroupProps
     extends Omit<
@@ -68,6 +69,8 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
     onChange,
     ...rest
 }) => {
+    const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+
     if (tooltip && description) {
         throw new Error(
             'Don\'t use both "tooltip" and "description" on an <RadioButtonInputGroup />, pick one of them',
@@ -85,18 +88,27 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
             {...rest}
         >
             {label && (
-                <legend
-                    className={classNames(
-                        'ffe-form-label',
-                        'ffe-form-label--block',
+                <div>
+                    <div>
+                        <legend
+                            className={classNames(
+                                'ffe-form-label',
+                                'ffe-form-label--block',
+                            )}
+                        >
+                            {label}
+                        </legend>
+                        {tooltip && (
+                            <Tooltip
+                                onClick={() => setIsTooltipOpen(prev => !prev)}
+                            />
+                        )}
+                    </div>
+
+                    {tooltip && (
+                        <Collapse isOpen={isTooltipOpen}>{tooltip}</Collapse>
                     )}
-                >
-                    {label}
-                    {typeof tooltip === 'string' && (
-                        <Tooltip>{tooltip}</Tooltip>
-                    )}
-                    {React.isValidElement(tooltip) && tooltip}
-                </legend>
+                </div>
             )}
 
             {typeof description === 'string' ? (
