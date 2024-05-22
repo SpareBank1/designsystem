@@ -4,7 +4,7 @@ import { texts } from './texts';
 import { SystemMessage, SystemMessageProps } from './SystemMessage';
 
 export interface SystemErrorMessageProps
-    extends Omit<SystemMessageProps, 'icon' | 'modifier'> {
+    extends Omit<SystemMessageProps, 'modifier'> {
     /** When false, role is not set to alert, avoids message from being read up immediately after page load. Default value is true. */
     alert?: boolean;
 }
