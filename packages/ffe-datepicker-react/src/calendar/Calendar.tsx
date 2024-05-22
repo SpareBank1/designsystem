@@ -17,7 +17,7 @@ export interface CalendarProps {
     maxDate?: string;
     minDate?: string;
     onDatePicked: (date: string) => void;
-    selectedDate: string;
+    selectedDate?: string | null;
     focusOnMount?: boolean;
 }
 
@@ -34,7 +34,7 @@ export class Calendar extends Component<CalendarProps, State> {
 
         this.state = {
             calendar: new SimpleCalendar(
-                getSimpleDateFromString(props.selectedDate),
+                getSimpleDateFromString(props?.selectedDate),
                 props.minDate,
                 props.maxDate,
                 props.locale,
