@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.0.1...@sb1/ffe-feedback-react@3.1.0) (2024-05-22)
+
+### Features
+
+-   **ffe-feedback-react:** export props type ([bf42822](https://github.com/SpareBank1/designsystem/commit/bf4282244bda4f25268d63610b5a86b1f853c7dc))
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.0.0...@sb1/ffe-feedback-react@3.0.1) (2024-05-21)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

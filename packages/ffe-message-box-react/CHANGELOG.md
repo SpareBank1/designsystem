@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@11.0.0...@sb1/ffe-message-box-react@11.0.1) (2024-05-22)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** icon is possible to override ([fedef52](https://github.com/SpareBank1/designsystem/commit/fedef52548799bc3338e39500d19595656e01f47))
+
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@10.0.31...@sb1/ffe-message-box-react@11.0.0) (2024-05-21)
 
 ### Features
