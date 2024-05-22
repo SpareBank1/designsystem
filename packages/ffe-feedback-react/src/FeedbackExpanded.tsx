@@ -71,7 +71,10 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                     title={texts[locale].FEEDBACK_IMPROVE}
                 />
             </InputGroup>
-            <ButtonGroup className="ffe-feedback__button-group">
+            <ButtonGroup
+                className="ffe-feedback__button-group"
+                ariaLabel={texts[locale].FEEDBACK_BUTTON_GROUP}
+            >
                 <ActionButton
                     onClick={() => {
                         if (validateMessage() && feedbackText) {
