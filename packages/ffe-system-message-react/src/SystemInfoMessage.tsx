@@ -3,7 +3,7 @@ import { Icon } from '@sb1/ffe-icons-react';
 import { texts } from './texts';
 import { SystemMessage, SystemMessageProps } from './SystemMessage';
 export interface SystemInfoMessageProps
-    extends Omit<SystemMessageProps, 'icon' | 'modifier'> {}
+    extends Omit<SystemMessageProps, 'modifier'> {}
 
 export const SystemInfoMessage: React.FC<SystemInfoMessageProps> = ({
     locale = 'nb',

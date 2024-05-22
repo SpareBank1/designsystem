@@ -4,7 +4,7 @@ import { texts } from './texts';
 import { SystemMessage, SystemMessageProps } from './SystemMessage';
 
 export interface SystemNewsMessageProps
-    extends Omit<SystemMessageProps, 'icon' | 'modifier'> {}
+    extends Omit<SystemMessageProps, 'modifier'> {}
 
 export const SystemNewsMessage: React.FC<SystemNewsMessageProps> = ({
     locale = 'nb',

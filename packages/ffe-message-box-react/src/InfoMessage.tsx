@@ -3,8 +3,7 @@ import { Icon } from '@sb1/ffe-icons-react';
 import { BaseMessage, BaseMessageProps } from './BaseMessage';
 import { texts } from './texts';
 
-export interface InfoMessageProps
-    extends Omit<BaseMessageProps, 'type' | 'icon'> {
+export interface InfoMessageProps extends Omit<BaseMessageProps, 'type'> {
     locale?: 'nb' | 'nn' | 'en';
 }
 
