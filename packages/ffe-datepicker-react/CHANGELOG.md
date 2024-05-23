@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@8.0.3...@sb1/ffe-datepicker-react@8.0.4) (2024-05-23)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** selectedDate is optional in Calendar ([455b8b7](https://github.com/SpareBank1/designsystem/commit/455b8b7bc3d418fd347777e5f1d2b7566e0a6054))
+
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@8.0.2...@sb1/ffe-datepicker-react@8.0.3) (2024-05-21)
 
 ### Bug Fixes
