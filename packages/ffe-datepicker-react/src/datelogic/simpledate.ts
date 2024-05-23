@@ -146,10 +146,10 @@ const noop = () => {};
 
 /*ts ignore just for keeing old js implementation*/
 export const getSimpleDateFromString = (
-    value: string,
+    value: string | undefined | null,
     onSuccess: (simpleDate: SimpleDate) => void = noop,
 ): SimpleDate | null => {
-    const match = validateDate(value);
+    const match = value && validateDate(value);
 
     if (!match) {
         return null;
