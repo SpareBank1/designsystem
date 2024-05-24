@@ -30,11 +30,6 @@ For custom components:
 @import '~ffe-searchable-dropdown-react/less/searchable-dropdown';
 ```
 
-## TypeScript definition files
-
-This component supports TypeScript - please keep in mind updating `index.d.ts` if you change any
-of the external methods or properties in this component.
-
 ## Development
 
 To start a local development server, run the following from the designsystem root folder:
