@@ -3,6 +3,10 @@
         @media (min-width: @breakpoint-sm) {
             display: flex;
         }
+        & > * {
+            margin-top: 0;
+            margin-bottom: var(--ffe-spacing-xs);
+        }
     }
 
     &__country-code &__input-group {
@@ -19,7 +23,7 @@
         }
 
         @media (max-width: (@breakpoint-sm - 1)) {
-            margin-bottom: var(--ffe-spacing-sm);
+            margin-bottom: var(--ffe-spacing-xs);
         }
     }
 
