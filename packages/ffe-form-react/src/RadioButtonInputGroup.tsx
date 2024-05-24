@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import classNames from 'classnames';
 import { ErrorFieldMessage } from './message';
 import { Tooltip } from './Tooltip';
+import { v4 as uuid } from 'uuid';
 
 export interface RadioButtonInputGroupProps
     extends Omit<
@@ -73,9 +74,11 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
             'Don\'t use both "tooltip" and "description" on an <RadioButtonInputGroup />, pick one of them',
         );
     }
+    const id = useRef(uuid()).current;
 
     return (
         <fieldset
+            aria-labelledby={id}
             className={classNames(
                 'ffe-input-group',
                 { 'ffe-input-group--no-extra-margin': !extraMargin },
@@ -85,7 +88,8 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
             {...rest}
         >
             {label && (
-                <legend
+                <div
+                    id={id}
                     className={classNames(
                         'ffe-form-label',
                         'ffe-form-label--block',
@@ -96,7 +100,7 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
                         <Tooltip>{tooltip}</Tooltip>
                     )}
                     {React.isValidElement(tooltip) && tooltip}
-                </legend>
+                </div>
             )}
 
             {typeof description === 'string' ? (
