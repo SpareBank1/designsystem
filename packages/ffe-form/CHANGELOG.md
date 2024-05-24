@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [29.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.13...@sb1/ffe-form@29.0.14) (2024-05-24)
+
+### Bug Fixes
+
+-   **ffe-form:** Legge til spacing for feilmelding på phoneInputNumber ([41fad44](https://github.com/SpareBank1/designsystem/commit/41fad44cc4327d2bb71c5f95e89a8e1bdb185583))
+
 ## [29.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.12...@sb1/ffe-form@29.0.13) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-form
