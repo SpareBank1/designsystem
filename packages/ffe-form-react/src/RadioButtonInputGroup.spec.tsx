@@ -58,7 +58,7 @@ describe('<RadioButtonInputGroup />', () => {
             const { container } = renderRadioButtonInputGroup({
                 label: 'Test label',
             });
-            const legend = container.querySelector('legend');
+            const legend = container.querySelector('.ffe-form-label');
             expect(legend?.textContent).toBe('Test label');
         });
         it('does not render a legend if not set', () => {
