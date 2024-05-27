@@ -1,143 +1,6 @@
 @import 'breakpoints';
 @import 'colors';
 
-// Heading
-//
-// Markup:
-// <h1 class="ffe-h1">Overskrift nivå 1</h1>
-// <h2 class="ffe-h2">Overskrift nivå 2</h2>
-// <h3 class="ffe-h3">Overskrift nivå 3</h3>
-// <h4 class="ffe-h4">Overskrift nivå 4</h4>
-// <h5 class="ffe-h5">Overskrift nivå 5</h5>
-// <h6 class="ffe-h6">Overskrift nivå 6</h6>
-//
-// Styleguide ffe-core.typography.headings
-
-// Heading classes
-//
-// Markup:
-// <div class="{{modifier_class}}">Overskrift</div>
-//
-// .ffe-h1 - nivå 1
-// .ffe-h2 - nivå 2
-// .ffe-h3 - nivå 3
-// .ffe-h4 - nivå 4
-// .ffe-h5 - nivå 5
-// .ffe-h6 - nivå 6
-//
-// Styleguide ffe-core.typography.headings-classes
-
-// Heading modifiers
-//
-// Markup:
-// <div class="ffe-h3 ffe-h3{{modifier_class}}">Overskrift</div>
-//
-// --error         - Error
-// --inline        - Inline
-// --no-margin     - No margin
-// --with-border   - With border
-// --no-underline  - No underline
-//
-// Styleguide ffe-core.typography.headings-modifiers
-
-// Body paragraph
-//
-// Markup:
-// <p class="ffe-body-paragraph {{modifier_class}}">
-//    Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
-//    mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
-//    tid.
-// </p>
-//
-// .ffe-body-paragraph--text-center - Centered
-// .ffe-body-paragraph--text-left   - Aligned left
-//
-// Styleguide ffe-core.typography.body-paragraph
-
-// Lead paragraph
-//
-// Markup:
-// <p class="ffe-lead-paragraph">
-//    Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
-//    mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
-//    tid.
-// </p>
-// <p class="ffe-sub-lead-paragraph">
-//    Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
-//    mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
-//    tid.
-// </p>
-// <p class="ffe-body-paragraph">
-//    Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
-//    mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
-//    tid.
-// </p>
-//
-// Styleguide ffe-core.typography.lead-paragraph
-
-// Small text
-//
-// Markup:
-// <div class="ffe-small-text">Dette er en liten type</div>
-//
-// Styleguide ffe-core.typography.small-text
-
-// Micro text
-//
-// Markup:
-// <div class="ffe-micro-text">Dette er den minste typen vi har</div>
-//
-// Styleguide ffe-core.typography.micro-text
-
-// Strong text
-//
-// Markup:
-// <div class="ffe-strong-text">Dette er en sterk type</div>
-//
-// Styleguide ffe-core.typography.strong-text
-
-// Emphasized text
-//
-// Markup:
-// <div class="ffe-em-text">Dette bør utheves</div>
-//
-// Styleguide ffe-core.typography.em-text
-
-// Preformatted text
-//
-// Markup:
-// <pre class="ffe-pre-text">
-//    Gammal dam
-//    Ein frosk hoppar
-//    Lyden av vatnet
-// </pre>
-//
-// Styleguide ffe-core.typography.pre-text
-
-// Divider line
-//
-// Markup:
-// <hr class="ffe-divider-line"/>
-//
-// Styleguide ffe-core.typography.divider-line
-
-// Inline separator
-//
-// Markup:
-// <hr class="ffe-inline-seperator"/>
-//
-// Styleguide ffe-core.typography.inline-seperator
-
-// Link
-//
-// Markup:
-// <a class="ffe-link-text {{modifier_class}}" href="#na">Link text</a>
-//
-// :hover - Hover state
-// .ffe-link-text--no-underline - not underlined
-//
-// Styleguide ffe-core.typography.link-text
-
 .ffe-h1 {
     line-height: 2.25rem;
     font-size: var(--ffe-fontsize-h1);
@@ -184,6 +47,10 @@
 
 .ffe-micro-text {
     font-size: var(--ffe-fontsize-micro-text);
+
+    &--strong {
+        font-family: var(--ffe-g-font-strong);
+    }
 }
 
 .ffe-h1,
