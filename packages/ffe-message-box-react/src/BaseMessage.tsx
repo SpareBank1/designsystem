@@ -15,8 +15,8 @@ export interface BaseMessageProps
     /** Adds alternative styling for better contrast on certain backgrounds */
     onColoredBg?: boolean;
     ariaLabel?: string;
-    role?: 'alert' | 'status';
-    focusOnMount?: boolean;
+    role?: 'alert' | 'group' | 'status';
+    shouldFocusWhenDynamicallyAppearing?: boolean;
 }
 
 export const BaseMessage: React.FC<BaseMessageProps> = ({
@@ -28,19 +28,23 @@ export const BaseMessage: React.FC<BaseMessageProps> = ({
     className = '',
     onColoredBg = false,
     ariaLabel,
-    role = 'status',
-    focusOnMount = true,
+    role = 'group',
+    shouldFocusWhenDynamicallyAppearing = true,
     ...rest
 }) => {
     const element = React.useRef<HTMLDivElement>(null);
     useEffect(() => {
-        if (focusOnMount) {
+        if (shouldFocusWhenDynamicallyAppearing) {
+            console.log(element.current);
             element.current?.focus({ preventScroll: true });
-            console.log(document.activeElement);
+            console.log('inside useEffect', document.activeElement);
+            //Dette virker ikke..
         }
-    }, [focusOnMount]);
+    }, []);
+
     return (
         <div
+            ref={element}
             className={classNames(
                 'ffe-message-box',
                 `ffe-message-box--${type}`,
