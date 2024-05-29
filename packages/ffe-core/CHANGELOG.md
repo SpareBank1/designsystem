@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [27.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.12...@sb1/ffe-core@27.4.0) (2024-05-29)
+
+### Features
+
+-   **ffe-core:** legger til strong-micro-text styling ([1446d8a](https://github.com/SpareBank1/designsystem/commit/1446d8a04e58ecbd65b83eeb1ee632bd241d2643))
+
 ## [27.3.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.11...@sb1/ffe-core@27.3.12) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-core

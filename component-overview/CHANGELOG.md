@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.1.4...@sb1/ffe-component-index@7.2.0) (2024-05-29)
+
+### Features
+
+-   **ffe-core-react:** Ny StrongMicroText komponent ([265d6a9](https://github.com/SpareBank1/designsystem/commit/265d6a933ecdef024aee3f37bcead43169e8faeb))
+
 ## [7.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.1.3...@sb1/ffe-component-index@7.1.4) (2024-05-24)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

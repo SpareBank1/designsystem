@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@9.0.0...@sb1/ffe-tabs-react@9.0.1) (2024-05-29)
+
+### Bug Fixes
+
+-   **ffe-tabs-react:** Legger til piltastnavigering på tabgroup ([c004c55](https://github.com/SpareBank1/designsystem/commit/c004c55bca7c9f08c6932115b48886c1d0e6513f))
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@8.0.22...@sb1/ffe-tabs-react@9.0.0) (2024-05-21)
 
 ### Features

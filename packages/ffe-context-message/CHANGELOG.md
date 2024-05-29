@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.17...@sb1/ffe-context-message@8.0.18) (2024-05-29)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
 ## [8.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.16...@sb1/ffe-context-message@8.0.17) (2024-05-13)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
