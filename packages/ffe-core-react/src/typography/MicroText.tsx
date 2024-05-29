@@ -8,12 +8,19 @@ export type MicroTextProps<As extends ElementType = 'span'> = {
 } & DistributiveOmit<
     ComponentProps<ElementType extends As ? 'span' : As>,
     'as' | 'ref'
-> & { underline?: boolean };
+> & { underline?: boolean; strong?: boolean };
 
 export function MicroText<As extends ElementType>(props: MicroTextProps<As>) {
-    const { as: Comp = 'span', className, ...rest } = props;
+    const { as: Comp = 'span', strong = false, className, ...rest } = props;
 
     return (
-        <Comp className={classNames('ffe-micro-text', className)} {...rest} />
+        <Comp
+            className={classNames(
+                'ffe-micro-text',
+                { 'ffe-micro-text--strong': strong },
+                className,
+            )}
+            {...rest}
+        />
     );
 }
