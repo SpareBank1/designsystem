@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@22.0.6...@sb1/ffe-buttons-react@23.0.0) (2024-05-29)
+
+### Features
+
+-   **ffe-buttons-react:** role="group" with aria label ([3cab616](https://github.com/SpareBank1/designsystem/commit/3cab616ad2740924bf29f902834b72bf35ae1eab))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons-react:** You will need to provide an ariaLabel
+
 ## [22.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@22.0.5...@sb1/ffe-buttons-react@22.0.6) (2024-05-29)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

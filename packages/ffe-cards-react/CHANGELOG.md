@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@15.1.1...@sb1/ffe-cards-react@15.2.0) (2024-05-29)
+
+### Features
+
+-   **ffe-cards-react:** legg til noPadding prop ([92aa17c](https://github.com/SpareBank1/designsystem/commit/92aa17c8017076d2ba416fbc7a8f8ccfe02d0b52))
+
 ## [15.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@15.1.0...@sb1/ffe-cards-react@15.1.1) (2024-05-29)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

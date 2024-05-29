@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.1.2...@sb1/ffe-feedback-react@3.2.0) (2024-05-29)
+
+### Features
+
+-   **ffe-feedback-react:** add required aria label to button group ([887c5f0](https://github.com/SpareBank1/designsystem/commit/887c5f037fbc7f67d37cbc2660e6fad86573419e))
+
 ## [3.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.1.1...@sb1/ffe-feedback-react@3.1.2) (2024-05-29)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

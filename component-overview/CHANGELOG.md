@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.2.0...@sb1/ffe-component-index@7.3.0) (2024-05-29)
+
+### Features
+
+-   **component-overview:** legg til eksempel for cardbase no padding ([8ca9d1c](https://github.com/SpareBank1/designsystem/commit/8ca9d1c620d7d42b584f8873f5117c7f942ea53c))
+
 # [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.1.4...@sb1/ffe-component-index@7.2.0) (2024-05-29)
 
 ### Features
