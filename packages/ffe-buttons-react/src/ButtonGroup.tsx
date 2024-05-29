@@ -6,16 +6,18 @@ export interface ButtonGroupProps extends React.ComponentProps<'div'> {
     thin?: boolean;
     /** Applies the inline modifier to make all child buttons inline */
     inline?: boolean;
+    /** Label for the group of buttons */
+    ariaLabel: string;
 }
 
 export const ButtonGroup: React.FC<ButtonGroupProps> = ({
     className,
     thin,
     inline,
+    ariaLabel,
     ...rest
 }) => (
     <div
-        data-testid="button-group"
         className={classNames(
             'ffe-button-group',
             { 'ffe-button-group--thin': thin },
@@ -23,5 +25,7 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
             className,
         )}
         {...rest}
+        role="group"
+        aria-label={ariaLabel}
     />
 );

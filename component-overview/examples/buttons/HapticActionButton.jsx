@@ -1,5 +1,3 @@
-import { ActionButton, ButtonGroup } from '@sb1/ffe-buttons-react';
+import { ActionButton } from '@sb1/ffe-buttons-react';
 
-<ButtonGroup>
-    <ActionButton onClick={() => navigator.vibrate(50)}>Action</ActionButton>
-</ButtonGroup>
+<ActionButton onClick={() => navigator.vibrate(50)}>Action</ActionButton>

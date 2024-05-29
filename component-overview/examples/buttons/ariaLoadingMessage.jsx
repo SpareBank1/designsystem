@@ -5,7 +5,7 @@ import {
     SecondaryButton,
 } from '@sb1/ffe-buttons-react';
 
-<ButtonGroup>
+<ButtonGroup ariaLabel="Knappegruppe">
     <ActionButton
         isLoading={true}
         onClick={f => f}

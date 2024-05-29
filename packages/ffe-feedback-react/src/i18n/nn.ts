@@ -5,6 +5,7 @@ export const nn = {
     FEEDBACK_SENT_HEADING: 'Takk for tilbakemeldinga!',
     FEEDBACK_BUTTON_SEND: 'Send tilbakemelding',
     FEEDBACK_BUTTON_CANCEL: 'Avbryt',
+    FEEDBACK_BUTTON_GROUP: 'Knappegruppe',
     FEEDBACK_GOOD: 'Kva var bra?',
     FEEDBACK_IMPROVE: 'Kva kan vi gjere betre?',
     FEEDBACK_ANSWER:

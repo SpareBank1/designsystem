@@ -5,6 +5,7 @@ export const en = {
     FEEDBACK_SENT_HEADING: 'Thank you!',
     FEEDBACK_BUTTON_SEND: 'Send feedback',
     FEEDBACK_BUTTON_CANCEL: 'Cancel',
+    FEEDBACK_BUTTON_GROUP: 'Button group',
     FEEDBACK_GOOD: 'What was good?',
     FEEDBACK_IMPROVE: 'How can we improve?',
     FEEDBACK_ANSWER:

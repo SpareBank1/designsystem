@@ -6,11 +6,9 @@ import {
 } from '@sb1/ffe-buttons-react';
 
 <>
-    <ButtonGroup>
+    <ButtonGroup ariaLabel="Knappegruppe">
         <SecondaryButton>Forrige</SecondaryButton>
         <PrimaryButton>Neste</PrimaryButton>
-    </ButtonGroup>
-    <ButtonGroup>
         <TertiaryButton>Avbryt</TertiaryButton>
     </ButtonGroup>
 </>
