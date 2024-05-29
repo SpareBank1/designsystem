@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames';
 
 export interface BaseMessageProps
@@ -15,7 +15,8 @@ export interface BaseMessageProps
     /** Adds alternative styling for better contrast on certain backgrounds */
     onColoredBg?: boolean;
     ariaLabel?: string;
-    role?: 'alert' | 'group';
+    role?: 'alert' | 'status';
+    focusOnMount?: boolean;
 }
 
 export const BaseMessage: React.FC<BaseMessageProps> = ({
@@ -27,9 +28,17 @@ export const BaseMessage: React.FC<BaseMessageProps> = ({
     className = '',
     onColoredBg = false,
     ariaLabel,
-    role = 'group',
+    role = 'status',
+    focusOnMount = true,
     ...rest
 }) => {
+    const element = React.useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (focusOnMount) {
+            element.current?.focus({ preventScroll: true });
+            console.log(document.activeElement);
+        }
+    }, [focusOnMount]);
     return (
         <div
             className={classNames(
@@ -39,6 +48,7 @@ export const BaseMessage: React.FC<BaseMessageProps> = ({
                 className,
             )}
             aria-label={ariaLabel}
+            //aria-live="polite" //Dette kan også fungere hvis vi tar i mot en prop som avgjør om komponenten skal vises eller ikke
             role={role}
             {...rest}
         >
