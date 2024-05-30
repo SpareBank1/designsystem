@@ -43,6 +43,8 @@ module.exports = {
                 'ffe-icons-react',
                 'ffe-lists',
                 'ffe-lists-react',
+                'ffe-messages',
+                'ffe-messages-react',
                 'ffe-message-box',
                 'ffe-message-box-react',
                 'ffe-sb1-logos',
