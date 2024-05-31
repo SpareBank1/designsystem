@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@4.0.3...@sb1/ffe-collapse-react@4.0.4) (2024-05-31)
+
+### Bug Fixes
+
+-   **ffe-collapse-react:** implement without transistionstart ([58907fc](https://github.com/SpareBank1/designsystem/commit/58907fc299e53ea43095e30899e7fbf6684dd0ae))
+
 ## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@4.0.2...@sb1/ffe-collapse-react@4.0.3) (2024-05-29)
 
 **Note:** Version bump only for package @sb1/ffe-collapse-react
