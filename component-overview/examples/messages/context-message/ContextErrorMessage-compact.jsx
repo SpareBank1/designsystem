@@ -1,5 +1,5 @@
-import { ContextErrorMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextErrorMessage compact={true}>
+<ContextMessage compact={true} type="error">
     Det skjedde en liten feil
-</ContextErrorMessage>
+</ContextMessage>;

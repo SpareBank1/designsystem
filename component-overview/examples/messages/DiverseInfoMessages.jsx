@@ -1,27 +1,33 @@
-import { ContextInfoMessage } from '@sb1/ffe-context-message-react';
-import { InfoMessage } from '@sb1/ffe-message-box-react';
-import { SystemInfoMessage } from '@sb1/ffe-system-message-react';
 import { Paragraph } from '@sb1/ffe-core-react';
+import {
+    SystemMessage,
+    ContextMessage,
+    MessageBox,
+    MessageHeader,
+} from '@sb1/ffe-messages-react';
 
 <>
-    <h2 className="ffe-h2">InfoMessage</h2>
+    <h2 className="ffe-h2">MessageBox type info</h2>
 
-    <InfoMessage title="Du har ingen kort">
+    <MessageBox
+        type="info"
+        header={<MessageHeader>Du har ingen kort</MessageHeader>}
+    >
         <Paragraph>
             For å bruke denne tjenesten må du ha et debetkort eller kredittkort
             fra SpareBank 1.
         </Paragraph>
-    </InfoMessage>
+    </MessageBox>
 
-    <h2 className="ffe-h2">ContextInfoMessage</h2>
+    <h2 className="ffe-h2">ContextMessage type info</h2>
 
-    <ContextInfoMessage>
+    <ContextMessage type="info">
         Nå har det kommet noe nytt og spennende fra SpareBank 1!
-    </ContextInfoMessage>
+    </ContextMessage>
 
-    <h2 className="ffe-h2">SystemInfoMessage</h2>
+    <h2 className="ffe-h2">SystemMessage type info</h2>
 
-    <SystemInfoMessage>
+    <SystemMessage type="info">
         Mobilbanken vil være utilgjengelig førstkommende fredag kl 19-20.
-    </SystemInfoMessage>
+    </SystemMessage>
 </>;

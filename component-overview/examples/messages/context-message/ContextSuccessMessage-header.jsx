@@ -1,5 +1,5 @@
-import { ContextSuccessMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage, MessageHeader } from '@sb1/ffe-messages-react';
 
-<ContextSuccessMessage headerText="Hurra!">
+<ContextMessage type="success" header={<MessageHeader>Hurra!</MessageHeader>}>
     Betalingen ble registrert!
-</ContextSuccessMessage>
+</ContextMessage>;

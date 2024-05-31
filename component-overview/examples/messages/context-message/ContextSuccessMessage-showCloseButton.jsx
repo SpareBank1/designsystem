@@ -1,5 +1,5 @@
-import { ContextSuccessMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextSuccessMessage showCloseButton={true}>
+<ContextMessage type="success" closeButton={true}>
     Jeg kan også lukkes
-</ContextSuccessMessage>
+</ContextMessage>;

@@ -1,5 +1,5 @@
-import { SystemNewsMessage } from '@sb1/ffe-system-message-react';
+import { SystemMessage } from '@sb1/ffe-messages-react';
 
-<SystemNewsMessage>
+<SystemMessage type="news">
     Velkommen til ny betaversjon av SpareBank 1!
-</SystemNewsMessage>
+</SystemMessage>;

@@ -1,3 +1,3 @@
-import { ContextSuccessMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextSuccessMessage>Betalingen ble registrert!</ContextSuccessMessage>
+<ContextMessage type="success">Betalingen ble registrert!</ContextMessage>;

@@ -1,5 +1,5 @@
-import { SystemErrorMessage } from '@sb1/ffe-system-message-react';
+import { SystemMessage } from '@sb1/ffe-messages-react';
 
-<SystemErrorMessage>
+<SystemMessage type="error">
     Noen av systemene våre er dessverre utilgjengelige akkurat nå.
-</SystemErrorMessage>
+</SystemMessage>;

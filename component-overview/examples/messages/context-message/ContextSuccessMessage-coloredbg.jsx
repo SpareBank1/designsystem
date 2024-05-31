@@ -1,7 +1,7 @@
-import { ContextSuccessMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
 <div style={{ backgroundColor: 'var(--ffe-farge-frost-30)', padding: '8px' }}>
-    <ContextSuccessMessage onColoredBg={true}>
+    <ContextMessage type="success" onColoredBg={true}>
         Betalingen ble gjennomført!
-    </ContextSuccessMessage>
-</div>
+    </ContextMessage>
+</div>;

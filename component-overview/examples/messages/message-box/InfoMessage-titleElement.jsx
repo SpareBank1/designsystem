@@ -1,8 +1,12 @@
-import { InfoMessage } from '@sb1/ffe-message-box-react';
 import { Paragraph } from '@sb1/ffe-core-react';
+import { MessageBox, MessageHeader } from '@sb1/ffe-messages-react';
 
-<InfoMessage title="Tittelen her er h4" titleElement="h4">
+<MessageBox
+    type="info"
+    header={<MessageHeader as="h4">Tittelen her er h4</MessageHeader>}
+>
     <Paragraph>
-        Ved å bruke titleElement propertyen kan man endre HTML-elementet på tittelen.
+        Ved å bruke titleElement propertyen kan man endre HTML-elementet på
+        tittelen.
     </Paragraph>
-</InfoMessage>
+</MessageBox>;

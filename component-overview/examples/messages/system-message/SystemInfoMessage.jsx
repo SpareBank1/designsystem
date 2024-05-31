@@ -1,5 +1,5 @@
-import { SystemInfoMessage } from '@sb1/ffe-system-message-react';
+import { SystemMessage } from '@sb1/ffe-messages-react';
 
-<SystemInfoMessage>
+<SystemMessage type="info">
     Mobilbanken vil være utilgjengelig førstkommende fredag kl 19-20.
-</SystemInfoMessage>
+</SystemMessage>;

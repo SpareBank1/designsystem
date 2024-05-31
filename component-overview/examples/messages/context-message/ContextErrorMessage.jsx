@@ -1,5 +1,5 @@
-import { ContextErrorMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextErrorMessage>
+<ContextMessage type="error">
     Dette gikk ikke som forventet i det hele tatt!
-</ContextErrorMessage>
+</ContextMessage>;

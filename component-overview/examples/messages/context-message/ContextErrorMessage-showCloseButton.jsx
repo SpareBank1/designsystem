@@ -1,5 +1,5 @@
-import { ContextErrorMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextErrorMessage showCloseButton={true}>
+<ContextMessage closeButton={true} type="error">
     Jeg kan også lukkes
-</ContextErrorMessage>
+</ContextMessage>;

@@ -8,6 +8,8 @@
       }
     },
     "rules": {
+      "no-duplicate-imports": 0, // Skru av denne fordi den krasjer med import/no-duplicates
+      "import/no-duplicates": 2,
       "no-use-before-define": 0,
       "@typescript-eslint/no-use-before-define": [2]
     },
