@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { mergeRefs } from './mergeRefs';
+import { usePreviousIsOpen } from './usePreviousIsOpen';
 
 export interface CollapseProps extends ComponentPropsWithRef<'div'> {
     isOpen: boolean;
@@ -17,53 +18,17 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
         const internalRef = useRef<HTMLDivElement | null>(null);
         const [isHidden, setIsHidden] = useState(!isOpen);
         const [overflowVisible, setOverflowVisible] = useState<boolean>(isOpen);
+        const previousIsOpen = usePreviousIsOpen(isOpen);
 
         useEffect(() => {
-            const handleTransition =
-                (startOrEnd: 'start' | 'end') => (e: TransitionEvent) => {
-                    if (
-                        e.target === internalRef.current &&
-                        e.propertyName === 'grid-template-rows'
-                    ) {
-                        setIsHidden(!isOpen);
-                        if (startOrEnd === 'start') {
-                            setOverflowVisible(false);
-                        } else {
-                            if (isOpen) {
-                                setOverflowVisible(true);
-                            }
-                            if (onRest) {
-                                onRest();
-                            }
-                        }
-                    }
-                };
-
-            const handleTransitionStart = handleTransition('start');
-            const handleTransitionEnd = handleTransition('end');
-            const collapse = internalRef.current;
-
-            if (collapse) {
-                collapse.addEventListener(
-                    'transitionstart',
-                    handleTransitionStart,
-                );
-                collapse.addEventListener('transitionend', handleTransitionEnd);
+            if (
+                typeof previousIsOpen === 'boolean' &&
+                isOpen !== previousIsOpen
+            ) {
+                setIsHidden(!isOpen);
+                setOverflowVisible(false);
             }
-
-            return () => {
-                if (collapse) {
-                    collapse.removeEventListener(
-                        'transitionstart',
-                        handleTransitionStart,
-                    );
-                    collapse.removeEventListener(
-                        'transitionend',
-                        handleTransitionEnd,
-                    );
-                }
-            };
-        }, [isOpen, onRest]);
+        }, [previousIsOpen, isOpen]);
 
         return (
             <div
@@ -73,6 +38,18 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
                     'ffe-collapse--open': isOpen,
                     'ffe-collapse--hidden': isHidden,
                 })}
+                onTransitionEnd={e => {
+                    if (
+                        e.target === internalRef.current &&
+                        e.propertyName === 'grid-template-rows'
+                    ) {
+                        setIsHidden(!isOpen);
+                        if (isOpen) {
+                            setOverflowVisible(true);
+                        }
+                        onRest?.();
+                    }
+                }}
             >
                 <div
                     className={classNames('ffe-collapse__inner', {
