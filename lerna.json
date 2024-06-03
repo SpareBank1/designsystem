@@ -5,6 +5,7 @@
         "buildtool/",
         "component-overview/"
     ],
+    "npmClient": "npm",
     "version": "independent",
     "hoist": true,
     "command": {
