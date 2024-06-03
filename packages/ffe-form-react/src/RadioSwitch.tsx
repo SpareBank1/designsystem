@@ -56,6 +56,7 @@ export const RadioSwitch: React.FC<RadioSwitchProps> = ({
                     ariaInvalid === 'true' &&
                     (selectedValue === leftValue || noneSelected)
                 }
+                selectedValue={selectedValue}
                 {...rest}
             >
                 {leftLabel}
@@ -70,6 +71,7 @@ export const RadioSwitch: React.FC<RadioSwitchProps> = ({
                     ariaInvalid === 'true' &&
                     (selectedValue === rightValue || noneSelected)
                 }
+                selectedValue={selectedValue}
                 {...rest}
             >
                 {rightLabel}
