@@ -1,3 +1,5 @@
-import { ContextTipsMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextTipsMessage compact={true}>Et lite tips</ContextTipsMessage>
+<ContextMessage type="tips" compact={true}>
+    Et lite tips
+</ContextMessage>;

@@ -1,5 +1,5 @@
-import { ContextInfoMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextInfoMessage>
+<ContextMessage type="info">
     Nå har det kommet noe nytt og spennende fra SpareBank 1!
-</ContextInfoMessage>
+</ContextMessage>;

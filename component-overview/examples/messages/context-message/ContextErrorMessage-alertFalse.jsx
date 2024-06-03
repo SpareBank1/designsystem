@@ -1,3 +1,5 @@
-import { ContextErrorMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextErrorMessage alert={false}>Slår av alert.</ContextErrorMessage>
+<ContextMessage type="error" role="group">
+    Slår av alert.
+</ContextMessage>;

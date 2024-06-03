@@ -1,3 +1,3 @@
-import { SystemSuccessMessage } from '@sb1/ffe-system-message-react';
+import { SystemMessage } from '@sb1/ffe-messages-react';
 
-<SystemSuccessMessage>Alle systemene våre funker!</SystemSuccessMessage>
+<SystemMessage type="success">Alle systemene våre funker!</SystemMessage>;

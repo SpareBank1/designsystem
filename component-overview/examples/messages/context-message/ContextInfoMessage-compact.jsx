@@ -1,3 +1,5 @@
-import { ContextInfoMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextInfoMessage compact={true}>En liten beskjed</ContextInfoMessage>
+<ContextMessage type="info" compact={true}>
+    En liten beskjed
+</ContextMessage>;

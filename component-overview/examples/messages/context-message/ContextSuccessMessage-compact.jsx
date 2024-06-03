@@ -1,5 +1,5 @@
-import { ContextSuccessMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage } from '@sb1/ffe-messages-react';
 
-<ContextSuccessMessage compact={true}>
+<ContextMessage type="success" compact={true}>
     En liten seier er fortsatt en seier!
-</ContextSuccessMessage>
+</ContextMessage>;

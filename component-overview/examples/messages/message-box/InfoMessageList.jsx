@@ -1,16 +1,16 @@
 import {
-    InfoMessage,
-    InfoMessageList,
-    InfoMessageListItem,
-} from '@sb1/ffe-message-box-react';
+    MessageBox,
+    MessageHeader,
+    MessageList,
+    MessageListItem,
+} from '@sb1/ffe-messages-react';
 
-<InfoMessage title="Viktige ting å huske på">
-    <InfoMessageList>
-        <InfoMessageListItem>
-            SpareBank 1 gir deg full oversikt
-        </InfoMessageListItem>
-        <InfoMessageListItem>
-            Ikke vær redd for å ta kontakt
-        </InfoMessageListItem>
-    </InfoMessageList>
-</InfoMessage>
+<MessageBox
+    header={<MessageHeader>Viktige ting å huske på</MessageHeader>}
+    type="info"
+>
+    <MessageList>
+        <MessageListItem>SpareBank 1 gir deg full oversikt</MessageListItem>
+        <MessageListItem>Ikke vær redd for å ta kontakt</MessageListItem>
+    </MessageList>
+</MessageBox>;

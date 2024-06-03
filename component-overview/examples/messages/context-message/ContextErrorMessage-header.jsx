@@ -1,5 +1,5 @@
-import { ContextErrorMessage } from '@sb1/ffe-context-message-react';
+import { ContextMessage, MessageHeader } from '@sb1/ffe-messages-react';
 
-<ContextErrorMessage headerText="Opps...">
+<ContextMessage header={<MessageHeader>Opps...</MessageHeader>} type="error">
     Dette gikk ikke som forventet i det hele tatt!
-</ContextErrorMessage>
+</ContextMessage>;
