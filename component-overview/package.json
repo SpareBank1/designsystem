@@ -33,8 +33,8 @@
         "build": "make all",
         "start": "parcel webapp/index.html --no-cache --no-autoinstall --no-source-maps --open",
         "watch": "run-p watch:es watch:less watch:examples",
-        "watch:es": "chokidar \"node_modules/@sb1/ffe-*/es/**/*.js\" --follow-symlinks -c \"touch package.json\"",
-        "watch:less": "chokidar \"node_modules/@sb1/ffe-*/less/**/*.less\" --follow-symlinks -c \"make -B lib/style.css\"",
+        "watch:es": "chokidar \"../node_modules/@sb1/ffe-*/es/**/*.js\" --follow-symlinks -c \"touch package.json\"",
+        "watch:less": "chokidar \"../node_modules/@sb1/ffe-*/less/**/*.less\" --follow-symlinks -c \"make -B lib/style.css\"",
         "watch:examples": "chokidar \"examples/**/*.jsx\" -c \"make lib/index.js\"",
         "ghpages": "make -B build ghpages",
         "clean": "make clean"

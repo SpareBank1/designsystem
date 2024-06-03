@@ -23,7 +23,7 @@
     },
     "scripts": {
         "build": "ffe-buildtool tsc",
-        "watch": "ffe-buildtool babel-watch",
+        "build:es": "ffe-buildtool tsc --es",
         "lint": "eslint src --ext ts,tsx",
         "lint:fix": "eslint src --fix --ext ts,tsx",
         "test": "ffe-buildtool jest",

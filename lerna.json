@@ -2,11 +2,11 @@
     "packages": [
         "packages/*",
         "linting/*",
-        "buildtool/",
-        "component-overview/"
+        "buildtool",
+        "component-overview"
     ],
+    "npmClient": "npm",
     "version": "independent",
-    "hoist": true,
     "command": {
         "publish": {
             "allowBranch": "main",
