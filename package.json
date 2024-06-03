@@ -21,17 +21,21 @@
         "start:component-overview": "lerna run start --scope='@sb1/ffe-component-index'",
         "test": "./buildtool/bin/cli.js jest",
         "test:watch": "./buildtool/bin/cli.js jest --watch",
+        "test:playwright": "playwright test --config ./test/playwright.config.ts",
+        "test:playwright-head": "playwright test --config ./test/playwright.config.ts --headed",
         "lerna": "lerna",
         "prepare": "husky install"
     },
     "lint-staged": {
-        "{packages,buildtool,component-overview,linting}/**/*.{js,jsx,ts,tsx,json,css,less,md}": [
+        "{packages,buildtool,component-overview,linting,test}/**/*.{js,jsx,ts,tsx,json,css,less,md}": [
             "prettier --write"
         ]
     },
     "devDependencies": {
+        "@axe-core/playwright": "^4.9.0",
         "@commitlint/cli": "^16.1.0",
         "@commitlint/config-conventional": "^16.0.0",
+        "@playwright/test": "^1.43.1",
         "@testing-library/dom": "^10.1.0",
         "@testing-library/react": "^12.1.4",
         "@testing-library/user-event": "^14.5.2",

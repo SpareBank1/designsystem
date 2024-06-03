@@ -20,3 +20,6 @@ types/
 
 # OS
 .DS_Store
+
+# playwright
+/test/playwright/
