@@ -1,6 +1,7 @@
 .ffe-input-group {
     border: 0;
     position: relative;
+    padding-bottom: calc(1lh + var(--ffe-spacing-xs));
 
     [aria-invalid='true'] {
         border-color: var(--ffe-g-error-color);
@@ -32,11 +33,15 @@
     }
 
     .ffe-field-message--error {
-        margin: 0;
+        margin-top: 0;
     }
 
     &__description {
         margin-bottom: var(--ffe-spacing-xs);
+    }
+
+    &--message {
+        padding-bottom: 0;
     }
 
     &--no-extra-margin {
@@ -46,9 +51,5 @@
             margin-bottom: var(--ffe-spacing-xs);
             height: initial;
         }
-    }
-
-    &__field-message {
-        min-height: 1lh;
     }
 }
