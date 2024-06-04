@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.4...@sb1/ffe-account-selector-react@26.0.5) (2024-06-04)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** åpne currencycode for andre koder enn bare nok og eur ([938bc1d](https://github.com/SpareBank1/designsystem/commit/938bc1d9807f1552118992d9d4f2247c636bef9f))
+
 ## [26.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.3...@sb1/ffe-account-selector-react@26.0.4) (2024-06-04)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

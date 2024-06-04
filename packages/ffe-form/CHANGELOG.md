@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [29.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.16...@sb1/ffe-form@29.0.17) (2024-06-04)
+
+### Bug Fixes
+
+-   **ffe-form:** change input group styling to fix extra margin ([56b569f](https://github.com/SpareBank1/designsystem/commit/56b569f110a1e1937f7b7f5a32dc23ffacd5e3a6))
+
 ## [29.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.15...@sb1/ffe-form@29.0.16) (2024-06-04)
 
 **Note:** Version bump only for package @sb1/ffe-form
