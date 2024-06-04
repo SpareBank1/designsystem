@@ -159,17 +159,15 @@ export const InputGroup: React.FC<InputGroupProps> = ({
 
             {modifiedChildren}
 
-            <div className="ffe-input-group__field-message">
-                {typeof fieldMessage === 'string' && (
-                    <ErrorFieldMessage as="p" id={fieldMessageId}>
-                        {fieldMessage}
-                    </ErrorFieldMessage>
-                )}
-                {React.isValidElement(fieldMessage) &&
-                    React.cloneElement(fieldMessage, {
-                        id: fieldMessageId,
-                    })}
-            </div>
+            {typeof fieldMessage === 'string' && (
+                <ErrorFieldMessage as="p" id={fieldMessageId}>
+                    {fieldMessage}
+                </ErrorFieldMessage>
+            )}
+            {React.isValidElement(fieldMessage) &&
+                React.cloneElement(fieldMessage, {
+                    id: fieldMessageId,
+                })}
         </div>
     );
 };
