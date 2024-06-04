@@ -33,14 +33,14 @@ export const BaseMessage: React.FC<BaseMessageProps> = ({
     ...rest
 }) => {
     const element = React.useRef<HTMLDivElement>(null);
-    useEffect(() => {
-        if (shouldFocusWhenDynamicallyAppearing) {
-            console.log(element.current);
-            element.current?.focus({ preventScroll: true });
-            console.log('inside useEffect', document.activeElement);
-            //Dette virker ikke..
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (shouldFocusWhenDynamicallyAppearing) {
+    //         console.log(element.current);
+    //         element.current?.focus({ preventScroll: true });
+    //         console.log('inside useEffect', document.activeElement);
+    //         //Dette virker ikke..
+    //     }
+    // }, [shouldFocusWhenDynamicallyAppearing]);
 
     return (
         <div

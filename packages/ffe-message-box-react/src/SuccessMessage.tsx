@@ -53,7 +53,7 @@ export const SuccessMessage: React.FC<SuccessMessageProps> = ({
                         type="success"
                         ariaLabel={texts[locale].success.ariaLabel}
                         icon={<Icon fileUrl={checkIcon} size="xl" />}
-                        role={'status'}
+                        role={'alert'}
                         {...rest}
                     />
                     <p>Some other text after</p>
