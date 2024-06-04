@@ -8,7 +8,6 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: @ffe-spacing-md;
-    min-height: 130px;
 
     & > &__icon {
         color: var(--ffe-v-cards-icon-color);
@@ -23,10 +22,6 @@
 }
 
 .ffe-icon-card--condensed {
-    @media (min-width: @breakpoint-md) {
-        min-height: 100px;
-    }
-
     .ffe-icon-card__icon {
         margin: 0 var(--ffe-spacing-sm) 0 0;
     }
