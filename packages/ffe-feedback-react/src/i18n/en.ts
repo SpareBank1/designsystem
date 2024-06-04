@@ -11,7 +11,7 @@ export const en = {
     FEEDBACK_ANSWER:
         'Your feedback will be used to improve this site and will not be replied.',
     QUESTIONS: ' If you have questions, ',
-    FEEDBACK_LINKTEXT: 'contact customer services.',
+    FEEDBACK_LINK_TEXT: 'contact customer services.',
     FEEDBACK_SENSITIVE:
         'Please do not send sensitive or personal information, for example: Health information, political affiliation, social security number, name, email or telephone number.',
     FEEDBACK_SHORT: 'Feedback must be at least three characters.',

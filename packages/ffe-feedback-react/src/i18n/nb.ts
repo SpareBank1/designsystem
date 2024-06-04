@@ -11,7 +11,7 @@ export const nb = {
     FEEDBACK_ANSWER:
         'Svaret ditt blir brukt til å forbedre denne siden og blir ikke besvart.',
     QUESTIONS: ' Har du spørsmål, ',
-    FEEDBACK_LINKTEXT: 'kontakt kundeservice.',
+    FEEDBACK_LINK_TEXT: 'kontakt kundeservice.',
     FEEDBACK_SENSITIVE:
         'Unngå å oppgi sensitiv eller personlig informasjon, for eksempel helseopplysninger, politisk tilhørighet, personnummer, navn, e-post eller telefonnummer.',
     FEEDBACK_SHORT: 'Tilbakemeldingen må være på minst tre tegn.',

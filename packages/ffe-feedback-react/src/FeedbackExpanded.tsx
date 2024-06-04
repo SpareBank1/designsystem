@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Paragraph } from '@sb1/ffe-core-react';
-import { texts } from './i18n/texts';
+import { txt } from './i18n/texts';
 import { InputGroup, TextArea } from '@sb1/ffe-form-react';
 import {
     ActionButton,
@@ -33,7 +33,7 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
             setFieldMessage(undefined);
             return true;
         }
-        setFieldMessage(texts[locale].FEEDBACK_SHORT);
+        setFieldMessage(txt[locale].FEEDBACK_SHORT);
         return false;
     };
 
@@ -44,18 +44,18 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
             className="ffe-feedback__link-button"
             onClick={contactLink?.onClick}
         >
-            {contactLink.linkText ?? texts[locale].FEEDBACK_LINKTEXT}
+            {contactLink.linkText ?? txt[locale].FEEDBACK_LINK_TEXT}
         </TertiaryButton>
     ) : null;
 
     return (
         <>
             <Paragraph>
-                {texts[locale].FEEDBACK_ANSWER}
-                {contactLinkElement && texts[locale].QUESTIONS}
+                {txt[locale].FEEDBACK_ANSWER}
+                {contactLinkElement && txt[locale].QUESTIONS}
                 {contactLinkElement}
             </Paragraph>
-            <Paragraph>{texts[locale].FEEDBACK_SENSITIVE}</Paragraph>
+            <Paragraph>{txt[locale].FEEDBACK_SENSITIVE}</Paragraph>
             <InputGroup
                 className="ffe-feedback__textarea-container"
                 fieldMessage={fieldMessage}
@@ -68,12 +68,12 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                     maxLength={1000}
                     id="textarea-feedback"
                     onBlur={validateMessage}
-                    title={texts[locale].FEEDBACK_IMPROVE}
+                    title={txt[locale].FEEDBACK_IMPROVE}
                 />
             </InputGroup>
             <ButtonGroup
                 className="ffe-feedback__button-group"
-                ariaLabel={texts[locale].FEEDBACK_BUTTON_GROUP}
+                ariaLabel={txt[locale].FEEDBACK_BUTTON_GROUP}
             >
                 <ActionButton
                     onClick={() => {
@@ -82,10 +82,10 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                         }
                     }}
                 >
-                    {texts[locale].FEEDBACK_BUTTON_SEND}
+                    {txt[locale].FEEDBACK_BUTTON_SEND}
                 </ActionButton>
                 <TertiaryButton onClick={onCancel}>
-                    {texts[locale].FEEDBACK_BUTTON_CANCEL}
+                    {txt[locale].FEEDBACK_BUTTON_CANCEL}
                 </TertiaryButton>
             </ButtonGroup>
         </>
