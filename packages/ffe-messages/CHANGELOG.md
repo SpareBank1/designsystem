@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@0.2.0...@sb1/ffe-messages@0.2.1) (2024-06-04)
+
+### Bug Fixes
+
+-   **ffe-messages:** heading should be bold ([605a099](https://github.com/SpareBank1/designsystem/commit/605a0993b2ac400a3b242932a5817b238496dd45))
+
 # [0.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@0.1.0...@sb1/ffe-messages@0.2.0) (2024-06-04)
 
 ### Features
