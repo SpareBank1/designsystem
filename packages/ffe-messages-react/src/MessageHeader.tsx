@@ -11,10 +11,7 @@ export const MessageHeader: React.FC<MessageHeaderProps> = props => {
     return (
         <Comp
             {...rest}
-            className={classNames(
-                'ffe-message__heading ffe-body-text',
-                className,
-            )}
+            className={classNames('ffe-message__heading', className)}
         >
             {children}
         </Comp>
