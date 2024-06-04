@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@11.0.2...@sb1/ffe-message-box-react@12.0.0) (2024-06-04)
+
+### Features
+
+-   **ffe-message-box-react:** deprecate package ([55b51f6](https://github.com/SpareBank1/designsystem/commit/55b51f6eeed3a6ff2646b486e229728efff4ecf4))
+
+### BREAKING CHANGES
+
+-   **ffe-message-box-react:** package is now deprecated
+
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@11.0.1...@sb1/ffe-message-box-react@11.0.2) (2024-05-29)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

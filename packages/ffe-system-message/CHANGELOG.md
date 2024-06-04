@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@8.0.18...@sb1/ffe-system-message@9.0.0) (2024-06-04)
+
+### Features
+
+-   **ffe-system-message:** deprecate package ([14248cf](https://github.com/SpareBank1/designsystem/commit/14248cf4ca5d6b36a32f47e6af0d31a42090f779))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message:** package is now deprecated
+
 ## [8.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@8.0.17...@sb1/ffe-system-message@8.0.18) (2024-05-29)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

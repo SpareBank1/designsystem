@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.18...@sb1/ffe-context-message@9.0.0) (2024-06-04)
+
+### Features
+
+-   **ffe-context-message-react:** deprecate package ([c3f810c](https://github.com/SpareBank1/designsystem/commit/c3f810c9ba667ae880b29aee670ad85a23f0dc60))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message-react:** package is now deprecated
+
 ## [8.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.17...@sb1/ffe-context-message@8.0.18) (2024-05-29)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

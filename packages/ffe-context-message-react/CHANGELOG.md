@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@10.0.2...@sb1/ffe-context-message-react@11.0.0) (2024-06-04)
+
+### Features
+
+-   **ffe-context-message-react:** deprecate package ([a2ff278](https://github.com/SpareBank1/designsystem/commit/a2ff2789ccc505d2bdde6c4e2483bf4ffa641101))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message-react:** package is now deprecated
+
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@10.0.1...@sb1/ffe-context-message-react@10.0.2) (2024-05-31)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

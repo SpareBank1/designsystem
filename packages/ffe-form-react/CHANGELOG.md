@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@19.0.3...@sb1/ffe-form-react@19.0.4) (2024-06-04)
+
+### Bug Fixes
+
+-   **ffe-form-react:** selected value no passed from radio switch ([8a33836](https://github.com/SpareBank1/designsystem/commit/8a3383679428287556cc36edc680d93ef2e1e794))
+
 ## [19.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@19.0.2...@sb1/ffe-form-react@19.0.3) (2024-05-31)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

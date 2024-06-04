@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@9.0.3...@sb1/ffe-system-message-react@10.0.0) (2024-06-04)
+
+### Features
+
+-   **ffe-system-message-react:** deprecate package ([ed4a59e](https://github.com/SpareBank1/designsystem/commit/ed4a59e3f8177f859823ff0b7a0729619ba44616))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message-react:** package is now deprecated
+
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@9.0.2...@sb1/ffe-system-message-react@9.0.3) (2024-05-31)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
