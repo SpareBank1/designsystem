@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@18.2.1...@sb1/ffe-cards@18.2.2) (2024-06-04)
+
+### Bug Fixes
+
+-   **ffe-cards:** fjern min-height fra icon card ([d5e85d7](https://github.com/SpareBank1/designsystem/commit/d5e85d7228554c2911d54526dc007588c96ae9ac))
+
 ## [18.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@18.2.0...@sb1/ffe-cards@18.2.1) (2024-06-04)
 
 **Note:** Version bump only for package @sb1/ffe-cards
