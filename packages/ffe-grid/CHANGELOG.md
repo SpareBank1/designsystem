@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.2.17...@sb1/ffe-grid@14.3.0) (2024-06-05)
+
+### Features
+
+-   **ffe-grid:** legger til støtte for responsiv spacing ([c38cfaa](https://github.com/SpareBank1/designsystem/commit/c38cfaafaf80cc0c4f961696db9486c935b2dbdf))
+
 ## [14.2.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.2.16...@sb1/ffe-grid@14.2.17) (2024-06-04)
 
 **Note:** Version bump only for package @sb1/ffe-grid

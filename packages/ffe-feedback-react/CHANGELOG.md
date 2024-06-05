@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.2.3...@sb1/ffe-feedback-react@3.3.0) (2024-06-05)
+
+### Features
+
+-   **ffe-feedback-react:** mulighet att bruke egen heading ([138e0f2](https://github.com/SpareBank1/designsystem/commit/138e0f21ebada03ad74750924cec36c50685abc3))
+
 ## [3.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.2.2...@sb1/ffe-feedback-react@3.2.3) (2024-06-04)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

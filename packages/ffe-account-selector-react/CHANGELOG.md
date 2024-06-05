@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.5...@sb1/ffe-account-selector-react@26.0.6) (2024-06-05)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** fix at currencycode var for streng ([023f08b](https://github.com/SpareBank1/designsystem/commit/023f08b0b54a371d551da667b85206d7df677eb4))
+
 ## [26.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.4...@sb1/ffe-account-selector-react@26.0.5) (2024-06-04)
 
 ### Bug Fixes
