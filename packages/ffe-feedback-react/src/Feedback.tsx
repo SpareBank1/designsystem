@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { flushSync } from 'react-dom';
 import { Animation } from './Animation';
-import { texts } from './i18n/texts';
+import { txt } from './i18n/texts';
 import { FeedbackThumbs, Thumb } from './FeedbackThumbs';
 import classNames from 'classnames';
 import { FeedbackExpanded, FeedbackExpandedProps } from './FeedbackExpanded';
@@ -17,6 +17,9 @@ export interface FeedbackProps {
     /** Set the background color of the feedback container in darkmode */
     bgDarkmodeColor?: 'svart' | 'natt';
     contactLink?: FeedbackExpandedProps['contactLink'];
+    texts?: {
+        feedbackNotSentHeading?: string;
+    };
 }
 export const Feedback: React.FC<FeedbackProps> = ({
     headingLevel,
@@ -26,6 +29,7 @@ export const Feedback: React.FC<FeedbackProps> = ({
     bgColor,
     bgDarkmodeColor,
     contactLink,
+    texts,
 }) => {
     const feedbackSentRef = useRef<HTMLHeadingElement>();
     const expandedRef = useRef<HTMLHeadingElement>();
@@ -67,7 +71,7 @@ export const Feedback: React.FC<FeedbackProps> = ({
                             tabIndex: -1,
                             className: 'ffe-h4',
                         },
-                        texts[locale].FEEDBACK_SENT_HEADING,
+                        txt[locale].FEEDBACK_SENT_HEADING,
                     )}
                     <Animation />
                 </div>
@@ -83,8 +87,8 @@ export const Feedback: React.FC<FeedbackProps> = ({
                         `h${headingLevel}`,
                         { ref: expandedRef, tabIndex: -1, className: 'ffe-h5' },
                         feedbackThumbClicked === 'THUMB_UP'
-                            ? texts[locale].FEEDBACK_GOOD
-                            : texts[locale].FEEDBACK_IMPROVE,
+                            ? txt[locale].FEEDBACK_GOOD
+                            : txt[locale].FEEDBACK_IMPROVE,
                     )}
                     <FeedbackExpanded
                         locale={locale}
@@ -103,7 +107,8 @@ export const Feedback: React.FC<FeedbackProps> = ({
                 {React.createElement(
                     `h${headingLevel}`,
                     { id: headingId, className: 'ffe-h4' },
-                    texts[locale].FEEDBACK_NOT_SENT_HEADING,
+                    texts?.feedbackNotSentHeading ??
+                        txt[locale].FEEDBACK_NOT_SENT_HEADING,
                 )}
                 <FeedbackThumbs
                     onClick={handleThumbClicked}

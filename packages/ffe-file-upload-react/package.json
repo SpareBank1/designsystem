@@ -21,7 +21,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool babel",
+        "build": "ffe-buildtool tsc",
         "watch": "ffe-buildtool babel-watch",
         "lint": "eslint src --ext ts,tsx",
         "lint:fix": "eslint src --fix --ext ts,tsx",
