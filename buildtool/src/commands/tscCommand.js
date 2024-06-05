@@ -4,11 +4,10 @@ module.exports = function (args) {
     const arg = [
         'tsc',
         '-b',
-        './tsconfig.cjs.json',
-        './tsconfig.esm.json',
-        './tsconfig.types.json',
-        ...args,
-    ];
+        args.includes('--es') && './tsconfig.esm.json',
+        args.includes('--cjs') && './tsconfig.cjs.json',
+        args.includes('--types') && './tsconfig.types.json',
+    ].filter(Boolean);
 
     return spawn('npx', arg, {
         cwd: process.cwd(),

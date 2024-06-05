@@ -20,6 +20,7 @@
     },
     "scripts": {
         "build": "ffe-buildtool tsc",
+        "build:es": "ffe-buildtool tsc --es",
         "clean": "rimraf gen-src lib es types",
         "lint": "eslint src --ext ts,tsx",
         "lint:fix": "eslint src --fix --ext ts,tsx",

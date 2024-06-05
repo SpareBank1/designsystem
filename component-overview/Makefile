@@ -1,11 +1,11 @@
 
 .PHONY: all build clean ghpages
 
-rollup := ./node_modules/.bin/rollup
-lessc := ./node_modules/.bin/lessc
+rollup := ../node_modules/.bin/rollup
+lessc := ../node_modules/.bin/lessc
 reactDocgen := ../node_modules/.bin/react-docgen
 lerna := ./node_modules/.bin/lerna
-parcel := ./node_modules/.bin/parcel
+parcel := ../node_modules/.bin/parcel
 
 EXAMPLE_FILES = $(shell find examples -type f -name '*.jsx')
 REACT_FILES = $(shell cd ../packages && find ffe-*-react/src -type f -name '*.js'| grep '\/[A-Z][A-Za-z]\+.js\>')
@@ -18,7 +18,6 @@ build: lib/index.js lib/style.css
 
 lib/index.js: gen-src/package-list.json gen-src/reactdoc.json gen-src/examples/index.js
 	$(rollup) -c
-
 
 lib/style.css: src/style.less
 	mkdir -p gen-src

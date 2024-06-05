@@ -7,7 +7,7 @@
     "types": "types/index.d.ts",
     "scripts": {
         "build": "ffe-buildtool tsc && cp src/symbolNames.ts types/symbolNames.ts",
-        "watch": "ffe-buildtool babel-watch",
+        "build:es": "ffe-buildtool tsc --es",
         "lint": "eslint src --ext ts,tsx",
         "lint:fix": "eslint src --fix --ext ts,tsx",
         "test": "ffe-buildtool jest",

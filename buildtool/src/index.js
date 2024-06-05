@@ -35,15 +35,6 @@ program
     });
 
 program
-    .command('babel-watch')
-    .description('continuously compile code with babel')
-    .argument('[source]', 'directory with source code', 'src')
-    .option('--es <esDir>', 'where to output es modules', 'es')
-    .action((source, options) => {
-        babelCommand({ source, ...options, watch: true });
-    });
-
-program
     .command('jest')
     .description('test code with jest')
     .option(
@@ -70,7 +61,25 @@ program
 program
     .command('tsc')
     .description('compile code with tsc')
-    .action((options, { args }) => {
+    .option('--es', 'compile es')
+    .option('--cjs', 'compile cjs')
+    .option('--types', 'generate types')
+    .action(async (options, { args }) => {
+        if (!options.es && !options.cjs && !options.types) {
+            args.push('--es');
+            args.push('--cjs');
+            args.push('--types');
+        } else {
+            if (options.es) {
+                args.push('--es');
+            }
+            if (options.cjs) {
+                args.push('--cjs');
+            }
+            if (options.types) {
+                args.push('--types');
+            }
+        }
         tscCommand(args);
     });
 
