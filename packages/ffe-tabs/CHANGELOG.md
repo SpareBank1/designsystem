@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.1.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@13.1.20...@sb1/ffe-tabs@13.1.21) (2024-06-05)
+
+**Note:** Version bump only for package @sb1/ffe-tabs
+
+
+
+
+
 ## [13.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@13.1.19...@sb1/ffe-tabs@13.1.20) (2024-06-04)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
