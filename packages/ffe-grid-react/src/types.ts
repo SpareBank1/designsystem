@@ -37,6 +37,8 @@ export type Padding =
     | '4xl'
     | '5xl';
 
+export type Gap = 'none' | '2xs' | 'xs' | 'sm' | 'md' | 'lg';
+
 export type BackgroundColor =
     | 'frost-30'
     | 'sand'

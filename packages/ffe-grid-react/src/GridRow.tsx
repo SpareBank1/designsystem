@@ -8,6 +8,13 @@ import {
     Padding,
 } from './types';
 
+interface GridRowSize {
+    margin?: Margin;
+    padding?: Padding;
+}
+
+type SizeModifier = GridRowSize | Margin | Padding;
+
 export type GridRowProps<As extends ElementType = any> =
     ComponentWithoutRefAsPropParams<As> & {
         /** Padding in the top and bottom of the row */
@@ -18,7 +25,26 @@ export type GridRowProps<As extends ElementType = any> =
         background?: BackgroundColor;
         /** Supported dark background colors */
         backgroundDark?: BackgroundColorDark;
+        /** Size modifiers for small screen sizes */
+        sm?: SizeModifier;
+        /** Size modifiers for medium screen sizes */
+        md?: SizeModifier;
+        /** Size modifiers for large screen sizes */
+        lg?: SizeModifier;
     };
+
+const sizeClasses = (size: 'sm' | 'md' | 'lg', def?: SizeModifier) => {
+    if (def === undefined) {
+        return null;
+    } else if (typeof def === 'string') {
+        return `ffe-grid__row--${size}-${def}`;
+    }
+
+    return classNames({
+        [`ffe-grid__row--${size}-margin-${def.margin}`]: def.margin,
+        [`ffe-grid__row--${size}-padding-${def.padding}`]: def.padding,
+    });
+};
 
 export const GridRow: React.FC<GridRowProps> = ({
     background,
@@ -26,6 +52,9 @@ export const GridRow: React.FC<GridRowProps> = ({
     className,
     children,
     as: Comp = 'div',
+    sm,
+    md,
+    lg,
     padding,
     margin,
     ...rest
@@ -43,6 +72,9 @@ export const GridRow: React.FC<GridRowProps> = ({
         <Comp
             className={classNames(
                 className,
+                sizeClasses('lg', lg),
+                sizeClasses('md', md),
+                sizeClasses('sm', sm),
                 'ffe-grid__row',
                 { [`ffe-grid__row--bg-${background}`]: hasBackgroundColor },
                 {
