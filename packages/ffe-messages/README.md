@@ -14,7 +14,7 @@ Full documentation on lists usage is available at https://design.sparebank1.no/k
 @import 'path/to/node_modules/@sb1/ffe-messages/less/messages';
 ```
 
-See also `@sb1/ffe-lists-react`.
+See also `@sb1/ffe-messages-react`.
 
 ## Theming with CSS custom properties
 
