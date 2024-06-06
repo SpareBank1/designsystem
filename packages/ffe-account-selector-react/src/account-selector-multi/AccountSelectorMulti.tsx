@@ -16,8 +16,8 @@ const allAccountsElement: AllAccountsElement = {
     accountNumber: '',
 };
 
-const isAllAccountsElement = (
-    suggestion: Account | AllAccountsElement,
+const isAllAccountsElement = <T extends Account>(
+    suggestion: T | AllAccountsElement,
 ): suggestion is AllAccountsElement =>
     (suggestion as AllAccountsElement)?.id === 'all-accounts';
 
@@ -41,7 +41,7 @@ const renderSelectAll = (allSelected: boolean, locale: Locale) => (
     </div>
 );
 
-export interface AccountSelectorMultiProps {
+export interface AccountSelectorMultiProps<T extends Account> {
     /**
      * Array of objects:
      *  {
@@ -51,7 +51,7 @@ export interface AccountSelectorMultiProps {
      *      name: string.isRequired,
      *  }
      */
-    accounts?: Account[];
+    accounts?: T[];
     id: string;
     isLoading?: boolean;
     /** 'nb', 'nn', or 'en' */
@@ -59,7 +59,7 @@ export interface AccountSelectorMultiProps {
     /** Overrides default string for all locales. */
     noMatches?: string;
     /** Called when an account is clicked */
-    onAccountSelected: (account: Account | AllAccountsElement) => void;
+    onAccountSelected: (account: T | AllAccountsElement) => void;
     onChange?: (value: string) => void;
     onFocus?: () => void;
     onBlur: () => void;
@@ -74,7 +74,7 @@ export interface AccountSelectorMultiProps {
      *      name: string.isRequired,
      *  }
      */
-    selectedAccounts?: Account[];
+    selectedAccounts?: T[];
     showSelectAllOption?: boolean;
     value?: string;
 }
@@ -83,13 +83,15 @@ interface AccountSelectorMultiState {
     suggestionListHeight: number;
 }
 
-export class AccountSelectorMulti extends React.Component<
-    AccountSelectorMultiProps,
+export class AccountSelectorMulti<
+    T extends Account = Account,
+> extends React.Component<
+    AccountSelectorMultiProps<T>,
     AccountSelectorMultiState
 > {
     private shouldShowSuggestions?: boolean;
-    private baseRef?: BaseSelector<Account | AllAccountsElement> | null;
-    constructor(props: AccountSelectorMultiProps) {
+    private baseRef?: BaseSelector<T | AllAccountsElement> | null;
+    constructor(props: AccountSelectorMultiProps<T>) {
         super(props);
         autoBind(this);
         this.state = {
@@ -108,7 +110,7 @@ export class AccountSelectorMulti extends React.Component<
         return accounts.filter(accountFilter(value));
     }
 
-    onSuggestionSelect(suggestion: AllAccountsElement | Account) {
+    onSuggestionSelect(suggestion: AllAccountsElement | T) {
         const {
             onAccountSelected,
             selectedAccounts = [],
@@ -130,7 +132,7 @@ export class AccountSelectorMulti extends React.Component<
         }
     }
 
-    renderSuggestion(account: Account | AllAccountsElement) {
+    renderSuggestion(account: T | AllAccountsElement) {
         const { locale, selectedAccounts = [], accounts } = this.props;
         const isSelected = selectedAccounts.filter(
             it => it.accountNumber === account.accountNumber,

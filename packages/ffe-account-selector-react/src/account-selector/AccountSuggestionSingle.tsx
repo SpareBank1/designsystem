@@ -3,19 +3,19 @@ import classNames from 'classnames';
 import { accountFormatter, balanceWithCurrency } from '../util/format';
 import { Account, Locale } from '../types';
 
-export interface AccountSuggestionSingleProps {
-    item: Account;
+export interface AccountSuggestionSingleProps<T extends Account = Account> {
+    item: T;
     locale: Locale;
     isHighlighted: boolean;
-    dropdownAttributes: (keyof Account)[];
+    dropdownAttributes: (keyof T)[];
 }
 
-export const AccountSuggestionSingle = ({
+export const AccountSuggestionSingle = <T extends Account>({
     item,
     isHighlighted,
     locale,
     dropdownAttributes,
-}: AccountSuggestionSingleProps) => {
+}: AccountSuggestionSingleProps<T>) => {
     const { accountNumber, balance, name, currencyCode } = item;
     const shouldShowBalance =
         dropdownAttributes.includes('balance') &&
