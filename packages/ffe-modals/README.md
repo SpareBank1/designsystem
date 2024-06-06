@@ -3,18 +3,18 @@
 ## Install
 
 ```bash
-npm install --save @sb1/ffe-lists
+npm install --save @sb1/ffe-modals
 ```
 
 ## Usage
 
-Full documentation on lists usage is available at https://design.sparebank1.no/komponenter/lister/.
+Full documentation on lists usage is available at https://design.sparebank1.no/komponenter/modaler/.
 
 ```less
-@import 'path/to/node_modules/@sb1/ffe-lists/less/lists';
+@import 'path/to/node_modules/@sb1/ffe-modals/less/modal';
 ```
 
-See also `@sb1/ffe-lists-react`.
+See also `@sb1/ffe-modals-react`.
 
 ## Theming with CSS custom properties
 
