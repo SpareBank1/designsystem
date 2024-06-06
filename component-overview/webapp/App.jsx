@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home, ViewExample } from './routes';
 import { NavProvider, ThemeProvider } from './context';
 import { Layout } from './components';
-import { withExampleById } from './util';
+import { WithExampleById } from './util';
 
 const baseUrl = process.env.PUBLIC_URL || '/';
 
@@ -12,16 +12,21 @@ export default function App() {
         <ThemeProvider>
             <Layout>
                 <NavProvider>
-                    <Router basename={baseUrl}>
-                        <Switch>
-                            <Route path="/:exampleId">
-                                {withExampleById(ViewExample)}
-                            </Route>
+                    <BrowserRouter basename={baseUrl}>
+                        <Routes>
                             <Route path="/">
-                                <Home />
+                                <Route index={true} element={<Home />} />
+                                <Route
+                                    path=":exampleId"
+                                    element={
+                                        <WithExampleById
+                                            component={ViewExample}
+                                        />
+                                    }
+                                />
                             </Route>
-                        </Switch>
-                    </Router>
+                        </Routes>
+                    </BrowserRouter>
                 </NavProvider>
             </Layout>
         </ThemeProvider>

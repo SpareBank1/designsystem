@@ -1,6 +1,6 @@
 /* stylelint-disable selector-class-pattern */
 .sb1ex-page {
-    height: 100vh;
+    min-height: 100%;
     overflow: auto;
     transition: background-color 0.2s;
     background-color: var(--sb1ex-page-bg);
