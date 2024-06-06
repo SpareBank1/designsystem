@@ -9,13 +9,13 @@ import { Account } from '../types';
 import { formatIncompleteAccountNumber } from '../util/format';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 
-const getAccountsWithCustomAccounts = ({
+const getAccountsWithCustomAccounts = <T extends Account>({
     accounts,
     selectedAccount,
     inputValue,
 }: {
-    accounts: Account[];
-    selectedAccount: Account | undefined;
+    accounts: T[];
+    selectedAccount: T | undefined;
     inputValue: string;
 }) => {
     const shouldAddSelectedAccountNotFoundInList =
@@ -30,7 +30,7 @@ const getAccountsWithCustomAccounts = ({
         : accounts;
 };
 
-export interface AccountSelectorProps {
+export interface AccountSelectorProps<T extends Account> {
     /**
      * Array of objects:
      *  {
@@ -40,19 +40,19 @@ export interface AccountSelectorProps {
      *      currencyCode: string,
      *  }
      */
-    accounts: Account[];
+    accounts: T[];
     className?: string;
     id: string;
     locale?: 'nb' | 'nn' | 'en';
     /** Overrides default string for all locales. */
     noMatches?: {
         text: string;
-        dropdownList?: Account[];
+        dropdownList?: T[];
     };
     /** Props passed to the input field */
     inputProps?: React.ComponentPropsWithoutRef<'input'>;
     /** Returns the selected account object */
-    onAccountSelected: (account: Account) => void;
+    onAccountSelected: (account: T) => void;
     /**
      * Called when emptying the input field and moving focus away from the account selector
      * *
@@ -72,7 +72,7 @@ export interface AccountSelectorProps {
      */
     allowCustomAccount?: boolean;
     /** Custom element to use for each item in the dropdown list */
-    listElementBody?: React.ComponentType<AccountSuggestionSingleProps>;
+    listElementBody?: React.ComponentType<AccountSuggestionSingleProps<T>>;
     /** Element to be shown below dropDownList */
     postListElement?: React.ReactNode;
     /** Sets aria-invalid on input field  */
@@ -80,12 +80,12 @@ export interface AccountSelectorProps {
     /** Prop passed to the dropdown list */
     onOpen?: () => void;
     onClose?: () => void;
-    selectedAccount?: Account;
+    selectedAccount?: T;
 
     onReset: () => void;
 }
 
-export const AccountSelector: React.FC<AccountSelectorProps> = ({
+export const AccountSelector = <T extends Account = Account>({
     id,
     className,
     locale = 'nb',
@@ -105,7 +105,7 @@ export const AccountSelector: React.FC<AccountSelectorProps> = ({
     ariaInvalid,
     onOpen,
     onClose,
-}) => {
+}: AccountSelectorProps<T>) => {
     const [inputValue, setInputValue] = useState(selectedAccount?.name || '');
 
     const formatter = formatAccountNumber
@@ -117,15 +117,14 @@ export const AccountSelector: React.FC<AccountSelectorProps> = ({
      * but it ignores all spaces and periods so that account number formatting won't mess with the search.
      */
     const searchMatcherIgnoringAccountNumberFormatting =
-        (searchString: string, searchAttributes: (keyof Account)[]) =>
-        (item: Account) => {
+        (searchString: string, searchAttributes: (keyof T)[]) => (item: T) => {
             const cleanString = (value: unknown) =>
                 `${value}`
                     .replace(/(\s|\.)/g, '') // Remove all spaces and periods
                     .toLowerCase();
             const cleanedSearchString = cleanString(searchString);
             return searchAttributes.some(searchAttribute =>
-                cleanString(item[searchAttribute as keyof Account]).includes(
+                cleanString(item[searchAttribute as keyof T]).includes(
                     cleanedSearchString,
                 ),
             );
@@ -137,7 +136,7 @@ export const AccountSelector: React.FC<AccountSelectorProps> = ({
         }
     };
 
-    const handleAccountSelected = (value: Account | null) => {
+    const handleAccountSelected = (value: T | null) => {
         const hasResetSelection = value === null;
         const hasSelectedCustomAccount = !value?.accountNumber;
         if (hasResetSelection) {
@@ -147,7 +146,7 @@ export const AccountSelector: React.FC<AccountSelectorProps> = ({
             onAccountSelected({
                 name: value.name,
                 accountNumber: value.name,
-            });
+            } as T);
             setInputValue(value.name);
         } else {
             onAccountSelected(value);
@@ -162,7 +161,7 @@ export const AccountSelector: React.FC<AccountSelectorProps> = ({
                       {
                           name: formatter ? formatter(inputValue) : inputValue,
                           accountNumber: '',
-                      },
+                      } as T,
                   ],
               }
             : noMatches;
@@ -180,7 +179,7 @@ export const AccountSelector: React.FC<AccountSelectorProps> = ({
             className={classNames('ffe-account-selector-single', className)}
             id={`${id}-account-selector-container`}
         >
-            <SearchableDropdown<Account>
+            <SearchableDropdown<T>
                 id={id}
                 labelledById={labelledById}
                 inputProps={{

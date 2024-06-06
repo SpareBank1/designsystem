@@ -6,5 +6,5 @@ export interface Account {
     accountNumber: string;
     name: string;
     currencyCode?: AutoComplete<'NOK' | 'EUR'>;
-    balance?: number;
+    balance?: number | string;
 }
