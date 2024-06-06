@@ -41,7 +41,7 @@ const renderSelectAll = (allSelected: boolean, locale: Locale) => (
     </div>
 );
 
-export interface AccountSelectorMultiProps<T extends Account> {
+export interface AccountSelectorMultiProps<T extends Account = Account> {
     /**
      * Array of objects:
      *  {
