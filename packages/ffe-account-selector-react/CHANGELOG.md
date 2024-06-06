@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.7...@sb1/ffe-account-selector-react@26.0.8) (2024-06-06)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** add generic type for account ([b2b1048](https://github.com/SpareBank1/designsystem/commit/b2b1048e23df50ddf91953949210774dbac7d262))
+
+
+
+
+
 ## [26.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.6...@sb1/ffe-account-selector-react@26.0.7) (2024-06-05)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
