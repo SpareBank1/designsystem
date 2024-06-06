@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.3.11...@sb1/ffe-component-index@7.3.12) (2024-06-06)
+
+
+### Bug Fixes
+
+* **component-overview:** keep scroll position when navigation back ([f66f95c](https://github.com/SpareBank1/designsystem/commit/f66f95c646500b02f54a1e0fb47611baa73664bc))
+
+
+
+
+
 ## [7.3.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.3.10...@sb1/ffe-component-index@7.3.11) (2024-06-06)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

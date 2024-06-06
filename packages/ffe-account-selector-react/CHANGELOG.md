@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.8...@sb1/ffe-account-selector-react@26.0.9) (2024-06-06)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** add default account type for generic account selector props ([ef93c1a](https://github.com/SpareBank1/designsystem/commit/ef93c1a7b6c9891cba9ed66dca2ddc72a02a7f21))
+
+
+
+
+
 ## [26.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.7...@sb1/ffe-account-selector-react@26.0.8) (2024-06-06)
 
 
