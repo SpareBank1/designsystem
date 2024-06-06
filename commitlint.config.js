@@ -47,6 +47,8 @@ module.exports = {
                 'ffe-messages-react',
                 'ffe-message-box',
                 'ffe-message-box-react',
+                'ffe-modals',
+                'ffe-modals-react',
                 'ffe-sb1-logos',
                 'ffe-searchable-dropdown-react',
                 'ffe-spinner',

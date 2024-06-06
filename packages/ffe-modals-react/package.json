@@ -1,0 +1,42 @@
+{
+    "name": "@sb1/ffe-modals-react",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool tsc",
+        "build:es": "ffe-buildtool tsc --es",
+        "lint": "eslint src --ext ts,tsx",
+        "lint:fix": "eslint src --fix --ext ts,tsx",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "@sb1/ffe-modals": "^0.0.1"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.6.3",
+        "eslint": "^8.57.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
