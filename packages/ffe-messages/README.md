@@ -3,15 +3,15 @@
 ## Install
 
 ```bash
-npm install --save @sb1/ffe-lists
+npm install --save @sb1/ffe-messages
 ```
 
 ## Usage
 
-Full documentation on lists usage is available at https://design.sparebank1.no/komponenter/lister/.
+Full documentation on lists usage is available at https://design.sparebank1.no/komponenter/meldinger/.
 
 ```less
-@import 'path/to/node_modules/@sb1/ffe-lists/less/lists';
+@import 'path/to/node_modules/@sb1/ffe-messages/less/messages';
 ```
 
 See also `@sb1/ffe-lists-react`.
