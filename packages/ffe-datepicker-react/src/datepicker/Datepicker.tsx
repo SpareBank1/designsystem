@@ -253,8 +253,9 @@ export class Datepicker extends Component<DatepickerProps, DatepickerState> {
         const { minDate, maxDate } = this.state;
 
         if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
-            inputProps['aria-describedby'] =
-                `date-input-validation-${this.datepickerId}`;
+            inputProps[
+                'aria-describedby'
+            ] = `date-input-validation-${this.datepickerId}`;
         }
 
         const calendarClassName = classNames(
