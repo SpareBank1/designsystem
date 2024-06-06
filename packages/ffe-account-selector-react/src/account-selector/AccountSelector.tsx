@@ -30,7 +30,7 @@ const getAccountsWithCustomAccounts = <T extends Account>({
         : accounts;
 };
 
-export interface AccountSelectorProps<T extends Account> {
+export interface AccountSelectorProps<T extends Account = Account> {
     /**
      * Array of objects:
      *  {
