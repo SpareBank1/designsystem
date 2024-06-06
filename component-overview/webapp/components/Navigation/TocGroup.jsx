@@ -20,7 +20,6 @@ const getLeafsAndSubtrees = group =>
 
 export default function TocGroup({ group, level = 1, focusable = true }) {
     const { leafs, subtrees } = getLeafsAndSubtrees(group);
-    const conditionalTabIndex = focusable ? {} : { tabIndex: -1 };
 
     const hLevel = Math.min(level + 1, 6);
     const Hx = `h${hLevel}`;
@@ -47,7 +46,7 @@ export default function TocGroup({ group, level = 1, focusable = true }) {
                                 <LinkText
                                     as={Link}
                                     to={`/${leaf.value.key}`}
-                                    {...conditionalTabIndex}
+                                    tabIndex={focusable ? undefined : -1}
                                 >
                                     {leaf.edge}
                                 </LinkText>

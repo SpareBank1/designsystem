@@ -1,1 +1,1 @@
-export { default as withExampleById } from './withExampleById';
+export { WithExampleById } from './WithExampleById';

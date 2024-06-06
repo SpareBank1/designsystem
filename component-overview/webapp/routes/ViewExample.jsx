@@ -3,27 +3,24 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { LiveProvider, LivePreview, LiveError } from 'react-live';
 import theme from 'prism-react-renderer/themes/vsDark';
-import { withRouter } from 'react-router-dom';
 import { HamburgerButton, Panels, Navigation } from '../components';
+import { useLocation } from 'react-router-dom';
 
-const ViewExample = ({ history, exampleId, example }) => {
+const ViewExample = ({ exampleId, example }) => {
     const [showOverlayMenu, setShowOverlayMenu] = useState(false);
     const [expandedPanelId, setExpandedPanelId] = useState(null);
+    const location = useLocation();
 
-    useEffect(
-        () =>
-            history.listen(() => {
-                if (history.location.hash.startsWith('#toc_')) {
-                    // most likely a click on an item of the inpage navigation in the overlay menu
-                    return;
-                }
+    useEffect(() => {
+        if (location.hash.startsWith('#toc_')) {
+            // most likely a click on an item of the inpage navigation in the overlay menu
+            return;
+        }
 
-                // hidde overlay and panels on navigation to new page
-                setShowOverlayMenu(false);
-                setExpandedPanelId(null);
-            }),
-        [history],
-    );
+        // hidde overlay and panels on navigation to new page
+        setShowOverlayMenu(false);
+        setExpandedPanelId(null);
+    }, [location]);
 
     return (
         <LiveProvider code={example.code} scope={example.scope} theme={theme}>
@@ -70,7 +67,6 @@ const ViewExample = ({ history, exampleId, example }) => {
 ViewExample.propTypes = {
     exampleId: PropTypes.string.isRequired,
     example: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired,
 };
 
-export default withRouter(ViewExample);
+export default ViewExample;

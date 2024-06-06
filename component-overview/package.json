@@ -86,7 +86,7 @@
         "react-dom": "^16.9.0",
         "react-helmet": "^6.1.0",
         "react-live": "^2.2.3",
-        "react-router-dom": "^5.2.0"
+        "react-router-dom": "^6.23.1"
     },
     "devDependencies": {
         "@rollup/plugin-json": "^4.1.0",
