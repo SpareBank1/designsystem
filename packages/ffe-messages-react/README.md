@@ -3,7 +3,7 @@
 ## Install
 
 ```
-npm install --save @sb1/ffe-message-box-react
+npm install --save @sb1/ffe-messages-react
 ```
 
 ## Usage
