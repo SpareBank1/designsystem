@@ -1,11 +1,33 @@
-// Sets default body color and background color for light and dark themes
+// Sets default body color, font styles and background color for light and dark themes
 .ffe-body {
-    color: @ffe-farge-svart;
     background-color: @ffe-farge-hvit;
     &.native {
         @media (prefers-color-scheme: dark) {
             color: @ffe-farge-lysgraa;
             background-color: @ffe-farge-svart;
         }
+    }
+
+    font-family: var(--ffe-g-font);
+    color: var(--ffe-g-text-color);
+    font-variant-numeric: tabular-nums;
+
+    strong {
+        font-family: var(--ffe-g-font-strong);
+        font-weight: normal;
+    }
+
+    small {
+        font-size: var(--ffe-fontsize-small-text);
+    }
+
+    em {
+        font-family: var(--ffe-g-font-italic);
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    pre {
+        font-family: consolas, menlo, monaco, monospace;
     }
 }
