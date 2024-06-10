@@ -28,6 +28,7 @@ export default function Layout({ children }) {
                 <body
                     className={classNames({
                         'sb1ex-body': true,
+                        'ffe-body': true,
                         native: context.prefersDarkMode,
                         'regard-color-scheme-preference':
                             context.prefersDarkMode,
