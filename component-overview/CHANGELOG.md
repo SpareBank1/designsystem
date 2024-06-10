@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.3.12...@sb1/ffe-component-index@7.3.13) (2024-06-10)
+
+
+### Bug Fixes
+
+* **component-overview:** add ffe-body to documentation ([f59c7a6](https://github.com/SpareBank1/designsystem/commit/f59c7a6cb46b70a1d38d09e0dbf981730a30f6c1))
+
+
+
+
+
 ## [7.3.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.3.11...@sb1/ffe-component-index@7.3.12) (2024-06-06)
 
 

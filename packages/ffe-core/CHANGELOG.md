@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [27.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.4.2...@sb1/ffe-core@27.5.0) (2024-06-10)
+
+
+### Bug Fixes
+
+* **ffe-core:** utvide brakpoint for typografi på tablets ([61474e7](https://github.com/SpareBank1/designsystem/commit/61474e7d061adbeceabacadea13f3e428b3e7082))
+
+
+### Features
+
+* **ffe-core:** defaultverdier på skrift i ffe-body ([1b5fd5f](https://github.com/SpareBank1/designsystem/commit/1b5fd5f4b2a06bd6a4fd6b33bd7920c5674efad3))
+
+
+
+
+
 ## [27.4.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.4.1...@sb1/ffe-core@27.4.2) (2024-06-05)
 
 **Note:** Version bump only for package @sb1/ffe-core
