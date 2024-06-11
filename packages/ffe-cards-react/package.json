@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-cards-react",
-    "version": "15.2.4",
+    "version": "15.2.5",
     "description": "React implementation of ffe-react",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,7 +26,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-cards": "^18.2.4"
+        "@sb1/ffe-cards": "^18.2.5"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.6.3",
