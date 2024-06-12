@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.3.3...@sb1/ffe-feedback-react@3.3.4) (2024-06-12)
+
+
+### Bug Fixes
+
+* **ffe-feedback-react:** fix text centring in thunbs heading ([af2cd8b](https://github.com/SpareBank1/designsystem/commit/af2cd8b66e3390886ed320db35698f8d1ebd9c04))
+
+
+
+
+
 ## [3.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.3.2...@sb1/ffe-feedback-react@3.3.3) (2024-06-11)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
