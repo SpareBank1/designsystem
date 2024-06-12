@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.3.4...@sb1/ffe-feedback-react@3.3.5) (2024-06-12)
+
+
+### Bug Fixes
+
+* **ffe-feedback-react:** fix missing label textbox ([81ff1ab](https://github.com/SpareBank1/designsystem/commit/81ff1ab0387ed073325bb568a4f211df1a0aa316))
+
+
+
+
+
 ## [3.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.3.3...@sb1/ffe-feedback-react@3.3.4) (2024-06-12)
 
 
