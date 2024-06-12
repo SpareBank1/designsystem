@@ -59,6 +59,13 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
             <InputGroup
                 className="ffe-feedback__textarea-container"
                 fieldMessage={fieldMessage}
+                label={
+                    // htmlFor kommer fra InputGroup
+                    // eslint-disable-next-line jsx-a11y/label-has-for
+                    <label className="ffe-screenreader-only">
+                        {txt[locale].FEEDBACK_IMPROVE}
+                    </label>
+                }
             >
                 <TextArea
                     data-testid="feedbackTextArea"
@@ -66,9 +73,7 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                     value={feedbackText}
                     rows={6}
                     maxLength={1000}
-                    id="textarea-feedback"
                     onBlur={validateMessage}
-                    title={txt[locale].FEEDBACK_IMPROVE}
                 />
             </InputGroup>
             <ButtonGroup
