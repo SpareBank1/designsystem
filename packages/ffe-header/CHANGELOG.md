@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@20.0.32...@sb1/ffe-header@21.0.0) (2024-06-12)
+
+
+### Bug Fixes
+
+* **ffe-header:** fix text zoom and empty nav ([7f7fb53](https://github.com/SpareBank1/designsystem/commit/7f7fb53deb0d2084f36a3d5336ceb29ec32035b6))
+
+
+### BREAKING CHANGES
+
+* **ffe-header:** different html and css structure
+
+
+
+
+
 ## [20.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@20.0.31...@sb1/ffe-header@20.0.32) (2024-06-11)
 
 **Note:** Version bump only for package @sb1/ffe-header
