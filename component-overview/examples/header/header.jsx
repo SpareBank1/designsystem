@@ -72,7 +72,7 @@ import classNames from 'classnames';
                     <div className="ffe-header__user-nav-toggle">
                         <button
                             className="ffe-header__icon-button ffe-header__icon-button--user-nav"
-                            onClick={() => setIsUserNavOpen(!isUserNavOpen)}
+                            onClick={() => setIsUserNavOpen(prev => !prev)}
                         >
                             <span className="ffe-header__user-name">
                                 Jomar Beate Skrothaug
@@ -115,14 +115,14 @@ import classNames from 'classnames';
 
                 <div className="ffe-header__border">
                     <div className="ffe-header__wrapper">
-                        <nav className="ffe-header__user-nav" role="navigation">
+                        <nav
+                            className={classNames('ffe-header__user-nav', {
+                                'ffe-header__user-nav--visible': isUserNavOpen,
+                            })}
+                        >
                             <ul
                                 className={classNames(
                                     'ffe-header__list ffe-header__user-nav-list',
-                                    {
-                                        'ffe-header__user-nav-list--visible':
-                                            isUserNavOpen,
-                                    },
                                 )}
                             >
                                 <li className="ffe-header__list-item">
