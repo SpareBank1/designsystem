@@ -106,7 +106,7 @@ export const Feedback: React.FC<FeedbackProps> = ({
             <div className="ffe-feedback__content">
                 {React.createElement(
                     `h${headingLevel}`,
-                    { id: headingId, className: 'ffe-h4' },
+                    { id: headingId, className: 'ffe-h4 ffe-h4--text-center' },
                     texts?.feedbackNotSentHeading ??
                         txt[locale].FEEDBACK_NOT_SENT_HEADING,
                 )}
