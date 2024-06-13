@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@21.0.0...@sb1/ffe-header@21.0.1) (2024-06-13)
+
+
+### Bug Fixes
+
+* **ffe-header:** fix fill ([c73f2c5](https://github.com/SpareBank1/designsystem/commit/c73f2c5a6d2a714f778df41335e0870454360c55))
+
+
+
+
+
 # [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@20.0.32...@sb1/ffe-header@21.0.0) (2024-06-12)
 
 
