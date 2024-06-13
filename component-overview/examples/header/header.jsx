@@ -9,6 +9,9 @@ import classNames from 'classnames';
     const expandMoreIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzczLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDgtMTEuODQ2LTcuOTIzTDI3NC45MjQtNTYzLjUzOXEtOC4zMDgtOC4zMDctOC41LTIwLjg4NC0uMTkzLTEyLjU3NyA4LjUtMjEuMjY5IDguNjkyLTguNjkyIDIxLjA3Ni04LjY5MnQyMS4wNzYgOC42OTJMNDgwLTQ0Mi43NjhsMTYyLjkyNC0xNjIuOTI0cTguMzA3LTguMzA3IDIwLjg4NC04LjUgMTIuNTc2LS4xOTIgMjEuMjY4IDguNSA4LjY5MyA4LjY5MiA4LjY5MyAyMS4wNzcgMCAxMi4zODQtOC42OTMgMjEuMDc2TDUwNS4zMDctMzgzLjc3cS01LjYxNSA1LjYxNS0xMS44NDYgNy45MjMtNi4yMyAyLjMwOC0xMy40NjEgMi4zMDhaIi8+PC9zdmc+';
 
+    const personIcon =
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDgiPjxwYXRoIGQ9Ik00ODAtNDkyLjkyNHEtNTcuNzQ5IDAtOTUuMjItMzcuNDcxdC0zNy40NzEtOTUuNDEycTAtNTcuOTQyIDM3LjQ3MS05NS4yMjEgMzcuNDcxLTM3LjI3OCA5NS4yMi0zNy4yNzh0OTUuMjIgMzcuMjc4cTM3LjQ3MSAzNy4yNzkgMzcuNDcxIDk1LjIyMSAwIDU3Ljk0MS0zNy40NzEgOTUuNDEyLTM3LjQ3MSAzNy40NzEtOTUuMjIgMzcuNDcxWk0xODAuMDAxLTIzMy44NDd2LTI5Ljc2OXEwLTMyLjIzIDE3LjA3Ny01Ni4xNTMgMTcuMDc3LTIzLjkyMyA0NC4zODUtMzYuNzY5IDYzLjE1My0yOC4wNzcgMTIxLjc1Ni00Mi4zMDggNTguNjA0LTE0LjIzIDExNi43NjktMTQuMjMgNTguMTY2IDAgMTE2LjQ3MyAxNC41MzhRNjU0Ljc2OS0zODQgNzE3LjY3Mi0zNTYuMjY2cTI4LjM3NCAxMi44MTIgNDUuMzUgMzYuNjE2IDE2Ljk3NyAyMy44MDQgMTYuOTc3IDU2LjAzNHYyOS43NjlxMCAxOC45OC0xMy41ODcgMzIuNTY2LTEzLjU4NiAxMy41ODctMzIuNTY2IDEzLjU4N0gyMjYuMTU0cS0xOC45OCAwLTMyLjU2Ni0xMy41ODctMTMuNTg3LTEzLjU4Ni0xMy41ODctMzIuNTY2Wm00NS4zODQuNzY5aDUwOS4yM3YtMzAuNTM4cTAtMTUuNjE1LTkuODg1LTI5LjkyMy05Ljg4NC0xNC4zMDgtMjUuODA4LTIyLjQ2Mi01OC45OTktMjguNjkyLTExMS4zMDItNDAuMTkyLTUyLjMwMi0xMS41LTEwNy42Mi0xMS41LTU1LjMxOCAwLTEwOC40MjggMTEuNXQtMTExLjExIDQwLjE5MnEtMTUuOTIzIDguMTU0LTI1LjUgMjIuNDYydC05LjU3NyAyOS45MjN2MzAuNTM4Wk00ODAtNTM4LjMwN3EzNy40NjEgMCA2Mi4zODQtMjQuOTI0IDI0LjkyMy0yNC45MjMgMjQuOTIzLTYyLjM4NHQtMjQuOTIzLTYyLjM4NFE1MTcuNDYxLTcxMi45MjIgNDgwLTcxMi45MjJ0LTYyLjM4NCAyNC45MjNxLTI0LjkyMyAyNC45MjMtMjQuOTIzIDYyLjM4NHQyNC45MjMgNjIuMzg0cTI0LjkyMyAyNC45MjQgNjIuMzg0IDI0LjkyNFptMC04Ny4zMDhabTAgMzkyLjUzN1oiLz48L3N2Zz4=';
+
     return (
         <div>
             <header className="ffe-header">
@@ -90,16 +93,15 @@ import classNames from 'classnames';
                                 </span>
                             </span>
                             <div className="ffe-header__svg-icon ffe-header__user-icon">
-                                <span
-                                    className="ffe-symbol ffe-symbol--400 ffe-symbol--xl ffe-header__svg-icon ffe-header__user-icon"
-                                    role="graphics-symbol img"
+                                <Icon
+                                    fileUrl={personIcon}
                                     aria-label="bruker"
-                                >
-                                    person
-                                </span>
-                                <span className="ffe-header__notification-bubble">
+                                    size="xl"
+                                />
+
+                                <div className="ffe-header__notification-bubble">
                                     5
-                                </span>
+                                </div>
                             </div>
                         </button>
                     </div>
