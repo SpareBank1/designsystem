@@ -1,24 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useRef, useImperativeHandle } from 'react';
 import { v4 as uuid } from 'uuid';
 import classNames from 'classnames';
 import i18n from './i18n/i18n';
 import { ErrorFieldMessage } from './message';
 
 export interface PhoneNumberProps {
-    number?: string;
-    countryCode?: string;
-    onCountryCodeChange?: React.ChangeEventHandler<HTMLInputElement>;
-    onNumberChange?: React.ChangeEventHandler<HTMLInputElement>;
-    onCountryCodeBlur?: React.FocusEventHandler<HTMLInputElement>;
-    onNumberBlur?: React.FocusEventHandler<HTMLInputElement>;
+    numberInputProps?: React.ComponentPropsWithoutRef<'input'>;
+    countryCodeInputProps?: React.ComponentPropsWithoutRef<'input'>;
     locale?: 'nn' | 'nb' | 'en';
-    disabled?: boolean;
     /** String or ErrorFieldMessage component with message */
     countryCodeFieldMessage?: string | React.ReactElement<{ id: string }>;
     /** String or ErrorFieldMessage component with message */
     numberFieldMessage?: string | React.ReactElement<{ id: string }>;
     /** String or ErrorFieldMessage component with message,
-     * this should should be set when both countryCode and number is in an invalid state.
+     * this should be set when both countryCode and number is in an invalid state.
      * If both countryCodeFieldMessage and numberFieldMessage is set and not this prop,
      * the component will throw an Error.
      */
@@ -31,10 +26,6 @@ export interface PhoneNumberProps {
      *  space for one line of content, so keep messages short.
      */
     extraMargin?: boolean;
-    /** Ref-setting function, or ref created by useRef, passed to the country code input element */
-    countryCodeRef?: React.Ref<HTMLInputElement>;
-    /** Ref-setting function, or ref created by useRef, passed to the number input element */
-    numberRef?: React.Ref<HTMLInputElement>;
     /** If True label is changed from "Phone number" to "Mobile number" */
     isMobileNumber?: boolean;
 }
@@ -59,129 +50,148 @@ const getFieldMessage = (
     return fieldMessage;
 };
 
-export const PhoneNumber: React.FC<PhoneNumberProps> = ({
-    number,
-    countryCode = '47',
-    onCountryCodeChange = () => {},
-    onNumberChange = () => {},
-    onCountryCodeBlur = () => {},
-    onNumberBlur = () => {},
-    disabled,
-    countryCodeFieldMessage,
-    numberFieldMessage,
-    countryCodeAndNumberFieldMessage,
-    className,
-    extraMargin = true,
-    countryCodeRef,
-    numberRef,
-    isMobileNumber = false,
-    locale = 'nb',
-}) => {
-    const fieldMessage = getFieldMessage(
-        countryCodeAndNumberFieldMessage,
-        countryCodeFieldMessage,
-        numberFieldMessage,
-    );
+export type PhoneNumberHandle = {
+    readonly country: HTMLInputElement | null;
+    readonly number: HTMLInputElement | null;
+};
 
-    const numberId = useRef(uuid()).current;
-    const countryCodeId = useRef(uuid()).current;
-    const fieldMessageId = useRef(
-        React.isValidElement(fieldMessage) ? fieldMessage?.props?.id : uuid(),
-    ).current;
+export const PhoneNumber = React.forwardRef<
+    PhoneNumberHandle,
+    PhoneNumberProps
+>(
+    (
+        {
+            numberInputProps,
+            countryCodeInputProps,
+            countryCodeFieldMessage,
+            numberFieldMessage,
+            countryCodeAndNumberFieldMessage,
+            className,
+            extraMargin,
+            isMobileNumber,
+            locale = 'nb',
+        },
+        ref,
+    ) => {
+        const countryRef = useRef<HTMLInputElement>(null);
+        const numberRef = useRef<HTMLInputElement>(null);
 
-    const supportedLocales = ['nb', 'nn', 'en'];
-    const text = i18n[supportedLocales.indexOf(locale) !== -1 ? locale : 'nb'];
+        useImperativeHandle(ref, () => ({
+            get country() {
+                return countryRef.current;
+            },
+            get number() {
+                return numberRef.current;
+            },
+        }));
 
-    return (
-        <div
-            className={classNames(
-                'ffe-phone-number',
-                'ffe-input-group',
-                { 'ffe-input-group--message': fieldMessage },
-                { 'ffe-input-group--no-extra-margin': !extraMargin },
-                className,
-            )}
-        >
-            <div className="ffe-phone-number__input-group">
-                <div className="ffe-phone-number__country-code">
-                    <label className="ffe-form-label" htmlFor={countryCodeId}>
-                        {text.COUNTRY_CODE}
-                    </label>
-                    <div className="ffe-phone-number__input-group">
-                        <span className="ffe-phone-number__plus">+</span>
+        const fieldMessage = getFieldMessage(
+            countryCodeAndNumberFieldMessage,
+            countryCodeFieldMessage,
+            numberFieldMessage,
+        );
+
+        const numberId = useRef(uuid()).current;
+        const countryCodeId = useRef(uuid()).current;
+        const fieldMessageId = useRef(
+            React.isValidElement(fieldMessage)
+                ? fieldMessage?.props?.id
+                : uuid(),
+        ).current;
+
+        const supportedLocales = ['nb', 'nn', 'en'];
+        const text =
+            i18n[supportedLocales.indexOf(locale) !== -1 ? locale : 'nb'];
+
+        return (
+            <div
+                className={classNames(
+                    'ffe-phone-number',
+                    'ffe-input-group',
+                    { 'ffe-input-group--message': fieldMessage },
+                    { 'ffe-input-group--no-extra-margin': !extraMargin },
+                    className,
+                )}
+            >
+                <div className="ffe-phone-number__input-group">
+                    <div className="ffe-phone-number__country-code">
+                        <label
+                            className="ffe-form-label"
+                            htmlFor={countryCodeId}
+                        >
+                            {text.COUNTRY_CODE}
+                        </label>
+                        <div className="ffe-phone-number__input-group">
+                            <span className="ffe-phone-number__plus">+</span>
+                            <input
+                                ref={countryRef}
+                                id={countryCodeId}
+                                value={countryCodeInputProps?.value ?? '47'}
+                                className={classNames(
+                                    'ffe-input-field',
+                                    'ffe-phone-number__country-code-input',
+                                )}
+                                type="tel"
+                                aria-invalid={
+                                    !!(
+                                        countryCodeFieldMessage ||
+                                        countryCodeAndNumberFieldMessage
+                                    )
+                                }
+                                aria-describedby={
+                                    !!(
+                                        countryCodeFieldMessage ||
+                                        countryCodeAndNumberFieldMessage
+                                    )
+                                        ? fieldMessageId
+                                        : undefined
+                                }
+                                {...countryCodeInputProps}
+                            />
+                        </div>
+                    </div>
+                    <div className="ffe-phone-number__number">
+                        <label className="ffe-form-label" htmlFor={numberId}>
+                            {isMobileNumber
+                                ? text.MOBILE_NUMBER
+                                : text.PHONE_NUMBER}
+                        </label>
                         <input
-                            id={countryCodeId}
+                            ref={numberRef}
+                            id={numberId}
+                            type="tel"
                             className={classNames(
                                 'ffe-input-field',
-                                'ffe-phone-number__country-code-input',
+                                'ffe-phone-number__phone-input',
                             )}
-                            type="tel"
-                            disabled={disabled}
-                            value={countryCode}
                             aria-invalid={
                                 !!(
-                                    countryCodeFieldMessage ||
+                                    numberFieldMessage ||
                                     countryCodeAndNumberFieldMessage
                                 )
                             }
                             aria-describedby={
                                 !!(
-                                    countryCodeFieldMessage ||
+                                    numberFieldMessage ||
                                     countryCodeAndNumberFieldMessage
                                 )
                                     ? fieldMessageId
                                     : undefined
                             }
-                            onChange={onCountryCodeChange}
-                            onBlur={onCountryCodeBlur}
-                            ref={countryCodeRef}
+                            {...numberInputProps}
                         />
                     </div>
                 </div>
-                <div className="ffe-phone-number__number">
-                    <label className="ffe-form-label" htmlFor={numberId}>
-                        {isMobileNumber
-                            ? text.MOBILE_NUMBER
-                            : text.PHONE_NUMBER}
-                    </label>
-                    <input
-                        id={numberId}
-                        type="tel"
-                        className={classNames(
-                            'ffe-input-field',
-                            'ffe-phone-number__phone-input',
-                        )}
-                        onChange={onNumberChange}
-                        onBlur={onNumberBlur}
-                        value={number}
-                        aria-invalid={
-                            !!(
-                                numberFieldMessage ||
-                                countryCodeAndNumberFieldMessage
-                            )
-                        }
-                        aria-describedby={
-                            !!(
-                                numberFieldMessage ||
-                                countryCodeAndNumberFieldMessage
-                            )
-                                ? fieldMessageId
-                                : undefined
-                        }
-                        disabled={disabled}
-                        ref={numberRef}
-                    />
-                </div>
+                {typeof fieldMessage === 'string' && (
+                    <ErrorFieldMessage as="p" id={fieldMessageId}>
+                        {fieldMessage}
+                    </ErrorFieldMessage>
+                )}
+                {React.isValidElement(fieldMessage) &&
+                    React.cloneElement(fieldMessage, {
+                        id: fieldMessageId,
+                    })}
             </div>
-            {typeof fieldMessage === 'string' && (
-                <ErrorFieldMessage as="p" id={fieldMessageId}>
-                    {fieldMessage}
-                </ErrorFieldMessage>
-            )}
-            {React.isValidElement(fieldMessage) &&
-                React.cloneElement(fieldMessage, {
-                    id: fieldMessageId,
-                })}
-        </div>
-    );
-};
+        );
+    },
+);
