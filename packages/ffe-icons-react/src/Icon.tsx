@@ -17,6 +17,7 @@ export const Icon: React.FC<IconProps> = ({
     className,
     ariaLabel,
     size = 'md',
+    style,
     ...rest
 }) => {
     return (
@@ -28,6 +29,7 @@ export const Icon: React.FC<IconProps> = ({
             style={{
                 maskImage: `url(${fileUrl})`,
                 WebkitMaskImage: `url(${fileUrl})`,
+                ...style,
             }}
             {...rest}
         />
