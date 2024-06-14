@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@10.0.3...@sb1/ffe-icons-react@10.0.4) (2024-06-14)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** style was not applied ([f7f1168](https://github.com/SpareBank1/designsystem/commit/f7f116849f7d338a85b1604743e5fa0623a8c8ca))
+
+
+
+
+
 ## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@10.0.2...@sb1/ffe-icons-react@10.0.3) (2024-06-05)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
