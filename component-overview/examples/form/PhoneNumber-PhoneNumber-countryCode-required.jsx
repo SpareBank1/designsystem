@@ -1,3 +1,6 @@
 import { PhoneNumber } from '@sb1/ffe-form-react';
 
-<PhoneNumber number="" countryCode="47" numberFieldMessage="Dette feltet er påkrevd" />
+<PhoneNumber
+    numberInputProps={{ value: '123123123', required: true }}
+    countryCodeInputProps={{ required: true }}
+/>;
