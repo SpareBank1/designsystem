@@ -7,16 +7,16 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    padding: @ffe-spacing-md;
+    padding: var(--ffe-spacing-md);
 
     & > &__icon {
         color: var(--ffe-v-cards-icon-color);
-        margin: 0 @ffe-spacing-lg 0 @ffe-spacing-xs;
+        margin: 0 var(--ffe-spacing-lg) 0 var(--ffe-spacing-xs);
     }
 
     @media (min-width: @breakpoint-md) {
         .ffe-icon-card__icon {
-            margin: 0 @ffe-spacing-md 0;
+            margin: 0 var(--ffe-spacing-md) 0;
         }
     }
 }
