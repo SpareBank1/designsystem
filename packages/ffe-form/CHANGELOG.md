@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [29.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.20...@sb1/ffe-form@29.0.21) (2024-06-17)
+
+
+### Bug Fixes
+
+* **ffe-form:** set padding x and top to zero in input group ([2c0e32f](https://github.com/SpareBank1/designsystem/commit/2c0e32f49c09d5753d7308ddfd4fa9bfc65f8099))
+
+
+
+
+
 ## [29.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.19...@sb1/ffe-form@29.0.20) (2024-06-11)
 
 **Note:** Version bump only for package @sb1/ffe-form
