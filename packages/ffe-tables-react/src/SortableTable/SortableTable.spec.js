@@ -1,5 +1,4 @@
 import React from 'react';
-import { assert, match, spy } from 'sinon';
 import SortableTable from './SortableTable';
 
 describe('<SortableTable>', () => {
@@ -58,23 +57,45 @@ describe('<SortableTable>', () => {
     });
 
     it('should call onSort after sorting table', () => {
-        const onSort = spy();
+        const onSort = jest.fn();
         const table = shallow(
             <SortableTable columns={columns} data={data} onSort={onSort} />,
         );
         table.instance().tableHeaderClicked('name');
-        assert.calledWith(
-            onSort,
-            match(val => {
-                return (
-                    'sortBy' in val && 'descending' in val && 'tableData' in val
-                );
-            }),
-        );
+        expect.objectContaining({
+            sortBy: 'name',
+            descending: false,
+            tableData: [
+                {
+                    age: 16,
+                    button: <button>poke</button>,
+                    id: 4,
+                    name: 'Daenerys Targaryen',
+                },
+                {
+                    age: 20,
+                    button: <button>poke</button>,
+                    id: 1,
+                    name: 'Jon Snow',
+                },
+                {
+                    age: 48,
+                    button: <button>poke</button>,
+                    id: 3,
+                    name: 'Ned Stark',
+                },
+                {
+                    age: 36,
+                    button: <button>poke</button>,
+                    id: 2,
+                    name: 'Zombie Mountain',
+                },
+            ],
+        });
     });
 
     it('should call onSort after initial sort', () => {
-        const onSort = spy();
+        const onSort = jest.fn();
         shallow(
             <SortableTable
                 columns={columns}
@@ -83,12 +104,36 @@ describe('<SortableTable>', () => {
                 sortBy={'name'}
             />,
         );
-        assert.calledWith(
-            onSort,
-            match(val => {
-                return (
-                    'sortBy' in val && 'descending' in val && 'tableData' in val
-                );
+        expect(onSort).toHaveBeenCalledWith(
+            expect.objectContaining({
+                sortBy: 'name',
+                descending: false,
+                tableData: [
+                    {
+                        age: 16,
+                        button: <button>poke</button>,
+                        id: 4,
+                        name: 'Daenerys Targaryen',
+                    },
+                    {
+                        age: 20,
+                        button: <button>poke</button>,
+                        id: 1,
+                        name: 'Jon Snow',
+                    },
+                    {
+                        age: 48,
+                        button: <button>poke</button>,
+                        id: 3,
+                        name: 'Ned Stark',
+                    },
+                    {
+                        age: 36,
+                        button: <button>poke</button>,
+                        id: 2,
+                        name: 'Zombie Mountain',
+                    },
+                ],
             }),
         );
     });

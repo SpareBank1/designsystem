@@ -1,6 +1,5 @@
 import React from 'react';
 import { Tooltip, TooltipProps } from './Tooltip';
-import { spy } from 'sinon';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -12,7 +11,7 @@ describe('<Tooltip>', () => {
     it('renders a "?" button', async () => {
         const user = userEvent.setup();
 
-        const onClick = spy();
+        const onClick = jest.fn();
         renderTooltip({ 'aria-label': 'button-label', onClick });
         const button = screen.getByRole('button', { name: 'button-label' });
 
@@ -20,7 +19,7 @@ describe('<Tooltip>', () => {
         expect(button.classList.contains('ffe-tooltip__icon')).toBeTruthy();
 
         await user.click(button);
-        expect(onClick.calledOnce).toBe(true);
+        expect(onClick).toHaveBeenCalledTimes(1);
     });
 
     it('renders Collapse', () => {
