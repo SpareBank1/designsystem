@@ -35,11 +35,9 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.6.3",
-        "@types/sinon": "^17.0.3",
         "eslint": "^8.57.0",
         "react": "^16.9.0",
-        "react-dom": "^16.9.0",
-        "sinon": "^7.2.3"
+        "react-dom": "^16.9.0"
     },
     "peerDependencies": {
         "react": ">=16.9.0"

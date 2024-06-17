@@ -1,5 +1,4 @@
 import React from 'react';
-import { spy } from 'sinon';
 import { FileUpload, FileUploadProps } from './FileUpload';
 import { render, screen, fireEvent } from '@testing-library/react';
 
@@ -36,15 +35,15 @@ describe('<FileUpload/>', () => {
     });
 
     it('should extract and return files when user finishes selecting files', () => {
-        const onFilesSelected = spy();
+        const onFilesSelected = jest.fn();
         const { container } = renderFileUpload({ onFilesSelected });
         const input = container.querySelector('input#file-upload') as Element;
         fireEvent.change(input);
-        expect(onFilesSelected.calledOnce).toBe(true);
+        expect(onFilesSelected).toHaveBeenCalledTimes(1);
     });
 
     it('should remove file from files when delete button is clicked', () => {
-        const onFileDeleted = spy();
+        const onFileDeleted = jest.fn();
         // Do click on span inside button with event listener instead of actual button to catch nested clicks.
         const { container } = renderFileUpload({
             onFileDeleted,
@@ -60,6 +59,6 @@ describe('<FileUpload/>', () => {
         ) as Element;
         fireEvent.click(deleteButton);
 
-        expect(onFileDeleted.calledWith({ name: 'fileToDelete' })).toBe(true);
+        expect(onFileDeleted).toHaveBeenCalledWith({ name: 'fileToDelete' });
     });
 });
