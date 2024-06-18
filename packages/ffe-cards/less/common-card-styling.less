@@ -3,7 +3,7 @@
 
     background: var(--ffe-v-cards-common-card-background-color);
     box-shadow: 0 1px 4px 0 var(--ffe-v-cards-common-card-box-shadow-color);
-    margin: 0 0 @ffe-spacing-xs;
+    margin: 0 0 var(--ffe-spacing-2xs);
     border: 2px solid transparent;
     border-radius: var(--ffe-v-cards-common-card-border-radius);
     transition: border-color 0.2s;
@@ -17,33 +17,67 @@
         }
     }
 
-    &:is(a, button, .ffe-card-base--clickable) {
+    button.ffe-card__action--raw {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
         cursor: pointer;
-        &:visited {
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: var(--ffe-farge-hvit);
-                }
-            }
-        }
+        outline: inherit;
+    }
 
-        &:focus {
-            box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
-        }
+    a.ffe-card__action--raw {
+        color: inherit;
+        text-decoration: inherit;
+        outline: inherit;
+    }
 
-        &:focus,
-        &:active {
-            border-color: var(--ffe-g-primary-color);
-        }
+    &:has(.ffe-card__action) {
+        cursor: pointer;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 border-color: var(--ffe-g-primary-color);
+                &
+                    :where(
+                        .ffe-card-body__card-name,
+                        .ffe-card-body__title,
+                        .ffe-card-body__subtext,
+                        .ffe-card-body__text
+                    ):has(.ffe-card__action) {
+                    text-decoration: underline;
+                }
             }
         }
     }
 
+    .ffe-card__action--raw:visited {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: var(--ffe-farge-hvit);
+            }
+        }
+    }
+
+    &:has(.ffe-card__action:focus) {
+        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+    }
+
+    &:has(.ffe-card__action:active, .ffe-card__action:focus) {
+        border-color: var(--ffe-g-primary-color);
+        &
+            :where(
+                .ffe-card-body__card-name,
+                .ffe-card-body__title,
+                .ffe-card-body__subtext,
+                .ffe-card-body__text
+            ):has(.ffe-card__action) {
+            text-decoration: underline;
+        }
+    }
+
     @media (min-width: @breakpoint-md) {
-        margin-bottom: @ffe-spacing-md;
+        margin-bottom: var(--ffe-spacing-md);
     }
 }

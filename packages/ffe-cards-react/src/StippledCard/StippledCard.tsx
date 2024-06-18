@@ -1,13 +1,10 @@
-import React, { ElementType, ForwardedRef, ReactNode } from 'react';
-import { fixedForwardRef } from '../fixedForwardRef';
-import { ComponentAsPropParams, CardRenderProps } from '../types';
+import React, { ReactNode } from 'react';
+import { CardRenderProps } from '../types';
 import classNames from 'classnames';
-import { Text, Subtext, Title, CardName } from '../components';
+import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
 
-export type StippledCardProps<As extends ElementType = 'a'> = Omit<
-    ComponentAsPropParams<As>,
-    'children'
-> & {
+export interface StippledCardProps
+    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
     /** Smaller icon and less space */
     condensed?: boolean;
     /** Image to be rendered*/
@@ -18,46 +15,48 @@ export type StippledCardProps<As extends ElementType = 'a'> = Omit<
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
-};
+}
 
-function StippledCardWithForwardRef<As extends ElementType>(
-    props: StippledCardProps<As>,
-    ref: ForwardedRef<any>,
-) {
-    const {
-        as: Comp = 'a',
-        className,
-        condensed,
-        img,
-        children,
-        ...rest
-    } = props;
-
+export const StippledCard: React.FC<StippledCardProps> = ({
+    className,
+    condensed,
+    img,
+    children,
+    ...rest
+}) => {
     return (
-        <Comp
+        <WithCardAction
             className={classNames(
                 'ffe-stippled-card',
                 { 'ffe-stippled-card--condensed': condensed },
                 className,
             )}
             {...rest}
-            ref={ref}
         >
-            <div
-                className={classNames('ffe-stippled-card__img', {
-                    'ffe-stippled-card__img--icon': img?.type === 'icon',
-                })}
-                aria-hidden={img?.type === 'icon'}
-            >
-                {img?.element}
-            </div>
-            <div>
-                {typeof children === 'function'
-                    ? children({ CardName, Title, Text, Subtext })
-                    : children}
-            </div>
-        </Comp>
+            {({ CardAction }) => (
+                <>
+                    <div
+                        className={classNames('ffe-stippled-card__img', {
+                            'ffe-stippled-card__img--icon':
+                                img?.type === 'icon',
+                        })}
+                        aria-hidden={img?.type === 'icon'}
+                    >
+                        {img?.element}
+                    </div>
+                    <div>
+                        {typeof children === 'function'
+                            ? children({
+                                  CardName,
+                                  Title,
+                                  Text,
+                                  Subtext,
+                                  CardAction,
+                              })
+                            : children}
+                    </div>
+                </>
+            )}
+        </WithCardAction>
     );
-}
-
-export const StippledCard = fixedForwardRef(StippledCardWithForwardRef);
+};

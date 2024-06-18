@@ -10,20 +10,21 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    padding: @ffe-spacing-md;
-    gap: @ffe-spacing-sm;
+    padding: var(--ffe-spacing-md);
+    gap: var(--ffe-spacing-sm);
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            border-style: solid;
-            box-shadow: none;
-        }
-    }
-
-    &:focus,
-    &:active {
+    &:has(.ffe-card__action:active, .ffe-card__action:focus) {
         border-style: solid;
         box-shadow: none;
+    }
+
+    &:has(.ffe-card__action) {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-style: solid;
+                box-shadow: none;
+            }
+        }
     }
 
     .native & {
@@ -34,15 +35,15 @@
 }
 
 .ffe-stippled-card__img--icon {
-    margin: 0 @ffe-spacing-md 0 @ffe-spacing-xs;
+    margin: 0 var(--ffe-spacing-md) 0 var(--ffe-spacing-xs);
 }
 
 .ffe-stippled-card--condensed {
-    padding: @ffe-spacing-sm;
+    padding: var(--ffe-spacing-sm);
 }
 
 .ffe-stippled-card--condensed .ffe-stippled-card__img--icon {
-    margin: 0 @ffe-spacing-2xs 0 0;
+    margin: 0 var(--ffe-spacing-2xs) 0 0;
 }
 
 .ffe-stippled-card .ffe-icons {

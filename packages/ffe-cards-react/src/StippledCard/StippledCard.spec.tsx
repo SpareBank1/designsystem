@@ -4,12 +4,13 @@ import { Icon } from '@sb1/ffe-icons-react';
 import { render, screen, within } from '@testing-library/react';
 
 const children = <div>Hello world</div>;
+const TEST_ID = 'test-id';
 
 describe('StippledCard', () => {
     it('should render correct class and contain a div with body class', () => {
         render(
             <StippledCard
-                href="#"
+                data-testid={TEST_ID}
                 img={{
                     element: <Icon fileUrl="monitoring" size="md" />,
                     type: 'icon',
@@ -18,15 +19,15 @@ describe('StippledCard', () => {
                 {children}
             </StippledCard>,
         );
-        const link = screen.getByRole('link');
-        expect(link.classList.contains('ffe-stippled-card')).toBeTruthy();
-        expect(within(link).getByText('Hello world')).toBeInTheDocument();
+        const card = screen.getByTestId(TEST_ID);
+        expect(card.classList.contains('ffe-stippled-card')).toBeTruthy();
+        expect(within(card).getByText('Hello world')).toBeInTheDocument();
     });
 
     it('should add modifying classes when modifiers are given', () => {
         render(
             <StippledCard
-                href="#"
+                data-testid={TEST_ID}
                 condensed={true}
                 img={{
                     element: <Icon fileUrl="monitoring" size="md" />,
@@ -36,17 +37,17 @@ describe('StippledCard', () => {
                 {children}
             </StippledCard>,
         );
-        const link = screen.getByRole('link');
-        expect(link.classList.contains('ffe-stippled-card')).toBeTruthy();
+        const card = screen.getByTestId(TEST_ID);
+        expect(card.classList.contains('ffe-stippled-card')).toBeTruthy();
         expect(
-            link.classList.contains('ffe-stippled-card--condensed'),
+            card.classList.contains('ffe-stippled-card--condensed'),
         ).toBeTruthy();
     });
 
     it('should render children as a function', () => {
         render(
             <StippledCard
-                href="#"
+                data-testid={TEST_ID}
                 img={{
                     element: <Icon fileUrl="monitoring" size="md" />,
                     type: 'icon',
@@ -56,8 +57,8 @@ describe('StippledCard', () => {
                 )}
             />,
         );
-        const link = screen.getByRole('link');
-        const p = link.querySelector('p');
+        const card = screen.getByTestId(TEST_ID);
+        const p = card.querySelector('p');
         expect(p?.classList.contains('ffe-card-body__text')).toBeTruthy();
         expect(p?.textContent).toEqual('Hello world');
     });
@@ -65,7 +66,7 @@ describe('StippledCard', () => {
     it('should render my custom class', () => {
         render(
             <StippledCard
-                href="#"
+                data-testid={TEST_ID}
                 img={{
                     element: <Icon fileUrl="monitoring" size="md" />,
                     type: 'icon',
@@ -75,26 +76,8 @@ describe('StippledCard', () => {
                 {children}
             </StippledCard>,
         );
-        const link = screen.getByRole('link');
-        expect(link.classList.contains('ffe-stippled-card')).toBeTruthy();
-        expect(link.classList.contains('my-custom-class')).toBeTruthy();
-    });
-
-    it('should set ref', () => {
-        const ref = React.createRef<HTMLAnchorElement>();
-        render(
-            <StippledCard
-                href="#"
-                img={{
-                    element: <Icon fileUrl="monitoring" size="md" />,
-                    type: 'icon',
-                }}
-                ref={ref}
-            >
-                {children}
-            </StippledCard>,
-        );
-        const link = screen.getByRole('link');
-        expect(link).toBe(ref.current);
+        const card = screen.getByTestId(TEST_ID);
+        expect(card.classList.contains('ffe-stippled-card')).toBeTruthy();
+        expect(card.classList.contains('my-custom-class')).toBeTruthy();
     });
 });

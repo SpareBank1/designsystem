@@ -4,26 +4,30 @@
 .ffe-image-card {
     .common-card-styling();
 
+    --border-color: transparent;
+
     display: flex;
     padding: 0;
     max-width: 290px;
     border: 0;
     flex-flow: column nowrap;
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            .ffe-image-card__image-overlay,
-            .ffe-image-card__body {
-                border-color: var(--ffe-v-cards-image-card-border-hover-color);
-            }
-        }
+    .ffe-image-card__image-overlay,
+    .ffe-image-card__body {
+        border-color: var(--border-color);
     }
 
-    &:focus,
-    &:active {
-        .ffe-image-card__image-overlay,
-        .ffe-image-card__body {
-            border-color: var(--ffe-v-cards-image-card-border-hover-color);
+    &:has(.ffe-card__action:active, .ffe-card__action:focus) {
+        --border-color: var(--ffe-v-cards-image-card-border-hover-color);
+    }
+
+    &:has(.ffe-card__action) {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                --border-color: var(
+                    --ffe-v-cards-image-card-border-hover-color
+                );
+            }
         }
     }
 
@@ -44,7 +48,7 @@
         width: 100%;
         overflow: hidden;
         border: 2px solid transparent;
-        transition: border-color @ffe-transition-duration;
+        transition: border-color var(--ffe-transition-duration);
     }
 
     &__image-overlay {
@@ -58,7 +62,8 @@
 
     &__body {
         text-align: center;
-        padding: @ffe-spacing-sm @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-sm;
+        padding: var(--ffe-spacing-sm) var(--ffe-spacing-sm)
+            var(--ffe-spacing-xs) var(--ffe-spacing-sm);
         border-top: 0;
         border-bottom-left-radius: var(--ffe-v-cards-common-card-border-radius);
         border-bottom-right-radius: var(
@@ -69,13 +74,13 @@
 
     @media (min-width: @breakpoint-md) {
         .ffe-image-card__icon {
-            margin: 0 @ffe-spacing-md 0;
+            margin: 0 var(--ffe-spacing-md) 0;
         }
     }
 
     @media (min-width: @breakpoint-lg) {
         .ffe-image-card__icon {
-            margin: 0 @ffe-spacing-lg 0 @ffe-spacing-xs;
+            margin: 0 var(--ffe-spacing-lg) 0 var(--ffe-spacing-xs);
         }
     }
 }
