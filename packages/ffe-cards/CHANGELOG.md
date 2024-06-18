@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@18.2.5...@sb1/ffe-cards@19.0.0) (2024-06-18)
+
+
+### Features
+
+* **ffe-cards:** cards not clickable ([f5e21ee](https://github.com/SpareBank1/designsystem/commit/f5e21ee08cd08bdce3c748b84180121d15dd478f))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** --clickable modifier removed.
+Styling for cards as button/a removed.
+
+
+
+
+
 ## [18.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@18.2.4...@sb1/ffe-cards@18.2.5) (2024-06-11)
 
 **Note:** Version bump only for package @sb1/ffe-cards

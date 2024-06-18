@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@15.2.6...@sb1/ffe-cards-react@16.0.0) (2024-06-18)
+
+
+### Features
+
+* **ffe-cards-react:** card not more as buttons/a ([90caf62](https://github.com/SpareBank1/designsystem/commit/90caf6224981fa3ee3804c5a6db1f9a6a475b92e))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards-react:** Cards can no longer be links.
+or button. This is because of accessibility reasons.
+To make a Card clickable, use the CardAction.
+
+
+
+
+
 ## [15.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@15.2.5...@sb1/ffe-cards-react@15.2.6) (2024-06-14)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
