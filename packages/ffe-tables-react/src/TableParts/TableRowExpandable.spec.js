@@ -67,7 +67,7 @@ describe('<TableRowExpandable>', () => {
         const scrollIntoViewMock = jest.fn();
         window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
 
-        mount(
+        render(
             <TableRowExpandable {...props} scrollToOnMount={true}>
                 <p>The cake is a lie</p>
             </TableRowExpandable>,
