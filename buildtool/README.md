@@ -70,9 +70,6 @@ configuration from [config/jest.config.js](./config/jest.config.js) and
 adds support for [enzyme](https://enzymejs.github.io/enzyme/) and
 [jest-dom-matchers](https://github.com/testing-library/jest-dom).
 
-Enzymes rendering functions `shallow`, `mount` and `render` are available as
-globals in the test cases. See [jest.setup.js](./config/jest.setup.js) for details.
-
 Any parameter passed to this command will be forwarded to jest, e.g.
 `ffe-buildtool jtest --coverage` will invoke `jest --coverage` behind the
 scenes.
