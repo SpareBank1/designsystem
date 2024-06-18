@@ -29,7 +29,10 @@ describe('<PhoneNumber/>', () => {
     });
 
     it('should render using disabled prop', function () {
-        renderPhoneNumber({ disabled: true });
+        renderPhoneNumber({
+            numberInputProps: { disabled: true },
+            countryCodeInputProps: { disabled: true },
+        });
         const [input1, input2] = screen.getAllByRole('textbox');
         expect(input1).toBeDisabled();
         expect(input2).toBeDisabled();
@@ -81,7 +84,10 @@ describe('<PhoneNumber/>', () => {
     });
 
     it('should render country code and number sent by prop', function () {
-        renderPhoneNumber({ countryCode: '46', number: '92929292' });
+        renderPhoneNumber({
+            countryCodeInputProps: { value: '46' },
+            numberInputProps: { value: '92929292' },
+        });
 
         const [input1, input2] = screen.getAllByRole('textbox');
         expect(input1.getAttribute('value')).toEqual('46');
@@ -99,8 +105,8 @@ describe('<PhoneNumber/>', () => {
         const onNumberChangeSpy = jest.fn();
         const onCountryCodeChangeSpy = jest.fn();
         renderPhoneNumber({
-            onNumberChange: onNumberChangeSpy,
-            onCountryCodeChange: onCountryCodeChangeSpy,
+            numberInputProps: { onChange: onNumberChangeSpy },
+            countryCodeInputProps: { onChange: onCountryCodeChangeSpy },
         });
 
         const [input1, input2] = screen.getAllByRole('textbox');
@@ -116,8 +122,8 @@ describe('<PhoneNumber/>', () => {
         const onNumberChangeSpy = jest.fn();
         const onCountryCodeChangeSpy = jest.fn();
         renderPhoneNumber({
-            onNumberBlur: onNumberChangeSpy,
-            onCountryCodeBlur: onCountryCodeChangeSpy,
+            numberInputProps: { onBlur: onNumberChangeSpy },
+            countryCodeInputProps: { onBlur: onCountryCodeChangeSpy },
         });
 
         const [input1, input2] = screen.getAllByRole('textbox');

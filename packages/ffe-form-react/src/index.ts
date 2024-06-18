@@ -11,7 +11,11 @@ export { Input, InputProps } from './Input';
 export { InputTextLike, InputTextLikeProps } from './InputTextLike';
 export { InputGroup, InputGroupProps } from './InputGroup';
 export { Label, LabelProps } from './Label';
-export { PhoneNumber, PhoneNumberProps } from './PhoneNumber';
+export {
+    PhoneNumber,
+    PhoneNumberProps,
+    PhoneNumberHandle,
+} from './PhoneNumber';
 export { RadioBlock, RadioBlockProps } from './RadioBlock';
 export { RadioButton, RadioButtonProps } from './RadioButton';
 export {
