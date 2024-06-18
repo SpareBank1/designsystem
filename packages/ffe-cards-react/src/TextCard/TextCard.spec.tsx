@@ -37,4 +37,20 @@ describe('TextCard', () => {
         expect(card.classList.contains('ffe-text-card')).toBeTruthy();
         expect(card.classList.contains('my-custom-class')).toBeTruthy();
     });
+
+    it('should render as wished element', () => {
+        render(<TextCard as="li">{children}</TextCard>);
+        expect(screen.getByRole('listitem')).toBeInTheDocument();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLLIElement>();
+        render(
+            <TextCard as="li" ref={ref}>
+                {children}
+            </TextCard>,
+        );
+        const listitem = screen.getByRole('listitem');
+        expect(listitem).toBe(ref.current);
+    });
 });

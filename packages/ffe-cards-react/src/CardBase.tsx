@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { ElementType, ForwardedRef } from 'react';
 import classNames from 'classnames';
 import { WithCardActionProps, WithCardAction } from './components';
+import { ComponentAsPropParams } from './types';
+import { fixedForwardRef } from './fixedForwardRef';
 
 type BgColor = 'sand-30' | 'sand-70' | 'frost-30' | 'syrin-30' | 'syrin-70';
 type BgColorDarkmode = 'natt' | 'svart' | 'koksgraa';
 
-export interface CardBaseProps
-    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+export type CardBaseProps<As extends ElementType = 'div'> = Omit<
+    ComponentAsPropParams<As>,
+    'children'
+> & {
     shadow?: boolean;
     noMargin?: boolean;
     textCenter?: boolean;
@@ -14,19 +18,28 @@ export interface CardBaseProps
     bgDarkmodeColor?: BgColorDarkmode;
     noPadding?: boolean;
     children: WithCardActionProps['children'] | React.ReactNode;
-}
+};
 
-export const CardBase: React.FC<CardBaseProps> = ({
-    className,
-    shadow,
-    noMargin,
-    textCenter,
-    bgColor,
-    bgDarkmodeColor,
-    noPadding,
-    children,
-    ...rest
-}) => {
+function CardBaseWithForwardRef<As extends ElementType>(
+    props: CardBaseProps<As>,
+    ref: ForwardedRef<any>,
+) {
+    const {
+        className,
+        shadow,
+        noMargin,
+        textCenter,
+        bgColor,
+        bgDarkmodeColor,
+        noPadding,
+        children,
+        ...rest
+    } = props;
+
+    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
+        ...rest,
+    };
+
     return (
         <WithCardAction
             className={classNames('ffe-card-base', className, {
@@ -37,7 +50,8 @@ export const CardBase: React.FC<CardBaseProps> = ({
                 'ffe-card-base--text-center': textCenter,
                 'ffe-card-base--no-padding': noPadding,
             })}
-            {...rest}
+            {...withCardActionProps}
+            ref={ref}
         >
             {({ CardAction }) =>
                 typeof children === 'function'
@@ -46,4 +60,6 @@ export const CardBase: React.FC<CardBaseProps> = ({
             }
         </WithCardAction>
     );
-};
+}
+
+export const CardBase = fixedForwardRef(CardBaseWithForwardRef);

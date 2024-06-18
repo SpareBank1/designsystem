@@ -1,24 +1,31 @@
-import React from 'react';
-import { CardRenderProps } from '../types';
+import React, { ElementType, ForwardedRef } from 'react';
+import { CardRenderProps, ComponentAsPropParams } from '../types';
 import classNames from 'classnames';
 import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
+import { fixedForwardRef } from '../fixedForwardRef';
 
-export interface TextCardProps
-    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+export type TextCardProps<As extends ElementType = 'div'> = Omit<
+    ComponentAsPropParams<As>,
+    'children'
+> & {
     /** Left-aligned text on the card */
     leftAlign?: boolean;
     /** Function that's passed available sub-components as arguments, or regular children */
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
-}
+};
 
-export const TextCard: React.FC<TextCardProps> = ({
-    className,
-    leftAlign,
-    children,
-    ...rest
-}) => {
+function TextCardWithForwardRef<As extends ElementType>(
+    props: TextCardProps<As>,
+    ref: ForwardedRef<any>,
+) {
+    const { className, leftAlign, children, ...rest } = props;
+
+    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
+        ...rest,
+    };
+
     return (
         <WithCardAction
             className={classNames(
@@ -26,7 +33,8 @@ export const TextCard: React.FC<TextCardProps> = ({
                 { 'ffe-text-card--left-align': leftAlign },
                 className,
             )}
-            {...rest}
+            {...withCardActionProps}
+            ref={ref}
         >
             {({ CardAction }) =>
                 typeof children === 'function'
@@ -35,4 +43,6 @@ export const TextCard: React.FC<TextCardProps> = ({
             }
         </WithCardAction>
     );
-};
+}
+
+export const TextCard = fixedForwardRef(TextCardWithForwardRef);

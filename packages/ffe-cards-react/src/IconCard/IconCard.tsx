@@ -1,10 +1,13 @@
-import React, { ReactElement } from 'react';
-import { CardRenderProps } from '../types';
+import React, { ElementType, ForwardedRef, ReactElement } from 'react';
+import { CardRenderProps, ComponentAsPropParams } from '../types';
 import classNames from 'classnames';
 import { WithCardAction, Text, Subtext, Title, CardName } from '../components';
+import { fixedForwardRef } from '../fixedForwardRef';
 
-export interface IconCardProps
-    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+export type IconCardProps<As extends ElementType = 'div'> = Omit<
+    ComponentAsPropParams<As>,
+    'children'
+> & {
     /** Element of icon */
     icon: ReactElement;
     /** Smaller icon and less space */
@@ -12,15 +15,16 @@ export interface IconCardProps
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
-}
+};
 
-export const IconCard: React.FC<IconCardProps> = ({
-    className,
-    condensed,
-    icon,
-    children,
-    ...rest
-}) => {
+function IconCardWithForwardRef<As extends ElementType>(
+    props: IconCardProps<As>,
+    ref: ForwardedRef<any>,
+) {
+    const { className, condensed, icon, children, ...rest } = props;
+    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
+        ...rest,
+    };
     return (
         <WithCardAction
             className={classNames(
@@ -28,7 +32,8 @@ export const IconCard: React.FC<IconCardProps> = ({
                 { 'ffe-icon-card--condensed': condensed },
                 className,
             )}
-            {...rest}
+            {...withCardActionProps}
+            ref={ref}
         >
             {({ CardAction }) => (
                 <>
@@ -54,4 +59,6 @@ export const IconCard: React.FC<IconCardProps> = ({
             )}
         </WithCardAction>
     );
-};
+}
+
+export const IconCard = fixedForwardRef(IconCardWithForwardRef);

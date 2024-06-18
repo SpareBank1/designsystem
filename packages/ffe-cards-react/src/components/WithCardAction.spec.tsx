@@ -81,4 +81,19 @@ describe('<WithCardAction />', () => {
         const button = screen.getByRole('button');
         expect(button).toBe(ref.current);
     });
+
+    it('should set refs on <CardAction />', () => {
+        const ref = React.createRef<HTMLButtonElement>();
+        render(
+            <WithCardAction>
+                {({ CardAction }) => (
+                    <CardAction as="button" ref={ref}>
+                        en knapp
+                    </CardAction>
+                )}
+            </WithCardAction>,
+        );
+        const button = screen.getByRole('button');
+        expect(button).toBe(ref.current);
+    });
 });
