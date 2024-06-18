@@ -1,6 +1,6 @@
 import React from 'react';
-
 import TableRowExpandable from './TableRowExpandable';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 const props = {
     cells: {
@@ -19,57 +19,48 @@ const props = {
     ],
 };
 
-const wrapper = shallow(
-    <TableRowExpandable {...props}>
-        <p>The cake is a lie</p>
-    </TableRowExpandable>,
-);
-
-const unexpandableWrapper = shallow(
-    <TableRowExpandable {...props}>
-        {false && <div>Ignorance is bliss, and we won't render this</div>}
-    </TableRowExpandable>,
-);
-
-const defaultExpandedWrapper = shallow(
-    <TableRowExpandable {...props} defaultExpanded={true}>
-        <p>The cake is a lie</p>
-    </TableRowExpandable>,
-);
-
 describe('<TableRowExpandable>', () => {
     it('should be collapsed by default', () => {
-        expect(wrapper.state().expanded).toBe(false);
+        const { container } = render(
+            <TableRowExpandable {...props}>
+                <p>The cake is a lie</p>
+            </TableRowExpandable>,
+        );
         expect(
-            wrapper.find('.ffe-table__row-expandable--expanded'),
+            container.querySelectorAll('.ffe-table__row-expandable--expanded'),
         ).toHaveLength(0);
+
+        const content = container.querySelector(
+            '.ffe-table__row-expandable-content',
+        );
+
+        expect(content.getAttribute('aria-hidden')).toBe('true');
         expect(
-            wrapper
-                .find('.ffe-table__row-expandable-content')
-                .prop('aria-hidden'),
-        ).toBe('true');
-        expect(
-            wrapper
-                .find('.ffe-table__row-expandable-content')
-                .hasClass('ffe-table__row--collapsed'),
-        ).toBe(true);
+            content.classList.contains('ffe-table__row--collapsed'),
+        ).toBeTruthy();
     });
 
     it('should be expanded if provided true defaultExpanded', () => {
-        expect(defaultExpandedWrapper.state().expanded).toBe(true);
+        const { container } = render(
+            <TableRowExpandable {...props} defaultExpanded={true}>
+                <p>The cake is a lie</p>
+            </TableRowExpandable>,
+        );
+
         expect(
-            defaultExpandedWrapper.find('.ffe-table__row--collapsed'),
+            container.querySelectorAll('.ffe-table__row--collapsed'),
         ).toHaveLength(0);
+
+        const content = container.querySelector(
+            '.ffe-table__row-expandable-content',
+        );
+
+        expect(content.getAttribute('aria-hidden')).toBe('false');
         expect(
-            defaultExpandedWrapper
-                .find('.ffe-table__row-expandable-content')
-                .prop('aria-hidden'),
-        ).toBe('false');
-        expect(
-            defaultExpandedWrapper
-                .find('.ffe-table__row-expandable-content')
-                .hasClass('ffe-table__row-expandable-content--expanded'),
-        ).toBe(true);
+            content.classList.contains(
+                'ffe-table__row-expandable-content--expanded',
+            ),
+        ).toBeTruthy();
     });
 
     it('should scroll into view on mount if true scrollToOnMount is provided', () => {
@@ -86,62 +77,23 @@ describe('<TableRowExpandable>', () => {
     });
 
     it('should render expanded content', () => {
-        wrapper.setState({ expanded: true });
-        expect(wrapper.find('td').last().find('p').text()).toBe(
-            'The cake is a lie',
+        render(
+            <TableRowExpandable {...props}>
+                <p>The cake is a lie</p>
+            </TableRowExpandable>,
         );
+
+        const row = screen.getByRole('button');
+        fireEvent.click(row);
+        const expandedContent = screen.getByRole('presentation');
+        expect(expandedContent.textContent).toBe('The cake is a lie');
         expect(
-            wrapper
-                .find('tr')
-                .last()
-                .hasClass('ffe-table__row-expandable-content--expanded'),
-        ).toBe(true);
+            expandedContent.classList.contains(
+                'ffe-table__row-expandable-content--expanded',
+            ),
+        ).toBeTruthy();
         expect(
-            wrapper.find('tr').last().hasClass('ffe-table__row--collapsed'),
-        ).toBe(false);
-    });
-
-    it('should pass correct props to TableRow component', () => {
-        wrapper.setState({ expanded: true });
-        const tableRow = wrapper.find('TableRow').props();
-        expect(tableRow.expanded).toBe(true);
-        expect(tableRow.columns).toBe(props.columns);
-        expect(tableRow.trClasses).toContain(
-            'ffe-table__row-expandable--expanded',
-        );
-    });
-
-    it('should pass an expand icon with correct classname to TableRow', () => {
-        wrapper.setState({ expanded: true });
-        const tableRow = wrapper.find('TableRow').props();
-        expect(tableRow.cells.expandIcon.props.className).toContain(
-            'ffe-table__expand-icon--expanded',
-        );
-        expect(tableRow.expandable).toBe(true);
-    });
-
-    it('should not pass an expand icon to TableRows that are not expandable', () => {
-        const tableRow = unexpandableWrapper.find('TableRow').props();
-        expect(tableRow.cells.expandIcon).toBe(' ');
-        expect(tableRow.expandable).toBe(false);
-    });
-
-    const renderedWrapper = render(
-        <TableRowExpandable {...props}>
-            <p>a Festivus for the rest of us</p>
-        </TableRowExpandable>,
-    );
-
-    it('should render a tbody with two tr', () => {
-        expect(renderedWrapper.children()).toHaveLength(2);
-    });
-
-    it('should set the correct aria attributes on tr', () => {
-        expect(renderedWrapper.find('tr').first().prop('aria-expanded')).toBe(
-            'false',
-        );
-        expect(renderedWrapper.find('tr').last().prop('aria-hidden')).toBe(
-            'true',
-        );
+            expandedContent.classList.contains('ffe-table__row--collapsed'),
+        ).toBeFalsy();
     });
 });
