@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.3.22...@sb1/ffe-component-index@8.0.0) (2024-06-18)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** endrer til nye props på phonenumber ([e0f7ecb](https://github.com/SpareBank1/designsystem/commit/e0f7ecbc5108f3c18ff36622a7e8bb02992a51c7))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** endrer til nye props på phonenumer
+
+
+
+
+
 ## [7.3.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@7.3.21...@sb1/ffe-component-index@7.3.22) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

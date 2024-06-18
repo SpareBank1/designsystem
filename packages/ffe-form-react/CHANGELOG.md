@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@19.0.12...@sb1/ffe-form-react@20.0.0) (2024-06-18)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** endrer til nye props på phonenumber ([e0f7ecb](https://github.com/SpareBank1/designsystem/commit/e0f7ecbc5108f3c18ff36622a7e8bb02992a51c7))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** endrer til nye props på phonenumer
+
+
+
+
+
 ## [19.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@19.0.11...@sb1/ffe-form-react@19.0.12) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
