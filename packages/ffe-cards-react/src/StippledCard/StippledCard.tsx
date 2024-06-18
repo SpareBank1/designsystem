@@ -1,10 +1,13 @@
-import React, { ReactNode } from 'react';
-import { CardRenderProps } from '../types';
+import React, { ElementType, ForwardedRef, ReactNode } from 'react';
+import { CardRenderProps, ComponentAsPropParams } from '../types';
 import classNames from 'classnames';
 import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
+import { fixedForwardRef } from '../fixedForwardRef';
 
-export interface StippledCardProps
-    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+export type StippledCardProps<As extends ElementType = 'div'> = Omit<
+    ComponentAsPropParams<As>,
+    'children'
+> & {
     /** Smaller icon and less space */
     condensed?: boolean;
     /** Image to be rendered*/
@@ -15,15 +18,16 @@ export interface StippledCardProps
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
-}
+};
 
-export const StippledCard: React.FC<StippledCardProps> = ({
-    className,
-    condensed,
-    img,
-    children,
-    ...rest
-}) => {
+function StippledCardWithForwardRef<As extends ElementType>(
+    props: StippledCardProps<As>,
+    ref: ForwardedRef<any>,
+) {
+    const { className, condensed, img, children, ...rest } = props;
+    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
+        ...rest,
+    };
     return (
         <WithCardAction
             className={classNames(
@@ -31,7 +35,8 @@ export const StippledCard: React.FC<StippledCardProps> = ({
                 { 'ffe-stippled-card--condensed': condensed },
                 className,
             )}
-            {...rest}
+            {...withCardActionProps}
+            ref={ref}
         >
             {({ CardAction }) => (
                 <>
@@ -59,4 +64,5 @@ export const StippledCard: React.FC<StippledCardProps> = ({
             )}
         </WithCardAction>
     );
-};
+}
+export const StippledCard = fixedForwardRef(StippledCardWithForwardRef);

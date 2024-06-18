@@ -102,4 +102,33 @@ describe('ImageCard', () => {
         expect(card.classList.contains('ffe-image-card')).toBeTruthy();
         expect(card.classList.contains('my-custom-class')).toBeTruthy();
     });
+
+    it('should render as wished element', () => {
+        render(
+            <ImageCard
+                as="li"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+            >
+                {children}
+            </ImageCard>,
+        );
+        expect(screen.getByRole('listitem')).toBeInTheDocument();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLLIElement>();
+        render(
+            <ImageCard
+                as="li"
+                ref={ref}
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+            >
+                {children}
+            </ImageCard>,
+        );
+        const listitem = screen.getByRole('listitem');
+        expect(listitem).toBe(ref.current);
+    });
 });

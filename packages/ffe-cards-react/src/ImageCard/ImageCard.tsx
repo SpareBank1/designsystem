@@ -1,10 +1,13 @@
-import React from 'react';
-import { CardRenderProps } from '../types';
+import React, { ElementType, ForwardedRef } from 'react';
+import { CardRenderProps, ComponentAsPropParams } from '../types';
 import classNames from 'classnames';
 import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
+import { fixedForwardRef } from '../fixedForwardRef';
 
-export interface ImageCardProps
-    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+export type ImageCardProps<As extends ElementType = 'div'> = Omit<
+    ComponentAsPropParams<As>,
+    'children'
+> & {
     /** The src for the image */
     imageSrc: string;
     /** The alt text for the image */
@@ -12,19 +15,21 @@ export interface ImageCardProps
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
-}
+};
 
-export const ImageCard: React.FC<ImageCardProps> = ({
-    className,
-    imageSrc,
-    imageAltText,
-    children,
-    ...rest
-}) => {
+function ImageCardWithForwardRef<As extends ElementType>(
+    props: ImageCardProps<As>,
+    ref: ForwardedRef<any>,
+) {
+    const { className, imageSrc, imageAltText, children, ...rest } = props;
+    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
+        ...rest,
+    };
     return (
         <WithCardAction
             className={classNames('ffe-image-card', className)}
-            {...rest}
+            {...withCardActionProps}
+            ref={ref}
         >
             {({ CardAction }) => (
                 <>
@@ -51,4 +56,5 @@ export const ImageCard: React.FC<ImageCardProps> = ({
             )}
         </WithCardAction>
     );
-};
+}
+export const ImageCard = fixedForwardRef(ImageCardWithForwardRef);

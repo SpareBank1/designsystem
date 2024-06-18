@@ -92,4 +92,31 @@ describe('IconCard', () => {
         expect(card.classList.contains('ffe-icon-card')).toBeTruthy();
         expect(card.classList.contains('my-custom-class')).toBeTruthy();
     });
+
+    it('should render as wished element', () => {
+        render(
+            <IconCard
+                as="li"
+                icon={<Icon fileUrl={savingsIconXlarge} size="xl" />}
+            >
+                {children}
+            </IconCard>,
+        );
+        expect(screen.getByRole('listitem')).toBeInTheDocument();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLLIElement>();
+        render(
+            <IconCard
+                as="li"
+                ref={ref}
+                icon={<Icon fileUrl={savingsIconXlarge} size="xl" />}
+            >
+                {children}
+            </IconCard>,
+        );
+        const listitem = screen.getByRole('listitem');
+        expect(listitem).toBe(ref.current);
+    });
 });

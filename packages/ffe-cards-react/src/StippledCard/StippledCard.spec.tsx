@@ -80,4 +80,37 @@ describe('StippledCard', () => {
         expect(card.classList.contains('ffe-stippled-card')).toBeTruthy();
         expect(card.classList.contains('my-custom-class')).toBeTruthy();
     });
+
+    it('should render as wished element', () => {
+        render(
+            <StippledCard
+                as="li"
+                img={{
+                    element: <Icon fileUrl="monitoring" size="md" />,
+                    type: 'icon',
+                }}
+            >
+                {children}
+            </StippledCard>,
+        );
+        expect(screen.getByRole('listitem')).toBeInTheDocument();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLLIElement>();
+        render(
+            <StippledCard
+                as="li"
+                ref={ref}
+                img={{
+                    element: <Icon fileUrl="monitoring" size="md" />,
+                    type: 'icon',
+                }}
+            >
+                {children}
+            </StippledCard>,
+        );
+        const listitem = screen.getByRole('listitem');
+        expect(listitem).toBe(ref.current);
+    });
 });

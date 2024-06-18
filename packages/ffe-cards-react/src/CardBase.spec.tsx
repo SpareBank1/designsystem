@@ -81,4 +81,24 @@ describe('<CardBase/>', () => {
             card.classList.contains('ffe-card-base--text-center'),
         ).toBeTruthy();
     });
+
+    it('should render as wished element', () => {
+        render(
+            <CardBase as="li">
+                <div />
+            </CardBase>,
+        );
+        expect(screen.getByRole('listitem')).toBeInTheDocument();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLLIElement>();
+        render(
+            <CardBase as="li" ref={ref}>
+                <div />
+            </CardBase>,
+        );
+        const listitem = screen.getByRole('listitem');
+        expect(listitem).toBe(ref.current);
+    });
 });

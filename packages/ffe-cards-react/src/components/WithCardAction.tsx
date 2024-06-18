@@ -3,30 +3,37 @@ import classNames from 'classnames';
 import { mergeRefs } from '../mergeRefs';
 import { CardAction, CardActionProps } from './CardAction';
 import { fixedForwardRef } from '../fixedForwardRef';
+import { ComponentAsPropParams } from '../types';
 
-export interface WithCardActionProps
-    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+export type WithCardActionProps<As extends ElementType = 'div'> = Omit<
+    ComponentAsPropParams<As>,
+    'children'
+> & {
     children: (props: { CardAction: typeof CardAction }) => React.ReactNode;
-}
+};
 
-export const WithCardAction: React.FC<WithCardActionProps> = ({
-    children,
-    onClick,
-    ...rest
-}) => {
-    const actionRef = useRef<HTMLAnchorElement>(null);
+function WithCardActionForwardRef<As extends ElementType>(
+    props: WithCardActionProps<As>,
+    ref: ForwardedRef<any>,
+) {
+    const { children, as: Comp = 'div', onClick, ...rest } = props;
+    const actionInnerRef = useRef<HTMLAnchorElement>(null);
 
     const PartialAppliedCardAction = useCallback(
-        <As extends ElementType = 'a'>(
-            { className, ...restCardAction }: CardActionProps<As>,
-            ref?: ForwardedRef<any>,
+        <CardActionAs extends ElementType = 'a'>(
+            { className, ...restCardAction }: CardActionProps<CardActionAs>,
+            actionRef?: ForwardedRef<any>,
         ) => {
             return (
                 <CardAction
                     className={classNames(className, 'ffe-card__action', {
                         'ffe-card__action--raw': !className,
                     })}
-                    ref={ref ? mergeRefs([ref, actionRef]) : actionRef}
+                    ref={
+                        actionRef
+                            ? mergeRefs([actionRef, actionInnerRef])
+                            : actionInnerRef
+                    }
                     {...restCardAction}
                 />
             );
@@ -35,19 +42,21 @@ export const WithCardAction: React.FC<WithCardActionProps> = ({
     );
 
     return (
-        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-        <div
+        <Comp
             {...rest}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
-                if (!actionRef.current?.contains(e.target as Node)) {
-                    actionRef.current?.click();
+                if (!actionInnerRef.current?.contains(e.target as Node)) {
+                    actionInnerRef.current?.click();
                 }
                 onClick?.(e);
             }}
+            ref={ref}
         >
             {children({
                 CardAction: fixedForwardRef(PartialAppliedCardAction),
             })}
-        </div>
+        </Comp>
     );
-};
+}
+
+export const WithCardAction = fixedForwardRef(WithCardActionForwardRef);
