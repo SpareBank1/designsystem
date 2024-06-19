@@ -2,6 +2,7 @@ import React from 'react';
 import { useThemeProvider } from '../context/ThemeContext';
 import { Label, ToggleSwitch } from '@sb1/ffe-form-react';
 import { Dropdown } from '@sb1/ffe-dropdown-react';
+import { storePreference } from '../context/ThemeContext/darkmodePreferenceStorage';
 
 export default function ThemingEditorPanel() {
     const context = useThemeProvider();
@@ -12,7 +13,12 @@ export default function ThemingEditorPanel() {
                 <ToggleSwitch
                     onText="Mørk"
                     offText="Lys"
-                    onChange={context.toggleDarkMode}
+                    onChange={() => {
+                        storePreference(
+                            context.colorScheme === 'light' ? 'dark' : 'light',
+                        );
+                        context.toggleDarkMode();
+                    }}
                     checked={context.prefersDarkMode}
                 >
                     Fargemodus
