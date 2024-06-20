@@ -1,4 +1,78 @@
 @import 'theme';
+
+:is(:root):has(.ffe-modal[open]) {
+    overflow-y: hidden;
+}
+
 .ffe-modal {
+    border: none;
+    border-radius: var(--ffe-v-modal-border-radius);
+    padding: 0;
+}
+
+.ffe-modal[open] {
+    display: grid;
+    pointer-events: auto;
+}
+
+.ffe-modal::backdrop {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.6);
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+
+.ffe-modal__body {
     background: var(--ffe-v-modal-bg-color);
+    max-width: 600px;
+}
+
+.ffe-modal__block {
+    margin: var(--ffe-spacing-md);
+}
+
+.ffe-modal__close {
+    --background-color: var(--ffe-v-modal-bg-color);
+    --border-color: var(--ffe-v-modal-close-button-color);
+    --text-color: var(--ffe-v-modal-close-button-color);
+    --outline-color: transparent;
+
+    aspect-ratio: 1;
+    background: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    font: inherit;
+    cursor: pointer;
+    outline: 2px solid var(--outline-color);
+    padding: var(--ffe-spacing-2xs);
+    border-radius: 50%;
+    float: right;
+    margin: var(--ffe-spacing-md);
+    outline-offset: 4px;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .ffe-icons {
+        display: block;
+        color: inherit;
+    }
+
+    &:focus-visible {
+        --outline-color: var(--ffe-v-modal-close-button-color);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            --background-color: var(--ffe-v-modal-close-button-color);
+            --text-color: var(--ffe-v-modal-bg-color);
+        }
+    }
 }
