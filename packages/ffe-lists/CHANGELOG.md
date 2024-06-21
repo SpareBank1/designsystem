@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.1.13...@sb1/ffe-lists@15.1.14) (2024-06-21)
+
+
+### Bug Fixes
+
+* **ffe-lists:** wrong distance between elements ([904cb85](https://github.com/SpareBank1/designsystem/commit/904cb85bcb269ea61db8425fbbdfe3aa6be25609))
+
+
+
+
+
 ## [15.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.1.12...@sb1/ffe-lists@15.1.13) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-lists

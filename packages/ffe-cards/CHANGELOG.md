@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.0.0...@sb1/ffe-cards@19.0.1) (2024-06-21)
+
+
+### Bug Fixes
+
+* **ffe-cards:** spacing inconsistent strippled card ([9517b65](https://github.com/SpareBank1/designsystem/commit/9517b65ce2d497d07492cda3f68a268733a3e197))
+
+
+
+
+
 # [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@18.2.5...@sb1/ffe-cards@19.0.0) (2024-06-18)
 
 

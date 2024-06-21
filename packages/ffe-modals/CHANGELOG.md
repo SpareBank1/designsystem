@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.1.3...@sb1/ffe-modals@0.2.0) (2024-06-21)
+
+
+### Features
+
+* **ffe-modals:** basic modal ([7602e19](https://github.com/SpareBank1/designsystem/commit/7602e1997bda7537747985cf895226864f4bfe75))
+
+
+
+
+
 ## [0.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.1.2...@sb1/ffe-modals@0.1.3) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-modals
