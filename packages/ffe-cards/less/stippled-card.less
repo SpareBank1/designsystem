@@ -11,7 +11,7 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: var(--ffe-spacing-md);
-    gap: var(--ffe-spacing-sm);
+    gap: var(--ffe-spacing-md);
 
     &:has(.ffe-card__action:active, .ffe-card__action:focus) {
         border-style: solid;
@@ -35,15 +35,16 @@
 }
 
 .ffe-stippled-card__img--icon {
-    margin: 0 var(--ffe-spacing-md) 0 var(--ffe-spacing-xs);
+    margin: 0 var(--ffe-spacing-md);
 }
 
 .ffe-stippled-card--condensed {
     padding: var(--ffe-spacing-sm);
+    gap: var(--ffe-spacing-sm);
 }
 
 .ffe-stippled-card--condensed .ffe-stippled-card__img--icon {
-    margin: 0 var(--ffe-spacing-2xs) 0 0;
+    margin: 0;
 }
 
 .ffe-stippled-card .ffe-icons {
