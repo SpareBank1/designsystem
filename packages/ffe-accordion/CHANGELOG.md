@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.22...@sb1/ffe-accordion@10.0.23) (2024-06-21)
+
+
+### Bug Fixes
+
+* **ffe-accordion:** specifity issue on headings ([c5a4c4a](https://github.com/SpareBank1/designsystem/commit/c5a4c4adfeca704890022618562b7e60c9eb2673))
+
+
+
+
+
 ## [10.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.21...@sb1/ffe-accordion@10.0.22) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

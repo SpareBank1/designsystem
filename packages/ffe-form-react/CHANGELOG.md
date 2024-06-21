@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.0.0...@sb1/ffe-form-react@20.0.1) (2024-06-21)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** godtta null for fieldmessage på inputgroup ([14506f3](https://github.com/SpareBank1/designsystem/commit/14506f3ead3fe799332912d99882f1d536145dbb))
+
+
+
+
+
 # [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@19.0.12...@sb1/ffe-form-react@20.0.0) (2024-06-18)
 
 
