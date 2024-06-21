@@ -25,9 +25,7 @@ function StippledCardWithForwardRef<As extends ElementType>(
     ref: ForwardedRef<any>,
 ) {
     const { className, condensed, img, children, ...rest } = props;
-    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
-        ...rest,
-    };
+
     return (
         <WithCardAction
             className={classNames(
@@ -35,7 +33,7 @@ function StippledCardWithForwardRef<As extends ElementType>(
                 { 'ffe-stippled-card--condensed': condensed },
                 className,
             )}
-            {...withCardActionProps}
+            {...(rest as Record<string, unknown>)}
             ref={ref}
         >
             {({ CardAction }) => (
