@@ -27,7 +27,7 @@ export interface InputGroupProps
      */
     extraMargin?: boolean;
     /** Use the ErrorFieldMessage component if you need more flexibility in how the content is rendered. */
-    fieldMessage?: string | React.ReactElement<{ id: string }>;
+    fieldMessage?: string | React.ReactElement<{ id: string }> | null;
     /** To just render a static, always visible tooltip, use this. */
     description?: string;
     /** Use the Label component if you need more flexibility in how the content is rendered. */
