@@ -22,9 +22,6 @@ function IconCardWithForwardRef<As extends ElementType>(
     ref: ForwardedRef<any>,
 ) {
     const { className, condensed, icon, children, ...rest } = props;
-    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
-        ...rest,
-    };
     return (
         <WithCardAction
             className={classNames(
@@ -32,7 +29,7 @@ function IconCardWithForwardRef<As extends ElementType>(
                 { 'ffe-icon-card--condensed': condensed },
                 className,
             )}
-            {...withCardActionProps}
+            {...(rest as Record<string, unknown>)}
             ref={ref}
         >
             {({ CardAction }) => (

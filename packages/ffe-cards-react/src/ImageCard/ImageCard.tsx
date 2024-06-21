@@ -22,13 +22,11 @@ function ImageCardWithForwardRef<As extends ElementType>(
     ref: ForwardedRef<any>,
 ) {
     const { className, imageSrc, imageAltText, children, ...rest } = props;
-    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
-        ...rest,
-    };
+
     return (
         <WithCardAction
             className={classNames('ffe-image-card', className)}
-            {...withCardActionProps}
+            {...(rest as Record<string, unknown>)}
             ref={ref}
         >
             {({ CardAction }) => (

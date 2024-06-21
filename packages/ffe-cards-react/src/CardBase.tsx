@@ -36,10 +36,6 @@ function CardBaseWithForwardRef<As extends ElementType>(
         ...rest
     } = props;
 
-    const withCardActionProps: React.ComponentProps<typeof WithCardAction> = {
-        ...rest,
-    };
-
     return (
         <WithCardAction
             className={classNames('ffe-card-base', className, {
@@ -50,7 +46,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
                 'ffe-card-base--text-center': textCenter,
                 'ffe-card-base--no-padding': noPadding,
             })}
-            {...withCardActionProps}
+            {...(rest as Record<string, unknown>)}
             ref={ref}
         >
             {({ CardAction }) =>
