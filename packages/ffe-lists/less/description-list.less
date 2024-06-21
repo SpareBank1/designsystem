@@ -1,50 +1,7 @@
-// Description list
-//
-// Markup:
-// <dl class="ffe-description-list ffe-description-list{{modifier_class}}">
-//     <dt class="ffe-description-list__title">Navn</dt>
-//     <dd class="ffe-description-list__description">Navn Navnesen</dd>
-//     <dt class="ffe-description-list__title">Adresse</dt>
-//     <dd class="ffe-description-list__description">Husgata 14</dd>
-//     <dt class="ffe-description-list__title">Postnummer og sted</dt>
-//     <dd class="ffe-description-list__description">1337 Sandvika</dd>
-// </dl>
-//
-// --md     - Medium column size
-// --lg     - Large column size
-//
-// Styleguide ffe-lists.description-list.1
-
-// Multi column description list
-//
-// Markup:
-// <div class="ffe-description-list-multicol ffe-description-list-multicol{{modifier_class}}">
-//     <dl class="ffe-description-list-multicol__avoid-break">
-//         <dt class="ffe-description-list__title">Navn</dt>
-//         <dd class="ffe-description-list__description">Navn Navnesen</dd>
-//     </dl>
-//     <dl class="ffe-description-list-multicol__avoid-break">
-//         <dt class="ffe-description-list__title">Adresse</dt>
-//         <dd class="ffe-description-list__description">Husgata 14</dd>
-//     </dl>
-//     <dl class="ffe-description-list-multicol__avoid-break">
-//         <dt class="ffe-description-list__title">Postnummer</dt>
-//         <dd class="ffe-description-list__description">0362</dd>
-//     </dl>
-//     <dl class="ffe-description-list-multicol__avoid-break">
-//         <dt class="ffe-description-list__title">Adresse</dt>
-//         <dd class="ffe-description-list__description">Oslo</dd>
-//     </dl>
-// </div>
-//
-// --sm-2-cols     - Preserve 2 column layout on small screens
-//
-// Styleguide ffe-lists.description-list.2
-
-@description-list-vertical-seperation: 20px;
-
 .ffe-description-list,
 .ffe-description-list-multicol {
+    --vertical-seperation: 1rem;
+
     .ffe-description-list__term {
         color: var(--ffe-v-lists-title-color);
         font-size: var(--ffe-fontsize-h6);
@@ -54,7 +11,7 @@
     /* Use padding rather than margin in bottom to avoid extra spacing overflowing to the top of the next column */
 
     .ffe-description-list__description {
-        padding-bottom: @description-list-vertical-seperation;
+        padding-bottom: var(--vertical-seperation);
         margin-left: 0;
         &:extend(.ffe-body-text);
         .native & {
@@ -65,7 +22,7 @@
     }
 
     .ffe-description-list__description + .ffe-description-list__description {
-        margin-top: -@description-list-vertical-seperation;
+        margin-top: calc(var(--vertical-seperation) * -1);
     }
 }
 
@@ -83,7 +40,7 @@
 
     .ffe-description-list__description {
         flex: 65% 0 0;
-        padding-left: @ffe-spacing-sm;
+        padding-left: var(--ffe-spacing-sm);
         max-width: 65%; /* Fix for IE issue in which box-sizing is not taken into account when using flex */
     }
 
