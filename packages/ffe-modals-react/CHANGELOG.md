@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.2.1...@sb1/ffe-modals-react@0.3.0) (2024-06-24)
+
+
+### Features
+
+* **ffe-modals-react:** add onClose callback ([ae7c454](https://github.com/SpareBank1/designsystem/commit/ae7c454eae0c8478bdc2929b03307574cc9f2a45))
+
+
+
+
+
 ## [0.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.2.0...@sb1/ffe-modals-react@0.2.1) (2024-06-24)
 
 
