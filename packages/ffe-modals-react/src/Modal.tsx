@@ -1,4 +1,4 @@
-import React, { useImperativeHandle, useRef } from 'react';
+import React, { useEffect, useImperativeHandle, useRef } from 'react';
 import classnames from 'classnames';
 import { CloseButton } from './CloseButton';
 import { Locale } from './types';
@@ -8,6 +8,8 @@ export interface ModalProps extends React.ComponentPropsWithoutRef<'dialog'> {
     ariaLabelledby: string;
     /** Id of modal heading */
     locale?: Locale;
+    /** Called when dialog is closed */
+    onClose?: () => void;
 }
 
 export type ModalHandle = {
@@ -23,6 +25,7 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             ariaLabelledby,
             className,
             locale = 'nb',
+            onClose,
             ...rest
         },
         ref,
@@ -37,6 +40,19 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                 modalRef.current?.close();
             },
         }));
+
+        useEffect(() => {
+            const handleClose = () => {
+                onClose?.();
+            };
+            const modal = modalRef.current;
+
+            modal?.addEventListener('close', handleClose);
+
+            return () => {
+                modal?.removeEventListener('close', handleClose);
+            };
+        }, [onClose]);
 
         return (
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
