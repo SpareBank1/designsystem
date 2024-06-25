@@ -11,6 +11,8 @@ export interface ModalProps extends React.ComponentPropsWithoutRef<'dialog'> {
     locale?: Locale;
     /** Called when dialog is closed */
     onClose?: () => void;
+    /** Container for portal, default is document.body */
+    portalContainer?: Parameters<typeof createPortal>[1];
 }
 
 export type ModalHandle = {
@@ -27,6 +29,7 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             className,
             locale = 'nb',
             onClose,
+            portalContainer = document.body,
             ...rest
         },
         ref,
