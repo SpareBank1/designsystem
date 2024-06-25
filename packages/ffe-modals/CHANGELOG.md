@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.1...@sb1/ffe-modals@0.2.2) (2024-06-25)
+
+
+### Bug Fixes
+
+* **ffe-modals:** remove unused css ([1151fe0](https://github.com/SpareBank1/designsystem/commit/1151fe06409d04ff3df9ec838e9424e0052f0d36))
+
+
+
+
+
 ## [0.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.0...@sb1/ffe-modals@0.2.1) (2024-06-25)
 
 

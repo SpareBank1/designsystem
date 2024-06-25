@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.1...@sb1/ffe-modals-react@0.3.2) (2024-06-25)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** fix overflow ([dd4f9c0](https://github.com/SpareBank1/designsystem/commit/dd4f9c0bf00e1fe5fb6bf01776113d5452464ec8))
+
+
+
+
+
 ## [0.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.0...@sb1/ffe-modals-react@0.3.1) (2024-06-25)
 
 
