@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.0...@sb1/ffe-modals-react@0.3.1) (2024-06-25)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** owerflow-y scrolling ([bd226e8](https://github.com/SpareBank1/designsystem/commit/bd226e84d0999a7e821fb5c7874c6bdbc91a79ed))
+
+
+
+
+
 # [0.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.2.1...@sb1/ffe-modals-react@0.3.0) (2024-06-24)
 
 

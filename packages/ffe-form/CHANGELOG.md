@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [29.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.22...@sb1/ffe-form@29.0.23) (2024-06-25)
+
+
+### Bug Fixes
+
+* **ffe-form:** fiks at margin bottom blir feil uten label ([17b4ed4](https://github.com/SpareBank1/designsystem/commit/17b4ed4e9a39b20ae1b1effc611baaac4d41873b))
+
+
+
+
+
 ## [29.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.21...@sb1/ffe-form@29.0.22) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-form
