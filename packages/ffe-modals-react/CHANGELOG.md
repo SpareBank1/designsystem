@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.3...@sb1/ffe-modals-react@0.3.4) (2024-06-25)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** forgott to pass the portal container ([b25839d](https://github.com/SpareBank1/designsystem/commit/b25839d75dbdaa30e6855da7360516ec2951a59a))
+* **ffe-modals-react:** portal container ([b3d3c0c](https://github.com/SpareBank1/designsystem/commit/b3d3c0c8e094878ea3814b3ddb9b2c1f64496a5e))
+
+
+
+
+
 ## [0.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.2...@sb1/ffe-modals-react@0.3.3) (2024-06-25)
 
 
