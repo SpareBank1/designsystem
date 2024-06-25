@@ -89,7 +89,7 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                     {children}
                 </div>
             </dialog>,
-            document.body,
+            portalContainer,
         );
     },
 );
