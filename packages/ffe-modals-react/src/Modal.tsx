@@ -32,6 +32,7 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
     ) => {
         const [isOpen, setIsOpen] = useState(false);
         const modalRef = useRef<HTMLDialogElement>(null);
+        const htmlOverflowY = useRef(document.documentElement.style.overflowY);
 
         useImperativeHandle(ref, () => ({
             open: () => {
@@ -44,14 +45,15 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
         }));
 
         useEffect(() => {
+            const html = document.documentElement;
             const inShadow =
                 modalRef.current?.getRootNode() instanceof ShadowRoot;
             if (inShadow) {
-                const html = document.documentElement;
                 if (isOpen) {
-                    html.classList.add('ffe-modal__root');
-                } else {
-                    html.classList.remove('ffe-modal__root');
+                    htmlOverflowY.current = html.style.overflowY;
+                    html.style.overflowY = 'hidden';
+                } else if (!isOpen) {
+                    html.style.overflowY = htmlOverflowY.current;
                 }
             }
         }, [isOpen]);
