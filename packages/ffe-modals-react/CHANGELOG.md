@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.2...@sb1/ffe-modals-react@0.3.3) (2024-06-25)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** opne modalen i en portal ([a07eba6](https://github.com/SpareBank1/designsystem/commit/a07eba68be849c3ec680bdce54a367952e558f03))
+
+
+
+
+
 ## [0.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.1...@sb1/ffe-modals-react@0.3.2) (2024-06-25)
 
 
