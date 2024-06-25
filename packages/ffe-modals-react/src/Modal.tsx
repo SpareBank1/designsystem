@@ -1,4 +1,4 @@
-import React, { useEffect, useImperativeHandle, useRef } from 'react';
+import React, { useEffect, useImperativeHandle, useState, useRef } from 'react';
 import classnames from 'classnames';
 import { CloseButton } from './CloseButton';
 import { Locale } from './types';
@@ -6,7 +6,7 @@ import { Locale } from './types';
 export interface ModalProps extends React.ComponentPropsWithoutRef<'dialog'> {
     /** Id of modal heading */
     ariaLabelledby: string;
-    /** Id of modal heading */
+    /** Locale used */
     locale?: Locale;
     /** Called when dialog is closed */
     onClose?: () => void;
@@ -30,10 +30,12 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
         },
         ref,
     ) => {
+        const [isOpen, setIsOpen] = useState(false);
         const modalRef = useRef<HTMLDialogElement>(null);
 
         useImperativeHandle(ref, () => ({
             open: () => {
+                setIsOpen(true);
                 modalRef.current?.showModal();
             },
             close: () => {
@@ -42,17 +44,17 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
         }));
 
         useEffect(() => {
-            const handleClose = () => {
-                onClose?.();
-            };
-            const modal = modalRef.current;
-
-            modal?.addEventListener('close', handleClose);
-
-            return () => {
-                modal?.removeEventListener('close', handleClose);
-            };
-        }, [onClose]);
+            const inShadow =
+                modalRef.current?.getRootNode() instanceof ShadowRoot;
+            if (inShadow) {
+                const html = document.documentElement;
+                if (isOpen) {
+                    html.classList.add('ffe-modal__root');
+                } else {
+                    html.classList.remove('ffe-modal__root');
+                }
+            }
+        }, [isOpen]);
 
         return (
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
@@ -67,6 +69,10 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                         target.close();
                     }
                     onClick?.(event);
+                }}
+                onClose={() => {
+                    onClose?.();
+                    setIsOpen(false);
                 }}
             >
                 <div className="ffe-modal__body">
