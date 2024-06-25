@@ -1,4 +1,5 @@
 import React, { useEffect, useImperativeHandle, useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import { CloseButton } from './CloseButton';
 import { Locale } from './types';
@@ -58,7 +59,7 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             }
         }, [isOpen]);
 
-        return (
+        return createPortal(
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <dialog
                 {...rest}
@@ -84,7 +85,8 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                     />
                     {children}
                 </div>
-            </dialog>
+            </dialog>,
+            document.body,
         );
     },
 );
