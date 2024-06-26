@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.2...@sb1/ffe-modals@0.2.3) (2024-06-26)
+
+
+### Bug Fixes
+
+* **ffe-modals:** height of modal ([81744b7](https://github.com/SpareBank1/designsystem/commit/81744b7c20af72fab15ddee91d534f8b8cdb4a1c))
+
+
+
+
+
 ## [0.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.1...@sb1/ffe-modals@0.2.2) (2024-06-25)
 
 
