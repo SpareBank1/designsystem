@@ -53,6 +53,8 @@ export interface RadioButtonInputGroupProps
      * set
      * */
     tooltip?: React.ReactNode;
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
 }
 
 export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
@@ -67,6 +69,7 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
     selectedValue,
     tooltip,
     onChange,
+    onColoredBg,
     ...rest
 }) => {
     if (tooltip && description) {
@@ -81,6 +84,7 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
             aria-labelledby={id}
             className={classNames(
                 'ffe-input-group',
+                { 'ffe-input-group--on-colored-bg': onColoredBg },
                 { 'ffe-input-group--no-extra-margin': !extraMargin },
                 { 'ffe-input-group--message': !!fieldMessage },
                 className,
@@ -103,12 +107,15 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
                 </div>
             )}
 
-            {typeof description === 'string' ? (
-                <div className="ffe-small-text">{description}</div>
-            ) : (
-                description
+            {description && (
+                <div className="ffe-input-group__description">
+                    {typeof description === 'string' ? (
+                        <div className="ffe-small-text">{description}</div>
+                    ) : (
+                        description
+                    )}
+                </div>
             )}
-
             {children({
                 inline,
                 name,

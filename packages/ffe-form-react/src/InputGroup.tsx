@@ -35,6 +35,8 @@ export interface InputGroupProps
     onTooltipToggle?: TooltipProps['onClick'];
     /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
     tooltip?: React.ReactNode;
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
 }
 const getChildrenWithExtraProps = (
     children: InputGroupProps['children'],
@@ -59,6 +61,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
     tooltip,
     onTooltipToggle,
     labelId,
+    onColoredBg,
     ...rest
 }) => {
     const id = useRef(inputId ? inputId : `input-${uuid()}`).current;
@@ -122,6 +125,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
         <div
             className={classNames(
                 'ffe-input-group',
+                { 'ffe-input-group--on-colored-bg': onColoredBg },
                 { 'ffe-input-group--no-extra-margin': !extraMargin },
                 { 'ffe-input-group--message': hasMessage },
                 className,
