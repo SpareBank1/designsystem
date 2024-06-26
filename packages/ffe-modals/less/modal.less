@@ -16,13 +16,8 @@
 }
 
 .ffe-modal::backdrop {
+    background-color: var(--ffe-v-modal-backdrop-color);
     backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.6);
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-    }
 }
 
 .ffe-modal__body {
@@ -31,12 +26,22 @@
 
 .ffe-modal__block {
     margin: var(--ffe-spacing-md);
+
+    &:first-of-type {
+        margin-top: 0;
+        padding-top: var(--ffe-spacing-md);
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: var(--ffe-spacing-md);
+    }
 }
 
 .ffe-modal__close {
     --background-color: var(--ffe-v-modal-bg-color);
-    --border-color: var(--ffe-v-modal-close-button-color);
-    --text-color: var(--ffe-v-modal-close-button-color);
+    --border-color: var(--ffe-v-modal-close-button-border-color);
+    --text-color: var(--ffe-v-modal-close-button-cross-color);
     --outline-color: transparent;
 
     aspect-ratio: 1;
@@ -49,7 +54,7 @@
     padding: var(--ffe-spacing-2xs);
     border-radius: 50%;
     float: right;
-    margin: 0 var(--ffe-spacing-md) var(--ffe-spacing-md);
+    margin: var(--ffe-spacing-md);
     outline-offset: 4px;
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
@@ -70,7 +75,7 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            --background-color: var(--ffe-v-modal-close-button-color);
+            --background-color: var(--ffe-v-modal-close-button-cross-color);
             --text-color: var(--ffe-v-modal-bg-color);
         }
     }
