@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.3...@sb1/ffe-modals@0.2.4) (2024-06-26)
+
+
+### Bug Fixes
+
+* **ffe-modals:** darkmode ([ef0b02f](https://github.com/SpareBank1/designsystem/commit/ef0b02fe3980fed05ff04b6bef5002503d9c7c4e))
+
+
+
+
+
 ## [0.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.2...@sb1/ffe-modals@0.2.3) (2024-06-26)
 
 
