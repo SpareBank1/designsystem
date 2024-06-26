@@ -8,10 +8,10 @@
     border: none;
     border-radius: var(--ffe-v-modal-border-radius);
     padding: 0;
+    background: var(--ffe-v-modal-bg-color);
 }
 
 .ffe-modal[open] {
-    display: grid;
     pointer-events: auto;
 }
 
@@ -26,7 +26,6 @@
 }
 
 .ffe-modal__body {
-    background: var(--ffe-v-modal-bg-color);
     max-width: 600px;
 }
 
@@ -50,7 +49,7 @@
     padding: var(--ffe-spacing-2xs);
     border-radius: 50%;
     float: right;
-    margin: var(--ffe-spacing-md);
+    margin: 0 var(--ffe-spacing-md) var(--ffe-spacing-md);
     outline-offset: 4px;
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
