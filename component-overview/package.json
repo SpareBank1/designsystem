@@ -53,7 +53,6 @@
         "@sb1/ffe-core-react": "^8.1.5",
         "@sb1/ffe-datepicker": "^12.0.50",
         "@sb1/ffe-datepicker-react": "^8.0.17",
-        "@sb1/ffe-details-list-react": "^5.0.8",
         "@sb1/ffe-dropdown-react": "^7.0.10",
         "@sb1/ffe-feedback": "^1.2.21",
         "@sb1/ffe-feedback-react": "^3.3.12",
