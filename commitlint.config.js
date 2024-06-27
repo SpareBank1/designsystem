@@ -27,7 +27,6 @@ module.exports = {
                 'ffe-collapse-react',
                 'ffe-datepicker',
                 'ffe-datepicker-react',
-                'ffe-details-list-react',
                 'ffe-dropdown-react',
                 'ffe-feedback',
                 'ffe-feedback-react',
