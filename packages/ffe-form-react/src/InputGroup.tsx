@@ -9,6 +9,7 @@ type ChildrenExtraProps = {
     id: string;
     'aria-invalid': 'true' | 'false';
     'aria-describedby': string | undefined;
+    onColoredBg?: boolean;
 };
 
 export interface InputGroupProps
@@ -27,14 +28,25 @@ export interface InputGroupProps
      */
     extraMargin?: boolean;
     /** Use the ErrorFieldMessage component if you need more flexibility in how the content is rendered. */
-    fieldMessage?: string | React.ReactElement<{ id: string }> | null;
+    fieldMessage?:
+        | string
+        | React.ReactElement<{ id: string; onColoredBg?: boolean }>
+        | null;
     /** To just render a static, always visible tooltip, use this. */
     description?: string;
     /** Use the Label component if you need more flexibility in how the content is rendered. */
-    label?: string | React.ReactElement<{ id: string; htmlFor: string }>;
+    label?:
+        | string
+        | React.ReactElement<{
+              id: string;
+              htmlFor: string;
+              onColoredBg?: boolean;
+          }>;
     onTooltipToggle?: TooltipProps['onClick'];
     /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
     tooltip?: React.ReactNode;
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
 }
 const getChildrenWithExtraProps = (
     children: InputGroupProps['children'],
@@ -59,6 +71,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
     tooltip,
     onTooltipToggle,
     labelId,
+    onColoredBg,
     ...rest
 }) => {
     const id = useRef(inputId ? inputId : `input-${uuid()}`).current;
@@ -114,6 +127,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
         id,
         'aria-invalid': isInvalid ? 'true' : 'false',
         'aria-describedby': ariaDescribedBy,
+        onColoredBg,
     } as const;
 
     const modifiedChildren = getChildrenWithExtraProps(children, extraProps);
@@ -122,14 +136,17 @@ export const InputGroup: React.FC<InputGroupProps> = ({
         <div
             className={classNames(
                 'ffe-input-group',
-                { 'ffe-input-group--no-extra-margin': !extraMargin },
-                { 'ffe-input-group--message': hasMessage },
+                {
+                    'ffe-input-group--on-colored-bg': onColoredBg,
+                    'ffe-input-group--no-extra-margin': !extraMargin,
+                    'ffe-input-group--message': hasMessage,
+                },
                 className,
             )}
             {...rest}
         >
             {typeof label === 'string' ? (
-                <Label htmlFor={id} id={labelId}>
+                <Label htmlFor={id} id={labelId} onColoredBg={onColoredBg}>
                     {label}
                 </Label>
             ) : (
@@ -137,14 +154,19 @@ export const InputGroup: React.FC<InputGroupProps> = ({
                 React.cloneElement(label, {
                     htmlFor: id,
                     id: labelId,
+                    onColoredBg,
                 })
             )}
 
             {typeof tooltip === 'string' && (
-                <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
+                <Tooltip onClick={onTooltipToggle} onColoredBg={onColoredBg}>
+                    {tooltip}
+                </Tooltip>
             )}
 
-            {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
+            {tooltip === true && (
+                <Tooltip onClick={onTooltipToggle} onColoredBg={onColoredBg} />
+            )}
 
             {React.isValidElement(tooltip) && tooltip}
 
@@ -160,13 +182,18 @@ export const InputGroup: React.FC<InputGroupProps> = ({
             {modifiedChildren}
 
             {typeof fieldMessage === 'string' && (
-                <ErrorFieldMessage as="p" id={fieldMessageId}>
+                <ErrorFieldMessage
+                    as="p"
+                    id={fieldMessageId}
+                    onColoredBg={onColoredBg}
+                >
                     {fieldMessage}
                 </ErrorFieldMessage>
             )}
             {React.isValidElement(fieldMessage) &&
                 React.cloneElement(fieldMessage, {
                     id: fieldMessageId,
+                    onColoredBg,
                 })}
         </div>
     );

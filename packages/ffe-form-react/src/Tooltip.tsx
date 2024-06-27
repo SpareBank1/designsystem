@@ -15,6 +15,8 @@ export interface TooltipProps
     > {
     containerProps?: React.ComponentPropsWithoutRef<'div'>;
     isOpen?: boolean;
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
 }
 
 export const Tooltip = React.forwardRef<HTMLButtonElement, TooltipProps>(
@@ -28,6 +30,7 @@ export const Tooltip = React.forwardRef<HTMLButtonElement, TooltipProps>(
             onClick,
             tabIndex,
             containerProps,
+            onColoredBg,
         },
         ref,
     ) => {
@@ -50,6 +53,7 @@ export const Tooltip = React.forwardRef<HTMLButtonElement, TooltipProps>(
                 {...containerProps}
                 className={classNames('ffe-tooltip', {
                     'ffe-tooltip--open': isOpen,
+                    'ffe-tooltip--on-colored-bg': onColoredBg,
                 })}
             >
                 <button
