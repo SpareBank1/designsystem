@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@11.0.14...@sb1/ffe-file-upload-react@11.0.15) (2024-06-28)
+
+
+### Bug Fixes
+
+* **ffe-file-upload-react:** accessibility issue ([f18635d](https://github.com/SpareBank1/designsystem/commit/f18635d25107e2ab54a9ca28cedff9e90c3815c2))
+
+
+
+
+
 ## [11.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@11.0.13...@sb1/ffe-file-upload-react@11.0.14) (2024-06-25)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
