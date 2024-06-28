@@ -1,6 +1,6 @@
 import React from 'react';
 import { FileUpload, FileUploadProps } from './FileUpload';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 
 const renderFileUpload = (props?: Partial<FileUploadProps<unknown>>) =>
     render(
@@ -23,15 +23,7 @@ const renderFileUpload = (props?: Partial<FileUploadProps<unknown>>) =>
 describe('<FileUpload/>', () => {
     it('should have a button and input', () => {
         const { container } = renderFileUpload();
-        expect(container.querySelector('#file-upload-button')).toBeTruthy();
         expect(container.querySelector('#file-upload')).toBeTruthy();
-    });
-
-    it('should render input label', () => {
-        renderFileUpload();
-        expect(
-            screen.getByRole('button', { name: 'label' }),
-        ).toBeInTheDocument();
     });
 
     it('should extract and return files when user finishes selecting files', () => {

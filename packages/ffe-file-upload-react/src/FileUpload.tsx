@@ -67,7 +67,7 @@ export function FileUpload<Document>({
     uploadTitle,
     uploadMicroText,
     uploadSubText,
-    accept,
+    accept = '*',
     onFilesDropped,
     onFileDeleted,
     onFilesSelected,
@@ -75,7 +75,7 @@ export function FileUpload<Document>({
     const [isHover, setIsHover] = useState(false);
     const fileInputElement = useRef<HTMLInputElement>(null);
     const downloadIcon =
-        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuOC0zNTcuNTM5cS02LjQzMSAwLTExLjk2MS0yLjMwOC01LjUzMS0yLjMwNy0xMC4xNDYtNi45MjNMMzM1LjMwOS00ODkuMTUzcS03LjkyMy03LjgzMi03LjgwNy0xOC4zMzguMTE1LTEwLjUwNyA4LjMyOS0xOC44MTUgOC43ODYtOC4zMDcgMTguODYyLTguMTE1IDEwLjA3Ny4xOTIgMTguMzg1IDguNWw4MC45MjMgODEuOTIzdi0zMjYuMDAxcTAtMTEuMDY5IDcuNDA0LTE4LjUzNCA3LjQwNS03LjQ2NiAxOC4zODQtNy40NjYgMTAuOTggMCAxOC41OTUgNy40NjYgNy42MTUgNy40NjUgNy42MTUgMTguNTM0djMyNi4wMDFsODEuOTIzLTgxLjkyM3E3LjU5LTcuOTIzIDE4LjAyNi03LjgwOCAxMC40MzUuMTE2IDE5LjIyMSA4LjQyMyA4LjIxNCA4LjMwOCA4LjAyMSAxOC41NzctLjE5MiAxMC4yNjktOC40OTkgMTguNTc2TDUwMi4zMDctMzY2Ljc3cS01LjAxNSA0LjYxNi0xMC41NDYgNi45MjMtNS41MyAyLjMwOC0xMS45NjEgMi4zMDhaTTI3Ni4wMjUtMjEyLjAwMXEtMjcuMDI0IDAtNDUuNTI0LTE4LjY1dC0xOC41LTQ1LjY1OHYtMzQuNDYxcTAtMTEuMDY5IDcuNDA1LTE4LjUzNCA3LjQwNS03LjQ2NSAxOC4zODQtNy40NjUgMTAuOTggMCAxOC41OTUgNy40NjVRMjY0LTMyMS44MzkgMjY0LTMxMC43N3YzNC40NjFxMCA0LjYxNiAzLjg0NiA4LjQ2MyAzLjg0NyAzLjg0NiA4LjQ2MyAzLjg0Nmg0MDcuMzgycTQuNjE2IDAgOC40NjMtMy44NDYgMy44NDYtMy44NDcgMy44NDYtOC40NjN2LTM0LjQ2MXEwLTExLjA2OSA3LjQwNS0xOC41MzQgNy40MDQtNy40NjUgMTguMzg0LTcuNDY1IDEwLjk3OSAwIDE4LjU5NCA3LjQ2NSA3LjYxNiA3LjQ2NSA3LjYxNiAxOC41MzR2MzQuNDYxcTAgMjcuMDA4LTE4LjY2MiA0NS42NTgtMTguNjYyIDE4LjY1LTQ1LjY4NiAxOC42NUgyNzYuMDI1WiIvPjwvc3ZnPg==';
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzQzLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDctMTEuODQ2LTcuOTIzTDMzMC4zMDktNDc4LjE1M3EtOC45MjMtOC45MjMtOC44MDctMjAuODg0LjExNS0xMS45NjEgOC44MDctMjEuMjY5IDkuMzA4LTkuMzA3IDIxLjM4NC05LjYxNSAxMi4wNzctLjMwOCAyMS4zODUgOWw3Ni45MjMgNzYuOTIzdi0zMDYuMDAxcTAtMTIuNzY5IDguNjE1LTIxLjM4NCA4LjYxNS04LjYxNiAyMS4zODQtOC42MTZ0MjEuMzg0IDguNjE2cTguNjE1IDguNjE1IDguNjE1IDIxLjM4NHYzMDYuMDAxbDc2LjkyMy03Ni45MjNxOC45MjMtOC45MjMgMjEuMTkyLTguODA4IDEyLjI2OS4xMTYgMjEuNTc3IDkuNDIzIDguNjkyIDkuMzA4IDguOTk5IDIxLjA3Ny4zMDggMTEuNzY5LTguOTk5IDIxLjA3Nkw1MDUuMzA3LTM1My43N3EtNS42MTUgNS42MTYtMTEuODQ2IDcuOTIzLTYuMjMgMi4zMDgtMTMuNDYxIDIuMzA4Wk0yNTIuMzA5LTE4MC4wMDFxLTMwLjMwOCAwLTUxLjMwOC0yMXQtMjEtNTEuMzA4di03OC40NjFxMC0xMi43NjkgOC42MTYtMjEuMzg0IDguNjE1LTguNjE1IDIxLjM4NC04LjYxNXQyMS4zODQgOC42MTVRMjQwLTM0My41MzkgMjQwLTMzMC43N3Y3OC40NjFxMCA0LjYxNiAzLjg0NiA4LjQ2MyAzLjg0NyAzLjg0NiA4LjQ2MyAzLjg0Nmg0NTUuMzgycTQuNjE2IDAgOC40NjMtMy44NDYgMy44NDYtMy44NDcgMy44NDYtOC40NjN2LTc4LjQ2MXEwLTEyLjc2OSA4LjYxNS0yMS4zODR0MjEuMzg0LTguNjE1cTEyLjc2OSAwIDIxLjM4NCA4LjYxNSA4LjYxNiA4LjYxNSA4LjYxNiAyMS4zODR2NzguNDYxcTAgMzAuMzA4LTIxIDUxLjMwOHQtNTEuMzA4IDIxSDI1Mi4zMDlaIi8+PC9zdmc+';
 
     const handleFilesDropped = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
@@ -124,9 +124,9 @@ export function FileUpload<Document>({
                     </div>
                 </div>
             )}
+            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
             <div
                 className="ffe-file-upload__upload-section"
-                role="presentation"
                 onDrop={handleFilesDropped}
                 onDragOver={event => {
                     event.preventDefault();
@@ -149,27 +149,37 @@ export function FileUpload<Document>({
                     <div className="ffe-file-upload__upload-section-microtext">
                         {uploadMicroText}
                     </div>
+
                     <SecondaryButton
-                        leftIcon={<Icon fileUrl={downloadIcon} size="sm" />}
-                        onClick={triggerUploadFileNativeHandler}
-                        id={`${id}-button`}
+                        tabIndex={0}
+                        as="label"
+                        htmlFor={id}
+                        leftIcon={<Icon fileUrl={downloadIcon} size="md" />}
+                        onClick={e => {
+                            e.preventDefault();
+                            triggerUploadFileNativeHandler();
+                        }}
+                        onKeyUp={e => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                triggerUploadFileNativeHandler();
+                            }
+                        }}
                     >
-                        <span id={`${id}-label`}>{label}</span>
+                        {label}
                     </SecondaryButton>
+                    <input
+                        id={id}
+                        type="file"
+                        multiple={multiple}
+                        ref={fileInputElement}
+                        onChange={handleFileSelected}
+                        accept={accept}
+                    />
                     <div className="ffe-file-upload__upload-section-subtext">
                         {uploadSubText}
                     </div>
                 </div>
             </div>
-            <input
-                id={id}
-                type="file"
-                multiple={multiple}
-                ref={fileInputElement}
-                onChange={handleFileSelected}
-                aria-labelledby={`${id}-label`}
-                accept={accept || '*'}
-            />
         </div>
     );
 }
