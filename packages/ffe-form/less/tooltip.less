@@ -8,9 +8,9 @@
         cursor: help;
         height: 1.5625rem;
         aspect-ratio: 1;
-        margin: 0 0 @ffe-spacing-2xs @ffe-spacing-sm;
+        margin: 0 0 var(--ffe-spacing-2xs) var(--ffe-spacing-sm);
         padding: 0;
-        transition: border-color @ffe-transition-duration @ffe-ease;
+        transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
         display: inline-grid;
         place-items: center;
         font-family: sans-serif;
@@ -29,7 +29,8 @@
         }
 
         &:focus {
-            box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+            box-shadow:
+                0 0 0 3px var(--ffe-v-input-bg-color),
                 0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
             outline: none;
         }
@@ -46,7 +47,7 @@
         height: 0;
         overflow: hidden;
         visibility: hidden;
-        transition: height @ffe-transition-duration @ffe-ease;
+        transition: height var(--ffe-transition-duration) var(--ffe-ease);
         overflow-wrap: anywhere;
     }
 
