@@ -1,0 +1,17 @@
+@import 'common-card-styling';
+@import 'components';
+
+.ffe-illustration-card {
+    .common-card-styling();
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--ffe-spacing-md);
+    padding: var(--ffe-spacing-md);
+    align-items: center;
+
+    &--condensed {
+        column-gap: var(--ffe-spacing-sm);
+        padding: var(--ffe-spacing-sm);
+    }
+}
