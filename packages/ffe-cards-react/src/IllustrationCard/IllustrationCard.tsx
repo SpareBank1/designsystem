@@ -4,29 +4,29 @@ import classNames from 'classnames';
 import { WithCardAction, Text, Subtext, Title, CardName } from '../components';
 import { fixedForwardRef } from '../fixedForwardRef';
 
-export type IconCardProps<As extends ElementType = 'div'> = Omit<
+export type IllustrationCardProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,
     'children'
 > & {
-    /** Element of icon */
-    icon: ReactElement;
-    /** Smaller icon and less space */
+    /** Element of illustration */
+    img: ReactElement;
+    /** Smaller illustration and less space */
     condensed?: boolean;
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
 };
 
-function IconCardWithForwardRef<As extends ElementType>(
-    props: IconCardProps<As>,
+function IllustrationCardWithForwardRef<As extends ElementType>(
+    props: IllustrationCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, condensed, icon, children, ...rest } = props;
+    const { className, condensed, img, children, ...rest } = props;
     return (
         <WithCardAction
             className={classNames(
-                'ffe-icon-card',
-                { 'ffe-icon-card--condensed': condensed },
+                'ffe-illustration-card',
+                { 'ffe-illustration-card--condensed': condensed },
                 className,
             )}
             {...(rest as Record<string, unknown>)}
@@ -34,14 +34,14 @@ function IconCardWithForwardRef<As extends ElementType>(
         >
             {({ CardAction }) => (
                 <>
-                    {React.cloneElement(icon, {
-                        ...icon.props,
-                        className: classNames(
-                            'ffe-icon-card__icon',
-                            icon.props.className,
-                        ),
-                    })}
-                    <div className="ffe-icon-card__body">
+                    <div
+                        className={classNames(
+                            'ffe-illustration-card__illustration',
+                        )}
+                    >
+                        {img}
+                    </div>
+                    <div className="ffe-illustration-card__body">
                         {typeof children === 'function'
                             ? children({
                                   Text,
@@ -58,4 +58,4 @@ function IconCardWithForwardRef<As extends ElementType>(
     );
 }
 
-export const IconCard = fixedForwardRef(IconCardWithForwardRef);
+export const IllustrationCard = fixedForwardRef(IllustrationCardWithForwardRef);
