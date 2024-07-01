@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.0.1...@sb1/ffe-cards@19.1.0) (2024-07-01)
+
+
+### Features
+
+* **ffe-cards:** css til illustration-card ([6924a00](https://github.com/SpareBank1/designsystem/commit/6924a0049b75ddb9a3045a8c095880bb6547d8ab))
+
+
+
+
+
 ## [19.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.0.0...@sb1/ffe-cards@19.0.1) (2024-06-21)
 
 

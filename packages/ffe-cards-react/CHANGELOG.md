@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.1.2...@sb1/ffe-cards-react@16.2.0) (2024-07-01)
+
+
+### Features
+
+* **ffe-cards-react:** illustration-card ([e133558](https://github.com/SpareBank1/designsystem/commit/e1335589b6293c8005b9e4a281a215a14ec0b5ad))
+* **ffe-cards:** css til illustration-card ([6924a00](https://github.com/SpareBank1/designsystem/commit/6924a0049b75ddb9a3045a8c095880bb6547d8ab))
+
+
+
+
+
 ## [16.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.1.1...@sb1/ffe-cards-react@16.1.2) (2024-06-21)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
