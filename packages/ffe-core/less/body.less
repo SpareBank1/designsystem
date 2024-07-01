@@ -1,10 +1,10 @@
 // Sets default body color, font styles and background color for light and dark themes
 .ffe-body {
-    background-color: @ffe-farge-hvit;
+    background-color: var(--ffe-farge-hvit);
     &.native {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-lysgraa;
-            background-color: @ffe-farge-svart;
+            color: var(--ffe-farge-lysgraa);
+            background-color: var(--ffe-farge-svart);
         }
     }
 

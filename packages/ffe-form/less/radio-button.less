@@ -12,7 +12,7 @@
     position: relative;
     color: var(--ffe-g-text-color);
     cursor: pointer;
-    transition: width @ffe-transition-duration @ffe-ease-in-out-back;
+    transition: width var(--ffe-transition-duration) var(--ffe-ease-in-out-back);
     text-align: left;
     padding-left: 0;
     padding-top: 1px;
@@ -64,7 +64,7 @@
         left: 0;
         grid-column: 1/2;
         grid-row: 1/2;
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
         place-self: center;
     }
 
@@ -107,7 +107,8 @@
     &:focus-visible + .ffe-radio-button::after {
         --background-color: var(--ffe-farge-hvit);
 
-        box-shadow: 0 0 0 3px var(--background-color),
+        box-shadow:
+            0 0 0 3px var(--background-color),
             0 0 0 5px var(--ffe-g-primary-color);
 
         .native & {
