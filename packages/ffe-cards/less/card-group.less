@@ -1,0 +1,28 @@
+@import 'common-card-styling';
+@import 'components';
+
+.ffe-icon-card {
+    .common-card-styling();
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: var(--ffe-spacing-md);
+
+    & > &__icon {
+        color: var(--ffe-v-cards-icon-color);
+        margin: 0 var(--ffe-spacing-lg) 0 var(--ffe-spacing-xs);
+    }
+
+    @media (min-width: @breakpoint-md) {
+        .ffe-icon-card__icon {
+            margin: 0 var(--ffe-spacing-md) 0;
+        }
+    }
+}
+
+.ffe-icon-card--condensed {
+    .ffe-icon-card__icon {
+        margin: 0 var(--ffe-spacing-sm) 0 0;
+    }
+}
