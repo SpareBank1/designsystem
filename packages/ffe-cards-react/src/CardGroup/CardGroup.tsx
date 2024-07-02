@@ -5,20 +5,23 @@ import { mergeRefs } from '@sb1/ffe-cards-react/src/mergeRefs';
 
 export interface CardGroupProps
     extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+    shadow?: boolean;
     /** The children of the CardGroup component */
     children: React.ReactNode;
 }
 
 function CardGroupWithForwardRef(
-    props: CardGroupProps,
+    { shadow = true, className, children, ...rest }: CardGroupProps,
     ref: ForwardedRef<any>,
 ) {
-    const { className, children, ...rest } = props;
-
     return (
         <div
-            className={classNames('ffe-card-group', className)}
-            {...(rest as Record<string, unknown>)}
+            className={classNames(
+                'ffe-card-group',
+                { 'ffe-card-group--box-shadow': shadow },
+                className,
+            )}
+            {...rest}
             ref={ref}
         >
             {React.Children.map(
