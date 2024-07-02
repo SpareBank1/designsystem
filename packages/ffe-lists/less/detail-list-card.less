@@ -1,5 +1,7 @@
 .ffe-detail-list-card {
-    background-color: var(--ffe-v-detail-list-card-background-color);
+    --detail-list-bg-color: var(--ffe-v-detail-list-card-background-color);
+
+    background-color: var(--detail-list-bg-color);
     border-radius: var(--ffe-v-detail-list-card-border-radius);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
@@ -60,6 +62,47 @@
         @container (width < 299px) {
             flex-direction: column;
             align-items: normal;
+        }
+    }
+
+    &--bg-sand-30 {
+        --detail-list-bg-color: var(--ffe-farge-sand-30);
+    }
+
+    &--bg-sand-70 {
+        --detail-list-bg-color: var(--ffe-farge-sand-70);
+    }
+
+    &--bg-frost-30 {
+        --detail-list-bg-color: var(--ffe-farge-frost-30);
+    }
+
+    &--bg-syrin-30 {
+        --detail-list-bg-color: var(--ffe-farge-syrin-30);
+    }
+
+    &--bg-syrin-70 {
+        --detail-list-bg-color: var(--ffe-farge-syrin-70);
+    }
+}
+
+.native & {
+    @media (prefers-color-scheme: dark) {
+        .ffe-detail-list-card {
+            &--dm-bg-svart {
+                --detail-list-bg-color: var(--ffe-farge-svart);
+            }
+
+            &--dm-bg-natt {
+                --detail-list-bg-color: var(--ffe-farge-natt);
+            }
+
+            &--dm-bg-koksgraa {
+                --detail-list-bg-color: var(--ffe-farge-koksgraa);
+            }
+            &--dm-bg-grey-charcoal {
+                --detail-list-bg-color: var(--ffe-grey-charcoal-darkmode);
+            }
         }
     }
 }
