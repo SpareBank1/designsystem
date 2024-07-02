@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.1.14...@sb1/ffe-lists@15.2.0) (2024-07-02)
+
+
+### Features
+
+* **ffe-lists:** legg til bakgrunnsfarger på detail list card ([bfa9c43](https://github.com/SpareBank1/designsystem/commit/bfa9c430fe32c854ee169463a1a3b981b4a8aac2))
+
+
+
+
+
 ## [15.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.1.13...@sb1/ffe-lists@15.1.14) (2024-06-21)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.30...@sb1/ffe-buttons@18.0.31) (2024-07-02)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** endre line-height i basebutton ([b76b0fe](https://github.com/SpareBank1/designsystem/commit/b76b0fe45c027aee11de1fefa2b6d43661123e46))
+
+
+
+
+
 ## [18.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.29...@sb1/ffe-buttons@18.0.30) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
