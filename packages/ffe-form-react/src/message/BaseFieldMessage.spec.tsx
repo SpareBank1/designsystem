@@ -31,4 +31,15 @@ describe('<BaseFieldMessage>', () => {
             alert.classList.contains('ffe-field-message--success'),
         ).toBeTruthy();
     });
+    it('ads the on colored on-colored-bg modifier', () => {
+        renderBassFieldMessage({ type: 'success', onColoredBg: true });
+        const alert = screen.getByRole('alert');
+        expect(alert.classList.contains('ffe-field-message')).toBeTruthy();
+        expect(
+            alert.classList.contains('ffe-field-message--success'),
+        ).toBeTruthy();
+        expect(
+            alert.classList.contains('ffe-field-message--on-colored-bg'),
+        ).toBeTruthy();
+    });
 });

@@ -19,6 +19,7 @@ export interface RadioButtonInputGroupProps
         name: string;
         onChange: React.ChangeEventHandler<HTMLInputElement>;
         selectedValue?: boolean | string | number | null;
+        onColoredBg?: boolean;
     }) => React.ReactNode;
     /** Additional class names applied to the fieldset */
     className?: string;
@@ -30,7 +31,10 @@ export interface RadioButtonInputGroupProps
      */
     extraMargin?: boolean;
     /** String or ErrorFieldMessage component with message */
-    fieldMessage?: React.ReactNode;
+    fieldMessage?:
+        | string
+        | React.ReactElement<{ onColoredBg?: boolean }>
+        | null;
     /**
      * Indicates whether the radio buttons inside this radio button group is
      * rendered inline or as a block.
@@ -53,6 +57,8 @@ export interface RadioButtonInputGroupProps
      * set
      * */
     tooltip?: React.ReactNode;
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
 }
 
 export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
@@ -67,6 +73,7 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
     selectedValue,
     tooltip,
     onChange,
+    onColoredBg,
     ...rest
 }) => {
     if (tooltip && description) {
@@ -81,6 +88,7 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
             aria-labelledby={id}
             className={classNames(
                 'ffe-input-group',
+                { 'ffe-input-group--on-colored-bg': onColoredBg },
                 { 'ffe-input-group--no-extra-margin': !extraMargin },
                 { 'ffe-input-group--message': !!fieldMessage },
                 className,
@@ -93,22 +101,22 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
                     className={classNames(
                         'ffe-form-label',
                         'ffe-form-label--block',
+                        { 'ffe-form-label--on-colored-bg': onColoredBg },
                     )}
                 >
                     {label}
                     {typeof tooltip === 'string' && (
-                        <Tooltip>{tooltip}</Tooltip>
+                        <Tooltip onColoredBg={onColoredBg}>{tooltip}</Tooltip>
                     )}
                     {React.isValidElement(tooltip) && tooltip}
                 </div>
             )}
 
-            {typeof description === 'string' ? (
-                <div className="ffe-small-text">{description}</div>
-            ) : (
-                description
+            {description && (
+                <div className="ffe-input-group__description ffe-small-text">
+                    {description}
+                </div>
             )}
-
             {children({
                 inline,
                 name,
@@ -116,12 +124,18 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
                     onChange?.(e);
                 },
                 selectedValue,
+                onColoredBg,
             })}
 
             {typeof fieldMessage === 'string' ? (
-                <ErrorFieldMessage as="p">{fieldMessage}</ErrorFieldMessage>
+                <ErrorFieldMessage as="p" onColoredBg={onColoredBg}>
+                    {fieldMessage}
+                </ErrorFieldMessage>
             ) : (
-                fieldMessage
+                React.isValidElement(fieldMessage) &&
+                React.cloneElement(fieldMessage, {
+                    onColoredBg,
+                })
             )}
         </fieldset>
     );

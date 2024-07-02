@@ -7,6 +7,8 @@ export type BaseFieldMessageProps<As extends ElementType = any> =
     ComponentWithoutRefAsPropParams<As> & {
         type: 'success' | 'info' | 'error';
         role: 'status' | 'alert' | 'none';
+        /** Adds alternative styling for better contrast on certain backgrounds */
+        onColoredBg?: boolean;
     };
 
 /**
@@ -20,6 +22,7 @@ export const BaseFieldMessage: React.FC<BaseFieldMessageProps> = props => {
         as: Comp = 'div',
         type,
         role = 'status',
+        onColoredBg,
         ...rest
     } = props;
 
@@ -36,6 +39,7 @@ export const BaseFieldMessage: React.FC<BaseFieldMessageProps> = props => {
         <Comp
             className={classNames(
                 `ffe-field-message`,
+                { 'ffe-field-message--on-colored-bg': onColoredBg },
                 `ffe-field-message--${type}`,
                 className,
             )}

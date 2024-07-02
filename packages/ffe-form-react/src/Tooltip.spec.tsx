@@ -75,4 +75,13 @@ describe('<Tooltip>', () => {
 
         expect(button.getAttribute('aria-controls')).toBe(tipId);
     });
+
+    it('ads the on colored on-colored-bg modifier', () => {
+        const { container } = renderTooltip({ onColoredBg: true });
+        const tooltip = container.querySelector('.ffe-tooltip');
+        expect(tooltip?.classList.contains('ffe-tooltip')).toBeTruthy();
+        expect(
+            tooltip?.classList.contains('ffe-tooltip--on-colored-bg'),
+        ).toBeTruthy();
+    });
 });
