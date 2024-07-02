@@ -1,6 +1,59 @@
 @import 'theme';
-@import 'table';
-@import 'sortable-table';
-@import 'expandable-row';
-@import 'table-breakpoint-none';
-@import 'table-breakpoint-sm';
+
+.ffe-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+}
+
+.ffe-table__caption {
+    margin-bottom: var(--ffe-spacing-md);
+    color: var(--ffe-g-heading-color);
+    font-size: var(--ffe-fontsize-h4);
+}
+
+.ffe-table__head .ffe-table__th {
+    color: var(--ffe-v-table-heading-color);
+}
+
+.ffe-table__th {
+    text-align: left;
+}
+
+.ffe-table__td,
+.ffe-table__th,
+.ffe-table__expand-content {
+    padding: var(--ffe-spacing-sm);
+}
+
+.ffe-table__body .ffe-table__tr {
+    border-bottom: 1px solid var(--ffe-v-table-row-bordercolor);
+    &:first-of-type {
+        border-top: 1px solid var(--ffe-v-table-row-bordercolor);
+    }
+}
+
+.ffe-table__expand-button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    display: flex;
+    align-items: center;
+    .ffe-icons {
+        color: var(--ffe-v-table-expand-icon-fill);
+        display: block;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    }
+
+    &--open .ffe-icons {
+        transform: rotate(180deg);
+    }
+}
+
+.ffe-table__expand-content {
+    background: var(--ffe-v-table-expanded-content-bg);
+}
