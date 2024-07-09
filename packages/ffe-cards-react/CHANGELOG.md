@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.2.0...@sb1/ffe-cards-react@16.2.1) (2024-07-09)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** strippled card avoid gap when no icon/illustration ([64e42b4](https://github.com/SpareBank1/designsystem/commit/64e42b49daa5fbacc08b376eb165a529d0e45618))
+
+
+
+
+
 # [16.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.1.2...@sb1/ffe-cards-react@16.2.0) (2024-07-01)
 
 
