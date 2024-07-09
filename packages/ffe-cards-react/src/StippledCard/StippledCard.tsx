@@ -38,15 +38,17 @@ function StippledCardWithForwardRef<As extends ElementType>(
         >
             {({ CardAction }) => (
                 <>
-                    <div
-                        className={classNames('ffe-stippled-card__img', {
-                            'ffe-stippled-card__img--icon':
-                                img?.type === 'icon',
-                        })}
-                        aria-hidden={img?.type === 'icon'}
-                    >
-                        {img?.element}
-                    </div>
+                    {img && (
+                        <div
+                            className={classNames('ffe-stippled-card__img', {
+                                'ffe-stippled-card__img--icon':
+                                    img?.type === 'icon',
+                            })}
+                            aria-hidden={img?.type === 'icon'}
+                        >
+                            {img?.element}
+                        </div>
+                    )}
                     <div>
                         {typeof children === 'function'
                             ? children({
