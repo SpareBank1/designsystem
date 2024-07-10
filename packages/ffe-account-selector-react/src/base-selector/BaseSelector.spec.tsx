@@ -217,7 +217,6 @@ describe('<BaseSelector> focus', () => {
         fireEvent.focus(input);
         const [option] = screen.getAllByRole('option');
         fireEvent.click(option);
-        screen.debug();
         expect(onFocusSpy).toHaveBeenCalledTimes(1);
         expect(onBlurSpy).not.toHaveBeenCalled();
     });
