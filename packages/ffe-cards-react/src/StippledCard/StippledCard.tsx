@@ -28,6 +28,7 @@ function StippledCardWithForwardRef<As extends ElementType>(
 
     return (
         <WithCardAction
+            baseClassName="ffe-stippled-card"
             className={classNames(
                 'ffe-stippled-card',
                 { 'ffe-stippled-card--condensed': condensed },

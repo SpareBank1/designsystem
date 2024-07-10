@@ -24,6 +24,7 @@ function TextCardWithForwardRef<As extends ElementType>(
 
     return (
         <WithCardAction
+            baseClassName="ffe-text-card"
             className={classNames(
                 'ffe-text-card',
                 { 'ffe-text-card--left-align': leftAlign },

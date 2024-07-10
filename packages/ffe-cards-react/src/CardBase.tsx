@@ -38,6 +38,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
 
     return (
         <WithCardAction
+            baseClassName="ffe-card-base"
             className={classNames('ffe-card-base', className, {
                 [`ffe-card-base--bg-${bgColor}`]: bgColor,
                 [`ffe-card-base--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,

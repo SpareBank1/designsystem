@@ -25,6 +25,7 @@ function ImageCardWithForwardRef<As extends ElementType>(
 
     return (
         <WithCardAction
+            baseClassName="ffe-image-card"
             className={classNames('ffe-image-card', className)}
             {...(rest as Record<string, unknown>)}
             ref={ref}
