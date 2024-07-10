@@ -1,26 +1,16 @@
-// Tab
-//
-// Markup:
-// <button class="ffe-tab ffe-tab{{modifier_class}}">Dette er en tab</button>
-//
-// --selected   - Selected state
-// --condensed  - Condensed tab button
-//
-// Styleguide ffe-tabs.tab
-
 .ffe-tab {
     display: flex;
     background-color: var(--ffe-v-tabs-secondary-color);
     color: var(--ffe-v-tabs-primary-color);
-    padding: @ffe-spacing-xs @ffe-spacing-md;
+    padding: var(--ffe-spacing-xs) var(--ffe-spacing-ms);
     border-radius: 40px;
     border: 2px solid transparent;
-    margin: @ffe-spacing-2xs;
+    margin: var(--ffe-spacing-2xs);
     font-family: var(--ffe-g-font);
     align-self: stretch;
     justify-content: center;
     align-items: center;
-    transition: all @ffe-transition-duration @ffe-ease;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     cursor: pointer;
     width: auto;
     position: relative;
@@ -38,7 +28,7 @@
         border-radius: 1.5rem;
         inset: -5px;
         box-shadow: 0 0 0 2px var(--ffe-v-tabs-tab-focus-color);
-        transition: opacity @ffe-transition-duration @ffe-ease;
+        transition: opacity var(--ffe-transition-duration) var(--ffe-ease);
     }
 
     &:focus::after {
@@ -78,14 +68,14 @@
     @media (min-width: @breakpoint-sm) {
         display: inline-block;
         width: auto;
-        margin-right: @ffe-spacing-xs;
+        margin-right: var(--ffe-spacing-xs);
 
         &:not(:first-child) {
             margin-left: -2px;
         }
 
         &:last-child {
-            margin-right: @ffe-spacing-2xs;
+            margin-right: var(--ffe-spacing-2xs);
         }
     }
 }
