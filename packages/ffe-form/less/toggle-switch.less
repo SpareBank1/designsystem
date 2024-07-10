@@ -14,13 +14,13 @@
         font-family: var(--ffe-g-font);
         font-variant-numeric: tabular-nums;
         min-height: 44px;
-        transition: color @ffe-transition-duration @ffe-ease;
+        transition: color var(--ffe-transition-duration) var(--ffe-ease);
         font-size: var(--ffe-fontsize-h6);
     }
 
     &__label-text {
         margin-right: auto;
-        padding-right: @ffe-spacing-sm;
+        padding-right: var(--ffe-spacing-sm);
     }
 
     &__label-on,
@@ -30,13 +30,13 @@
 
     &__label-description {
         display: block;
-        margin-top: @ffe-spacing-2xs;
+        margin-top: var(--ffe-spacing-2xs);
         .ffe-small-text();
     }
 
     &__switch {
         position: relative;
-        margin: 0 @ffe-spacing-sm;
+        margin: 0 var(--ffe-spacing-sm);
         display: flex;
         align-items: center;
 
@@ -53,8 +53,9 @@
             border-radius: 15px;
             left: auto;
             right: 0;
-            transition: background 0.4s @ffe-ease,
-                box-shadow @ffe-transition-duration @ffe-ease;
+            transition:
+                background 0.4s var(--ffe-ease),
+                box-shadow var(--ffe-transition-duration) var(--ffe-ease);
         }
 
         &::after {
@@ -66,7 +67,7 @@
             border-radius: 50%;
             position: absolute;
             left: 2px;
-            transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+            transition: transform var(--ffe-transition-duration) var(--ffe-ease)-in-out-back;
 
             .native & {
                 @media (prefers-color-scheme: dark) {
@@ -119,12 +120,14 @@
     }
 
     &__input:focus + &__label &__switch::before {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit,
+        box-shadow:
+            0 0 0 3px @ffe-farge-hvit,
             0 0 0 5px var(--ffe-g-primary-color);
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 3px @ffe-farge-svart,
+                box-shadow:
+                    0 0 0 3px @ffe-farge-svart,
                     0 0 0 5px @ffe-farge-hvit;
             }
         }

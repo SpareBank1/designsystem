@@ -3,7 +3,7 @@
 */
 .ffe-sb1-radioblob() {
     content: '';
-    background-color: @ffe-farge-hvit;
+    background-color: var(--ffe-farge-hvit);
     border: 2px solid var(--ffe-g-border-color);
     width: 20px;
     height: 20px;
@@ -12,8 +12,8 @@
     pointer-events: none;
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-svart !important;
-            border-color: @ffe-farge-graa !important;
+            background-color: var(--ffe-farge-svart) !important;
+            border-color: var(--ffe-farge-graa) !important;
         }
     }
 }
@@ -23,11 +23,11 @@
 */
 .ffe-sb1-radioblob-active() {
     background-color: var(--ffe-g-primary-color);
-    border: 5px solid @ffe-farge-hvit;
+    border: 5px solid var(--ffe-farge-hvit);
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-vann-70 !important;
-            border-color: @ffe-farge-svart !important;
+            background-color: var(--ffe-farge-vann-70) !important;
+            border-color: var(--ffe-farge-svart) !important;
         }
     }
 }

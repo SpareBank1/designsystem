@@ -9,7 +9,7 @@
     grid-column-gap: var(--ffe-spacing-xs);
     align-items: center;
     cursor: pointer;
-    transition: width @ffe-transition-duration @ffe-ease;
+    transition: width var(--ffe-transition-duration) var(--ffe-ease);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     text-align: left;
@@ -37,7 +37,7 @@
         content: '';
         grid-column: 1/2;
         grid-row: 1/2;
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
     }
 
     &::before {
@@ -95,7 +95,8 @@
     }
 
     &:focus-visible + .ffe-checkbox::before {
-        box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+        box-shadow:
+            0 0 0 3px var(--ffe-v-input-bg-color),
             0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 
