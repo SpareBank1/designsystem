@@ -18,12 +18,19 @@
         box-shadow: none;
     }
 
-    &:has(.ffe-card__action) {
-        @media (hover: hover) and (pointer: fine) {
-            &:hover {
-                border-style: solid;
-                box-shadow: none;
-            }
+    @supports not
+        selector(&:has(.ffe-card__action:active, .ffe-card__action:focus)) {
+        &--clickable:focus-within {
+            border-style: solid;
+            box-shadow: none;
+        }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &--clickable:hover {
+            cursor: pointer;
+            border-style: solid;
+            box-shadow: none;
         }
     }
 

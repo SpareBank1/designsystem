@@ -1,12 +1,10 @@
 .common-card-styling() {
-    &:extend(.ffe-body-text);
-
     background: var(--ffe-v-cards-common-card-background-color);
     box-shadow: 0 1px 4px 0 var(--ffe-v-cards-common-card-box-shadow-color);
     margin: 0 0 var(--ffe-spacing-2xs);
     border: 2px solid transparent;
     border-radius: var(--ffe-v-cards-common-card-border-radius);
-    transition: border-color 0.2s;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     outline: none;
     width: 100%;
     text-decoration: none;
@@ -33,21 +31,19 @@
         outline: inherit;
     }
 
-    &:has(.ffe-card__action) {
-        cursor: pointer;
+    @media (hover: hover) and (pointer: fine) {
+        &--clickable:hover {
+            cursor: pointer;
+            border-color: var(--ffe-g-primary-color);
 
-        @media (hover: hover) and (pointer: fine) {
-            &:hover {
-                border-color: var(--ffe-g-primary-color);
-                &
-                    :where(
-                        .ffe-card-body__card-name,
-                        .ffe-card-body__title,
-                        .ffe-card-body__subtext,
-                        .ffe-card-body__text
-                    ):has(.ffe-card__action) {
-                    text-decoration: underline;
-                }
+            &
+                :where(
+                    .ffe-card-body__card-name,
+                    .ffe-card-body__title,
+                    .ffe-card-body__subtext,
+                    .ffe-card-body__text
+                ):has(.ffe-card__action) {
+                text-decoration: underline;
             }
         }
     }
@@ -64,8 +60,16 @@
         box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
     }
 
+    @supports not
+        selector(&:has(.ffe-card__action:active, .ffe-card__action:focus)) {
+        &--clickable:focus-within {
+            border-color: var(--ffe-g-primary-color);
+        }
+    }
+
     &:has(.ffe-card__action:active, .ffe-card__action:focus) {
         border-color: var(--ffe-g-primary-color);
+
         &
             :where(
                 .ffe-card-body__card-name,
