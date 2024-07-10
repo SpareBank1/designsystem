@@ -18,7 +18,7 @@
 
         label {
             white-space: nowrap;
-            margin-right: @ffe-spacing-xs;
+            margin-right: var(--ffe-spacing-xs);
         }
 
         @media (max-width: (@breakpoint-sm - 1)) {
@@ -39,12 +39,12 @@
     &__plus {
         font-weight: 400;
         line-height: 1;
-        padding: 12px @ffe-spacing-xs;
+        padding: 12px var(--ffe-spacing-xs);
         background-color: var(--ffe-v-input-bg-color);
         border: 2px solid var(--ffe-g-border-color);
         border-radius: var(--ffe-g-border-radius) 0 0 var(--ffe-g-border-radius);
         border-right: 0;
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
         color: var(--ffe-v-input-color);
         display: flex;
         align-items: center;

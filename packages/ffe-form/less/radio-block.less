@@ -6,15 +6,15 @@
 
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
-    margin-top: @ffe-spacing-md;
+    margin-top: var(--ffe-spacing-md);
     width: 100%;
-    transition: width @ffe-transition-duration @ffe-ease-in-out-back;
+    transition: width var(--ffe-transition-duration) var(--ffe-ease-in-out-back);
     overflow-wrap: anywhere;
 
     &__content,
     &__header {
         cursor: pointer;
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
     }
 
     &__content {
@@ -24,7 +24,7 @@
         position: relative;
         border: 2px solid var(--ffe-radio-block-border-color);
         border-radius: var(--ffe-g-border-radius);
-        margin-right: @ffe-spacing-xs;
+        margin-right: var(--ffe-spacing-xs);
         color: var(--ffe-v-input-color);
         background-color: var(--ffe-v-input-bg-color);
 
@@ -49,7 +49,8 @@
         grid-column: 2/3;
         grid-row: 1/2;
         display: block;
-        padding: @ffe-spacing-xs @ffe-spacing-3xl @ffe-spacing-xs;
+        padding: var(--ffe-spacing-xs) var(--ffe-spacing-3xl)
+            var(--ffe-spacing-xs);
         border-bottom: thin solid var(--ffe-radio-block-border-color);
         color: var(--ffe-radio-block-header-color);
         background-color: var(--ffe-radio-block-header-bg-color);
@@ -58,7 +59,8 @@
     &__wrapper {
         grid-column: 2/3;
         grid-row: 2/3;
-        padding: @ffe-spacing-sm @ffe-spacing-sm @ffe-spacing-lg;
+        padding: var(--ffe-spacing-sm) var(--ffe-spacing-sm)
+            var(--ffe-spacing-lg);
         cursor: auto;
 
         &--empty {
@@ -70,7 +72,7 @@
         }
 
         @media (min-width: @breakpoint-sm) {
-            padding-left: @ffe-spacing-3xl;
+            padding-left: var(--ffe-spacing-3xl);
         }
     }
 
@@ -109,7 +111,8 @@
     }
 
     &:focus-visible + .ffe-radio-block__content {
-        box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+        box-shadow:
+            0 0 0 3px var(--ffe-v-input-bg-color),
             0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 }

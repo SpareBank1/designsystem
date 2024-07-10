@@ -3,7 +3,7 @@
     appearance: none;
     border: 2px solid transparent;
     border-radius: var(--ffe-v-buttons-border-radius);
-    color: @ffe-farge-hvit;
+    color: var(--ffe-farge-hvit);
     cursor: pointer;
     display: flex;
     font-family: var(--ffe-g-font);
@@ -14,7 +14,7 @@
     position: relative;
     text-align: center;
     text-decoration: none;
-    transition: all @ffe-transition-duration @ffe-ease;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     user-select: none;
     hyphens: auto;
     width: 100%;
@@ -28,11 +28,11 @@
         background: transparent;
         border-radius: 1.5rem;
         inset: -5px;
-        box-shadow: 0 0 0 2px @ffe-farge-vann;
-        transition: opacity @ffe-transition-duration @ffe-ease;
+        box-shadow: 0 0 0 2px var(--ffe-farge-vann);
+        transition: opacity var(--ffe-transition-duration) var(--ffe-ease);
 
         .native & {
-            box-shadow: 0 0 0 2px @ffe-farge-hvit;
+            box-shadow: 0 0 0 2px var(--ffe-farge-hvit);
         }
     }
 
@@ -156,7 +156,7 @@
 }
 
 .ffe-button--expanded {
-    padding: @ffe-spacing-xs;
+    padding: var(--ffe-spacing-xs);
     width: 45px;
 }
 
@@ -167,9 +167,10 @@
     box-shadow: none;
     color: var(--ffe-v-button-task-primary-color);
     display: inline-block;
-    padding: @ffe-spacing-2xs @ffe-spacing-sm @ffe-spacing-2xs @ffe-spacing-2xs;
+    padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm) var(--ffe-spacing-2xs)
+        var(--ffe-spacing-2xs);
     text-align: left;
-    transition: all @ffe-transition-duration @ffe-ease;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     width: auto;
 
     .ffe-button__icon > .ffe-icons {
@@ -208,8 +209,8 @@
 .ffe-button__label {
     align-items: center;
     display: flex;
-    transition: transform @ffe-transition-duration @ffe-ease;
-    gap: @ffe-spacing-xs;
+    transition: transform var(--ffe-transition-duration) var(--ffe-ease);
+    gap: var(--ffe-spacing-xs);
     .ffe-button--loading & {
         transform: translateY(-32px);
         opacity: 0;
@@ -218,7 +219,7 @@
 
 .ffe-button__icon {
     .ffe-button--shortcut & {
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
         will-change: transform;
     }
 
@@ -235,15 +236,15 @@
     .ffe-button--task & {
         border: 2px solid var(--ffe-v-button-primary-color);
         border-radius: 50%;
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-farge-hvit);
         color: var(--ffe-v-button-task-primary-color);
         height: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 @ffe-spacing-xs 0 0;
+        margin: 0 var(--ffe-spacing-xs) 0 0;
         width: 45px;
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: transparent;
@@ -257,11 +258,11 @@
 
     @media (hover: hover) and (pointer: fine) {
         .ffe-button--expand:hover & {
-            color: @ffe-farge-hvit;
+            color: var(--ffe-farge-hvit);
 
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: @ffe-farge-svart;
+                    color: var(--ffe-farge-svart);
                 }
             }
         }
@@ -281,7 +282,7 @@
     opacity: 0;
     position: absolute;
     transform: translateY(24px);
-    transition: all @ffe-transition-duration @ffe-ease;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     visibility: hidden;
     display: grid;
     place-items: center;
