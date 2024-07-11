@@ -6,6 +6,7 @@ import React, {
     useState,
     useEffect,
     ForwardedRef,
+    AriaAttributes,
 } from 'react';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
@@ -70,7 +71,8 @@ export interface SearchableDropdownProps<Item extends Record<string, any>> {
     /** Locale to use for translations */
     locale?: Locale;
     /** aria-invalid attribute  */
-    ariaInvalid?: React.ComponentProps<'input'>['aria-invalid'];
+    'aria-invalid'?: AriaAttributes['aria-invalid'];
+    ariaInvalid?: AriaAttributes['aria-invalid'];
     /** Function used to format the input field value */
     formatter?: (value: string) => string;
     /**
@@ -112,6 +114,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         isLoading = false,
         onOpen,
         onClose,
+        ...rest
     }: SearchableDropdownProps<Item>,
     ref: ForwardedRef<HTMLInputElement>,
 ) {
@@ -245,7 +248,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
 
     /**
      * Adds a flag on the event so that handleContainerFocus()
-     * can determine whether or not this event originated from this
+     * can determine whether this event originated from this
      * component
      */
     function addFlagOnEventHandler(event: React.SyntheticEvent) {
@@ -361,7 +364,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                               ]?.current?.getAttribute('id') ?? undefined
                             : undefined
                     }
-                    aria-invalid={ariaInvalid}
+                    aria-invalid={rest['aria-invalid'] ?? ariaInvalid}
                 />
                 <button
                     type="button"
