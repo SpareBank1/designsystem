@@ -52,10 +52,14 @@
     }
 
     &--open &__text {
-        margin-bottom: @ffe-spacing-xs;
+        margin-bottom: var(--ffe-spacing-xs);
         padding-bottom: 0;
         height: auto;
         overflow: visible;
         visibility: visible;
     }
+}
+
+.ffe-tooltip--on-colored-bg .ffe-small-text {
+    color: var(--ffe-v-text-on-colored-bg-color);
 }
