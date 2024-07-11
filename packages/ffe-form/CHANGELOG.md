@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.25...@sb1/ffe-form@29.1.0) (2024-07-11)
+
+
+### Features
+
+* **ffe-form:** support on colored background in some basic components ([3f7b70f](https://github.com/SpareBank1/designsystem/commit/3f7b70fb7b06daaebd669ad369c19b71d1241f11))
+
+
+
+
+
 ## [29.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.24...@sb1/ffe-form@29.0.25) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-form

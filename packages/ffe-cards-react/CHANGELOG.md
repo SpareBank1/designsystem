@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.2.2...@sb1/ffe-cards-react@16.2.3) (2024-07-11)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** hover and focus of cards with action ([97ada1a](https://github.com/SpareBank1/designsystem/commit/97ada1a883875059e54a3d5a87643d9fb6c2d700))
+
+
+
+
+
 ## [16.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.2.1...@sb1/ffe-cards-react@16.2.2) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

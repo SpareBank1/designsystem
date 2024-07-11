@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.0.4...@sb1/ffe-form-react@20.1.0) (2024-07-11)
+
+
+### Features
+
+* **ffe-form-react:** support on colored background in some basic components ([c9d241c](https://github.com/SpareBank1/designsystem/commit/c9d241c9938c564cc01f3d123b9e6834dad5d353))
+
+
+
+
+
 ## [20.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.0.3...@sb1/ffe-form-react@20.0.4) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.20...@sb1/ffe-account-selector-react@26.0.21) (2024-07-11)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** accept aria-invalid ([720cad2](https://github.com/SpareBank1/designsystem/commit/720cad2d9194f76bb9b7d4e182cab9fd5a24eb3e))
+
+
+
+
+
 ## [26.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.19...@sb1/ffe-account-selector-react@26.0.20) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

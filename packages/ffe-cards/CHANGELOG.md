@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.1.1...@sb1/ffe-cards@19.1.2) (2024-07-11)
+
+
+### Bug Fixes
+
+* **ffe-cards:** focus and hover (:has support) ([6aeb096](https://github.com/SpareBank1/designsystem/commit/6aeb096f1b9d06017b49e0918ce7e2952f4aa3b9))
+
+
+
+
+
 ## [19.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.1.0...@sb1/ffe-cards@19.1.1) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-cards
