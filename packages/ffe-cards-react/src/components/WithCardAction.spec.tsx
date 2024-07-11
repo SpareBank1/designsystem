@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 describe('<WithCardAction />', () => {
     it('should render a <CardAction /> link by default', () => {
         render(
-            <WithCardAction>
+            <WithCardAction baseClassName="ffe-card-x">
                 {({ CardAction }) => (
                     <h1>
                         <CardAction href="/test">en lenke</CardAction>
@@ -20,7 +20,7 @@ describe('<WithCardAction />', () => {
 
     it('should apply class to <CardAction />', () => {
         render(
-            <WithCardAction>
+            <WithCardAction baseClassName="ffe-card-x">
                 {({ CardAction }) => (
                     <CardAction href="/test" className="my-class">
                         en lenke
@@ -36,7 +36,7 @@ describe('<WithCardAction />', () => {
 
     it('should render a custom <CardAction />', () => {
         render(
-            <WithCardAction>
+            <WithCardAction baseClassName="ffe-card-x">
                 {({ CardAction }) => (
                     <CardAction as="button">en knapp</CardAction>
                 )}
@@ -51,7 +51,7 @@ describe('<WithCardAction />', () => {
         const cardActionSpy = jest.fn();
 
         render(
-            <WithCardAction>
+            <WithCardAction baseClassName="ffe-card-x">
                 {({ CardAction }) => (
                     <>
                         <CardAction as="button" onClick={cardActionSpy}>
@@ -70,7 +70,7 @@ describe('<WithCardAction />', () => {
     it('should set refs on <CardAction />', () => {
         const ref = React.createRef<HTMLButtonElement>();
         render(
-            <WithCardAction>
+            <WithCardAction baseClassName="ffe-card-x">
                 {({ CardAction }) => (
                     <CardAction as="button" ref={ref}>
                         en knapp
@@ -85,7 +85,7 @@ describe('<WithCardAction />', () => {
     it('should set refs on <CardAction />', () => {
         const ref = React.createRef<HTMLButtonElement>();
         render(
-            <WithCardAction>
+            <WithCardAction baseClassName="ffe-card-x">
                 {({ CardAction }) => (
                     <CardAction as="button" ref={ref}>
                         en knapp
@@ -95,5 +95,18 @@ describe('<WithCardAction />', () => {
         );
         const button = screen.getByRole('button');
         expect(button).toBe(ref.current);
+    });
+
+    it('should add clickable class to card when using CardAction', () => {
+        const TEST_ID = 'test-id';
+        render(
+            <WithCardAction baseClassName="ffe-card-x" data-testid={TEST_ID}>
+                {({ CardAction }) => (
+                    <CardAction as="button">en knapp</CardAction>
+                )}
+            </WithCardAction>,
+        );
+        const card = screen.getByTestId(TEST_ID);
+        expect(card.classList).toContain('ffe-card-x--clickable');
     });
 });

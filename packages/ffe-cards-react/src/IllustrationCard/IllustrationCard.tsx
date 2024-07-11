@@ -24,6 +24,7 @@ function IllustrationCardWithForwardRef<As extends ElementType>(
     const { className, condensed, img, children, ...rest } = props;
     return (
         <WithCardAction
+            baseClassName="ffe-illustration-card"
             className={classNames(
                 'ffe-illustration-card',
                 { 'ffe-illustration-card--condensed': condensed },
