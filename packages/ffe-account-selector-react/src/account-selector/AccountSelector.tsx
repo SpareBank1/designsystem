@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { AriaAttributes, useState } from 'react';
 import classNames from 'classnames';
 import {
     AccountSuggestionSingle,
@@ -76,7 +76,8 @@ export interface AccountSelectorProps<T extends Account = Account> {
     /** Element to be shown below dropDownList */
     postListElement?: React.ReactNode;
     /** Sets aria-invalid on input field  */
-    ariaInvalid?: React.ComponentProps<'input'>['aria-invalid'];
+    'aria-invalid'?: AriaAttributes['aria-invalid'];
+    ariaInvalid?: AriaAttributes['aria-invalid'];
     /** Prop passed to the dropdown list */
     onOpen?: () => void;
     onClose?: () => void;
@@ -105,6 +106,7 @@ export const AccountSelector = <T extends Account = Account>({
     ariaInvalid,
     onOpen,
     onClose,
+    ...rest
 }: AccountSelectorProps<T>) => {
     const [inputValue, setInputValue] = useState(selectedAccount?.name || '');
 
@@ -174,6 +176,8 @@ export const AccountSelector = <T extends Account = Account>({
           })
         : accounts;
 
+    const _ariaInvalid = rest['aria-invalid'] ?? ariaInvalid;
+
     return (
         <div
             className={classNames('ffe-account-selector-single', className)}
@@ -199,7 +203,7 @@ export const AccountSelector = <T extends Account = Account>({
                 searchAttributes={['name', 'accountNumber']}
                 locale={locale}
                 listElementBody={ListElementBody || AccountSuggestionSingle}
-                ariaInvalid={ariaInvalid}
+                ariaInvalid={_ariaInvalid}
                 searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                 selectedItem={selectedAccount}
                 onOpen={onOpen}
@@ -208,7 +212,7 @@ export const AccountSelector = <T extends Account = Account>({
 
             {!hideAccountDetails && (
                 <AccountDetails
-                    ariaInvalid={ariaInvalid}
+                    ariaInvalid={_ariaInvalid}
                     account={selectedAccount}
                     locale={locale}
                     showBalance={
