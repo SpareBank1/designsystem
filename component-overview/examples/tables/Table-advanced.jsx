@@ -3,7 +3,6 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
 import { formatNumber } from '@sb1/ffe-formatters';
 
 () => {
-
     const Button = ({ children }) => (
         // stopPropagation hindrer at raden ekspanderer/kollapser når vi trykker på knappen
         <TertiaryButton onClick={e => e.stopPropagation()}>
@@ -48,7 +47,8 @@ import { formatNumber } from '@sb1/ffe-formatters';
             button: <Button>poke</Button>,
         },
     ];
-    const currencyCompare = (a, b) => a.replace(/[\s.,]+/g, '') - b.replace(/[\s.,]+/g, '');
+    const currencyCompare = (a, b) =>
+        a.replace(/[\s.,]+/g, '') - b.replace(/[\s.,]+/g, '');
 
     const columns = [
         { key: 'name', header: 'Navn', footer: 'Gjennomsnitt' },
@@ -83,19 +83,21 @@ import { formatNumber } from '@sb1/ffe-formatters';
     const onSort = ({ sortBy, descending, tableData }) => {};
 
     return (
-        <Table
-            columns={columns}
-            data={data}
-            expandedContentMapper={expandedContentMapper}
-            sortable={true}
-            sortBy={'age'}
-            descending={true}
-            condensed={true}
-            smallHeader={true}
-            columnLayoutMobile={true}
-            breakpoint={'none'}
-            caption="Masse spennende data"
-            onSort={onSort}
-        />
+        <div style={{ overflowX: 'auto' }}>
+            <Table
+                columns={columns}
+                data={data}
+                expandedContentMapper={expandedContentMapper}
+                sortable={true}
+                sortBy={'age'}
+                descending={true}
+                condensed={true}
+                smallHeader={true}
+                columnLayoutMobile={true}
+                breakpoint={'none'}
+                caption="Masse spennende data"
+                onSort={onSort}
+            />
+        </div>
     );
-}
+};
