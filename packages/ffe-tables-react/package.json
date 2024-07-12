@@ -26,14 +26,10 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@sb1/ffe-collapse-react": "^4.0.9",
         "@sb1/ffe-icons-react": "^11.0.0",
         "@sb1/ffe-tables": "^14.0.24",
-        "classnames": "^2.3.1",
-        "deep-equal": "^1.0.1",
-        "memoize-one": "^5.0.0",
-        "prop-types": "^15.7.2",
-        "react-lifecycles-compat": "^3.0.4",
-        "shallow-equals": "^1.0.0"
+        "classnames": "^2.3.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.6.4",
