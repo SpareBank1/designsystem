@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-feedback-react",
-    "version": "3.3.15",
+    "version": "3.3.16",
     "description": "React component for ffe-feedback",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -30,7 +30,7 @@
         "@sb1/ffe-collapse-react": "^4.0.10",
         "@sb1/ffe-core-react": "^8.1.6",
         "@sb1/ffe-feedback": "^1.2.22",
-        "@sb1/ffe-form-react": "^20.1.0",
+        "@sb1/ffe-form-react": "^20.1.1",
         "classnames": "^2.3.1",
         "lottie-web": "^5.12.2",
         "uuid": "^9.0.0"

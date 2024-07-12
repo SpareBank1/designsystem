@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.1.0...@sb1/ffe-form-react@20.1.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** onColoredBg kan ikke vare med til children pg av clone ([d815188](https://github.com/SpareBank1/designsystem/commit/d815188da2a68135be68ddc4eaed477c1765baf4))
+
+
+
+
+
 # [20.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.0.4...@sb1/ffe-form-react@20.1.0) (2024-07-11)
 
 

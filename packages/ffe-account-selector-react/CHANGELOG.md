@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [26.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.21...@sb1/ffe-account-selector-react@26.1.0) (2024-07-12)
+
+
+### Features
+
+* **ffe-account-selector-react:** support colored bg ([2066a46](https://github.com/SpareBank1/designsystem/commit/2066a466fac7e45e4d042e433db027d0badfa745))
+
+
+
+
+
 ## [26.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.0.20...@sb1/ffe-account-selector-react@26.0.21) (2024-07-11)
 
 
