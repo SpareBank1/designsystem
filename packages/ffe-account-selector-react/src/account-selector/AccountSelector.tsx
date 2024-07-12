@@ -84,6 +84,8 @@ export interface AccountSelectorProps<T extends Account = Account> {
     selectedAccount?: T;
 
     onReset: () => void;
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
 }
 
 export const AccountSelector = <T extends Account = Account>({
@@ -106,6 +108,7 @@ export const AccountSelector = <T extends Account = Account>({
     ariaInvalid,
     onOpen,
     onClose,
+    onColoredBg,
     ...rest
 }: AccountSelectorProps<T>) => {
     const [inputValue, setInputValue] = useState(selectedAccount?.name || '');
@@ -180,7 +183,11 @@ export const AccountSelector = <T extends Account = Account>({
 
     return (
         <div
-            className={classNames('ffe-account-selector-single', className)}
+            className={classNames(
+                'ffe-account-selector-single',
+                { 'ffe-account-selector-single--on-colored-bg': onColoredBg },
+                className,
+            )}
             id={`${id}-account-selector-container`}
         >
             <SearchableDropdown<T>
