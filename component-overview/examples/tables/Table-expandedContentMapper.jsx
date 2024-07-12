@@ -43,16 +43,18 @@ import Table from '@sb1/ffe-tables-react';
         row.info && <span>Info: {row.info}</span>;
 
     return (
-        <Table
-            columns={columns}
-            data={data}
-            expandedContentMapper={expandedContentMapper}
-            descending={true}
-            condensed={true}
-            smallHeader={true}
-            columnLayoutMobile={true}
-            breakpoint={'none'}
-            caption="Masse spennende data, med en rad som er ekspandert"
-        />
+        <div style={{ overflowX: 'auto' }}>
+            <Table
+                columns={columns}
+                data={data}
+                expandedContentMapper={expandedContentMapper}
+                descending={true}
+                condensed={true}
+                smallHeader={true}
+                columnLayoutMobile={true}
+                breakpoint={'none'}
+                caption="Masse spennende data, med en rad som er ekspandert"
+            />
+        </div>
     );
-}
+};

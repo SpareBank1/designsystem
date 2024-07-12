@@ -13,5 +13,9 @@ import Table from '@sb1/ffe-tables-react';
         { name: 'Sandra', age: 42 },
     ];
 
-    return <Table caption="Utviklere" columns={columns} data={data} />;
-}
+    return (
+        <div style={{ overflowX: 'auto' }}>
+            <Table caption="Utviklere" columns={columns} data={data} />
+        </div>
+    );
+};
