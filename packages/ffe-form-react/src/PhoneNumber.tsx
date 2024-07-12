@@ -155,6 +155,15 @@ export const PhoneNumber = React.forwardRef<
                             {isMobileNumber
                                 ? text.MOBILE_NUMBER
                                 : text.PHONE_NUMBER}
+                            {numberInputProps?.required && (
+                                <span
+                                    className="ffe-form-label__required"
+                                    aria-hidden="true"
+                                >
+                                    {' '}
+                                    *
+                                </span>
+                            )}
                         </label>
                         <input
                             ref={numberRef}
