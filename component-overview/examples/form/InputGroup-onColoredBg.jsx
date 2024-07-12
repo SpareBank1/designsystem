@@ -86,7 +86,9 @@ import { fargeFjell } from '@sb1/ffe-core';
                 fieldMessage={showErrors ? 'Ooops' : null}
                 onColoredBg={true}
             >
-                <Checkbox name="check">Kryssboks</Checkbox>
+                <Checkbox name="check" onColoredBg={true}>
+                    Kryssboks
+                </Checkbox>
             </InputGroup>
         </div>
     );
