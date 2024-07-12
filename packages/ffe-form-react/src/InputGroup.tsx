@@ -9,7 +9,6 @@ type ChildrenExtraProps = {
     id: string;
     'aria-invalid': 'true' | 'false';
     'aria-describedby': string | undefined;
-    onColoredBg?: boolean;
 };
 
 export interface InputGroupProps
@@ -127,7 +126,6 @@ export const InputGroup: React.FC<InputGroupProps> = ({
         id,
         'aria-invalid': isInvalid ? 'true' : 'false',
         'aria-describedby': ariaDescribedBy,
-        onColoredBg,
     } as const;
 
     const modifiedChildren = getChildrenWithExtraProps(children, extraProps);
@@ -193,7 +191,6 @@ export const InputGroup: React.FC<InputGroupProps> = ({
             {React.isValidElement(fieldMessage) &&
                 React.cloneElement(fieldMessage, {
                     id: fieldMessageId,
-                    onColoredBg,
                 })}
         </div>
     );
