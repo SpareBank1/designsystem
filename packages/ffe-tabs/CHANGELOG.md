@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.1.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@13.1.25...@sb1/ffe-tabs@13.1.26) (2024-07-12)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** fikser typo i css property ([a23c1b7](https://github.com/SpareBank1/designsystem/commit/a23c1b7741062ca020ee9a678d92c476b24bb8c2))
+
+
+
+
+
 ## [13.1.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@13.1.24...@sb1/ffe-tabs@13.1.25) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
