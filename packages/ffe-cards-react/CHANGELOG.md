@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.2.3...@sb1/ffe-cards-react@17.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-cards-react:** upgrade react to >=18.2.0 ([f6c06b0](https://github.com/SpareBank1/designsystem/commit/f6c06b085e6ab6bff31dfbe7dec6332448ec9e0b))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [16.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@16.2.2...@sb1/ffe-cards-react@16.2.3) (2024-07-11)
 
 

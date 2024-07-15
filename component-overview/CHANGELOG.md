@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.1.8...@sb1/ffe-component-index@8.2.0) (2024-07-15)
+
+
+### Features
+
+* **component-overview:** upgrade react ([a96c8a8](https://github.com/SpareBank1/designsystem/commit/a96c8a8deea187d23b090d8362a8c84485896ec0))
+
+
+
+
+
 ## [8.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.1.7...@sb1/ffe-component-index@8.1.8) (2024-07-15)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

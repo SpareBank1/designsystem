@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@19.0.14...@sb1/ffe-searchable-dropdown-react@20.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** upgrade react to >=18.2.0 ([06e25c2](https://github.com/SpareBank1/designsystem/commit/06e25c2ceb51403c34b93276b628f942646dc1ce))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [19.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@19.0.13...@sb1/ffe-searchable-dropdown-react@19.0.14) (2024-07-11)
 
 

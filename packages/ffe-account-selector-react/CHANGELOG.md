@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [27.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.1.1...@sb1/ffe-account-selector-react@27.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-account-selector-react:** upgrade react to >=18.2.0 ([9394364](https://github.com/SpareBank1/designsystem/commit/93943644bf73ec006af3e77f7ee26683d831e64b))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [26.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@26.1.0...@sb1/ffe-account-selector-react@26.1.1) (2024-07-15)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

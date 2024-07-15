@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@8.1.6...@sb1/ffe-core-react@9.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-core-react:** upgrade react to >=18.2.0 ([24bb389](https://github.com/SpareBank1/designsystem/commit/24bb3892abb0aefe08023e8d2f68e327d708e60a))
+
+
+### BREAKING CHANGES
+
+* **ffe-core-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [8.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@8.1.5...@sb1/ffe-core-react@8.1.6) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-core-react

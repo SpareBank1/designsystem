@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.1.2...@sb1/ffe-form-react@21.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-form-react:** upgrade react to >=18.2.0 ([75dfb1f](https://github.com/SpareBank1/designsystem/commit/75dfb1f429e4c596b53d7b516360e8dca5615c1a))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [20.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.1.1...@sb1/ffe-form-react@20.1.2) (2024-07-15)
 
 

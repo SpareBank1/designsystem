@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@14.1.5...@sb1/ffe-grid-react@15.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-grid-react:** upgrade react to >=18.2.0 ([3f6c17e](https://github.com/SpareBank1/designsystem/commit/3f6c17e281dbb73f7970d55f045060e66d8de428))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [14.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@14.1.4...@sb1/ffe-grid-react@14.1.5) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@8.0.38...@sb1/ffe-tables-react@9.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-tables-react:** upgrade react to >=18.2.0 ([01e81c0](https://github.com/SpareBank1/designsystem/commit/01e81c0f4a10e61b75288521ff41b561a97af163))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [8.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@8.0.37...@sb1/ffe-tables-react@8.0.38) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

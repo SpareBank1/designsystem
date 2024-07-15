@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@10.1.1...@sb1/ffe-lists-react@11.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-lists-react:** upgrade react to >=18.2.0 ([aa359f5](https://github.com/SpareBank1/designsystem/commit/aa359f5f0000be0332c5e4462169b2b2d559aa29))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@10.1.0...@sb1/ffe-lists-react@10.1.1) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react

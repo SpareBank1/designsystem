@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@12.0.17...@sb1/ffe-accordion-react@13.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-accordion-react:** upgrade react to >=18.2.0 ([397b83e](https://github.com/SpareBank1/designsystem/commit/397b83ef400c2dd28ce6559b9eb8fe457f057ffc))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [12.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@12.0.16...@sb1/ffe-accordion-react@12.0.17) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

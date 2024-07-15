@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.7...@sb1/ffe-modals-react@0.4.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-modals-react:** upgrade react to >=18.2.0 ([3e1e67f](https://github.com/SpareBank1/designsystem/commit/3e1e67fc0ad5707ccc01e9d3f1b55475c05a3c38))
+
+
+### BREAKING CHANGES
+
+* **ffe-modals-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [0.3.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.3.6...@sb1/ffe-modals-react@0.3.7) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react

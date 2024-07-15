@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@4.0.10...@sb1/ffe-collapse-react@5.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-collapse-react:** upgrade react to >=18.2.0 ([74f0f56](https://github.com/SpareBank1/designsystem/commit/74f0f56298a82fe08ae5d1f51aaf330139efe23d))
+
+
+### BREAKING CHANGES
+
+* **ffe-collapse-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@4.0.9...@sb1/ffe-collapse-react@4.0.10) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-collapse-react

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@8.0.9...@sb1/ffe-spinner-react@9.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-spinner-react:** upgrade react to >=18.2.0 ([748c04b](https://github.com/SpareBank1/designsystem/commit/748c04b136d2c303948751b6a963d5de53c2f66d))
+
+
+### BREAKING CHANGES
+
+* **ffe-spinner-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@8.0.8...@sb1/ffe-spinner-react@8.0.9) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react

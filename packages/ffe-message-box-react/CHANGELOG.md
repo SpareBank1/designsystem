@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@12.0.6...@sb1/ffe-message-box-react@13.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-message-box-react:** upgrade react to >=18.2.0 ([f0be0c5](https://github.com/SpareBank1/designsystem/commit/f0be0c5963881636bf74d88f8df27980f9a057f4))
+
+
+### BREAKING CHANGES
+
+* **ffe-message-box-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@12.0.5...@sb1/ffe-message-box-react@12.0.6) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

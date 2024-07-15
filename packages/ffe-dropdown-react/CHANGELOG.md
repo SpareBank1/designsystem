@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@7.0.13...@sb1/ffe-dropdown-react@8.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-dropdown-react:** upgrade react to >=18.2.0 ([f178bb1](https://github.com/SpareBank1/designsystem/commit/f178bb12e2fa579eec14ed378484f76d6a5f44b5))
+
+
+### BREAKING CHANGES
+
+* **ffe-dropdown-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [7.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@7.0.12...@sb1/ffe-dropdown-react@7.0.13) (2024-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

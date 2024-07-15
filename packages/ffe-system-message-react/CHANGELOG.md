@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@10.0.7...@sb1/ffe-system-message-react@11.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-system-message-react:** upgrade react to >=18.2.0 ([4d0f98e](https://github.com/SpareBank1/designsystem/commit/4d0f98ede8c7ed6f57029d59d6bc4c2b2afb9f6f))
+
+
+### BREAKING CHANGES
+
+* **ffe-system-message-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [10.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@10.0.6...@sb1/ffe-system-message-react@10.0.7) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

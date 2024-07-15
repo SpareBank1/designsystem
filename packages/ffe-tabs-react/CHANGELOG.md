@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@9.0.8...@sb1/ffe-tabs-react@10.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-tabs-react:** upgrade react to >=18.2.0 ([a403bcf](https://github.com/SpareBank1/designsystem/commit/a403bcfa33f02bd0d5b0b598ade1e131fc96c3dc))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [9.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@9.0.7...@sb1/ffe-tabs-react@9.0.8) (2024-07-12)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@23.0.8...@sb1/ffe-buttons-react@24.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-buttons-react:** upgrade react to >=18.2.0 ([920d2d5](https://github.com/SpareBank1/designsystem/commit/920d2d5227370d5a0d6ffe3eb2f35bb98eae9319))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [23.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@23.0.7...@sb1/ffe-buttons-react@23.0.8) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

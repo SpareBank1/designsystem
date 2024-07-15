@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@6.0.4...@sb1/ffe-symbols-react@7.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-symbols-react:** upgrade react to >=18.2.0 ([46ebedb](https://github.com/SpareBank1/designsystem/commit/46ebedbae7d7d1e28f9aea410391d6070b99f73e))
+
+
+### BREAKING CHANGES
+
+* **ffe-symbols-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@6.0.3...@sb1/ffe-symbols-react@6.0.4) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-symbols-react

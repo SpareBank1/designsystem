@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@10.0.5...@sb1/ffe-icons-react@11.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-icons-react:** upgrade react to >=18.2.0 ([80407ca](https://github.com/SpareBank1/designsystem/commit/80407caacb2cc43591009524a9be370be259241b))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [10.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@10.0.4...@sb1/ffe-icons-react@10.0.5) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

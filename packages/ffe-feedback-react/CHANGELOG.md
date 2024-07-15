@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.3.17...@sb1/ffe-feedback-react@4.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-feedback-react:** upgrade react to >=18.2.0 ([9c0a0f0](https://github.com/SpareBank1/designsystem/commit/9c0a0f035f1fa4d88120500a67472f14b5f92cfc))
+
+
+### BREAKING CHANGES
+
+* **ffe-feedback-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [3.3.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@3.3.16...@sb1/ffe-feedback-react@3.3.17) (2024-07-15)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

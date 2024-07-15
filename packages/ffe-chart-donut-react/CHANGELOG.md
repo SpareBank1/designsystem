@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@6.0.3...@sb1/ffe-chart-donut-react@7.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-chart-donut-react:** upgrade react to >=18.2.0 ([9642b68](https://github.com/SpareBank1/designsystem/commit/9642b683d3a87252a86e24aa5621b2c5401875d4))
+
+
+### BREAKING CHANGES
+
+* **ffe-chart-donut-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@6.0.2...@sb1/ffe-chart-donut-react@6.0.3) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react

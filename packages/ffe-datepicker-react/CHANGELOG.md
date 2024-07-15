@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@8.0.20...@sb1/ffe-datepicker-react@9.0.0) (2024-07-15)
+
+
+### Features
+
+* **ffe-datepicker-react:** upgrade react to >=18.2.0 ([7841843](https://github.com/SpareBank1/designsystem/commit/7841843bc3578a141478c41e58fd534e99209767))
+
+
+### BREAKING CHANGES
+
+* **ffe-datepicker-react:** Dropped support for React <18.2.0
+
+
+
+
+
 ## [8.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@8.0.19...@sb1/ffe-datepicker-react@8.0.20) (2024-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
