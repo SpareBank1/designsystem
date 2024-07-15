@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.1.1...@sb1/ffe-form-react@20.1.2) (2024-07-15)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** fikser advarsel ([f6976ff](https://github.com/SpareBank1/designsystem/commit/f6976ff09468c7a2f35b31701f19f23ab6fed2f2))
+
+
+
+
+
 ## [20.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@20.1.0...@sb1/ffe-form-react@20.1.1) (2024-07-12)
 
 
