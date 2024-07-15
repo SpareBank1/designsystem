@@ -20,7 +20,7 @@ export default function TocFilter({
                 className="sb1ex-toc-filter__input-group"
                 label="Filtrer"
             >
-                <Input value={value} onChange={cb} {...conditionalTabIndex} />
+                {<Input value={value} onChange={cb} {...conditionalTabIndex} />}
             </InputGroup>
             {value.length > 0 && (
                 <TertiaryButton onClick={() => onChange('')}>

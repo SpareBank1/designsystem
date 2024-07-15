@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    render,
-    fireEvent,
-    screen,
-    waitFor,
-    act,
-} from '@testing-library/react';
+import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Account } from '../types';
 import { AccountSuggestionSingleProps } from './AccountSuggestionSingle';
@@ -530,11 +524,9 @@ describe('<AccountSelector/>', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await act(async () => {
-            await user.click(input);
-            await user.type(input, '{arrowdown}');
-            await user.type(input, '{enter}');
-        });
+        await user.click(input);
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{enter}');
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -546,10 +538,9 @@ describe('<AccountSelector/>', () => {
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
-        await act(async () => {
-            await user.clear(input);
-            await user.click(screen.getByText('Knapp'));
-        });
+
+        await user.clear(input);
+        await user.click(screen.getByText('Knapp'));
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -584,9 +575,7 @@ describe('<AccountSelector/>', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await act(async () => {
-            await user.click(input);
-        });
+        await user.click(input);
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -599,9 +588,7 @@ describe('<AccountSelector/>', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await act(async () => {
-            await user.type(input, 'spare');
-        });
+        await user.type(input, 'spare');
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -612,10 +599,8 @@ describe('<AccountSelector/>', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await act(async () => {
-            await user.clear(input);
-            await user.type(input, 'ingen');
-        });
+        await user.clear(input);
+        await user.type(input, 'ingen');
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -626,9 +611,7 @@ describe('<AccountSelector/>', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await act(async () => {
-            await user.click(screen.getByText('Knapp'));
-        });
+        await user.click(screen.getByText('Knapp'));
 
         expect(a11yStatusMessage).toHaveTextContent('');
         jest.useRealTimers();

@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { useEffect, useRef, useState, useContext, useId } from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
@@ -34,8 +33,8 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
     const [isExpanded, setIsExpanded] = useState(defaultOpen);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isFocused, setFocus] = useState(false);
-    const buttonId = useRef(uuid());
-    const contentId = useRef(uuid());
+    const buttonId = useId();
+    const contentId = useId();
     const { headingLevel } = useContext(AccordionContext);
 
     const expandMoreIcon =
@@ -71,9 +70,9 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
                 { className: 'ffe-h6 ffe-accordion-item__heading' },
                 <button
                     type="button"
-                    id={buttonId.current}
+                    id={buttonId}
                     aria-expanded={isExpanded ? 'true' : 'false'}
-                    aria-controls={contentId.current}
+                    aria-controls={contentId}
                     aria-label={ariaLabel}
                     className={classNames(
                         'ffe-accordion-item__heading-button',
@@ -101,8 +100,8 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
             <Collapse
                 isOpen={!!isExpanded}
                 onRest={() => setIsAnimating(false)}
-                id={contentId.current}
-                aria-labelledby={buttonId.current}
+                id={contentId}
+                aria-labelledby={buttonId}
                 role="region"
             >
                 {!collapseHidden && (

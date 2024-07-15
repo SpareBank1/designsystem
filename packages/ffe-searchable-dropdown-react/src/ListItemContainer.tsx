@@ -1,5 +1,4 @@
-import React, { useRef, ForwardedRef } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { useId, ForwardedRef } from 'react';
 import { fixedForwardRef } from './fixedForwardRef';
 
 interface ListItemContainerProps<Item extends Record<string, any>> {
@@ -26,7 +25,7 @@ function ListItemContainerWithForwardRef<Item extends Record<string, any>>(
     }: ListItemContainerProps<Item>,
     ref: ForwardedRef<any>,
 ) {
-    const id = useRef(`ìtem-${uuid()}`).current;
+    const id = useId();
     return (
         // eslint-disable-next-line jsx-a11y/interactive-supports-focus
         <div

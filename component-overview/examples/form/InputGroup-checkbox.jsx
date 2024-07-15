@@ -1,12 +1,11 @@
-import { useRef, useState } from 'react';
+import { useState, useId } from 'react';
 import { InputGroup, Checkbox } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import { v4 as uuid } from "uuid";
 
 () => {
     const [showErrors, setShowErrors] = useState(false);
 
-    const name = useRef(`check-${uuid()}`).current;
+    const name = useId();
 
     return (
         <>
@@ -20,4 +19,4 @@ import { v4 as uuid } from "uuid";
             </InputGroup>
         </>
     );
-}
+};

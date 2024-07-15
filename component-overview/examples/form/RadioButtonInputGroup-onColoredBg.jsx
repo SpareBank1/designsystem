@@ -1,11 +1,10 @@
-import { useState, useRef } from 'react';
+import { useState, useId } from 'react';
 import {
     RadioButtonInputGroup,
     RadioButton,
     Tooltip,
 } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import { v4 as uuid } from 'uuid';
 import { fargeFjell } from '@sb1/ffe-core';
 
 () => {
@@ -13,8 +12,9 @@ import { fargeFjell } from '@sb1/ffe-core';
     const [selectedColor, setSelectedColor] = useState('red');
     const [selectedSmell, setSelectedSmell] = useState();
 
-    const colorName = useRef(`color-${uuid()}`).current;
-    const smellName = useRef(`small-${uuid()}`).current;
+    // just be unique in docs demo
+    const colorName = useId();
+    const smellName = useId();
 
     return (
         <div style={{ background: fargeFjell, padding: 16 }}>

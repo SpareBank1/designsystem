@@ -1,14 +1,10 @@
-import {useRef, useState} from 'react';
-import {
-    RadioButtonInputGroup,
-    RadioBlock,
-} from '@sb1/ffe-form-react';
+import { useState, useId } from 'react';
+import { RadioButtonInputGroup, RadioBlock } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import { v4 as uuid } from "uuid";
 
 () => {
     const [showErrors, setShowErrors] = useState(false);
-    const blockName = useRef(`block-${uuid()}`).current;
+    const blockName = useId();
     const [yesOrNoBlockRadio, setYesOrNoBlockRadio] = useState('yes');
 
     return (
@@ -41,4 +37,4 @@ import { v4 as uuid } from "uuid";
             </RadioButtonInputGroup>
         </>
     );
-}
+};

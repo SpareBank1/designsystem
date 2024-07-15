@@ -1,5 +1,4 @@
-import React, { useRef, useImperativeHandle } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { useRef, useImperativeHandle, useId } from 'react';
 import classNames from 'classnames';
 import i18n from './i18n/i18n';
 import { ErrorFieldMessage } from './message';
@@ -91,13 +90,12 @@ export const PhoneNumber = React.forwardRef<
             numberFieldMessage,
         );
 
-        const numberId = useRef(uuid()).current;
-        const countryCodeId = useRef(uuid()).current;
-        const fieldMessageId = useRef(
-            React.isValidElement(fieldMessage)
-                ? fieldMessage?.props?.id
-                : uuid(),
-        ).current;
+        const numberId = useId();
+        const countryCodeId = useId();
+        const generatedFieldMessageId = useId();
+        const fieldMessageId = React.isValidElement(fieldMessage)
+            ? fieldMessage?.props?.id
+            : generatedFieldMessageId;
 
         const supportedLocales = ['nb', 'nn', 'en'];
         const text =

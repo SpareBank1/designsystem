@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useId } from 'react';
 import classNames from 'classnames';
-import { v4 as uuid } from 'uuid';
 
 export interface RadioBlockProps
     extends React.ComponentPropsWithoutRef<'input'> {
@@ -36,7 +35,7 @@ export const RadioBlock = React.forwardRef<HTMLInputElement, RadioBlockProps>(
         },
         ref,
     ) => {
-        const id = useRef(`radio-block-${uuid()}`).current;
+        const id = useId();
 
         const isSelected = checked || selectedValue === value;
 

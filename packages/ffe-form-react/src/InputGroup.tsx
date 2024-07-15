@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { useId } from 'react';
 import { Tooltip, TooltipProps } from './Tooltip';
 import { Label } from './Label';
 import classNames from 'classnames';
@@ -73,7 +72,8 @@ export const InputGroup: React.FC<InputGroupProps> = ({
     onColoredBg,
     ...rest
 }) => {
-    const id = useRef(inputId ? inputId : `input-${uuid()}`).current;
+    const generatedInputId = useId();
+    const id = inputId ?? generatedInputId;
     const descriptionId = description ? `${id}-description` : undefined;
 
     if (React.Children.count(children) > 1) {

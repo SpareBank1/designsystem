@@ -1,11 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useId } from 'react';
 import { flushSync } from 'react-dom';
 import { Animation } from './Animation';
 import { txt } from './i18n/texts';
 import { FeedbackThumbs, Thumb } from './FeedbackThumbs';
 import classNames from 'classnames';
 import { FeedbackExpanded, FeedbackExpandedProps } from './FeedbackExpanded';
-import { v4 as uuid } from 'uuid';
 
 export interface FeedbackProps {
     headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
@@ -36,7 +35,7 @@ export const Feedback: React.FC<FeedbackProps> = ({
     const [feedbackThumbClicked, setFeedbackThumbClicked] = useState<Thumb>();
     const [expanded, setExpanded] = useState(false);
     const [feedbackSent, setFeedbackSent] = useState(false);
-    const headingId = useRef(uuid()).current;
+    const headingId = useId();
 
     const feedbackClassnames = classNames('ffe-feedback', {
         [`ffe-feedback--bg-${bgColor}`]: bgColor,

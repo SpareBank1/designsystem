@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useId } from 'react';
 import classNames from 'classnames';
-import { v4 as uuid } from 'uuid';
 import { Tooltip, TooltipProps } from './Tooltip';
 
 export interface BaseRadioButtonProps
@@ -35,7 +34,7 @@ export const BaseRadioButton = React.forwardRef<
         },
         ref,
     ) => {
-        const id = useRef(`base-radio-button-${uuid()}`).current;
+        const id = useId();
 
         const labelClasses = classNames(
             { 'ffe-radio-button--with-tooltip': tooltip },

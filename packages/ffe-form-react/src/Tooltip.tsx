@@ -1,7 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useId } from 'react';
 import classNames from 'classnames';
 import { Collapse } from '@sb1/ffe-collapse-react';
-import { v4 as uuid } from 'uuid';
 
 export interface TooltipProps
     extends Pick<
@@ -34,8 +33,8 @@ export const Tooltip = React.forwardRef<HTMLButtonElement, TooltipProps>(
         },
         ref,
     ) => {
-        const tooltipButtonId = useRef(uuid()).current;
-        const tooltipId = useRef(uuid()).current;
+        const tooltipButtonId = useId();
+        const tooltipId = useId();
 
         const [isOpen, setIsOpen] = useState(!!initialIsOpen);
 

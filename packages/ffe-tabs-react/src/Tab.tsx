@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export interface TabProps extends React.ComponentPropsWithoutRef<'button'> {
+export interface TabProps extends React.ComponentPropsWithRef<'button'> {
     selected?: boolean;
 }
 
