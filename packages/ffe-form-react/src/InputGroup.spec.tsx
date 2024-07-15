@@ -153,6 +153,10 @@ describe('<InputGroup>', () => {
     });
 
     it('throws error when receiving multiple children', () => {
+        const consoleErrorMock = jest
+            .spyOn(console, 'error')
+            .mockImplementation();
+
         const renderWithTooManyChildren = () =>
             renderInputGroup({
                 children: [
@@ -162,21 +166,27 @@ describe('<InputGroup>', () => {
                 ],
             });
 
-        expect(renderWithTooManyChildren).toThrowError(
+        expect(renderWithTooManyChildren).toThrow(
             /This element does not support more than one child/,
         );
+
+        consoleErrorMock.mockRestore();
     });
 
     it('throws error when receiving a <Tooltip /> and onTooltipToggle is used', () => {
+        const consoleErrorMock = jest
+            .spyOn(console, 'error')
+            .mockImplementation();
         const renderWithError = () =>
             renderInputGroup({
                 tooltip: <Tooltip>Message</Tooltip>,
                 onTooltipToggle: f => f,
             });
 
-        expect(renderWithError).toThrowError(
+        expect(renderWithError).toThrow(
             /Only use the "onTooltipToggle" prop if you're not sending a component/,
         );
+        consoleErrorMock.mockRestore();
     });
 
     it('renders a <Tooltip /> with onTooltipToggle as an onClick if tooltip is true', async () => {
@@ -225,11 +235,15 @@ describe('<InputGroup>', () => {
     });
 
     it('throws if both tooltip and description is set', () => {
+        const consoleErrorMock = jest
+            .spyOn(console, 'error')
+            .mockImplementation();
         expect(() =>
             renderInputGroup({ description: 'asda', tooltip: 'asdsad' }),
         ).toThrow(
             'Don\'t use both "tooltip" and "description" on an <InputGroup />, pick one of them',
         );
+        consoleErrorMock.mockRestore();
     });
 
     it('sets aria-describedby with two ids when both fieldMessage and description are defined', () => {
