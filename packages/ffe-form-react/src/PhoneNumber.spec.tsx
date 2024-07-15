@@ -5,7 +5,19 @@ import userEvent from '@testing-library/user-event';
 import { PhoneNumber, PhoneNumberProps } from './PhoneNumber';
 
 const renderPhoneNumber = (props?: PhoneNumberProps) =>
-    render(<PhoneNumber {...props} />);
+    render(
+        <PhoneNumber
+            {...props}
+            numberInputProps={{
+                onChange: () => {},
+                ...props?.numberInputProps,
+            }}
+            countryCodeInputProps={{
+                onChange: () => {},
+                ...props?.countryCodeInputProps,
+            }}
+        />,
+    );
 
 describe('<PhoneNumber/>', () => {
     it('should default to norwegian country code', () => {
