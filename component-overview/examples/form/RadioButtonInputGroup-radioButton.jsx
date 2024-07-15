@@ -1,16 +1,15 @@
-import {useRef, useState} from 'react';
+import { useId, useState } from 'react';
 import {
     RadioButtonInputGroup,
     RadioButton,
     Tooltip,
 } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import { v4 as uuid } from "uuid";
 
 () => {
     const [showErrors, setShowErrors] = useState(false);
     const [selectedColor, setSelectedColor] = useState('red');
-    const colorName = useRef(`color-${uuid()}`).current;
+    const colorName = useId();
 
     return (
         <>
@@ -48,4 +47,4 @@ import { v4 as uuid } from "uuid";
             </RadioButtonInputGroup>
         </>
     );
-}
+};

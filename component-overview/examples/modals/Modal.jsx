@@ -1,3 +1,4 @@
+import { useRef, useId } from 'react';
 import { Modal, ModalBlock } from '@sb1/ffe-modals-react';
 import {
     SecondaryButton,
@@ -5,12 +6,10 @@ import {
     ButtonGroup,
 } from '@sb1/ffe-buttons-react';
 import { Heading2, Paragraph } from '@sb1/ffe-core-react';
-import { useRef } from 'react';
-import { v4 as uuid } from 'uuid';
 
 () => {
     const modalRef = useRef();
-    const headingId = useRef(uuid()).current;
+    const headingId = useId();
 
     return (
         <>

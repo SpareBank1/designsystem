@@ -1,14 +1,10 @@
-import {useRef, useState} from 'react';
-import {
-    RadioButtonInputGroup,
-    RadioSwitch,
-} from '@sb1/ffe-form-react';
+import { useState, useId } from 'react';
+import { RadioButtonInputGroup, RadioSwitch } from '@sb1/ffe-form-react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import { v4 as uuid } from "uuid";
 
 () => {
     const [showErrors, setShowErrors] = useState(false);
-    const switchName = useRef(`switch-${uuid()}`).current;
+    const switchName = useId();
 
     return (
         <>
@@ -35,4 +31,4 @@ import { v4 as uuid } from "uuid";
             </RadioButtonInputGroup>
         </>
     );
-}
+};
