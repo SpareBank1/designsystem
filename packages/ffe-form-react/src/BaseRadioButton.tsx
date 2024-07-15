@@ -30,6 +30,7 @@ export const BaseRadioButton = React.forwardRef<
             tooltip,
             tooltipProps = {},
             value,
+            onChange = () => {},
             ...inputProps
         },
         ref,
@@ -50,8 +51,9 @@ export const BaseRadioButton = React.forwardRef<
                     id={id}
                     ref={ref}
                     type="radio"
-                    checked={isSelected}
+                    checked={!!isSelected}
                     value={`${value}`}
+                    onChange={onChange}
                     {...inputProps}
                 />
                 <label htmlFor={id} {...labelProps} className={labelClasses}>
