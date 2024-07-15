@@ -5,6 +5,10 @@
     "author": "SpareBank 1",
     "license": "SEE LICENSE IN README.md",
     "private": true,
+    "browserslist": [
+        "last 3 versions",
+        "not ie >= 0"
+    ],
     "scripts": {
         "clean": "run-s clean:lib clean:lerna:clean clean:lerna",
         "clean:lib": "rimraf packages/*/lib packages/*/es packages/*/types",
@@ -42,8 +46,10 @@
         "@commitlint/config-conventional": "^19.2.2",
         "@playwright/test": "^1.43.1",
         "@testing-library/dom": "^10.1.0",
-        "@testing-library/react": "^12.1.4",
+        "@testing-library/react": "^16.0.0",
         "@testing-library/user-event": "^14.5.2",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "18.3.0",
         "@typescript-eslint/eslint-plugin": "^7.8.0",
         "@typescript-eslint/parser": "^7.8.0",
         "case": "^1.5.5",
@@ -56,8 +62,8 @@
         "mkdirp": "^3.0.1",
         "npm-run-all": "^4.1.5",
         "prettier": "^3.3.2",
-        "react": "^16.9.0",
-        "react-dom": "^16.9.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "rimraf": "^5.0.7",
         "typescript": "^5.4.3"
     }
