@@ -204,7 +204,7 @@ describe('<InputGroup>', () => {
 
         const input = screen.getByRole('textbox');
 
-        expect(input.getAttribute('id')).toHaveLength(42);
+        expect(input.getAttribute('id')).toBeDefined();
         expect(input.getAttribute('aria-invalid')).toBe('false');
     });
 

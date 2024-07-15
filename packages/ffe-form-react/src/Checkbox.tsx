@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { useId } from 'react';
 import classNames from 'classnames';
 
 export interface CheckboxProps
@@ -32,7 +31,8 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         },
         ref,
     ) => {
-        const generatedId = useRef(id ?? `checkbox-${uuid()}`).current;
+        const generatedId = useId();
+        const inputId = id ?? generatedId;
         const labelProps = {
             className: classNames({
                 'ffe-checkbox': true,
@@ -41,7 +41,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                 'ffe-checkbox--hidden-label': hiddenLabel,
                 'ffe-checkbox--on-colored-bg': onColoredBg,
             }),
-            htmlFor: generatedId,
+            htmlFor: inputId,
         };
 
         return (
@@ -49,7 +49,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                 <input
                     ref={ref}
                     className="ffe-hidden-checkbox"
-                    id={generatedId}
+                    id={inputId}
                     type="checkbox"
                     {...rest}
                 />
