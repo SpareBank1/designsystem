@@ -7,13 +7,13 @@ import React, {
     useEffect,
     ForwardedRef,
     AriaAttributes,
+    useId,
 } from 'react';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
 
 import { ListItemBody } from './ListItemBody';
 import { getButtonLabelClose, getButtonLabelOpen } from './translations';
-import { v4 as uuid } from 'uuid';
 import { createReducer } from './reducer';
 import { getListToRender } from './getListToRender';
 import { scrollIntoView } from './scrollIntoView';
@@ -156,7 +156,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
 
     const ListItemBodyElement = CustomListItemBody || ListItemBody;
     const listBoxRef = useRef<HTMLDivElement>(null);
-    const noMatchMessageId = useRef(uuid());
+    const noMatchMessageId = useId();
     const shouldFocusToggleButton = useRef(false);
     const shouldFocusInput = useRef(false);
 
@@ -340,7 +340,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                     aria-describedby={
                         [
                             inputProps?.['aria-describedby'],
-                            state.noMatch && noMatchMessageId.current,
+                            state.noMatch && noMatchMessageId,
                         ]
                             .filter(Boolean)
                             .join(' ') || undefined
@@ -359,9 +359,9 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                     aria-haspopup="listbox"
                     aria-activedescendant={
                         state.highlightedIndex >= 0
-                            ? refs[
+                            ? (refs[
                                   state.highlightedIndex
-                              ]?.current?.getAttribute('id') ?? undefined
+                              ]?.current?.getAttribute('id') ?? undefined)
                             : undefined
                     }
                     aria-invalid={rest['aria-invalid'] ?? ariaInvalid}
@@ -419,7 +419,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                                 onChange?.(item);
                             }}
                             noMatch={state.noMatch ? noMatch : undefined}
-                            noMatchMessageId={noMatchMessageId.current}
+                            noMatchMessageId={noMatchMessageId}
                         />
                     )}
                     {postListElement && (

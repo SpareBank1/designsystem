@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, act, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { SearchableDropdown } from './SearchableDropdown';
 
@@ -380,11 +380,9 @@ describe('SearchableDropdown', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await act(async () => {
-            await user.click(input);
-            await user.type(input, '{arrowdown}');
-            await user.type(input, '{enter}');
-        });
+        await user.click(input);
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{enter}');
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -397,10 +395,8 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await act(async () => {
-            await user.clear(input);
-            await user.click(screen.getByText('Knapp'));
-        });
+        await user.clear(input);
+        await user.click(screen.getByText('Knapp'));
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -438,9 +434,7 @@ describe('SearchableDropdown', () => {
 
         const input = await screen.findByRole('combobox');
 
-        await act(async () => {
-            await user.click(input);
-        });
+        await user.click(input);
 
         const a11yStatusMessage = await screen.findByRole('status');
 
@@ -453,9 +447,7 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await act(async () => {
-            await user.type(input, 'be');
-        });
+        await user.type(input, 'be');
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -466,10 +458,8 @@ describe('SearchableDropdown', () => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
 
-        await act(async () => {
-            await user.clear(input);
-            await user.type(input, 'ingen');
-        });
+        await user.clear(input);
+        await user.type(input, 'ingen');
 
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent(
@@ -479,9 +469,8 @@ describe('SearchableDropdown', () => {
         await waitFor(() => {
             expect(a11yStatusMessage).toHaveTextContent('');
         });
-        await act(async () => {
-            await user.click(screen.getByText('Knapp'));
-        });
+
+        await user.click(screen.getByText('Knapp'));
 
         expect(a11yStatusMessage).toHaveTextContent('');
         jest.useRealTimers();
@@ -541,15 +530,13 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        await act(async () => {
-            await user.type(input, 'Be');
+        await user.type(input, 'Be');
 
-            await user.click(screen.getByText('Bedriften'));
+        await user.click(screen.getByText('Bedriften'));
 
-            await user.clear(input);
+        await user.clear(input);
 
-            await user.click(screen.getByText('Knapp'));
-        });
+        await user.click(screen.getByText('Knapp'));
 
         expect(onChange).toHaveBeenCalledTimes(2);
         expect(onChange).toHaveBeenCalledWith(null);
@@ -640,15 +627,12 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        await act(async () => {
-            await user.clear(input);
-            await user.type(input, 'Besla');
-        });
+        await user.clear(input);
+        await user.type(input, 'Besla');
 
         expect(input.getAttribute('value')).toEqual('Besla');
-        await act(async () => {
-            await user.click(screen.getByText('Knapp'));
-        });
+
+        await user.click(screen.getByText('Knapp'));
 
         expect(input.getAttribute('value')).toEqual('Beslag skytter');
     });
@@ -827,10 +811,8 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        await act(async () => {
-            await user.click(input);
-            await user.click(screen.getByText('Knapp'));
-        });
+        await user.click(input);
+        await user.click(screen.getByText('Knapp'));
 
         expect(onChange).not.toHaveBeenCalled();
     });
@@ -875,9 +857,8 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
         await user.click(input);
-        await act(async () => {
-            await user.click(screen.getByText('Knapp'));
-        });
+        await user.click(screen.getByText('Knapp'));
+
         expect(onChange).not.toHaveBeenCalled();
     });
 
@@ -907,9 +888,8 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        await act(async () => {
-            await user.click(screen.getByText('Knapp'));
-        });
+        await user.click(screen.getByText('Knapp'));
+
         expect(onChange).not.toHaveBeenCalled();
         expect(input.getAttribute('value')).toEqual('');
     });
