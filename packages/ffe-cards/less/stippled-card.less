@@ -4,6 +4,20 @@
 .ffe-stippled-card {
     .common-card-styling();
 
+    &--clickable {
+        .clickable-card-styling();
+
+        &:focus-within {
+            border-style: solid;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-style: solid;
+            }
+        }
+    }
+
     background: transparent;
     border: 2px dashed var(--ffe-v-cards-stippled-border-color);
     box-shadow: none;
@@ -12,27 +26,6 @@
     align-items: center;
     padding: var(--ffe-spacing-md);
     gap: var(--ffe-spacing-md);
-
-    &:has(.ffe-card__action:active, .ffe-card__action:focus) {
-        border-style: solid;
-        box-shadow: none;
-    }
-
-    @supports not
-        selector(&:has(.ffe-card__action:active, .ffe-card__action:focus)) {
-        &--clickable:focus-within {
-            border-style: solid;
-            box-shadow: none;
-        }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        &--clickable:hover {
-            cursor: pointer;
-            border-style: solid;
-            box-shadow: none;
-        }
-    }
 
     .native & {
         @media (prefers-color-scheme: dark) {

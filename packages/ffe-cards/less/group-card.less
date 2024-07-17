@@ -1,0 +1,54 @@
+@import 'common-card-styling';
+
+.ffe-group-card {
+    .common-card-styling();
+    .card-background-styling();
+
+    border: none;
+    box-shadow: none;
+
+    &--shadow {
+        box-shadow: var(--ffe-v-cards-common-card-box-shadow);
+    }
+
+    & > :first-child {
+        border-radius: var(--ffe-v-cards-common-card-border-radius)
+            var(--ffe-v-cards-common-card-border-radius) 0 0;
+    }
+
+    & > :last-child {
+        border-radius: 0 0 var(--ffe-v-cards-common-card-border-radius)
+            var(--ffe-v-cards-common-card-border-radius);
+    }
+
+    &__element {
+        padding: var(--ffe-spacing-sm);
+        border: 2px solid transparent;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+        &--no-padding {
+            padding: 0;
+        }
+
+        border-bottom-color: var(
+            --ffe-v-cards-common-group-card-separation-border-color
+        );
+
+        &--no-separator,
+        &:last-child {
+            border-bottom-color: transparent;
+        }
+
+        &--clickable {
+            .clickable-card-styling();
+        }
+    }
+}
+
+.native & {
+    @media (prefers-color-scheme: dark) {
+        .ffe-group-card {
+            .card-background-dm-styling();
+        }
+    }
+}

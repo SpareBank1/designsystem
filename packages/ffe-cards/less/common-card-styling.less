@@ -1,6 +1,6 @@
 .common-card-styling() {
     background: var(--ffe-v-cards-common-card-background-color);
-    box-shadow: 0 1px 4px 0 var(--ffe-v-cards-common-card-box-shadow-color);
+    box-shadow: var(--ffe-v-cards-common-card-box-shadow);
     margin: 0 0 var(--ffe-spacing-2xs);
     border: 2px solid transparent;
     border-radius: var(--ffe-v-cards-common-card-border-radius);
@@ -12,6 +12,78 @@
     .native & {
         @media (prefers-color-scheme: dark) {
             color: var(--ffe-farge-hvit);
+        }
+    }
+
+    @media (min-width: @breakpoint-md) {
+        margin-bottom: var(--ffe-spacing-md);
+    }
+}
+
+.card-background-styling() {
+    &--bg-sand-30 {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-sand-30);
+    }
+
+    &--bg-sand-70 {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-sand-70);
+    }
+
+    &--bg-frost-30 {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-frost-30);
+    }
+
+    &--bg-syrin-30 {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-syrin-30);
+    }
+
+    &--bg-syrin-70 {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-syrin-70);
+    }
+}
+
+.card-background-dm-styling() {
+    &--dm-bg-svart {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-svart);
+    }
+
+    &--dm-bg-natt {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-natt);
+    }
+
+    &--dm-bg-koksgraa {
+        --ffe-v-cards-common-card-background-color: var(--ffe-farge-koksgraa);
+    }
+}
+
+.clickable-card-styling() {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            cursor: pointer;
+            border-color: var(--ffe-g-primary-color);
+
+            &
+                :where(
+                    .ffe-card-body__card-name,
+                    .ffe-card-body__title,
+                    .ffe-card-body__subtext,
+                    .ffe-card-body__text
+                ):has(.ffe-card__action) {
+                text-decoration: underline;
+            }
+        }
+    }
+    &:focus-within {
+        border-color: var(--ffe-g-primary-color);
+        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+
+        &:where(
+                .ffe-card-body__card-name,
+                .ffe-card-body__title,
+                .ffe-card-body__subtext,
+                .ffe-card-body__text
+            ):has(.ffe-card__action) {
+            text-decoration: underline;
         }
     }
 
@@ -31,57 +103,11 @@
         outline: inherit;
     }
 
-    @media (hover: hover) and (pointer: fine) {
-        &--clickable:hover {
-            cursor: pointer;
-            border-color: var(--ffe-g-primary-color);
-
-            &
-                :where(
-                    .ffe-card-body__card-name,
-                    .ffe-card-body__title,
-                    .ffe-card-body__subtext,
-                    .ffe-card-body__text
-                ):has(.ffe-card__action) {
-                text-decoration: underline;
-            }
-        }
-    }
-
     .ffe-card__action--raw:visited {
         .native & {
             @media (prefers-color-scheme: dark) {
                 color: var(--ffe-farge-hvit);
             }
         }
-    }
-
-    &:has(.ffe-card__action:focus) {
-        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
-    }
-
-    @supports not
-        selector(&:has(.ffe-card__action:active, .ffe-card__action:focus)) {
-        &--clickable:focus-within {
-            border-color: var(--ffe-g-primary-color);
-        }
-    }
-
-    &:has(.ffe-card__action:active, .ffe-card__action:focus) {
-        border-color: var(--ffe-g-primary-color);
-
-        &
-            :where(
-                .ffe-card-body__card-name,
-                .ffe-card-body__title,
-                .ffe-card-body__subtext,
-                .ffe-card-body__text
-            ):has(.ffe-card__action) {
-            text-decoration: underline;
-        }
-    }
-
-    @media (min-width: @breakpoint-md) {
-        margin-bottom: var(--ffe-spacing-md);
     }
 }
