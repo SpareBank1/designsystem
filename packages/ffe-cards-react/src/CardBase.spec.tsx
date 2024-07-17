@@ -55,9 +55,7 @@ describe('<CardBase/>', () => {
             </CardBase>,
         );
         const card = screen.getByTestId(TEST_ID);
-        expect(
-            card.classList.contains('ffe-card-base--box-shadow'),
-        ).toBeTruthy();
+        expect(card.classList.contains('ffe-card-base--shadow')).toBeTruthy();
     });
     it('should set noMargin-prop correctly', () => {
         render(
