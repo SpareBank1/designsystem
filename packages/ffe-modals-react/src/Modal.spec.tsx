@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from './Modal';
 import { render, screen } from '@testing-library/react';
 
-describe('<SystemMessage />', () => {
+describe('<Modal />', () => {
     it('should render with classes', () => {
         render(<Modal ariaLabelledby="heading-id" className="custom-class" />);
 
