@@ -4,7 +4,7 @@ import classNames from 'classnames';
 export interface DetailListCardProps
     extends React.ComponentPropsWithoutRef<'dl'> {
     bgColor?: 'sand-30' | 'sand-70' | 'frost-30' | 'syrin-30' | 'syrin-70';
-    bgDarkmodeColor?: 'natt' | 'svart' | 'koksgraa' | 'grey-charcoal';
+    bgDarkmodeColor?: 'natt' | 'svart' | 'koksgraa';
 }
 
 export const DetailListCard: React.FC<DetailListCardProps> = ({
