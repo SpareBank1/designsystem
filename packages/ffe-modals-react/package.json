@@ -26,7 +26,8 @@
     },
     "dependencies": {
         "@sb1/ffe-icons-react": "^11.0.0",
-        "@sb1/ffe-modals": "^0.2.5"
+        "@sb1/ffe-modals": "^0.2.5",
+        "dialog-polyfill": "^0.5.6"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.6.4",
