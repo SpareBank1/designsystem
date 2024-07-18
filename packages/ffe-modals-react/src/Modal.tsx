@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import { CloseButton } from './CloseButton';
 import { Locale } from './types';
+import dialogPolyfill from 'dialog-polyfill';
 
 export interface ModalProps extends React.ComponentPropsWithoutRef<'dialog'> {
     /** Id of modal heading */
@@ -35,23 +36,23 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
         ref,
     ) => {
         const [isOpen, setIsOpen] = useState(false);
-        const modalRef = useRef<HTMLDialogElement>(null);
+        const dialogRef = useRef<HTMLDialogElement>(null);
         const htmlOverflowY = useRef(document.documentElement.style.overflowY);
 
         useImperativeHandle(ref, () => ({
             open: () => {
                 setIsOpen(true);
-                modalRef.current?.showModal();
+                dialogRef.current?.showModal();
             },
             close: () => {
-                modalRef.current?.close();
+                dialogRef.current?.close();
             },
         }));
 
         useEffect(() => {
             const html = document.documentElement;
             const inShadow =
-                modalRef.current?.getRootNode() instanceof ShadowRoot;
+                dialogRef.current?.getRootNode() instanceof ShadowRoot;
             if (inShadow) {
                 if (isOpen) {
                     htmlOverflowY.current = html.style.overflowY;
@@ -62,11 +63,17 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             }
         }, [isOpen]);
 
+        useEffect(() => {
+            if (dialogRef.current) {
+                dialogPolyfill.registerDialog(dialogRef.current);
+            }
+        }, []);
+
         return createPortal(
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <dialog
                 {...rest}
-                ref={modalRef}
+                ref={dialogRef}
                 className={classnames('ffe-modal', className)}
                 aria-labelledby={ariaLabelledby}
                 onClick={event => {
@@ -83,7 +90,7 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             >
                 <div className="ffe-modal__body">
                     <CloseButton
-                        onClick={() => modalRef.current?.close()}
+                        onClick={() => dialogRef.current?.close()}
                         locale={locale}
                     />
                     {children}
