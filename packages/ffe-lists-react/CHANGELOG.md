@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@11.0.0...@sb1/ffe-lists-react@12.0.0) (2024-07-19)
+
+
+### Features
+
+* **ffe-lists-react:** fjerner grey-choral DetailListCard ([0fe6e6d](https://github.com/SpareBank1/designsystem/commit/0fe6e6d29fe571fa13c2eee4ddaf97de9dba0044))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists-react:** fjerner mulighet for grey-choral i darkmode.
+Byter også border color i darkmode fordi att koksgraa også
+er en bakgrundsfarge.
+
+
+
+
+
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@10.1.1...@sb1/ffe-lists-react@11.0.0) (2024-07-15)
 
 

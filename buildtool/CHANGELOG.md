@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.6.4...@sb1/ffe-buildtool@0.7.0) (2024-07-19)
+
+
+### Features
+
+* **buildtool:** no more babel support ([2a9d551](https://github.com/SpareBank1/designsystem/commit/2a9d5515a47cc11c7178aa441c8149d53d21e896))
+
+
+### BREAKING CHANGES
+
+* **buildtool:** babel commands removed
+
+
+
+
+
 ## [0.6.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.6.3...@sb1/ffe-buildtool@0.6.4) (2024-06-18)
 
 **Note:** Version bump only for package @sb1/ffe-buildtool

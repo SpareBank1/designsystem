@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.2.1...@sb1/ffe-lists@16.0.0) (2024-07-19)
+
+
+### Features
+
+* **ffe-lists:** fjerner grey-choral som modifier ([e96bd33](https://github.com/SpareBank1/designsystem/commit/e96bd33ed1c73c0462530bb3f1c0d69c2d1aba4f))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists:** fjerner mulighet for grey-choral i darkmode.
+Byter også border color i darkmode fordi att koksgraa også
+er en bakgrundsfarge.
+
+
+
+
+
 ## [15.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.2.0...@sb1/ffe-lists@15.2.1) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-lists

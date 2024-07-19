@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@9.0.0...@sb1/ffe-tables-react@10.0.0) (2024-07-19)
+
+
+### Features
+
+* **ffe-tables-react:** rewrite of component ([996104d](https://github.com/SpareBank1/designsystem/commit/996104df269b01a290b12b4c036d891e435e6628))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables-react:** Compent API is new
+
+
+
+
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@8.0.38...@sb1/ffe-tables-react@9.0.0) (2024-07-15)
 
 

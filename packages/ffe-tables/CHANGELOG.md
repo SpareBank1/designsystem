@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.24...@sb1/ffe-tables@15.0.0) (2024-07-19)
+
+
+### Features
+
+* **ffe-tables:** complete rewrite ([fa0c534](https://github.com/SpareBank1/designsystem/commit/fa0c534e059ae76bed7f5d196a30c5af05de2965))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables:** complete rewrite of component
+
+
+
+
+
 ## [14.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.23...@sb1/ffe-tables@14.0.24) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-tables

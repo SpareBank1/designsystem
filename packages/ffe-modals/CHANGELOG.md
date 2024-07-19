@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.5...@sb1/ffe-modals@0.2.6) (2024-07-19)
+
+
+### Bug Fixes
+
+* **ffe-modals:** added styling for modal polyfill ([3b8f04d](https://github.com/SpareBank1/designsystem/commit/3b8f04d7158fcf35060640b6940c70d5d1f5b9c4))
+
+
+
+
+
 ## [0.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.4...@sb1/ffe-modals@0.2.5) (2024-07-10)
 
 **Note:** Version bump only for package @sb1/ffe-modals
