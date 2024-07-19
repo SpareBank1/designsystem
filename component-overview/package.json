@@ -109,7 +109,6 @@
         "parcel": "^2.4.0",
         "path-browserify": "^1.0.1",
         "process": "^0.11.10",
-        "react-docgen": "^3.0.0",
         "rollup": "^2.70.1"
     }
 }
