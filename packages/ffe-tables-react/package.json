@@ -18,7 +18,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool tsc --es --cjs && copyfiles --flat src/index.d.ts types",
+        "build": "ffe-buildtool tsc",
         "build:es": "ffe-buildtool tsc --es",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
