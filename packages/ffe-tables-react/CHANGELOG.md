@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.0.0...@sb1/ffe-tables-react@10.0.1) (2024-07-22)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** ts types not generated ([5a2ca80](https://github.com/SpareBank1/designsystem/commit/5a2ca807edf5ac3307f3ee31dc96f4a38164d48d))
+
+
+
+
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@9.0.0...@sb1/ffe-tables-react@10.0.0) (2024-07-19)
 
 
