@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.1.3...@sb1/ffe-cards@19.2.0) (2024-07-22)
+
+
+### Features
+
+* **ffe-cards:** ny komponent groupcard ([1526164](https://github.com/SpareBank1/designsystem/commit/15261641afe60ae6ee599c5a78b1084164fecb03))
+
+
+
+
+
 ## [19.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.1.2...@sb1/ffe-cards@19.1.3) (2024-07-19)
 
 **Note:** Version bump only for package @sb1/ffe-cards
