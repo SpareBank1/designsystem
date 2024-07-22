@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [28.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.5.4...@sb1/ffe-core@28.0.0) (2024-07-22)
+
+
+### Features
+
+* **ffe-core:** deprecarted colors moved to own file ([06f3ed7](https://github.com/SpareBank1/designsystem/commit/06f3ed790fe438df61552618d3585bc695c71519))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** Deprecated colors moved to
+deprecated-colors.(css/less/ts). If you still are using
+these colors you need to import that.
+
+
+
+
+
 ## [27.5.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.5.3...@sb1/ffe-core@27.5.4) (2024-07-19)
 
 **Note:** Version bump only for package @sb1/ffe-core
