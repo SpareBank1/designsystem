@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useContext, useId } from 'react';
+import React, { useEffect, useState, useContext, useId } from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
