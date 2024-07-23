@@ -10,6 +10,7 @@ export interface TableRowExpandableProps
     extends React.ComponentPropsWithoutRef<'tr'> {
     expandContent: React.ReactNode;
     locale?: 'nb' | 'nn' | 'en';
+    isDefaultOpen?: boolean;
 }
 
 export const TableRowExpandable = React.forwardRef<
@@ -17,10 +18,18 @@ export const TableRowExpandable = React.forwardRef<
     TableRowExpandableProps
 >(
     (
-        { className, expandContent, children, locale = 'nb', onClick, ...rest },
+        {
+            className,
+            expandContent,
+            children,
+            locale = 'nb',
+            onClick,
+            isDefaultOpen,
+            ...rest
+        },
         ref,
     ) => {
-        const [isOpen, setIsOpen] = useState(false);
+        const [isOpen, setIsOpen] = useState(!!isDefaultOpen);
         const expandoRowId = useRef(`check-${uuid()}`).current;
         const [isAnimating, setIsAnimating] = useState(false);
         const expandButtonRef = useRef<HTMLButtonElement>(null);
