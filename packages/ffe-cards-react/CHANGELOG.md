@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.1.1...@sb1/ffe-cards-react@17.1.2) (2024-07-23)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** expose GroupCard in index ([99be88d](https://github.com/SpareBank1/designsystem/commit/99be88d2aa08a6cf1180e54353417241945ed27f))
+* **ffe-cards-react:** expose GroupCardElement in index ([2f67a16](https://github.com/SpareBank1/designsystem/commit/2f67a165f77cc8f9a90e797f3130ba057edfc52b))
+
+
+
+
+
 ## [17.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.1.0...@sb1/ffe-cards-react@17.1.1) (2024-07-22)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
