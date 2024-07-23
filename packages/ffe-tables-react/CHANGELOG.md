@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.0.2...@sb1/ffe-tables-react@10.1.0) (2024-07-23)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** update to correct collapse version ([b8358bb](https://github.com/SpareBank1/designsystem/commit/b8358bb7ba044545eef636208e776d11bcc823a1))
+
+
+### Features
+
+* **ffe-tables-react:** possible for default expanded rows ([24b4769](https://github.com/SpareBank1/designsystem/commit/24b4769657e15a92207b799e0895f1ab2de80248))
+
+
+
+
+
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.0.1...@sb1/ffe-tables-react@10.0.2) (2024-07-22)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
