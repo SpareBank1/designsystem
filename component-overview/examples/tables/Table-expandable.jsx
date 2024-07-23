@@ -39,8 +39,9 @@ import {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {data.map(it => (
+                    {data.map((it, index) => (
                         <TableRowExpandable
+                            isDefaultOpen={index === 1}
                             key={it.email}
                             expandContent={it.expand}
                         >
