@@ -3,6 +3,10 @@ export { TextCard, TextCardProps } from './TextCard/TextCard';
 export { IconCard, IconCardProps } from './IconCard/IconCard';
 export { GroupCard, GroupCardProps } from './GroupCard/GroupCard';
 export {
+    GroupCardElement,
+    GroupCardElementProps,
+} from './GroupCard/GroupCardElement';
+export {
     IllustrationCard,
     IllustrationCardProps,
 } from './IllustrationCard/IllustrationCard';
