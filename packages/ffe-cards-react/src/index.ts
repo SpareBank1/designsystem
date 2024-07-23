@@ -1,6 +1,7 @@
 export { CardBase, CardBaseProps } from './CardBase';
 export { TextCard, TextCardProps } from './TextCard/TextCard';
 export { IconCard, IconCardProps } from './IconCard/IconCard';
+export { GroupCard, GroupCardProps } from './GroupCard/GroupCard';
 export {
     IllustrationCard,
     IllustrationCardProps,
