@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import { CloseButton } from './CloseButton';
 import { Locale } from './types';
-import dialogPolyfill from 'dialog-polyfill';
 
 export interface ModalProps extends React.ComponentPropsWithoutRef<'dialog'> {
     /** Id of modal heading */
@@ -69,7 +68,13 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                 dialogRef.current &&
                 typeof dialogRef.current.showModal !== 'function'
             ) {
-                dialogPolyfill.registerDialog(dialogRef.current);
+                import('dialog-polyfill').then(
+                    ({ default: dialogPolyfill }) => {
+                        if (dialogRef.current) {
+                            dialogPolyfill.registerDialog(dialogRef.current);
+                        }
+                    },
+                );
             }
         }, []);
 
