@@ -65,6 +65,7 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
 
         useEffect(() => {
             if (
+                typeof window !== 'undefined' && // to support Gatsby build(server side rendering)
                 dialogRef.current &&
                 typeof dialogRef.current.showModal !== 'function'
             ) {
