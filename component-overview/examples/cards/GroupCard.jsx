@@ -1,5 +1,4 @@
-import { GroupCard } from '@sb1/ffe-cards-react/src/GroupCard/GroupCard';
-import { GroupCardElement } from '@sb1/ffe-cards-react/es/GroupCard/GroupCardElement';
+import { GroupCard, GroupCardElement } from '@sb1/ffe-cards-react';
 
 () => {
     return (
