@@ -64,7 +64,10 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
         }, [isOpen]);
 
         useEffect(() => {
-            if (dialogRef.current) {
+            if (
+                dialogRef.current &&
+                typeof dialogRef.current.showModal !== 'function'
+            ) {
                 dialogPolyfill.registerDialog(dialogRef.current);
             }
         }, []);
