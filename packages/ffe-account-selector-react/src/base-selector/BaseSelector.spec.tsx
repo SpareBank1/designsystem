@@ -1,6 +1,6 @@
 import React from 'react';
 import { BaseSelector, BaseSelectorProps } from './BaseSelector';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 type Suggestion = { name: string };
@@ -37,9 +37,8 @@ describe('<BaseSelector> methods', () => {
             onSuggestionListChange: onSuggestionListChangeSpy,
         });
         const input = screen.getByRole('textbox');
-        await act(async () => {
-            await user.type(input, value);
-        });
+
+        await user.type(input, value);
         expect(onChangeSpy).toHaveBeenCalledWith(value);
         expect(screen.getByRole('listbox')).toBeInTheDocument();
     });
@@ -51,9 +50,8 @@ describe('<BaseSelector> methods', () => {
             onFocus: onFocusSpy,
         });
         const input = screen.getByRole('textbox');
-        await act(async () => {
-            await user.type(input, 'value');
-        });
+
+        await user.type(input, 'value');
         expect(onFocusSpy).toHaveBeenCalledTimes(1);
         expect(screen.getByRole('listbox')).toBeInTheDocument();
     });
@@ -65,9 +63,8 @@ describe('<BaseSelector> methods', () => {
             onClick: onClickSpy,
         });
         const input = screen.getByRole('textbox');
-        await act(async () => {
-            await user.click(input);
-        });
+
+        await user.click(input);
         expect(onClickSpy).toHaveBeenCalledTimes(1);
         expect(screen.getByRole('listbox')).toBeInTheDocument();
     });
@@ -77,10 +74,9 @@ describe('<BaseSelector> methods', () => {
         const onBlurSpy = jest.fn();
         renderBaseSelector({ onBlur: onBlurSpy });
         const input = screen.getByRole('textbox');
-        await act(async () => {
-            await user.type(input, 'value');
-            await user.tab();
-        });
+
+        await user.type(input, 'value');
+        await user.tab();
         expect(onBlurSpy).toHaveBeenCalledTimes(1);
         expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
     });
@@ -92,9 +88,7 @@ describe('<BaseSelector> methods', () => {
             onReset: onResetSpy,
         });
         const input = screen.getByRole('textbox');
-        await act(async () => {
-            await user.type(input, 'value{Escape}');
-        });
+        await user.type(input, 'value{Escape}');
         expect(onResetSpy).toHaveBeenCalledTimes(1);
         expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
     });
@@ -107,9 +101,7 @@ describe('<BaseSelector> methods', () => {
             shouldHideSuggestionsOnReset: false,
         });
         const input = screen.getByRole('textbox');
-        await act(async () => {
-            await user.type(input, 'value{Escape}');
-        });
+        await user.type(input, 'value{Escape}');
         expect(onResetSpy).toHaveBeenCalledTimes(1);
         expect(screen.getByRole('listbox')).toBeInTheDocument();
     });
@@ -124,9 +116,7 @@ describe('<BaseSelector> methods', () => {
         });
 
         const resetButton = screen.getByRole('button', { name: 'Nullstill' });
-        await act(async () => {
-            await user.click(resetButton);
-        });
+        await user.click(resetButton);
         expect(onResetSpy).toHaveBeenCalled();
     });
 
@@ -137,9 +127,7 @@ describe('<BaseSelector> methods', () => {
         const expandButton = screen.getByRole('button', {
             name: 'Vis kontoliste',
         });
-        await act(async () => {
-            await user.click(expandButton);
-        });
+        await user.click(expandButton);
         expect(onFocusSpy).toHaveBeenCalled();
     });
 
@@ -151,10 +139,8 @@ describe('<BaseSelector> methods', () => {
         const expandButton = screen.getByRole('button', {
             name: 'Vis kontoliste',
         });
-        await act(async () => {
-            await user.click(expandButton);
-            await user.tab();
-        });
+        await user.click(expandButton);
+        await user.tab();
         expect(onBlurSpy).toHaveBeenCalled();
     });
 
@@ -164,10 +150,8 @@ describe('<BaseSelector> methods', () => {
 
         renderBaseSelector({ onBlur: onBlurSpy });
         const input = screen.getByRole('textbox');
-        await act(async () => {
-            await user.click(input);
-            await user.tab();
-        });
+        await user.click(input);
+        await user.tab();
         expect(onBlurSpy).toHaveBeenCalled();
     });
 });
