@@ -29,6 +29,7 @@ export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
     id,
     value = 'on',
     locale = 'nb',
+    checked,
     ...rest
 }) => {
     const generatedId = useRef(id ?? `toggle-${uuidv4()}`).current;
@@ -48,6 +49,7 @@ export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
                 type="checkbox"
                 id={generatedId}
                 value={value}
+                checked={!!checked}
                 {...rest}
             />
             <label className="ffe-toggle-switch__label" htmlFor={generatedId}>

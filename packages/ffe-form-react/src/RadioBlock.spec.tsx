@@ -7,6 +7,7 @@ const defaultProps = {
     label: 'Label',
     name: 'choice',
     value: 'value',
+    onChange: () => {},
 };
 
 const renderRadioBlock = (props?: Partial<RadioBlockProps>) =>

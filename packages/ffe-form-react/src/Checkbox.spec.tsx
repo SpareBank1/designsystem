@@ -3,7 +3,11 @@ import { Checkbox, CheckboxProps } from './Checkbox';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 const renderCheckbox = (props?: Partial<CheckboxProps>) =>
-    render(<Checkbox {...props}>children</Checkbox>);
+    render(
+        <Checkbox onChange={() => {}} {...props}>
+            children
+        </Checkbox>,
+    );
 
 describe('<Checkbox />', () => {
     it('should render a input', () => {
@@ -15,17 +19,21 @@ describe('<Checkbox />', () => {
         const spy = jest.fn();
         renderCheckbox({ onChange: spy });
         const checkbox = screen.getByRole('checkbox');
-        expect(checkbox).not.toBeChecked();
         fireEvent.click(checkbox);
         expect(spy).toHaveBeenCalledTimes(1);
-        expect(checkbox).toBeChecked();
     });
 
     it('should render a default value if passed', () => {
-        const { rerender } = render(<Checkbox>children</Checkbox>);
+        const { rerender } = render(
+            <Checkbox onChange={() => {}}>children</Checkbox>,
+        );
         const checkbox = screen.getByRole('checkbox');
         expect(checkbox).not.toBeChecked();
-        rerender(<Checkbox checked={true}>children</Checkbox>);
+        rerender(
+            <Checkbox onChange={() => {}} checked={true}>
+                children
+            </Checkbox>,
+        );
         expect(checkbox).toBeChecked();
     });
 
@@ -39,7 +47,9 @@ describe('<Checkbox />', () => {
 
     it('should support noMargins', () => {
         const { container, rerender } = render(
-            <Checkbox noMargins={false}>children</Checkbox>,
+            <Checkbox onChange={() => {}} noMargins={false}>
+                children
+            </Checkbox>,
         );
         const label = container.querySelector('label');
 
@@ -47,7 +57,11 @@ describe('<Checkbox />', () => {
             label?.classList.contains('ffe-checkbox--no-margin'),
         ).toBeFalsy();
 
-        rerender(<Checkbox noMargins={true}>children</Checkbox>);
+        rerender(
+            <Checkbox onChange={() => {}} noMargins={true}>
+                children
+            </Checkbox>,
+        );
         expect(
             label?.classList.contains('ffe-checkbox--no-margin'),
         ).toBeTruthy();
@@ -55,12 +69,18 @@ describe('<Checkbox />', () => {
 
     it('should support inline', () => {
         const { container, rerender } = render(
-            <Checkbox inline={true}>children</Checkbox>,
+            <Checkbox onChange={() => {}} inline={true}>
+                children
+            </Checkbox>,
         );
         const label = container.querySelector('label');
         expect(label?.classList.contains('ffe-checkbox--inline')).toBeTruthy();
 
-        rerender(<Checkbox inline={false}>children</Checkbox>);
+        rerender(
+            <Checkbox onChange={() => {}} inline={false}>
+                children
+            </Checkbox>,
+        );
         expect(label?.classList.contains('ffe-checkbox--inline')).toBeFalsy();
     });
 
@@ -84,7 +104,7 @@ describe('<Checkbox />', () => {
 
     it('should render children if it is a function', () => {
         const { container } = render(
-            <Checkbox>
+            <Checkbox onChange={() => {}}>
                 {({ htmlFor, className }) => (
                     <label className={className} htmlFor={htmlFor}>
                         Hello world
@@ -114,7 +134,7 @@ describe('<Checkbox />', () => {
 
     it('ads the on colored on-colored-bg modifier', () => {
         const { container } = render(
-            <Checkbox onColoredBg={true}>
+            <Checkbox onColoredBg={true} onChange={() => {}}>
                 {({ htmlFor, className }) => (
                     <label className={className} htmlFor={htmlFor}>
                         Hello world

@@ -3,7 +3,11 @@ import { ToggleSwitch, ToggleSwitchProps } from './ToggleSwitch';
 import { render, screen } from '@testing-library/react';
 
 const renderToggleSwitch = (props?: Partial<ToggleSwitchProps>) =>
-    render(<ToggleSwitch {...props}>Hello world</ToggleSwitch>);
+    render(
+        <ToggleSwitch onChange={() => {}} {...props}>
+            Hello world
+        </ToggleSwitch>,
+    );
 
 describe('<ToggleSwitch />', () => {
     it('should render a checkbox', () => {
@@ -13,11 +17,17 @@ describe('<ToggleSwitch />', () => {
 
     it('should render a default value if passed', () => {
         const { rerender } = render(
-            <ToggleSwitch checked={undefined}>Hello world</ToggleSwitch>,
+            <ToggleSwitch onChange={() => {}} checked={undefined}>
+                Hello world
+            </ToggleSwitch>,
         );
         const checkbox = screen.getByRole('checkbox');
         expect(checkbox).not.toBeChecked();
-        rerender(<ToggleSwitch checked={true}>Hello world</ToggleSwitch>);
+        rerender(
+            <ToggleSwitch onChange={() => {}} checked={true}>
+                Hello world
+            </ToggleSwitch>,
+        );
         expect(checkbox).toBeChecked();
     });
 
@@ -44,12 +54,18 @@ describe('<ToggleSwitch />', () => {
 
     it('should not change id when re-rendering an instance', () => {
         const { rerender } = render(
-            <ToggleSwitch checked={undefined}>Hello world</ToggleSwitch>,
+            <ToggleSwitch onChange={() => {}} checked={undefined}>
+                Hello world
+            </ToggleSwitch>,
         );
         const checkbox = screen.getByRole('checkbox');
         const idFirstRender = checkbox.getAttribute('id');
 
-        rerender(<ToggleSwitch checked={undefined}>Hello world</ToggleSwitch>);
+        rerender(
+            <ToggleSwitch onChange={() => {}} checked={undefined}>
+                Hello world
+            </ToggleSwitch>,
+        );
         const idSecondRender = checkbox.getAttribute('id');
 
         expect(idFirstRender).toBe(idSecondRender);

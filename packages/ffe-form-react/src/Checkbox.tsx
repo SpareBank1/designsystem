@@ -27,6 +27,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             noMargins,
             id,
             onColoredBg,
+            checked,
             ...rest
         },
         ref,
@@ -51,6 +52,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                     className="ffe-hidden-checkbox"
                     id={inputId}
                     type="checkbox"
+                    checked={!!checked}
                     {...rest}
                 />
                 {typeof children === 'function' ? (
