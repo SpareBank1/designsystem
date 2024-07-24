@@ -2,7 +2,16 @@ import React from 'react';
 import { Modal } from './Modal';
 import { render, screen } from '@testing-library/react';
 
+/*
+const dialogPolyfill = jest.createMockFromModule('dialog-polyfill');
+*/
+
 describe('<Modal />', () => {
+    /*    beforeAll(() => {
+        // @ts-ignore
+        dialogPolyfill.registerDialog = jest.fn();
+    });*/
+
     it('should render with classes', () => {
         render(<Modal ariaLabelledby="heading-id" className="custom-class" />);
 
