@@ -42,7 +42,7 @@ function WithCardActionForwardRef<As extends ElementType>(
         if (isUsingCardAction !== isStillUsingCardAction) {
             setIsUsingCardAction(isStillUsingCardAction);
         }
-    });
+    }, [isUsingCardAction]);
 
     const PartialAppliedCardAction = useCallback(
         <CardActionAs extends ElementType = 'a'>(
