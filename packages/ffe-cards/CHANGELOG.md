@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.2.1...@sb1/ffe-cards@19.2.2) (2024-07-24)
+
+
+### Bug Fixes
+
+* **ffe-cards:** focus style on cards component not visible ([8b6dd5a](https://github.com/SpareBank1/designsystem/commit/8b6dd5a00a9cc77f96161be53954930e316f34a5))
+
+
+
+
+
 ## [19.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.2.0...@sb1/ffe-cards@19.2.1) (2024-07-22)
 
 **Note:** Version bump only for package @sb1/ffe-cards

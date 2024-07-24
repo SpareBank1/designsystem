@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.3...@sb1/ffe-modals-react@0.4.4) (2024-07-24)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** check if window is defined before using modal polyfill ([d7135c0](https://github.com/SpareBank1/designsystem/commit/d7135c0c6aaa2eb351c0f1a5218067c460f77d14))
+* **ffe-modals-react:** use polyfill only when not supported ([3f76cdd](https://github.com/SpareBank1/designsystem/commit/3f76cddae9b19e6222ddf130059a1b1cbe6d1f3e))
+
+
+
+
+
 ## [0.4.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.2...@sb1/ffe-modals-react@0.4.3) (2024-07-22)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react
