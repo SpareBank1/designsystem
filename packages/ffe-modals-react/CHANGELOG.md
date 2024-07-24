@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.4...@sb1/ffe-modals-react@0.4.5) (2024-07-24)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** conditional import on polyfill ([d12e8d9](https://github.com/SpareBank1/designsystem/commit/d12e8d9ff7e6c15f1fa4ca66855eadd2bec3ecd1))
+
+
+
+
+
 ## [0.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.3...@sb1/ffe-modals-react@0.4.4) (2024-07-24)
 
 
