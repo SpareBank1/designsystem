@@ -48,6 +48,8 @@ module.exports = {
                 'ffe-message-box-react',
                 'ffe-modals',
                 'ffe-modals-react',
+                'ffe-pagination',
+                'ffe-pagination-react',
                 'ffe-sb1-logos',
                 'ffe-searchable-dropdown-react',
                 'ffe-spinner',
