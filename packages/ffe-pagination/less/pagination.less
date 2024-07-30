@@ -1,0 +1,99 @@
+@import '@sb1/ffe-buttons/less/base-button';
+
+.ffe-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ffe-spacing-md);
+
+    &__rows {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--ffe-spacing-xs);
+
+        @media (min-width: @breakpoint-sm) {
+            flex-direction: row;
+        }
+
+        &-per-page {
+            display: flex;
+            align-items: center;
+            gap: var(--ffe-spacing-xs);
+
+            &--label {
+                padding-bottom: 0;
+                width: 100%;
+                color: var(--ffe-g-text-color);
+            }
+
+            &--dropdown {
+                min-width: fit-content;
+            }
+
+            &--text {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: var(--ffe-spacing-xs);
+        justify-content: center;
+
+        &-navigation {
+            width: fit-content;
+
+            @media (max-width: @breakpoint-sm) {
+                padding: var(--ffe-spacing-xs);
+
+                &-text {
+                    .ffe-screenreader-only();
+                }
+            }
+
+            &--icon-only {
+                padding: var(--ffe-spacing-xs);
+
+                .ffe-pagination__controls-navigation-text {
+                    .ffe-screenreader-only();
+                }
+            }
+        }
+
+        &-link-container {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: var(--ffe-spacing-xs);
+            padding: 0;
+        }
+
+        &-link {
+            padding: calc(var(--ffe-spacing-xs) + 2px);
+            width: fit-content;
+
+            &--active,
+            &--active:focus {
+                background-color: var(--ffe-farge-vann);
+                color: var(--ffe-farge-hvit);
+                border-color: var(--ffe-farge-vann);
+            }
+
+            .ffe-button__label {
+                min-width: 24px;
+                min-height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &-dots {
+            margin: 0 var(--ffe-spacing-xs) 0 var(--ffe-spacing-xs);
+            fill: var(--ffe-farge-vann);
+        }
+    }
+}
