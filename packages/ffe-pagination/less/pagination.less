@@ -1,4 +1,4 @@
-@import '@sb1/ffe-buttons/less/base-button';
+@import 'theme';
 
 .ffe-pagination {
     display: flex;
@@ -15,33 +15,38 @@
         @media (min-width: @breakpoint-sm) {
             flex-direction: row;
         }
+    }
 
-        &-per-page {
-            display: flex;
-            align-items: center;
-            gap: var(--ffe-spacing-xs);
-
-            &--label {
-                padding-bottom: 0;
-                width: 100%;
-                color: var(--ffe-g-text-color);
-            }
-
-            &--dropdown {
-                min-width: fit-content;
-            }
-
-            &--text {
-                white-space: nowrap;
-            }
-        }
+    &__rows-item {
+        flex-grow: 1;
     }
 
     &__controls {
         display: flex;
-        align-items: center;
-        gap: var(--ffe-spacing-xs);
         justify-content: center;
+        gap: var(--ffe-spacing-xs);
+
+        &-prev,
+        &-pages,
+        &-next {
+            display: flex;
+            align-items: center;
+        }
+
+        &-prev {
+            justify-content: end;
+        }
+        &-pages {
+            gap: var(--ffe-spacing-xs);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &-next {
+            justify-content: start;
+            .ffe-icons {
+                transform: rotate(180deg);
+            }
+        }
 
         &-navigation {
             width: fit-content;
@@ -61,6 +66,10 @@
                     .ffe-screenreader-only();
                 }
             }
+
+            &--hidden {
+                visibility: hidden;
+            }
         }
 
         &-link-container {
@@ -71,10 +80,9 @@
             padding: 0;
         }
 
-        &-link {
+        &-page-button {
             padding: calc(var(--ffe-spacing-xs) + 2px);
             width: fit-content;
-
             &--active,
             &--active:focus {
                 background-color: var(--ffe-farge-vann);
@@ -92,8 +100,22 @@
         }
 
         &-dots {
-            margin: 0 var(--ffe-spacing-xs) 0 var(--ffe-spacing-xs);
-            fill: var(--ffe-farge-vann);
+            margin: 0 var(--ffe-spacing-xs);
+            fill: var(--ffe-v-pagination-dots);
         }
+    }
+}
+
+.ffe-pagination-info {
+    margin: 0;
+}
+
+.ffe-pagination-rows-per-page {
+    display: flex;
+    align-items: center;
+    gap: var(--ffe-spacing-xs);
+    justify-content: end;
+    .ffe-dropdown {
+        max-width: 90px;
     }
 }
