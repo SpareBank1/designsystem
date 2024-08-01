@@ -13,47 +13,64 @@ describe('<Pagination />', () => {
         hasNextPage: true,
         setCurrentPage: jest.fn(),
         setPageSize: jest.fn(),
+        numberOfPages: 10,
     };
 
     it('should render with classes', () => {
-        const { container } = render(
+        render(
             <Pagination
-                showRowsPerPageDropdown={true}
+                ariaLabel="Pagination"
                 paginationControls={paginationControls}
             />,
         );
-        expect(container.firstChild).toHaveClass('ffe-pagination');
+        const pagination = screen.getByRole('navigation', {
+            name: 'Pagination',
+        });
+
+        expect(pagination).toHaveClass('ffe-pagination');
     });
 
     it('should render pagination controls', () => {
         render(
             <Pagination
-                showRowsPerPageDropdown={true}
+                ariaLabel="Pagination"
                 paginationControls={paginationControls}
             />,
         );
-        expect(screen.getByText('Neste')).toBeInTheDocument();
-        expect(screen.queryByText('Forrige')).not.toBeInTheDocument();
+
+        const nextButton = screen.getByRole('button', { name: 'Neste side' });
+        const prevButton = screen.getByRole('button', { name: 'Forrige side' });
+
+        expect(nextButton.classList).not.toContain(
+            'ffe-pagination__controls-navigation--hidden',
+        );
+
+        expect(prevButton.classList).toContain(
+            'ffe-pagination__controls-navigation--hidden',
+        );
     });
 
     it('should render rows per page dropdown', () => {
         render(
             <Pagination
-                showRowsPerPageDropdown={true}
+                ariaLabel="Pagination"
                 paginationControls={paginationControls}
+                rowsPerPageOptions={[10, 20]}
             />,
         );
-        expect(screen.getByLabelText('Vis rader')).toBeInTheDocument();
+        expect(
+            screen.getByRole('combobox', { name: 'Vis rader per side' }),
+        ).toBeInTheDocument();
     });
 
     it('should call setCurrentPage when next button is clicked', () => {
         render(
             <Pagination
-                showRowsPerPageDropdown={true}
+                ariaLabel="Pagination"
                 paginationControls={paginationControls}
             />,
         );
-        fireEvent.click(screen.getByText('Neste'));
+        fireEvent.click(screen.getByRole('button', { name: 'Neste side' }));
         expect(paginationControls.setCurrentPage).toHaveBeenCalledWith(2);
     });
 });

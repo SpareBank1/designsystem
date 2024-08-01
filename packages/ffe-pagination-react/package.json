@@ -25,9 +25,10 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-icons-react": "^11.0.1",
-        "@sb1/ffe-modals": "^0.2.7",
-        "dialog-polyfill": "^0.5.6"
+        "@sb1/ffe-buttons-react": "^24.0.3",
+        "@sb1/ffe-core-react": "^9.0.3",
+        "@sb1/ffe-dropdown-react": "^8.0.3",
+        "@sb1/ffe-icons-react": "^11.0.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.7.0",

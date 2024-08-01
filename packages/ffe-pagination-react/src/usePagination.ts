@@ -11,6 +11,7 @@ export function usePagination(
     const hasPreviousPage = currentPage > 1;
     const pageStart = (currentPage - 1) * currentPageSize;
     const pageEnd = hasNextPage ? currentPage * currentPageSize : totalElements;
+    const numberOfPages = Math.ceil(totalElements / currentPageSize);
 
     const setPageSize = (pageSize: number) => {
         setCurrentPageSize(pageSize);
@@ -27,5 +28,6 @@ export function usePagination(
         setCurrentPage,
         setPageSize,
         totalElements,
+        numberOfPages,
     };
 }
