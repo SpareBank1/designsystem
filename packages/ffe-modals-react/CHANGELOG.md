@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.5...@sb1/ffe-modals-react@0.4.6) (2024-08-01)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** fjerner dailog-polyill ([5837376](https://github.com/SpareBank1/designsystem/commit/58373767172320aaf0b02541752debb73a440cdf))
+
+
+
+
+
 ## [0.4.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.4...@sb1/ffe-modals-react@0.4.5) (2024-07-24)
 
 
