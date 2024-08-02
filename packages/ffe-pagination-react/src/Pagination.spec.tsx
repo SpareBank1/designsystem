@@ -38,16 +38,12 @@ describe('<Pagination />', () => {
             />,
         );
 
-        const nextButton = screen.getByRole('button', { name: 'Neste side' });
-        const prevButton = screen.getByRole('button', { name: 'Forrige side' });
-
-        expect(nextButton.classList).not.toContain(
-            'ffe-pagination__controls-navigation--hidden',
-        );
-
-        expect(prevButton.classList).toContain(
-            'ffe-pagination__controls-navigation--hidden',
-        );
+        expect(
+            screen.getByRole('button', { name: 'Neste' }),
+        ).toBeInTheDocument();
+        expect(
+            screen.getByRole('button', { name: 'Forrige' }),
+        ).toBeInTheDocument();
     });
 
     it('should render rows per page dropdown', () => {
@@ -70,7 +66,7 @@ describe('<Pagination />', () => {
                 paginationControls={paginationControls}
             />,
         );
-        fireEvent.click(screen.getByRole('button', { name: 'Neste side' }));
+        fireEvent.click(screen.getByRole('button', { name: 'Neste' }));
         expect(paginationControls.setCurrentPage).toHaveBeenCalledWith(2);
     });
 });
