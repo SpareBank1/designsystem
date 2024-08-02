@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.1.1...@sb1/ffe-pagination-react@1.1.2) (2024-08-02)
+
+
+### Bug Fixes
+
+* **ffe-pagination-react:** focus managment, jump aorund ([289a455](https://github.com/SpareBank1/designsystem/commit/289a455a42c7229abd21c5a4bab4821f70b4b81a))
+
+
+
+
+
 ## [1.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.1.0...@sb1/ffe-pagination-react@1.1.1) (2024-07-31)
 
 
