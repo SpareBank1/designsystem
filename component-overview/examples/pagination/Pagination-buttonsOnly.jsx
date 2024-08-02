@@ -8,7 +8,6 @@ import { Pagination, usePagination } from '@sb1/ffe-pagination-react';
             paginationControls={paginationControls}
             showRowsPerPageDropdown={false}
             showRowsPerPageText={false}
-            rowsPerPageOptions={[10, 20, 50, 100]}
         />
     );
 };

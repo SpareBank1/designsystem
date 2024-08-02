@@ -4,9 +4,8 @@ const nb = {
         `Viser ${start}-${end} av ${total} rader`,
     previous: 'Forrige',
     next: 'Neste',
-    goToPage: (page: string) => `Gå til side ${page}`,
-    currentPage: (page: string) => `Gjeldende side, side ${page}`,
-    page: 'side',
+    goToPage: (page: number) => `Gå til side ${page}`,
+    currentPage: (page: number) => `Gjeldende side, side ${page}`,
 } as const;
 const nn = {
     rowsPerPageLabel: ['Vis', 'rader per side'],
@@ -14,9 +13,8 @@ const nn = {
         `Viser ${start}-${end} av ${total} rader`,
     previous: 'Forrige',
     next: 'Neste',
-    goToPage: (page: string) => `Gå til side ${page}`,
-    currentPage: (page: string) => `Gjeldande side, side ${page}`,
-    page: 'side',
+    goToPage: (page: number) => `Gå til side ${page}`,
+    currentPage: (page: number) => `Gjeldande side, side ${page}`,
 } as const;
 const en = {
     rowsPerPageLabel: ['Show', 'rows per page'],
@@ -25,9 +23,8 @@ const en = {
         `Showing ${start}-${end} of ${total} rows`,
     previous: 'Previous',
     next: 'Next',
-    goToPage: (page: string) => `Go to page ${page}`,
-    currentPage: (page: string) => `Current page, Page ${page}`,
-    page: 'page',
+    goToPage: (page: number) => `Go to page ${page}`,
+    currentPage: (page: number) => `Current page, Page ${page}`,
 } as const;
 
 export const txt = { nb, nn, en };
