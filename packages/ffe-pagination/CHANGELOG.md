@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@1.1.1...@sb1/ffe-pagination@1.1.2) (2024-08-02)
+
+
+### Bug Fixes
+
+* **ffe-pagination:** buttons in list ([1f3f4a4](https://github.com/SpareBank1/designsystem/commit/1f3f4a4ce3faf7900f88ff41b5c1f8c6607ee85b))
+
+
+
+
+
 ## [1.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@1.1.0...@sb1/ffe-pagination@1.1.1) (2024-08-02)
 
 
