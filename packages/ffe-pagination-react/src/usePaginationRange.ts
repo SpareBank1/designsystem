@@ -1,14 +1,15 @@
 import { useMemo } from 'react';
 import { breakpointSm } from '@sb1/ffe-core';
+import { useResize } from './useResize';
 
 // See https://www.freecodecamp.org/news/build-a-custom-pagination-component-in-react/
 export const DOTS = '...' as const;
-const BREAKPOINT_SM = parseInt(breakpointSm.toString().slice(0, -2), 10);
+const BREAKPOINT_SM = parseInt(breakpointSm, 10);
 
-function range(start: number, end: number) {
+const range = (start: number, end: number) => {
     const length = end - start + 1;
     return Array.from({ length }, (_, idx) => idx + start);
-}
+};
 
 export function usePaginationRange(
     totalCount: number,
@@ -16,7 +17,9 @@ export function usePaginationRange(
     currentPage: number,
     siblingCount = 1,
 ) {
-    const paginationRange = useMemo(() => {
+    const [innerWidth] = useResize();
+
+    return useMemo(() => {
         const totalPageCount = Math.ceil(totalCount / pageSize);
 
         const totalPageNumbers = siblingCount + 5;
@@ -28,7 +31,7 @@ export function usePaginationRange(
         const firstPageIndex = 1;
         const lastPageIndex = totalPageCount;
 
-        if (window.innerWidth > BREAKPOINT_SM) {
+        if (innerWidth > BREAKPOINT_SM) {
             const leftSiblingIndex = Math.max(currentPage - siblingCount, 1);
             const rightSiblingIndex = Math.min(
                 currentPage + siblingCount,
@@ -40,7 +43,7 @@ export function usePaginationRange(
 
             if (!shouldShowLeftDots && shouldShowRightDots) {
                 let leftItemCount;
-                if (window.innerWidth <= BREAKPOINT_SM) {
+                if (innerWidth <= BREAKPOINT_SM) {
                     leftItemCount = 1 + siblingCount;
                 } else {
                     leftItemCount = 2 + 2 * siblingCount;
@@ -52,7 +55,7 @@ export function usePaginationRange(
 
             if (shouldShowLeftDots && !shouldShowRightDots) {
                 let rightItemCount;
-                if (window.innerWidth <= BREAKPOINT_SM) {
+                if (innerWidth <= BREAKPOINT_SM) {
                     rightItemCount = 1 + siblingCount;
                 } else {
                     rightItemCount = 2 + 2 * siblingCount;
@@ -66,7 +69,7 @@ export function usePaginationRange(
             }
 
             if (shouldShowLeftDots && shouldShowRightDots) {
-                if (window.innerWidth <= BREAKPOINT_SM) {
+                if (innerWidth <= BREAKPOINT_SM) {
                     return [
                         firstPageIndex,
                         DOTS,
@@ -89,11 +92,7 @@ export function usePaginationRange(
             const leftIndex = Math.max(leftIndexMax, 1);
             const rightIndexMin = Math.max(3, currentPage + 1);
             const rightIndex = Math.min(rightIndexMin, totalPageCount);
-            console.log('leftIndex', leftIndex);
-            console.log('rightIndex', rightIndex);
             return range(leftIndex, rightIndex);
         }
-    }, [totalCount, pageSize, siblingCount, currentPage]);
-
-    return paginationRange ?? [];
+    }, [totalCount, pageSize, siblingCount, currentPage, innerWidth]);
 }

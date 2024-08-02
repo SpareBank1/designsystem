@@ -37,4 +37,8 @@ export type PaginationControls = {
      * The total number of elements
      */
     totalElements: number;
+    /**
+     * The total of pages
+     */
+    numberOfPages: number;
 };
