@@ -2,6 +2,7 @@
 
 .ffe-pagination {
     --circular-button-size: 2.5rem;
+    --buttons-distance: var(--ffe-spacing-xs);
 
     display: flex;
     flex-direction: column;
@@ -17,24 +18,31 @@
         @media (min-width: @breakpoint-sm) {
             flex-direction: row;
         }
+
+        &:empty {
+            display: none;
+        }
     }
 
     &__rows-item {
         flex-grow: 1;
     }
 
-    &__controls {
+    &__buttons {
         display: flex;
         justify-content: center;
-        gap: var(--ffe-spacing-xs);
+        gap: var(--buttons-distance);
+    }
 
-        &-link-container {
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-            gap: var(--ffe-spacing-xs);
-            padding: 0;
-        }
+    &__page-buttons {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: var(--buttons-distance);
     }
 }
 
