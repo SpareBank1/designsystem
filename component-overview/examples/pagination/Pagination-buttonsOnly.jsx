@@ -6,7 +6,6 @@ import { Pagination, usePagination } from '@sb1/ffe-pagination-react';
     return (
         <Pagination
             paginationControls={paginationControls}
-            showRowsPerPageDropdown={false}
             showRowsPerPageText={false}
         />
     );
