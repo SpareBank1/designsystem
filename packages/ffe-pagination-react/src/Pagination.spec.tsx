@@ -23,7 +23,7 @@ describe('<Pagination />', () => {
                 paginationControls={paginationControls}
             />,
         );
-        const pagination = screen.getByRole('navigation', {
+        const pagination = screen.getByRole('group', {
             name: 'Pagination',
         });
 

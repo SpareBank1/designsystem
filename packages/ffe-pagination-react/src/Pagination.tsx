@@ -39,7 +39,8 @@ export const Pagination = ({
     );
 
     return (
-        <nav
+        <div
+            role="group"
             aria-label={ariaLabel}
             className={classnames('ffe-pagination', className)}
         >
@@ -63,7 +64,7 @@ export const Pagination = ({
                     />
                 )}
             </div>
-            <div className="ffe-pagination__controls">
+            <nav className="ffe-pagination__buttons">
                 <NavigationBlock
                     locale={locale}
                     onClick={() => {
@@ -82,39 +83,41 @@ export const Pagination = ({
                     buttonText={navigationButtonText}
                     direction="prev"
                 />
-                {pageNumberList && pageNumberList.length > 1 && (
-                    <div className="ffe-pagination-navigation-block ffe-pagination-navigation-block--pages">
-                        {pageNumberList.map((pageNumber, index) => {
-                            return pageNumber === DOTS ? (
-                                <Dots key={index} />
-                            ) : (
-                                <PageButton
-                                    ref={
-                                        index === 0
-                                            ? firstPageButton
-                                            : index ===
-                                                pageNumberList.length - 1
-                                              ? lastPageButton
-                                              : null
-                                    }
-                                    key={index}
-                                    locale={locale}
-                                    onClick={() => {
-                                        paginationControls.setCurrentPage(
-                                            pageNumber,
-                                        );
-                                    }}
-                                    isActive={
-                                        paginationControls.currentPage ===
-                                        pageNumber
-                                    }
-                                >
-                                    {pageNumber}
-                                </PageButton>
-                            );
-                        })}
-                    </div>
-                )}
+                <ol className="ffe-pagination__page-buttons">
+                    {pageNumberList?.map((pageNumber, index) => {
+                        return (
+                            <li key={index}>
+                                {pageNumber === DOTS ? (
+                                    <Dots />
+                                ) : (
+                                    <PageButton
+                                        ref={
+                                            index === 0
+                                                ? firstPageButton
+                                                : index ===
+                                                    pageNumberList.length - 1
+                                                  ? lastPageButton
+                                                  : null
+                                        }
+                                        key={index}
+                                        locale={locale}
+                                        onClick={() => {
+                                            paginationControls.setCurrentPage(
+                                                pageNumber,
+                                            );
+                                        }}
+                                        isActive={
+                                            paginationControls.currentPage ===
+                                            pageNumber
+                                        }
+                                    >
+                                        {pageNumber}
+                                    </PageButton>
+                                )}
+                            </li>
+                        );
+                    })}
+                </ol>
                 <NavigationBlock
                     locale={locale}
                     onClick={() => {
@@ -134,7 +137,7 @@ export const Pagination = ({
                     buttonText={navigationButtonText}
                     direction="next"
                 />
-            </div>
-        </nav>
+            </nav>
+        </div>
     );
 };
