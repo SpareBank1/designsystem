@@ -69,4 +69,29 @@ describe('<Pagination />', () => {
         fireEvent.click(screen.getByRole('button', { name: 'Neste' }));
         expect(paginationControls.setCurrentPage).toHaveBeenCalledWith(2);
     });
+
+    it('should call onClicks', () => {
+        const onClickPrev = jest.fn();
+        const onClickNext = jest.fn();
+        const onClickPage = jest.fn();
+
+        render(
+            <Pagination
+                onClickPrev={onClickPrev}
+                onClickNext={onClickNext}
+                onClickPage={onClickPage}
+                ariaLabel="Pagination"
+                paginationControls={paginationControls}
+            />,
+        );
+        fireEvent.click(screen.getByRole('button', { name: 'Neste' }));
+        expect(onClickNext).toHaveBeenCalledTimes(1);
+
+        fireEvent.click(screen.getByRole('button', { name: 'Forrige' }));
+        expect(onClickPrev).toHaveBeenCalledTimes(1);
+
+        fireEvent.click(screen.getByRole('button', { name: 'Gå til side 2' }));
+        expect(onClickPage).toHaveBeenCalledTimes(1);
+        expect(onClickPage).toHaveBeenCalledWith(2);
+    });
 });

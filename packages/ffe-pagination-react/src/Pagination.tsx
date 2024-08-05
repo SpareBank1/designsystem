@@ -18,6 +18,9 @@ export interface PaginationProps {
     rowsPerPageOptions?: number[];
     navigationButtonText?: boolean;
     ariaLabel: string;
+    onClickPrev?: () => void;
+    onClickNext?: () => void;
+    onClickPage?: (page: number) => void;
 }
 
 export const Pagination = ({
@@ -28,6 +31,9 @@ export const Pagination = ({
     rowsPerPageOptions,
     navigationButtonText = true,
     ariaLabel,
+    onClickPrev,
+    onClickNext,
+    onClickPage,
 }: PaginationProps) => {
     const firstPageButton = useRef<HTMLButtonElement>(null);
     const lastPageButton = useRef<HTMLButtonElement>(null);
@@ -70,6 +76,7 @@ export const Pagination = ({
                         className="ffe-pagination__buttons-nav"
                         locale={locale}
                         onClick={() => {
+                            onClickPrev?.();
                             const nextPage = paginationControls.currentPage - 1;
                             flushSync(() => {
                                 paginationControls.setCurrentPage(nextPage);
@@ -105,6 +112,7 @@ export const Pagination = ({
                                             key={index}
                                             locale={locale}
                                             onClick={() => {
+                                                onClickPage?.(pageNumber);
                                                 paginationControls.setCurrentPage(
                                                     pageNumber,
                                                 );
@@ -125,6 +133,7 @@ export const Pagination = ({
                         className="ffe-pagination__buttons-nav"
                         locale={locale}
                         onClick={() => {
+                            onClickNext?.();
                             const nextPage = paginationControls.currentPage + 1;
                             flushSync(() => {
                                 paginationControls.setCurrentPage(nextPage);
