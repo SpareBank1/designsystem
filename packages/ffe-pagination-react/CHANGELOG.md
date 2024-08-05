@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.1.4...@sb1/ffe-pagination-react@1.1.5) (2024-08-05)
+
+
+### Bug Fixes
+
+* **ffe-pagination-react:** ikke hvis knappar når det kun er 1 side ([5569223](https://github.com/SpareBank1/designsystem/commit/5569223c3d35ead6a7d0f21dbd13fd743628c35b))
+
+
+
+
+
 ## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.1.3...@sb1/ffe-pagination-react@1.1.4) (2024-08-05)
 
 

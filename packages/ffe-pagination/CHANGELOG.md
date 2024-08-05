@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@1.1.2...@sb1/ffe-pagination@1.1.3) (2024-08-05)
+
+
+### Bug Fixes
+
+* **ffe-pagination:** fix distance and text wrapping ([71177cc](https://github.com/SpareBank1/designsystem/commit/71177cc2c9667700a8815ffc49409fbf3c2f4a6f))
+
+
+
+
+
 ## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@1.1.1...@sb1/ffe-pagination@1.1.2) (2024-08-02)
 
 
