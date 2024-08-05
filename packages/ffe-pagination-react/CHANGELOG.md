@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.1.3...@sb1/ffe-pagination-react@1.1.4) (2024-08-05)
+
+
+### Bug Fixes
+
+* **ffe-pagination-react:** add missing dependency to ffe-pagination ([b15a893](https://github.com/SpareBank1/designsystem/commit/b15a893da6c48f91b2a6296cd4bb1591814978fb))
+
+
+
+
+
 ## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.1.2...@sb1/ffe-pagination-react@1.1.3) (2024-08-02)
 
 
