@@ -11,6 +11,7 @@ interface NavigationBlockProps {
     isHidden: boolean;
     locale: Locale;
     onClick: () => void;
+    className?: string;
 }
 
 const chevronLeftIcon =
@@ -22,10 +23,12 @@ export const NavigationBlock: React.FC<NavigationBlockProps> = ({
     isHidden,
     locale,
     onClick,
+    className,
 }) => {
     return (
         <div
             className={classNames(
+                className,
                 `ffe-pagination-navigation-block ffe-pagination-navigation-block--${direction}`,
                 {
                     'ffe-pagination-navigation-block--hidden': isHidden,
