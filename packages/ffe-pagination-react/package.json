@@ -28,7 +28,8 @@
         "@sb1/ffe-buttons-react": "^24.0.3",
         "@sb1/ffe-core-react": "^9.0.3",
         "@sb1/ffe-dropdown-react": "^8.0.3",
-        "@sb1/ffe-icons-react": "^11.0.1"
+        "@sb1/ffe-icons-react": "^11.0.1",
+        "@sb1/ffe-pagination": "^1.1.2"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.7.0",
