@@ -64,80 +64,86 @@ export const Pagination = ({
                     />
                 )}
             </div>
-            <nav className="ffe-pagination__buttons">
-                <NavigationBlock
-                    locale={locale}
-                    onClick={() => {
-                        const nextPage = paginationControls.currentPage - 1;
-                        flushSync(() => {
-                            paginationControls.setCurrentPage(nextPage);
-                            const isGoingToFirstPage = nextPage === 1;
-                            if (isGoingToFirstPage) {
-                                firstPageButton.current?.focus({
-                                    preventScroll: true,
-                                });
-                            }
-                        });
-                    }}
-                    isHidden={!paginationControls.hasPreviousPage}
-                    buttonText={navigationButtonText}
-                    direction="prev"
-                />
-                <ol className="ffe-pagination__page-buttons">
-                    {pageNumberList?.map((pageNumber, index) => {
-                        return (
-                            <li key={index}>
-                                {pageNumber === DOTS ? (
-                                    <Dots />
-                                ) : (
-                                    <PageButton
-                                        ref={
-                                            index === 0
-                                                ? firstPageButton
-                                                : index ===
-                                                    pageNumberList.length - 1
-                                                  ? lastPageButton
-                                                  : null
-                                        }
-                                        key={index}
-                                        locale={locale}
-                                        onClick={() => {
-                                            paginationControls.setCurrentPage(
-                                                pageNumber,
-                                            );
-                                        }}
-                                        isActive={
-                                            paginationControls.currentPage ===
-                                            pageNumber
-                                        }
-                                    >
-                                        {pageNumber}
-                                    </PageButton>
-                                )}
-                            </li>
-                        );
-                    })}
-                </ol>
-                <NavigationBlock
-                    locale={locale}
-                    onClick={() => {
-                        const nextPage = paginationControls.currentPage + 1;
-                        flushSync(() => {
-                            paginationControls.setCurrentPage(nextPage);
-                            const isGoingToLastPage =
-                                paginationControls.numberOfPages === nextPage;
-                            if (isGoingToLastPage) {
-                                lastPageButton.current?.focus({
-                                    preventScroll: true,
-                                });
-                            }
-                        });
-                    }}
-                    isHidden={!paginationControls.hasNextPage}
-                    buttonText={navigationButtonText}
-                    direction="next"
-                />
-            </nav>
+            {pageNumberList && pageNumberList.length > 1 && (
+                <nav className="ffe-pagination__buttons">
+                    <NavigationBlock
+                        className="ffe-pagination__buttons-nav"
+                        locale={locale}
+                        onClick={() => {
+                            const nextPage = paginationControls.currentPage - 1;
+                            flushSync(() => {
+                                paginationControls.setCurrentPage(nextPage);
+                                const isGoingToFirstPage = nextPage === 1;
+                                if (isGoingToFirstPage) {
+                                    firstPageButton.current?.focus({
+                                        preventScroll: true,
+                                    });
+                                }
+                            });
+                        }}
+                        isHidden={!paginationControls.hasPreviousPage}
+                        buttonText={navigationButtonText}
+                        direction="prev"
+                    />
+                    <ol className="ffe-pagination__page-buttons">
+                        {pageNumberList.map((pageNumber, index) => {
+                            return (
+                                <li key={index}>
+                                    {pageNumber === DOTS ? (
+                                        <Dots />
+                                    ) : (
+                                        <PageButton
+                                            ref={
+                                                index === 0
+                                                    ? firstPageButton
+                                                    : index ===
+                                                        pageNumberList.length -
+                                                            1
+                                                      ? lastPageButton
+                                                      : null
+                                            }
+                                            key={index}
+                                            locale={locale}
+                                            onClick={() => {
+                                                paginationControls.setCurrentPage(
+                                                    pageNumber,
+                                                );
+                                            }}
+                                            isActive={
+                                                paginationControls.currentPage ===
+                                                pageNumber
+                                            }
+                                        >
+                                            {pageNumber}
+                                        </PageButton>
+                                    )}
+                                </li>
+                            );
+                        })}
+                    </ol>
+                    <NavigationBlock
+                        className="ffe-pagination__buttons-nav"
+                        locale={locale}
+                        onClick={() => {
+                            const nextPage = paginationControls.currentPage + 1;
+                            flushSync(() => {
+                                paginationControls.setCurrentPage(nextPage);
+                                const isGoingToLastPage =
+                                    paginationControls.numberOfPages ===
+                                    nextPage;
+                                if (isGoingToLastPage) {
+                                    lastPageButton.current?.focus({
+                                        preventScroll: true,
+                                    });
+                                }
+                            });
+                        }}
+                        isHidden={!paginationControls.hasNextPage}
+                        buttonText={navigationButtonText}
+                        direction="next"
+                    />
+                </nav>
+            )}
         </div>
     );
 };

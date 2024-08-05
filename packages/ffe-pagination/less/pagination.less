@@ -13,7 +13,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: var(--ffe-spacing-xs);
+        gap: var(--ffe-spacing-sm);
 
         @media (min-width: @breakpoint-sm) {
             flex-direction: row;
@@ -44,17 +44,33 @@
         align-items: center;
         gap: var(--buttons-distance);
     }
+
+    &__buttons-nav {
+        flex-shrink: 0;
+    }
 }
 
 .ffe-pagination-info {
     margin: 0;
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: @breakpoint-sm) {
+        text-align: left;
+    }
 }
 
 .ffe-pagination-rows-per-page {
     display: flex;
     align-items: center;
     gap: var(--ffe-spacing-xs);
-    justify-content: end;
+    width: 100%;
+    justify-content: center;
+
+    @media (min-width: @breakpoint-sm) {
+        justify-content: end;
+    }
+
     .ffe-dropdown {
         max-width: 90px;
     }
@@ -112,6 +128,7 @@
 .ffe-pagination-page-button {
     width: var(--circular-button-size);
     aspect-ratio: 1;
+    white-space: nowrap;
     &--active,
     &--active:focus {
         background-color: var(--ffe-farge-vann);
