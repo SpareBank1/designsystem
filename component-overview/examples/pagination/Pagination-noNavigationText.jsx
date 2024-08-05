@@ -5,6 +5,7 @@ import { Pagination, usePagination } from '@sb1/ffe-pagination-react';
 
     return (
         <Pagination
+            ariaLabel="Paginering"
             paginationControls={paginationControls}
             navigationButtonText={false}
             rowsPerPageOptions={[10, 20, 50, 100]}

@@ -65,6 +65,7 @@ import {
                 </TableFoot>
             </Table>
             <Pagination
+                ariaLabel="Paginering"
                 paginationControls={paginationControls}
                 rowsPerPageOptions={[2, 5, 10, 20]}
                 navigationButtonTexts={false}
