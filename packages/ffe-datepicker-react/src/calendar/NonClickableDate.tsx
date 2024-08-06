@@ -9,8 +9,7 @@ interface Props {
 export const NonClickableDate: React.FC<Props> = ({ date }) => {
     return (
         <td
-            aria-disabled="true"
-            aria-current="false"
+            aria-hidden={true}
             className="ffe-calendar__day"
             key={date.timestamp}
             role="button"

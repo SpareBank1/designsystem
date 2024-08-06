@@ -9,16 +9,24 @@ describe('<ClickableDate />', () => {
 
     const dateButtonRef = React.createRef<HTMLTableCellElement>();
     const activeDate = (
-        <ClickableDate
-            calendarButtonState={date as unknown as CalendarButtonState}
-            onClick={() => true}
-            headers="id-to-th-element"
-            locale="nn"
-            month="Mai"
-            year={2016}
-            isFocusingHeader={false}
-            dateButtonRef={dateButtonRef}
-        />
+        <table>
+            <tbody>
+                <tr>
+                    <ClickableDate
+                        calendarButtonState={
+                            date as unknown as CalendarButtonState
+                        }
+                        onClick={() => true}
+                        headers="id-to-th-element"
+                        locale="nn"
+                        month="Mai"
+                        year={2016}
+                        isFocusingHeader={false}
+                        dateButtonRef={dateButtonRef}
+                    />
+                </tr>
+            </tbody>
+        </table>
     );
 
     it('should render an button with active date', () => {
