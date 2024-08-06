@@ -25,10 +25,7 @@ export const Header: React.FC<HeaderProps> = ({
     nextMonthButtonElement,
 }) => {
     const arrowBackIosIcon =
-        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0xMjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzYtMTEuOTIyIDExLjkyMy0yOC4wNzYgMTEuOTIzdC0yOC4wNzYtMTEuOTIzTDY1LjA3OC00MjguNzdRNTQuMjMtNDM5LjYxNiA0OS00NTMuMDc3IDQzLjc3LTQ2Ni41MzkgNDMuNzctNDgwcTAtMTMuNDYxIDUuMjMtMjYuOTIzIDUuMjMxLTEzLjQ2MSAxNi4wNzgtMjQuMzA3bDMwNi44NDYtMzA2Ljg0NnExMS45MjItMTEuOTIzIDI4LjM4NC0xMS42MTYgMTYuNDYxLjMwOCAyOC4zODQgMTIuMjMxIDExLjkyMyAxMS45MjMgMTEuOTIzIDI4LjA3NiAwIDE2LjE1NC0xMS45MjMgMjguMDc3TDEyNy4zODQtNDgwWiIvPjwvc3ZnPg==';
-
-    const arrowForwardIosIcon =
-        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik01OTMuMjMyLTQ4MCAyOTEuOTI0LTc4MS4zMDhxLTExLjkyMy0xMS45MjMtMTEuNjE2LTI4LjM4NC4zMDgtMTYuNDYyIDEyLjIzMS0yOC4zODQgMTEuOTIzLTExLjkyMyAyOC4zODQtMTEuOTIzdDI4LjM4NCAxMS45MjNMNjU1LjUzOC01MzEuMjNxMTAuODQ2IDEwLjg0NiAxNi4wNzcgMjQuMzA3IDUuMjMgMTMuNDYyIDUuMjMgMjYuOTIzIDAgMTMuNDYxLTUuMjMgMjYuOTIzLTUuMjMxIDEzLjQ2MS0xNi4wNzcgMjQuMzA3TDM0OC42OTItMTIxLjkyNHEtMTEuOTIzIDExLjkyMy0yOC4wNzcgMTEuNjE2LTE2LjE1My0uMzA4LTI4LjA3Ni0xMi4yMzEtMTEuOTIzLTExLjkyMy0xMS45MjMtMjguMzg0dDExLjkyMy0yOC4zODRMNTkzLjIzMi00ODBaIi8+PC9zdmc+';
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0zNjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzYtMTEuOTIyIDExLjkyMy0yOC4wNzYgMTEuOTIzdC0yOC4wNzYtMTEuOTIzTDMwNS4wNzgtNDI4Ljc3cS0xMC44NDctMTAuODQ2LTE2LjA3Ny0yNC4zMDctNS4yMzEtMTMuNDYyLTUuMjMxLTI2LjkyMyAwLTEzLjQ2MSA1LjIzMS0yNi45MjMgNS4yMy0xMy40NjEgMTYuMDc3LTI0LjMwN2wzMDYuODQ2LTMwNi44NDZxMTEuOTIyLTExLjkyMyAyOC4zODQtMTEuNjE2IDE2LjQ2MS4zMDggMjguMzg0IDEyLjIzMSAxMS45MjMgMTEuOTIzIDExLjkyMyAyOC4wNzYgMCAxNi4xNTQtMTEuOTIzIDI4LjA3N0wzNjcuMzg0LTQ4MFoiLz48L3N2Zz4=';
 
     return (
         <div className="ffe-calendar__header">
@@ -66,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({
                     tabIndex={-1}
                 >
                     <Icon
-                        fileUrl={arrowForwardIosIcon}
+                        fileUrl={arrowBackIosIcon}
                         size="md"
                         className="ffe-calendar__icon-next"
                     />

@@ -261,9 +261,12 @@ export class Calendar extends Component<CalendarProps, State> {
 
         /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
         return (
-            <div role="dialog" aria-modal={true}>
+            <div
+                role="dialog"
+                aria-modal={true}
+                aria-labelledby={`${this.datepickerId}-title`}
+            >
                 <div
-                    aria-labelledby={`${this.datepickerId}-title`}
                     className={this.props.calendarClassName || 'ffe-calendar'}
                     role="application"
                     onKeyDown={this.focusTrap}
