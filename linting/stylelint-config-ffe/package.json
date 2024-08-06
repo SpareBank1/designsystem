@@ -16,6 +16,6 @@
         "access": "public"
     },
     "dependencies": {
-        "stylelint": "^15.0.0"
+        "stylelint": "^16.8.1"
     }
 }

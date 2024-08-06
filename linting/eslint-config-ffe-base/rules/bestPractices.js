@@ -44,7 +44,7 @@ module.exports = {
         // http://eslint.org/docs/rules/dot-notation
         'dot-notation': [2, { allowKeywords: true }],
 
-        // enforces return statements in callbacks of array's methods. This does not effect arrow functions.
+        // enforces return statements in callbacks of array's methods. This does not affect arrow functions.
         // http://eslint.org/docs/rules/array-callback-return
         'array-callback-return': 2,
 
