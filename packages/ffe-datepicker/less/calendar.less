@@ -31,6 +31,12 @@
         width: 100%;
     }
 
+    &__header-inner-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__month {
         padding-right: var(--ffe-spacing-xs);
     }
@@ -41,37 +47,32 @@
         cursor: pointer;
         outline: none;
         border-radius: 4px;
+        display: grid;
+        place-items: center;
 
         &:focus,
         &:active {
-            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+            box-shadow:
+                0 0 0 2px var(--ffe-v-datepicker-bg-color),
                 0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
         }
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+                box-shadow:
+                    0 0 0 2px var(--ffe-v-datepicker-bg-color),
                     0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
             }
         }
     }
 
-    &__icon-prev,
-    &__icon-next {
+    &__icon-prev.ffe-icons,
+    &__icon-next.ffe-icons {
         color: var(--ffe-v-datepicker-icon-color);
     }
 
-    &__next,
-    &__previous {
-        height: 1.5625rem;
-        aspect-ratio: 1;
-    }
-
-    &__month-nav-icon {
-        display: block;
-        height: 2em;
-        width: 2em;
-        fill: var(--ffe-v-datepicker-icon-color);
+    &__icon-next {
+        transform: rotate(180deg);
     }
 
     &__title {
@@ -162,7 +163,8 @@
         }
 
         &--focus&--selected {
-            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+            box-shadow:
+                0 0 0 2px var(--ffe-v-datepicker-bg-color),
                 0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
         }
 
