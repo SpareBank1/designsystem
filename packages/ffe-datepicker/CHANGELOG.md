@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.57](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@12.0.56...@sb1/ffe-datepicker@12.0.57) (2024-08-06)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** icons colors and text contrast ([61aa942](https://github.com/SpareBank1/designsystem/commit/61aa94276b21ccfa811f59156a8cc48d3de4b207))
+
+
+
+
+
 ## [12.0.56](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@12.0.55...@sb1/ffe-datepicker@12.0.56) (2024-08-06)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
