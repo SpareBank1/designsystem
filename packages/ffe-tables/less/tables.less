@@ -20,6 +20,7 @@
     &__head {
         .ffe-table__cell-content {
             color: var(--ffe-v-table-heading-color);
+            padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
         }
     }
 
@@ -28,8 +29,9 @@
         text-align: left;
     }
 
-    &__cell-content {
-        padding: var(--ffe-spacing-xs);
+    &__body &__cell-content,
+    &__foot &__cell-content {
+        padding: var(--ffe-spacing-sm);
     }
 
     &__body {
