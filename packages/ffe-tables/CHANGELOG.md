@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@15.0.2...@sb1/ffe-tables@15.0.3) (2024-08-07)
+
+
+### Bug Fixes
+
+* **ffe-tables:** adjust padding ([f05395e](https://github.com/SpareBank1/designsystem/commit/f05395eec40bdef5230721e3f2b5645f818b2856))
+
+
+
+
+
 ## [15.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@15.0.1...@sb1/ffe-tables@15.0.2) (2024-08-06)
 
 **Note:** Version bump only for package @sb1/ffe-tables
