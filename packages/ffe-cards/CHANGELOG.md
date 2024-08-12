@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.2.3...@sb1/ffe-cards@19.2.4) (2024-08-12)
+
+
+### Bug Fixes
+
+* **ffe-cards:** no margin on group card element ([289386a](https://github.com/SpareBank1/designsystem/commit/289386ac668d33b72dc9084c6b579731d29be5af))
+
+
+
+
+
 ## [19.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.2.2...@sb1/ffe-cards@19.2.3) (2024-08-06)
 
 **Note:** Version bump only for package @sb1/ffe-cards
