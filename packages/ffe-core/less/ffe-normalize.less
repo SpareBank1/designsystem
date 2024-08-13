@@ -15,6 +15,7 @@ html,
 @supports (font: -apple-system-body) {
     :root:has(.native),
     :host:has(.native) {
+        /* must be DIRECTLY applied to the html element */
         font: -apple-system-body;
     }
 }
