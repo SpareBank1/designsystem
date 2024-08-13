@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.2.5...@sb1/ffe-cards@19.2.6) (2024-08-13)
+
+
+### Bug Fixes
+
+* **ffe-cards:** borders when only one card in card group ([d56b851](https://github.com/SpareBank1/designsystem/commit/d56b851ec42069082d87844b3615c4fc4ee95423))
+
+
+
+
+
 ## [19.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.2.4...@sb1/ffe-cards@19.2.5) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-cards

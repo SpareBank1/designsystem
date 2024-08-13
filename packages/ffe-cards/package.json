@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-cards",
-    "version": "19.2.5",
+    "version": "19.2.6",
     "description": "Kort for bruk i oversikter",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -16,7 +16,7 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^28.0.2"
+        "@sb1/ffe-core": "^28.0.3"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.7.1"
