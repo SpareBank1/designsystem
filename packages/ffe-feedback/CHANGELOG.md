@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@1.2.25...@sb1/ffe-feedback@1.2.26) (2024-08-13)
+
+**Note:** Version bump only for package @sb1/ffe-feedback
+
+
+
+
+
 ## [1.2.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@1.2.24...@sb1/ffe-feedback@1.2.25) (2024-08-06)
 
 **Note:** Version bump only for package @sb1/ffe-feedback

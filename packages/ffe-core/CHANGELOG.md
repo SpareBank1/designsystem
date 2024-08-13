@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@28.0.1...@sb1/ffe-core@28.0.2) (2024-08-13)
+
+
+### Bug Fixes
+
+* **ffe-core:** make -apple-system-body apply on :root/:host and not body ([0658b34](https://github.com/SpareBank1/designsystem/commit/0658b34eb0526e292ef42fcd53d61d7f04fde443))
+
+
+
+
+
 ## [28.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@28.0.0...@sb1/ffe-core@28.0.1) (2024-08-06)
 
 **Note:** Version bump only for package @sb1/ffe-core
