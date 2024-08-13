@@ -13,10 +13,8 @@ html,
 
 /* stylelint-disable */
 @supports (font: -apple-system-body) {
-    :root,
-    :host {
-        .native {
-            font: -apple-system-body;
-        }
+    :root:has(.native),
+    :host:has(.native) {
+        font: -apple-system-body;
     }
 }
