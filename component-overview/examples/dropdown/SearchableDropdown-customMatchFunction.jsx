@@ -1,6 +1,6 @@
 import { InputGroup } from '@sb1/ffe-form-react';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
-import { useState } from 'react';
+import { useId, useState } from 'react';
 
 () => {
     const companies = [
@@ -31,8 +31,8 @@ import { useState } from 'react';
         },
     ];
 
-    const id = 'searchabledropdow-customMatchFunc';
-    const labelId = `${id}-label`;
+    const inputId = useId();
+    const labelId = useId();
     const [selectedOption, setSelectedOption] = useState(null);
     const cleanString = value => `${value}`.replace(/\s/g, '').toLowerCase();
     const searchMatcher = (inputValue, searchAttributes) => item => {
@@ -44,9 +44,9 @@ import { useState } from 'react';
             );
     };
     return (
-        <InputGroup label="Velg bedrift" labelId={labelId}>
+        <InputGroup label="Velg bedrift" labelId={labelId} inputId={inputId}>
             <SearchableDropdown
-                id={id}
+                id={inputId}
                 labelledById={labelId}
                 inputProps={{ placeholder: 'Velg' }}
                 dropdownAttributes={['organizationName', 'organizationNumber']}
@@ -58,4 +58,4 @@ import { useState } from 'react';
             />
         </InputGroup>
     );
-}
+};

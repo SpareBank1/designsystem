@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { InlineExpandButton } from '@sb1/ffe-buttons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import { Paragraph } from '@sb1/ffe-core-react';
 
 () => {
     const [isExpanded, setExpanded] = useState(false);
+    const collapseId = useId();
     return (
         <>
             <Paragraph>
@@ -12,7 +13,7 @@ import { Paragraph } from '@sb1/ffe-core-react';
                 opplysningene om meg, slik at jeg kan få bedre og relevante
                 tilbud.
                 <InlineExpandButton
-                    aria-controls="inline-expand-example-details"
+                    aria-controls={collapseId}
                     aria-expanded={isExpanded}
                     isExpanded={isExpanded}
                     onClick={() => setExpanded(!isExpanded)}
@@ -21,11 +22,7 @@ import { Paragraph } from '@sb1/ffe-core-react';
                 </InlineExpandButton>
             </Paragraph>
 
-            <Collapse
-                id="inline-expand-example-details"
-                isOpen={isExpanded}
-                role="region"
-            >
+            <Collapse id={collapseId} isOpen={isExpanded} role="region">
                 <div>
                     <Paragraph>
                         Jeg samtykker til at selskapene i SpareBank 1 deler og
@@ -52,4 +49,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
             </Collapse>
         </>
     );
-}
+};

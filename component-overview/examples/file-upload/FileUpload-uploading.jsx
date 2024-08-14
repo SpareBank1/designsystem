@@ -1,23 +1,25 @@
 import { FileUpload } from '@sb1/ffe-file-upload-react';
+import { useId } from 'react';
 
 () => {
+    const id = useId();
     const files = {
         'progress.gif': {
-            name: 'progress.gif'
+            name: 'progress.gif',
         },
         'done.png': {
             name: 'done.png',
-            document: 'whatever'
+            document: 'whatever',
         },
         'fail.jpg': {
             name: 'fail.jpg',
-            error: 'Det fungerte ikke'
-        }
+            error: 'Det fungerte ikke',
+        },
     };
 
     return (
         <FileUpload
-            id="ffe-file-upload-example"
+            id={id}
             label={'Velg filer'}
             title={'Dokumentasjon'}
             infoText={
