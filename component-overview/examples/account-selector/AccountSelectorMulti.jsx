@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { AccountSelectorMulti } from '@sb1/ffe-account-selector-react';
 import { Label } from '@sb1/ffe-form-react';
 
 () => {
     const [value, setValue] = useState();
     const [selectedAccounts, setSelectedAccounts] = useState([]);
+    const id = useId();
 
     const accounts = [
         {
@@ -70,7 +71,7 @@ import { Label } from '@sb1/ffe-form-react';
         <>
             <Label htmlFor="account-selector-multi">Velg konto</Label>
             <AccountSelectorMulti
-                id="account-selector-multi"
+                id={id}
                 locale="nb"
                 accounts={accounts}
                 onAccountSelected={onAccountSelected}
@@ -85,4 +86,4 @@ import { Label } from '@sb1/ffe-form-react';
             />
         </>
     );
-}
+};

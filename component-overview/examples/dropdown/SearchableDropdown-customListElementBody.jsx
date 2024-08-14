@@ -1,6 +1,6 @@
 import { InputGroup } from '@sb1/ffe-form-react';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { SmallText } from '@sb1/ffe-core-react';
 
 () => {
@@ -21,8 +21,8 @@ import { SmallText } from '@sb1/ffe-core-react';
             quantityUnprocessedMessages: 1,
         },
     ];
-    const id = 'searchabledropdow-customlistelembody';
-    const labelId = `${id}-label`;
+    const inputId = useId();
+    const labelId = useId();
     const [selectedOption, setSelectedOption] = useState(null);
     const CustomListElementBody = ({ item, isHighlighted }) => {
         return (
@@ -45,9 +45,9 @@ import { SmallText } from '@sb1/ffe-core-react';
         );
     };
     return (
-        <InputGroup label="Velg bedrift" labelId={labelId}>
+        <InputGroup label="Velg bedrift" labelId={labelId} inputId={inputId}>
             <SearchableDropdown
-                id={id}
+                id={inputId}
                 labelledById={labelId}
                 inputProps={{ placeholder: 'Velg' }}
                 dropdownAttributes={['organizationName', 'organizationNumber']}
@@ -60,4 +60,4 @@ import { SmallText } from '@sb1/ffe-core-react';
             />
         </InputGroup>
     );
-}
+};

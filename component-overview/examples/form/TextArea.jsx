@@ -1,10 +1,17 @@
 import { TextArea, Label } from '@sb1/ffe-form-react';
+import { useId } from 'react';
 
-<>
-    <Label htmlFor="textarea-example">Beskriv skaden</Label>
-    <TextArea
-        defaultValue="Dette er et tekstfelt for lengre tekster."
-        id="textarea-example"
-        rows={8}
-    />
-</>
+() => {
+    const textAreaId = useId();
+
+    return (
+        <>
+            <Label htmlFor={textAreaId}>Beskriv skaden</Label>
+            <TextArea
+                defaultValue="Dette er et tekstfelt for lengre tekster."
+                id={textAreaId}
+                rows={8}
+            />
+        </>
+    );
+};

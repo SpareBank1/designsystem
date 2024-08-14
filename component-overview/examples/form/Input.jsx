@@ -1,6 +1,13 @@
 import { Input, Label } from '@sb1/ffe-form-react';
+import { useId } from 'react';
 
-<>
-    <Label htmlFor="input-first-name">Fornavn</Label>
-    <Input id="input-first-name" />
-</>
+() => {
+    const inputId = useId();
+
+    return (
+        <>
+            <Label htmlFor={inputId}>Fornavn</Label>
+            <Input id={inputId} />
+        </>
+    );
+};

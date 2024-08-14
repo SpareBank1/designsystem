@@ -1,6 +1,6 @@
+import { useState, useId } from 'react';
 import { InputGroup } from '@sb1/ffe-form-react';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
-import { useState } from 'react';
 
 () => {
     const companies = [
@@ -20,13 +20,13 @@ import { useState } from 'react';
             quantityUnprocessedMessages: 1,
         },
     ];
-    const id = 'searchabledropdow-2attrs';
-    const labelId = `${id}-label`;
+    const inputId = useId();
+    const labelId = useId();
     const [selectedOption, setSelectedOption] = useState(null);
     return (
-        <InputGroup label="Velg bedrift" labelId={labelId}>
+        <InputGroup label="Velg bedrift" labelId={labelId} inputId={inputId}>
             <SearchableDropdown
-                id={id}
+                id={inputId}
                 labelledById={labelId}
                 inputProps={{ placeholder: 'Velg' }}
                 dropdownAttributes={['organizationName', 'organizationNumber']}
@@ -38,4 +38,4 @@ import { useState } from 'react';
             />
         </InputGroup>
     );
-}
+};
