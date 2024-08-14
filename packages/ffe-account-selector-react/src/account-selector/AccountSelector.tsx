@@ -53,11 +53,6 @@ export interface AccountSelectorProps<T extends Account = Account> {
     inputProps?: React.ComponentPropsWithoutRef<'input'>;
     /** Returns the selected account object */
     onAccountSelected: (account: T) => void;
-    /**
-     * Called when emptying the input field and moving focus away from the account selector
-     * *
-    onReset: () => void;
-    selectedAccount?: T
     /** Determines if account details should be shown (balance and account number under the input field) */
     hideAccountDetails?: boolean;
     /** Default false. */
@@ -82,7 +77,9 @@ export interface AccountSelectorProps<T extends Account = Account> {
     onOpen?: () => void;
     onClose?: () => void;
     selectedAccount?: T;
-
+    /**
+     * Called when emptying the input field and moving focus away from the account selector
+     * */
     onReset: () => void;
     /** Adds alternative styling for better contrast on certain backgrounds */
     onColoredBg?: boolean;
