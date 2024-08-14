@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
 import { InputGroup } from '@sb1/ffe-form-react';
 import { fargeFjell } from '@sb1/ffe-core';
 
 () => {
     const [selectedAccount, setSelectedAccount] = useState();
+    const labelId = useId();
+    const inputId = useId();
 
-    const label1 = 'label1';
     return (
         <div style={{ background: fargeFjell, padding: 16 }}>
-            <InputGroup label="Velg konto" onColoredBg={true} labelId={label1}>
+            <InputGroup
+                label="Velg konto"
+                onColoredBg={true}
+                labelId={labelId}
+                inputId={inputId}
+            >
                 <AccountSelector
                     onColoredBg={true}
                     accounts={[
@@ -20,9 +26,9 @@ import { fargeFjell } from '@sb1/ffe-core';
                             balance: 1337,
                         },
                     ]}
-                    id="account-selector-single"
+                    id={inputId}
+                    labelledById={labelId}
                     locale="nb"
-                    labelledById={label1}
                     onAccountSelected={val => setSelectedAccount(val)}
                     onReset={() => setSelectedAccount(null)}
                     selectedAccount={selectedAccount}
