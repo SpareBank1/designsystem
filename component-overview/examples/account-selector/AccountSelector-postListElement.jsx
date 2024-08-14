@@ -1,12 +1,19 @@
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
 import { InputGroup } from '@sb1/ffe-form-react';
 
 () => {
     const [selectedAccount, setSelectedAccount] = useState();
-    const label1 = 'label1';
+    const labelId = useId();
+    const inputId = useId();
+
     return (
-        <InputGroup label="Velg konto" extraMargin={false} labelId={label1}>
+        <InputGroup
+            inputId={inputId}
+            label="Velg konto"
+            extraMargin={false}
+            labelId={labelId}
+        >
             <AccountSelector
                 accounts={[
                     {
@@ -52,9 +59,9 @@ import { InputGroup } from '@sb1/ffe-form-react';
                         balance: 0,
                     },
                 ]}
-                id="account-selector-single"
+                id={inputId}
+                labelledById={labelId}
                 locale="nb"
-                labelledById={label1}
                 postListElement={<span>Some text describing the list</span>}
                 onAccountSelected={val => setSelectedAccount(val)}
                 onReset={() => setSelectedAccount(null)}
@@ -62,4 +69,4 @@ import { InputGroup } from '@sb1/ffe-form-react';
             />
         </InputGroup>
     );
-}
+};
