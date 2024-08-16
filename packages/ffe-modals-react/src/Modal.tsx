@@ -62,6 +62,22 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             }
         }, [isOpen]);
 
+        useEffect(() => {
+            if (
+                typeof window !== 'undefined' && // to support Gatsby build(server side rendering)
+                dialogRef.current &&
+                typeof dialogRef.current.showModal !== 'function'
+            ) {
+                import('dialog-polyfill').then(
+                    ({ default: dialogPolyfill }) => {
+                        if (dialogRef.current) {
+                            dialogPolyfill.registerDialog(dialogRef.current);
+                        }
+                    },
+                );
+            }
+        }, []);
+
         return createPortal(
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <dialog
