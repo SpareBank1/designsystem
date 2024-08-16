@@ -331,6 +331,13 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
+        // open list and select second item
+        await user.click(input);
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{arrowdown}');
+        await user.type(input, '{enter}');
+
+        // reopen the list and navigate to second item
         await user.click(input);
         await user.type(input, '{arrowdown}');
         await user.type(input, '{arrowdown}');
