@@ -4,6 +4,7 @@ import { fixedForwardRef } from './fixedForwardRef';
 interface ListItemContainerProps<Item extends Record<string, any>> {
     item: Item;
     isHighlighted: boolean;
+    isSelected: boolean;
     children: ({
         item,
         isHighlighted,
@@ -19,6 +20,7 @@ function ListItemContainerWithForwardRef<Item extends Record<string, any>>(
     {
         item,
         isHighlighted,
+        isSelected,
         children,
         onMouseEnter,
         onClick,
@@ -32,7 +34,7 @@ function ListItemContainerWithForwardRef<Item extends Record<string, any>>(
             id={id}
             role="option"
             onMouseEnter={onMouseEnter}
-            aria-selected={isHighlighted}
+            aria-selected={isSelected}
             ref={ref}
             onClick={onClick}
             className="ffe-searchable-dropdown__list-item-container"

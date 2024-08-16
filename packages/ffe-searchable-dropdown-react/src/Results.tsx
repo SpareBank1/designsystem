@@ -3,6 +3,7 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 import { ListItemContainer } from './ListItemContainer';
 import { NoMatch } from './NoMatch';
 import { Locale } from './types';
+import isEqual from 'lodash.isequal';
 
 interface ResultProps<Item extends Record<string, any>> {
     noMatch?: {
@@ -17,6 +18,7 @@ interface ResultProps<Item extends Record<string, any>> {
         dropdownAttributes: (keyof Item)[];
         locale: Locale;
     }>;
+    selectedItem?: Item | null;
     highlightedIndex?: number;
     refs: React.Ref<HTMLDivElement>[];
     dropdownAttributes: (keyof Item)[];
@@ -34,6 +36,7 @@ export function Results<Item extends Record<string, any>>({
     dropdownAttributes,
     locale,
     onChange,
+    selectedItem,
 }: ResultProps<Item>) {
     return (
         <Scrollbars autoHeight={true} autoHeightMax={335}>
@@ -45,25 +48,28 @@ export function Results<Item extends Record<string, any>>({
                     locale={locale}
                 />
             )}
-            {listToRender.map((item, index) => (
-                <ListItemContainer
-                    key={Object.values(item).join('-')}
-                    ref={refs[index]}
-                    isHighlighted={highlightedIndex === index}
-                    onClick={() => {
-                        onChange(item);
-                    }}
-                    item={item}
-                >
-                    {props => (
-                        <ListItemBodyElement
-                            {...props}
-                            locale={locale}
-                            dropdownAttributes={dropdownAttributes}
-                        />
-                    )}
-                </ListItemContainer>
-            ))}
+            {listToRender.map((item, index) => {
+                return (
+                    <ListItemContainer
+                        isSelected={isEqual(item, selectedItem)}
+                        key={Object.values(item).join('-')}
+                        ref={refs[index]}
+                        isHighlighted={highlightedIndex === index}
+                        onClick={() => {
+                            onChange(item);
+                        }}
+                        item={item}
+                    >
+                        {props => (
+                            <ListItemBodyElement
+                                {...props}
+                                locale={locale}
+                                dropdownAttributes={dropdownAttributes}
+                            />
+                        )}
+                    </ListItemContainer>
+                );
+            })}
         </Scrollbars>
     );
 }

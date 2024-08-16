@@ -420,6 +420,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                             }}
                             noMatch={state.noMatch ? noMatch : undefined}
                             noMatchMessageId={noMatchMessageId}
+                            selectedItem={state.selectedItem}
                         />
                     )}
                     {postListElement && (
