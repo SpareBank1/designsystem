@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.9...@sb1/ffe-modals-react@0.5.0) (2024-08-16)
+
+
+### Features
+
+* **ffe-modals-react:** polyfill for older browsers ([84b0c0e](https://github.com/SpareBank1/designsystem/commit/84b0c0e3721da4d1f5d65041f841fc295474a51a))
+
+
+
+
+
 ## [0.4.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.4.8...@sb1/ffe-modals-react@0.4.9) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react

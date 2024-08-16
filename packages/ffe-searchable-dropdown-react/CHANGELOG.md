@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@20.0.6...@sb1/ffe-searchable-dropdown-react@20.0.7) (2024-08-16)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** aria-selected ([6177830](https://github.com/SpareBank1/designsystem/commit/6177830c3eb31f0669621281269fa5799a80df02))
+
+
+
+
+
 ## [20.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@20.0.5...@sb1/ffe-searchable-dropdown-react@20.0.6) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
