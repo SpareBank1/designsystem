@@ -4,21 +4,21 @@ import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
 import { CardRenderProps, ComponentAsPropParams } from '../types';
 import { fixedForwardRef } from '../fixedForwardRef';
 
-export type GroupCardElementProps<As extends ElementType = 'div'> = Omit<
+export type GroupCardTitleProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,
     'children'
 > & {
     /** No padding on the element */
     noPadding?: boolean;
-    /** Visible border between the elements*/
+    /** Visible border underneath title*/
     noSeparator?: boolean;
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
 };
 
-function GroupCardElementWithForwardRef<As extends ElementType>(
-    props: GroupCardElementProps<As>,
+function GroupCardTitleWithForwardRef<As extends ElementType>(
+    props: GroupCardTitleProps<As>,
     ref: ForwardedRef<any>,
 ) {
     const {
@@ -31,8 +31,8 @@ function GroupCardElementWithForwardRef<As extends ElementType>(
 
     return (
         <WithCardAction
-            baseClassName="ffe-group-card__element"
-            className={classNames('ffe-group-card__element', className, {
+            baseClassName="ffe-group-card__title"
+            className={classNames('ffe-group-card__title', className, {
                 'ffe-group-card__element--no-padding': noPadding,
                 'ffe-group-card__element--no-separator': noSeparator,
             })}
@@ -48,4 +48,4 @@ function GroupCardElementWithForwardRef<As extends ElementType>(
     );
 }
 
-export const GroupCardElement = fixedForwardRef(GroupCardElementWithForwardRef);
+export const GroupCardTitle = fixedForwardRef(GroupCardTitleWithForwardRef);

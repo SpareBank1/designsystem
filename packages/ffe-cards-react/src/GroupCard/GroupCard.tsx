@@ -16,7 +16,7 @@ export interface GroupCardProps
 
 function GroupCardWithForwardRef(
     {
-        shadow,
+        shadow = true,
         className,
         children,
         bgColor,

@@ -7,6 +7,14 @@ export {
     GroupCardElementProps,
 } from './GroupCard/GroupCardElement';
 export {
+    GroupCardTitle,
+    GroupCardTitleProps,
+} from './GroupCard/GroupCardTitle';
+export {
+    GroupCardFooter,
+    GroupCardFooterProps,
+} from './GroupCard/GroupCardFooter';
+export {
     IllustrationCard,
     IllustrationCardProps,
 } from './IllustrationCard/IllustrationCard';
