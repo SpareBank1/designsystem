@@ -22,15 +22,13 @@
     }
 
     &:has(.ffe-card__action:active, .ffe-card__action:focus) {
-        --border-color: var(--ffe-v-cards-image-card-border-hover-color);
+        --border-color: var(--ffe-v-cards-border-hover-color);
     }
 
     &:has(.ffe-card__action) {
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                --border-color: var(
-                    --ffe-v-cards-image-card-border-hover-color
-                );
+                --border-color: var(--ffe-v-cards-border-hover-color);
             }
         }
     }
