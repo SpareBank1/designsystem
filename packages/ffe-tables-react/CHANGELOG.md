@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.1.5...@sb1/ffe-tables-react@10.1.6) (2024-08-20)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** fjerner uuid og bruker useId ([e14cfb4](https://github.com/SpareBank1/designsystem/commit/e14cfb4aa02bde2d3d583a646d04fbf138cba68a))
+
+
+
+
+
 ## [10.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.1.4...@sb1/ffe-tables-react@10.1.5) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

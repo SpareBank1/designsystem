@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@21.0.7...@sb1/ffe-form-react@21.0.8) (2024-08-20)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** fjerner uuid og bruker useId ([7c4a0ea](https://github.com/SpareBank1/designsystem/commit/7c4a0eae8a24cf61d9e8d8fb9487d1cbe1cadd8e))
+
+
+
+
+
 ## [21.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@21.0.6...@sb1/ffe-form-react@21.0.7) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
