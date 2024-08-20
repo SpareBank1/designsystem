@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.2.29...@sb1/ffe-component-index@8.3.0) (2024-08-20)
+
+
+### Features
+
+* **ffe-cards:** added illustration on right IllustrationCard ([ec9dea5](https://github.com/SpareBank1/designsystem/commit/ec9dea5c94febb1061eb85aca1984fcd2aefee30))
+
+
+
+
+
 ## [8.2.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.2.28...@sb1/ffe-component-index@8.2.29) (2024-08-20)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

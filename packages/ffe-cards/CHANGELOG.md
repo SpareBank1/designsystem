@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.3.0...@sb1/ffe-cards@19.4.0) (2024-08-20)
+
+
+### Features
+
+* **ffe-cards:** added illustration on right IllustrationCard ([ec9dea5](https://github.com/SpareBank1/designsystem/commit/ec9dea5c94febb1061eb85aca1984fcd2aefee30))
+
+
+
+
+
 # [19.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.2.6...@sb1/ffe-cards@19.3.0) (2024-08-20)
 
 
