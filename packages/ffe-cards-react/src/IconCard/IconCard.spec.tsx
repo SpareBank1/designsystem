@@ -62,6 +62,30 @@ describe('IconCard', () => {
         ).toBeTruthy();
     });
 
+    it('should render icon on the right when modifier iconPosition="right', () => {
+        render(
+            <IconCard
+                data-testid={TEST_ID}
+                iconPosition="right"
+                icon={<Icon fileUrl={savingsIconXlarge} size="xl" />}
+            >
+                {children}
+            </IconCard>,
+        );
+        const card = screen.getByTestId(TEST_ID);
+        expect(card.classList.contains('ffe-icon-card')).toBeTruthy();
+
+        const icon = card.querySelector('.ffe-icon-card__icon');
+        const body = card.querySelector('.ffe-icon-card__body');
+
+        if (icon && body) {
+            expect(
+                body?.compareDocumentPosition(icon) &
+                    Node.DOCUMENT_POSITION_FOLLOWING,
+            ).toBeTruthy();
+        }
+    });
+
     it('should render children as a function', () => {
         render(
             <IconCard

@@ -12,6 +12,8 @@ export type IconCardProps<As extends ElementType = 'div'> = Omit<
     icon: ReactElement;
     /** Smaller icon and less space */
     condensed?: boolean;
+    /** Position icon at left (default) or right of the card content */
+    iconPosition?: 'right' | 'left';
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -21,28 +23,31 @@ function IconCardWithForwardRef<As extends ElementType>(
     props: IconCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, condensed, icon, children, ...rest } = props;
+    const { className, condensed, icon, children, iconPosition, ...rest } =
+        props;
     return (
         <WithCardAction
             baseClassName="ffe-icon-card"
             className={classNames(
                 'ffe-icon-card',
                 { 'ffe-icon-card--condensed': condensed },
+                { 'ffe-icon-card--right': iconPosition === 'right' },
                 className,
             )}
             {...(rest as Record<string, unknown>)}
             ref={ref}
         >
-            {({ CardAction }) => (
-                <>
-                    {React.cloneElement(icon, {
+            {({ CardAction }) => {
+                const content = [
+                    React.cloneElement(icon, {
                         ...icon.props,
+                        key: 'icon',
                         className: classNames(
                             'ffe-icon-card__icon',
                             icon.props.className,
                         ),
-                    })}
-                    <div className="ffe-icon-card__body">
+                    }),
+                    <div className="ffe-icon-card__body" key="body">
                         {typeof children === 'function'
                             ? children({
                                   Text,
@@ -52,9 +57,14 @@ function IconCardWithForwardRef<As extends ElementType>(
                                   CardAction,
                               })
                             : children}
-                    </div>
-                </>
-            )}
+                    </div>,
+                ];
+                return (
+                    <>
+                        {iconPosition === 'right' ? content.reverse() : content}
+                    </>
+                );
+            }}
         </WithCardAction>
     );
 }
