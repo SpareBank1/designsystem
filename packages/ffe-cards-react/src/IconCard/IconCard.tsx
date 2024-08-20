@@ -25,6 +25,7 @@ function IconCardWithForwardRef<As extends ElementType>(
 ) {
     const { className, condensed, icon, children, iconPosition, ...rest } =
         props;
+
     return (
         <WithCardAction
             baseClassName="ffe-icon-card"
@@ -38,16 +39,8 @@ function IconCardWithForwardRef<As extends ElementType>(
             ref={ref}
         >
             {({ CardAction }) => {
-                const content = [
-                    React.cloneElement(icon, {
-                        ...icon.props,
-                        key: 'icon',
-                        className: classNames(
-                            'ffe-icon-card__icon',
-                            icon.props.className,
-                        ),
-                    }),
-                    <div className="ffe-icon-card__body" key="body">
+                const bodyElement = (
+                    <div className="ffe-icon-card__body">
                         {typeof children === 'function'
                             ? children({
                                   Text,
@@ -57,11 +50,26 @@ function IconCardWithForwardRef<As extends ElementType>(
                                   CardAction,
                               })
                             : children}
-                    </div>,
-                ];
-                return (
+                    </div>
+                );
+
+                const iconElement = React.cloneElement(icon, {
+                    ...icon.props,
+                    className: classNames(
+                        'ffe-icon-card__icon',
+                        icon.props.className,
+                    ),
+                });
+
+                return iconPosition === 'right' ? (
                     <>
-                        {iconPosition === 'right' ? content.reverse() : content}
+                        {bodyElement}
+                        {iconElement}
+                    </>
+                ) : (
+                    <>
+                        {iconElement}
+                        {bodyElement}
                     </>
                 );
             }}
