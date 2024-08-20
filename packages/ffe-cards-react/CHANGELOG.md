@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.1.8...@sb1/ffe-cards-react@17.2.0) (2024-08-20)
+
+
+### Features
+
+* **ffe-cards-react:** icons on right IconCard ([74af332](https://github.com/SpareBank1/designsystem/commit/74af332bbb25bdc0b5f98ec0052f67e2a6b6c021))
+
+
+
+
+
 ## [17.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.1.7...@sb1/ffe-cards-react@17.1.8) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
