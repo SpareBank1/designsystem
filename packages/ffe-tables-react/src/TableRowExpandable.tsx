@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useId } from 'react';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import { txt } from './texts';
-import { v4 as uuid } from 'uuid';
 import { CellContent } from './CellContent';
 
 export interface TableRowExpandableProps
@@ -30,7 +29,7 @@ export const TableRowExpandable = React.forwardRef<
         ref,
     ) => {
         const [isOpen, setIsOpen] = useState(!!isDefaultOpen);
-        const expandoRowId = useRef(`check-${uuid()}`).current;
+        const expandoRowId = useId();
         const [isAnimating, setIsAnimating] = useState(false);
         const expandButtonRef = useRef<HTMLButtonElement>(null);
 
