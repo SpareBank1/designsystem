@@ -12,28 +12,21 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: var(--ffe-spacing-md);
+    gap: var(--ffe-spacing-xs);
 
-    & > &__icon {
-        color: var(--ffe-v-cards-icon-color);
-        margin: 0 var(--ffe-spacing-lg) 0 var(--ffe-spacing-xs);
-    }
-
-    &.ffe-icon-card--right {
-        .ffe-icon-card__icon {
-            justify-self: end;
-            margin: 0 var(--ffe-spacing-xs) 0 var(--ffe-spacing-lg);
-        }
+    &--right {
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
     }
 
     @media (min-width: @breakpoint-md) {
-        .ffe-icon-card__icon {
-            margin: 0 var(--ffe-spacing-md) 0;
+        gap: var(--ffe-spacing-md);
+        &--condensed {
+            gap: var(--ffe-spacing-xs);
         }
     }
-}
 
-.ffe-icon-card--condensed {
     .ffe-icon-card__icon {
-        margin: 0 var(--ffe-spacing-sm) 0 0;
+        color: var(--ffe-v-cards-icon-color);
     }
 }
