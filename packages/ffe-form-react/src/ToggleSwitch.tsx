@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React, { useId } from 'react';
 import classNames from 'classnames';
 import i18n from './i18n/i18n';
 
@@ -26,13 +25,15 @@ export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
     hideOnOff,
     onText,
     offText,
-    id,
+    id: providedId,
     value = 'on',
     locale = 'nb',
     checked,
     ...rest
 }) => {
-    const generatedId = useRef(id ?? `toggle-${uuidv4()}`).current;
+    const generatedId = useId();
+
+    const id = providedId ?? generatedId;
 
     const text = i18n[locale];
 
@@ -47,12 +48,12 @@ export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
             <input
                 className="ffe-toggle-switch__input"
                 type="checkbox"
-                id={generatedId}
+                id={id}
                 value={value}
                 checked={!!checked}
                 {...rest}
             />
-            <label className="ffe-toggle-switch__label" htmlFor={generatedId}>
+            <label className="ffe-toggle-switch__label" htmlFor={id}>
                 <span className="ffe-toggle-switch__label-text">
                     {children}
                     {description && (
