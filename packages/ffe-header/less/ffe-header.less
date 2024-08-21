@@ -279,7 +279,8 @@
     }
 
     &__user-nav {
-        transition: transform var(--ffe-transition-duration) var(--ffe-ease),
+        transition:
+            transform var(--ffe-transition-duration) var(--ffe-ease),
             opacity 0.1s;
         overflow: hidden;
 
@@ -317,7 +318,8 @@
             position: absolute;
             left: 0;
             bottom: 10px;
-            transition: transform var(--ffe-transition-duration)
+            transition:
+                transform var(--ffe-transition-duration)
                     var(--ffe-ease-in-out-back),
                 width var(--ffe-transition-duration) var(--ffe-ease-in-out-back);
         }
@@ -532,7 +534,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .native {
+    .regard-color-scheme-preference {
         .ffe-header {
             &__user-nav {
                 .ffe-header__link {
