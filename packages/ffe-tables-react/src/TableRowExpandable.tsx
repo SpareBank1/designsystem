@@ -6,10 +6,11 @@ import { txt } from './texts';
 import { CellContent } from './CellContent';
 
 export interface TableRowExpandableProps
-    extends React.ComponentPropsWithoutRef<'tr'> {
+    extends Omit<React.ComponentPropsWithoutRef<'tr'>, 'onClick'> {
     expandContent: React.ReactNode;
     locale?: 'nb' | 'nn' | 'en';
     isDefaultOpen?: boolean;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const TableRowExpandable = React.forwardRef<
@@ -50,7 +51,6 @@ export const TableRowExpandable = React.forwardRef<
                         ) {
                             expandButtonRef.current?.click();
                         }
-                        onClick?.(e);
                     }}
                     ref={ref}
                     {...rest}
@@ -75,9 +75,10 @@ export const TableRowExpandable = React.forwardRef<
                                 }
                                 aria-controls={expandoRowId}
                                 aria-expanded={isOpen}
-                                onClick={() => {
+                                onClick={e => {
                                     setIsOpen(prev => !prev);
                                     setIsAnimating(true);
+                                    onClick?.(e);
                                 }}
                             >
                                 <Icon

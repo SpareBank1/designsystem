@@ -35,13 +35,17 @@ describe('<TableRowExpandable />', () => {
     });
 
     it('should be expandable', async () => {
+        const onClick = jest.fn();
         const user = userEvent.setup({ delay: null });
         jest.useFakeTimers();
 
         render(
             <table>
                 <tbody>
-                    <TableRowExpandable expandContent={<div>expand</div>} />
+                    <TableRowExpandable
+                        onClick={onClick}
+                        expandContent={<div>expand</div>}
+                    />
                 </tbody>
             </table>,
         );
@@ -76,6 +80,7 @@ describe('<TableRowExpandable />', () => {
             expandButton.getAttribute('aria-controls'),
         );
 
+        expect(onClick).toHaveBeenCalledTimes(1);
         jest.useRealTimers();
     });
 });
