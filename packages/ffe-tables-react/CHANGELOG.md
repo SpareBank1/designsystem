@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.1.6...@sb1/ffe-tables-react@10.1.7) (2024-08-21)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** onClick was called 2 times in TableRowExpandable ([2565ab8](https://github.com/SpareBank1/designsystem/commit/2565ab8b16a1f7e77c84b78e67a55bdbe343240d))
+
+
+
+
+
 ## [10.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.1.5...@sb1/ffe-tables-react@10.1.6) (2024-08-20)
 
 
