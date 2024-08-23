@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@20.0.7...@sb1/ffe-searchable-dropdown-react@21.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** regard-color-scheme-preference for darkmode ([d123ed7](https://github.com/SpareBank1/designsystem/commit/d123ed7b5647c4fb152de00d7ec5a6b68230bd66))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [20.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@20.0.6...@sb1/ffe-searchable-dropdown-react@20.0.7) (2024-08-16)
 
 

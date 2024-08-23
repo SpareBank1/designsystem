@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@9.0.10...@sb1/ffe-system-message@10.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-system-message:** regard-color-scheme-preference for darkmode ([267cfe1](https://github.com/SpareBank1/designsystem/commit/267cfe1e8ceb552f86b6c9d354e41ec5c3afb6d8))
+
+
+### BREAKING CHANGES
+
+* **ffe-system-message:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [9.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@9.0.9...@sb1/ffe-system-message@9.0.10) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

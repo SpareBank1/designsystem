@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@9.0.10...@sb1/ffe-context-message@10.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-context-message:** regard-color-scheme-preference for darkmode ([79ff13d](https://github.com/SpareBank1/designsystem/commit/79ff13d01ef4cd1e9b0606ede816c4e61ba122b3))
+
+
+### BREAKING CHANGES
+
+* **ffe-context-message:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [9.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@9.0.9...@sb1/ffe-context-message@9.0.10) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

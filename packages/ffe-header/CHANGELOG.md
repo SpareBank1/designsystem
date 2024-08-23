@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@21.0.9...@sb1/ffe-header@22.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-header:** regard-color-scheme-preference for darkmode ([19bf59d](https://github.com/SpareBank1/designsystem/commit/19bf59d989db92328797ae7e10741f2e9554f123))
+
+
+### BREAKING CHANGES
+
+* **ffe-header:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [21.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@21.0.8...@sb1/ffe-header@21.0.9) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-header

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.1.5...@sb1/ffe-form@30.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-form:** regard-color-scheme-preference for darkmode ([51e1077](https://github.com/SpareBank1/designsystem/commit/51e10776d65b2c1a4b92e3e1db8dd22b2b14333f))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [29.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.1.4...@sb1/ffe-form@29.1.5) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-form

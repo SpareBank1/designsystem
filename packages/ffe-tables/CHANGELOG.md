@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@15.0.5...@sb1/ffe-tables@16.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-tables:** regard-color-scheme-preference for darkmode ([700d0cd](https://github.com/SpareBank1/designsystem/commit/700d0cd7ef07aa0999ec3fc5c88430e80433af9b))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [15.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@15.0.4...@sb1/ffe-tables@15.0.5) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-tables

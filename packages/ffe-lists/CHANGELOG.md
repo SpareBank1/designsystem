@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@16.0.4...@sb1/ffe-lists@17.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-lists:** regard-color-scheme-preference for darkmode ([5925fcc](https://github.com/SpareBank1/designsystem/commit/5925fcce4ea17ee323d8f27d16f20600963d50f1))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [16.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@16.0.3...@sb1/ffe-lists@16.0.4) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-lists

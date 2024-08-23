@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@13.0.10...@sb1/ffe-message-box@14.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-message-box:** regard-color-scheme-preference for darkmode ([5fb92d1](https://github.com/SpareBank1/designsystem/commit/5fb92d1a991fc4ff100957a4c630daca522e5903))
+
+
+### BREAKING CHANGES
+
+* **ffe-message-box:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [13.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@13.0.9...@sb1/ffe-message-box@13.0.10) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-message-box

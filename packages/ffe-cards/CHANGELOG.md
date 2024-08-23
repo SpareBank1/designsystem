@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.4.0...@sb1/ffe-cards@20.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-cards:** regard-color-scheme-preference for darkmode ([824cf69](https://github.com/SpareBank1/designsystem/commit/824cf697a8d66cec451ac59d8ed9c45b8728f7f1))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 # [19.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.3.0...@sb1/ffe-cards@19.4.0) (2024-08-20)
 
 

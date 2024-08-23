@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.10...@sb1/ffe-modals@0.3.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-modals:** regard-color-scheme-preference for darkmode ([6d24251](https://github.com/SpareBank1/designsystem/commit/6d24251c62c2665ac630f75b4174fcd129ee03d8))
+
+
+### BREAKING CHANGES
+
+* **ffe-modals:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [0.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.2.9...@sb1/ffe-modals@0.2.10) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-modals

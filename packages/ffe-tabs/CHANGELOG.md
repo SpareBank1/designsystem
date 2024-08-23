@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@13.1.31...@sb1/ffe-tabs@14.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-tabs:** regard-color-scheme-preference for darkmode ([c920a20](https://github.com/SpareBank1/designsystem/commit/c920a20759b28955bda9515029b03596c8a6da3f))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [13.1.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@13.1.30...@sb1/ffe-tabs@13.1.31) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-tabs

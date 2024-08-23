@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.30...@sb1/ffe-accordion@11.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-accordion:** regard-color-scheme-preference for darkmode ([d50a5d6](https://github.com/SpareBank1/designsystem/commit/d50a5d61e7c5b82b76224c9f3f8aa15fd2d9af6b))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [10.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.29...@sb1/ffe-accordion@10.0.30) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

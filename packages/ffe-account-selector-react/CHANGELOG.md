@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [28.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@27.0.11...@sb1/ffe-account-selector-react@28.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-account-selector-react:** regard-color-scheme-preference for darkmode ([1927788](https://github.com/SpareBank1/designsystem/commit/19277886009595ba913a969ed561a3f5db8de01d))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [27.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@27.0.10...@sb1/ffe-account-selector-react@27.0.11) (2024-08-20)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

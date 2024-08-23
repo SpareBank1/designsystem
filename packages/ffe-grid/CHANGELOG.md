@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.3.10...@sb1/ffe-grid@15.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-grid:** regard-color-scheme-preference for darkmode ([1145199](https://github.com/SpareBank1/designsystem/commit/11451995041d60884f6f7dd252f7c01cbf7b52f7))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [14.3.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.3.9...@sb1/ffe-grid@14.3.10) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-grid

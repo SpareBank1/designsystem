@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@1.1.6...@sb1/ffe-pagination@2.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-pagination:** regard-color-scheme-preference for darkmode ([0b23a5e](https://github.com/SpareBank1/designsystem/commit/0b23a5e9d0a3cb7d667118a7eeefffcf3cdf9dbd))
+
+
+### BREAKING CHANGES
+
+* **ffe-pagination:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [1.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@1.1.5...@sb1/ffe-pagination@1.1.6) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-pagination

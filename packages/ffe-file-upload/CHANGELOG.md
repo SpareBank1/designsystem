@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@10.0.57...@sb1/ffe-file-upload@11.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-file-upload:** regard-color-scheme-preference for darkmode ([8aca5ff](https://github.com/SpareBank1/designsystem/commit/8aca5ff007492a7f08047e56b5399c3f34bc4685))
+
+
+### BREAKING CHANGES
+
+* **ffe-file-upload:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [10.0.57](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@10.0.56...@sb1/ffe-file-upload@10.0.57) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload

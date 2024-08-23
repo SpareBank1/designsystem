@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@28.0.3...@sb1/ffe-core@29.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-core:** regard-color-scheme-preference for darkmode ([2f4f486](https://github.com/SpareBank1/designsystem/commit/2f4f486cd6c5e5ba6997a8832446f6dac704ea78))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [28.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@28.0.2...@sb1/ffe-core@28.0.3) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-core

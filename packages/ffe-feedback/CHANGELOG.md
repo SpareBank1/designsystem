@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@1.2.27...@sb1/ffe-feedback@2.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-feedback:** regard-color-scheme-preference for darkmode ([59c0ab1](https://github.com/SpareBank1/designsystem/commit/59c0ab1e425c5f8ae3dae0649d5c5b9e374d0182))
+
+
+### BREAKING CHANGES
+
+* **ffe-feedback:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [1.2.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@1.2.26...@sb1/ffe-feedback@1.2.27) (2024-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-feedback

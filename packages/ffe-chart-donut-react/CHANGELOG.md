@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@7.0.2...@sb1/ffe-chart-donut-react@8.0.0) (2024-08-23)
+
+
+### Features
+
+* **ffe-chart-donut-react:** regard-color-scheme-preference for darkmode ([5d29dd0](https://github.com/SpareBank1/designsystem/commit/5d29dd034e20a28c87fd941654eb11dbd9649002))
+
+
+### BREAKING CHANGES
+
+* **ffe-chart-donut-react:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@7.0.1...@sb1/ffe-chart-donut-react@7.0.2) (2024-08-06)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react

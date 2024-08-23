@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.7.1...@sb1/ffe-buildtool@0.8.0) (2024-08-23)
+
+
+### Features
+
+* **buildtool:** change from native to regard-color-scheme-preference in allowed classNames ([d646e5e](https://github.com/SpareBank1/designsystem/commit/d646e5e2a118cba598094238b516695cbc7a5326))
+
+
+
+
+
 ## [0.7.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.7.0...@sb1/ffe-buildtool@0.7.1) (2024-08-06)
 
 **Note:** Version bump only for package @sb1/ffe-buildtool
