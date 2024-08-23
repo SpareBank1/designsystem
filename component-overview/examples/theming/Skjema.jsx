@@ -32,8 +32,9 @@ import {
         --ffe-v-button-action-color-hover: #000;
         --ffe-v-button-tertiary-color: #020a0a;
         --ffe-v-button-tertiary-color-hover: #de1a21;
-        --ffe-v-button-secondary-color: #000;
-        --ffe-v-button-secondary-color-bg: #d6d6d6;
+        --ffe-v-button-secondary-color: #d6d6d6;
+        --ffe-v-button-secondary-color-bg-hover: #000;
+        --ffe-v-button-secondary-color-text: #000;
     }`;
 
     return (
@@ -49,7 +50,7 @@ import {
 
                 <InputGroup label="Måned">
                     <Dropdown defaultValue="placeholder">
-                        <option value="placeholder" disabled>
+                        <option value="placeholder" disabled={true}>
                             Velg måned
                         </option>
                         <option value="jan">Januar</option>
