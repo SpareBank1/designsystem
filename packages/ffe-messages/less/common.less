@@ -244,10 +244,11 @@
     line-height: 2;
     text-align: left;
     width: fit-content;
-    .native {
-        li {
-            color: var(--ffe-farge-svart);
-        }
+}
+
+@media (prefers-color-scheme: dark) {
+    .regard-color-scheme-preference .ffe-message__list li {
+        color: var(--ffe-farge-svart);
     }
 }
 

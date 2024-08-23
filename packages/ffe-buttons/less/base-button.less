@@ -31,7 +31,7 @@
         box-shadow: 0 0 0 2px var(--ffe-farge-vann);
         transition: opacity var(--ffe-transition-duration) var(--ffe-ease);
 
-        .native & {
+        .regard-color-scheme-preference & {
             box-shadow: 0 0 0 2px var(--ffe-farge-hvit);
         }
     }
@@ -72,7 +72,7 @@
         color: var(--ffe-v-button-text-color);
     }
 
-    .native & {
+    .regard-color-scheme-preference & {
         @media (prefers-color-scheme: dark) {
             border: 2px solid transparent;
         }
@@ -122,7 +122,7 @@
     &:focus,
     &:visited {
         color: var(--ffe-v-button-secondary-color);
-        .native & {
+        .regard-color-scheme-preference & {
             @media (prefers-color-scheme: dark) {
                 color: var(--ffe-v-button-secondary-color);
             }
@@ -138,7 +138,7 @@
             .ffe-button__icon {
                 color: var(--ffe-v-button-secondary-color-bg);
             }
-            .native & {
+            .regard-color-scheme-preference & {
                 @media (prefers-color-scheme: dark) {
                     background-color: var(
                         --ffe-v-button-secondary-border-color
@@ -245,7 +245,7 @@
         margin: 0 var(--ffe-spacing-xs) 0 0;
         width: 45px;
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
-        .native & {
+        .regard-color-scheme-preference & {
             @media (prefers-color-scheme: dark) {
                 background-color: transparent;
             }
@@ -260,7 +260,7 @@
         .ffe-button--expand:hover & {
             color: var(--ffe-farge-hvit);
 
-            .native & {
+            .regard-color-scheme-preference & {
                 @media (prefers-color-scheme: dark) {
                     color: var(--ffe-farge-svart);
                 }

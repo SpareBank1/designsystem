@@ -39,7 +39,7 @@ module.exports = {
         'selector-combinator-space-before': null,
         'no-descending-specificity': null,
         'selector-class-pattern': [
-            '^(native|ffe-([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2})$',
+            '^(regard-color-scheme-preference|ffe-([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2})$',
             {
                 message: 'Expected class selector to be ffe-bem',
             },

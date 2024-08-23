@@ -1,15 +1,19 @@
 // Sets default body color, font styles and background color for light and dark themes
 .ffe-body {
-    background-color: var(--ffe-farge-hvit);
-    &.native {
+    --color: var(--ffe-g-text-color);
+    --background-color: var(--ffe-farge-hvit);
+
+    background-color: var(--background-color);
+    color: var(--color);
+
+    &.regard-color-scheme-preference {
         @media (prefers-color-scheme: dark) {
-            color: var(--ffe-farge-lysgraa);
-            background-color: var(--ffe-farge-svart);
+            --color: var(--ffe-farge-lysgraa);
+            --background-color: var(--ffe-farge-svart);
         }
     }
 
     font-family: var(--ffe-g-font);
-    color: var(--ffe-g-text-color);
     font-variant-numeric: tabular-nums;
 
     strong {
