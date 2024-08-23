@@ -28,12 +28,8 @@
         background: transparent;
         border-radius: 1.5rem;
         inset: -5px;
-        box-shadow: 0 0 0 2px var(--ffe-farge-vann);
+        box-shadow: 0 0 0 2px var(--ffe-v-button-shadow-color);
         transition: opacity var(--ffe-transition-duration) var(--ffe-ease);
-
-        .regard-color-scheme-preference & {
-            box-shadow: 0 0 0 2px var(--ffe-farge-hvit);
-        }
     }
 
     &:focus::after {
@@ -66,17 +62,12 @@
 
 .ffe-button--action {
     background-color: var(--ffe-v-button-action-color);
-    color: var(--ffe-v-button-text-color);
+    color: var(--ffe-v-button-action-color-text);
 
     .ffe-button__icon {
-        color: var(--ffe-v-button-text-color);
+        color: var(--ffe-v-button-action-color-text);
     }
 
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            border: 2px solid transparent;
-        }
-    }
     &:focus {
         background-color: var(--ffe-v-button-action-color);
     }
@@ -90,10 +81,10 @@
 
 .ffe-button--primary {
     background-color: var(--ffe-v-button-primary-color);
-    color: var(--ffe-v-button-text-color);
+    color: var(--ffe-v-button-primary-color-text);
 
     .ffe-button__icon {
-        color: var(--ffe-v-button-text-color);
+        color: var(--ffe-v-button-primary-color-text);
     }
 
     &:focus {
@@ -110,42 +101,30 @@
 .ffe-button--secondary,
 .ffe-button--shortcut,
 .ffe-button--expand {
-    background-color: var(--ffe-v-button-secondary-color-bg);
+    background-color: var(--ffe-v-button-secondary-color);
     border: solid 2px var(--ffe-v-button-secondary-border-color);
-    color: var(--ffe-v-button-secondary-color);
+    color: var(--ffe-v-button-secondary-color-text);
 
-    .ffe-button__icon {
-        color: var(--ffe-v-button-secondary-color);
+    .ffe-button__icon,
+    .ffe-button__label {
+        color: var(--ffe-v-button-secondary-color-text);
     }
 
     &:active,
     &:focus,
     &:visited {
-        color: var(--ffe-v-button-secondary-color);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                color: var(--ffe-v-button-secondary-color);
-            }
-        }
+        color: var(--ffe-v-button-secondary-color-text);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            background-color: var(--ffe-v-button-secondary-color);
-            border-color: var(--ffe-v-button-secondary-color);
-            color: var(--ffe-v-button-secondary-color-bg);
+            background-color: var(--ffe-v-button-secondary-color-bg-hover);
+            border-color: var(--ffe-v-button-secondary-color-bg-hover);
+            color: var(--ffe-v-button-secondary-color-text-hover);
 
-            .ffe-button__icon {
-                color: var(--ffe-v-button-secondary-color-bg);
-            }
-            .regard-color-scheme-preference & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: var(
-                        --ffe-v-button-secondary-border-color
-                    );
-                    border-color: var(--ffe-v-button-secondary-border-color);
-                    color: var(--ffe-v-button-secondary-color-bg);
-                }
+            .ffe-button__icon,
+            .ffe-button__label {
+                color: var(--ffe-v-button-secondary-color-text-hover);
             }
         }
     }
@@ -165,7 +144,7 @@
     border-radius: 1.75rem;
     border: 2px solid transparent;
     box-shadow: none;
-    color: var(--ffe-v-button-task-primary-color);
+    color: var(--ffe-v-button-task-color-text);
     display: inline-block;
     padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm) var(--ffe-spacing-2xs)
         var(--ffe-spacing-2xs);
@@ -175,16 +154,16 @@
 
     .ffe-button__icon > .ffe-icons {
         display: block;
-        color: var(--ffe-v-button-task-primary-color);
+        color: var(--ffe-v-button-task-color-icon);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            color: var(--ffe-v-button-task-text-color-hover);
+            color: var(--ffe-v-button-task-color-text-hover);
             box-shadow: none;
 
             .ffe-button__icon > .ffe-icons {
-                color: var(--ffe-v-button-primary-color-text);
+                color: var(--ffe-v-button-task-color-icon-hover);
             }
         }
     }
@@ -234,22 +213,17 @@
     }
 
     .ffe-button--task & {
-        border: 2px solid var(--ffe-v-button-primary-color);
+        border: 2px solid var(--ffe-v-button-task-color-border);
         border-radius: 50%;
-        background-color: var(--ffe-farge-hvit);
-        color: var(--ffe-v-button-task-primary-color);
+        background-color: var(--ffe-v-button-task-color);
+        color: var(--ffe-v-button-task-color-icon);
         height: 45px;
+        width: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 var(--ffe-spacing-xs) 0 0;
-        width: 45px;
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: transparent;
-            }
-        }
     }
 
     .ffe-button--expand & {
@@ -258,17 +232,9 @@
 
     @media (hover: hover) and (pointer: fine) {
         .ffe-button--expand:hover & {
-            color: var(--ffe-farge-hvit);
-
-            .regard-color-scheme-preference & {
-                @media (prefers-color-scheme: dark) {
-                    color: var(--ffe-farge-svart);
-                }
-            }
+            color: var(--ffe-v-button-secondary-color-text-hover);
         }
-    }
 
-    @media (hover: hover) and (pointer: fine) {
         .ffe-button--task:hover & {
             border-color: var(--ffe-v-button-primary-color);
             background-color: var(--ffe-v-button-primary-color);
