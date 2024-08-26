@@ -13,9 +13,9 @@ export interface DatepickerProps {
     ariaInvalid?: string | boolean;
     calendarAbove?: boolean;
     id?: string;
-    inputProps?: Pick<
+    inputProps?: Omit<
         React.ComponentPropsWithRef<'input'>,
-        'ref' | 'className' | 'id' | 'aria-describedby'
+        'aria-invalid' | 'value' | 'id'
     >;
     locale?: 'nb' | 'nn' | 'en';
     maxDate?: string;
@@ -144,11 +144,13 @@ export class Datepicker extends Component<DatepickerProps, DatepickerState> {
         });
     }
 
-    onInputBlur() {
+    onInputBlur(e: React.FocusEvent<HTMLInputElement>) {
+        this.props.inputProps?.onBlur?.(e);
         this.validateDateIntervals();
     }
 
     onInputKeydown(evt: React.KeyboardEvent<HTMLInputElement>) {
+        this.props.inputProps?.onKeyDown?.(evt);
         if (evt.key === 'Enter') {
             evt.preventDefault();
             this.validateDateIntervals();
@@ -286,7 +288,10 @@ export class Datepicker extends Component<DatepickerProps, DatepickerState> {
                             {...this.props.inputProps}
                             ariaInvalid={this.ariaInvalid()}
                             onBlur={this.onInputBlur}
-                            onChange={evt => onChange(evt.target.value)}
+                            onChange={evt => {
+                                this.props.inputProps?.onChange?.(evt);
+                                onChange(evt.target.value);
+                            }}
                             onKeyDown={this.onInputKeydown}
                             ref={this.dateInputRef}
                             value={value}
