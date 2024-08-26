@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.0...@sb1/ffe-form@30.0.1) (2024-08-26)
+
+
+### Bug Fixes
+
+* **ffe-form:** increase spacing between text and icon ([17266bd](https://github.com/SpareBank1/designsystem/commit/17266bd306385a76030f5b486a0be385ca1047c2))
+
+
+
+
+
 # [30.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.1.5...@sb1/ffe-form@30.0.0) (2024-08-23)
 
 
