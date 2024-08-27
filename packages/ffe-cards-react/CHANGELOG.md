@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.4.0...@sb1/ffe-cards-react@17.4.1) (2024-08-27)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** default shadow should be false/undefined ([57b9acf](https://github.com/SpareBank1/designsystem/commit/57b9acf0b32eaf7cce7f46424c739f0b19643b60))
+
+
+
+
+
 # [17.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.3.1...@sb1/ffe-cards-react@17.4.0) (2024-08-27)
 
 

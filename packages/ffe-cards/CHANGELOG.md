@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.1.0...@sb1/ffe-cards@20.1.1) (2024-08-27)
+
+
+### Bug Fixes
+
+* **ffe-cards:** endre fra noshadow til shadow ([14a5337](https://github.com/SpareBank1/designsystem/commit/14a5337dd73a7c6e5b774dab905b89e1b24b65c9))
+
+
+
+
+
 # [20.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.0.0...@sb1/ffe-cards@20.1.0) (2024-08-27)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@21.0.10...@sb1/ffe-form-react@21.1.0) (2024-08-27)
+
+
+### Features
+
+* **ffe-form-react:** possible to hade uncontrolled radio/checkbox ([43e2e57](https://github.com/SpareBank1/designsystem/commit/43e2e57395f59cb3a3bbc99981627e82c9ebb0cc))
+
+
+
+
+
 ## [21.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@21.0.9...@sb1/ffe-form-react@21.0.10) (2024-08-26)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

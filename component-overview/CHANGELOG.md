@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.3.5...@sb1/ffe-component-index@8.3.6) (2024-08-27)
+
+
+### Bug Fixes
+
+* **component-overview:** endre fra noShadow til shadow ([281caa1](https://github.com/SpareBank1/designsystem/commit/281caa1bfeef4f83c1c0fe1a6b48ffdc20613e92))
+
+
+
+
+
 ## [8.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.3.4...@sb1/ffe-component-index@8.3.5) (2024-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
