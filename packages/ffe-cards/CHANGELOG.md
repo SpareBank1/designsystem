@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.0.0...@sb1/ffe-cards@20.1.0) (2024-08-27)
+
+
+### Features
+
+* **ffe-cards:** groupcard, oppdatert utseende ([6121548](https://github.com/SpareBank1/designsystem/commit/6121548285cc56804e9cd2fd6633acd07625c855))
+
+
+
+
+
 # [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@19.4.0...@sb1/ffe-cards@20.0.0) (2024-08-23)
 
 
