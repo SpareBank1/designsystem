@@ -6,14 +6,17 @@ const defaultProps = {
     children: 'Some choice',
     name: 'choice',
     value: 'value',
+    onChange: () => {},
 };
 
 const renderBaseRadioButton = (props?: Partial<BaseRadioButtonProps>) =>
     render(<BaseRadioButton {...defaultProps} {...props} />);
 
 describe('<BaseRadioButton />', () => {
-    it('is checked undefined if checked prop is undefined and selectedValue is undefined', async () => {
-        const { rerender } = render(<BaseRadioButton {...defaultProps} />);
+    it('is not checked when selected value does not match', async () => {
+        const { rerender } = render(
+            <BaseRadioButton {...defaultProps} selectedValue="" />,
+        );
         const radio = screen.getByRole('radio');
         expect(radio).not.toBeChecked();
         rerender(<BaseRadioButton {...defaultProps} selectedValue="value" />);

@@ -52,7 +52,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                     className="ffe-hidden-checkbox"
                     id={inputId}
                     type="checkbox"
-                    checked={!!checked}
+                    checked={checked}
                     {...rest}
                 />
                 {typeof children === 'function' ? (
