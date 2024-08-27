@@ -16,7 +16,7 @@ describe('<Table />', () => {
                 <TableCaption className="my-class">caption</TableCaption>
                 <TableBody>
                     <TableRow>
-                        <TableDataCell>cell</TableDataCell>
+                        <TableDataCell columnHeader={null}>cell</TableDataCell>
                     </TableRow>
                 </TableBody>
             </Table>,
