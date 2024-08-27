@@ -1,12 +1,17 @@
-import { GroupCard, GroupCardElement } from '@sb1/ffe-cards-react';
+import {
+    GroupCard,
+    GroupCardElement,
+    GroupCardFooter,
+    GroupCardTitle,
+} from '@sb1/ffe-cards-react';
 import { Heading2, Paragraph } from '@sb1/ffe-core-react';
 
 () => {
     return (
-        <GroupCard shadow={true}>
-            <GroupCardElement noPadding={true}>
-                Øverste kort kan være uten padding hvis man ønsker
-            </GroupCardElement>
+        <GroupCard>
+            <GroupCardTitle>
+                <Heading2 lookLike={5}>Tittel på gruppe</Heading2>
+            </GroupCardTitle>
             <GroupCardElement>
                 {({ CardAction, CardName, Title, Subtext, Text }) => (
                     <>
@@ -43,6 +48,13 @@ import { Heading2, Paragraph } from '@sb1/ffe-core-react';
                     </>
                 )}
             </GroupCardElement>
+            <GroupCardFooter>
+                {({ CardAction }) => (
+                    <CardAction href="https://design.sparebank1.no">
+                        Vis mer
+                    </CardAction>
+                )}
+            </GroupCardFooter>
         </GroupCard>
     );
 };

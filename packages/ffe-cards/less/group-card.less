@@ -4,6 +4,7 @@
     .common-card-styling();
     .card-background-styling();
 
+    position: relative;
     border: none;
     box-shadow: none;
 
@@ -25,28 +26,61 @@
         border-radius: var(--ffe-v-cards-common-card-border-radius);
     }
 
+    &__title :where(.ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5, .ffe-h6) {
+        margin-bottom: 0;
+    }
+
     &__element {
-        padding: var(--ffe-spacing-sm);
-        border: 2px solid transparent;
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        padding: var(--ffe-spacing-md);
+    }
+
+    &__footer {
+        background-color: var(--ffe-v-group-card-footer-background-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--clickable {
+            color: var(--ffe-farge-fjell);
+        }
+    }
+
+    &__title,
+    &__footer {
+        padding: var(--ffe-spacing-sm) var(--ffe-spacing-md);
+    }
+
+    &__title,
+    &__element,
+    &__footer {
+        border: 1px solid transparent;
         margin: 0;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        position: relative;
+        z-index: 0;
 
         &--no-padding {
             padding: 0;
         }
 
-        border-bottom-color: var(
-            --ffe-v-cards-common-group-card-separation-border-color
-        );
-
-        &--no-separator,
-        &:last-child {
-            border-bottom-color: transparent;
-        }
-
         &--clickable {
             .clickable-card-styling();
         }
+
+        &:focus-within {
+            z-index: 1;
+        }
+    }
+
+    &__title,
+    &__element {
+        &--no-separator {
+            border-bottom-color: transparent;
+        }
+
+        border-bottom-color: var(
+            --ffe-v-cards-common-group-card-separation-border-color
+        );
     }
 }
 
@@ -54,6 +88,36 @@
     @media (prefers-color-scheme: dark) {
         .ffe-group-card {
             .card-background-dm-styling();
+
+            box-shadow: none;
+            border: 1px solid
+                var(--ffe-v-cards-common-group-card-separation-border-color-dm);
+
+            &__title {
+                color: var(--ffe-farge-vann-30);
+            }
+
+            &__title,
+            &__element {
+                border-bottom-color: var(
+                    --ffe-v-cards-common-group-card-separation-border-color-dm
+                );
+
+                &--no-separator {
+                    border-bottom-color: transparent;
+                }
+            }
+
+            &__title--clickable:hover,
+            &__element--clickable:hover {
+                border-color: var(--ffe-v-cards-border-hover-color);
+            }
+
+            &__footer {
+                background-color: var(
+                    --ffe-v-group-card-footer-background-color-dm
+                );
+            }
         }
     }
 }
