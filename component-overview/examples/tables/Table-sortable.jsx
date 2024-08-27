@@ -12,7 +12,17 @@ import { formatNumber } from '@sb1/ffe-formatters';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
 
 () => {
-    const button = <TertiaryButton type="button">poke</TertiaryButton>;
+    const button = (
+        <TertiaryButton
+            type="button"
+            onClick={e => {
+                e.preventDefault();
+                e.stopPropagation();
+            }}
+        >
+            poke
+        </TertiaryButton>
+    );
     const data = [
         {
             name: 'Ola Normann',
@@ -85,51 +95,69 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
                         ? data.toSorted(sortFunc)
                         : data;
 
+                    const navnHeader = 'Navn';
+                    const epostHeader = 'E-post';
+                    const alderHeader = 'Alder';
+                    const formueHeader = 'Formue';
+                    const pokeHeader = 'Poke';
+
                     return (
                         <>
                             <TableCaption>Masse spennende data</TableCaption>
                             <TableHead>
                                 <TableRow>
                                     <TableHeaderCell sortKey="name" scope="col">
-                                        Navn
+                                        {navnHeader}
                                     </TableHeaderCell>
                                     <TableHeaderCell
                                         sortKey="email"
                                         scope="col"
                                     >
-                                        E-post
+                                        {epostHeader}
                                     </TableHeaderCell>
                                     <TableHeaderCell sortKey="age" scope="col">
-                                        Alder
+                                        {alderHeader}
                                     </TableHeaderCell>
                                     <TableHeaderCell
                                         sortKey="fortune"
                                         scope="col"
                                     >
-                                        Formue
+                                        {formueHeader}
                                     </TableHeaderCell>
-                                    <TableHeaderCell>Poke</TableHeaderCell>
+                                    <TableHeaderCell>
+                                        {pokeHeader}
+                                    </TableHeaderCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {sortedData.map(it => {
                                     const rowContent = (
                                         <>
-                                            <TableDataCell>
+                                            <TableDataCell
+                                                columnHeader={navnHeader}
+                                            >
                                                 {it.name}
                                             </TableDataCell>
-                                            <TableDataCell>
+                                            <TableDataCell
+                                                columnHeader={epostHeader}
+                                            >
                                                 {it.email}
                                             </TableDataCell>
-                                            <TableDataCell>
+                                            <TableDataCell
+                                                columnHeader={alderHeader}
+                                            >
                                                 {it.age}
                                             </TableDataCell>
-                                            <TableDataCell>
+                                            <TableDataCell
+                                                columnHeader={formueHeader}
+                                            >
                                                 {formatNumber(it.fortune, {
                                                     decimals: 2,
                                                 })}
                                             </TableDataCell>
-                                            <TableDataCell>
+                                            <TableDataCell
+                                                columnHeader={pokeHeader}
+                                            >
                                                 {it.button}
                                             </TableDataCell>
                                         </>

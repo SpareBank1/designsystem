@@ -28,14 +28,21 @@ import {
         },
     ];
 
+    const navnHeader = 'Navn';
+    const epostHeader = 'E-post';
+
     return (
         <div style={{ overflowX: 'auto ' }}>
             <Table>
                 <TableCaption>Tabel utvidbare rader</TableCaption>
                 <TableHead>
                     <TableRow>
-                        <TableHeaderCell scope="col">Navn</TableHeaderCell>
-                        <TableHeaderCell scope="col">Epost</TableHeaderCell>
+                        <TableHeaderCell scope="col">
+                            {navnHeader}
+                        </TableHeaderCell>
+                        <TableHeaderCell scope="col">
+                            {epostHeader}
+                        </TableHeaderCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -45,8 +52,12 @@ import {
                             key={it.email}
                             expandContent={it.expand}
                         >
-                            <TableDataCell>{it.name}</TableDataCell>
-                            <TableDataCell>{it.email}</TableDataCell>
+                            <TableDataCell columnHeader={navnHeader}>
+                                {it.name}
+                            </TableDataCell>
+                            <TableDataCell columnHeader={epostHeader}>
+                                {it.email}
+                            </TableDataCell>
                         </TableRowExpandable>
                     ))}
                 </TableBody>
