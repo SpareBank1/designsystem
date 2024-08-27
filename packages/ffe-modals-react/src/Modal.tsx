@@ -29,14 +29,18 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             className,
             locale = 'nb',
             onClose,
-            portalContainer = document.body,
+            portalContainer,
             ...rest
         },
         ref,
     ) => {
+        // SSR does not have access to document/window etc.
+        const [isClient, setIsClient] = useState(false);
         const [isOpen, setIsOpen] = useState(false);
         const dialogRef = useRef<HTMLDialogElement>(null);
-        const htmlOverflowY = useRef(document.documentElement.style.overflowY);
+        const htmlOverflowY = useRef(
+            isClient ? document.documentElement.style.overflowY : '',
+        );
 
         useImperativeHandle(ref, () => ({
             open: () => {
@@ -49,10 +53,15 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
         }));
 
         useEffect(() => {
-            const html = document.documentElement;
+            setIsClient(true);
+        }, []);
+
+        useEffect(() => {
             const inShadow =
+                isClient &&
                 dialogRef.current?.getRootNode() instanceof ShadowRoot;
             if (inShadow) {
+                const html = document.documentElement;
                 if (isOpen) {
                     htmlOverflowY.current = html.style.overflowY;
                     html.style.overflowY = 'hidden';
@@ -60,11 +69,11 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                     html.style.overflowY = htmlOverflowY.current;
                 }
             }
-        }, [isOpen]);
+        }, [isClient, isOpen]);
 
         useEffect(() => {
             if (
-                typeof window !== 'undefined' && // to support Gatsby build(server side rendering)
+                isClient &&
                 dialogRef.current &&
                 typeof dialogRef.current.showModal !== 'function'
             ) {
@@ -76,36 +85,38 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                     },
                 );
             }
-        }, []);
+        }, [isClient]);
 
-        return createPortal(
-            // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-            <dialog
-                {...rest}
-                ref={dialogRef}
-                className={classnames('ffe-modal', className)}
-                aria-labelledby={ariaLabelledby}
-                onClick={event => {
-                    const target = event.target as HTMLDialogElement;
-                    if (target.nodeName === 'DIALOG') {
-                        target.close();
-                    }
-                    onClick?.(event);
-                }}
-                onClose={() => {
-                    onClose?.();
-                    setIsOpen(false);
-                }}
-            >
-                <div className="ffe-modal__body">
-                    <CloseButton
-                        onClick={() => dialogRef.current?.close()}
-                        locale={locale}
-                    />
-                    {children}
-                </div>
-            </dialog>,
-            portalContainer,
-        );
+        return isClient
+            ? createPortal(
+                  // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+                  <dialog
+                      {...rest}
+                      ref={dialogRef}
+                      className={classnames('ffe-modal', className)}
+                      aria-labelledby={ariaLabelledby}
+                      onClick={event => {
+                          const target = event.target as HTMLDialogElement;
+                          if (target.nodeName === 'DIALOG') {
+                              target.close();
+                          }
+                          onClick?.(event);
+                      }}
+                      onClose={() => {
+                          onClose?.();
+                          setIsOpen(false);
+                      }}
+                  >
+                      <div className="ffe-modal__body">
+                          <CloseButton
+                              onClick={() => dialogRef.current?.close()}
+                              locale={locale}
+                          />
+                          {children}
+                      </div>
+                  </dialog>,
+                  portalContainer ?? document.body,
+              )
+            : null;
     },
 );
