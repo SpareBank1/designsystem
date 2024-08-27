@@ -8,7 +8,7 @@ import { Heading2 } from '@sb1/ffe-core-react';
 
 () => {
     return (
-        <GroupCard>
+        <GroupCard shadow={true}>
             <GroupCardTitle>
                 <Heading2 lookLike={5}>Tittel på gruppe</Heading2>
             </GroupCardTitle>
