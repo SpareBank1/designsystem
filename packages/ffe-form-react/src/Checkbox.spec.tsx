@@ -25,7 +25,9 @@ describe('<Checkbox />', () => {
 
     it('should render a default value if passed', () => {
         const { rerender } = render(
-            <Checkbox onChange={() => {}}>children</Checkbox>,
+            <Checkbox onChange={() => {}} checked={false}>
+                children
+            </Checkbox>,
         );
         const checkbox = screen.getByRole('checkbox');
         expect(checkbox).not.toBeChecked();

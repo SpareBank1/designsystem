@@ -50,7 +50,7 @@ export const BaseRadioButton = React.forwardRef<
                     id={id}
                     ref={ref}
                     type="radio"
-                    checked={!!isSelected}
+                    checked={isSelected}
                     value={`${value}`}
                     onChange={onChange}
                     {...inputProps}
