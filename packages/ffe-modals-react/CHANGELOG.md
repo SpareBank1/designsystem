@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.5.2...@sb1/ffe-modals-react@0.5.3) (2024-08-28)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** check document in modal ([1ec37a0](https://github.com/SpareBank1/designsystem/commit/1ec37a0d5226b65946c7b9beb711bfb92ab3f402))
+
+
+
+
+
 ## [0.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.5.1...@sb1/ffe-modals-react@0.5.2) (2024-08-23)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react
