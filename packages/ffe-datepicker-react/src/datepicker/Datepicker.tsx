@@ -18,8 +18,8 @@ export interface DatepickerProps {
         'aria-invalid' | 'value' | 'id'
     >;
     locale?: 'nb' | 'nn' | 'en';
-    maxDate?: string;
-    minDate?: string;
+    maxDate?: string | null;
+    minDate?: string | null;
     onChange: (date: string) => void;
     value: string;
     fullWidth?: boolean;
@@ -28,8 +28,8 @@ export interface DatepickerProps {
 interface DatepickerState {
     lastValidDate: string;
     displayDatePicker: boolean;
-    minDate?: string;
-    maxDate?: string;
+    minDate?: string | null;
+    maxDate?: string | null;
     calendarActiveDate: string;
     ariaInvalid?: boolean;
 }
@@ -119,7 +119,7 @@ export class Datepicker extends Component<DatepickerProps, DatepickerState> {
 
                 // SimpleDate.fromString assumes years written as two digits
                 // are in the 20th century.  This can be unwanted behaviour
-                // when asking for dates in the past, like birth dates.
+                // when asking for dates in the past, like birthdates.
                 // This little hack should catch most of these cases.
                 if (
                     maxDate?.isBefore(date) &&
