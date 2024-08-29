@@ -58,8 +58,8 @@ export class SimpleCalendar {
 
     constructor(
         initialDate?: SimpleDate | null,
-        minDate?: string,
-        maxDate?: string,
+        minDate?: string | null,
+        maxDate?: string | null,
         locale: Locale = 'nb',
     ) {
         this.locale = locale;

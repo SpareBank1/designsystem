@@ -14,8 +14,8 @@ export interface CalendarProps {
     calendarClassName?: string;
     escKeyHandler?: React.KeyboardEventHandler<HTMLDivElement>;
     locale: 'nb' | 'nn' | 'en';
-    maxDate?: string;
-    minDate?: string;
+    maxDate?: string | null;
+    minDate?: string | null;
     onDatePicked: (date: string) => void;
     selectedDate?: string | null;
     focusOnMount?: boolean;
