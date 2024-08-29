@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@9.1.0...@sb1/ffe-datepicker-react@9.1.1) (2024-08-29)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** allow min/maxDate to be null ([bb90eac](https://github.com/SpareBank1/designsystem/commit/bb90eac1e578982162fa9a6214c524f860540bdc))
+
+
+
+
+
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@9.0.8...@sb1/ffe-datepicker-react@9.1.0) (2024-08-26)
 
 
