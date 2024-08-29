@@ -8,9 +8,12 @@
     /* Button border radius renders as 50% */
     --ffe-v-buttons-border-radius: 6em;
 
+    /* Button box shadow */
+    --ffe-v-button-shadow-color: var(--ffe-farge-vann);
+
     /** Action button */
     --ffe-v-button-action-color: var(--ffe-farge-skog);
-    --ffe-v-button-action-color-hover: #095139; // Temporary, until dark mode palette is finished
+    --ffe-v-button-action-color-hover: #095139;
     --ffe-v-button-action-color-text: var(--ffe-farge-hvit);
 
     /** Primary button */
@@ -18,41 +21,62 @@
     --ffe-v-button-primary-color-hover: var(--ffe-farge-fjell);
     --ffe-v-button-primary-color-text: var(--ffe-farge-hvit);
 
-    /** Secondary buttons (+ task, back, expand, etc) are inverted */
-    --ffe-v-button-secondary-color: var(--ffe-farge-vann);
+    /** Secondary buttons (+ back, expand, etc) */
+    --ffe-v-button-secondary-color: var(--ffe-farge-hvit);
     --ffe-v-button-secondary-border-color: var(--ffe-farge-vann);
-    --ffe-v-button-secondary-color-hover: var(--ffe-farge-fjell);
-    --ffe-v-button-secondary-color-bg: var(--ffe-farge-hvit);
+    --ffe-v-button-secondary-color-text-hover: var(--ffe-farge-hvit);
+    --ffe-v-button-secondary-color-bg-hover: var(--ffe-farge-vann);
+    --ffe-v-button-secondary-color-text: var(--ffe-farge-vann);
 
     /** Tertiary button */
     --ffe-v-button-tertiary-color: var(--ffe-farge-vann);
     --ffe-v-button-tertiary-color-hover: var(--ffe-farge-fjell);
-    --ffe-v-button-tertiary-color-text: var(--ffe-farge-hvit);
+    --ffe-v-button-tertiary-color-focus: var(--ffe-farge-vann);
 
     /** Task button */
-    --ffe-v-button-task-primary-color: var(--ffe-farge-vann);
-    --ffe-v-button-task-text-color-hover: var(--ffe-farge-fjell);
+    --ffe-v-button-task-color: var(--ffe-farge-hvit);
+    --ffe-v-button-task-color-border: var(--ffe-farge-vann);
+    --ffe-v-button-task-color-text: var(--ffe-farge-vann);
+    --ffe-v-button-task-color-text-hover: var(--ffe-farge-fjell);
+    --ffe-v-button-task-color-icon: var(--ffe-farge-vann);
+    --ffe-v-button-task-color-icon-hover: var(--ffe-farge-hvit);
     --ffe-v-button-task-border-focus: var(--ffe-farge-vann);
 
     @media (prefers-color-scheme: dark) {
         .regard-color-scheme-preference {
             --ffe-v-button-text-color: var(--ffe-farge-svart);
+            --ffe-v-button-shadow-color: var(--ffe-farge-hvit);
+
+            /** Action button */
             --ffe-v-button-action-color: var(--ffe-farge-skog-70);
             --ffe-v-button-action-color-hover: var(--ffe-farge-skog-30);
             --ffe-v-button-action-color-text: var(--ffe-farge-svart);
+
+            /** Primary button */
             --ffe-v-button-primary-color: var(--ffe-farge-vann-70);
             --ffe-v-button-primary-color-hover: var(--ffe-farge-vann-30);
             --ffe-v-button-primary-color-text: var(--ffe-farge-svart);
-            --ffe-v-button-secondary-color: var(--ffe-farge-vann-30);
+
+            /** Secondary buttons (+ task, back, expand, etc) */
+            --ffe-v-button-secondary-color: var(--ffe-farge-svart);
             --ffe-v-button-secondary-border-color: var(--ffe-farge-vann-70);
-            --ffe-v-button-secondary-color-hover: var(--ffe-farge-vann-30);
-            --ffe-v-button-secondary-color-bg: var(--ffe-farge-svart);
+            --ffe-v-button-secondary-color-text-hover: var(--ffe-farge-svart);
+            --ffe-v-button-secondary-color-bg-hover: var(--ffe-farge-vann-30);
+            --ffe-v-button-secondary-color-text: var(--ffe-farge-vann-30);
+
+            /** Tertiary button */
             --ffe-v-button-tertiary-color: var(--ffe-farge-vann-30);
             --ffe-v-button-tertiary-color-hover: var(--ffe-farge-hvit);
-            --ffe-v-button-tertiary-color-text: var(--ffe-farge-svart);
-            --ffe-v-button-task-text-color-hover: var(--ffe-farge-hvit);
+            --ffe-v-button-tertiary-color-focus: var(--ffe-farge-hvit);
+
+            /** Task button */
+            --ffe-v-button-task-color: transparent;
+            --ffe-v-button-task-color-border: var(--ffe-farge-vann-30);
+            --ffe-v-button-task-color-text: var(--ffe-farge-vann-30);
+            --ffe-v-button-task-color-text-hover: var(--ffe-farge-hvit);
+            --ffe-v-button-task-color-icon: var(--ffe-farge-vann-30);
+            --ffe-v-button-task-color-icon-hover: var(--ffe-farge-svart);
             --ffe-v-button-task-border-focus: var(--ffe-farge-hvit);
-            --ffe-v-button-task-primary-color: var(--ffe-farge-vann-30);
         }
     }
 }

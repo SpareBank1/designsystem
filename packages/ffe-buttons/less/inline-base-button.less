@@ -19,18 +19,29 @@
     }
 
     &:focus {
-        box-shadow: 0 0 0 2px var(--ffe-farge-vann);
+        box-shadow: 0 0 0 2px var(--ffe-v-button-shadow-color);
         outline: none;
-
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 2px var(--ffe-farge-hvit);
-            }
-        }
     }
 
     &:focus:not(:focus-visible) {
         box-shadow: none;
+    }
+
+    &__icon {
+        margin-bottom: -2px;
+        will-change: transform, opacity;
+
+        .ffe-inline-button--expanded & {
+            transform: rotateZ(180deg);
+        }
+
+        &--left {
+            margin-right: 6px;
+        }
+
+        &--right {
+            margin-left: 6px;
+        }
     }
 }
 
@@ -57,8 +68,8 @@
         }
 
         &:hover .ffe-inline-button__label {
-            color: var(--ffe-v-button-secondary-color-hover);
-            border-bottom-color: var(--ffe-v-button-secondary-color-hover);
+            color: var(--ffe-v-button-primary-color-hover);
+            border-bottom-color: var(--ffe-v-button-primary-color-hover);
         }
     }
 }
@@ -105,19 +116,12 @@
 
     &:focus {
         box-shadow: none;
-        border-color: var(--ffe-v-button-tertiary-color);
+        border-color: var(--ffe-v-button-tertiary-color-focus);
         color: var(--ffe-v-button-tertiary-color);
 
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                border-color: var(--ffe-farge-hvit);
-                box-shadow: none;
-            }
+        &:not(:focus-visible) {
+            border-color: transparent;
         }
-    }
-
-    &:focus:not(:focus-visible) {
-        border-color: transparent;
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -127,28 +131,6 @@
             .ffe-inline-button__icon {
                 color: var(--ffe-v-button-tertiary-color-hover);
             }
-            .regard-color-scheme-preference & {
-                @media (prefers-color-scheme: dark) {
-                    color: var(--ffe-farge-hvit);
-                }
-            }
         }
     }
-}
-
-.ffe-inline-button__icon {
-    margin-bottom: -2px;
-    will-change: transform, opacity;
-
-    .ffe-inline-button--expanded & {
-        transform: rotateZ(180deg);
-    }
-}
-
-.ffe-inline-button__icon--left {
-    margin-right: 6px;
-}
-
-.ffe-inline-button__icon--right {
-    margin-left: 6px;
 }
