@@ -25,7 +25,6 @@ export const MessageBox: React.FC<MessageBoxProps> = ({
     iconFileUrl,
     children,
     locale = 'nb',
-    role,
     onColoredBg,
     className,
     ...rest
