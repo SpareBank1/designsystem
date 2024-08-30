@@ -10,6 +10,8 @@ export interface ParagraphProps extends ComponentPropsWithoutRef<'p'> {
     textCenter?: boolean;
     /** Use if text alignment should override that of its container. */
     textLeft?: boolean;
+    /** Use if the paragraph should have no margin. */
+    noMargin?: boolean;
 }
 
 export function Paragraph(props: ParagraphProps) {
@@ -20,6 +22,7 @@ export function Paragraph(props: ParagraphProps) {
         subLead,
         textCenter,
         textLeft,
+        noMargin,
         ...rest
     } = props;
 
@@ -35,6 +38,7 @@ export function Paragraph(props: ParagraphProps) {
                 mainClass,
                 { 'ffe-body-paragraph--text-center': textCenter },
                 { 'ffe-body-paragraph--text-left': textLeft },
+                { 'ffe-body-paragraph--no-margin': noMargin },
                 className,
             )}
             {...rest}
