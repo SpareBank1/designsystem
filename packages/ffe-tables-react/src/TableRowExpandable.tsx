@@ -43,6 +43,9 @@ export const TableRowExpandable = React.forwardRef<
                         {
                             'ffe-table__tr--expand-open': isOpen,
                         },
+                        {
+                            'ffe-table__tr--animating': isAnimating,
+                        },
                         className,
                     )}
                     onClick={e => {
@@ -56,7 +59,7 @@ export const TableRowExpandable = React.forwardRef<
                     {...rest}
                 >
                     {children}
-                    <td>
+                    <td className="ffe-table__expand-button-td">
                         <CellContent>
                             <button
                                 className={classNames(

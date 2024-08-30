@@ -18,30 +18,42 @@ import {
         { name: 'Sandra', age: 42 },
     ];
 
+    const navnHeader = 'Navn';
+    const alderHeader = 'Alder';
+    const gjenomsnittsalderHeader = ' Gjenomsnittsalder';
+
     return (
         <div style={{ overflowX: 'auto ' }}>
             <Table>
                 <TableCaption>Utviklere</TableCaption>
                 <TableHead>
                     <TableRow>
-                        <TableHeaderCell scope="col">Navn</TableHeaderCell>
-                        <TableHeaderCell scope="col">Alder</TableHeaderCell>
+                        <TableHeaderCell scope="col">
+                            {navnHeader}
+                        </TableHeaderCell>
+                        <TableHeaderCell scope="col">
+                            {alderHeader}
+                        </TableHeaderCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {data.map(it => (
                         <TableRow key={it.name}>
-                            <TableDataCell>{it.name}</TableDataCell>
-                            <TableDataCell>{it.age}</TableDataCell>
+                            <TableDataCell columnHeader={navnHeader}>
+                                {it.name}
+                            </TableDataCell>
+                            <TableDataCell columnHeader={alderHeader}>
+                                {it.age}
+                            </TableDataCell>
                         </TableRow>
                     ))}
                 </TableBody>
                 <TableFoot>
                     <TableRow>
                         <TableHeaderCell scope="row">
-                            Gjenomsnitts alder
+                            {gjenomsnittsalderHeader}
                         </TableHeaderCell>
-                        <TableDataCell>
+                        <TableDataCell columnHeader={gjenomsnittsalderHeader}>
                             {data.reduce((sum, curr) => sum + curr.age, 0) /
                                 data.length}
                         </TableDataCell>

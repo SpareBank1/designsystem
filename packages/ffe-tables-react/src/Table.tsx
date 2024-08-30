@@ -19,16 +19,22 @@ export interface TableProps
               activeSortOrder?: TableContextInterFace['activeSortOrder'];
               activeSortKey?: TableContextInterFace['activeSortKey'];
           }) => React.ReactNode);
+    breakPoint?: 'none' | 'sm' | 'md';
 }
 
 export const Table = React.forwardRef<HTMLTableElement, TableProps>(
-    ({ className, initialSort, children, ...rest }, ref) => {
+    ({ className, initialSort, children, breakPoint = 'sm', ...rest }, ref) => {
         return (
             <TableProvider initialSort={initialSort}>
                 <TableContext.Consumer>
                     {({ activeSortOrder, activeSortKey }) => (
                         <table
-                            className={classNames('ffe-table', className)}
+                            className={classNames(
+                                'ffe-table',
+                                { 'ffe-table--break-sm': breakPoint === 'sm' },
+                                { 'ffe-table--break-md': breakPoint === 'md' },
+                                className,
+                            )}
                             ref={ref}
                             {...rest}
                         >
