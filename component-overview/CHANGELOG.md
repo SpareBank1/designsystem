@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.3.10...@sb1/ffe-component-index@8.4.0) (2024-08-30)
+
+
+### Features
+
+* **component-overview:** legg til noMargin eksempel på paragraph ([f7827d0](https://github.com/SpareBank1/designsystem/commit/f7827d017ce7f4a4efb189a445ac7fe60baa6ee9))
+
+
+
+
+
 ## [8.3.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.3.9...@sb1/ffe-component-index@8.3.10) (2024-08-30)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

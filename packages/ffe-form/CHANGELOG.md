@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.2...@sb1/ffe-form@30.0.3) (2024-08-30)
+
+
+### Bug Fixes
+
+* **ffe-form:** use :focus-visible on tooltip instead og :focus ([e12364e](https://github.com/SpareBank1/designsystem/commit/e12364ed6b1ea7940fd8b8939d54bb161fa9ba4d))
+
+
+
+
+
 ## [30.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.1...@sb1/ffe-form@30.0.2) (2024-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-form

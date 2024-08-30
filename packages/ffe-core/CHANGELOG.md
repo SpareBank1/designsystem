@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.0.0...@sb1/ffe-core@29.1.0) (2024-08-30)
+
+
+### Features
+
+* **ffe-core:** legg til noMargin klasse på paragraph ([ccf608e](https://github.com/SpareBank1/designsystem/commit/ccf608e5d031b9f3e5c846a1f1a2bfb07704c84a))
+
+
+
+
+
 # [29.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@28.0.3...@sb1/ffe-core@29.0.0) (2024-08-23)
 
 

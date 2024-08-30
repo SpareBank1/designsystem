@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@9.0.7...@sb1/ffe-core-react@9.1.0) (2024-08-30)
+
+
+### Features
+
+* **ffe-core-react:** legg til noMargin prop på paragraph ([e7e1df6](https://github.com/SpareBank1/designsystem/commit/e7e1df6fd49b38f0b1ec101c34e13814b23292d1))
+
+
+
+
+
 ## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@9.0.6...@sb1/ffe-core-react@9.0.7) (2024-08-23)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
