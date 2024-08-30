@@ -2,18 +2,12 @@
     background: var(--ffe-v-cards-common-card-background-color);
     box-shadow: var(--ffe-v-cards-common-card-box-shadow);
     margin: 0 0 var(--ffe-spacing-2xs);
-    border: 2px solid transparent;
+    border: 2px solid var(--ffe-v-cards-common-card-border-color);
     border-radius: var(--ffe-v-cards-common-card-border-radius);
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     outline: none;
     width: 100%;
     text-decoration: none;
-
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            color: var(--ffe-farge-hvit);
-        }
-    }
 
     @media (min-width: @breakpoint-md) {
         margin-bottom: var(--ffe-spacing-md);
@@ -105,10 +99,6 @@
     }
 
     .ffe-card__action--raw:visited {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                color: var(--ffe-farge-hvit);
-            }
-        }
+        color: var(--ffe-v-cards-clickabe-card-link-visited-color);
     }
 }
