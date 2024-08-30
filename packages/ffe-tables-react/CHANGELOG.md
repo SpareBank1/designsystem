@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.1.8...@sb1/ffe-tables-react@11.0.0) (2024-08-30)
+
+
+### Features
+
+* **ffe-tables-react:** responsive table ([39f94dd](https://github.com/SpareBank1/designsystem/commit/39f94dd0fc148b328ee4dba0c161fd119db1c361))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables-react:** columnHeader must be provided on <TableDataCell/>.
+These are used on small screens.
+
+
+
+
+
 ## [10.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@10.1.7...@sb1/ffe-tables-react@10.1.8) (2024-08-23)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

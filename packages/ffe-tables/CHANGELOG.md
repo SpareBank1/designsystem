@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@16.0.0...@sb1/ffe-tables@17.0.0) (2024-08-30)
+
+
+### Features
+
+* **ffe-tables:** responsive table ([7e88369](https://github.com/SpareBank1/designsystem/commit/7e883690242a68cf8b2349073a507b2dc2dfed73))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables:** ffe-table must be wrapped in ffe-table-container
+
+
+
+
+
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@15.0.5...@sb1/ffe-tables@16.0.0) (2024-08-23)
 
 
