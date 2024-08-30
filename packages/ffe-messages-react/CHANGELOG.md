@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@0.3.7...@sb1/ffe-messages-react@0.3.8) (2024-08-30)
+
+
+### Bug Fixes
+
+* **ffe-messages-react:** provided role prop was not used in component ([cbe4849](https://github.com/SpareBank1/designsystem/commit/cbe48497159323ccab1f976fae0c1793a8b792c7))
+
+
+
+
+
 ## [0.3.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@0.3.6...@sb1/ffe-messages-react@0.3.7) (2024-08-30)
 
 **Note:** Version bump only for package @sb1/ffe-messages-react
