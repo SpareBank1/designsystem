@@ -5,7 +5,7 @@
     .card-background-styling();
 
     position: relative;
-    border: none;
+    border: var(--ffe-v-cards-common-group-card-border);
     box-shadow: none;
 
     &--shadow {
@@ -40,10 +40,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &--clickable {
-            color: var(--ffe-farge-fjell);
-        }
     }
 
     &__title,
@@ -83,42 +79,10 @@
             --ffe-v-cards-common-group-card-separation-border-color
         );
     }
-}
 
-.regard-color-scheme-preference & {
-    @media (prefers-color-scheme: dark) {
-        .ffe-group-card {
+    .regard-color-scheme-preference & {
+        @media (prefers-color-scheme: dark) {
             .card-background-dm-styling();
-
-            box-shadow: none;
-            border: 1px solid
-                var(--ffe-v-cards-common-group-card-separation-border-color-dm);
-
-            &__title {
-                color: var(--ffe-farge-vann-30);
-            }
-
-            &__title,
-            &__element {
-                border-bottom-color: var(
-                    --ffe-v-cards-common-group-card-separation-border-color-dm
-                );
-
-                &--no-separator {
-                    border-bottom-color: transparent;
-                }
-            }
-
-            &__title--clickable:hover,
-            &__element--clickable:hover {
-                border-color: var(--ffe-v-cards-border-hover-color);
-            }
-
-            &__footer {
-                background-color: var(
-                    --ffe-v-group-card-footer-background-color-dm
-                );
-            }
         }
     }
 }

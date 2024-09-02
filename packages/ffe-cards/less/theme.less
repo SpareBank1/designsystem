@@ -1,33 +1,46 @@
 :root,
 :host {
+    --ffe-v-cards-common-text-color: var(--ffe-g-text-color);
     --ffe-v-cards-common-card-background-color: var(--ffe-farge-hvit);
+    --ffe-v-cards-common-card-border-color: transparent;
     --ffe-v-cards-common-card-box-shadow-color: var(--ffe-farge-graa);
     --ffe-v-cards-common-card-box-shadow: 0 1px 4px 0
         var(--ffe-v-cards-common-card-box-shadow-color);
     --ffe-v-cards-common-card-border-radius: 16px;
-    --ffe-v-cards-text-color: var(--ffe-farge-moerkgraa);
+    --ffe-v-cards-clickabe-card-link-visited-color: inherit;
+    --ffe-v-cards-subtext-color: var(--ffe-farge-moerkgraa);
     --ffe-v-cards-border-hover-color: var(--ffe-farge-vann);
     --ffe-v-cards-stippled-border-color: var(--ffe-farge-vann);
     --ffe-v-cards-icon-color: var(--ffe-farge-fjell);
+    --ffe-v-cards-image-card-border: none;
+    --ffe-v-cards-common-group-card-border: none;
     --ffe-v-cards-common-group-card-separation-border-color: var(
         --ffe-farge-lysgraa
     );
-    --ffe-v-cards-common-group-card-separation-border-color-dm: var(
-        --ffe-farge-koksgraa
-    );
     --ffe-v-group-card-footer-background-color: var(--ffe-farge-syrin-30);
-    --ffe-v-group-card-footer-background-color-dm: var(--ffe-farge-koksgraa);
 
     @media (prefers-color-scheme: dark) {
         .regard-color-scheme-preference {
+            --ffe-v-cards-common-text-color: var(--ffe-farge-hvit);
             --ffe-v-cards-common-card-background-color: var(--ffe-farge-svart);
-            --ffe-v-cards-common-card-box-shadow-color: var(
-                --ffe-farge-moerkgraa
+            --ffe-v-cards-common-card-border-color: var(--ffe-farge-koksgraa);
+            --ffe-v-cards-common-card-box-shadow: none;
+            --ffe-v-cards-clickabe-card-link-visited-color: var(
+                --ffe-farge-hvit
             );
-            --ffe-v-cards-text-color: var(--ffe-farge-graa);
+            --ffe-v-cards-subtext-color: var(--ffe-farge-graa);
+            --ffe-v-cards-border-hover-color: var(--ffe-g-primary-color);
             --ffe-v-cards-stippled-border-color: var(--ffe-farge-vann-70);
             --ffe-v-cards-icon-color: var(--ffe-farge-vann-70);
-            --ffe-v-cards-border-hover-color: var(--ffe-g-primary-color);
+            --ffe-v-cards-image-card-border: 1px solid var(--ffe-farge-koksgraa);
+            --ffe-v-cards-common-group-card-border: 1px solid
+                var(--ffe-farge-koksgraa);
+            --ffe-v-cards-common-group-card-separation-border-color: var(
+                --ffe-farge-koksgraa
+            );
+            --ffe-v-group-card-footer-background-color: var(
+                --ffe-farge-koksgraa
+            );
         }
     }
 }
