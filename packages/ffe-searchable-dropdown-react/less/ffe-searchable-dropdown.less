@@ -49,27 +49,41 @@
         padding: @ffe-spacing @ffe-spacing-sm;
         cursor: pointer;
 
+        &-details {
+            .ffe-micro-text {
+                color: var(--ffe-v-searchable-dropdown-micro-text-color);
+            }
+        }
+
         @media (hover: hover) and (pointer: fine) {
             &:hover,
             &--highlighted:hover {
-                background: var(--ffe-g-primary-color);
-                color: var(--ffe-farge-hvit);
+                background: var(
+                    --ffe-v-searchable-dropdown-highlighted-background-color
+                );
+                color: var(--ffe-v-searchable-dropdown-highlighted-text-color);
 
                 .ffe-searchable-dropdown__list-item-body-details {
                     .ffe-micro-text {
-                        color: var(--ffe-farge-lysgraa);
+                        color: var(
+                            --ffe-v-searchable-dropdown-highlighted-micro-text-color
+                        );
                     }
                 }
             }
         }
 
         &--highlighted {
-            background: var(--ffe-g-primary-color);
-            color: var(--ffe-farge-hvit);
+            background: var(
+                --ffe-v-searchable-dropdown-highlighted-background-color
+            );
+            color: var(--ffe-v-searchable-dropdown-highlighted-text-color);
 
             .ffe-searchable-dropdown__list-item-body-details {
                 .ffe-micro-text {
-                    color: var(--ffe-farge-lysgraa);
+                    color: var(
+                        --ffe-v-searchable-dropdown-highlighted-micro-text-color
+                    );
                 }
             }
         }
@@ -136,47 +150,6 @@
         &--flip {
             .ffe-searchable-dropdown__button-icon {
                 transform: rotateZ(180deg);
-            }
-        }
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .regard-color-scheme-preference .ffe-searchable-dropdown {
-        &__list {
-            color: var(--ffe-farge-hvit);
-        }
-
-        &__list-item-body {
-            color: var(--ffe-farge-hvit);
-
-            &--highlighted {
-                color: var(--ffe-farge-svart);
-
-                .ffe-searchable-dropdown__list-item-body-details {
-                    .ffe-micro-text {
-                        color: var(--ffe-farge-svart);
-                    }
-                }
-            }
-
-            @media (hover: hover) and (pointer: fine) {
-                &:hover,
-                &--highlighted:hover {
-                    color: var(--ffe-farge-svart);
-
-                    .ffe-searchable-dropdown__list-item-body-details {
-                        .ffe-micro-text {
-                            color: var(--ffe-farge-svart);
-                        }
-                    }
-                }
-            }
-        }
-
-        &__list-item-body-details {
-            .ffe-micro-text {
-                color: var(--ffe-farge-graa);
             }
         }
     }
