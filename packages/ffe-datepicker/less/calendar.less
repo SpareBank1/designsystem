@@ -2,13 +2,8 @@
     border: solid 2px var(--ffe-g-border-color);
     border-radius: var(--ffe-g-border-radius);
     padding: var(--ffe-spacing-2xs);
-    background: var(--ffe-farge-hvit);
+    background: var(--ffe-v-datepicker-bg-color);
     overflow-y: auto;
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            background-color: var(--ffe-farge-svart);
-        }
-    }
 
     &--datepicker {
         position: absolute;
@@ -93,11 +88,10 @@
     &__grid {
         width: 100%;
         border-spacing: 0.5em 0;
-        color: var(--ffe-farge-svart);
 
         &:focus {
             outline: none;
-            box-shadow: 0 0 0 2px var(--ffe-farge-vann);
+            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-date-color-focus);
             border-radius: 4px;
         }
     }
