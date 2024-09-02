@@ -63,28 +63,16 @@
             content: '';
             width: 24px;
             height: 24px;
-            background: @ffe-farge-hvit;
+            background: var(--ffe-v-input-bg-color);
             border-radius: 50%;
             position: absolute;
             left: 2px;
             transition: transform var(--ffe-transition-duration) var(--ffe-ease)-in-out-back;
-
-            .regard-color-scheme-preference & {
-                @media (prefers-color-scheme: dark) {
-                    background: @ffe-farge-svart;
-                }
-            }
         }
 
         @media (hover: hover) and (pointer: fine) {
             .ffe-toggle-switch__label:hover &::before {
-                background: @ffe-farge-moerkgraa;
-
-                .regard-color-scheme-preference & {
-                    @media (prefers-color-scheme: dark) {
-                        background: @ffe-farge-lysgraa;
-                    }
-                }
+                background: var(--ffe-v-toggle-switch-hover-color);
             }
         }
     }
@@ -95,12 +83,6 @@
 
     &__input:checked + &__label &__switch::before {
         background: var(--ffe-g-primary-color);
-
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background: var(--ffe-g-primary-color);
-            }
-        }
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -111,25 +93,9 @@
 
     &__input:focus:not(:focus-visible) + &__label &__switch::before {
         box-shadow: none;
-
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow: none;
-            }
-        }
     }
 
     &__input:focus + &__label &__switch::before {
-        box-shadow:
-            0 0 0 3px @ffe-farge-hvit,
-            0 0 0 5px var(--ffe-g-primary-color);
-
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow:
-                    0 0 0 3px @ffe-farge-svart,
-                    0 0 0 5px @ffe-farge-hvit;
-            }
-        }
+        box-shadow: var(--ffe-v-toggle-switch-box-shadow);
     }
 }
