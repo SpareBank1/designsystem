@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@2.0.1...@sb1/ffe-pagination@2.0.2) (2024-09-02)
+
+
+### Bug Fixes
+
+* **ffe-pagination:** styling for texten i knappen på feil element ([dd73dc7](https://github.com/SpareBank1/designsystem/commit/dd73dc70b6a5540d1ef9216398b077cda2da2e27))
+
+
+
+
+
 ## [2.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@2.0.0...@sb1/ffe-pagination@2.0.1) (2024-08-30)
 
 **Note:** Version bump only for package @sb1/ffe-pagination
