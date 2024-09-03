@@ -77,10 +77,13 @@ export const Pagination = ({
                         locale={locale}
                         onClick={() => {
                             onClickPrev?.();
-                            const nextPage = paginationControls.currentPage - 1;
+                            const prevPage = Math.max(
+                                paginationControls.currentPage - 1,
+                                1,
+                            );
                             flushSync(() => {
-                                paginationControls.setCurrentPage(nextPage);
-                                const isGoingToFirstPage = nextPage === 1;
+                                paginationControls.setCurrentPage(prevPage);
+                                const isGoingToFirstPage = prevPage === 1;
                                 if (isGoingToFirstPage) {
                                     firstPageButton.current?.focus({
                                         preventScroll: true,
@@ -134,7 +137,10 @@ export const Pagination = ({
                         locale={locale}
                         onClick={() => {
                             onClickNext?.();
-                            const nextPage = paginationControls.currentPage + 1;
+                            const nextPage = Math.min(
+                                paginationControls.currentPage + 1,
+                                paginationControls.numberOfPages,
+                            );
                             flushSync(() => {
                                 paginationControls.setCurrentPage(nextPage);
                                 const isGoingToLastPage =
