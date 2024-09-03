@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.7...@sb1/ffe-pagination-react@1.2.8) (2024-09-03)
+
+
+### Bug Fixes
+
+* **ffe-pagination-react:** fixer raska click på prev og next ([f61a40b](https://github.com/SpareBank1/designsystem/commit/f61a40b9483c5ac3b44558bce67ebb319ef929a2))
+
+
+
+
+
 ## [1.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.6...@sb1/ffe-pagination-react@1.2.7) (2024-09-02)
 
 **Note:** Version bump only for package @sb1/ffe-pagination-react
