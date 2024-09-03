@@ -105,17 +105,9 @@
     }
 
     &:focus-visible + .ffe-radio-button::after {
-        --background-color: var(--ffe-farge-hvit);
-
         box-shadow:
-            0 0 0 3px var(--background-color),
+            0 0 0 3px var(--ffe-v-input-bg-color),
             0 0 0 5px var(--ffe-g-primary-color);
-
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                --background-color: var(--ffe-farge-svart);
-            }
-        }
     }
 
     &[aria-invalid='true'] + .ffe-radio-button {

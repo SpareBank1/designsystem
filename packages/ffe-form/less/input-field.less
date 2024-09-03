@@ -20,12 +20,6 @@
         text-align: left;
     }
 
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            box-shadow: none;
-        }
-    }
-
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             border-color: var(--ffe-g-primary-color);
@@ -62,13 +56,7 @@
         display: inline-block;
         height: 2em;
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
-
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: transparent;
-                box-shadow: none !important;
-            }
-        }
+        background-color: transparent;
 
         &:focus {
             box-shadow: none;

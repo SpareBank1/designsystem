@@ -11,12 +11,6 @@
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     font-size: var(--ffe-fontsize-form-input);
 
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            box-shadow: none;
-        }
-    }
-
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             border-color: var(--ffe-g-primary-color);
