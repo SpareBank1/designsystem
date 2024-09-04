@@ -166,6 +166,9 @@
 }
 
 .ffe-table--responsive {
+    .ffe-table__head,
+    .ffe-table__body,
+    .ffe-table__foot,
     .ffe-table__tr {
         display: grid;
     }
@@ -191,6 +194,12 @@
         .ffe-table__tr {
             padding: var(--ffe-spacing-sm) 0;
         }
+    }
+
+    .ffe-table__sort-button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     .ffe-table__cell-content {
