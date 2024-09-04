@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.0.0...@sb1/ffe-icons@15.0.1) (2024-09-04)
+
+
+### Bug Fixes
+
+* **ffe-icons:** lower specificity on default color ([6980074](https://github.com/SpareBank1/designsystem/commit/698007486cc4ce5f61e29fe4f3c87729f6e6e5c0))
+
+
+
+
+
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@14.0.1...@sb1/ffe-icons@15.0.0) (2024-08-23)
 
 

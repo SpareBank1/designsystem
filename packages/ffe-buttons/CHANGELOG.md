@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.2...@sb1/ffe-buttons@19.0.3) (2024-09-04)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** lower spesifity generaly for easier customization ([cc26138](https://github.com/SpareBank1/designsystem/commit/cc26138c9d4468a1189f30645b4979a0c9a2f7cc))
+
+
+
+
+
 ## [19.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.1...@sb1/ffe-buttons@19.0.2) (2024-08-30)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
