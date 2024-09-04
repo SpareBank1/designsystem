@@ -58,42 +58,52 @@
         display: inline-flex;
         width: auto;
     }
+
+    .ffe-icons {
+        display: block;
+    }
 }
 
 .ffe-button--action {
-    background-color: var(--ffe-v-button-action-color);
-    color: var(--ffe-v-button-action-color-text);
+    --background-color: var(--ffe-v-button-action-color);
+    --color: var(--ffe-v-button-action-color-text);
 
-    .ffe-button__icon {
-        color: var(--ffe-v-button-action-color-text);
+    background-color: var(--background-color);
+    color: var(--color);
+
+    :where(.ffe-button__icon) {
+        color: var(--color);
     }
 
     &:focus {
-        background-color: var(--ffe-v-button-action-color);
+        --background-color: var(--ffe-v-button-action-color);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            background-color: var(--ffe-v-button-action-color-hover);
+            --background-color: var(--ffe-v-button-action-color-hover);
         }
     }
 }
 
 .ffe-button--primary {
-    background-color: var(--ffe-v-button-primary-color);
-    color: var(--ffe-v-button-primary-color-text);
+    --background-color: var(--ffe-v-button-primary-color);
+    --color: var(--ffe-v-button-primary-color-text);
 
-    .ffe-button__icon {
-        color: var(--ffe-v-button-primary-color-text);
+    background-color: var(--background-color);
+    color: var(--color);
+
+    :where(.ffe-button__icon) {
+        --color: var(--ffe-v-button-primary-color-text);
     }
 
     &:focus {
-        background-color: var(--ffe-v-button-primary-color);
+        --background-color: var(--ffe-v-button-primary-color);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            background-color: var(--ffe-v-button-primary-color-hover);
+            --background-color: var(--ffe-v-button-primary-color-hover);
         }
     }
 }
@@ -101,15 +111,17 @@
 .ffe-button--secondary,
 .ffe-button--shortcut,
 .ffe-button--expand {
-    background-color: var(--ffe-v-button-secondary-color);
-    border: solid 2px var(--ffe-v-button-secondary-border-color);
-    color: var(--ffe-v-button-secondary-color-text);
+    --background-color: var(--ffe-v-button-secondary-color);
+    --border-color: var(--ffe-v-button-secondary-border-color);
+    --text-color: var(--ffe-v-button-secondary-color-text);
 
-    .ffe-button__icon,
-    .ffe-button__label {
-        color: var(--ffe-v-button-secondary-color-text);
+    background-color: var(--background-color);
+    border: solid 2px var(--border-color);
+    color: var(--text-color);
+
+    :where(.ffe-button__label, .ffe-button__icon) {
+        color: var(--text-color);
     }
-
     &:active,
     &:focus,
     &:visited {
@@ -118,14 +130,26 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            background-color: var(--ffe-v-button-secondary-color-bg-hover);
-            border-color: var(--ffe-v-button-secondary-color-bg-hover);
-            color: var(--ffe-v-button-secondary-color-text-hover);
+            --background-color: var(--ffe-v-button-secondary-color-bg-hover);
+            --border-color: var(--ffe-v-button-secondary-color-bg-hover);
+            --text-color: var(--ffe-v-button-secondary-color-text-hover);
+        }
+    }
+}
 
-            .ffe-button__icon,
-            .ffe-button__label {
-                color: var(--ffe-v-button-secondary-color-text-hover);
-            }
+.ffe-button--shortcut {
+    &:focus {
+        transform: translateX(12px);
+    }
+
+    .ffe-button__icon {
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        will-change: transform;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover .ffe-button__icon {
+            transform: translateX(12px);
         }
     }
 }
@@ -140,11 +164,15 @@
 }
 
 .ffe-button--task {
+    --icon-color: var(--ffe-v-button-task-color-icon);
+    --text-color: var(--ffe-v-button-task-color-text);
+    --border-color: transparent;
+
     background: transparent;
     border-radius: 1.75rem;
-    border: 2px solid transparent;
+    border: 2px solid var(--border-color);
     box-shadow: none;
-    color: var(--ffe-v-button-task-color-text);
+    color: var(--text-color);
     display: inline-block;
     padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm) var(--ffe-spacing-2xs)
         var(--ffe-spacing-2xs);
@@ -152,24 +180,37 @@
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     width: auto;
 
-    .ffe-button__icon > .ffe-icons {
-        display: block;
-        color: var(--ffe-v-button-task-color-icon);
+    :where(.ffe-button__icon) {
+        --border-color: var(--ffe-v-button-task-color-border);
+        --background-color: var(--ffe-v-button-task-color);
+        --color: var(--icon-color);
+
+        border: 2px solid var(--border-color);
+        background-color: var(--background-color);
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 var(--ffe-spacing-xs) 0 0;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+        :where(.ffe-icons) {
+            color: var(--color);
+        }
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            color: var(--ffe-v-button-task-color-text-hover);
-            box-shadow: none;
-
-            .ffe-button__icon > .ffe-icons {
-                color: var(--ffe-v-button-task-color-icon-hover);
-            }
+        &:hover .ffe-button__icon {
+            --background-color: var(--ffe-v-button-task-color-hover);
+            --border-color: var(--ffe-v-button-task-color-border-hover);
+            --icon-color: var(--ffe-v-button-task-color-icon-hover);
         }
     }
 
     &:focus {
-        border-color: var(--ffe-v-button-task-border-focus);
+        --border-color: var(--ffe-v-button-task-border-focus);
 
         &::after {
             display: none;
@@ -177,7 +218,7 @@
     }
 
     &:focus:not(:focus-visible) {
-        border-color: transparent;
+        --border-color: transparent;
     }
 }
 
@@ -193,53 +234,6 @@
     .ffe-button--loading & {
         transform: translateY(-32px);
         opacity: 0;
-    }
-}
-
-.ffe-button__icon {
-    .ffe-button--shortcut & {
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
-        will-change: transform;
-    }
-
-    .ffe-button--shortcut:focus & {
-        transform: translateX(12px);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        .ffe-button--shortcut:hover & {
-            transform: translateX(12px);
-        }
-    }
-
-    .ffe-button--task & {
-        border: 2px solid var(--ffe-v-button-task-color-border);
-        border-radius: 50%;
-        background-color: var(--ffe-v-button-task-color);
-        color: var(--ffe-v-button-task-color-icon);
-        height: 45px;
-        width: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 var(--ffe-spacing-xs) 0 0;
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
-    }
-
-    .ffe-button--expand & {
-        color: var(--ffe-v-button-task-primary-color);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        .ffe-button--expand:hover & {
-            color: var(--ffe-v-button-secondary-color-text-hover);
-        }
-
-        .ffe-button--task:hover & {
-            border-color: var(--ffe-v-button-primary-color);
-            background-color: var(--ffe-v-button-primary-color);
-            color: var(--ffe-v-button-primary-color-text);
-        }
     }
 }
 
