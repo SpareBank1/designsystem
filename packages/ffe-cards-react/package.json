@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-cards-react",
-    "version": "17.4.4",
+    "version": "17.4.5",
     "description": "React implementation of ffe-react",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -30,7 +30,7 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.8.0",
-        "@sb1/ffe-icons-react": "^11.0.4",
+        "@sb1/ffe-icons-react": "^11.0.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

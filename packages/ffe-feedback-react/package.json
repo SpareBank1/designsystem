@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-feedback-react",
-    "version": "4.0.15",
+    "version": "4.0.16",
     "description": "React component for ffe-feedback",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,11 +26,11 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-buttons-react": "^24.0.10",
+        "@sb1/ffe-buttons-react": "^24.0.11",
         "@sb1/ffe-collapse-react": "^5.0.7",
         "@sb1/ffe-core-react": "^9.1.0",
         "@sb1/ffe-feedback": "^2.0.1",
-        "@sb1/ffe-form-react": "^21.1.4",
+        "@sb1/ffe-form-react": "^21.1.5",
         "classnames": "^2.3.1",
         "lottie-web": "^5.12.2"
     },
