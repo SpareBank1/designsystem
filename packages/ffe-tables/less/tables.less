@@ -241,3 +241,9 @@
         .ffe-table--responsive();
     }
 }
+
+@media print {
+    .ffe-table__expand-content-tr[aria-hidden='true'] {
+        display: none;
+    }
+}
