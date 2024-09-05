@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.4...@sb1/ffe-header@22.0.5) (2024-09-05)
+
+
+### Bug Fixes
+
+* **ffe-header:** make label work with different versions of ffe-buttons ([ecb9fcd](https://github.com/SpareBank1/designsystem/commit/ecb9fcdbfab4b1236b5fbcc977e40e33c6394a71))
+
+
+
+
+
 ## [22.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.3...@sb1/ffe-header@22.0.4) (2024-09-05)
 
 
