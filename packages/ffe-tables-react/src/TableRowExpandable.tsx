@@ -94,9 +94,7 @@ export const TableRowExpandable = React.forwardRef<
                     </td>
                 </tr>
                 <tr
-                    className={classNames('ffe-table__expand-content-tr', {
-                        'ffe-table__expand-content-tr--hidden': false,
-                    })}
+                    className="ffe-table__expand-content-tr"
                     aria-hidden={expandIdHidden}
                     id={expandoRowId}
                 >
