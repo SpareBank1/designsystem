@@ -19,7 +19,7 @@
     "dependencies": {
         "@sb1/stylelint-config-ffe": "^2.0.2",
         "@testing-library/jest-dom": "^6.5.0",
-        "commander": "^8.3.0",
+        "commander": "^12.1.0",
         "copyfiles": "^2.4.1",
         "jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0",
