@@ -33,6 +33,7 @@ export const TableRowExpandable = React.forwardRef<
         const expandoRowId = useId();
         const [isAnimating, setIsAnimating] = useState(false);
         const expandButtonRef = useRef<HTMLButtonElement>(null);
+        const expandIdHidden = !isAnimating && !isOpen;
 
         return (
             <>
@@ -92,14 +93,20 @@ export const TableRowExpandable = React.forwardRef<
                         </CellContent>
                     </td>
                 </tr>
-                <tr aria-hidden={!isAnimating && !isOpen} id={expandoRowId}>
+                <tr
+                    className={classNames('ffe-table__expand-content-tr', {
+                        'ffe-table__expand-content-tr--hidden': false,
+                    })}
+                    aria-hidden={expandIdHidden}
+                    id={expandoRowId}
+                >
                     <td colSpan={9999}>
                         <Collapse
                             isOpen={isOpen}
                             onRest={() => setIsAnimating(false)}
                         >
                             <CellContent className="ffe-table__expand-content">
-                                {expandContent}
+                                {!expandIdHidden && expandContent}
                             </CellContent>
                         </Collapse>
                     </td>
