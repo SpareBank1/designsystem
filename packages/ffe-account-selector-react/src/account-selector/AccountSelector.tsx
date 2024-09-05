@@ -85,6 +85,9 @@ export interface AccountSelectorProps<T extends Account = Account> {
     onColoredBg?: boolean;
 }
 
+/**
+ * test funker ikke dette?
+ */
 export const AccountSelector = <T extends Account = Account>({
     id,
     className,

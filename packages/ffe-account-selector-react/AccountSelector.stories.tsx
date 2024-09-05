@@ -1,5 +1,5 @@
 import React from 'react';
-import { AccountSelector } from '@sb1/ffe-account-selector-react';
+import { AccountSelector } from '@sb1/ffe-account-selector-react/src/account-selector/AccountSelector';
 import { InputGroup } from '@sb1/ffe-form-react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { fn } from '@storybook/test';
