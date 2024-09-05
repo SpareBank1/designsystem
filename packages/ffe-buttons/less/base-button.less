@@ -224,6 +224,17 @@
 
 .ffe-button--loading {
     pointer-events: none;
+
+    .ffe-button__label {
+        transform: translateY(-32px);
+        opacity: 0;
+    }
+
+    .ffe-button__spinner {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
 }
 
 .ffe-button__label {
@@ -231,10 +242,6 @@
     display: flex;
     transition: transform var(--ffe-transition-duration) var(--ffe-ease);
     gap: var(--ffe-spacing-xs);
-    .ffe-button--loading & {
-        transform: translateY(-32px);
-        opacity: 0;
-    }
 }
 
 .ffe-button__spinner {
@@ -246,12 +253,6 @@
     visibility: hidden;
     display: grid;
     place-items: center;
-
-    .ffe-button--loading & {
-        opacity: 1;
-        transform: none;
-        visibility: visible;
-    }
 
     &::after {
         animation: 1s linear infinite button-loading-spin;
