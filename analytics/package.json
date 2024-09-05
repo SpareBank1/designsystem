@@ -2,6 +2,6 @@
     "name": "@sb1/ffe-analytics",
     "type": "module",
     "dependencies": {
-        "glob": "^10.3.12"
+        "glob": "^11.0.0"
     }
 }
