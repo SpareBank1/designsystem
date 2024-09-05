@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.4...@sb1/ffe-tables-react@11.0.5) (2024-09-05)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** added class on row containing expand content ([7c68346](https://github.com/SpareBank1/designsystem/commit/7c683465165d3eff6d96b78350eb7662ef194b23))
+
+
+
+
+
 ## [11.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.3...@sb1/ffe-tables-react@11.0.4) (2024-09-05)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

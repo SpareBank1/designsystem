@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.3...@sb1/ffe-header@22.0.4) (2024-09-05)
+
+
+### Bug Fixes
+
+* **ffe-header:** fargerna fra buttons mangler i wtf ([3072315](https://github.com/SpareBank1/designsystem/commit/30723159b7e44ff0d0132062d61b418efec6305f))
+
+
+
+
+
 ## [22.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.2...@sb1/ffe-header@22.0.3) (2024-09-04)
 
 **Note:** Version bump only for package @sb1/ffe-header

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@17.0.2...@sb1/ffe-tables@17.0.3) (2024-09-05)
+
+
+### Bug Fixes
+
+* **ffe-tables:** added css print for row with expanded content ([a1af38a](https://github.com/SpareBank1/designsystem/commit/a1af38abcf5cd39064788a088db63045e6457e80))
+
+
+
+
+
 ## [17.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@17.0.1...@sb1/ffe-tables@17.0.2) (2024-09-04)
 
 

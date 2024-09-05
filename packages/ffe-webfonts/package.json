@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-webfonts",
-    "version": "5.0.11",
+    "version": "5.0.12",
     "description": "Fonts and fonts definition used in FFE",
     "license": "SEE LICENSE IN README.md",
     "author": "SpareBank 1",
@@ -22,7 +22,7 @@
         "test": "npm run lint"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.8.0",
+        "@sb1/ffe-buildtool": "^0.8.1",
         "less": "^4.1.2"
     },
     "publishConfig": {

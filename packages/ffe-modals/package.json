@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-modals",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Modals in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -16,10 +16,10 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^29.1.0"
+        "@sb1/ffe-core": "^29.1.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.8.0"
+        "@sb1/ffe-buildtool": "^0.8.1"
     },
     "publishConfig": {
         "access": "public"
