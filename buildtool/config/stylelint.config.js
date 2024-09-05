@@ -2,8 +2,6 @@ module.exports = {
     extends: ['stylelint-config-standard', '@sb1/stylelint-config-ffe'],
     rules: {
         'at-rule-no-vendor-prefix': true,
-        'no-missing-end-of-source-newline': null,
-        'number-leading-zero': null,
         'max-nesting-depth': [
             4,
             {
@@ -36,7 +34,6 @@ module.exports = {
             true,
             { ignoreShorthands: ['flex-flow'] },
         ],
-        'selector-combinator-space-before': null,
         'no-descending-specificity': null,
         'selector-class-pattern': [
             '^(regard-color-scheme-preference|ffe-([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2})$',

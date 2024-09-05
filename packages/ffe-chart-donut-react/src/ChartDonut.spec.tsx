@@ -24,11 +24,11 @@ describe('ChartDonut', () => {
 
     it('renders html for the labels and their percentages', () => {
         const { container } = render(<ChartDonut {...defaultProps} />);
-        const [typeFoo, typeBar] = container.querySelectorAll(
-            '.ffe-chart-donut__type',
+        const [typeFoo, typeBar] = Array.from(
+            container.querySelectorAll('.ffe-chart-donut__type'),
         );
-        const [amountFoo, amountBar] = container.querySelectorAll(
-            '.ffe-chart-donut__amount',
+        const [amountFoo, amountBar] = Array.from(
+            container.querySelectorAll('.ffe-chart-donut__amount'),
         );
         expect(typeFoo.textContent).toBe('Foo');
         expect(amountFoo.textContent).toMatch(/58/);
