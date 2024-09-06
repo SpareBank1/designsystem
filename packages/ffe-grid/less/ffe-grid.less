@@ -2,7 +2,7 @@
 .create-column(@size, @total, @current: 0) when (@current <= @total) {
     .ffe-grid__col--@{size}-@{current} {
         display: block;
-        grid-column: auto / span (@current);
+        grid-column: auto e('/') span (@current);
 
         & when (@current = 0) {
             display: none;
@@ -675,7 +675,7 @@
 }
 
 .ffe-grid__col {
-    grid-column: auto / span 12;
+    grid-column: auto e('/') span 12;
 
     &--bg-frost-30 {
         background-color: var(--ffe-farge-frost-30);
