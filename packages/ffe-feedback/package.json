@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-feedback",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Feedback component for ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -16,7 +16,7 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^29.1.2",
+        "@sb1/ffe-core": "^29.1.3",
         "@sb1/ffe-form": "^25.0.2"
     },
     "devDependencies": {
