@@ -134,8 +134,8 @@
 
 .ffe-check-list {
     &__icon {
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-column: 1 e('/') 2;
+        grid-row: 1 e('/') 2;
         place-self: center;
         &--check.ffe-icons {
             color: var(--ffe-v-lists-check-list-check-icon-color);
@@ -175,8 +175,8 @@
 
     &::before {
         content: counter(list-elements);
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-column: 1 e('/') 2;
+        grid-row: 1 e('/') 2;
         color: var(--ffe-v-lists-title-color);
         &:extend(.ffe-strong-text);
     }
@@ -184,7 +184,7 @@
 
 .ffe-check-list__item-content,
 .ffe-stylized-numbered-list__item-content {
-    grid-column: 2/3;
-    grid-row: 1/-1;
+    grid-column: 2 e('/') 3;
+    grid-row: 1 e('/') -1;
     overflow-wrap: anywhere;
 }

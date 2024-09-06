@@ -62,8 +62,8 @@
         border-radius: 50%;
         pointer-events: none;
         left: 0;
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-column: 1 e('/') 2;
+        grid-row: 1 e('/') 2;
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
         place-self: center;
     }
@@ -120,8 +120,8 @@
 }
 
 .ffe-radio-input__content {
-    grid-column: 2/3;
-    grid-row: 1/-1;
+    grid-column: 2 e('/') 3;
+    grid-row: 1 e('/') -1;
 }
 
 .ffe-radio-button--on-colored-bg .ffe-radio-input__content {

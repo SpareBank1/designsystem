@@ -215,13 +215,13 @@
         grid-template-columns: 1fr var(--expand-button-size);
 
         .ffe-table__td {
-            grid-column: 1 / 2;
+            grid-column: 1 e('/') 2;
         }
     }
 
     .ffe-table__expand-button-td {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+        grid-column: 2 e('/') 3;
+        grid-row: 1 e('/') 2;
         width: var(--expand-button-size);
 
         .ffe-table__cell-content {
