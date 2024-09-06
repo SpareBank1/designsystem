@@ -72,7 +72,7 @@ module.exports = {
                 'function-no-unknown': [
                     true,
                     {
-                        ignoreFunctions: ['extend', 'fade', 'data-uri'],
+                        ignoreFunctions: ['extend', 'fade', 'data-uri', 'e'],
                     },
                 ],
             },
