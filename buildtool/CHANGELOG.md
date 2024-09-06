@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.8.1...@sb1/ffe-buildtool@0.9.0) (2024-09-06)
+
+
+### Features
+
+* **buildtool:** suport e(less) function ([19a18a4](https://github.com/SpareBank1/designsystem/commit/19a18a47131bc773687845d5cd284329a1c5b52a))
+
+
+
+
+
 ## [0.8.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.8.0...@sb1/ffe-buildtool@0.8.1) (2024-09-05)
 
 **Note:** Version bump only for package @sb1/ffe-buildtool

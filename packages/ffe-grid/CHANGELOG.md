@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@15.0.2...@sb1/ffe-grid@15.0.3) (2024-09-06)
+
+
+### Bug Fixes
+
+* **ffe-grid:** escape / in less ([a459afd](https://github.com/SpareBank1/designsystem/commit/a459afddb9ce0b529eb233ed2de319dd43df34de))
+
+
+
+
+
 ## [15.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@15.0.1...@sb1/ffe-grid@15.0.2) (2024-09-05)
 
 **Note:** Version bump only for package @sb1/ffe-grid

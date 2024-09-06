@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@8.0.1...@sb1/ffe-chart-donut-react@8.0.2) (2024-09-06)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** escape / in less ([a394ca7](https://github.com/SpareBank1/designsystem/commit/a394ca7f0388977feefae24655686ecec7fc052a))
+
+
+
+
+
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@8.0.0...@sb1/ffe-chart-donut-react@8.0.1) (2024-09-05)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react

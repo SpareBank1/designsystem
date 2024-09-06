@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@17.0.3...@sb1/ffe-tables@17.0.4) (2024-09-06)
+
+
+### Bug Fixes
+
+* **ffe-tables:** escape / in less ([6925840](https://github.com/SpareBank1/designsystem/commit/6925840ef490fbe05fda196a0526dd048dbfbd6f))
+
+
+
+
+
 ## [17.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@17.0.2...@sb1/ffe-tables@17.0.3) (2024-09-05)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.0.8...@sb1/ffe-datepicker@13.0.9) (2024-09-06)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** escape / in less ([4d9ef8a](https://github.com/SpareBank1/designsystem/commit/4d9ef8a3cf50d7690ca1795916a56d609bd418de))
+
+
+
+
+
 ## [13.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.0.7...@sb1/ffe-datepicker@13.0.8) (2024-09-05)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@0.3.2...@sb1/ffe-messages@0.3.3) (2024-09-06)
+
+
+### Bug Fixes
+
+* **ffe-messages:** escape / in less ([eb0bd4a](https://github.com/SpareBank1/designsystem/commit/eb0bd4af219165ef7c52783258b10bf8d8be142c))
+
+
+
+
+
 ## [0.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@0.3.1...@sb1/ffe-messages@0.3.2) (2024-09-05)
 
 **Note:** Version bump only for package @sb1/ffe-messages
