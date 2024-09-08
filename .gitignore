@@ -24,4 +24,5 @@ types/
 # playwright
 /test/playwright/
 
+storybook-static
 *storybook.log

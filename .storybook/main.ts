@@ -9,6 +9,7 @@ import { join, dirname } from 'path';
 function getAbsolutePath(value: string): any {
     return dirname(require.resolve(join(value, 'package.json')));
 }
+
 const config: StorybookConfig = {
     stories: ['../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
     addons: [
@@ -21,5 +22,8 @@ const config: StorybookConfig = {
         name: getAbsolutePath('@storybook/react-vite'),
         options: {},
     },
+    staticDirs: ['../public'],
+    managerHead: head =>
+        `${head}<link rel="icon" type="image/x-icon" href="/public/favicon.ico">`,
 };
 export default config;
