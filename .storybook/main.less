@@ -1,12 +1,36 @@
+@fonts-url: '/public/fonts';
+
+@font-face {
+    font-family: 'SpareBank1-medium';
+    font-display: fallback;
+    src: url('@{fonts-url}/SpareBank1-Medium-Web.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'SpareBank1-regular';
+    font-display: fallback;
+    src: url('@{fonts-url}/SpareBank1-Regular-Web.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'SpareBank1-italic';
+    font-display: fallback;
+    src: url('@{fonts-url}/SpareBank1-It-Web.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'SpareBank1-title-medium';
+    font-display: fallback;
+    src: url('@{fonts-url}/SpareBank1-Title-Medium-Web.woff2') format('woff2');
+}
+
+
 @import '@sb1/ffe-core/css/colors.css';
 @import '@sb1/ffe-core/css/spacing.css';
 @import '@sb1/ffe-core/css/breakpoints.css';
 @import '@sb1/ffe-core/css/custom-media-queries.css';
 @import '@sb1/ffe-core/css/motion.css';
 @import '@sb1/ffe-core/less/ffe';
-@import '@sb1/ffe-webfonts/sb1-fonts-inline';
-
-
 @import '@sb1/ffe-accordion/less/ffe-accordion';
 @import '@sb1/ffe-collapse-react/less/collapse';
 @import '@sb1/ffe-icons/less/ffe-icons';
