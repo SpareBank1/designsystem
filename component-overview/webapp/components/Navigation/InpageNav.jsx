@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { title } from 'case';
+import { LinkText } from '@sb1/ffe-core-react';
 
 export default function InpageNav({
     sections,
@@ -14,13 +15,12 @@ export default function InpageNav({
                 {sections.map(section => (
                     <li key={section} className="sb1ex-inpage-nav__list-item">
                         {filteredSections.includes(section) ? (
-                            <a
+                            <LinkText
                                 href={`#toc_${section}`}
-                                className="sb1ex-inpage-nav__link"
                                 {...conditionalTabIndex}
                             >
                                 {title(section)}
-                            </a>
+                            </LinkText>
                         ) : (
                             title(section)
                         )}

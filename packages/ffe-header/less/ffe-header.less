@@ -134,6 +134,12 @@
                 padding: var(--ffe-spacing-xs);
             }
         }
+
+        &-text {
+            fill: var(
+                --ffe-v-header-logo-color
+            ); //not everyone will have this setup, but it will set a good example
+        }
     }
 
     &__logo-svg {
@@ -531,77 +537,6 @@
         &__site-nav-toggle,
         &__notification-bubble {
             display: none;
-        }
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .regard-color-scheme-preference {
-        .ffe-header {
-            &__user-nav {
-                .ffe-header__link {
-                    @media (hover: hover) and (pointer: fine) {
-                        &:hover {
-                            color: var(
-                                --ffe-v-usernav-header-link-hover-focus-color
-                            );
-                        }
-                    }
-
-                    &:focus {
-                        color: var(
-                            --ffe-v-usernav-header-link-hover-focus-color
-                        );
-                        box-shadow: none;
-                    }
-                }
-            }
-
-            &__link {
-                transition: all var(--ffe-transition-duration) var(--ffe-ease);
-
-                &:link,
-                &:visited,
-                &:active {
-                    color: var(--ffe-v-link-color);
-                }
-
-                @media (hover: hover) and (pointer: fine) {
-                    &:hover {
-                        color: var(--ffe-v-link-hover-color);
-                    }
-                }
-
-                &--active:link,
-                &--active:visited {
-                    color: var(--ffe-v-primary-color);
-                }
-
-                &--active::after {
-                    border-bottom: 2px solid var(--ffe-v-primary-color);
-                }
-
-                &--active:focus::after {
-                    border-bottom: 0;
-                }
-
-                &:focus {
-                    box-shadow: 0 0 0 2px
-                        var(--ffe-v-link-focus-box-shadow-color);
-                }
-
-                &:focus:not(:focus-visible) {
-                    box-shadow: none;
-                    color: var(--ffe-v-primary-color);
-                }
-            }
-
-            &__logout-button {
-                &:focus::after:extend(.ffe-button:focus::after) {
-                    box-shadow: 0 0 0 2px
-                        var(--ffe-v-link-focus-box-shadow-color);
-                }
-            }
         }
     }
 }

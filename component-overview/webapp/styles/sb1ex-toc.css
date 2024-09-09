@@ -60,17 +60,5 @@
 
 .sb1ex-inpage-nav__list-item {
     margin: 0 0 var(--ffe-spacing-xs) 0;
-    color: var(--ffe-farge-moerkgraa);
-}
-
-.sb1ex-inpage-nav__link {
-    display: inline-block;
-    color: var(--ffe-farge-fjell);
-    text-decoration: none;
-    cursor: pointer;
-    padding: var(--ffe-spacing-2xs) 0;
-    &:hover {
-        color: var(--ffe-farge-vann);
-    }
 }
 /* stylelint-enable selector-class-pattern */
