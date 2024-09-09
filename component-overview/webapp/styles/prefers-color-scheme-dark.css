@@ -1,19 +1,19 @@
 /* stylelint-disable selector-class-pattern */
 @media (prefers-color-scheme: dark) {
-    body.regard-color-scheme-preference {
+    .regard-color-scheme-preference {
         color: var(--ffe-farge-hvit);
         background-color: var(--ffe-farge-svart);
 
-        & a:not(h1, h2, h3, h4, h5, h6) {
-            color: var(--ffe-farge-vann-70);
-        }
+        --default-link-color: var(--ffe-farge-vann-70);
 
-        & a:not(h1, h2, h3, h4, h5, h6):hover {
-            color: var(--ffe-farge-vann-30);
-        }
-
-        & a:not(h1, h2, h3, h4, h5, h6):visited {
-            color: var(--ffe-farge-lyng-70);
+        :where(a:not(h1, h2, h3, h4, h5, h6)) {
+            color: var(--default-link-color);
+            &:hover {
+                --default-link-color: var(--ffe-farge-vann-30);
+            }
+            &:visited {
+                --default-link-color: var(--ffe-farge-lyng-70);
+            }
         }
     }
 }
