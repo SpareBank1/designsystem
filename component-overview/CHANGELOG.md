@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.4.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.13...@sb1/ffe-component-index@8.4.14) (2024-09-09)
+
+
+### Bug Fixes
+
+* **component-overview:** legger til klasse på logo for å støtte darkmode ([36e25b1](https://github.com/SpareBank1/designsystem/commit/36e25b13de8f86a541a8bcb1fa3da071c36f12e0))
+
+
+
+
+
 ## [8.4.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.12...@sb1/ffe-component-index@8.4.13) (2024-09-07)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
