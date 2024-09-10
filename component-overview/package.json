@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-component-index",
-    "version": "8.4.14",
+    "version": "8.4.15",
     "description": "Index of FFE compontents",
     "license": "MIT",
     "author": "SpareBank 1 Utvikling",
@@ -68,8 +68,8 @@
         "@sb1/ffe-icons-react": "^11.0.8",
         "@sb1/ffe-lists": "^17.0.4",
         "@sb1/ffe-lists-react": "^12.0.12",
-        "@sb1/ffe-messages": "^0.3.4",
-        "@sb1/ffe-messages-react": "^0.3.13",
+        "@sb1/ffe-messages": "^0.3.5",
+        "@sb1/ffe-messages-react": "^0.3.14",
         "@sb1/ffe-modals": "^0.3.4",
         "@sb1/ffe-modals-react": "^0.5.9",
         "@sb1/ffe-pagination": "^2.0.5",
