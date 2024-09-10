@@ -1,15 +1,16 @@
 @import '@sb1/ffe-core/css/spacing.css';
 @import '@sb1/ffe-core/css/colors.css';
 
-.ffe-docs-content-container,
-.ffe-docs-content-container--dark-mode  {
+.ffe-docs-content-container {
     padding: var(--ffe-spacing-sm);
 }
 
 .ffe-docs-content-container {
     background: var(--ffe-farge-hvit);
     &--dark-mode {
-        padding: var(--ffe-spacing-sm);
         background: var(--ffe-farge-svart);
+    }
+    &--colored {
+        background: var(--ffe-farge-fjell);
     }
 }
