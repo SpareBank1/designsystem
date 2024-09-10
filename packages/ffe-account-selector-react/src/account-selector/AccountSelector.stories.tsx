@@ -2,17 +2,18 @@ import React from 'react';
 import { AccountSelector } from './AccountSelector';
 import { InputGroup } from '@sb1/ffe-form-react';
 import type { StoryObj, Meta } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { fargeFjell } from '@sb1/ffe-core/gen-src/colors';
 
 const meta: Meta<typeof AccountSelector> = {
     title: 'components/account-selector/AccountSelector',
     component: AccountSelector,
     tags: ['autodocs'],
     argTypes: {
-        locale: {
-            control: 'select',
-            options: ['nb', 'nn', 'en'],
+        postListElement: {
+            options: ['text', 'html'],
+            mapping: {
+                text: 'Some text describing the list',
+                html: <span>Some text describing the list</span>,
+            },
         },
     },
 };
@@ -54,38 +55,17 @@ export const Standard: Story = {
         accounts,
         id: 'input-id',
         labelledById: 'label-id',
-        locale: 'nb',
-        selectedAccount: undefined,
-        onReset: fn,
-        onAccountSelected: fn,
-        formatAccountNumber: true,
-        allowCustomAccount: false,
-        onColoredBg: false,
     },
-    render: args => {
+    render: (args, context) => {
         return (
-            <div
-                style={{
-                    background: args.onColoredBg ? fargeFjell : 'transparent',
-                }}
+            <InputGroup
+                label="Velg konto"
+                inputId={args.id}
+                labelId={args.labelledById}
+                onColoredBg={context.onColoredBg}
             >
-                <InputGroup
-                    label="Velg konto"
-                    inputId={args.id}
-                    labelId={args.labelledById}
-                    onColoredBg={args.onColoredBg}
-                >
-                    <AccountSelector {...args} />
-                </InputGroup>
-            </div>
+                <AccountSelector onColoredBg={context.onColoredBg} {...args} />
+            </InputGroup>
         );
-    },
-};
-
-export const PostListElement: Story = {
-    ...Standard,
-    args: {
-        ...Standard.args,
-        postListElement: <span>Some text describing the list</span>,
     },
 };
