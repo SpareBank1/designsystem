@@ -3,7 +3,7 @@ import { create } from '@storybook/theming/create';
 
 const theme = create({
     base: 'light',
-    fontBase: 'SpareBank1-regular, MuseoSans-500, arial, sans-serif',
+    fontBase: 'SpareBank1-regular, arial, sans-serif',
     fontCode: 'monospace',
 
     brandTitle: 'SpareBank 1',
