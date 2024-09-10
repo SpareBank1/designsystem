@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.7...@sb1/ffe-buttons@19.0.8) (2024-09-10)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** wrong icon color primary button ([17f1c08](https://github.com/SpareBank1/designsystem/commit/17f1c08aea9fdf509f2dc7fff466628e7eb51386))
+
+
+
+
+
 ## [19.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.6...@sb1/ffe-buttons@19.0.7) (2024-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
