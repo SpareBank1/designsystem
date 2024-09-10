@@ -16,28 +16,38 @@ const preview: Preview = {
     decorators: [
         (Story, context) => {
             const { scheme } = context.globals;
-            if (scheme === 'light') {
+            if (scheme === 'all') {
                 return (
-                    <div className="ffe-docs-content-container">
-                        <Story />
+                    <>
+                        <div className="ffe-docs-content-container">
+                            <Story />
+                        </div>
+                        <div className="ffe-docs-content-container ffe-docs-content-container--colored">
+                            <Story onColoredBg={true} />
+                        </div>
+                        <div className="ffe-docs-content-container ffe-docs-content-container--dark-mode regard-color-scheme-preference">
+                            <Story />
+                        </div>
+                    </>
+                );
+            } else if (scheme === 'colored') {
+                return (
+                    <div className="ffe-docs-content-container ffe-docs-content-container--colored">
+                        <Story onColoredBg={true} />
                     </div>
                 );
             } else if (scheme === 'dark') {
                 return (
-                    <div className="ffe-docs-content-container--dark-mode regard-color-scheme-preference">
+                    <div className="ffe-docs-content-container ffe-docs-content-container--dark-mode regard-color-scheme-preference">
                         <Story />
                     </div>
                 );
             }
+
             return (
-                <>
-                    <div className="ffe-docs-content-container">
-                        <Story />
-                    </div>
-                    <div className="ffe-docs-content-container--dark-mode regard-color-scheme-preference">
-                        <Story />
-                    </div>
-                </>
+                <div className="ffe-docs-content-container">
+                    <Story />
+                </div>
             );
         },
     ],
@@ -52,7 +62,7 @@ const preview: Preview = {
             },
             toolbar: {
                 icon: 'mirror',
-                items: ['light', 'dark', 'both'],
+                items: ['light', 'dark', 'colored', 'all'],
                 dynamicTitle: true,
             },
         },
