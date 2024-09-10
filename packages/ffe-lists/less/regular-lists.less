@@ -1,55 +1,3 @@
-// Bullet list
-//
-// Markup:
-// <ul class="ffe-bullet-list ffe-bullet-list{{modifier_class}}">
-//     <li class="ffe-bullet-list__item">Bilforsikring</li>
-//     <li class="ffe-bullet-list__item">Reiseforsikring</li>
-//     <li class="ffe-bullet-list__item">Innboforsikring</li>
-// </ul>
-//
-// --condensed  - Condensed
-//
-// Styleguide ffe-lists.regular-lists.1
-
-// Check list
-//
-// Markup:
-// <ul class="ffe-check-list ffe-check-list{{modifier_class}}">
-//     <li class="ffe-check-list__item">Massevis av ferdige, testede komponenter</li>
-//     <li class="ffe-check-list__item">Likt design som resten av SpareBank 1</li>
-//     <li class="ffe-check-list__item">Høyere utviklingshastighet</li>
-//     <li class="ffe-check-list__item ffe-check-list__item--cross">Null bugs</li>
-// </ul>
-//
-// --bg-sand        - Sand background
-// --two-columns    - Two columns
-//
-// Styleguide ffe-lists.regular-lists.2
-
-// Numbered list
-//
-// Markup:
-// <ol class="ffe-numbered-list ffe-numbered-list{{modifier_class}}">
-//     <li class="ffe-numbered-list__item">Installer pakken du vil bruke via NPM</li>
-//     <li class="ffe-numbered-list__item">Importer pakken i koden din</li>
-//     <li class="ffe-numbered-list__item">Profit!</li>
-// </ol>
-//
-// --condensed  - Condensed
-//
-// Styleguide ffe-lists.regular-lists.3
-
-// Stylized numbered list
-//
-// Markup:
-// <ol class="ffe-stylized-numbered-list">
-//     <li class="ffe-stylized-numbered-list__item">Installer pakken du vil bruke via NPM</li>
-//     <li class="ffe-stylized-numbered-list__item">Importer pakken i koden din</li>
-//     <li class="ffe-stylized-numbered-list__item">Profit!</li>
-// </ol>
-//
-// Styleguide ffe-lists.regular-lists.4
-
 .ffe-numbered-list,
 .ffe-bullet-list {
     font-family: var(--ffe-g-font);
@@ -124,12 +72,6 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: var(--line-height) 1fr;
     grid-column-gap: 1.5em;
-
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            color: var(--ffe-farge-hvit);
-        }
-    }
 }
 
 .ffe-check-list {

@@ -13,12 +13,8 @@
     .ffe-description-list__description {
         padding-bottom: var(--vertical-seperation);
         margin-left: 0;
+        color: var(--ffe-v-lists-description-description-color);
         &:extend(.ffe-body-text);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                color: var(--ffe-v-lists-description-description-color);
-            }
-        }
     }
 
     .ffe-description-list__description + .ffe-description-list__description {
