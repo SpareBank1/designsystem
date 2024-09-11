@@ -82,10 +82,8 @@ export class Datepicker extends Component<DatepickerProps, DatepickerState> {
 
     /* eslint-disable react/no-did-update-set-state */
     componentDidUpdate(prevProps: DatepickerProps, prevState: DatepickerState) {
-        const valueChangedAndDatepickerIsToggled =
-            prevProps.value !== this.props.value &&
-            prevState.displayDatePicker &&
-            !this.state.displayDatePicker;
+        const valueHasChanged = prevProps.value !== this.props.value;
+
         if (
             (this.props.minDate && this.props.minDate !== this.state.minDate) ||
             (this.props.maxDate && this.props.maxDate !== this.state.maxDate)
@@ -96,7 +94,22 @@ export class Datepicker extends Component<DatepickerProps, DatepickerState> {
             );
         }
 
-        if (valueChangedAndDatepickerIsToggled) {
+        if (valueHasChanged) {
+            this.setState(
+                {
+                    calendarActiveDate: validateDate(this.props.value)
+                        ? this.props.value
+                        : '',
+                },
+                this.validateDateIntervals,
+            );
+        }
+
+        if (
+            valueHasChanged &&
+            prevState.displayDatePicker &&
+            !this.state.displayDatePicker
+        ) {
             this.validateDateIntervals();
         }
 
