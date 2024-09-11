@@ -5,15 +5,14 @@ import highFiveAnimation from './highFiveAnimation';
 export const Animation = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
-        if (containerRef.current) {
-            lottie.loadAnimation({
-                container: containerRef.current,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                animationData: highFiveAnimation,
-            });
-        }
+        const instance = lottie.loadAnimation({
+            container: containerRef.current as HTMLDivElement,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            animationData: highFiveAnimation,
+        });
+        return () => instance.destroy();
     }, []);
 
     return (
