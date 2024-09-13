@@ -12,6 +12,8 @@ export type ImageCardProps<As extends ElementType = 'div'> = Omit<
     imageSrc: string;
     /** The alt text for the image */
     imageAltText: string;
+    /** No margin on card */
+    noMargin?: boolean;
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -21,12 +23,17 @@ function ImageCardWithForwardRef<As extends ElementType>(
     props: ImageCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, imageSrc, imageAltText, children, ...rest } = props;
+    const { className, imageSrc, imageAltText, noMargin, children, ...rest } =
+        props;
 
     return (
         <WithCardAction
             baseClassName="ffe-image-card"
-            className={classNames('ffe-image-card', className)}
+            className={classNames(
+                'ffe-image-card',
+                { 'ffe-image-card--no-margin': noMargin },
+                className,
+            )}
             {...(rest as Record<string, unknown>)}
             ref={ref}
         >
