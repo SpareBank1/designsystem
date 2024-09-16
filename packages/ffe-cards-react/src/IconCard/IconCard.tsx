@@ -14,6 +14,8 @@ export type IconCardProps<As extends ElementType = 'div'> = Omit<
     condensed?: boolean;
     /** Position icon at left (default) or right of the card content */
     iconPosition?: 'right' | 'left';
+    /** No margin on card */
+    noMargin?: boolean;
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -23,8 +25,15 @@ function IconCardWithForwardRef<As extends ElementType>(
     props: IconCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, condensed, icon, children, iconPosition, ...rest } =
-        props;
+    const {
+        className,
+        condensed,
+        icon,
+        noMargin,
+        children,
+        iconPosition,
+        ...rest
+    } = props;
 
     return (
         <WithCardAction
@@ -32,6 +41,7 @@ function IconCardWithForwardRef<As extends ElementType>(
             className={classNames(
                 'ffe-icon-card',
                 { 'ffe-icon-card--condensed': condensed },
+                { 'ffe-icon-card--no-margin': noMargin },
                 { 'ffe-icon-card--right': iconPosition === 'right' },
                 className,
             )}

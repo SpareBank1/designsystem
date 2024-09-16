@@ -14,6 +14,8 @@ export type IllustrationCardProps<As extends ElementType = 'div'> = Omit<
     condensed?: boolean;
     /** Position illustration at left (default) or right of the card content */
     illustrationPosition?: 'right' | 'left';
+    /** No margin on card */
+    noMargin?: boolean;
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -28,6 +30,7 @@ function IllustrationCardWithForwardRef<As extends ElementType>(
         condensed,
         img,
         illustrationPosition,
+        noMargin,
         children,
         ...rest
     } = props;
@@ -37,6 +40,7 @@ function IllustrationCardWithForwardRef<As extends ElementType>(
             className={classNames(
                 'ffe-illustration-card',
                 { 'ffe-illustration-card--condensed': condensed },
+                { 'ffe-illustration-card--no-margin': noMargin },
                 {
                     'ffe-illustration-card--right':
                         illustrationPosition === 'right',

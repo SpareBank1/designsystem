@@ -10,6 +10,8 @@ export type TextCardProps<As extends ElementType = 'div'> = Omit<
 > & {
     /** Left-aligned text on the card */
     leftAlign?: boolean;
+    /** No margin on card */
+    noMargin?: boolean;
     /** Function that's passed available subcomponents as arguments, or regular children */
     children:
         | React.ReactNode
@@ -20,7 +22,7 @@ function TextCardWithForwardRef<As extends ElementType>(
     props: TextCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, leftAlign, children, ...rest } = props;
+    const { className, leftAlign, noMargin, children, ...rest } = props;
 
     return (
         <WithCardAction
@@ -28,6 +30,7 @@ function TextCardWithForwardRef<As extends ElementType>(
             className={classNames(
                 'ffe-text-card',
                 { 'ffe-text-card--left-align': leftAlign },
+                { 'ffe-text-card--no-margin': noMargin },
                 className,
             )}
             {...(rest as Record<string, unknown>)}

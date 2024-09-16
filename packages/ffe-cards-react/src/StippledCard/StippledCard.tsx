@@ -15,6 +15,8 @@ export type StippledCardProps<As extends ElementType = 'div'> = Omit<
         element: ReactNode;
         type: 'icon' | 'custom';
     };
+    /** No margin on card */
+    noMargin?: boolean;
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -24,7 +26,7 @@ function StippledCardWithForwardRef<As extends ElementType>(
     props: StippledCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, condensed, img, children, ...rest } = props;
+    const { className, condensed, img, noMargin, children, ...rest } = props;
 
     return (
         <WithCardAction
@@ -32,6 +34,7 @@ function StippledCardWithForwardRef<As extends ElementType>(
             className={classNames(
                 'ffe-stippled-card',
                 { 'ffe-stippled-card--condensed': condensed },
+                { 'ffe-stippled-card--no-margin': noMargin },
                 className,
             )}
             {...(rest as Record<string, unknown>)}

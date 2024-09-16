@@ -12,6 +12,8 @@ export interface GroupCardProps
     bgColor?: BgColor;
     /** The background color for darkmode of the whole groupcard element */
     bgDarkmodeColor?: BgColorDarkmode;
+    /** No margin on card */
+    noMargin?: boolean;
 }
 
 function GroupCardWithForwardRef(
@@ -21,6 +23,7 @@ function GroupCardWithForwardRef(
         children,
         bgColor,
         bgDarkmodeColor,
+        noMargin,
         ...rest
     }: GroupCardProps,
     ref: ForwardedRef<any>,
@@ -31,6 +34,7 @@ function GroupCardWithForwardRef(
                 'ffe-group-card',
                 {
                     'ffe-group-card--shadow': shadow,
+                    'ffe-group-card--no-margin': noMargin,
                     [`ffe-group-card--bg-${bgColor}`]: bgColor,
                     [`ffe-group-card--dm-bg-${bgDarkmodeColor}`]:
                         bgDarkmodeColor,

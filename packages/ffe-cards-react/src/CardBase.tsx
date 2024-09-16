@@ -9,6 +9,7 @@ export type CardBaseProps<As extends ElementType = 'div'> = Omit<
     'children'
 > & {
     shadow?: boolean;
+    /** No margin on card */
     noMargin?: boolean;
     textCenter?: boolean;
     bgColor?: BgColor;
