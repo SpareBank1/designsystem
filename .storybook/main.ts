@@ -29,7 +29,7 @@ const config: StorybookConfig = {
         name: getAbsolutePath('@storybook/react-vite'),
         options: {},
     },
-    staticDirs: ['../public'],
+    staticDirs: ['./public'],
     managerHead: head =>
         `${head}<link rel="icon" type="image/x-icon" href="/favicon.ico">`,
 };

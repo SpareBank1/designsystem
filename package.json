@@ -32,11 +32,12 @@
     "build-storybook": "storybook build"
   },
   "lint-staged": {
-    "{packages,buildtool,component-overview,linting,test}/**/*.{js,jsx,ts,tsx,json,css,less,md}": [
+    "{packages,buildtool,component-overview,linting,test,.storybook}/**/*.{js,jsx,ts,tsx,json,css,less,md}": [
       "prettier --write"
     ]
   },
   "workspaces": [
+    ".storybook/*",
     "packages/*",
     "linting/*",
     "buildtool",

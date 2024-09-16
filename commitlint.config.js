@@ -6,6 +6,7 @@ module.exports = {
             2,
             'always',
             [
+                '.storybook',
                 'release',
                 'component-overview',
                 'eslint-config-ffe',
