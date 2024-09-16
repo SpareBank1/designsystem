@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.4.8...@sb1/ffe-cards-react@17.5.0) (2024-09-16)
+
+
+### Features
+
+* **ffe-cards-react:** legg til noMargin prop ([9ac64e6](https://github.com/SpareBank1/designsystem/commit/9ac64e60a32cc0363c72d377b824cde4c772b8ee))
+
+
+
+
+
 ## [17.4.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.4.7...@sb1/ffe-cards-react@17.4.8) (2024-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.1.6...@sb1/ffe-cards@20.2.0) (2024-09-16)
+
+
+### Bug Fixes
+
+* **ffe-cards:** fix border color blending in with background on group card ([86538b6](https://github.com/SpareBank1/designsystem/commit/86538b6ee5013e0fae236b69c33711fb8e363fd6))
+
+
+### Features
+
+* **ffe-cards:** legg til nomargin klasse ([f1fb106](https://github.com/SpareBank1/designsystem/commit/f1fb106e25a6ad47641564501f09077bd1eba3c0))
+
+
+
+
+
 ## [20.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.1.5...@sb1/ffe-cards@20.1.6) (2024-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-cards

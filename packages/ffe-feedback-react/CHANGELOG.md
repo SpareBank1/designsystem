@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.0.21...@sb1/ffe-feedback-react@4.0.22) (2024-09-16)
+
+
+### Bug Fixes
+
+* **ffe-feedback-react:** lottie animation loaded twice in strict mode ([a84b51c](https://github.com/SpareBank1/designsystem/commit/a84b51c644bc6e00adc53aab5a655705919ab921))
+
+
+
+
+
 ## [4.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.0.20...@sb1/ffe-feedback-react@4.0.21) (2024-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
