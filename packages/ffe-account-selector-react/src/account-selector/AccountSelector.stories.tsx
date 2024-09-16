@@ -3,16 +3,18 @@ import { AccountSelector } from './AccountSelector';
 import { InputGroup } from '@sb1/ffe-form-react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { fargeFjell } from '@sb1/ffe-core/gen-src/colors';
 
 const meta: Meta<typeof AccountSelector> = {
     title: 'components/account-selector/AccountSelector',
     component: AccountSelector,
     tags: ['autodocs'],
     argTypes: {
-        locale: {
-            control: 'select',
-            options: ['nb', 'nn', 'en'],
+        postListElement: {
+            options: ['text', 'html'],
+            mapping: {
+                text: 'Some text describing the list',
+                html: <span>Some text describing the list</span>,
+            },
         },
     },
 };
@@ -64,28 +66,14 @@ export const Standard: Story = {
     },
     render: args => {
         return (
-            <div
-                style={{
-                    background: args.onColoredBg ? fargeFjell : 'transparent',
-                }}
+            <InputGroup
+                label="Velg konto"
+                inputId={args.id}
+                labelId={args.labelledById}
+                onColoredBg={args.onColoredBg}
             >
-                <InputGroup
-                    label="Velg konto"
-                    inputId={args.id}
-                    labelId={args.labelledById}
-                    onColoredBg={args.onColoredBg}
-                >
-                    <AccountSelector {...args} />
-                </InputGroup>
-            </div>
+                <AccountSelector {...args} />
+            </InputGroup>
         );
-    },
-};
-
-export const PostListElement: Story = {
-    ...Standard,
-    args: {
-        ...Standard.args,
-        postListElement: <span>Some text describing the list</span>,
     },
 };

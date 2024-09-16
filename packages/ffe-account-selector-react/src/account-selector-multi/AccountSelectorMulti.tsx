@@ -59,7 +59,7 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
     /** Overrides default string for all locales. */
     noMatches?: string;
     /** Called when an account is clicked */
-    onAccountSelected: (account: T | AllAccountsElement) => void;
+    onAccountSelected: (account: T) => void;
     onChange?: (value: string) => void;
     onFocus?: () => void;
     onBlur: () => void;
@@ -117,18 +117,15 @@ export class AccountSelectorMulti<
             accounts,
         } = this.props;
         if (suggestion) {
-            if (
-                isAllAccountsElement(suggestion) &&
-                suggestion.id === allAccountsElement.id
-            ) {
+            if (!isAllAccountsElement(suggestion)) {
+                onAccountSelected(suggestion);
+            } else if (suggestion.id === allAccountsElement.id) {
                 const allSelected =
                     selectedAccounts.length === accounts?.length;
                 if (this.props.onSelectAll) {
                     this.props.onSelectAll(!allSelected);
                 }
-                return;
             }
-            onAccountSelected(suggestion);
         }
     }
 
