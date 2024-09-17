@@ -1,10 +1,10 @@
 import React, { useState, useRef, useId } from 'react';
 import { flushSync } from 'react-dom';
-import { Animation } from './Animation';
 import { txt } from './i18n/texts';
 import { FeedbackThumbs, Thumb } from './FeedbackThumbs';
 import classNames from 'classnames';
 import { FeedbackExpanded, FeedbackExpandedProps } from './FeedbackExpanded';
+import { HighFive } from './HighFive';
 
 export interface FeedbackProps {
     headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
@@ -72,7 +72,7 @@ export const Feedback: React.FC<FeedbackProps> = ({
                         },
                         txt[locale].FEEDBACK_SENT_HEADING,
                     )}
-                    <Animation />
+                    <HighFive />
                 </div>
             </div>
         );
