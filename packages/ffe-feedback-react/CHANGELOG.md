@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.0.23...@sb1/ffe-feedback-react@4.1.0) (2024-09-17)
+
+
+### Features
+
+* **ffe-feedback-react:** bytter ut lottie animasjon mot vanlig bilde ([9e00b11](https://github.com/SpareBank1/designsystem/commit/9e00b11f7dfcd30d7711056338223a75e9464a80))
+
+
+
+
+
 ## [4.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.0.22...@sb1/ffe-feedback-react@4.0.23) (2024-09-16)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
