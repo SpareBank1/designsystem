@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@28.0.15...@sb1/ffe-account-selector-react@28.0.16) (2024-09-18)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Fix account balance check in AccountSelectorMulti ([8e29fe4](https://github.com/SpareBank1/designsystem/commit/8e29fe450f2e804bf43f7e02b8248c5c93889b9b))
+
+
+
+
+
 ## [28.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@28.0.14...@sb1/ffe-account-selector-react@28.0.15) (2024-09-18)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
