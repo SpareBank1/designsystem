@@ -15,7 +15,7 @@ export function AccountSuggestionMulti({
     selected = false,
 }: AccountSuggestionMultiProps) {
     const { accountNumber, balance, name, currencyCode } = account;
-    const hasBalance = balance !== null;
+    const hasBalance = balance !== undefined;
 
     return (
         <div className="ffe-account-suggestion-multi">
