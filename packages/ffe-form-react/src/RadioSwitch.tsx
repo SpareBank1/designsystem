@@ -13,12 +13,13 @@ export interface RadioSwitchProps
     leftLabel: string;
     /** The value of the choice to the left */
     leftValue: Value /** Ref-setting function, or ref created by useRef, passed to the input element */;
+    /** Ref to left radio */
     leftInnerRef?: React.Ref<HTMLInputElement>;
     /** The label of the choice to the right */
     rightLabel: string;
     /** The value of the choice to the right */
     rightValue: Value;
-    /** Ref-setting function, or ref created by useRef, passed to the input element */
+    /** Ref to right radio */
     rightInnerRef?: React.Ref<HTMLInputElement>;
     /** The selected value of the radio button set */
     selectedValue?: Value | null;

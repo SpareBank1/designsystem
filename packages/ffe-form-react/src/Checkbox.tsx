@@ -7,6 +7,7 @@ export interface CheckboxProps
     noMargins?: boolean;
     /** If you plan to render the checkbox without a visible label */
     hiddenLabel?: boolean;
+    /** Display inline */
     inline?: boolean;
     children:
         | React.ReactNode
