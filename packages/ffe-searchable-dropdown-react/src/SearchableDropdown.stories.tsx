@@ -24,7 +24,7 @@ const companies = [
 ];
 
 const meta: Meta<typeof SearchableDropdown> = {
-    title: 'components/searchableDropdown/SearchableDropdown',
+    title: 'components/searchable-dropdown/SearchableDropdown',
     component: SearchableDropdown,
     tags: ['autodocs'],
     argTypes: {
