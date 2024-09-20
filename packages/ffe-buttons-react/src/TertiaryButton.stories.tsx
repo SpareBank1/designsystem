@@ -1,26 +1,37 @@
 import React from 'react';
-import { ButtonGroup } from './ButtonGroup';
 import { TertiaryButton } from './TertiaryButton';
 import type { StoryObj, Meta } from '@storybook/react';
 
-const meta: Meta<typeof TertiaryButton> = {
+const Custom: React.FC<React.ComponentProps<'a'>> = props => (
+    <a {...props}>
+        {`Custom `}
+        {props.children}
+    </a>
+);
+
+const meta: Meta<typeof TertiaryButton<any>> = {
     title: 'components/buttons/TertiaryButton',
     component: TertiaryButton,
     tags: ['autodocs'],
+    argTypes: {
+        as: {
+            options: ['a', 'button', 'custom'],
+            mapping: {
+                '': 'button',
+                a: 'a',
+                button: 'button',
+                custom: Custom,
+            },
+        },
+    },
 };
 export default meta;
 
-type Story = StoryObj<typeof TertiaryButton>;
+type Story = StoryObj<typeof TertiaryButton<any>>;
 
 export const Standard: Story = {
     args: {
-        ariaLabel: 'Tertiærknapp',
-        ariaLoadingMessage: 'Vennligst vent...',
-        isLoading: false,
+        as: 'button',
     },
-    render: args => (
-        <ButtonGroup>
-            <TertiaryButton {...args}>Tertiærknapp</TertiaryButton>
-        </ButtonGroup>
-    ),
+    render: args => <TertiaryButton {...args}>Tertiærknapp</TertiaryButton>,
 };

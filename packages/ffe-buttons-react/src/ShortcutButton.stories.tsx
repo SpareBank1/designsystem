@@ -1,26 +1,37 @@
 import React from 'react';
-import { ButtonGroup } from './ButtonGroup';
 import { ShortcutButton } from './ShortcutButton';
 import type { StoryObj, Meta } from '@storybook/react';
 
-const meta: Meta<typeof ShortcutButton> = {
+const Custom: React.FC<React.ComponentProps<'a'>> = props => (
+    <a {...props}>
+        {`Custom `}
+        {props.children}
+    </a>
+);
+
+const meta: Meta<typeof ShortcutButton<any>> = {
     title: 'components/buttons/ShortcutButton',
     component: ShortcutButton,
     tags: ['autodocs'],
+    argTypes: {
+        as: {
+            options: ['a', 'button', 'custom'],
+            mapping: {
+                '': 'button',
+                a: 'a',
+                button: 'button',
+                custom: Custom,
+            },
+        },
+    },
 };
 export default meta;
 
-type Story = StoryObj<typeof ShortcutButton>;
+type Story = StoryObj<typeof ShortcutButton<any>>;
 
 export const Standard: Story = {
     args: {
-        ariaLabel: 'Snarveiknapp',
+        as: 'a',
     },
-    render: args => (
-        <ButtonGroup>
-            <ShortcutButton {...args} as="a" href="#shortcutbutton">
-                Snarvei
-            </ShortcutButton>
-        </ButtonGroup>
-    ),
+    render: args => <ShortcutButton {...args}>Snarvei</ShortcutButton>,
 };
