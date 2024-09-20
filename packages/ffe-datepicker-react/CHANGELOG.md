@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@9.1.14...@sb1/ffe-datepicker-react@9.1.15) (2024-09-20)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** remove unnecessary per dependencies ([43b7178](https://github.com/SpareBank1/designsystem/commit/43b717896f6865d1d57b1724b48ce43890fba6ff))
+
+
+
+
+
 ## [9.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@9.1.13...@sb1/ffe-datepicker-react@9.1.14) (2024-09-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
