@@ -1,0 +1,13 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as AccordionItemStories from './AccordionItem.stories.tsx';
+
+<Meta of={AccordionItemStories} />
+
+# AccordionItem
+
+AccordionItem er hver enkel «header»- og «panel»-seksjon. De er lukket by default, men du kan velge at den skal være åpen fra start ved å sende med property `defaultOpen`.
+Alle `<AccordionItem />`-komponenter har innebygget funksjonalitet for å styre åpning og lukking. Men om ønskelig kan du også overstyre dette. Et bruksområde kan være å lage en komponent som kun kan ha ett element åpent om gangen.
+
+Bruker man isOpen-propen vil intern-logikk som styrer åpning og lukking være skrudd av.
+
+<Canvas of={AccordionItemStories.Standard} />

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Accordion } from './Accordion';
-import { AccordionItem } from './AccordionItem';
+import { Accordion } from './Accordion.tsx';
+import { AccordionItem } from './AccordionItem.tsx';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Accordion> = {
     title: 'components/accordion/Accordion',
     component: Accordion,
-    tags: ['autodocs'],
 };
 export default meta;
 

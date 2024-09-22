@@ -1,0 +1,12 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories.tsx';
+
+<Meta of={AccordionStories} />
+
+# Accordion
+
+Accordion brukes der du har mye informasjon som du ønsker å gjøre tilgjengelig for brukere, uten at alt er visuelt synlig samtidig. En accordion er bygget opp av en «header» og et «panel», og i SpareBank 1 er hele «headeren» klikkbar.
+
+En accordion er bygget opp av to komponenter: `Accordion` og `AccordionItem`. Accordion-komponenten legges rundt alle AccordionItem's, for å gruppere og sette samme overskriftsnivå på alle.
+
+<Canvas of={AccordionStories.Standard} />
