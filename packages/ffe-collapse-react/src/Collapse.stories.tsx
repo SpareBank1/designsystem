@@ -6,7 +6,6 @@ import { ExpandButton } from '@sb1/ffe-buttons-react';
 const meta: Meta<typeof Collapse> = {
     title: 'components/collapse/Collapse',
     component: Collapse,
-    tags: ['autodocs'],
     argTypes: {},
 };
 export default meta;
