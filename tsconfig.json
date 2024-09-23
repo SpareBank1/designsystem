@@ -6,7 +6,6 @@
         "moduleResolution": "node",
         "strict": true,
         "jsx": "react",
-        "lib": ["dom", "es2019"],
-        "allowImportingTsExtensions": true
+        "lib": ["dom", "es2019"]
     }
 }
