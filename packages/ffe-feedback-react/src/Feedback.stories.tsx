@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof Feedback> = {
     title: 'components/feedback/Feedback',
     component: Feedback,
-    tags: ['autodocs'],
 };
 export default meta;
 
