@@ -1,0 +1,36 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as FileUploadStories from './FileUpload.stories.tsx';
+
+<Meta of={FileUploadStories} />
+
+# FileUpload
+
+En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokumentasjon.
+
+1. Brukeren velger filer i native filopplastingsview eller via 'drag and drop'
+2. Browseren mottar event-callback, med info om filene, om at brukeren har valg filer for opplasting, men disse er enda ikke lastet opp
+3. Konsumenter av `FileUpload` må selv starte nedlasting av valgte filer fra klientens filsystem (ved å bruke `file-content.js`)
+4. Konsumenter oppretter et objekt med info om filene og sender disse inn til `FileUpload` som `files`.
+5. Det er opp til konsumenten selv å avvise filer med feil størrelse eller type (se eksempel over).
+6. `files` objektet er indeksert på navn med selve `name` påkrevet, mens `error` og `document` er optional.
+7. Et eksempel på `files` som inkluderer de 3 mulighetene:
+
+```
+const files = {
+    fileBeingUploaded: {
+        name: 'fileBeingUploaded',
+    },
+    fileWithError: {
+        name: 'fileWithError',
+        error: 'Feil filtype',
+    },
+    fileUploaded: {
+        name: 'fileUploaded',
+        document: {
+            content: '(data)',
+        },
+    },
+};
+```
+<Canvas of={FileUploadStories.Standard} />
+<Controls of={FileUploadStories.Standard} />

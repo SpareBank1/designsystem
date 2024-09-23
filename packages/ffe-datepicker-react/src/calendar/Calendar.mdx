@@ -1,0 +1,11 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as CalendarStories from './Calendar.stories.tsx';
+
+<Meta of={CalendarStories} />
+
+# Calendar
+
+Kalender-delen av Datepicker kan brukes for seg om man trenger det.
+
+<Canvas of={CalendarStories.Standard} />
+<Controls of={CalendarStories.Standard} />

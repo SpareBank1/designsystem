@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof EmphasizedText> = {
     title: 'components/core/EmphasizedText',
     component: EmphasizedText,
-    tags: ['autodocs'],
 };
 export default meta;
 

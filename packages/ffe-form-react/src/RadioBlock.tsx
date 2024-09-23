@@ -12,7 +12,7 @@ export interface RadioBlockProps
     /** The name of the radio button set */
     name: string;
     /** The selected value of the radio button set */
-    selectedValue?: string;
+    selectedValue?: string | null;
     /** Whether or not children are always visible */
     showChildren?: boolean;
     /** The value of the radio block */

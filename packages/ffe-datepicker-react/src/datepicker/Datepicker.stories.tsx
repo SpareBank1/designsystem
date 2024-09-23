@@ -6,7 +6,6 @@ import { InputGroup } from '@sb1/ffe-form-react';
 const meta: Meta<typeof Datepicker> = {
     title: 'components/datepicker/Datepicker',
     component: Datepicker,
-    tags: ['autodocs'],
 };
 export default meta;
 

@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof Checkbox> = {
     title: 'components/form/Checkbox',
     component: Checkbox,
-    tags: ['autodocs'],
 };
 export default meta;
 
@@ -15,7 +14,7 @@ export const Standard: Story = {
     args: {
         noMargins: false,
         hiddenLabel: false,
-        inline: false,
+        inline: true,
         onColoredBg: false,
     },
     render: args => (
@@ -26,6 +25,70 @@ export const Standard: Story = {
             <Checkbox {...args} name="newspapers" value="vg">
                 VG
             </Checkbox>
+            <Checkbox {...args} name="newspapers" value="dagbladet">
+                Dagbladet
+            </Checkbox>
         </fieldset>
+    ),
+};
+
+export const InlineFalse: Story = {
+    ...Standard,
+    args: {
+        ...Standard.args,
+        inline: false,
+    },
+    render: args => (
+        <fieldset className="ffe-input-group">
+            <legend className="ffe-form-label ffe-form-label--block">
+                Hvilke aviser leser du?
+            </legend>
+            <Checkbox {...args} name="newspapers" value="vg">
+                VG
+            </Checkbox>
+            <Checkbox {...args} name="newspapers" value="dagbladet">
+                Dagbladet
+            </Checkbox>
+        </fieldset>
+    ),
+};
+
+export const HiddenLabel: Story = {
+    ...Standard,
+    args: {
+        defaultChecked: true,
+        hiddenLabel: true,
+        inline: false,
+    },
+    render: args => <Checkbox {...args}>Jeg har en ingen label</Checkbox>,
+};
+
+export const AriaInvalid: Story = {
+    ...Standard,
+    args: {
+        'aria-invalid': true,
+        checked: true,
+    },
+    render: args => (
+        <Checkbox {...args}>Ja, jeg vil gjerne motta reklame!</Checkbox>
+    ),
+};
+
+export const RenderProps: Story = {
+    ...Standard,
+    args: {
+        checked: true,
+    },
+    render: args => (
+        <Checkbox {...args}>
+            {labelProps => (
+                <label
+                    htmlFor={labelProps.htmlFor}
+                    className={labelProps.className}
+                >
+                    Her benyttes render props
+                </label>
+            )}
+        </Checkbox>
     ),
 };

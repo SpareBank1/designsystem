@@ -6,7 +6,6 @@ import { InputGroup } from './InputGroup';
 const meta: Meta<typeof TextArea> = {
     title: 'components/form/TextArea',
     component: TextArea,
-    tags: ['autodocs'],
 };
 export default meta;
 

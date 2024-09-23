@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof Calendar> = {
     title: 'components/datepicker/Calendar',
     component: Calendar,
-    tags: ['autodocs'],
 };
 export default meta;
 

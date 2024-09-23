@@ -1,4 +1,4 @@
-import { Canvas, Meta } from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as AccordionStories from './Accordion.stories.tsx';
 
 <Meta of={AccordionStories} />
@@ -10,3 +10,4 @@ Accordion brukes der du har mye informasjon som du ønsker å gjøre tilgjengeli
 En accordion er bygget opp av to komponenter: `Accordion` og `AccordionItem`. Accordion-komponenten legges rundt alle AccordionItem's, for å gruppere og sette samme overskriftsnivå på alle.
 
 <Canvas of={AccordionStories.Standard} />
+<Controls of={AccordionStories.Standard} />

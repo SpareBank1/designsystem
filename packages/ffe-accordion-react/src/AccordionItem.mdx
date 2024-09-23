@@ -1,4 +1,4 @@
-import { Canvas, Meta } from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as AccordionItemStories from './AccordionItem.stories.tsx';
 
 <Meta of={AccordionItemStories} />
@@ -11,3 +11,4 @@ Alle `<AccordionItem />`-komponenter har innebygget funksjonalitet for å styre 
 Bruker man isOpen-propen vil intern-logikk som styrer åpning og lukking være skrudd av.
 
 <Canvas of={AccordionItemStories.Standard} />
+<Controls of={AccordionItemStories.Standard} />

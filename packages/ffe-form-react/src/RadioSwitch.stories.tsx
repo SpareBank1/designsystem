@@ -5,7 +5,6 @@ import { RadioSwitch } from './RadioSwitch';
 const meta: Meta<typeof RadioSwitch> = {
     title: 'components/form/RadioSwitch',
     component: RadioSwitch,
-    tags: ['autodocs'],
 };
 export default meta;
 

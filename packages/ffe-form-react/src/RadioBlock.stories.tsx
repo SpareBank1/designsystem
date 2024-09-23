@@ -5,7 +5,6 @@ import { RadioBlock } from './RadioBlock';
 const meta: Meta<typeof RadioBlock> = {
     title: 'components/form/RadioBlock',
     component: RadioBlock,
-    tags: ['autodocs'],
 };
 export default meta;
 

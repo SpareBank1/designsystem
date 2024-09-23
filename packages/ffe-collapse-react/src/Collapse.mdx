@@ -1,0 +1,13 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as CollapseStories from './Collapse.stories.tsx';
+
+<Meta of={CollapseStories} />
+
+# Collapse
+
+Komponent for å enkelt lage ekspanderbart område. Hvorvidt området er ekspandert eller ikke styres av konsumenten via property `isOpen`.
+Et callback kan gis via property `onRest` som kjøres når transisjonen er ferdig.
+
+
+<Canvas of={CollapseStories.Standard} />
+<Controls of={CollapseStories.Standard} />

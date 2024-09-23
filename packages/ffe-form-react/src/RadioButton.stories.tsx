@@ -5,7 +5,6 @@ import { RadioButton } from './RadioButton';
 const meta: Meta<typeof RadioButton> = {
     title: 'components/form/RadioButton',
     component: RadioButton,
-    tags: ['autodocs'],
 };
 export default meta;
 
@@ -15,12 +14,21 @@ export const Standard: Story = {
     args: {
         inline: false,
         onColoredBg: false,
-        children: 'Bankkunde',
         labelProps: {},
         selectedValue: 'bankkunde',
         value: 'bankkunde',
-        tooltip: 'tooltip',
-        tooltipProps: {},
+        children: 'Bankkunde',
+    },
+    render: function Render(args) {
+        return <RadioButton {...args} />;
+    },
+};
+export const ToolTip: Story = {
+    args: {
+        ...Standard.args,
+        children: 'Månedlig fakturering',
+        tooltip:
+            'Månedlig fakturering er enklest å planlegge for. Passer for deg som liker å planlegge litt etter hvert.',
     },
     render: function Render(args) {
         return <RadioButton {...args} />;

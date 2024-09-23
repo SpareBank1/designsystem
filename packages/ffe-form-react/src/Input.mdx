@@ -1,0 +1,19 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as InputStories from './Input.stories.tsx';
+
+<Meta of={InputStories} />
+
+# Input
+
+The bread and butter av skjemaene våre.
+
+Vi har tre varianter av inputfelt:
+
+1. standard
+2. inline
+3. text-like
+
+Skillet på Standard og inline er mest relevant for utviklere. De ser helt like ut, men oppfører seg annerledes i samspillet med andre elementer på siden, for eksempel tooltip.
+
+<Canvas of={InputStories.Standard} />
+<Controls of={InputStories.Standard}/>

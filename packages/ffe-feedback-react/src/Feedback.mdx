@@ -1,0 +1,21 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as FeedbackStories from './Feedback.stories.tsx';
+
+<Meta of={FeedbackStories} />
+
+# Feedback
+
+Komponenten består av en tekst og tommel opp/ned-knapper som ved klikk viser et tilbakemeldingsskjema.
+
+## Farger og layout
+
+Du kan velge bakgrunnsfarge ved å sende med `bgColor` og `bgDarkmodeColor`. Komponenten kan også brukes i kombinasjon med bølgen
+
+## contactLink
+
+Du kan endre lenken i teksten ved å sende med `contactLink`-prop og element som består av `url`, `linkText` og `onClick`.
+Ved å bare sende inn `onClick` kan du overskrive hva som skjer når lenken blir trykket på.
+Hvis du vil sende med din egen tekst kan du legge til `linkText`.
+
+<Canvas of={FeedbackStories.Standard} />
+<Controls of={FeedbackStories.Standard} />
