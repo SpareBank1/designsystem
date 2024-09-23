@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-component-index",
-    "version": "8.4.24",
+    "version": "8.4.25",
     "description": "Index of FFE compontents",
     "license": "MIT",
     "author": "SpareBank 1 Utvikling",
@@ -41,7 +41,7 @@
     },
     "dependencies": {
         "@sb1/ffe-accordion": "^11.0.4",
-        "@sb1/ffe-accordion-react": "^13.0.16",
+        "@sb1/ffe-accordion-react": "^13.0.17",
         "@sb1/ffe-account-selector-react": "^28.0.17",
         "@sb1/ffe-buttons": "^19.0.8",
         "@sb1/ffe-buttons-react": "^24.0.17",
