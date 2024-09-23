@@ -1,26 +1,39 @@
 import React from 'react';
-import { ButtonGroup } from './ButtonGroup';
 import { ActionButton } from './ActionButton';
 import type { StoryObj, Meta } from '@storybook/react';
 
-const meta: Meta<typeof ActionButton> = {
+const Custom: React.FC<React.ComponentProps<'a'>> = props => (
+    <a {...props}>
+        {`Custom `}
+        {props.children}
+    </a>
+);
+
+const meta: Meta<typeof ActionButton<any>> = {
     title: 'components/buttons/ActionButton',
     component: ActionButton,
     tags: ['autodocs'],
+    argTypes: {
+        as: {
+            options: ['a', 'button', 'custom'],
+            mapping: {
+                '': 'a',
+                a: 'a',
+                button: 'button',
+                custom: Custom,
+            },
+        },
+    },
 };
 export default meta;
 
-type Story = StoryObj<typeof ActionButton>;
+type Story = StoryObj<typeof ActionButton<any>>;
 
 export const Standard: Story = {
     args: {
-        ariaLabel: 'Actionknapp',
+        as: 'button',
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
-    render: args => (
-        <ButtonGroup>
-            <ActionButton {...args}>Actionknapp</ActionButton>
-        </ButtonGroup>
-    ),
+    render: args => <ActionButton {...args}>Actionknapp</ActionButton>,
 };

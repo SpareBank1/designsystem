@@ -4,21 +4,37 @@ import { InlineExpandButton } from './InlineExpandButton';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import { Paragraph } from '@sb1/ffe-core-react';
 
-const meta: Meta<typeof InlineExpandButton> = {
+const Custom: React.FC<React.ComponentProps<'a'>> = props => (
+    <a {...props}>
+        {`Custom `}
+        {props.children}
+    </a>
+);
+
+const meta: Meta<typeof InlineExpandButton<any>> = {
     title: 'components/buttons/InlineExpandButton',
     component: InlineExpandButton,
     tags: ['autodocs'],
-    argTypes: {},
+    argTypes: {
+        as: {
+            options: ['a', 'button', 'custom'],
+            mapping: {
+                '': 'button',
+                a: 'a',
+                button: 'button',
+                custom: Custom,
+            },
+        },
+    },
 };
 export default meta;
 
-type Story = StoryObj<typeof InlineExpandButton>;
+type Story = StoryObj<typeof InlineExpandButton<any>>;
 
 export const Standard: Story = {
     args: {
+        as: 'button',
         isExpanded: false,
-        showMoreText: 'Vis mer',
-        showLessText: 'Vis mindre',
     },
     render: function Render(args) {
         const collapseId = useId();
@@ -37,7 +53,7 @@ export const Standard: Story = {
                         isExpanded={isExpanded}
                         onClick={() => setExpanded(!isExpanded)}
                     >
-                        {isExpanded ? args.showLessText : args.showMoreText}
+                        {isExpanded ? 'Vis mer' : 'Vis mindre'}
                     </InlineExpandButton>
                 </Paragraph>
 
