@@ -1,0 +1,14 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as InputTextLikeStories from './InputTextLike.stories.tsx';
+
+<Meta of={InputTextLikeStories} />
+
+# InputTextLike
+
+Text-like input er inputfelter designet for å kunne brukes inni brødtekst, som del av en setning med et minimum av luft rundt.
+Det er opp til utviklere å sette bredden på dette elementet, siden det vil variere fra gang til gang hva man ønsker.
+
+Text-like input har ikke egen label og må derfor assosieres med en `aria-label`. Dette kan legges til med den obligatoriske `ariaLabel`-propen i `InputTextLike`-komponenten.
+
+<Canvas of={InputTextLikeStories.Standard} />
+<Controls of={InputTextLikeStories.Standard}/>

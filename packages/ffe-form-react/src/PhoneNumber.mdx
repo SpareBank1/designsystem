@@ -1,0 +1,18 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as PhoneNumberStories from './PhoneNumber.stories.tsx';
+
+<Meta of={PhoneNumberStories} />
+
+# PhoneNumber
+
+<Canvas of={PhoneNumberStories.Standard} />
+<Controls of={PhoneNumberStories.Standard}/>
+
+Ved feil eller manglende landkode:
+<Canvas of={PhoneNumberStories.ErrorCountryCode} />
+
+Ved feil eller manglende telefonnummer:
+<Canvas of={PhoneNumberStories.ErrorNumber} />
+
+Feilmelding i begge feltene:
+<Canvas of={PhoneNumberStories.ErrorBoth} />

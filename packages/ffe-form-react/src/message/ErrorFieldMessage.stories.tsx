@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof ErrorFieldMessage> = {
     title: 'components/form/ErrorFieldMessage',
     component: ErrorFieldMessage,
-    tags: ['autodocs'],
 };
 export default meta;
 

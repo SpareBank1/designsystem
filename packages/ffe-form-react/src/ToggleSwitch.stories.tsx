@@ -5,7 +5,6 @@ import { ToggleSwitch } from './ToggleSwitch';
 const meta: Meta<typeof ToggleSwitch> = {
     title: 'components/form/ToggleSwitch',
     component: ToggleSwitch,
-    tags: ['autodocs'],
 };
 export default meta;
 
@@ -15,6 +14,20 @@ export const Standard: Story = {
     args: {
         children: 'Jeg vil gjerne ha reklame',
     },
+    render: function Render(args) {
+        return <ToggleSwitch {...args} />;
+    },
+};
+
+export const HideOnOff: Story = {
+    args: { ...Standard.args, hideOnOff: true },
+    render: function Render(args) {
+        return <ToggleSwitch {...args} />;
+    },
+};
+
+export const Description: Story = {
+    args: { ...Standard.args, description: 'Send meg spam' },
     render: function Render(args) {
         return <ToggleSwitch {...args} />;
     },

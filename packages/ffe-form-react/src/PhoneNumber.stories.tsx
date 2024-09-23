@@ -5,7 +5,6 @@ import { PhoneNumber } from './PhoneNumber';
 const meta: Meta<typeof PhoneNumber> = {
     title: 'components/form/PhoneNumber',
     component: PhoneNumber,
-    tags: ['autodocs'],
 };
 export default meta;
 
@@ -20,6 +19,31 @@ export const Standard: Story = {
         extraMargin: false,
         isMobileNumber: true,
         locale: 'nb',
+    },
+    render: args => <PhoneNumber {...args} />,
+};
+
+export const ErrorCountryCode: Story = {
+    args: {
+        ...Standard.args,
+        countryCodeFieldMessage: 'Dette feltet er påkrevd',
+    },
+    render: args => <PhoneNumber {...args} />,
+};
+
+export const ErrorNumber: Story = {
+    args: {
+        ...Standard.args,
+        numberFieldMessage: 'Dette feltet er påkrevd',
+    },
+    render: args => <PhoneNumber {...args} />,
+};
+
+export const ErrorBoth: Story = {
+    args: {
+        ...Standard.args,
+        countryCodeAndNumberFieldMessage:
+            'Både landkode og telefonnummer feltene er påkrevd',
     },
     render: args => <PhoneNumber {...args} />,
 };

@@ -6,7 +6,6 @@ import { InputTextLike } from './InputTextLike';
 const meta: Meta<typeof InputTextLike> = {
     title: 'components/form/InputTextLike',
     component: InputTextLike,
-    tags: ['autodocs'],
 };
 export default meta;
 

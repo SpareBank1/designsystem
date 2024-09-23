@@ -1,0 +1,13 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as RadioSwitchStories from './RadioSwitch.stories.tsx';
+
+<Meta of={RadioSwitchStories} />
+
+# RadioSwitch
+
+Brukes når kunden skal ta stilling til enkle valg - typisk i formen "ja/nei", eller "av/på" og hvor du i tillegg har behov for en lagreknapp. Har du behov for mer enn 3 radio-switcher i en liste, skal du bruke radioknapper.
+
+Radio-switcher uten defaultvalg.
+
+<Canvas of={RadioSwitchStories.Standard} />
+<Controls of={RadioSwitchStories.Standard}/>

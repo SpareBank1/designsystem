@@ -1,0 +1,33 @@
+import { Canvas, Meta , Controls} from '@storybook/blocks';
+import * as InputGroupStories from './InputGroup.stories.tsx';
+
+<Meta of={InputGroupStories} />
+
+# InputGroup
+
+En input group er en standarisert omverden for enkelt-inputs i et skjema. En gruppe består av en label, et valgfritt tooltip,
+skjemaelementet, og en feilmelding for valideringsfeil som vil bli vist om det er feil i skjemaet.
+
+<Canvas of={InputGroupStories.Standard} />
+<Controls of={InputGroupStories.Standard}/>
+
+Default oppførsel er at det holdes av plass under inputfeltene for å vise en feilmelding uten at innholdet lengre ned endres.
+Dersom man ikke ønsker dette kan det skrus av med å sette extraMargin prop til false.
+
+<Canvas of={InputGroupStories.ExtraMarginFalse} />
+
+
+Dersom man skal vise en hjelpetekst som alltid er synlig brukes description i stedet for tooltip.
+
+<Canvas of={InputGroupStories.Description} />
+
+Utviklere bør merke seg at man er nødt til å bruke det såkalte function-as-a-child-patternet med mindre man bare
+har ett child-element til InputGroup. Dette er fordi InputGroup setter properties som ID og liknende på rot-elementet,
+og det forventes at det er et skjemaelement.
+
+<Canvas of={InputGroupStories.ManyChildren} />
+
+Sender man inn en string eller et `<ErrorFieldMessage>`-element til fieldMessage vil dette rendres som en feilmelding.
+
+<Canvas of={InputGroupStories.FieldMessageString} />
+<Canvas of={InputGroupStories.FieldMessageComponent} />

@@ -1,0 +1,28 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as CheckboxStories from './Checkbox.stories.tsx';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+Checkbox brukes der du har 4 eller færre valgalternativer, og du vil gi brukeren muligheten til å velge mer enn ett alternativ.
+
+<Canvas of={CheckboxStories.Standard} />
+<Controls of={CheckboxStories.Standard}/>
+
+Ved å sende inn `inline={false}`, kan de også vises under hverandre:
+
+<Canvas of={CheckboxStories.InlineFalse} />
+
+Hvis du skal ha en skjult label, brukes `hiddenLabel={true}`, og label sendes fortsatt inn som child.
+
+<Canvas of={CheckboxStories.HiddenLabel} />
+
+Du kan merke at et felt er ugyldig ved å sette `aria-invalid="true"`.
+
+<Canvas of={CheckboxStories.AriaInvalid} />
+
+Du kan sende inn children som en funksjon, for å rendre din egen label. Funksjonen mottar props du kan spre på labelen.
+
+<Canvas of={CheckboxStories.RenderProps} />
+

@@ -1,0 +1,11 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as ErrorFieldMessageStories from './ErrorFieldMessage.stories.tsx';
+
+<Meta of={ErrorFieldMessageStories} />
+
+# ErrorFieldMessage
+
+Brukes til å vise feilmeldinger ved et skjemaelement, typisk en valideringsfeil.
+
+<Canvas of={ErrorFieldMessageStories.Standard} />
+<Controls of={ErrorFieldMessageStories.Standard}/>

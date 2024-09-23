@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof InfoFieldMessage> = {
     title: 'components/form/InfoFieldMessage',
     component: InfoFieldMessage,
-    tags: ['autodocs'],
 };
 export default meta;
 
