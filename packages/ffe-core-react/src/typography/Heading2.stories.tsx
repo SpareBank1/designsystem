@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof Heading2> = {
     title: 'components/core/Heading2',
     component: Heading2,
-    tags: ['autodocs'],
 };
 export default meta;
 

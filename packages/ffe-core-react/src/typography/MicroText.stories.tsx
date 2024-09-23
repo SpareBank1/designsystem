@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof MicroText> = {
     title: 'components/core/MicroText',
     component: MicroText,
-    tags: ['autodocs'],
 };
 export default meta;
 

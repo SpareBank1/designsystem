@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof LinkText> = {
     title: 'components/core/LinkText',
     component: LinkText,
-    tags: ['autodocs'],
 };
 export default meta;
 

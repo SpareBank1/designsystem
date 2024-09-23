@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof StrongText> = {
     title: 'components/core/StrongText',
     component: StrongText,
-    tags: ['autodocs'],
 };
 export default meta;
 

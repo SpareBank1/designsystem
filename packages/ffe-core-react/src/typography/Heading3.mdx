@@ -1,0 +1,19 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as HeadingStories from './Heading3.stories';
+
+<Meta of={HeadingStories} />
+
+# Heading3
+
+Heading levels er først og fremst skapt for organisering av innhold, ikke visualisering. Dette betyr at overskriftshierarkiet må opprettholdes som første prioritet. Headingene i seg selv kan styles for å følge den visuelle designmalen, men rekkefølgen på overskriftene er av absolutt største viktighet.
+
+Heading 1 er kapitteloverskriften, om du vil, mens de påfølgende under-headingene er oppdeling av budskapet slik det relaterer til foregående heading levels.
+
+En Heading 2 kan ikke komme uten at en heading 1 kommer først, siden Heading 2 betyr at avsnittet er relevant for Heading 1, men fordrer presisering visuelt og strukturelt. På samme måte er Heading 3 underlagt Heading 2. Heading 3 i dette tilfellet vil da være en under-kategori for Heading 2, og kan ikke implementeres uten å «innlemmes» under en relevant heading 2.
+
+Man kan ha flere headingnivåer av samme nivå etter hverandre. Det eneste dette betyr er at de presenterer en ny paragraf eller innhold som er relevant for den overordnede headingen, men ikke passer som en underparagraf for den tidligere headingen av samme nivå.
+
+Merk: For å sikre at SpareBank1-fonten settes som default på tekst også utenom disse komponentene må du passe på å ha klassen `.ffe-body` på eller nær `body-elementet`.
+
+<Canvas of={HeadingStories.Standard} />
+<Controls of={HeadingStories.Standard} />

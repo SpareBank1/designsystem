@@ -1,0 +1,14 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as LinkTextStories from './LinkText.stories';
+
+<Meta of={LinkTextStories} />
+
+# LinkText
+
+Lenker vises vanligvis med en understrek, siden dette er en standard i nettlesere, og gjør det ekstra tydelig for brukerne at teksten er klikkbar.
+
+Dersom det er tydelig ut fra sammenhengen at en tekst er en lenke eller lenken består av et ikon uten synlig tekst kan man vurdere å skru av understreken.
+Husk at farge alene ikke er nok til å indikere at en tekst er klikkbar. Ikke alle våre brukere kan skille mellom fargen på lenkene og fargen på brødteksten.
+
+<Canvas of={LinkTextStories.Standard} />
+<Controls of={LinkTextStories.Standard} />

@@ -5,7 +5,6 @@ import { PreformattedText } from './PreformattedText';
 const meta: Meta<typeof PreformattedText> = {
     title: 'components/core/PreformattedText',
     component: PreformattedText,
-    tags: ['autodocs'],
 };
 export default meta;
 
