@@ -5,7 +5,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof FileUpload> = {
     title: 'components/file-upload/FileUpload',
     component: FileUpload,
-    tags: ['autodocs'],
 };
 export default meta;
 
