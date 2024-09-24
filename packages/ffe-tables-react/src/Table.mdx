@@ -1,0 +1,30 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as TableStories from './Table.stories.tsx';
+
+<Meta of={TableStories} />
+
+# Table
+
+Tabeller brukes når vi vil vise strukturert informasjon under en felles overskrift.
+Tabeller må ha en overskrift, som settes med `<TableCaption/>`. Husk også å bruke scope på kolonnene-overskrifter, f.eks: `<TableHeaderCell scope="col"/>`.
+
+Slik ser det ut:
+<Canvas of={TableStories.Standard} />
+<Controls of={TableStories.Standard} />
+
+## Sortering
+
+Tabeller kan også lages sorterbare. Før å sortera brukes en funksjon som `children` prop til `<Table/>`. Denne funksjonen får valgt sorteringsnøkkel og sorteringsrekkefølge som input.
+
+* Sorteringsnøkler defineres i utgangspunktet med `sortKey` på kolonnene-overskriftene, f.eks: `<TableHeaderCell sortKey="name" scope="col">`.
+* Sorteringsrekkefølge defineres med sortOrder. Gyldige verdier er none, ascending eller descending.
+
+`sortOrder` vil oppdateres når brukeren klikker på de ulike overskriftene, og dataene sorteres i henhold til disse. Det er også mulig å sende inn en initiell sortering med `initialSort`.
+
+<Canvas of={TableStories.Sortable} />
+
+## Ekspanderbare rader
+
+Det er også mulig å lage ekspanderbare rader der det er hensiktsmessig.
+
+<Canvas of={TableStories.Expandable} />
