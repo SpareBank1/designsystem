@@ -148,31 +148,32 @@
         border: none;
     }
 
+    &__logout-button,
     &__icon-button {
-        .ffe-inline-button();
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        overflow: visible;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        line-height: normal;
+        text-align: inherit;
+        cursor: pointer;
+        border-radius: 6em;
 
-        color: var(--ffe-v-primary-color);
-
-        &:active:extend(.ffe-inline-button:active) {
+        &:active {
+            transform: scale(0.97);
         }
+    }
 
-        &:focus:extend(.ffe-inline-button:focus) {
-        }
+    &__icon-button {
+        color: var(--ffe-v-header-icon-button-color);
 
-        /* stylelint-disable declaration-block-no-duplicate-properties */
-        &:extend(.ffe-inline-button--tertiary);
-
-        @media (hover: hover) and (pointer: fine) {
-            &:hover:extend(.ffe-inline-button--tertiary:hover) {
-            }
-        }
-
-        /* stylelint-enable declaration-block-no-duplicate-properties */
-
-        &::after {
-            &:extend(.ffe-inline-button--tertiary::after);
-
-            border: none;
+        &:focus-visible {
+            outline: 2px solid var(--ffe-v-header-icon-button-color);
+            outline-offset: 2px;
         }
 
         &--user-nav {
@@ -188,80 +189,33 @@
     }
 
     &__logout-button {
-        &:extend(.ffe-button);
-        &:extend(.ffe-button--secondary);
+        --color: var(--ffe-v-header-logout-color);
+        --color-hover: var(--ffe-v-header-logout-color-hover);
+        --background-color: var(--ffe-v-header-logout-background-color);
+        --background-color-hover: var(
+            --ffe-v-header-logout-background-color-hover
+        );
+        --border-color: var(--ffe-v-header-logout-border-color);
+        --border-color-hover: var(--ffe-v-header-logout-border-color-hover);
 
-        margin: var(--ffe-spacing-xs) 0;
-        border-radius: 20px;
-        padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
+        color: var(--color);
+        background: var(--background-color);
+        border: 2px solid var(--border-color);
+        line-height: 1.2;
+        padding: calc(var(--ffe-spacing-xs) + 2px) var(--ffe-spacing-md); // The + 2px is ensure button is 44px after we made a change to line-height.
 
-        &::after:extend(.ffe-button::after) {
-        }
-
-        &:focus::after:extend(.ffe-button:focus::after) {
-        }
-
-        &:focus:not(:focus-visible)::after:extend(
-                .ffe-button:focus:not(:focus-visible)::after
-            ) {
-        }
-
-        &:focus:extend(.ffe-button:focus) {
-        }
-
-        &:focus:extend(.ffe-button--secondary:focus) {
+        &:focus-visible {
+            outline: 2px solid var(--border-color);
+            outline-offset: 2px;
         }
 
         @media (hover: hover) and (pointer: fine) {
-            &:hover:extend(.ffe-button--secondary:hover) {
+            &:hover {
+                --background-color: var(--background-color-hover);
+                --border-color: var(--border-color-hover);
+                --color: var(--color-hover);
             }
         }
-
-        &:active:extend(.ffe-button:active) {
-        }
-
-        &:active:extend(.ffe-button--secondary:active) {
-        }
-
-        &--loading {
-            &:extend(.ffe-button--loading);
-        }
-
-        &--loading &-label {
-            &:extend(.ffe-button--loading .ffe-button__label);
-        }
-
-        &--loading &-spinner {
-            &:extend(.ffe-button--loading .ffe-button__spinner);
-        }
-    }
-
-    &__logout-button-spinner {
-        &:extend(.ffe-button__spinner);
-
-        padding: 4px 16px;
-
-        &::after {
-            &:extend(.ffe-button__spinner::after);
-
-            animation-name: logout-button-loading-spin;
-        }
-
-        @keyframes logout-button-loading-spin {
-            from {
-                transform: none;
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    }
-
-    &__logout-button-label {
-        &:extend(.ffe-button__label);
-
-        color: var(--ffe-v-logout-button-label-color-text);
     }
 
     &__user-icon,
@@ -280,6 +234,7 @@
         margin-left: var(--ffe-spacing-xs);
         transition: transform var(--ffe-transition-duration)
             var(--ffe-ease-in-out-back);
+        color: var(--ffe-v-header-icon-button-color);
     }
 
     &__user-chevron--expanded &__user-chevron-icon {
