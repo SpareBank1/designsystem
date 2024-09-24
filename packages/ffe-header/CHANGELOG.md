@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.9...@sb1/ffe-header@22.0.10) (2024-09-24)
+
+
+### Bug Fixes
+
+* **ffe-header:** remove button dependencies ([2aaf192](https://github.com/SpareBank1/designsystem/commit/2aaf192754528e22cc151683e1121f8ac22e4143))
+
+
+
+
+
 ## [22.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.8...@sb1/ffe-header@22.0.9) (2024-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-header
