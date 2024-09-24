@@ -1,0 +1,13 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as GridRowStories from './GridRow.stories.tsx';
+
+<Meta of={GridRowStories} />
+
+# GridRow
+
+<Canvas of={GridRowStories.Standard} />
+<Controls of={GridRowStories.Standard} />
+
+En rad kan ha mange forskjellige bakgrunnsfarger.
+
+<Canvas of={GridRowStories.RowBackground} />
