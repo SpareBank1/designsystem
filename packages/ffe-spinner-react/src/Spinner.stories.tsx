@@ -6,7 +6,6 @@ import { Paragraph } from '@sb1/ffe-core-react';
 const meta: Meta<typeof Spinner> = {
     title: 'components/spinner/Spinner',
     component: Spinner,
-    tags: ['autodocs'],
     argTypes: {
         loadingText: {
             options: ['text', 'html', 'none'],
@@ -25,6 +24,14 @@ type Story = StoryObj<typeof Spinner>;
 export const Standard: Story = {
     args: {
         loadingText: 'html',
+    },
+    render: args => <Spinner {...args} />,
+};
+
+export const Large: Story = {
+    args: {
+        ...Standard.args,
+        large: true,
     },
     render: args => <Spinner {...args} />,
 };
