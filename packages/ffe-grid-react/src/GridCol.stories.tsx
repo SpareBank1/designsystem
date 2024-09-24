@@ -7,7 +7,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof GridCol> = {
     title: 'components/grid/GridCol',
     component: GridCol,
-    tags: ['autodocs'],
     argTypes: {
         as: { control: 'select', options: ['div', 'span'] },
     },
@@ -21,6 +20,23 @@ export const Standard: Story = {
         sm: 12,
         md: 12,
         lg: { cols: 6, offset: 3 },
+    },
+    render: args => (
+        <Grid>
+            <GridRow>
+                <GridCol {...args}>innehold</GridCol>
+            </GridRow>
+        </Grid>
+    ),
+};
+
+export const ColBackground: Story = {
+    args: {
+        sm: 12,
+        md: 12,
+        lg: { cols: 6, offset: 3 },
+        background: 'syrin-70',
+        backgroundDark: 'natt',
     },
     render: args => (
         <Grid>

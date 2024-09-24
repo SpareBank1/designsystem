@@ -7,7 +7,6 @@ import type { Account } from '../types';
 const meta: Meta<typeof AccountSelectorMulti> = {
     title: 'components/account-selector/AccountSelectorMulti',
     component: AccountSelectorMulti,
-    tags: ['autodocs'],
 };
 export default meta;
 
@@ -15,25 +14,25 @@ type Story = StoryObj<typeof AccountSelectorMulti>;
 
 const accounts: Account[] = [
     {
-        accountNumber: '123456789101',
+        accountNumber: '23200355148',
         name: 'Brukskonto',
         currencyCode: 'NOK',
         balance: 1337,
     },
     {
-        accountNumber: '123456789102',
+        accountNumber: '23201253845',
         name: 'Sparekonto',
         currencyCode: 'NOK',
         balance: 13337,
     },
     {
-        accountNumber: '123456789103',
+        accountNumber: '23207166200',
         name: 'Min ekstrakonto',
         currencyCode: 'NOK',
         balance: 12345,
     },
     {
-        accountNumber: '123456789104',
+        accountNumber: '23200840259',
         name: 'Min siste konto',
         currencyCode: 'NOK',
         balance: 54321,

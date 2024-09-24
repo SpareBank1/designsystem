@@ -1,0 +1,13 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as GridColStories from './GridCol.stories.tsx';
+
+<Meta of={GridColStories} />
+
+# GridCol
+
+<Canvas of={GridColStories.Standard} />
+<Controls of={GridColStories.Standard} />
+
+En kolonne kan ha bakgrunnsfarger. De vil da være utfallende, slik at selve innholdet vil forholde seg til griden.
+
+<Canvas of={GridColStories.ColBackground} />
