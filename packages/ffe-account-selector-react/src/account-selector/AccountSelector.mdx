@@ -1,0 +1,37 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as AccountSelectorStories from './AccountSelector.stories.tsx';
+
+<Meta of={AccountSelectorStories} />
+
+# AccountSelector
+
+Kontovelger brukes som navnet tilsier til å velge konto på de ulike platformene våre. Forskjellen på denne og en vanlig dropdown, er at den er tilpasset situasjoner der man ønsker å velge en konto, siden den vil vise valgt kontonummer og saldo, etter du har valgt et alternativ.
+
+I mobilbanken så er foretrukken løsning `openAccountPicker` i stedet for denne.
+
+<Canvas of={AccountSelectorStories.Standard} />
+<Controls of={AccountSelectorStories.Standard} />
+
+Kontovelger som også viser saldo/beløp
+
+<Canvas of={AccountSelectorStories.ShowBalance} />
+
+Trenger du å tillate at brukere kan skrive inn sitt eget kontonummer kan du aktivere dette ved å sende med `allowCustomAccount={true}`.
+
+<Canvas of={AccountSelectorStories.AllowCustomAccount} />
+
+Hvis du ikke ønsker at kontonummeret en bruker skriver inn skal formatteres, kan du skru det av med `formatAccountNumber={false}`.
+
+<Canvas of={AccountSelectorStories.NoFormatAccount} />
+
+Dersom du ønsker å gjøre endringer på selve listevisningen, kan du gjøre det med `listElementBody`.
+
+<Canvas of={AccountSelectorStories.ListElementBody} />
+
+Dersom du ønsker å skjule kontodetaljer, kan du bruke `hideAccountDetails`.
+
+<Canvas of={AccountSelectorStories.HideAccountDetails} />
+
+Dersom du ønsker å ha ekstra tekst på bunnen av lista, kan du bruke `postListElement`.
+
+<Canvas of={AccountSelectorStories.PostListElement} />
