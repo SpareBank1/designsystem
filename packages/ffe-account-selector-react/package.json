@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-account-selector-react",
-    "version": "28.0.19",
+    "version": "28.0.20",
     "description": "Selector for bank accounts with autocomplete.",
     "keywords": [
         "ffe"
@@ -34,8 +34,8 @@
         "@sb1/ffe-form-react": "^21.1.13",
         "@sb1/ffe-formatters": "^4.2.8",
         "@sb1/ffe-icons-react": "^11.0.8",
-        "@sb1/ffe-searchable-dropdown-react": "^21.0.15",
-        "@sb1/ffe-spinner-react": "^9.0.12",
+        "@sb1/ffe-searchable-dropdown-react": "^21.0.16",
+        "@sb1/ffe-spinner-react": "^9.0.13",
         "classnames": "^2.3.1",
         "react-auto-bind": "^0.4.2",
         "react-custom-scrollbars-2": "^4.3.0"
