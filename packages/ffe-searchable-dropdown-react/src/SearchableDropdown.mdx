@@ -1,0 +1,32 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as SearchableDropdownStories from './SearchableDropdown.stories.tsx';
+
+<Meta of={SearchableDropdownStories} />
+
+# SearchableDropdown
+
+Har du 10 eller flere alternativer i nedtrekkslisten din, anbefaler vi at du bruker nedtrekkslisten med søk.
+Det er for å gjøre det enda enklere for brukerne å finne det de er på jakt etter.
+
+<Canvas of={SearchableDropdownStories.Standard} />
+<Controls of={SearchableDropdownStories.Standard} />
+
+Hvis du vil vise mer enn en type informasjon, kan du legge det til i `dropdownAttributes`.
+
+<Canvas of={SearchableDropdownStories.DropdownAttributes} />
+
+Vil du lage din egen søkemetode kan du gjøre det også. For eksempel om du vil ignorere mellomrom.
+
+<Canvas of={SearchableDropdownStories.CustomSearch} />
+
+Hvis du ikke får noen resultater på søket ditt, men forsatt ønsker å gi brukerne noen forslag, kan du legge til ekstra søkeresultater.
+
+<Canvas of={SearchableDropdownStories.ExtraResults} />
+
+Vil du bestemme hvilket element som er valgt, kan du bruke `selectedItem`.
+
+<Canvas of={SearchableDropdownStories.SelectedItem} />
+
+Dersom du ønsker å ha ekstra tekst på bunnen av lista, kan du bruke `postListElement`.
+
+<Canvas of={SearchableDropdownStories.PostListElement} />

@@ -26,7 +26,6 @@ const companies = [
 const meta: Meta<typeof SearchableDropdown> = {
     title: 'components/searchable-dropdown/SearchableDropdown',
     component: SearchableDropdown,
-    tags: ['autodocs'],
     argTypes: {
         postListElement: {
             options: ['html', 'text', 'none'],
@@ -89,6 +88,128 @@ export const Standard: Story = {
         noMatch: { text: 'Søket ga ingen treff' },
         inputProps: { placeholder: 'Velg' },
         postListElement: 'none',
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+            >
+                <SearchableDropdown
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const DropdownAttributes: Story = {
+    args: {
+        ...Standard.args,
+        dropdownAttributes: ['organizationName', 'organizationNumber'],
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+            >
+                <SearchableDropdown
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const CustomSearch: Story = {
+    args: {
+        ...Standard.args,
+        searchMatcher: (inputValue, searchAttributes) => item => {
+            const cleanString = (value: string) =>
+                `${value}`.replace(/\s/g, '').toLowerCase();
+            const cleanedInputValue = cleanString(inputValue);
+            return searchAttributes
+                .map(searchAttribute => cleanString(item[searchAttribute]))
+                .some(cleanedItemAttribute =>
+                    cleanedItemAttribute.includes(cleanedInputValue),
+                );
+        },
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+            >
+                <SearchableDropdown
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const ExtraResults: Story = {
+    args: {
+        ...Standard.args,
+        noMatch: {
+            text: 'Søket ga ingen treff',
+            dropdownList: companies.slice(1, 4),
+        },
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+            >
+                <SearchableDropdown
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const SelectedItem: Story = {
+    args: {
+        ...Standard.args,
+        selectedItem: companies[2],
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+            >
+                <SearchableDropdown
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const PostListElement: Story = {
+    args: {
+        ...Standard.args,
+        postListElement: <span>Some text describing the list</span>,
     },
     render: function Render({ id, labelledById, ...args }) {
         return (
