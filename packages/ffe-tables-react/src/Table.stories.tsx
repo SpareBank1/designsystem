@@ -15,7 +15,6 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
 const meta: Meta<typeof Table> = {
     title: 'components/table/Table',
     component: Table,
-    tags: ['autodocs'],
 };
 export default meta;
 

@@ -1,0 +1,18 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as SpinnerStories from './Spinner.stories.tsx';
+
+<Meta of={SpinnerStories} />
+
+# Spinner
+
+Det er mye som skjer i bakgrunnen i et system når innholdet lastes inn. Med spinnere kan vi kommunisere tydelig til
+brukeren at innholdet er i ferd med å vises snart. Det er best practice å benytte seg av spinnere dersom ventetiden
+varer lengre enn tre sekunder. Dersom siden bruker mer enn 10 sekunder på å laste inn innholdet, vurder å bruke en
+notifikasjon med forklarende tekst.
+
+Spinneren finnes i liten og stor versjon.
+
+<Canvas of={SpinnerStories.Standard} />
+<Canvas of={SpinnerStories.Large} />
+<Controls of={SpinnerStories.Standard} />
+
