@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.8...@sb1/ffe-buttons@19.0.9) (2024-09-26)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** change line-height to same as icon(md) size ([13aafd6](https://github.com/SpareBank1/designsystem/commit/13aafd60dbbbd4c1421d99fb1d0cdf7bd9b0a9b6))
+
+
+
+
+
 ## [19.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.7...@sb1/ffe-buttons@19.0.8) (2024-09-10)
 
 
