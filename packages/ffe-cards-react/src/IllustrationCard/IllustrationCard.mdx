@@ -1,0 +1,18 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as IllustrationCardStories from './IllustrationCard.stories.tsx';
+
+<Meta of={IllustrationCardStories} />
+
+# IllustrationCard
+
+Illustrasjonskort er kort med en venstrestilt illustrasjon. Den tilbyr alle underkomponenter (CardName, Title, Subtext, Text og CardAction)
+og plasserer dem i gitt rekkefølge på høyresiden nedover i kortet (med teksten venstrestilt)
+
+
+<Canvas of={IllustrationCardStories.Standard} />
+<Controls of={IllustrationCardStories.Standard} />
+
+Kortet kan gjøres mer kompakt med `condensed`-modifyeren.
+
+<Canvas of={IllustrationCardStories.Condensed} />
+
