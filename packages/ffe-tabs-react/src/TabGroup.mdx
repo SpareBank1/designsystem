@@ -1,0 +1,51 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as TabGroupStories from './TabGroup.stories.tsx';
+import * as TabStories from './Tab.stories.tsx';
+import { CheckList, CheckListItem } from "@sb1/ffe-lists-react";
+
+<Meta of={TabGroupStories} />
+
+# TabGroup
+
+Faner kan være nyttige for å dele opp innholdet på siden i logiske «blokker» og forenkle navigasjonen for brukerne.
+
+## Gjør sånn:
+<CheckList>
+    <CheckListItem  isCross={false} >Bruk faner når brukerne skal bytte mellom ulike views i samme kontekst</CheckListItem>
+    <CheckListItem  isCross={false} >Skriv korte og enkle fanenavn, helst ett til to ord</CheckListItem>
+    <CheckListItem  isCross={false} >Plasser alltid rekken med faner øverst i toppen av innholdet</CheckListItem>
+</CheckList>
+
+## Ikke sånn:
+<CheckList>
+    <CheckListItem  isCross={true} >Gå for faner når brukerne trenger å se innhold fra flere av fanene samtidig, eller sammenligne innholdet</CheckListItem>
+</CheckList>
+
+## Tab og TabGroup
+For å implementere faner i løsningen bruker du komponentene `Tab` og `TabGroup`. Dette er knapper med fane-funksjonalitet, som grupperer innholdet slik
+at én gruppe er synlig og resten skjult.
+
+Sånn ser en enkelt fane ut:
+<Canvas of={TabStories.Standard} />
+<Controls of={TabStories.Standard} />
+
+Aktiv/valgt fane kan vises ved å sende inn selected:
+<Canvas of={TabStories.Selected} />
+
+Fanene skal alltid grupperes i en TabGroup:
+
+<Canvas of={TabGroupStories.Standard} />
+<Controls of={TabGroupStories.Standard} />
+
+Under ser du et eksempel hvor innhold er knyttet til hver fane.
+
+`aria-controls` tilsvarer id på elementet som fanen kontrollerer, og er en obligatorisk property som må sendes med i Tab.
+Se nærmere på eksempelet for hvordan denne brukes i praksis, til å knytte knappen til elementet som vises når knappen er selected.
+
+<Canvas of={TabGroupStories.WithContent} />
+
+## noBreak
+noBreak er en property som kan sendes med til TabGroup, dersom du ønsker å sikre at fanene ikke brekker over flere linjer.
+Dette kan være nyttig i tilfeller der man har plass til alt på en linje, selv på f.eks mobil.
+
+<Canvas of={TabGroupStories.NoBreak} />
