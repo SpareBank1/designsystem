@@ -1,0 +1,28 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as PaginationStories from './Pagination.stories.tsx';
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+Paginering benyttes til søkeresultater og lignende presentasjon av store mengder informasjon som ikke får plass på en enkelt side.
+
+For de fleste scenarioer anbefales det å bruke infinite scroll, men paginering kan benyttes hvis det vurderes som bedre basert på brukerfeedback.
+
+<Canvas of={PaginationStories.Standard} />
+<Controls of={PaginationStories.Standard} />
+
+## Paginering med tabelleksempel
+
+<Canvas of={PaginationStories.WithTable} />
+
+## Variasjoner
+
+Det originale eksempelet har tekstene "Neste" og "Forrige". Hvis man ikke ønsker tekst på knappene kan proppen `noNavigationText` brukes.
+
+<Canvas of={PaginationStories.NoNavigationText} />
+
+Og hvis man ikke ønsker å gi brukeren valg om størrelse på lista, kan man bruke `showRowsPerPageText={false}` og la være å ha med `rowsPerPageOptions`.
+
+<Canvas of={PaginationStories.NoShowRowsPerPageText} />
+
