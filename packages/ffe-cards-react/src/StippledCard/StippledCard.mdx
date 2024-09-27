@@ -1,0 +1,25 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as StippledCardStories from './StippledCard.stories.tsx';
+
+<Meta of={StippledCardStories} />
+
+# StippledCard
+
+StippledCard er kort med en stiplet kantlinje. Den tilbyr alle underkomponenter (CardName, Title, Subtext, Text og CardAction)
+og plasserer dem i gitt rekkefølge nedover i kortet, med teksten venstrestilt.
+Kortet kan brukes i kombinasjon med ikoner eller illustrasjoner, eller uten noen av delene.
+
+
+<Canvas of={StippledCardStories.Standard} />
+<Controls of={StippledCardStories.Standard} />
+
+Med icon:
+<Canvas of={StippledCardStories.WithIcon} />
+
+Med illustrasjon:
+<Canvas of={StippledCardStories.WithCustom} />
+
+StippledCard kan gjøres mer kompakt med `condensed`-modifyeren.
+<Canvas of={StippledCardStories.Condensed} />
+
+

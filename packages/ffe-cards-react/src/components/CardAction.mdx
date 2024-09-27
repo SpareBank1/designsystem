@@ -1,0 +1,18 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as CardActionStories from './CardAction.stories.tsx';
+
+<Meta of={CardActionStories} />
+
+# CardAction (Klikkbare kort)
+
+Kort er ikke klikkbare som standard. Bruk `<CardAction/>` for å lage et klikkbart kort. En `<CardAction/>` kan brukes som en lenke eller en knapp ved hjelp av as.
+
+Som lenke:
+<Canvas of={CardActionStories.Standard} />
+<Controls of={CardActionStories.Standard} />
+
+Som knapp:
+<Canvas of={CardActionStories.AsButton} />
+
+I `Title`:
+<Canvas of={CardActionStories.WithinTitle} />
