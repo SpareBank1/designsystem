@@ -95,11 +95,15 @@
 }
 
 .ffe-inline-button--tertiary {
+    --icon-size-md: 1.5rem; // 24px
+    --border-width: 1px;
+
     align-content: center;
     color: var(--ffe-v-button-tertiary-color);
     flex-wrap: wrap;
-    padding: var(--ffe-spacing-xs) calc(var(--ffe-spacing-sm) + 1px);
+    padding: var(--ffe-spacing-xs) calc(var(--ffe-spacing-sm));
     border: 2px solid transparent;
+    line-height: calc(var(--icon-size-md) - var(--border-width));
 
     .ffe-inline-button__icon {
         color: var(--ffe-v-button-tertiary-color);
@@ -107,7 +111,7 @@
 
     .ffe-inline-button__label {
         &::after {
-            border-bottom: solid 1px currentcolor;
+            border-bottom: solid var(--border-width) currentcolor;
             content: ' ';
             display: block;
             width: 100%;
