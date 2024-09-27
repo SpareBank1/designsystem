@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.9...@sb1/ffe-buttons@19.0.10) (2024-09-27)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** fjerner lite av paddingen ([a51e902](https://github.com/SpareBank1/designsystem/commit/a51e902ff7f4f269939557f3486087589f034960))
+
+
+
+
+
 ## [19.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.8...@sb1/ffe-buttons@19.0.9) (2024-09-26)
 
 
