@@ -1,0 +1,69 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as ModalStories from './Modal.stories.tsx';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+Modalvindu brukes for å vise informasjon, bruksspesifikke funksjoner, meldinger eller bekreftelser som brukeren må respondere på før de kan fortsette å bruke nettsiden.
+
+## Når skal komponenten brukes?
+
+Modalvinduer skal **IKKE** brukes i mobilapplikasjoner. I app anbefales det å bruke eksternt lag eller sheet der det anses som nødvendig.
+
+Modalvinduer skal kun aktiveres av bruker ved brukers direkte interaksjon med en knapp på nettsiden, eller for å gi brukeren viktige informasjonsvarsler. Modalen vil da gi brukeren et nytt grensesnitt, men under samme kontekst som siden bruker var på ved aktivering.
+
+En modal skal alltid ha en heading nivå 2. Ikke bruk modalvinduer for funksjonelle prosesser med flere steg.
+
+For å lukke eller åpne en modal brukes `ModalHandle`. Innhold kan plasseres i en eller flere `<ModalBlock/>`.
+
+## Standard
+<Canvas of={ModalStories.Standard} />
+<Controls of={ModalStories.Standard} />
+
+## Tilpasset bakgrunn
+
+<Canvas of={ModalStories.Custom} />
+
+## Veiledning for bruk
+
+Modaler benyttes når vi ønsker å beholde brukerens navigasjonskontekst og bør aller helst bare benyttes i to hovedsituasjoner;
+
+1. Funksjonsmodal: For å tilby et lite knippe funksjoner (f.eks. filter eller datovelger) eller
+2. Informasjonsmodal: til å gi informasjon (ren tekst, uten funksjon) som er for omfattende til å vise i en tooltip eller pop-over.
+
+Ikke bruk modalvinduer for funksjonelle prosesser med flere steg.
+
+### Lukke Modal
+
+1. Lukkefunksjon typ X-knapp
+2. ESC-tast på tastaturet
+3. Avbryt/lukk modal-knapp
+4. Klikk utenfor modalvindu
+
+Modaler skal alltid ha flere lukkefunksjoner. Klikk utenfor modalen skal behandles likt som klikk på ‘lukk’ (kryss eller knapp).
+Ettersom modaler lett kan lukkes bør de ikke inneholde for mange funksjoner eller kritisk innhold. I slike tilfeller bør en egen
+side vurderes. Funksjonelle prosesser over flere steg må aldri legges i en modal.
+
+### Informasjonsmodaler
+Modaler med informasjon skal brukes på samme måte som tooltip eller pop-over, men i større format og med plass til mer tekst.
+Teksten er oftest midtstilt, men kan også være venstrestilt i større modaler med mye tekst.
+Informasjonsmodaler kan inneholde flere steg, men bør da ha knapper både for ‘Neste’ og for ‘Avbryt’.
+
+### Funksjonsmodaler
+
+Modaler med funksjon må benyttes kun hvis det anses som nødvendig, og bare til enkle funksjoner som f.eks. innlogging, modusvalg,
+filter eller dato/tidsvelger. Komplekse skjemaer med flere ulike typer input bør heller vises på egen side.
+Knappene skal plasseres midtstilt i mindre modaler, og høyrestilt i større modaler. Knappen lengst til høyre skal være
+primærknappen som aktiverer funksjonen (f.eks. «ok» eller «send inn).
+
+### Kontrollmodaler
+Modalvinduer som benyttes for å kontrollere eller varsle om handlinger/endringer. Eksempler på dette vil være:
+* Å kontrollere input og endringer: «er du sikker på at du vil endre telefonnummer?»
+* Varslinger om utlogging ved lengre perioder med inaktivitet
+
+
+## Universell Utforming
+For å opprettholde dokumentstruktur med tanke på overskriftshierarki må modalvinduet benytte `<h2/>` som overskriftsnivå
+for sin hovedoverskrift. Ikke tillat tastaturnavigasjon utenfor eller «bak» modalvinduet. Så lenge modalen er aktivert
+vil tastaturnavigasjon måtte begrenses til selve modalen.

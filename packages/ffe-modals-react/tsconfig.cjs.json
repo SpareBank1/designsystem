@@ -5,5 +5,10 @@
         "module": "commonjs"
     },
     "include": ["src/**/*"],
-    "exclude": ["node_modules", "src/**/*.spec.ts*", "src/__mocks__"]
+    "exclude": [
+        "node_modules",
+        "src/**/*.spec.ts*",
+        "src/__mocks__",
+        "src/**/*.stories.ts*"
+    ]
 }
