@@ -1,0 +1,107 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as IconStories from './Icon.stories.tsx';
+import bytteIkonSrc from './img/bytte-ikon.png'
+import velgerTextStilSrc from './img/velger-tekststil.png'
+import velgerColorSrc from './img/velger-color.png'
+
+<Meta of={IconStories} />
+
+# Icon
+
+Ikoner skal gjøre det enkelt for kunden å navigere i de digitale flatene våre. Ikonene representerer funksjoner, verktøy eller handlinger og visualiserer funksjonalitet.
+
+Ikonene vi bruker kommer fra ikonbiblioteket Material Symbols. [Les mer om ikonene](https://design.sparebank1.no/profil/ikoner/) under profil.
+
+
+## Figma
+
+Når du bruker komponenter fra designsystem-biblioteket i Figma ligger ikonene tilgjengelig som en del av komponentene.
+
+For å bytte ikon klikker du deg bare inn på ikonet og skriver navnet på ikonet du vil ha. Du får oversikt over alle ikonene og navnene med plugin «Material Symbols»
+i Figma eller på [https://fonts.google.com/icons?icon.style=Rounded](https://fonts.google.com/icons?icon.style=Rounded).
+
+<img src={bytteIkonSrc} alt="Hvordan man bytter ikon i Figma" />
+
+Når du trenger et ikon utenfor komponentene lager du et nytt tekstelement, skriver navnet på ikonet, og velger en av tekststilene for ikoner under Text Styles.
+
+<img src={velgerTextStilSrc} alt="Hvordan man velger tekststil for ikoner" />
+
+Bruk Color Styles for å bytte farge på ikonet.
+
+<img src={velgerColorSrc} alt="Hvordan man velger color style for ikonet" />
+
+## SVG-implementasjon
+
+Bruk pakkene `ffe-icons` og `ffe-icons-react`. I `ffe-icons` finner du alle varianter av ikonene som SVG-filer, i tillegg til styling-filene som brukes i React-komponenten.
+SVG-filene er sortert på `weight`, om de er fylt eller ikke, samt størrelse. Hvilken størrelse du skal bruke kan variere fra komponent til komponent.
+
+`Icon`-komponenten tar inn en filbane eller [data-URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), og setter SVG-ikonet som en mask. Det gjør at ikonet kan arve color-verdien fra et parent-element.
+
+Filbane er anbefalt metode for å importere ikoner. På denne måten kan man i tillegg til selve ikonet spesifisere variant, vekt og størrelse i URL-en ikonet hentes fra.
+For eksempel vil et åpent hjem-ikon med vekt 300 og størrelse md kunne tas i bruk slik:
+
+```
+import homeIcon from '@sb1/ffe-icons/icons/open/300/md/home.svg';
+
+return <Icon fileUrl={homeIcon} size="md" ariaLabel="hjem" />;
+```
+
+Dersom man ønsker å legge inn ikoner som data-URL må man selv konvertere ikonene til et passende format, for eksempel [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
+
+
+<Canvas of={IconStories.Standard} />
+<Controls of={IconStories.Standard} />
+
+`mask` fungerer på samme måte som bakgrunn. Det er derfor viktig at du setter en `size`-prop som stemmer overens med SVG-størrelsen, slik at ikonet vises riktig.
+Setter du en verdi i `size` som ikke stemmer overens med SVG-en, vil resultatet se slik ut:
+
+<Canvas of={IconStories.WrongSize} />
+
+Dette er gjort med vilje for at man skal bli klar over at man bruker feil SVG, da linjetykkelsen varierer fra størrelse til størrelse.
+
+`aria-hidden` settes automatisk til true, dersom du ikke sender med en verdi i `ariaLabel`:
+
+<Canvas of={IconStories.NoAriaLabel} />
+
+## Stil
+
+Vi bruker stilen «rounded». Den harmonerer godt med resten av den visuelle identiteten til SpareBank 1.
+
+## Størrelser
+
+Velg mellom tykkelsene 300, 400 og 500.
+
+<Canvas of={IconStories.Sizes} />
+
+## Tykkelser
+
+<Canvas of={IconStories.Weights} />
+
+## Farger
+
+Disse fargene brukes som standard:
+
+* Light mode: Vann, Fjell, Hvit
+* Dark mode: Vann 70%, Vann 30%, Svart
+
+Du kan også velge fra de andre fargene i SpareBank 1-paletten.
+
+## Universell utforming
+
+Løsningene våre blir brukt med ulike typer hjelpeteknologi. For at ikonene skal fungere godt med hjelpeteknologi som for
+eksempel skjermlesere er det viktig at de enten har tektsbeskrivelse, eller er tilstrekkelig skjult for hjelpeteknolgi i
+de tilfellene hvor det gir den beste brukeropplevelsen.
+
+Når ikonet skal presenteres av hjelpeteknologi legger du inn en beskrivende `aria-label` gjennom `ariaLabel`-propertyen.
+
+Ikonene har ARIA `role="graphics-symbol img"`, som gjør at de presenteres som grafikksymboler. `"img"` gjør at ikonene leses
+opp som bilder i tilfeller hvor `"graphics-symbol"` ikke støttes.
+
+Når ikonet skal skjules for hjelpeteknologi lar du være å sende med ariaLabel eller setter den til `{null}`·
+Ikonet får da `aria-hidden="true"` og vil ikke presenteres av hjelpeteknologi.
+
+Eksempel på tilfelle hvor ikonet skjules: Ikonet ligger i en knapp. Knappeteksten eller aria-labelet til knappen er så
+beskrivende for hva knappen gjør at aria-label på ikonet blir overflødig og bidrar til unødvendig støy med skjermlesere
+og annen hjelpeteknologi.
+
+<Canvas of={IconStories.UniversellUtforming} />
