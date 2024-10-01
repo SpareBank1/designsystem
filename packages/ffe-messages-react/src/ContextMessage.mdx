@@ -1,0 +1,22 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as ContextMessageStories from './ContextMessage.stories.tsx';
+import { CheckList, CheckListItem } from "@sb1/ffe-lists-react";
+
+<Meta of={ContextMessageStories} />
+
+# ContextMessage
+
+Kontekstuelle meldinger er informasjon som skal gis i en kontekst. Dette er meldinger som skal utheves, men som bare gir mening i konteksten den er plassert. I motsetning til systemmeldinger, kan disse meldingene plasseres midt i innholdet på siden.
+
+Bruk kontekstuelle meldinger:
+<CheckList>
+    <CheckListItem>Når du vil gi ekstra informasjon i en gitt situasjon</CheckListItem>
+</CheckList>
+
+Ikke bruk kontekstuelle meldinger:
+<CheckList>
+    <CheckListItem isCross={true}>Hvis du egentlig bare trenger en brødtekst</CheckListItem>
+</CheckList>
+
+<Canvas of={ContextMessageStories.Standard} />
+<Controls of={ContextMessageStories.Standard} />
