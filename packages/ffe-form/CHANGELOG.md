@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.12...@sb1/ffe-form@30.0.13) (2024-10-01)
+
+
+### Bug Fixes
+
+* **ffe-form:** sentrering av checkmark i checkbox ([37ce25e](https://github.com/SpareBank1/designsystem/commit/37ce25e896c356b51ec5b160bf5bd84ff7468fa7))
+
+
+
+
+
 ## [30.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.11...@sb1/ffe-form@30.0.12) (2024-09-27)
 
 **Note:** Version bump only for package @sb1/ffe-form
