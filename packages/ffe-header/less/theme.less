@@ -8,7 +8,7 @@
     --ffe-v-link-hover-color: var(--ffe-farge-vann);
     --ffe-v-link-focus-box-shadow-color: var(--ffe-farge-vann);
     --ffe-v-link-disabled-color: var(--ffe-farge-moerkgraa);
-    --ffe-v-notification-bubble-background-color: var(--ffe-farge-skog);
+    --ffe-v-notification-bubble-background-color: var(--ffe-farge-baer);
     --ffe-v-notification-bubble-text-color: var(--ffe-farge-hvit);
     --ffe-v-font-strong: 'SpareBank1-medium', arial, sans-serif;
 
@@ -16,6 +16,7 @@
     --ffe-v-usernav-link-hover-background-color: var(--ffe-farge-frost-30);
     --ffe-v-usernav-link-focus-background-color: var(--ffe-farge-frost-30);
     --ffe-v-usernav-list-border-color: var(--ffe-farge-vann);
+    --ffe-v-usernav-list-hover-color: var(--ffe-farge-svart);
     --ffe-v-header-icon-button-color: var(--ffe-farge-vann);
     --ffe-v-header-logout-color: var(--ffe-farge-vann);
     --ffe-v-header-logout-color-hover: var(--ffe-farge-hvit);
@@ -23,24 +24,29 @@
     --ffe-v-header-logout-border-color-hover: var(--ffe-farge-vann);
     --ffe-v-header-logout-background-color: var(--ffe-farge-hvit);
     --ffe-v-header-logout-background-color-hover: var(--ffe-farge-vann);
+    --ffe-v-usernav-box-shadow-color: var(--ffe-farge-graa);
+    --ffe-v-usernav-box-shadow: 0 1px 4px 0
+        var(--ffe-v-usernav-box-shadow-color);
+    --ffe-v-usernav-border-color: var(--ffe-farge-lysgraa);
 
     @media (prefers-color-scheme: dark) {
         .regard-color-scheme-preference {
             --ffe-v-background-color: var(--ffe-farge-svart);
-            --ffe-v-primary-color: var(--ffe-farge-vann-70);
+            --ffe-v-primary-color: var(--ffe-farge-vann-30);
             --ffe-v-header-border-bottom-color: var(--ffe-farge-moerkgraa);
             --ffe-v-header-logo-color: var(--ffe-farge-hvit);
-            --ffe-v-link-color: var(--ffe-farge-varmgraa);
-            --ffe-v-link-hover-color: var(--ffe-farge-hvit);
+            --ffe-v-link-color: var(--ffe-farge-hvit);
+            --ffe-v-link-hover-color: var(--ffe-farge-vann-30);
             --ffe-v-link-focus-box-shadow-color: var(--ffe-farge-hvit);
-            --ffe-v-notification-bubble-background-color: var(
-                --ffe-farge-skog-30
-            );
-            --ffe-v-notification-bubble-text-color: var(--ffe-farge-svart);
+            --ffe-v-link-disabled-color: var(--ffe-farge-graa);
+            --ffe-v-notification-bubble-text-color: var(--ffe-farge-hvit);
 
             /* User nav menu */
-            --ffe-v-usernav-link-hover-background-color: var(--ffe-farge-fjell);
+            --ffe-v-usernav-link-hover-background-color: var(
+                --ffe-farge-moerkgraa
+            );
             --ffe-v-usernav-list-border-color: var(--ffe-farge-vann-70);
+            --ffe-v-usernav-list-hover-color: var(--ffe-farge-hvit);
             --ffe-v-usernav-header-link-hover-focus-color: var(
                 --ffe-farge-svart
             );
@@ -53,6 +59,8 @@
             --ffe-v-header-logout-background-color-hover: var(
                 --ffe-farge-vann-30
             );
+            --ffe-v-usernav-box-shadow: none;
+            --ffe-v-usernav-border-color: var(--ffe-farge-koksgraa);
         }
     }
 }
