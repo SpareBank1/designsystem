@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.12...@sb1/ffe-header@22.0.13) (2024-10-02)
+
+
+### Bug Fixes
+
+* **ffe-header:** remove unvanted padding desktop ([fd62606](https://github.com/SpareBank1/designsystem/commit/fd62606cb62ef6b6a0142cf0ef85d5ac9f43a992))
+
+
+
+
+
 ## [22.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.11...@sb1/ffe-header@22.0.12) (2024-10-02)
 
 
