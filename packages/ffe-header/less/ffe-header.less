@@ -326,11 +326,18 @@
         }
 
         &__icon-button {
-            direction: rtl;
-
             .ffe-header__notification-bubble {
                 transform: unset;
                 align-self: start;
+            }
+        }
+
+        &__icon-button--user-nav {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--ffe-spacing-sm);
+            .ffe-header__notification-bubble {
+                grid-area: 1 e('/') 1 e('/') span 1 e('/') span 1;
             }
         }
 
