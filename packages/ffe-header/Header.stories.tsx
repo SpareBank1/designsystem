@@ -17,6 +17,7 @@ export const Standard: Story = {
     args: {},
     render: function Render() {
         const [isUserNavOpen, setIsUserNavOpen] = useState(false);
+        const [isSiteNavOpen, setIsSiteNavOpen] = useState(false);
         /* eslint-disable jsx-a11y/anchor-is-valid */
         return (
             <div>
@@ -82,7 +83,10 @@ export const Standard: Story = {
                         <div className="ffe-header__user-nav-toggle">
                             <button
                                 className="ffe-header__icon-button ffe-header__icon-button--user-nav"
-                                onClick={() => setIsUserNavOpen(prev => !prev)}
+                                onClick={() => {
+                                    setIsUserNavOpen(prev => !prev);
+                                    setIsSiteNavOpen(false);
+                                }}
                             >
                                 <span className="ffe-header__user-name">
                                     Jomar Beate Skrothaug
@@ -106,17 +110,31 @@ export const Standard: Story = {
                                         aria-label="bruker"
                                         size="xl"
                                     />
-
-                                    <div className="ffe-header__notification-bubble">
-                                        5
-                                    </div>
+                                </div>
+                                <div className="ffe-header__notification-bubble">
+                                    5
                                 </div>
                             </button>
                         </div>
 
                         <div className="ffe-header__site-nav-toggle">
-                            <button className="ffe-header__icon-button ffe-header__icon-button--site-nav">
-                                <span className="ffe-header__site-nav-hamburger">
+                            <button
+                                className="ffe-header__icon-button ffe-header__icon-button--site-nav"
+                                type="button"
+                                onClick={() => {
+                                    setIsUserNavOpen(false);
+                                    setIsSiteNavOpen(prev => !prev);
+                                }}
+                            >
+                                <span
+                                    className={classNames(
+                                        'ffe-header__site-nav-hamburger',
+                                        {
+                                            'ffe-header__site-nav-hamburger--expanded':
+                                                isSiteNavOpen,
+                                        },
+                                    )}
+                                >
                                     <span className="ffe-header__site-nav-hamburger-bar" />
                                 </span>
                             </button>
@@ -171,7 +189,7 @@ export const Standard: Story = {
                                             Chat - stengt
                                         </div>
                                     </li>
-                                    <li className="ffe-header__list-item ffe-header__list-item--centered">
+                                    <li className="ffe-header__list-item">
                                         <button className="ffe-header__logout-button">
                                             <span className="ffe-header__logout-button-label">
                                                 Logg ut
@@ -190,7 +208,16 @@ export const Standard: Story = {
                                 className="ffe-header__site-nav"
                                 role="navigation"
                             >
-                                <ul className="ffe-header__list ffe-header__site-nav-list">
+                                <ul
+                                    className={classNames(
+                                        'ffe-header__list',
+                                        'ffe-header__site-nav-list',
+                                        {
+                                            'ffe-header__site-nav-list--visible':
+                                                isSiteNavOpen,
+                                        },
+                                    )}
+                                >
                                     <li className="ffe-header__list-item">
                                         <a
                                             className="ffe-header__link"
