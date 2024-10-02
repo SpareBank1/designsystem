@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.13...@sb1/ffe-header@22.0.14) (2024-10-02)
+
+
+### Bug Fixes
+
+* **ffe-header:** arrow on wrong side user nav button ([da8f304](https://github.com/SpareBank1/designsystem/commit/da8f3048080ec0be89c3b0b79d1221eaa80a3a8a))
+
+
+
+
+
 ## [22.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.12...@sb1/ffe-header@22.0.13) (2024-10-02)
 
 
