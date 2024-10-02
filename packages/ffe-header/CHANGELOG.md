@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.11...@sb1/ffe-header@22.0.12) (2024-10-02)
+
+
+### Bug Fixes
+
+* **ffe-header:** missing notification on desktop ([02adc34](https://github.com/SpareBank1/designsystem/commit/02adc34d46535ffa80d832b80a7ba6a34bfcaec6))
+
+
+
+
+
 ## [22.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.10...@sb1/ffe-header@22.0.11) (2024-09-27)
 
 **Note:** Version bump only for package @sb1/ffe-header
