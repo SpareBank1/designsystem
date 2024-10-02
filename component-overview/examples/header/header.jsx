@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
 
 () => {
     const [isUserNavOpen, setIsUserNavOpen] = useState(false);
+    const [isSiteNavOpen, setIsSiteNavOpen] = useState(false);
 
     const expandMoreIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzczLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDgtMTEuODQ2LTcuOTIzTDI3NC45MjQtNTYzLjUzOXEtOC4zMDgtOC4zMDctOC41LTIwLjg4NC0uMTkzLTEyLjU3NyA4LjUtMjEuMjY5IDguNjkyLTguNjkyIDIxLjA3Ni04LjY5MnQyMS4wNzYgOC42OTJMNDgwLTQ0Mi43NjhsMTYyLjkyNC0xNjIuOTI0cTguMzA3LTguMzA3IDIwLjg4NC04LjUgMTIuNTc2LS4xOTIgMjEuMjY4IDguNSA4LjY5MyA4LjY5MiA4LjY5MyAyMS4wNzcgMCAxMi4zODQtOC42OTMgMjEuMDc2TDUwNS4zMDctMzgzLjc3cS01LjYxNSA1LjYxNS0xMS44NDYgNy45MjMtNi4yMyAyLjMwOC0xMy40NjEgMi4zMDhaIi8+PC9zdmc+';
@@ -76,13 +77,17 @@ import classNames from 'classnames';
                     <div className="ffe-header__user-nav-toggle">
                         <button
                             className="ffe-header__icon-button ffe-header__icon-button--user-nav"
-                            onClick={() => setIsUserNavOpen(prev => !prev)}
+                            onClick={() => {
+                                setIsUserNavOpen(prev => !prev);
+                                setIsSiteNavOpen(false);
+                            }}
                         >
                             <span className="ffe-header__user-name">
                                 Jomar Beate Skrothaug
                                 <span className="ffe-header__user-chevron">
                                     <Icon
                                         fileUrl={expandMoreIcon}
+                                        size="md"
                                         className={classNames(
                                             'ffe-header__user-chevron-icon',
                                             {
@@ -99,17 +104,30 @@ import classNames from 'classnames';
                                     aria-label="bruker"
                                     size="xl"
                                 />
-
-                                <div className="ffe-header__notification-bubble">
-                                    5
-                                </div>
+                            </div>
+                            <div className="ffe-header__notification-bubble">
+                                5
                             </div>
                         </button>
                     </div>
-
                     <div className="ffe-header__site-nav-toggle">
-                        <button className="ffe-header__icon-button ffe-header__icon-button--site-nav">
-                            <span className="ffe-header__site-nav-hamburger">
+                        <button
+                            className="ffe-header__icon-button ffe-header__icon-button--site-nav"
+                            type="button"
+                            onClick={() => {
+                                setIsUserNavOpen(false);
+                                setIsSiteNavOpen(prev => !prev);
+                            }}
+                        >
+                            <span
+                                className={classNames(
+                                    'ffe-header__site-nav-hamburger',
+                                    {
+                                        'ffe-header__site-nav-hamburger--expanded':
+                                            isSiteNavOpen,
+                                    },
+                                )}
+                            >
                                 <span className="ffe-header__site-nav-hamburger-bar" />
                             </span>
                         </button>
@@ -154,7 +172,7 @@ import classNames from 'classnames';
                                         Chat - stengt
                                     </div>
                                 </li>
-                                <li className="ffe-header__list-item ffe-header__list-item--centered">
+                                <li className="ffe-header__list-item">
                                     <button className="ffe-header__logout-button">
                                         <span className="ffe-header__logout-button-label">
                                             Logg ut
@@ -170,7 +188,16 @@ import classNames from 'classnames';
                         </nav>
 
                         <nav className="ffe-header__site-nav" role="navigation">
-                            <ul className="ffe-header__list ffe-header__site-nav-list">
+                            <ul
+                                className={classNames(
+                                    'ffe-header__list',
+                                    'ffe-header__site-nav-list',
+                                    {
+                                        'ffe-header__site-nav-list--visible':
+                                            isSiteNavOpen,
+                                    },
+                                )}
+                            >
                                 <li className="ffe-header__list-item">
                                     <a className="ffe-header__link" href="#">
                                         Oversikt
