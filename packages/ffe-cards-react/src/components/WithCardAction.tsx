@@ -81,7 +81,12 @@ function WithCardActionForwardRef<As extends ElementType>(
                 isUsingCardAction && `${baseClassName}--clickable`,
             )}
             onClick={(e: React.MouseEvent<HTMLElement>) => {
-                if (!cardActionInnerRef.current?.contains(e.target as Node)) {
+                const hasSelectedText = !!window.getSelection()?.toString()
+                    .length;
+                if (
+                    !hasSelectedText &&
+                    !cardActionInnerRef.current?.contains(e.target as Node)
+                ) {
                     cardActionInnerRef.current?.click();
                 }
                 onClick?.(e);
