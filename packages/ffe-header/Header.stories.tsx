@@ -104,16 +104,16 @@ export const Standard: Story = {
                                         />
                                     </span>
                                 </span>
-                                <div className="ffe-header__svg-icon ffe-header__user-icon">
+                                <span className="ffe-header__svg-icon ffe-header__user-icon">
                                     <Icon
                                         fileUrl={personIcon}
                                         aria-label="bruker"
                                         size="xl"
                                     />
-                                </div>
-                                <div className="ffe-header__notification-bubble">
+                                </span>
+                                <span className="ffe-header__notification-bubble">
                                     5
-                                </div>
+                                </span>
                             </button>
                         </div>
 
