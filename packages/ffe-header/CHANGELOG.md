@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.14...@sb1/ffe-header@22.0.15) (2024-10-03)
+
+
+### Bug Fixes
+
+* **ffe-header:** remove unwanted space when no notification ([6d05569](https://github.com/SpareBank1/designsystem/commit/6d055695cddcc5deff8576957481f81e707704e0))
+
+
+
+
+
 ## [22.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.13...@sb1/ffe-header@22.0.14) (2024-10-02)
 
 
