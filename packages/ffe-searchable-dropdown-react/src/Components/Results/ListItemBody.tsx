@@ -2,17 +2,18 @@ import React from 'react';
 import classnames from 'classnames';
 import { MicroText } from '@sb1/ffe-core-react';
 
-interface ListItemBodyProps<Item extends Record<string, any>> {
+export interface ListItemBodyProps<Item extends Record<string, any>> {
     item: Item;
     dropdownAttributes: Array<keyof Item>;
     isHighlighted: boolean;
+    isSelected?: boolean;
 }
 
 export function ListItemBody<Item extends Record<string, any>>({
-    item,
-    dropdownAttributes,
-    isHighlighted,
-}: ListItemBodyProps<Item>) {
+                                                                   item,
+                                                                   dropdownAttributes,
+                                                                   isHighlighted,
+                                                               }: ListItemBodyProps<Item>) {
     const [titleAttribute, ...restAttributes] = dropdownAttributes;
     const title = item[titleAttribute];
     const rest = restAttributes.map((attribute, index) => (
@@ -22,7 +23,7 @@ export function ListItemBody<Item extends Record<string, any>>({
         <div
             className={classnames('ffe-searchable-dropdown__list-item-body', {
                 'ffe-searchable-dropdown__list-item-body--highlighted':
-                    isHighlighted,
+                isHighlighted,
             })}
         >
             {title}

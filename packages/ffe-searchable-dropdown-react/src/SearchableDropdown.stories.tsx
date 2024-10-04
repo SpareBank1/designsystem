@@ -83,7 +83,7 @@ export const Standard: Story = {
         id: 'id',
         labelledById: 'labelled-by-id',
         dropdownList: companies,
-        dropdownAttributes: ['organizationName'],
+        dropdownAttributes: ['organizationName', 'organizationNumber', 'quantityUnprocessedMessages'],
         searchAttributes: ['organizationName'],
         noMatch: { text: 'Søket ga ingen treff' },
         inputProps: { placeholder: 'Velg' },
