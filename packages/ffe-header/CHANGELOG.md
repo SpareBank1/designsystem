@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.15...@sb1/ffe-header@22.0.16) (2024-10-04)
+
+
+### Bug Fixes
+
+* **ffe-header:** transition kun på aktuelle properties ([9929279](https://github.com/SpareBank1/designsystem/commit/99292790308b54e41ac2921e7de300890d48cd4b))
+
+
+
+
+
 ## [22.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.14...@sb1/ffe-header@22.0.15) (2024-10-03)
 
 
