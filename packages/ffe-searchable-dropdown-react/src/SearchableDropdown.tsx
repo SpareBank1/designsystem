@@ -33,6 +33,11 @@ const ARROW_DOWN = 'ArrowDown';
 const ESCAPE = 'Escape';
 const ENTER = 'Enter';
 
+const searchIcon300 =
+    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuNTI1IDE1LjYyNUM3LjgwODMzIDE1LjYyNSA2LjM1ODMzIDE1LjAzMzMgNS4xNzUgMTMuODVDMy45OTE2NyAxMi42NSAzLjQgMTEuMiAzLjQgOS41QzMuNCA3LjggMy45OTE2NyA2LjM1ODMzIDUuMTc1IDUuMTc1QzYuMzU4MzMgMy45NzUgNy44MDgzMyAzLjM3NSA5LjUyNSAzLjM3NUMxMS4yMjUgMy4zNzUgMTIuNjY2NyAzLjk3NSAxMy44NSA1LjE3NUMxNS4wMzMzIDYuMzU4MzMgMTUuNjI1IDcuOCAxNS42MjUgOS41QzE1LjYyNSAxMC4yMTY3IDE1LjUwODMgMTAuOSAxNS4yNzUgMTEuNTVDMTUuMDQxNyAxMi4yIDE0LjcyNSAxMi43NjY3IDE0LjMyNSAxMy4yNUwyMC4wNzUgMTlDMjAuMjA4MyAxOS4xMzMzIDIwLjI3NSAxOS4zMDgzIDIwLjI3NSAxOS41MjVDMjAuMjc1IDE5LjcyNSAyMC4yMDgzIDE5LjkgMjAuMDc1IDIwLjA1QzE5LjkyNSAyMC4yIDE5Ljc0MTcgMjAuMjc1IDE5LjUyNSAyMC4yNzVDMTkuMzI1IDIwLjI3NSAxOS4xNTgzIDIwLjIgMTkuMDI1IDIwLjA1TDEzLjI1IDE0LjNDMTIuNzUgMTQuNzE2NyAxMi4xNzUgMTUuMDQxNyAxMS41MjUgMTUuMjc1QzEwLjg3NSAxNS41MDgzIDEwLjIwODMgMTUuNjI1IDkuNTI1IDE1LjYyNVpNOS41MjUgMTQuMTI1QzEwLjgwODMgMTQuMTI1IDExLjg5MTcgMTMuNjc1IDEyLjc3NSAxMi43NzVDMTMuNjc1IDExLjg3NSAxNC4xMjUgMTAuNzgzMyAxNC4xMjUgOS41QzE0LjEyNSA4LjIxNjY3IDEzLjY3NSA3LjEyNSAxMi43NzUgNi4yMjVDMTEuODkxNyA1LjMyNSAxMC44MDgzIDQuODc1IDkuNTI1IDQuODc1QzguMjI1IDQuODc1IDcuMTI1IDUuMzI1IDYuMjI1IDYuMjI1QzUuMzQxNjcgNy4xMjUgNC45IDguMjE2NjcgNC45IDkuNUM0LjkgMTAuNzgzMyA1LjM0MTY3IDExLjg3NSA2LjIyNSAxMi43NzVDNy4xMjUgMTMuNjc1IDguMjI1IDE0LjEyNSA5LjUyNSAxNC4xMjVaIiBmaWxsPSIjMDA1QUE0Ii8+Cjwvc3ZnPgo=';
+const chevronUpIcon300 =
+    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEwLjQ1TDcuOTI1IDE0LjVDNy43OTE2NyAxNC42NSA3LjYxNjY3IDE0LjcyNSA3LjQgMTQuNzI1QzcuMiAxNC43MjUgNy4wMjUgMTQuNjUgNi44NzUgMTQuNUM2LjcyNSAxNC4zNjY3IDYuNjUgMTQuMiA2LjY1IDE0QzYuNjUgMTMuNzgzMyA2LjcyNSAxMy42IDYuODc1IDEzLjQ1TDExLjM3NSA4Ljk3NUMxMS40NTgzIDguODc1IDExLjU1IDguODA4MzMgMTEuNjUgOC43NzVDMTEuNzY2NyA4LjcyNSAxMS44ODMzIDguNyAxMiA4LjdDMTIuMTE2NyA4LjcgMTIuMjI1IDguNzI1IDEyLjMyNSA4Ljc3NUMxMi40NDE3IDguODA4MzMgMTIuNTQxNyA4Ljg3NSAxMi42MjUgOC45NzVMMTcuMTI1IDEzLjQ1QzE3LjI1ODMgMTMuNiAxNy4zMjUgMTMuNzgzMyAxNy4zMjUgMTRDMTcuMzQxNyAxNC4yIDE3LjI3NSAxNC4zNjY3IDE3LjEyNSAxNC41QzE2Ljk3NSAxNC42NSAxNi44IDE0LjcyNSAxNi42IDE0LjcyNUMxNi40IDE0LjcyNSAxNi4yMjUgMTQuNjUgMTYuMDc1IDE0LjVMMTIgMTAuNDVaIiBmaWxsPSIjMDA1QUE0Ii8+Cjwvc3ZnPgo=';
+
 export interface SearchableDropdownProps<Item extends Record<string, any>> {
     /** Id of drop down */
     id: string;
@@ -159,6 +164,8 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
     const noMatchMessageId = useId();
     const shouldFocusToggleButton = useRef(false);
     const shouldFocusInput = useRef(false);
+
+    const isInputEmpty = state.inputValue.trim() === '';
 
     const handleInputClick = () => {
         dispatch({ type: 'InputClick' });
@@ -376,7 +383,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                     }
                     className={classNames('ffe-searchable-dropdown__button', {
                         'ffe-searchable-dropdown__button--flip':
-                            state.isExpanded,
+                            state.isExpanded && !isInputEmpty,
                     })}
                     onClick={() => {
                         dispatch({
@@ -388,9 +395,15 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                         <Spinner />
                     ) : (
                         <Icon
-                            fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzczLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDgtMTEuODQ2LTcuOTIzTDI3NC45MjQtNTYzLjUzOXEtOC4zMDgtOC4zMDctOC41LTIwLjg4NC0uMTkzLTEyLjU3NyA4LjUtMjEuMjY5IDguNjkyLTguNjkyIDIxLjA3Ni04LjY5MnQyMS4wNzYgOC42OTJMNDgwLTQ0Mi43NjhsMTYyLjkyNC0xNjIuOTI0cTguMzA3LTguMzA3IDIwLjg4NC04LjUgMTIuNTc2LS4xOTIgMjEuMjY4IDguNSA4LjY5MyA4LjY5MiA4LjY5MyAyMS4wNzcgMCAxMi4zODQtOC42OTMgMjEuMDc2TDUwNS4zMDctMzgzLjc3cS01LjYxNSA1LjYxNS0xMS44NDYgNy45MjMtNi4yMyAyLjMwOC0xMy40NjEgMi4zMDhaIi8+PC9zdmc+"
+                            fileUrl={
+                                isInputEmpty ? searchIcon300 : chevronUpIcon300
+                            }
                             size="md"
-                            className="ffe-searchable-dropdown__button-icon"
+                            className={
+                                isInputEmpty
+                                    ? undefined
+                                    : 'ffe-searchable-dropdown__button-icon-animate'
+                            }
                         />
                     )}
                 </button>
