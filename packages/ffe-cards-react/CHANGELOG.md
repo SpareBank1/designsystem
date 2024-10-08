@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.5.1...@sb1/ffe-cards-react@17.5.2) (2024-10-07)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** possible to copy text in card ([6d91000](https://github.com/SpareBank1/designsystem/commit/6d91000d41ce4a5af088629eeb9e91fa306dedb8))
+
+
+
+
+
 ## [17.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.5.0...@sb1/ffe-cards-react@17.5.1) (2024-09-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
