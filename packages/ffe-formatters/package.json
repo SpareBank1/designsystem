@@ -27,10 +27,6 @@
         "test": "jest",
         "test:watch": "jest --watch"
     },
-    "dependencies": {
-        "@types/underscore.string": "^0.0.41",
-        "underscore.string": "^3.3.4"
-    },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.0",
         "eslint": "^8.57.0"
