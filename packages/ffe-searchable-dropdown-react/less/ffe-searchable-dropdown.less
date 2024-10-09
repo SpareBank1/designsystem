@@ -6,6 +6,24 @@
         padding-right: calc(@button-width + 3px);
     }
 
+    &--input-container {
+        position: relative;
+    }
+
+    &--pill {
+        &-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--ffe-spacing-sm);
+        }
+
+        display: inline-block;
+        background-color: var(--ffe-farge-fjell);
+        color: var(--ffe-farge-hvit);
+        border-radius: var(--ffe-spacing-xs);
+        padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
+    }
+
     &__list {
         display: none;
         background: var(--ffe-v-searchable-dropdown-list-background-color);
