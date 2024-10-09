@@ -2,17 +2,6 @@ import { NON_BREAKING_SPACE } from './internal/unicode';
 import { parseNumber } from './internal/parseNumber';
 import { numberFormat } from 'underscore.string';
 
-function customNumberFormat(
-    number: number,
-    decimals: number,
-    decimalMark: string,
-    thousandSeparator: string,
-) {
-    const parts = number.toFixed(decimals).split('.');
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, thousandSeparator);
-    return parts.join(decimalMark);
-}
-
 export const formatNumber = (
     number: number | string | null | undefined,
     opts = {},
@@ -42,10 +31,10 @@ export const formatNumber = (
     if (typeof toFormat !== 'number') {
         return number;
     }
-    return customNumberFormat(
+    return `${numberFormat(
         toFormat,
         decimals,
         decimalMark,
         thousandSeparator,
-    );
+    )}`;
 };
