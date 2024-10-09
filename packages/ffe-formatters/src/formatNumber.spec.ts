@@ -88,4 +88,21 @@ describe('formatNumber with options', () => {
         expect(formatNumber('1234', opts)).toBe('1,234');
         expect(formatNumber('-1234567', opts)).toBe('-1,234,567');
     });
+
+    test('format number based on language', () => {
+        expect(formatNumber(123456, {}, 'nb')).toBe('123 456');
+        expect(formatNumber(123456.78, { decimals: 2 }, 'nb')).toBe(
+            '123 456,78',
+        );
+        expect(formatNumber('123456,78', { decimals: 2 }, 'nb')).toBe(
+            '123 456,78',
+        );
+        expect(formatNumber(123456, {}, 'en')).toBe('123,456');
+        expect(formatNumber(123456.78, { decimals: 2 }, 'en')).toBe(
+            '123,456.78',
+        );
+        expect(formatNumber('123456.78', { decimals: 2 }, 'en')).toBe(
+            '123,456.78',
+        );
+    });
 });
