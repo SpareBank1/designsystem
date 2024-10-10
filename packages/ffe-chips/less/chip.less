@@ -1,0 +1,125 @@
+@import 'theme';
+
+.ffe-chip {
+    --border-width: 1px;
+    --background-color: var(--ffe-v-chip-background-color);
+    --border-color: var(--ffe-v-chip-border-color);
+    --text-color: var(--ffe-v-chip-text-color);
+    --border-radius: 24px;
+    --text-offset: 12px;
+    --icon-offset: var(--ffe-spacing-xs);
+    --offset-y: calc(var(--ffe-spacing-2xs) - var(--border-width));
+    --space-between: var(--ffe-spacing-2xs);
+
+    all: unset;
+    display: grid;
+    place-items: center;
+    grid-template-columns: var(--text-offset) 1fr var(--text-offset);
+    grid-template-rows: var(--offset-y) auto var(--offset-y);
+    border: var(--border-width) solid var(--border-color);
+    background: var(--background-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    transition-property: background-color, transform, border-color, color;
+    transition-duration: var(--ffe-transition-duration);
+    transition-timing-function: var(--ffe-ease);
+    cursor: pointer;
+
+    .ffe-icons,
+    &__label {
+        color: inherit;
+    }
+
+    .ffe-icons {
+        display: block;
+    }
+
+    &__label {
+        margin: 0;
+        grid-area: 2 e('/') 2 e('/') span 1 e('/') span 1;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            --background-color: var(--ffe-v-chip-background-color-hover);
+            --border-color: var(--ffe-v-chip-border-color-hover);
+            --text-color: var(--ffe-v-chip-text-color-hover);
+        }
+    }
+
+    &:focus-visible {
+        outline: 1px solid currentcolor;
+        outline-offset: 2px;
+    }
+
+    &:active {
+        --background-color: var(--ffe-v-chip-background-color-active);
+        --border-color: var(--ffe-v-chip-border-color-active);
+        --text-color: var(--ffe-v-chip-text-color-active);
+
+        transform: scale(0.97);
+    }
+
+    &--selected {
+        --background-color: var(--ffe-v-chip-background-color-selected);
+        --border-color: var(--ffe-v-chip-border-color-selected);
+        --text-color: var(--ffe-v-chip-text-color-selected);
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                --background-color: var(
+                    --ffe-v-chip-background-color-selected-hover
+                );
+                --border-color: var(--ffe-v-chip-border-color-selected-hover);
+                --text-color: var(--ffe-v-chip-text-color-selected-hover);
+            }
+        }
+    }
+}
+
+.ffe-chip--sm {
+    --text-offset: 12px;
+    --space-between: var(--ffe-spacing-2xs);
+}
+
+.ffe-chip--md {
+    --icon-offset: 12px;
+    --text-offset: var(--ffe-spacing-sm);
+    --offset-y: calc(var(--ffe-spacing-xs) - var(--border-width));
+    --space-between: var(--ffe-spacing-xs);
+}
+
+.ffe-chip--lg {
+    --icon-offset: var(--ffe-spacing-sm);
+    --text-offset: var(--ffe-spacing-md);
+    --offset-y: calc(12px - var(--border-width));
+    --space-between: var(--ffe-spacing-xs);
+}
+
+.ffe-chip--icon-right {
+    grid-template-columns: var(--text-offset) 1fr var(--space-between) auto var(
+            --icon-offset
+        );
+
+    .ffe-icons {
+        grid-area: 2 e('/') 4 e('/') span 1 e('/') span 1;
+    }
+
+    .ffe-chip__label {
+        grid-area: 2 e('/') 2 e('/') span 1 e('/') span 1;
+    }
+}
+
+.ffe-chip--icon-left {
+    grid-template-columns: var(--icon-offset) auto var(--space-between) 1fr var(
+            --text-offset
+        );
+
+    .ffe-icons {
+        grid-area: 2 e('/') 2 e('/') span 1 e('/') span 1;
+    }
+
+    .ffe-chip__label {
+        grid-area: 2 e('/') 4 e('/') span 1 e('/') span 1;
+    }
+}
