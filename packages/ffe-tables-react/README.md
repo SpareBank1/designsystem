@@ -12,6 +12,9 @@ npm install --save @sb1/ffe-tables-react
 
 Full documentation on table usage is available at https://design.sparebank1.no/komponenter/tabeller/.
 
+This package depends on `@sb1/ffe-collapse-react` and `@sb1/ffe-icons-react`.
+Make sure you import the less-files.
+
 ## Development
 
 To start a local development server, run the following from the designsystem root folder:

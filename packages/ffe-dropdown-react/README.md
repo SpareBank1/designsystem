@@ -12,6 +12,9 @@ npm install --save @sb1/ffe-dropdown-react
 
 Full documentation on dropdown usage is available at https://design.sparebank1.no/komponenter/dropdown/.
 
+This package depends on `@sb1/ffe-form-react`.
+Make sure you import the less-files from these packages.
+
 ## Development
 
 To start a local development server, run the following from the designsystem root folder:

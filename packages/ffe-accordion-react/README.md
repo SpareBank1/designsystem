@@ -10,7 +10,8 @@ npm install --save @sb1/ffe-accordion-react
 
 Full documentation on accordion usage is available at https://design.sparebank1.no/komponenter/accordion/.
 
-This component depends on `@sb1/ffe-collapse-react`. Make sure you import the less-files from that package.
+This package depends on `@sb1/ffe-collapse-react` and `@sb1/ffe-icons-react`.
+Make sure you import the less-files.
 
 ## Development
 

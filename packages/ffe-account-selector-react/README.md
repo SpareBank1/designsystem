@@ -12,6 +12,9 @@ npm install --save @sb1/ffe-account-selector-react
 
 Full documentation on account selector usage is available at https://design.sparebank1.no/komponenter/kontovelger/.
 
+This package depends on `@sb1/ffe-form-react`, `@sb1/ffe-icons-react`, `@sb1/ffe-spinner-react` and `@sb1/ffe-searchable-dropdown-react`.
+Make sure you import the less-files.
+
 For styling the account-selector use:
 
 ```css

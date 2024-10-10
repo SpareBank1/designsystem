@@ -10,6 +10,9 @@ npm install --save @sb1/ffe-buttons-react
 
 Full documentation on button usage is available at https://design.sparebank1.no/komponenter/knapper/.
 
+This package depends on `@sb1/ffe-icons-react`.
+Make sure you import the less-files.
+
 ## Development
 
 To start a local development server, run the following from the designsystem root folder:
