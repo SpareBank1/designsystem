@@ -8,7 +8,7 @@ npm install --save @sb1/ffe-messages-react
 
 ## Usage
 
-Full documentation on message box usage is available at https://design.sparebank1.no/komponenter/meldinger/#messagebox.
+Full documentation on message box usage is available at https://design.sparebank1.no/komponenter/meldinger.
 
 ## Development
 
