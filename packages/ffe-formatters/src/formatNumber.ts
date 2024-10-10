@@ -1,26 +1,23 @@
-import { numberFormat } from 'underscore.string';
-import { NON_BREAKING_SPACE } from './internal/unicode';
 import { parseNumber } from './internal/parseNumber';
+import { Locale } from './types';
 
 export const formatNumber = (
     number: number | string | null | undefined,
-    opts = {},
+    opts: {
+        locale: Locale;
+        decimals?: number;
+    },
 ) => {
-    const { decimals, thousandSeparator, decimalMark } = {
-        decimals: 0,
-        thousandSeparator: NON_BREAKING_SPACE,
-        decimalMark: ',',
-        ...opts,
-    };
+    const { decimals = 0, locale } = opts;
 
-    const toFormat = parseNumber(number);
+    const toFormat = parseNumber(number, locale);
+
     if (typeof toFormat !== 'number') {
         return number;
     }
-    return `${numberFormat(
-        toFormat,
-        decimals,
-        decimalMark,
-        thousandSeparator,
-    )}`;
+
+    return new Intl.NumberFormat(locale === 'en' ? 'en' : 'nb', {
+        maximumFractionDigits: decimals,
+        minimumFractionDigits: decimals,
+    }).format(toFormat);
 };

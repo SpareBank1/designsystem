@@ -1,5 +1,5 @@
 import { formatAccountNumber } from './formatAccountNumber';
-import { NON_BREAKING_SPACE } from './internal/unicode';
+import { NON_BREAKING_SPACE as nbsp } from './internal/unicode';
 
 describe('format account number', () => {
     test('returns input when account number is undefined', () => {
@@ -17,20 +17,18 @@ describe('format account number', () => {
     });
 
     test('Formats account number even when less than 11 digits', () => {
-        expect(formatAccountNumber('12345678')).toBe(
-            `1234${NON_BREAKING_SPACE}56${NON_BREAKING_SPACE}78`,
-        );
+        expect(formatAccountNumber('12345678')).toBe(`1234${nbsp}56${nbsp}78`);
     });
 
     test('formats account number correctly', () => {
         expect(formatAccountNumber('12345678901')).toBe(
-            `1234${NON_BREAKING_SPACE}56${NON_BREAKING_SPACE}78901`,
+            `1234${nbsp}56${nbsp}78901`,
         );
     });
 
     test('formats foreign account number correctly', () => {
         expect(formatAccountNumber('AB12345678901234')).toBe(
-            `AB12${NON_BREAKING_SPACE}3456${NON_BREAKING_SPACE}7890${NON_BREAKING_SPACE}1234`,
+            `AB12${nbsp}3456${nbsp}7890${nbsp}1234`,
         );
     });
 });

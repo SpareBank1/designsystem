@@ -2,34 +2,69 @@ import { parseNumber } from './parseNumber';
 
 describe('parseNumber', () => {
     test('noops on non-string arguments', () => {
-        expect(parseNumber(null)).toBe(null);
-        expect(parseNumber(undefined)).toBe(undefined);
-        expect(parseNumber('')).toBe('');
+        expect(parseNumber(null, 'nb')).toBe(null);
+        expect(parseNumber(undefined, 'nb')).toBe(null);
+        expect(parseNumber('', 'nb')).toBe(null);
     });
 
     test('parses regular numeric strings', () => {
-        expect(parseNumber('123')).toBe(123);
-        expect(parseNumber('0')).toBe(0);
-        expect(parseNumber('000123456')).toBe(123456);
-    });
-
-    test('parses negative numbers', () => {
-        expect(parseNumber('-1')).toBe(-1);
-        expect(parseNumber('-123456')).toBe(-123456);
+        expect(parseNumber('123', 'nb')).toBe(123);
+        expect(parseNumber('0', 'nb')).toBe(0);
+        expect(parseNumber('000123456', 'nb')).toBe(123456);
     });
 
     test('parses leading-zeroes strings as numbers', () => {
-        expect(parseNumber('000123456')).toBe(123456);
+        expect(parseNumber('000123456', 'nb')).toBe(123456);
     });
 
-    test('parses formatted numeric strings', () => {
-        expect(parseNumber('1 234 567')).toBe(1234567);
-        expect(parseNumber('-1 234 567')).toBe(-1234567);
-        expect(parseNumber('0,235')).toBe(0.235);
+    describe('locale nb', () => {
+        test.each([
+            ['1,00', 1],
+            ['12,00', 12],
+            ['123,00', 123],
+            ['1 234,00', 1234],
+            ['12 345,00', 12345],
+            ['123 456,00', 123456],
+            ['1 234 567,00', 1234567],
+            ['12 345 678,00', 12345678],
+            ['123 456 789,00', 123456789],
+        ])('.formatNumber(%i)', (number, expected) => {
+            expect(parseNumber(number, 'nb')).toBe(expected);
+            expect(parseNumber(`-${number}`, 'nb')).toBe(expected * -1);
+        });
     });
 
-    test('parses numeric strings with prefixes etc', () => {
-        expect(parseNumber('kr 1 234')).toBe(1234);
-        expect(parseNumber('1 tusenlapp og 234 kroner')).toBe(1234);
+    describe('locale nn', () => {
+        test.each([
+            ['1,00', 1],
+            ['12,00', 12],
+            ['123,00', 123],
+            ['1 234,00', 1234],
+            ['12 345,00', 12345],
+            ['123 456,00', 123456],
+            ['1 234 567,00', 1234567],
+            ['12 345 678,00', 12345678],
+            ['123 456 789,00', 123456789],
+        ])('.formatNumber(%i)', (number, expected) => {
+            expect(parseNumber(number, 'nn')).toBe(expected);
+            expect(parseNumber(`-${number}`, 'nn')).toBe(expected * -1);
+        });
+    });
+
+    describe('locale en', () => {
+        test.each([
+            ['1.00', 1],
+            ['12.00', 12],
+            ['123.00', 123],
+            ['1,234.00', 1234],
+            ['12,345.00', 12345],
+            ['123,456.00', 123456],
+            ['1,234,567.00', 1234567],
+            ['12,345,678.00', 12345678],
+            ['123,456,789.00', 123456789],
+        ])('.formatNumber(%i)', (number, expected) => {
+            expect(parseNumber(number, 'en')).toBe(expected);
+            expect(parseNumber(`-${number}`, 'en')).toBe(expected * -1);
+        });
     });
 });

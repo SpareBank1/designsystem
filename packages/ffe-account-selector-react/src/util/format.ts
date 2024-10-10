@@ -41,9 +41,7 @@ export function balanceWithCurrency(
     locale: Locale,
     currencyCode?: string,
 ) {
-    const formatOptions =
-        locale === 'en' ? { thousandSeparator: ',', decimalMark: '.' } : {};
-    const amount = formatNumber(balance, { decimals: 2, ...formatOptions });
+    const amount = formatNumber(balance, { decimals: 2, locale });
     const currencyAffix =
         currencyCode && currencyCode !== 'NOK'
             ? currencyCode
