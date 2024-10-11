@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.2.0...@sb1/ffe-cards@20.2.1) (2024-10-11)
+
+
+### Bug Fixes
+
+* **ffe-cards:** wrong margin bottom cards ([2d1f176](https://github.com/SpareBank1/designsystem/commit/2d1f176e1b2f64500e7a9787fa1fc6946543b576))
+
+
+
+
+
 # [20.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.1.6...@sb1/ffe-cards@20.2.0) (2024-09-16)
 
 
