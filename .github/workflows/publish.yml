@@ -58,16 +58,16 @@ jobs:
                   git push origin develop
                   git push --tags
 
-            - name: Build component-overview
+            - name: Build storybook
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: |
                   npm run build
-                  npm run ghpages
+                  npm run build-storybook
 
-            - name: Deploy component-overview as gh-pages
+            - name: Deploy storybook as gh-pages
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  folder: component-overview/build/
+                  folder: storybook-static
                   branch: gh-pages
                   token: ${{ secrets.GH_USER_PAT }}
