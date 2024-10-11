@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-chips",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Chips are compact elements that represent an input, attribute, or action.",
     "keywords": [
         "ffe"
