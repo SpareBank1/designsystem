@@ -26,4 +26,4 @@ jobs:
           target-folder: storybook
           repository-name: sparebank1utvikling/design.sparebank1.no
           branch: develop
-          token: ${{ secrets.GH_PAGES_DS_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
