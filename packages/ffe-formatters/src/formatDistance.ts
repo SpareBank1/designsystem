@@ -10,10 +10,8 @@ export const formatDistance = (
     distance: string | number,
     opts: Opts = { unit: 'km' },
 ) => {
-    const toFormat = parseNumber(distance);
-    if (toFormat !== 0 && !toFormat) {
-        return '';
-    }
-
-    return `${formatNumber(toFormat)}${NON_BREAKING_SPACE}${opts.unit}`;
+    const toFormat = parseNumber(distance, 'nb');
+    return toFormat === null
+        ? ''
+        : `${formatNumber(toFormat, { locale: 'nb' })}${NON_BREAKING_SPACE}${opts.unit}`;
 };
