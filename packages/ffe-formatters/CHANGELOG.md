@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.2.8...@sb1/ffe-formatters@5.0.0) (2024-10-11)
+
+
+### Code Refactoring
+
+* **ffe-formatters:** input to formatDate not validet ([8316286](https://github.com/SpareBank1/designsystem/commit/83162869c6bed8860b2830bb7b1a4ee17759c43e))
+
+
+### Features
+
+* **ffe-formatters:** support formating numbers in different locales ([5d2e59a](https://github.com/SpareBank1/designsystem/commit/5d2e59a43aef5d51e198da69adfddcb09720f984))
+
+
+### BREAKING CHANGES
+
+* **ffe-formatters:** Typescript users are not affected by
+this change but for js users the input to formateDate are
+not validated any more.
+* **ffe-formatters:** formatCurrency, formatDistance and formatNumber
+requires locale.
+
+
+
+
+
 ## [4.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.2.7...@sb1/ffe-formatters@4.2.8) (2024-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-formatters

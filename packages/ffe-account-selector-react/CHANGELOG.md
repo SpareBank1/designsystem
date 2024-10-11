@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [28.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@28.0.24...@sb1/ffe-account-selector-react@28.1.0) (2024-10-11)
+
+
+### Features
+
+* **ffe-account-selector-react:** use locale in formatAmount ([6a2f6f5](https://github.com/SpareBank1/designsystem/commit/6a2f6f52ea15c5963e21995583d481729bffc457))
+
+
+
+
+
 ## [28.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@28.0.23...@sb1/ffe-account-selector-react@28.0.24) (2024-10-01)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
