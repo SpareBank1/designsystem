@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.4.45](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.44...@sb1/ffe-component-index@8.4.45) (2024-10-14)
+
+
+### Bug Fixes
+
+* **component-overview:** add locale to examples ([843d83d](https://github.com/SpareBank1/designsystem/commit/843d83de33cdb8cf745712f2408217ae95f3d07c))
+
+
+
+
+
 ## [8.4.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.43...@sb1/ffe-component-index@8.4.44) (2024-10-14)
 
 
