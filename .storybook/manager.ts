@@ -8,7 +8,7 @@ const theme = create({
 
     brandTitle: 'SpareBank 1',
     brandUrl: 'https://design.sparebank1.no',
-    brandImage: '/logo-sb1.svg',
+    brandImage: './logo-sb1.svg',
     brandTarget: '_self',
 });
 
