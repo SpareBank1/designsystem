@@ -34,6 +34,6 @@ const config: StorybookConfig = {
     },
     staticDirs: ['./public'],
     managerHead: head =>
-        `${head}<link rel="icon" type="image/x-icon" href="/favicon.ico">`,
+        `${head}<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">`,
 };
 export default config;
