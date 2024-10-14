@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.4.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.43...@sb1/ffe-component-index@8.4.44) (2024-10-14)
+
+
+### Bug Fixes
+
+* **component-overview:** added missing dep to chips ([f612be4](https://github.com/SpareBank1/designsystem/commit/f612be4f811244e1d3f6cbecc7844bf4b78688fb))
+
+
+
+
+
 ## [8.4.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.42...@sb1/ffe-component-index@8.4.43) (2024-10-14)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
