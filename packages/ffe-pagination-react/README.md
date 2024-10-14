@@ -1,18 +1,16 @@
-# @sb1/ffe-form-react
-
-React module for using and creating FFE form elements.
+# @sb1/ffe-pagination-react
 
 ## Install
 
 ```
-npm install --save @sb1/ffe-form-react
+npm install --save @sb1/ffe-modals-react
 ```
 
 ## Usage
 
-Full documentation on form usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/.
+Full documentation on lists usage is available at https://design.sparebank1.no/komponenter/paginering/.
 
-This package depends on `@sb1/ffe-icons-react`, `@sb1/ffe-collapse-react` and `@sb1/ffe-form-react`.
+This package depends on `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` and `@sb1/ffe-icons-react`.
 Make sure you import the less-files.
 
 ## Development

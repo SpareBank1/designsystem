@@ -14,6 +14,9 @@ npm install --save @sb1/ffe-file-upload-react
 
 Full documentation on file upload usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#fileupload.
 
+This package depends on `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` and `@sb1/ffe-form-react`.
+Make sure you import the less-files.
+
 ## Development
 
 To start a local development server, run the following from the designsystem root folder:
