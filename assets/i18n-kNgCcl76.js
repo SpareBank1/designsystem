@@ -1,0 +1,1 @@
+const n={COUNTRY_CODE:"Country code",PHONE_NUMBER:"Phone number",MOBILE_NUMBER:"Mobile number",ON:"On",OFF:"Off"},O={COUNTRY_CODE:"Landskode",PHONE_NUMBER:"Telefonnummer",MOBILE_NUMBER:"Mobilnummer",ON:"På",OFF:"Av"},e={COUNTRY_CODE:"Landskode",PHONE_NUMBER:"Telefonnummer",MOBILE_NUMBER:"Mobilnummer",ON:"På",OFF:"Av"},o={nb:e,nn:O,en:n};export{o as i};

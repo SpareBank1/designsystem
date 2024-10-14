@@ -1,0 +1,1 @@
+import{R as m}from"./index-RYns6xqu.js";import{c as s}from"./index-Dejnh_W_.js";const r=({className:e,...t})=>m.createElement("li",{className:s("ffe-numbered-list__item",e),...t});r.__docgenInfo={description:"",methods:[],displayName:"NumberedListItem"};export{r as N};

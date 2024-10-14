@@ -1,0 +1,10 @@
+import{R as e}from"./index-RYns6xqu.js";import{B as u}from"./BaseButton-zBeW6ZG8.js";import{f as p}from"./fixedForwardRef-BDE7qUSg.js";import{I as l}from"./Icon-Dor7S2yd.js";import"./index-Dejnh_W_.js";function f(t,o){const a={...t,ref:o},{icon:d,...m}=a;return e.createElement(u,{leftIcon:e.createElement("div",{"aria-hidden":"true"},d),...m,ref:a.ref,buttonType:"task"})}const r=p(f);r.__docgenInfo={description:"",methods:[],displayName:"TaskButton",props:{icon:{required:!0,tsType:{name:"ReactElement"},description:"icon element shown to the left of the label"}}};const g="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24'%20viewBox='0%20-960%20960%20960'%20width='24'%3e%3cpath%20d='M450.001-450.001h-200q-12.75%200-21.375-8.628-8.625-8.629-8.625-21.384%200-12.756%208.625-21.371%208.625-8.615%2021.375-8.615h200v-200q0-12.75%208.628-21.375%208.629-8.625%2021.384-8.625%2012.756%200%2021.371%208.625%208.615%208.625%208.615%2021.375v200h200q12.75%200%2021.375%208.628%208.625%208.629%208.625%2021.384%200%2012.756-8.625%2021.371-8.625%208.615-21.375%208.615h-200v200q0%2012.75-8.628%2021.375-8.629%208.625-21.384%208.625-12.756%200-21.371-8.625-8.615-8.625-8.615-21.375v-200Z'/%3e%3c/svg%3e",h=t=>e.createElement("a",{...t},"Custom ",t.children),T={title:"components/buttons/TaskButton",component:r,tags:["autodocs"],argTypes:{as:{options:["a","button","custom"],mapping:{"":"button",a:"a",button:"button",custom:h}}}},n={args:{as:"button"},render:function(o){return e.createElement(r,{icon:e.createElement(l,{fileUrl:g,...o})},"Legg til bruker")}};var s,c,i;n.parameters={...n.parameters,docs:{...(s=n.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  args: {
+    as: 'button'
+  },
+  render: function Render(args) {
+    return <TaskButton icon={<Icon fileUrl={addIcon} {...args} />}>
+                Legg til bruker
+            </TaskButton>;
+  }
+}`,...(i=(c=n.parameters)==null?void 0:c.docs)==null?void 0:i.source}}};const R=["Standard"];export{n as Standard,R as __namedExportsOrder,T as default};

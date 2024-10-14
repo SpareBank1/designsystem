@@ -1,0 +1,1 @@
+import{R as e}from"./index-RYns6xqu.js";import{c as s}from"./index-Dejnh_W_.js";const f=e.forwardRef(({className:t,selected:a,...o},r)=>e.createElement("button",{type:"button",role:"tab","aria-selected":a?"true":"false",ref:r,tabIndex:a?0:-1,className:s("ffe-tab",{"ffe-tab--selected":a},t),...o}));f.__docgenInfo={description:"",methods:[],displayName:"Tab"};export{f as T};

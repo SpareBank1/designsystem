@@ -1,0 +1,1 @@
+import{R as e}from"./index-RYns6xqu.js";import{c as r}from"./index-Dejnh_W_.js";const s=e.forwardRef(({className:t,inline:i,textRightAlign:n,...f},a)=>e.createElement("input",{className:r("ffe-input-field",{"ffe-input-field--inline":i},{"ffe-input-field--text-right-align":n},t),ref:a,...f}));s.__docgenInfo={description:"",methods:[],displayName:"Input"};export{s as I};
