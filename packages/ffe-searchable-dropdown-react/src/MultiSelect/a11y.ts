@@ -54,9 +54,9 @@ const updateA11yStatus = debounce(getA11yMessage => {
 }, 200);
 
 const getItemSelectedMessage = ({
-                                    selectedItemValues,
-                                    locale,
-                                }: {
+    selectedItemValues,
+    locale,
+}: {
     selectedItemValues: string[];
     locale: Locale;
 }) => {
@@ -67,10 +67,10 @@ const getItemSelectedMessage = ({
 };
 
 const getStateChangeMessage = ({
-                                   isExpanded,
-                                   resultCount,
-                                   locale,
-                               }: {
+    isExpanded,
+    resultCount,
+    locale,
+}: {
     isExpanded: boolean;
     resultCount: number;
     locale: Locale;
@@ -112,14 +112,14 @@ function stringArraysEqual(
 export const useSetAllyMessageItemSelection = <
     Item extends Record<string, any>,
 >({
-      hasFocus,
-      isExpanded,
-      isLoading,
-      locale,
-      resultCount,
-      dropdownAttributes,
-      selectedItems,
-  }: {
+    hasFocus,
+    isExpanded,
+    isLoading,
+    locale,
+    resultCount,
+    dropdownAttributes,
+    selectedItems,
+}: {
     hasFocus: boolean;
     isExpanded: boolean;
     isLoading: boolean;
@@ -180,4 +180,3 @@ export const useSetAllyMessageItemSelection = <
         isLoading,
     ]);
 };
-

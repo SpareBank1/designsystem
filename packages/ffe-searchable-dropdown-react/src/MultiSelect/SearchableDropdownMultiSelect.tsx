@@ -320,10 +320,12 @@ function SearchableDropdownMultiSelectWithForwardRef<
             onMouseDown={addFlagOnEventHandler}
             onFocus={addFlagOnEventHandler}
         >
-            <div className={classNames(
-                className,
-                'ffe-searchable-dropdown-multiselect',
-            )}>
+            <div
+                className={classNames(
+                    className,
+                    'ffe-searchable-dropdown-multiselect',
+                )}
+            >
                 <div className="ffe-searchable-dropdown-multiselect__input-container">
                     {state.selectedItems?.map((item, index) => {
                         return (
@@ -386,8 +388,8 @@ function SearchableDropdownMultiSelectWithForwardRef<
                         aria-activedescendant={
                             state.highlightedIndex >= 0
                                 ? (refs[
-                                    state.highlightedIndex
-                                    ]?.current?.getAttribute('id') ?? undefined)
+                                      state.highlightedIndex
+                                  ]?.current?.getAttribute('id') ?? undefined)
                                 : undefined
                         }
                         aria-invalid={rest['aria-invalid'] ?? ariaInvalid}
@@ -405,7 +407,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                         'ffe-searchable-dropdown-multiselect__button',
                         {
                             'ffe-searchable-dropdown-multiselect__button--flip':
-                            state.isExpanded,
+                                state.isExpanded,
                         },
                     )}
                     onClick={() => {
