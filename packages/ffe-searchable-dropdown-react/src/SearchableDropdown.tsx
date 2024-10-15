@@ -183,8 +183,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         isLoading,
         locale,
         resultCount: state.listToRender.length,
-        searchAttributes,
-        selectedItem: state.selectedItem,
+        selectedValue: selectedItem?.[searchAttributes[0]],
     });
 
     useLayoutEffect(() => {
