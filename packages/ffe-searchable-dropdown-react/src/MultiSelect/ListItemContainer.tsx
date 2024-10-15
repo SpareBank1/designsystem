@@ -44,7 +44,6 @@ function ListItemContainerWithForwardRef<Item extends Record<string, any>>(
                     onClick(e);
                 }
             }}
-            className="ffe-searchable-dropdown-multiselect__list-item-container"
         >
             {children({
                 item,

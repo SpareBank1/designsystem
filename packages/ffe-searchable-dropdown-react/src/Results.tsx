@@ -14,16 +14,24 @@ interface ResultProps<Item extends Record<string, any>> {
     noMatchMessageId: string;
     ListItemBodyElement: React.ComponentType<{
         item: Item;
-        isHighlighted: boolean;
         dropdownAttributes: (keyof Item)[];
+        isHighlighted: boolean;
         locale: Locale;
+        isSelected: boolean;
     }>;
-    selectedItem?: Item | null;
+    selectedItems?: Item[];
     highlightedIndex?: number;
     refs: React.Ref<HTMLDivElement>[];
     dropdownAttributes: (keyof Item)[];
     locale: Locale;
     onChange: (item: Item) => void;
+}
+
+function isItemSelected<Item extends Record<string, any>>(
+    item: Item,
+    selectedItems: Item[],
+): boolean {
+    return selectedItems.some(selected => isEqual(item, selected));
 }
 
 export function Results<Item extends Record<string, any>>({
@@ -36,7 +44,7 @@ export function Results<Item extends Record<string, any>>({
     dropdownAttributes,
     locale,
     onChange,
-    selectedItem,
+    selectedItems,
 }: ResultProps<Item>) {
     return (
         <Scrollbars autoHeight={true} autoHeightMax={335}>
@@ -51,7 +59,7 @@ export function Results<Item extends Record<string, any>>({
             {listToRender.map((item, index) => {
                 return (
                     <ListItemContainer
-                        isSelected={isEqual(item, selectedItem)}
+                        isSelected={isItemSelected(item, selectedItems ?? [])}
                         key={Object.values(item).join('-')}
                         ref={refs[index]}
                         isHighlighted={highlightedIndex === index}

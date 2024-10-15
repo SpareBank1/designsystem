@@ -1,7 +1,7 @@
 export {
     SearchableDropdown,
     SearchableDropdownProps,
-} from './SearchableDropdown';
+} from './SingleSelect/SearchableDropdown';
 export {
     SearchableDropdownMultiSelect,
     SearchableDropdownMultiSelectProps,

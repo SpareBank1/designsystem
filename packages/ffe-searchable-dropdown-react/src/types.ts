@@ -15,7 +15,8 @@ export type StateChange =
     | 'ItemSelectedProgrammatically'
     | 'DropdownListPropUpdated'
     | 'ItemOnClick'
-    | 'TabPressed';
+    | 'TabPressed'
+    | 'RemoveItem';
 
 export type SearchMatcher<Item extends Record<string, any>> = (
     inputValue: string,

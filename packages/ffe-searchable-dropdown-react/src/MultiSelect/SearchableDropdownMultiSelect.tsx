@@ -21,14 +21,14 @@ import {
     getNewHighlightedIndexDown,
     getNewHighlightedIndexUp,
 } from '../getNewHighlightedIndex';
-import { Results } from './Results';
+import { Results } from '../Results';
 import { Spinner } from '@sb1/ffe-spinner-react';
 import { Locale, SearchMatcher } from '../types';
 import { mergeRefs } from '../mergeRefs';
 import { fixedForwardRef } from '../fixedForwardRef';
 import { ChipRemovable } from '@sb1/ffe-chips-react';
 import { getActionType } from './getNewList';
-import { useSetAllyMessageItemSelection } from './a11y';
+import { useSetAllyMessageItemSelection } from '../a11y';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
@@ -63,6 +63,7 @@ export interface SearchableDropdownMultiSelectProps<
         item: Item;
         dropdownAttributes: (keyof Item)[];
         isHighlighted: boolean;
+        locale: Locale;
         isSelected: boolean;
     }>;
     /** Element to be shown below dropDownList */
@@ -181,8 +182,10 @@ function SearchableDropdownMultiSelectWithForwardRef<
         isLoading,
         locale,
         resultCount: state.listToRender.length,
-        dropdownAttributes,
-        selectedItems: state.selectedItems,
+        selectedValue:
+            state.selectedItems[state.selectedItems.length - 1]?.[
+                searchAttributes[0]
+            ],
     });
 
     useLayoutEffect(() => {
@@ -319,153 +322,147 @@ function SearchableDropdownMultiSelectWithForwardRef<
             ref={containerRef}
             onMouseDown={addFlagOnEventHandler}
             onFocus={addFlagOnEventHandler}
+            className={classNames(
+                className,
+                'ffe-searchable-dropdown',
+                'ffe-searchable-dropdown--multi',
+            )}
         >
-            <div
-                className={classNames(
-                    className,
-                    'ffe-searchable-dropdown-multiselect',
-                )}
+            <div className="ffe-searchable-dropdown__input">
+                {state.selectedItems?.map((item, index) => {
+                    return (
+                        <ChipRemovable
+                            as="button"
+                            size="sm"
+                            key={index}
+                            aria-label={`${item[dropdownAttributes[0]]}, fjern valg`}
+                            onClick={() => {
+                                dispatch({
+                                    type: 'RemoveItem',
+                                    payload: {
+                                        item: item,
+                                    },
+                                });
+                                onChange?.(item, 'removed');
+                            }}
+                        >
+                            {item[dropdownAttributes[0]]}
+                        </ChipRemovable>
+                    );
+                })}
+                <input
+                    {...inputProps}
+                    ref={mergeRefs([inputRef, ref])}
+                    id={id}
+                    aria-labelledby={labelledById}
+                    onClick={handleInputClick}
+                    onChange={e => {
+                        inputProps?.onChange?.(e);
+                        dispatch({
+                            type: 'InputChange',
+                            payload: { inputValue: e.target.value },
+                        });
+                    }}
+                    onFocus={() => setHasFocus(true)}
+                    onBlur={handleInputBlur}
+                    aria-describedby={
+                        [
+                            inputProps?.['aria-describedby'],
+                            state.noMatch && noMatchMessageId,
+                        ]
+                            .filter(Boolean)
+                            .join(' ') || undefined
+                    }
+                    value={formatter(state.inputValue)}
+                    type="text"
+                    role="combobox"
+                    autoComplete="off"
+                    aria-controls={
+                        listBoxRef.current?.getAttribute('id') ?? undefined
+                    }
+                    aria-expanded={
+                        state.isExpanded && !!state.listToRender.length
+                    }
+                    aria-autocomplete="list"
+                    aria-haspopup="listbox"
+                    aria-activedescendant={
+                        state.highlightedIndex >= 0
+                            ? (refs[
+                                  state.highlightedIndex
+                              ]?.current?.getAttribute('id') ?? undefined)
+                            : undefined
+                    }
+                    aria-invalid={rest['aria-invalid'] ?? ariaInvalid}
+                />
+            </div>
+            <button
+                type="button"
+                ref={toggleButtonRef}
+                aria-label={
+                    state.isExpanded
+                        ? getButtonLabelClose(locale)
+                        : getButtonLabelOpen(locale)
+                }
+                className={classNames('ffe-searchable-dropdown__button', {
+                    'ffe-searchable-dropdown__button--flip': state.isExpanded,
+                })}
+                onClick={() => {
+                    dispatch({
+                        type: 'ToggleButtonPressed',
+                    });
+                }}
             >
-                <div className="ffe-searchable-dropdown-multiselect__input-container">
-                    {state.selectedItems?.map((item, index) => {
-                        return (
-                            <ChipRemovable
-                                as="button"
-                                size="sm"
-                                key={index}
-                                aria-label={`${item[dropdownAttributes[0]]}, fjern valg`}
-                                onClick={() => {
+                {isLoading ? (
+                    <Spinner />
+                ) : (
+                    <Icon
+                        fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzczLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDgtMTEuODQ2LTcuOTIzTDI3NC45MjQtNTYzLjUzOXEtOC4zMDgtOC4zMDctOC41LTIwLjg4NC0uMTkzLTEyLjU3NyA4LjUtMjEuMjY5IDguNjkyLTguNjkyIDIxLjA3Ni04LjY5MnQyMS4wNzYgOC42OTJMNDgwLTQ0Mi43NjhsMTYyLjkyNC0xNjIuOTI0cTguMzA3LTguMzA3IDIwLjg4NC04LjUgMTIuNTc2LS4xOTIgMjEuMjY4IDguNSA4LjY5MyA4LjY5MiA4LjY5MyAyMS4wNzcgMCAxMi4zODQtOC42OTMgMjEuMDc2TDUwNS4zMDctMzgzLjc3cS01LjYxNSA1LjYxNS0xMS44NDYgNy45MjMtNi4yMyAyLjMwOC0xMy40NjEgMi4zMDhaIi8+PC9zdmc+"
+                        size="md"
+                        className="ffe-searchable-dropdown__button-icon"
+                    />
+                )}
+            </button>
+            <div className="ffe-searchable-dropdown__list-container">
+                <div
+                    tabIndex={-1}
+                    className={classNames('ffe-searchable-dropdown__list', {
+                        'ffe-searchable-dropdown__list--open': state.isExpanded,
+                    })}
+                >
+                    <div ref={listBoxRef} id={`${id}-listbox`} role="listbox">
+                        {state.isExpanded && (
+                            <Results
+                                listToRender={state.listToRender}
+                                ListItemBodyElement={MultiselectResultList}
+                                highlightedIndex={state.highlightedIndex}
+                                dropdownAttributes={dropdownAttributes}
+                                locale={locale}
+                                refs={refs}
+                                onChange={item => {
+                                    const actionType = getActionType(
+                                        state.selectedItems,
+                                        item,
+                                    );
                                     dispatch({
                                         type: 'ItemOnClick',
                                         payload: {
                                             item: item,
-                                            actionType: 'removed',
+                                            actionType: actionType,
                                         },
                                     });
-                                    onChange?.(item, 'removed');
+                                    onChange?.(item, actionType);
                                 }}
-                            >
-                                {item[dropdownAttributes[0]]}
-                            </ChipRemovable>
-                        );
-                    })}
-                    <input
-                        {...inputProps}
-                        ref={mergeRefs([inputRef, ref])}
-                        id={id}
-                        aria-labelledby={labelledById}
-                        className="ffe-searchable-dropdown-multiselect__input-field"
-                        onClick={handleInputClick}
-                        onChange={e => {
-                            inputProps?.onChange?.(e);
-                            dispatch({
-                                type: 'InputChange',
-                                payload: { inputValue: e.target.value },
-                            });
-                        }}
-                        onFocus={() => setHasFocus(true)}
-                        onBlur={handleInputBlur}
-                        aria-describedby={
-                            [
-                                inputProps?.['aria-describedby'],
-                                state.noMatch && noMatchMessageId,
-                            ]
-                                .filter(Boolean)
-                                .join(' ') || undefined
-                        }
-                        value={formatter(state.inputValue)}
-                        type="text"
-                        role="combobox"
-                        autoComplete="off"
-                        aria-controls={
-                            listBoxRef.current?.getAttribute('id') ?? undefined
-                        }
-                        aria-expanded={
-                            state.isExpanded && !!state.listToRender.length
-                        }
-                        aria-autocomplete="list"
-                        aria-haspopup="listbox"
-                        aria-activedescendant={
-                            state.highlightedIndex >= 0
-                                ? (refs[
-                                      state.highlightedIndex
-                                  ]?.current?.getAttribute('id') ?? undefined)
-                                : undefined
-                        }
-                        aria-invalid={rest['aria-invalid'] ?? ariaInvalid}
-                    />
-                </div>
-                <button
-                    type="button"
-                    ref={toggleButtonRef}
-                    aria-label={
-                        state.isExpanded
-                            ? getButtonLabelClose(locale)
-                            : getButtonLabelOpen(locale)
-                    }
-                    className={classNames(
-                        'ffe-searchable-dropdown-multiselect__button',
-                        {
-                            'ffe-searchable-dropdown-multiselect__button--flip':
-                                state.isExpanded,
-                        },
-                    )}
-                    onClick={() => {
-                        dispatch({
-                            type: 'ToggleButtonPressed',
-                        });
-                    }}
-                >
-                    {isLoading ? (
-                        <Spinner />
-                    ) : (
-                        <Icon
-                            fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzczLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDgtMTEuODQ2LTcuOTIzTDI3NC45MjQtNTYzLjUzOXEtOC4zMDgtOC4zMDctOC41LTIwLjg4NC0uMTkzLTEyLjU3NyA4LjUtMjEuMjY5IDguNjkyLTguNjkyIDIxLjA3Ni04LjY5MnQyMS4wNzYgOC42OTJMNDgwLTQ0Mi43NjhsMTYyLjkyNC0xNjIuOTI0cTguMzA3LTguMzA3IDIwLjg4NC04LjUgMTIuNTc2LS4xOTIgMjEuMjY4IDguNSA4LjY5MyA4LjY5MiA4LjY5MyAyMS4wNzcgMCAxMi4zODQtOC42OTMgMjEuMDc2TDUwNS4zMDctMzgzLjc3cS01LjYxNSA1LjYxNS0xMS44NDYgNy45MjMtNi4yMyAyLjMwOC0xMy40NjEgMi4zMDhaIi8+PC9zdmc+"
-                            size="md"
-                            className="ffe-searchable-dropdown__button-icon"
-                        />
-                    )}
-                </button>
-            </div>
-            <div
-                tabIndex={-1}
-                className={classNames('ffe-searchable-dropdown__list', {
-                    'ffe-searchable-dropdown__list--open': state.isExpanded,
-                })}
-            >
-                <div ref={listBoxRef} id={`${id}-listbox`} role="listbox">
-                    {state.isExpanded && (
-                        <Results
-                            listToRender={state.listToRender}
-                            ListItemBodyElement={MultiselectResultList}
-                            highlightedIndex={state.highlightedIndex}
-                            dropdownAttributes={dropdownAttributes}
-                            locale={locale}
-                            refs={refs}
-                            onChange={item => {
-                                const actionType = getActionType(
-                                    state.selectedItems,
-                                    item,
-                                );
-                                dispatch({
-                                    type: 'ItemOnClick',
-                                    payload: {
-                                        item: item,
-                                        actionType: actionType,
-                                    },
-                                });
-                                onChange?.(item, actionType);
-                            }}
-                            noMatch={state.noMatch ? noMatch : undefined}
-                            noMatchMessageId={noMatchMessageId}
-                            selectedItem={state.selectedItems}
-                        />
-                    )}
-                    {postListElement && (
-                        <div className="ffe-searchable-dropdown-multiselect__list--post-list-element">
-                            {postListElement}
-                        </div>
-                    )}
+                                noMatch={state.noMatch ? noMatch : undefined}
+                                noMatchMessageId={noMatchMessageId}
+                                selectedItems={state.selectedItems}
+                            />
+                        )}
+                        {postListElement && (
+                            <div className="ffe-searchable-dropdown__list--post-list-element">
+                                {postListElement}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

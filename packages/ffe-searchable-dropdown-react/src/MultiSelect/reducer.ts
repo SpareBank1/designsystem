@@ -64,6 +64,20 @@ export const createReducer =
                     noMatch,
                 };
             }
+            case 'RemoveItem': {
+                if (action.payload?.item) {
+                    return {
+                        ...state,
+                        highlightedIndex: -1,
+                        selectedItems: getNewList(
+                            state.selectedItems,
+                            action.payload.item,
+                            'removed',
+                        ),
+                        inputValue: '',
+                    };
+                }
+            }
             case 'InputChange': {
                 const { noMatch, listToRender } = getListToRender({
                     inputValue: action.payload?.inputValue ?? '',

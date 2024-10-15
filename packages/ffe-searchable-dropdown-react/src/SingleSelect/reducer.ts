@@ -1,11 +1,11 @@
-import { getListToRender } from './getListToRender';
-import { StateChange, SearchMatcher } from './types';
+import { getListToRender } from '../getListToRender';
+import { StateChange, SearchMatcher } from '../types';
 
 type Action<Item extends Record<string, any>> = {
     type: StateChange;
     payload?: {
         inputValue?: string;
-        selectedItem?: Item | null | undefined;
+        selectedItem?: Item;
         highlightedIndex?: number;
     };
 };
@@ -14,7 +14,7 @@ type State<Item extends Record<string, any>> = {
     noMatch: boolean;
     isExpanded: boolean;
     highlightedIndex: number;
-    selectedItem: Item | null | undefined;
+    selectedItem?: Item;
     inputValue: string;
     listToRender: Item[];
     noMatchDropdownList?: Item[] | undefined;
@@ -146,7 +146,7 @@ export const createReducer =
 
                 if (shouldEmptySelectedItem) {
                     onChange?.(null);
-                    selectedItem = null;
+                    selectedItem = undefined;
                 } else if (shouldAutomaticallySetSelectedItem) {
                     onChange?.(state.listToRender[0]);
                     selectedItem = state.listToRender[0];
