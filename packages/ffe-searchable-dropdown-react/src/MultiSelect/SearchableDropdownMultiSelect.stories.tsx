@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { SearchableDropdownMultiSelect } from './SearchableDropdownMultiSelect';
 import type { StoryObj, Meta } from '@storybook/react';
 import { InputGroup } from '@sb1/ffe-form-react';
-//import { SmallText } from '@sb1/ffe-core-react';
 import isEqual from 'lodash.isequal';
 
 const fruits = [
