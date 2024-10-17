@@ -1,6 +1,6 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import { ListItemContainer } from './ListItemContainer';
+import { Option } from './Option';
 import { NoMatch } from './NoMatch';
 import { Locale } from './types';
 import isEqual from 'lodash.isequal';
@@ -12,13 +12,20 @@ interface ResultProps<Item extends Record<string, any>> {
     };
     listToRender: Item[];
     noMatchMessageId: string;
-    ListItemBodyElement: React.ComponentType<{
-        item: Item;
-        dropdownAttributes: (keyof Item)[];
-        isHighlighted: boolean;
-        locale: Locale;
-        isSelected: boolean;
-    }>;
+    OptionBody:
+        | React.ComponentType<{
+              item: Item;
+              dropdownAttributes: (keyof Item)[];
+              isHighlighted: boolean;
+              locale: Locale;
+          }>
+        | React.ComponentType<{
+              item: Item;
+              dropdownAttributes: (keyof Item)[];
+              isHighlighted: boolean;
+              locale: Locale;
+              isSelected: boolean;
+          }>;
     selectedItems?: Item[];
     highlightedIndex?: number;
     refs: React.Ref<HTMLDivElement>[];
@@ -38,7 +45,7 @@ export function Results<Item extends Record<string, any>>({
     noMatch,
     listToRender,
     noMatchMessageId,
-    ListItemBodyElement,
+    OptionBody,
     refs,
     highlightedIndex,
     dropdownAttributes,
@@ -58,7 +65,7 @@ export function Results<Item extends Record<string, any>>({
             )}
             {listToRender.map((item, index) => {
                 return (
-                    <ListItemContainer
+                    <Option
                         isSelected={isItemSelected(item, selectedItems ?? [])}
                         key={Object.values(item).join('-')}
                         ref={refs[index]}
@@ -69,13 +76,13 @@ export function Results<Item extends Record<string, any>>({
                         item={item}
                     >
                         {props => (
-                            <ListItemBodyElement
+                            <OptionBody
                                 {...props}
                                 locale={locale}
                                 dropdownAttributes={dropdownAttributes}
                             />
                         )}
-                    </ListItemContainer>
+                    </Option>
                 );
             })}
         </Scrollbars>

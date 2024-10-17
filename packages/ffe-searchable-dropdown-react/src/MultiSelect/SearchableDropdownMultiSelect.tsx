@@ -1,7 +1,7 @@
 import React, {
     AriaAttributes,
-    createRef,
     ForwardedRef,
+    useCallback,
     useEffect,
     useId,
     useLayoutEffect,
@@ -10,10 +10,7 @@ import React, {
     useState,
 } from 'react';
 import classNames from 'classnames';
-import { Icon } from '@sb1/ffe-icons-react';
-
-import { MultiselectOption } from './MultiselectOption';
-import { getButtonLabelClose, getButtonLabelOpen } from '../translations';
+import { MultiselectOptionBody } from './MultiselectOptionBody';
 import { createReducer } from './reducer';
 import { getListToRender } from '../getListToRender';
 import { scrollIntoView } from '../scrollIntoView';
@@ -22,13 +19,18 @@ import {
     getNewHighlightedIndexUp,
 } from '../getNewHighlightedIndex';
 import { Results } from '../Results';
-import { Spinner } from '@sb1/ffe-spinner-react';
 import { Locale, SearchMatcher } from '../types';
 import { mergeRefs } from '../mergeRefs';
 import { fixedForwardRef } from '../fixedForwardRef';
 import { ChipRemovable } from '@sb1/ffe-chips-react';
 import { getActionType } from './getNewList';
 import { useSetAllyMessageItemSelection } from '../a11y';
+import { addFlagOnEventHandler } from '../addFlagOnEventHandler';
+import { useHandleContainerFocus } from '../useHandleContainerFocus';
+import { useIsExpandedCallbacks } from '../useIsExpandedCallbacks';
+import { useRefs } from '../useRefs';
+import { ToggleButton } from '../ToggleButton';
+import { ListBox } from '../ListBox';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
@@ -59,7 +61,7 @@ export interface SearchableDropdownMultiSelectProps<
     /** Called when a value is selected */
     onChange: (item: Item, actionType: 'selected' | 'removed') => void;
     /** Custom element to use for each item in dropDownList */
-    listElementBody?: React.ComponentType<{
+    optionBody?: React.ComponentType<{
         item: Item;
         dropdownAttributes: (keyof Item)[];
         isHighlighted: boolean;
@@ -110,7 +112,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
         maxRenderedDropdownElements = Number.MAX_SAFE_INTEGER,
         onChange,
         inputProps,
-        listElementBody: CustomListItemBody,
+        optionBody: CustomOptionBody,
         postListElement,
         noMatch,
         locale = 'nb',
@@ -154,13 +156,13 @@ function SearchableDropdownMultiSelectWithForwardRef<
             };
         },
     );
-    const [refs, setRefs] = useState<React.RefObject<HTMLDivElement>[]>([]);
+    const refs = useRefs({ listToRender: state.listToRender });
     const [hasFocus, setHasFocus] = useState(false);
     const inputRef = useRef<HTMLInputElement>(null);
     const toggleButtonRef = useRef<HTMLButtonElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const ListItemBodyElement = CustomListItemBody || MultiselectOption;
+    const OptionBody = CustomOptionBody || MultiselectOptionBody;
     const listBoxRef = useRef<HTMLDivElement>(null);
     const noMatchMessageId = useId();
     const shouldFocusToggleButton = useRef(false);
@@ -189,14 +191,6 @@ function SearchableDropdownMultiSelectWithForwardRef<
     });
 
     useLayoutEffect(() => {
-        setRefs(prevRefs =>
-            Array(state.listToRender.length)
-                .fill(null)
-                .map((_, i) => prevRefs[i] || createRef()),
-        );
-    }, [state.listToRender.length]);
-
-    useLayoutEffect(() => {
         if (shouldFocusToggleButton.current) {
             toggleButtonRef.current?.focus();
             shouldFocusToggleButton.current = false;
@@ -212,49 +206,21 @@ function SearchableDropdownMultiSelectWithForwardRef<
         });
     }, [dropdownList, dispatch]);
 
-    useEffect(() => {
-        const cb = state.isExpanded ? onOpen : onClose;
-        if (cb) {
-            cb();
-        }
-    }, [state.isExpanded, onOpen, onClose]);
+    useIsExpandedCallbacks({ isExpanded: state.isExpanded, onClose, onOpen });
 
-    useEffect(() => {
-        /**
-         * Because of changes in event handling between react v16 and v17, the check for the
-         * event flag will only work in react v17. Therefore, we also check Element.contains()
-         * to keep react v16 compatibility.
-         */
-        const handleContainerFocus = (e: MouseEvent | FocusEvent) => {
-            const isFocusInside =
-                containerRef.current?.contains(e.target as Node) ||
-                (e as any).__eventFromFFESearchableDropdownId === id;
+    const handelFocusMovedOutside = useCallback(
+        () =>
+            dispatch({
+                type: 'FocusMovedOutSide',
+            }),
+        [],
+    );
 
-            if (!isFocusInside) {
-                dispatch({
-                    type: 'FocusMovedOutSide',
-                });
-            }
-        };
-
-        document.addEventListener('mousedown', handleContainerFocus);
-        document.addEventListener('focusin', handleContainerFocus);
-        return () => {
-            document.removeEventListener('mousedown', handleContainerFocus);
-            document.removeEventListener('focusin', handleContainerFocus);
-        };
-    }, [id]);
-
-    /**
-     * Adds a flag on the event so that handleContainerFocus()
-     * can determine whether this event originated from this
-     * component
-     */
-    function addFlagOnEventHandler(event: React.SyntheticEvent) {
-        // @ts-ignore
-        // eslint-disable-next-line no-param-reassign
-        event.nativeEvent.__eventFromFFESearchableDropdownId = id;
-    }
+    useHandleContainerFocus({
+        id,
+        containerRef,
+        handelFocusMovedOutside,
+    });
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === ENTER && state.highlightedIndex >= 0) {
@@ -320,8 +286,8 @@ function SearchableDropdownMultiSelectWithForwardRef<
         <div // eslint-disable-line jsx-a11y/no-static-element-interactions
             onKeyDown={handleKeyDown}
             ref={containerRef}
-            onMouseDown={addFlagOnEventHandler}
-            onFocus={addFlagOnEventHandler}
+            onMouseDown={addFlagOnEventHandler(id)}
+            onFocus={addFlagOnEventHandler(id)}
             className={classNames(
                 className,
                 'ffe-searchable-dropdown',
@@ -333,6 +299,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                     return (
                         <ChipRemovable
                             as="button"
+                            type="button"
                             size="sm"
                             key={index}
                             aria-label={`${item[dropdownAttributes[0]]}, fjern valg`}
@@ -395,76 +362,52 @@ function SearchableDropdownMultiSelectWithForwardRef<
                     aria-invalid={rest['aria-invalid'] ?? ariaInvalid}
                 />
             </div>
-            <button
-                type="button"
+            <ToggleButton
                 ref={toggleButtonRef}
-                aria-label={
-                    state.isExpanded
-                        ? getButtonLabelClose(locale)
-                        : getButtonLabelOpen(locale)
-                }
-                className={classNames('ffe-searchable-dropdown__button', {
-                    'ffe-searchable-dropdown__button--flip': state.isExpanded,
-                })}
-                onClick={() => {
+                isExpanded={state.isExpanded}
+                onClick={() =>
                     dispatch({
                         type: 'ToggleButtonPressed',
-                    });
-                }}
-            >
-                {isLoading ? (
-                    <Spinner />
-                ) : (
-                    <Icon
-                        fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzczLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDgtMTEuODQ2LTcuOTIzTDI3NC45MjQtNTYzLjUzOXEtOC4zMDgtOC4zMDctOC41LTIwLjg4NC0uMTkzLTEyLjU3NyA4LjUtMjEuMjY5IDguNjkyLTguNjkyIDIxLjA3Ni04LjY5MnQyMS4wNzYgOC42OTJMNDgwLTQ0Mi43NjhsMTYyLjkyNC0xNjIuOTI0cTguMzA3LTguMzA3IDIwLjg4NC04LjUgMTIuNTc2LS4xOTIgMjEuMjY4IDguNSA4LjY5MyA4LjY5MiA4LjY5MyAyMS4wNzcgMCAxMi4zODQtOC42OTMgMjEuMDc2TDUwNS4zMDctMzgzLjc3cS01LjYxNSA1LjYxNS0xMS44NDYgNy45MjMtNi4yMyAyLjMwOC0xMy40NjEgMi4zMDhaIi8+PC9zdmc+"
-                        size="md"
-                        className="ffe-searchable-dropdown__button-icon"
+                    })
+                }
+                locale={locale}
+                isLoading={isLoading}
+            />
+
+            <ListBox ref={listBoxRef} isExpanded={state.isExpanded}>
+                {state.isExpanded && (
+                    <Results
+                        listToRender={state.listToRender}
+                        OptionBody={OptionBody}
+                        highlightedIndex={state.highlightedIndex}
+                        dropdownAttributes={dropdownAttributes}
+                        locale={locale}
+                        refs={refs}
+                        onChange={item => {
+                            const actionType = getActionType(
+                                state.selectedItems,
+                                item,
+                            );
+                            dispatch({
+                                type: 'ItemOnClick',
+                                payload: {
+                                    item: item,
+                                    actionType: actionType,
+                                },
+                            });
+                            onChange?.(item, actionType);
+                        }}
+                        noMatch={state.noMatch ? noMatch : undefined}
+                        noMatchMessageId={noMatchMessageId}
+                        selectedItems={state.selectedItems}
                     />
                 )}
-            </button>
-            <div className="ffe-searchable-dropdown__list-container">
-                <div
-                    tabIndex={-1}
-                    className={classNames('ffe-searchable-dropdown__list', {
-                        'ffe-searchable-dropdown__list--open': state.isExpanded,
-                    })}
-                >
-                    <div ref={listBoxRef} id={`${id}-listbox`} role="listbox">
-                        {state.isExpanded && (
-                            <Results
-                                listToRender={state.listToRender}
-                                ListItemBodyElement={ListItemBodyElement}
-                                highlightedIndex={state.highlightedIndex}
-                                dropdownAttributes={dropdownAttributes}
-                                locale={locale}
-                                refs={refs}
-                                onChange={item => {
-                                    const actionType = getActionType(
-                                        state.selectedItems,
-                                        item,
-                                    );
-                                    dispatch({
-                                        type: 'ItemOnClick',
-                                        payload: {
-                                            item: item,
-                                            actionType: actionType,
-                                        },
-                                    });
-                                    onChange?.(item, actionType);
-                                }}
-                                noMatch={state.noMatch ? noMatch : undefined}
-                                noMatchMessageId={noMatchMessageId}
-                                selectedItems={state.selectedItems}
-                            />
-                        )}
-                        {postListElement && (
-                            <div className="ffe-searchable-dropdown__list--post-list-element">
-                                {postListElement}
-                            </div>
-                        )}
+                {postListElement && (
+                    <div className="ffe-searchable-dropdown__list--post-list-element">
+                        {postListElement}
                     </div>
-                </div>
-            </div>
+                )}
+            </ListBox>
         </div>
     );
 }

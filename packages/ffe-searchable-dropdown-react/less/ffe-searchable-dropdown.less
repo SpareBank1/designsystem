@@ -33,7 +33,7 @@
     &__input {
         display: grid;
         border-radius: var(--ffe-g-border-radius) 0 0 var(--ffe-g-border-radius);
-        padding: 0 var(--ffe-spacing-sm);
+        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm);
 
         border-right: none;
 
@@ -199,6 +199,7 @@
 .ffe-searchable-dropdown--multi {
     .ffe-searchable-dropdown__input {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: var(--ffe-spacing-xs);
     }
@@ -220,5 +221,9 @@
         .ffe-searchable-dropdown__selected-icon {
             visibility: visible;
         }
+    }
+
+    .ffe-chip {
+        flex-shrink: 0;
     }
 }
