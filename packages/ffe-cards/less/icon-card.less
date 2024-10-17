@@ -16,7 +16,7 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: var(--ffe-spacing-md);
-    gap: var(--ffe-spacing-xs);
+    gap: var(--ffe-spacing-sm);
 
     &--right {
         grid-template-columns: 1fr auto;
@@ -26,11 +26,15 @@
     @media (min-width: @breakpoint-md) {
         gap: var(--ffe-spacing-md);
         &--condensed {
-            gap: var(--ffe-spacing-xs);
+            gap: var(--ffe-spacing-sm);
         }
     }
 
     .ffe-icon-card__icon {
         color: var(--ffe-v-cards-icon-color);
+    }
+
+    &--condensed {
+        padding: var(--ffe-spacing-sm);
     }
 }
