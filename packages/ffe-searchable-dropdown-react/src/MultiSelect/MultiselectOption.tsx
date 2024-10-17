@@ -24,8 +24,6 @@ export function MultiselectOption<Item extends Record<string, any>>({
         </SmallText>
     ));
 
-    // ffe-searchable-dropdown__list-item-body
-
     return (
         <div
             className={classnames('ffe-searchable-dropdown__list-item-body', {

@@ -160,7 +160,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
     const toggleButtonRef = useRef<HTMLButtonElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const MultiselectResultList = CustomListItemBody || MultiselectOption;
+    const ListItemBodyElement = CustomListItemBody || MultiselectOption;
     const listBoxRef = useRef<HTMLDivElement>(null);
     const noMatchMessageId = useId();
     const shouldFocusToggleButton = useRef(false);
@@ -433,7 +433,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                         {state.isExpanded && (
                             <Results
                                 listToRender={state.listToRender}
-                                ListItemBodyElement={MultiselectResultList}
+                                ListItemBodyElement={ListItemBodyElement}
                                 highlightedIndex={state.highlightedIndex}
                                 dropdownAttributes={dropdownAttributes}
                                 locale={locale}
