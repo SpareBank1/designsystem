@@ -3,19 +3,17 @@ import classnames from 'classnames';
 import { SmallText } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
 
-interface MultiselectOptionProps<Item extends Record<string, any>> {
+interface MultiselectOptionBodyProps<Item extends Record<string, any>> {
     item: Item;
     dropdownAttributes: (keyof Item)[];
     isHighlighted: boolean;
-    isSelected: boolean;
 }
 
-export function MultiselectOption<Item extends Record<string, any>>({
+export function MultiselectOptionBody<Item extends Record<string, any>>({
     item,
     dropdownAttributes,
     isHighlighted,
-    isSelected,
-}: MultiselectOptionProps<Item>) {
+}: MultiselectOptionBodyProps<Item>) {
     const [titleAttribute, ...restAttributes] = dropdownAttributes;
     const title = item[titleAttribute];
     const rest = restAttributes.map((attribute, index) => (

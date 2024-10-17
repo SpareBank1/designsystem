@@ -43,7 +43,7 @@ const fruits = [
     },
 ];
 
-const CustomListElementBody = ({
+const CustomOptionBody = ({
     item,
     isHighlighted,
     dropdownAttributes,
@@ -92,10 +92,10 @@ const meta: Meta<typeof SearchableDropdownMultiSelect> = {
                 none: undefined,
             },
         },
-        listElementBody: {
+        optionBody: {
             options: ['custom', 'none'],
             mapping: {
-                custom: CustomListElementBody,
+                custom: CustomOptionBody,
                 none: undefined,
             },
         },

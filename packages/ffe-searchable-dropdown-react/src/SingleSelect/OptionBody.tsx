@@ -8,7 +8,7 @@ interface ListItemBodyProps<Item extends Record<string, any>> {
     isHighlighted: boolean;
 }
 
-export function ListItemBody<Item extends Record<string, any>>({
+export function OptionBody<Item extends Record<string, any>>({
     item,
     dropdownAttributes,
     isHighlighted,
