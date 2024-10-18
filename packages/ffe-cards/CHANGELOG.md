@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.2.1...@sb1/ffe-cards@20.2.2) (2024-10-18)
+
+
+### Bug Fixes
+
+* **ffe-cards:** icon card condensed smalelr padding larger gap ([4527042](https://github.com/SpareBank1/designsystem/commit/4527042a5f070cec6e41124cead5a1385a100975))
+
+
+
+
+
 ## [20.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.2.0...@sb1/ffe-cards@20.2.1) (2024-10-11)
 
 
