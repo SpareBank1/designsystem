@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@1.1.0...@sb1/ffe-chips@1.2.0) (2024-10-18)
+
+
+### Features
+
+* **ffe-chips:** change colors ([49fc122](https://github.com/SpareBank1/designsystem/commit/49fc12267ec22f6425369aab5de4cf67c2a2802c))
+
+
+
+
+
 # 1.1.0 (2024-10-11)
 
 

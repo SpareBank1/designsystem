@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-buttons-react",
-    "version": "24.0.21",
+    "version": "24.0.22",
     "description": "React implementation of ffe-buttons",
     "keywords": [
         "ffe"
@@ -30,7 +30,7 @@
     },
     "dependencies": {
         "@sb1/ffe-buttons": "^19.0.10",
-        "@sb1/ffe-icons-react": "^11.0.9",
+        "@sb1/ffe-icons-react": "^11.0.10",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
