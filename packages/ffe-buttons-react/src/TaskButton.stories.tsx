@@ -2,7 +2,6 @@ import React from 'react';
 import { TaskButton } from './TaskButton';
 import type { StoryObj, Meta } from '@storybook/react';
 import { Icon } from '@sb1/ffe-icons-react';
-import addIcon from '@sb1/ffe-icons/icons/open/300/md/add.svg';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -37,7 +36,9 @@ export const Standard: Story = {
     },
     render: function Render(args) {
         return (
-            <TaskButton icon={<Icon fileUrl={addIcon} {...args} />}>
+            <TaskButton
+                icon={<Icon fileUrl="./icons/open/300/md/add.svg" {...args} />}
+            >
                 Legg til bruker
             </TaskButton>
         );
