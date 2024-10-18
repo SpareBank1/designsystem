@@ -54,16 +54,16 @@ const updateA11yStatus = debounce(getA11yMessage => {
 }, 200);
 
 const getItemSelectedMessage = ({
-    selectedItemValue,
+    selectedValue,
     locale,
 }: {
-    selectedItemValue: string | undefined;
+    selectedValue: string | undefined;
     locale: Locale;
 }) => {
-    if (!selectedItemValue) {
+    if (!selectedValue) {
         return getItemClearedA11yStatus(locale);
     }
-    return getItemSelectedA11yStatus(locale, selectedItemValue);
+    return getItemSelectedA11yStatus(locale, selectedValue);
 };
 
 const getStateChangeMessage = ({
@@ -90,29 +90,23 @@ const getIsLoadingItemsMessage = (locale: Locale) => {
     return getIsLoadingItemsA11yStatus(locale);
 };
 
-export const useSetAllyMessageItemSelection = <
-    Item extends Record<string, any>,
->({
+export const useSetAllyMessageItemSelection = ({
     hasFocus,
     isExpanded,
     isLoading,
     locale,
     resultCount,
-    searchAttributes,
-    selectedItem,
+    selectedValue,
 }: {
     hasFocus: boolean;
     isExpanded: boolean;
     isLoading: boolean;
     locale: Locale;
     resultCount: number;
-    searchAttributes: Array<keyof Item>;
-    selectedItem: Item | null | undefined;
+    selectedValue?: string;
 }) => {
     const isInitialMount = useRef(true);
-    const prevSelectedItemValue = useRef<string>();
-    const selectedItemValue: string | undefined =
-        selectedItem?.[searchAttributes[0]];
+    const prevSelectedValue = useRef<string>();
 
     useEffect(() => {
         if (isLoading && hasFocus) {
@@ -128,11 +122,11 @@ export const useSetAllyMessageItemSelection = <
         }
 
         const selectedItemHasChanged =
-            selectedItemValue !== prevSelectedItemValue.current;
+            selectedValue !== prevSelectedValue.current;
         if (selectedItemHasChanged) {
-            prevSelectedItemValue.current = selectedItemValue;
+            prevSelectedValue.current = selectedValue;
             updateA11yStatus(() => {
-                return getItemSelectedMessage({ selectedItemValue, locale });
+                return getItemSelectedMessage({ selectedValue, locale });
             });
         } else {
             updateA11yStatus(() => {
@@ -149,12 +143,5 @@ export const useSetAllyMessageItemSelection = <
             updateA11yStatus.cancel();
             cleanupStatus.cancel();
         };
-    }, [
-        selectedItemValue,
-        locale,
-        isExpanded,
-        resultCount,
-        hasFocus,
-        isLoading,
-    ]);
+    }, [selectedValue, locale, isExpanded, resultCount, hasFocus, isLoading]);
 };

@@ -8,7 +8,7 @@ interface ListItemBodyProps<Item extends Record<string, any>> {
     isHighlighted: boolean;
 }
 
-export function ListItemBody<Item extends Record<string, any>>({
+export function OptionBody<Item extends Record<string, any>>({
     item,
     dropdownAttributes,
     isHighlighted,
@@ -16,7 +16,9 @@ export function ListItemBody<Item extends Record<string, any>>({
     const [titleAttribute, ...restAttributes] = dropdownAttributes;
     const title = item[titleAttribute];
     const rest = restAttributes.map((attribute, index) => (
-        <MicroText key={index}>{item[attribute]}</MicroText>
+        <MicroText className="ffe-searchable-dropdown__detail-text" key={index}>
+            {item[attribute]}
+        </MicroText>
     ));
     return (
         <div
