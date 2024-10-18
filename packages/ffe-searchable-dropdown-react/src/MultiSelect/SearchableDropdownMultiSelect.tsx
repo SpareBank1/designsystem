@@ -314,7 +314,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             <div
                 className="ffe-searchable-dropdown__input"
                 onClick={() => {
-                    inputRef.current?.focus();
+                    inputRef.current?.click();
                 }}
             >
                 {state.selectedItems?.map((item, index) => {
