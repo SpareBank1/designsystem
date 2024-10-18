@@ -111,17 +111,30 @@ export const createReducer =
             case 'InputKeyDownEnter':
             case 'TabPressed':
                 if (action.payload?.item) {
+                    const { noMatch, listToRender } = getListToRender({
+                        inputValue: '',
+                        searchAttributes,
+                        maxRenderedDropdownElements,
+                        dropdownList,
+                        noMatchDropdownList,
+                        searchMatcher,
+                        showAllItemsInDropdown: true,
+                    });
                     return {
                         ...state,
                         isExpanded: true,
                         highlightedIndex:
-                            action.payload?.highlightedIndex ?? -1,
+                            state.inputValue.trim() === ''
+                                ? (action.payload?.highlightedIndex ?? -1)
+                                : -1,
                         selectedItems: getNewList(
                             state.selectedItems,
                             action.payload.item,
                             action.payload?.actionType ?? 'selected',
                         ),
+                        listToRender: listToRender,
                         inputValue: '',
+                        noMatch,
                     };
                 }
             case 'InputKeyDownArrowDown':

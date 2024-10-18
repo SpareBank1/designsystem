@@ -36,6 +36,8 @@ const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
 const ESCAPE = 'Escape';
 const ENTER = 'Enter';
+const TAB = 'Tab';
+const BACKSPACE = 'Backspace';
 
 export interface SearchableDropdownMultiSelectProps<
     Item extends Record<string, any>,
@@ -273,7 +275,20 @@ function SearchableDropdownMultiSelectWithForwardRef<
                     listBoxRef.current,
                 );
             }
-        } else if (event.key === 'Tab') {
+        } else if (event.key === BACKSPACE) {
+            if (state.selectedItems.length > 0) {
+                const lastItem =
+                    state.selectedItems[state.selectedItems.length - 1];
+                dispatch({
+                    type: 'RemoveItem',
+                    payload: {
+                        item: lastItem,
+                        actionType: 'removed',
+                    },
+                });
+                onChange?.(lastItem, 'removed');
+            }
+        } else if (event.key === TAB) {
             dispatch({
                 type: 'TabPressed',
                 payload: { highlightedIndex: -1 },
@@ -284,7 +299,6 @@ function SearchableDropdownMultiSelectWithForwardRef<
 
     return (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-
         <div
             onKeyDown={handleKeyDown}
             ref={containerRef}
@@ -300,7 +314,6 @@ function SearchableDropdownMultiSelectWithForwardRef<
             <div
                 className="ffe-searchable-dropdown__input"
                 onClick={() => {
-                    console.log('click');
                     inputRef.current?.focus();
                 }}
             >
@@ -405,6 +418,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                                     actionType: actionType,
                                 },
                             });
+                            shouldFocusInput.current = true;
                             onChange?.(item, actionType);
                         }}
                         noMatch={state.noMatch ? noMatch : undefined}
