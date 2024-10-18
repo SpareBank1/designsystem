@@ -4,7 +4,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { CardBase } from '../CardBase';
 import { Heading2, Paragraph } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import savingsIconXlarge from '@sb1/ffe-icons/icons/open/300/xl/savings.svg';
 import { IconCard } from '../IconCard/IconCard';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
@@ -77,7 +76,9 @@ export const WithinTitle: Story = {
         href: 'https://design.sparebank1.no',
     },
     render: args => (
-        <IconCard icon={<Icon fileUrl={savingsIconXlarge} size="xl" />}>
+        <IconCard
+            icon={<Icon fileUrl="icons/open/300/xl/savings.svg" size="xl" />}
+        >
             {({ CardAction, CardName, Title, Subtext, Text }) => (
                 <>
                     <CardName>Kortnavn</CardName>

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { Icon } from '@sb1/ffe-icons-react';
-import expandMoreIcon from '@sb1/ffe-icons/icons/open/300/md/expand_more.svg';
-import personIcon from '@sb1/ffe-icons/icons/open/300/xl/person.svg';
 import classNames from 'classnames';
 
 const meta: Meta<unknown> = {
@@ -92,7 +90,7 @@ export const Standard: Story = {
                                     Jomar Beate Skrothaug
                                     <span className="ffe-header__user-chevron">
                                         <Icon
-                                            fileUrl={expandMoreIcon}
+                                            fileUrl="./icons/open/300/md/expand_more.svg"
                                             size="md"
                                             className={classNames(
                                                 'ffe-header__user-chevron-icon',
@@ -106,7 +104,7 @@ export const Standard: Story = {
                                 </span>
                                 <span className="ffe-header__svg-icon ffe-header__user-icon">
                                     <Icon
-                                        fileUrl={personIcon}
+                                        fileUrl="./icons/open/300/xl/person.svg"
                                         aria-label="bruker"
                                         size="xl"
                                     />
