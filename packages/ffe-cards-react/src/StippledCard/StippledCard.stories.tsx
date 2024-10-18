@@ -2,7 +2,6 @@ import React from 'react';
 import { StippledCard } from './StippledCard';
 import type { StoryObj, Meta } from '@storybook/react';
 import { Icon } from '@sb1/ffe-icons-react';
-import monitoringIconXlarge from '@sb1/ffe-icons/icons/open/300/xl/monitoring.svg';
 import utvalgte from './illustrations/utvalgte.svg';
 
 const Custom: React.FC<React.ComponentProps<'div'>> = props => (
@@ -59,7 +58,9 @@ export const WithIcon: Story = {
         as: 'div',
         img: {
             type: 'icon',
-            element: <Icon fileUrl={monitoringIconXlarge} size="xl" />,
+            element: (
+                <Icon fileUrl="./icons/open/300/xl/monitoring.svg" size="xl" />
+            ),
         },
     },
     render: args => (
@@ -115,7 +116,9 @@ export const Condensed: Story = {
         as: 'div',
         img: {
             type: 'icon',
-            element: <Icon fileUrl={monitoringIconXlarge} size="xl" />,
+            element: (
+                <Icon fileUrl="./icons/open/300/xl/monitoring.svg" size="xl" />
+            ),
         },
         condensed: true,
     },
