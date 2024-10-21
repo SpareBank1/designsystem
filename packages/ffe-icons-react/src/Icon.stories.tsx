@@ -14,7 +14,7 @@ export const Standard: Story = {
     args: {
         size: 'md',
         ariaLabel: 'hjem',
-        fileUrl: '/icons/open/300/md/house.svg',
+        fileUrl: './icons/open/300/md/house.svg',
     },
     render: args => <Icon {...args} />,
 };
