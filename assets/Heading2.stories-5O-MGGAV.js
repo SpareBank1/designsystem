@@ -1,0 +1,12 @@
+import{R as s}from"./index-RYns6xqu.js";import{a as t}from"./Heading-eJ-CxsG1.js";const l={title:"components/core/Heading2",component:t},e={args:{error:!1,inline:!1,lookLike:2,noMargin:!1,withBorder:!1,textCenter:!1,children:"Some text"},render:o=>s.createElement(t,{...o})};var r,a,n;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  args: {
+    error: false,
+    inline: false,
+    lookLike: 2,
+    noMargin: false,
+    withBorder: false,
+    textCenter: false,
+    children: 'Some text'
+  },
+  render: args => <Heading2 {...args} />
+}`,...(n=(a=e.parameters)==null?void 0:a.docs)==null?void 0:n.source}}};const i=["Standard"],m=Object.freeze(Object.defineProperty({__proto__:null,Standard:e,__namedExportsOrder:i,default:l},Symbol.toStringTag,{value:"Module"}));export{m as H,e as S};
