@@ -141,15 +141,16 @@
             }
         }
 
-        &-icon {
+        &-icon-animate {
+            transform: rotateZ(180deg);
             transition:
                 color @ffe-transition-duration @ffe-ease,
                 transform @ffe-transition-duration @ffe-ease-in-out-back;
         }
 
         &--flip {
-            .ffe-searchable-dropdown__button-icon {
-                transform: rotateZ(180deg);
+            .ffe-searchable-dropdown__button-icon-animate {
+                transform: rotateZ(0deg);
             }
         }
     }
