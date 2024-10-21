@@ -1,0 +1,1 @@
+import{R as t}from"./index-RYns6xqu.js";import{c as m}from"./index-Dejnh_W_.js";const c=e=>{const{children:s,as:a="h2",className:r,...o}=e;return t.createElement(a,{...o,className:m("ffe-message__heading",r)},s)};c.__docgenInfo={description:"",methods:[],displayName:"MessageHeader",props:{as:{required:!1,tsType:{name:"As"},description:""}}};export{c as M};
