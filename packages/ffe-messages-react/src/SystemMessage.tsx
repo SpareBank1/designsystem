@@ -7,6 +7,7 @@ import { MessageCollapse } from './MessageCollapse';
 import { Content } from './Content';
 import { txt } from './texts';
 
+/* Remove me*/
 export interface SystemMessageProps
     extends React.ComponentPropsWithoutRef<'div'> {
     /** info, success, tips, news or error */
