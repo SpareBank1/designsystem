@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.4.53](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.52...@sb1/ffe-component-index@8.4.53) (2024-10-21)
+
+
+### Bug Fixes
+
+* **component-overview:** added missing dep to ffe-lists-react ([033d20c](https://github.com/SpareBank1/designsystem/commit/033d20ced58c3a0f68a68b0357751c7ea891fb40))
+
+
+
+
+
 ## [8.4.52](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.51...@sb1/ffe-component-index@8.4.52) (2024-10-21)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
