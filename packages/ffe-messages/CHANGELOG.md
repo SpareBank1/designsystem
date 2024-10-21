@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@0.4.1...@sb1/ffe-messages@1.1.0) (2024-10-21)
+
+
+### Features
+
+* **ffe-messages:** initial commit ([8ec8ae4](https://github.com/SpareBank1/designsystem/commit/8ec8ae41fb8cf3bfd4a8b305564199874968e88e))
+
+
+
+
+
 ## [0.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@0.4.0...@sb1/ffe-messages@0.4.1) (2024-10-21)
 
 **Note:** Version bump only for package @sb1/ffe-messages
