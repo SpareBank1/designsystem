@@ -20,7 +20,6 @@ export type ModalHandle = {
     readonly close: () => void;
 };
 
-/* Remove me */
 export const Modal = React.forwardRef<ModalHandle, ModalProps>(
     (
         {
