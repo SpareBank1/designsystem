@@ -35,7 +35,7 @@ const meta: Meta<typeof SearchableDropdown> = {
                 none: undefined,
             },
         },
-        listElementBody: {
+        optionBody: {
             options: ['custom', 'none'],
             mapping: {
                 custom: ({

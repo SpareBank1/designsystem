@@ -22,6 +22,16 @@ export const getButtonLabelOpen = (locale: Locale) => {
     }
 };
 
+export const getSelectedLabel = (locale: Locale, amountSelected: number) => {
+    switch (locale) {
+        case 'en':
+            return `${amountSelected} selected`;
+        default:
+        case 'nn':
+            return `${amountSelected} valgt`;
+    }
+};
+
 export const getNotMatchText = (locale: Locale) => {
     switch (locale) {
         case 'nn':
