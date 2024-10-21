@@ -1,0 +1,253 @@
+.ffe-message {
+    --icon-size: var(--ffe-v-icons-size-md);
+    --icon-padding: var(--ffe-spacing-2xs);
+
+    color: var(--ffe-v-messages-text-color);
+    overflow-wrap: anywhere;
+
+    .ffe-body-text,
+    .ffe-body-paragraph {
+        color: inherit;
+    }
+
+    .ffe-link-text {
+        border-color: var(--ffe-v-messages-link-color);
+        color: var(--ffe-v-messages-link-color);
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-color: var(--ffe-v-messages-link-color-hover);
+                color: var(--ffe-v-messages-link-color-hover);
+            }
+        }
+
+        &:visited {
+            border-color: var(--ffe-v-messages-link-color-visited);
+            color: var(--ffe-v-messages-link-color-visited);
+        }
+
+        &:focus {
+            border-color: var(--ffe-v-messages-link-color-focus);
+            background-color: var(--ffe-v-messages-link-color);
+            box-shadow: 0 0 0 2px var(--ffe-v-messages-link-color);
+            color: var(--ffe-v-messages-link-color-focus);
+        }
+    }
+}
+
+.ffe-message--info {
+    --icon-background: var(--ffe-v-messages-info-icon-bg-color);
+    --icon-color: var(--ffe-v-messages-info-icon-color);
+    --background: var(--ffe-v-messages-info-bg-color);
+    --mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuNzg4LTY3MnEtMjUuOTQyIDAtNDMuODY0LTE4LjEzNS0xNy45MjMtMTguMTM2LTE3LjkyMy00NC4wNzd0MTguMTM1LTQzLjg2NHExOC4xMzUtMTcuOTIzIDQ0LjA3Ni0xNy45MjMgMjUuOTQyIDAgNDMuODY0IDE4LjEzNiAxNy45MjMgMTguMTM1IDE3LjkyMyA0NC4wNzZ0LTE4LjEzNSA0My44NjRRNTA1LjcyOS02NzIgNDc5Ljc4OC02NzJabS4yNTcgNTA3Ljk5OXEtMjAuODE0IDAtMzUuNDI5LTE0LjU4NC0xNC42MTUtMTQuNTgzLTE0LjYxNS0zNS40MTZ2LTI5Ni42MTRxMC0yMC44MzMgMTQuNTctMzUuNDE2IDE0LjU3LTE0LjU4MyAzNS4zODQtMTQuNTgzdDM1LjQyOSAxNC41ODNxMTQuNjE1IDE0LjU4MyAxNC42MTUgMzUuNDE2djI5Ni42MTRxMCAyMC44MzMtMTQuNTcgMzUuNDE2LTE0LjU3IDE0LjU4NC0zNS4zODQgMTQuNTg0WiIvPjwvc3ZnPg==');
+    &.ffe-message--colored-bg {
+        --background: var(--ffe-v-messages-info-variant-bg-color);
+        --icon-background: var(--ffe-v-messages-info-icon-variant-bg-color);
+    }
+}
+
+.ffe-message--success {
+    --icon-background: var(--ffe-v-messages-success-icon-bg-color);
+    --icon-color: var(--ffe-v-messages-success-icon-color);
+    --background: var(--ffe-v-messages-success-bg-color);
+    --mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Im0zOTUtMzcyLjM4NCAyNzAuNTM5LTI2OS41MzhxNy45MjMtNy45MjMgMTcuNjkyLTcuNjE2IDkuNzY5LjMwOCAxOC4wNzYgOC42MTYgOC4zMDggOC4zMDcgOC4zMDggMTcuODg0IDAgOS41NzYtOC4zMDggMTcuODg0bC0yODMgMjgyLjk5OXEtOS44NDYgOS44NDYtMjIuODA3IDkuODQ2LTEyLjk2MSAwLTIyLjgwNy05Ljg0NmwtMTE0LTExMy45OTlxLTcuOTIzLTcuOTIzLTguMzA4LTE3LjY5Mi0uMzg0LTkuNzY5IDcuOTIzLTE4LjA3NiA4LjMwOC04LjMwOCAxNy44ODQtOC4zMDggOS41NzcgMCAxNy44ODQgOC4zMDhMMzk1LTM3Mi4zODRaIi8+PC9zdmc+');
+    &.ffe-message--colored-bg {
+        --background: var(--ffe-v-messages-success-variant-bg-color);
+        --icon-background: var(--ffe-v-messages-success-icon-variant-bg-color);
+    }
+}
+
+.ffe-message--error {
+    --icon-background: var(--ffe-v-messages-error-icon-bg-color);
+    --icon-color: var(--ffe-v-messages-error-icon-color);
+    --background: var(--ffe-v-messages-error-bg-color);
+    --mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuNzg4LTE4Ny4wOHEtMjEuNTM3IDAtMzYuNjYyLTE1LjMzN3QtMTUuMTI1LTM2Ljg3NHEwLTIxLjUzNyAxNS4zMzctMzYuNjYyIDE1LjMzNy0xNS4xMjQgMzYuODc0LTE1LjEyNCAyMS41MzcgMCAzNi42NjIgMTUuMzM3dDE1LjEyNSAzNi44NzRxMCAyMS41MzctMTUuMzM3IDM2LjY2MS0xNS4zMzcgMTUuMTI1LTM2Ljg3NCAxNS4xMjVabS0uMDYyLTE5Ni4xNTFxLTE5LjM0MSAwLTMyLjg0LTEzLjcwOS0xMy41LTEzLjcwOS0xMy41LTMyLjk2di0zMTYuNjg1cTAtMTkuMjUxIDEzLjc3NC0zMi43OTQgMTMuNzczLTEzLjU0MiAzMy4xMTQtMTMuNTQyIDE5LjM0MSAwIDMyLjg0IDEzLjcwOSAxMy41IDEzLjcwOSAxMy41IDMyLjk2djMxNi42ODVxMCAxOS4yNTEtMTMuNzc0IDMyLjc5NC0xMy43NzMgMTMuNTQyLTMzLjExNCAxMy41NDJaIi8+PC9zdmc+');
+    &.ffe-message--colored-bg {
+        --background: var(--ffe-v-messages-error-variant-bg-color);
+        --icon-background: var(--ffe-v-messages-error-icon-variant-bg-color);
+    }
+}
+
+.ffe-message--tips {
+    --icon-background: var(--ffe-v-messages-tips-icon-bg-color);
+    --icon-color: var(--ffe-v-messages-tips-icon-color);
+    --background: var(--ffe-v-messages-tips-bg-color);
+    --mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuNzg4LTExMi45MjRxLTI3LjA5NSAwLTQ2LjU1Ny0xOC42NS0xOS40NjEtMTguNjUtMjEuMzg1LTQ1LjY1N2gxMzYuMzA4cS0xLjkyNCAyNy4zMDctMjEuNTk3IDQ1LjgwNy0xOS42NzQgMTguNS00Ni43NjkgMTguNVpNMzcyLjI4My0yNDAuNjE3cS0xMS4wNTIgMC0xOC42NjctNy40MDUtNy42MTUtNy40MDQtNy42MTUtMTguMzg0IDAtMTAuOTc5IDcuNDUzLTE4LjU5NSA3LjQ1NC03LjYxNSAxOC41MDYtNy42MTVoMjE1Ljc1N3ExMS4wNTIgMCAxOC42NjcgNy40MDUgNy42MTUgNy40MDUgNy42MTUgMTguMzg0dC03LjQ1MyAxOC41OTVxLTcuNDU0IDcuNjE1LTE4LjUwNiA3LjYxNUgzNzIuMjgzWm0tNDUuMTI5LTExNS4zODRxLTU1Ljg0NS0zNi4wNzctODUuNDk5LTk0LjYxNVEyMTIuMDAxLTUwOS4xNTQgMjEyLjAwMS01NzZxMC0xMTEuOTIyIDc4LjAzOC0xODkuOTYxUTM2OC4wNzgtODQzLjk5OSA0ODAtODQzLjk5OXExMTEuOTIyIDAgMTg5Ljk2MSA3OC4wMzhRNzQ3Ljk5OS02ODcuOTIyIDc0Ny45OTktNTc2cTAgNjYuODQ2LTI5LjY1NCAxMjUuMzg0dC04NS40OTkgOTQuNjE1SDMyNy4xNTRaTTM0NC00MDhoMjcycTM4LTMxIDU5LTc1dDIxLTkzcTAtOTAuMzI3LTYyLjc2OS0xNTMuMTY0UTU3MC40NjItNzkyIDQ4MC4yMzEtNzkyVDMyNy03MjkuMTY0UTI2NC02NjYuMzI3IDI2NC01NzZxMCA0OSAyMSA5M3Q1OSA3NVptMTM2IDBaIi8+PC9zdmc+');
+    &.ffe-message--colored-bg {
+        --background: var(--ffe-v-messages-tips-variant-bg-color);
+        --icon-background: var(--ffe-v-messages-tips-icon-variant-bg-color);
+    }
+}
+
+.ffe-message--news {
+    --icon-background: var(--ffe-v-messages-news-icon-bg-color);
+    --icon-color: var(--ffe-v-messages-news-icon-color);
+    --background: var(--ffe-v-messages-news-bg-color);
+    --mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuNzg4LTY3MnEtMjUuOTQyIDAtNDMuODY0LTE4LjEzNS0xNy45MjMtMTguMTM2LTE3LjkyMy00NC4wNzd0MTguMTM1LTQzLjg2NHExOC4xMzUtMTcuOTIzIDQ0LjA3Ni0xNy45MjMgMjUuOTQyIDAgNDMuODY0IDE4LjEzNiAxNy45MjMgMTguMTM1IDE3LjkyMyA0NC4wNzZ0LTE4LjEzNSA0My44NjRRNTA1LjcyOS02NzIgNDc5Ljc4OC02NzJabS4yNTcgNTA3Ljk5OXEtMjAuODE0IDAtMzUuNDI5LTE0LjU4NC0xNC42MTUtMTQuNTgzLTE0LjYxNS0zNS40MTZ2LTI5Ni42MTRxMC0yMC44MzMgMTQuNTctMzUuNDE2IDE0LjU3LTE0LjU4MyAzNS4zODQtMTQuNTgzdDM1LjQyOSAxNC41ODNxMTQuNjE1IDE0LjU4MyAxNC42MTUgMzUuNDE2djI5Ni42MTRxMCAyMC44MzMtMTQuNTcgMzUuNDE2LTE0LjU3IDE0LjU4NC0zNS4zODQgMTQuNTg0WiIvPjwvc3ZnPg==');
+    &.ffe-message--colored-bg {
+        --background: var(--ffe-v-messages-news-variant-bg-color);
+        --icon-background: var(--ffe-v-messages-news-icon-variant-bg-color);
+    }
+}
+
+.ffe-message__background {
+    background: var(--background);
+    border-radius: 8px;
+}
+
+.ffe-message__icon-container {
+    background: var(--icon-background);
+    height: fit-content;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    padding: var(--icon-padding);
+}
+
+.ffe-message--context {
+    --icon-size: var(--ffe-v-icons-size-xl);
+    --icon-padding: var(--ffe-spacing-xs);
+
+    .ffe-message__heading {
+        font-size: var(--ffe-fontsize-h6);
+        margin: 0 0 var(--ffe-spacing-2xs);
+    }
+}
+
+.ffe-message--context.ffe-message--context-compact {
+    --icon-size: var(--ffe-v-icons-size-md);
+    --icon-padding: var(--ffe-spacing-2xs);
+}
+
+.ffe-message--system,
+.ffe-message--context {
+    .ffe-message__icon-container {
+        grid-column: 1 e('/') 2;
+        grid-row: 1 e('/') 2;
+    }
+
+    .ffe-message__content {
+        grid-column: 2 e('/') 3;
+        grid-row: 1 e('/') 2;
+    }
+
+    .ffe-message__close {
+        grid-column: 3 e('/') 4;
+        grid-row: 1 e('/') 2;
+    }
+
+    .ffe-message__background {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: var(--ffe-spacing-sm);
+        align-items: center;
+        grid-template-rows: 1fr;
+    }
+}
+
+.ffe-message--system,
+.ffe-message--context.ffe-message--context-compact {
+    .ffe-message__background {
+        padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
+    }
+}
+
+.ffe-message--context .ffe-message__background {
+    padding: var(--ffe-spacing-sm);
+}
+
+.ffe-message--box {
+    --icon-size: var(--ffe-v-icons-size-xl);
+    --icon-padding: var(--ffe-spacing-xs);
+    --icon-offset: var(--ffe-spacing-md);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto var(--icon-offset) 1fr;
+
+    .ffe-message__background {
+        padding: var(--ffe-spacing-xl) var(--ffe-spacing-lg);
+        grid-column: 1 e('/') 2;
+        grid-row: 2 e('/') 4;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ffe-message__icon-container {
+        justify-self: center;
+        grid-column: 1 e('/') 2;
+        grid-row: 1 e('/') 3;
+    }
+
+    .ffe-message__heading {
+        font-size: var(--ffe-fontsize-h5);
+        margin-bottom: var(--ffe-spacing-sm);
+        text-align: center;
+    }
+}
+
+.ffe-message__close {
+    --icon-color: var(--ffe-v-messages-close-button-color);
+
+    align-self: start;
+    border: 2px solid transparent;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color: var(--ffe-v-messages-close-button-color);
+    padding: var(--ffe-spacing-xs);
+    background: transparent;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            --icon-color: var(--ffe-v-messages-close-button-color-hover);
+        }
+    }
+
+    &:focus {
+        border-color: var(--ffe-v-messages-close-button-border-color-focus);
+    }
+}
+
+.ffe-message__icon {
+    color: var(--icon-color);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: currentcolor;
+    mask-image: var(--mask-image);
+    height: var(--icon-size);
+    aspect-ratio: 1;
+    mask-size: contain;
+}
+
+.ffe-message-collapse {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows var(--ffe-transition-duration)
+        var(--ffe-ease);
+}
+
+.ffe-message-collapse--closed {
+    grid-template-rows: 0fr;
+    .ffe-message-collapse__inner {
+        overflow: hidden;
+    }
+}
+
+.ffe-message__list {
+    padding-left: var(--ffe-spacing-sm);
+    margin: 0;
+    line-height: 2;
+    text-align: left;
+    width: fit-content;
+}
+
+.ffe-message__heading {
+    font-family: var(--ffe-g-font-strong);
+    font-variant-numeric: tabular-nums;
+    font-weight: normal;
+}
