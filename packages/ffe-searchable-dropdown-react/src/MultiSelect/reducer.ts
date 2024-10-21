@@ -1,11 +1,13 @@
-import { getListToRender } from './getListToRender';
-import { StateChange, SearchMatcher } from './types';
+import { getListToRender } from '../getListToRender';
+import { StateChange, SearchMatcher } from '../types';
+import { getNewList } from './getNewList';
 
 type Action<Item extends Record<string, any>> = {
     type: StateChange;
     payload?: {
         inputValue?: string;
-        selectedItem?: Item | null | undefined;
+        item?: Item;
+        actionType?: 'selected' | 'removed';
         highlightedIndex?: number;
     };
 };
@@ -14,7 +16,7 @@ type State<Item extends Record<string, any>> = {
     noMatch: boolean;
     isExpanded: boolean;
     highlightedIndex: number;
-    selectedItem: Item | null | undefined;
+    selectedItems: Item[];
     inputValue: string;
     listToRender: Item[];
     noMatchDropdownList?: Item[] | undefined;
@@ -27,14 +29,12 @@ export const createReducer =
         noMatchDropdownList,
         maxRenderedDropdownElements,
         searchMatcher,
-        onChange,
     }: {
         dropdownList: Item[];
         searchAttributes: Array<keyof Item>;
         noMatchDropdownList: Item[] | undefined;
         maxRenderedDropdownElements: number;
         searchMatcher: SearchMatcher<Item> | undefined;
-        onChange: ((item: Item | null) => void) | undefined;
     }) =>
     (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
@@ -44,9 +44,7 @@ export const createReducer =
                     noMatch: false,
                     isExpanded: false,
                     highlightedIndex: -1,
-                    inputValue: state.selectedItem
-                        ? state.selectedItem[searchAttributes[0]]
-                        : '',
+                    inputValue: '',
                 };
             case 'InputClick': {
                 const { noMatch, listToRender } = getListToRender({
@@ -65,6 +63,21 @@ export const createReducer =
                     listToRender,
                     noMatch,
                 };
+            }
+            case 'RemoveItem': {
+                if (action.payload?.item) {
+                    return {
+                        ...state,
+                        highlightedIndex: -1,
+                        selectedItems: getNewList(
+                            state.selectedItems,
+                            action.payload.item,
+                            'removed',
+                        ),
+                        inputValue: '',
+                    };
+                }
+                return state;
             }
             case 'InputChange': {
                 const { noMatch, listToRender } = getListToRender({
@@ -95,73 +108,62 @@ export const createReducer =
                     ...state,
                     isExpanded: !state.isExpanded,
                 };
-            case 'ItemSelectedProgrammatically':
             case 'ItemOnClick':
             case 'InputKeyDownEnter':
-                return {
-                    ...state,
-                    isExpanded: false,
-                    highlightedIndex: -1,
-                    selectedItem: action.payload?.selectedItem,
-                    inputValue:
-                        action.payload?.selectedItem?.[searchAttributes[0]] ||
-                        '',
-                };
-
+                if (action.payload?.item) {
+                    const { noMatch, listToRender } = getListToRender({
+                        inputValue: '',
+                        searchAttributes,
+                        maxRenderedDropdownElements,
+                        dropdownList,
+                        noMatchDropdownList,
+                        searchMatcher,
+                        showAllItemsInDropdown: true,
+                    });
+                    return {
+                        ...state,
+                        isExpanded: true,
+                        highlightedIndex:
+                            state.inputValue.trim() === ''
+                                ? (action.payload?.highlightedIndex ?? -1)
+                                : -1,
+                        selectedItems: getNewList(
+                            state.selectedItems,
+                            action.payload.item,
+                            action.payload?.actionType ?? 'selected',
+                        ),
+                        listToRender: listToRender,
+                        inputValue: '',
+                        noMatch,
+                    };
+                }
+                return state;
             case 'InputKeyDownArrowDown':
             case 'InputKeyDownArrowUp': {
+                const focusedElement = document.activeElement;
+                if (focusedElement?.getAttribute('role') === 'combobox') {
+                    return {
+                        ...state,
+                        isExpanded: true,
+                        highlightedIndex:
+                            action.payload?.highlightedIndex ?? -1,
+                    };
+                }
+                return state;
+            }
+            case 'TabPressed': {
                 return {
                     ...state,
-                    isExpanded: true,
-                    highlightedIndex: action.payload?.highlightedIndex ?? -1,
+                    highlightedIndex: -1,
                 };
             }
 
             case 'FocusMovedOutSide': {
-                const { listToRender } = getListToRender({
-                    inputValue: state.inputValue,
-                    searchAttributes,
-                    maxRenderedDropdownElements,
-                    dropdownList,
-                    noMatchDropdownList,
-                    searchMatcher,
-                    showAllItemsInDropdown: true,
-                });
-
-                const shouldEmptySelectedItem =
-                    state.inputValue === '' && !!state.selectedItem;
-
-                const shouldAutomaticallySetSelectedItem =
-                    state.listToRender.length === 1 &&
-                    searchAttributes
-                        .map(
-                            searchAttribute =>
-                                state.listToRender[0][searchAttribute] ===
-                                state.selectedItem?.[searchAttribute],
-                        )
-                        .includes(false) &&
-                    state.highlightedIndex !== -1;
-
-                let selectedItem = state.selectedItem;
-
-                if (shouldEmptySelectedItem) {
-                    onChange?.(null);
-                    selectedItem = null;
-                } else if (shouldAutomaticallySetSelectedItem) {
-                    onChange?.(state.listToRender[0]);
-                    selectedItem = state.listToRender[0];
-                }
-
-                const inputValue = selectedItem
-                    ? selectedItem[searchAttributes[0]]
-                    : '';
                 return {
                     ...state,
                     isExpanded: false,
                     highlightedIndex: -1,
-                    inputValue,
-                    selectedItem,
-                    listToRender,
+                    inputValue: '',
                 };
             }
             case 'DropdownListPropUpdated': {
@@ -174,7 +176,8 @@ export const createReducer =
                         dropdownList,
                         noMatchDropdownList,
                         searchMatcher,
-                        showAllItemsInDropdown: !!state.selectedItem,
+                        showAllItemsInDropdown:
+                            state.inputValue?.trim().length === 0,
                     }),
                 };
             }

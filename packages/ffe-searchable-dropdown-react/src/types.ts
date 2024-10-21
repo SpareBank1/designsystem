@@ -14,9 +14,13 @@ export type StateChange =
     | 'FocusMovedOutSide'
     | 'ItemSelectedProgrammatically'
     | 'DropdownListPropUpdated'
-    | 'ItemOnClick';
+    | 'ItemOnClick'
+    | 'TabPressed'
+    | 'RemoveItem';
 
 export type SearchMatcher<Item extends Record<string, any>> = (
     inputValue: string,
     searchAttributes: Array<keyof Item>,
 ) => (item: Item) => boolean;
+
+export type ActionType = 'selected' | 'removed';

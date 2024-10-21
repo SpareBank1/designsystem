@@ -165,7 +165,7 @@ describe('SearchableDropdown', () => {
 
     it('should render custom elements', async () => {
         const user = userEvent.setup();
-        const CustomListItemBody = ({
+        const CustomOptionBody = ({
             item,
             isHighlighted,
         }: {
@@ -192,7 +192,7 @@ describe('SearchableDropdown', () => {
                 dropdownList={companies}
                 onChange={onChange}
                 searchAttributes={['organizationName', 'organizationNumber']}
-                listElementBody={CustomListItemBody}
+                optionBody={CustomOptionBody}
                 locale="nb"
             />,
         );

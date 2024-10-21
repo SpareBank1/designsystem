@@ -12,7 +12,7 @@ npm install --save ffe-searchable-dropdown-react
 
 Full documentation on searchable dropdown usage is available at https://design.sparebank1.no/komponenter/dropdown/#searchabledropdown.
 
-This package depends on `@sb1/ffe-form-react`, `@sb1/ffe-icons-react` and `@sb1/ffe-spinner-react`.
+This package depends on `@sb1/ffe-form-react`, `@sb1/ffe-icons-react`, `@sb1/ffe-chips-react` and `@sb1/ffe-spinner-react`.
 Make sure you import the less-files.
 
 ```javascript

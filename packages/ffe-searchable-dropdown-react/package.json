@@ -31,6 +31,7 @@
         "@sb1/ffe-form": "^30.0.14",
         "@sb1/ffe-icons-react": "^11.0.11",
         "@sb1/ffe-spinner-react": "^9.0.14",
+        "@sb1/ffe-chips-react": "^1.2.2",
         "@types/lodash.isequal": "^4.5.8",
         "classnames": "^2.3.1",
         "compute-scroll-into-view": "^3.1.0",
