@@ -1,0 +1,5 @@
+import{ae as t,af as i,ag as a,ah as m}from"./index-DCbZYFnR.js";import{useMDXComponents as s}from"./index-CcnH5Kt0.js";import{T as p,S as o}from"./TextCard.stories-g1d4Me90.js";import"./iframe-BhTgm0pz.js";import"../sb-preview/runtime.js";import"./index-RYns6xqu.js";import"./index-BwmuJAIN.js";import"./index-D-8MO0q_.js";import"./index-ar2LJKLv.js";import"./index-DrFu-skq.js";import"./index-Dejnh_W_.js";import"./WithCardAction-ZOiJjmag.js";import"./Title-BBwdN3B8.js";function n(e){const r={h1:"h1",p:"p",...s(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:p}),`
+`,t.jsx(r.h1,{id:"textcard",children:"TextCard"}),`
+`,t.jsx(r.p,{children:"Tekstkort er den enkleste korttypen. Den tilbyr alle underkomponenter (CardName, Title, Subtext, Text og CardAction) og plasserer dem i gitt rekkefølge nedover i kortet, med teksten midtstilt."}),`
+`,t.jsx(a,{of:o}),`
+`,t.jsx(m,{of:o})]})}function D(e={}){const{wrapper:r}={...s(),...e.components};return r?t.jsx(r,{...e,children:t.jsx(n,{...e})}):n(e)}export{D as default};
