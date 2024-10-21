@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@0.4.0...@sb1/ffe-messages-react@0.5.0) (2024-10-21)
+
+
+### Features
+
+* **ffe-messages-react:** initial release ([de1ba88](https://github.com/SpareBank1/designsystem/commit/de1ba8811ba9c34823fcfaf710a5c078255d8dc4))
+
+
+### BREAKING CHANGES
+
+* **ffe-messages-react:** This is not a real breaking change.
+just to start from version 1.0.0
+
+
+
+
+
 # [0.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@0.3.17...@sb1/ffe-messages-react@0.4.0) (2024-10-21)
 
 
