@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.3.4...@sb1/ffe-modals@0.4.0) (2024-10-21)
+
+
+### Features
+
+* **ffe-modals:** start from version 1.0.0 ([68136eb](https://github.com/SpareBank1/designsystem/commit/68136eb70f3ab5d97bcbaed48dbc332f9cdabf33))
+
+
+### BREAKING CHANGES
+
+* **ffe-modals:** This is not a real breaking change.
+just to start from version 1.0.0
+
+
+
+
+
 ## [0.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@0.3.3...@sb1/ffe-modals@0.3.4) (2024-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-modals

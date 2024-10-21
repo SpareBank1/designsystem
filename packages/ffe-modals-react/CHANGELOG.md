@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.5.11...@sb1/ffe-modals-react@0.6.0) (2024-10-21)
+
+
+### Features
+
+* **ffe-modals-react:** start from version 1.0.0 ([101b07d](https://github.com/SpareBank1/designsystem/commit/101b07d441e9e28a097f4750edc0f4646d2fa9e0))
+
+
+### BREAKING CHANGES
+
+* **ffe-modals-react:** This is not a real breaking change.
+just to start from version 1.0.0
+
+
+
+
+
 ## [0.5.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@0.5.10...@sb1/ffe-modals-react@0.5.11) (2024-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react
