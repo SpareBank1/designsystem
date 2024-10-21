@@ -1,0 +1,24 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as SystemMessageStories from './SystemMessage.stories.tsx';
+import { CheckList, CheckListItem } from "@sb1/ffe-lists-react";
+
+<Meta of={SystemMessageStories} />
+
+# SystemMessage
+
+Systemmeldinger skal bare brukes til viktige, midlertidige meldinger. De plasseres direkte under headeren og det skal helst bare brukes 1 per side.
+
+Bruk systemmelding:
+<CheckList>
+    <CheckListItem>Der meldingen skal vises i en gitt tidsperiode</CheckListItem>
+    <CheckListItem>Når det skal brukes til informasjon, som ikke krever en handling fra bruker</CheckListItem>
+</CheckList>
+
+Ikke bruk systemmelding:
+<CheckList>
+    <CheckListItem isCross={true}>Der det ikke gir mening at meldingen er rett under header</CheckListItem>
+    <CheckListItem isCross={true}>Der det skal vises mange meldinger samtidig</CheckListItem>
+</CheckList>
+
+<Canvas of={SystemMessageStories.Standard} />
+<Controls of={SystemMessageStories.Standard} />
