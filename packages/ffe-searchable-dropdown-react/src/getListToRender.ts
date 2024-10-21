@@ -46,12 +46,12 @@ export const getListToRender = <Item extends Record<string, any>>({
               trimmedInput,
               searchMatcher,
           ).slice(0, maxRenderedDropdownElements)
-        : dropdownList.slice(0, maxRenderedDropdownElements);
+        : dropdownList?.slice(0, maxRenderedDropdownElements);
 
     const listToRender = () => {
         if (showAllItemsInDropdown) {
             return dropdownList;
-        } else if (dropdownListFiltered.length) {
+        } else if (dropdownListFiltered?.length) {
             return dropdownListFiltered;
         } else if (noMatchDropdownList) {
             return noMatchDropdownList;
@@ -61,6 +61,6 @@ export const getListToRender = <Item extends Record<string, any>>({
 
     return {
         listToRender: listToRender(),
-        noMatch: !dropdownListFiltered.length,
+        noMatch: !dropdownListFiltered?.length,
     };
 };
