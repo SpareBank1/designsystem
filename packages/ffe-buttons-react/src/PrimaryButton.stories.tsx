@@ -12,7 +12,6 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 const meta: Meta<typeof PrimaryButton<any>> = {
     title: 'components/buttons/PrimaryButton',
     component: PrimaryButton,
-    tags: ['autodocs'],
     argTypes: {
         as: {
             options: ['a', 'button', 'custom'],

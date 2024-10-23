@@ -12,7 +12,6 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 const meta: Meta<typeof SecondaryButton<any>> = {
     title: 'components/buttons/SecondaryButton',
     component: SecondaryButton,
-    tags: ['autodocs'],
     argTypes: {
         as: {
             options: ['a', 'button', 'custom'],

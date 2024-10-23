@@ -1,0 +1,12 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as ActionButtonStories from './ActionButton.stories.tsx';
+import { ActionButton } from "@sb1/ffe-buttons-react";
+
+<Meta of={ActionButtonStories} />
+
+# ActionButton
+
+Brukes for svært høyt prioriterte handlinger (call to action), og der du trenger en knapp som skiller seg ut. Det skal som hovedregel kun være en ActionButton per side/view.
+
+<Canvas of={ActionButtonStories.Standard} />
+<Controls of={ActionButtonStories.Standard} />
