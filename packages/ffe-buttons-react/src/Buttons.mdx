@@ -1,0 +1,163 @@
+import { Meta } from '@storybook/blocks';
+import { CheckList, CheckListItem } from "@sb1/ffe-lists-react";
+import { Icon } from '@sb1/ffe-icons-react';
+import { ActionButton, PrimaryButton, SecondaryButton, TertiaryButton, ExpandButton, InlineExpandButton, ShortcutButton, TaskButton, BackButton } from '@sb1/ffe-buttons-react';
+import {
+    Table,
+    TableHead,
+    TableBody,
+    TableHeaderCell,
+    TableRow,
+    TableDataCell,
+} from '@sb1/ffe-tables-react';
+
+<Meta title="components/buttons/Buttons" />
+
+# Knapper
+
+## Bruk av knapper
+
+I SpareBank 1 har vi flere typer knapper og hvilken du skal bruke kommer an på situasjonen, og hvilke andre knapper som ligger i «nærheten». Felles for alle knappene er at de kan brukes i situasjoner der du vil gi brukerne muligheten til å utføre ulike typer handlinger i brukergrensesnittet. 
+
+Noen eksempler på scenarioer der knapper kan komme til nytte:
+
+-   Starte en prosess. F.eks. «Bli kunde», «Sjekk pris», «Meld skade»
+-   Gi en kommando til systemet. F.eks. «Skriv ut», «Last ned», «Betal», «Bestill»
+-   Beslutte noe. F.eks. «Kjøp», «Aksepter», «Overfør»
+-   Navigere i brukergrensesnittet. F.eks. «Neste», «Fortsett», «Søk»
+-   Endre modus eller visning. F.eks. «Redigér» for å gå til redigeringsmodus, «Vis flere» for å ekspandere en liste
+
+Knapper skal brukes der kundene utfører en handling. Der de skal navigere til andre sider og sider utenfor løsningen brukes [lenker](/komponenter/typografi/) istedenfor. Når du vil at brukeren skal ta et valg er det best å bruke [radioknapper](/komponenter/skjemaelementer/) eller [checkboxer](/komponenter/skjemaelementer/), for å så bekrefte med en knapp.
+
+### Gjør sånn:
+<CheckList>
+    <CheckListItem>Knappen skal brukes til å utføre en handling</CheckListItem>
+    <CheckListItem>Ha informativ og beskrivende tekst, ikon eller begge deler</CheckListItem>
+    <CheckListItem>Bruk verb i imperiativ form (unntak: konvensjoner som «neste»)</CheckListItem>
+    <CheckListItem>Ha så kort tekst som mulig</CheckListItem>
+</CheckList>
+
+### Ikke sånn:
+<CheckList>
+    <CheckListItem isCross={true}>Ha tekst som går over 2 linjer</CheckListItem>
+    <CheckListItem isCross={true}>Gjem knappen eller sett den som disabled</CheckListItem>
+    <CheckListItem isCross={true}>Ha flere primærknapper på en side</CheckListItem>
+    <CheckListItem isCross={true}>Bruk knapp til å navigere utenfor løsningen (bruk lenke istedenfor)</CheckListItem>
+    <CheckListItem isCross={true}>Bruk knapp til å la bruker ta valg (bruk checkbox/radioknapp istedenfor)</CheckListItem>
+</CheckList>
+
+## Deaktiverte knapper
+
+I SpareBank 1 bruker vi ikke deaktiverte versjoner av knappene (`disabled`). Istedenfor en deaktivert knapp, la knappen alltid være synlig og vis gode feilmeldinger hvis brukeren prøver å trykke på knappen før betingelsene for å bruke knappen er innfridd.
+
+
+## Valg av knapp
+
+I SpareBank 1 har vi kommandoknapper som kan brukes til alle typer handlinger, og spesielle knapper som kun skal brukes i spesifikke situasjoner.
+
+For å velge mellom kommandoknappene ActionButton, PrimaryButton, SecondaryButton og TertiaryButton, må du vurdere handlingens prioritet. Prioriteten vurderes kvalitativt basert på viktighet og frekvens:
+
+-   En handling som gjøres sjelden, men har svært høy viktighet enten for brukeren eller SpareBank 1, bør få høy eller svært høy prioritet. F.eks. knapper for å starte en prosess eller beslutte noe, som "Bli kunde", "Meld skade" og "Kjøp".
+-   En handling som har lav eller middels viktighet, men høy bruksfrekvens vil kunne få høy eller middels prioritet (men aldri svært høy). F.eks. knapper som er del av en prosess, som "Legg til godkjenning" og "Fortsett".
+-   En handling som sjelden brukes og har lav viktighet, men fortsatt må være tilgjengelig, vil som regel få lav prioritet. F.eks. å hente opp et klageskjema.
+
+Valg av kommandoknapp må også vurderes relativt avhengig av hvilke andre knapper som er i umiddelbar nærhet. F.eks. vil kanskje en lagre-knapp gis høy prioritet, mens avbryt-knappen ved siden av gis lav prioritet (selv om den brukes relativt ofte).
+
+<Table>
+    <TableHead>
+        <TableRow>
+            <TableHeaderCell scope="col">
+                Knapp
+            </TableHeaderCell>
+            <TableHeaderCell scope="col">
+                Bruksområde
+            </TableHeaderCell>
+        </TableRow>
+    </TableHead>
+    <TableBody>
+        <TableRow>
+            <TableDataCell>
+                <ActionButton onClick={f => f}>ActionButton</ActionButton>
+            </TableDataCell>
+            <TableDataCell>
+                Svært høyt prioriterte handlinger (call to action) som krever en
+                knapp som skiller seg ut fra de andre knappene. Det skal som
+                hovedregel kun være én ActionButton per side/view.
+            </TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <PrimaryButton onClick={f => f}>PrimaryButton</PrimaryButton>
+            </TableDataCell>
+            <TableDataCell>Høyt prioriterte handlinger.</TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <SecondaryButton onClick={f => f}>
+                    SecondaryButton
+                </SecondaryButton>
+            </TableDataCell>
+            <TableDataCell>
+                Middels prioriterte handlinger. Kan ha ikon.
+            </TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <TertiaryButton onClick={f => f}>TertiaryButton</TertiaryButton>
+            </TableDataCell>
+            <TableDataCell>
+                Lavt prioriterte handlinger. Kan ha ikon.
+            </TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <ExpandButton onClick={f => f} isExpanded={false}>
+                    ExpandButton
+                </ExpandButton>
+            </TableDataCell>
+            <TableDataCell>
+                Brukes kun for den spesifikke handlingen å ekspandere/kollapse
+                en seksjon.
+            </TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <InlineExpandButton onClick={f => f} isExpanded={false}>
+                    InlineExpandButton
+                </InlineExpandButton>
+            </TableDataCell>
+            <TableDataCell>
+                Brukes kun for den spesifikke handlingen å ekspandere/kollapse
+                en seksjon fra en linje med tekst.
+            </TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <ShortcutButton onClick={f => f}>ShortcutButton</ShortcutButton>
+            </TableDataCell>
+            <TableDataCell>
+                Brukes kun som snarvei for å navigere til et annet sted i
+                løsningen. Alternativ til <a href="#!/LinkText">Lenke</a>.
+            </TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <TaskButton icon={<Icon size="sm" fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NTQuMDAxLTQ1NC4wMDFoLTE2OHEtMTEuMDUgMC0xOC41MjUtNy40MTgtNy40NzUtNy40MTgtNy40NzUtMTguMzg0IDAtMTAuOTY2IDcuNDc1LTE4LjU4MXQxOC41MjUtNy42MTVoMTY4di0xNjhxMC0xMS4wNSA3LjQxOC0xOC41MjUgNy40MTgtNy40NzUgMTguMzg0LTcuNDc1IDEwLjk2NiAwIDE4LjU4MSA3LjQ3NXQ3LjYxNSAxOC41MjV2MTY4aDE2OHExMS4wNSAwIDE4LjUyNSA3LjQxOCA3LjQ3NSA3LjQxOCA3LjQ3NSAxOC4zODQgMCAxMC45NjYtNy40NzUgMTguNTgxdC0xOC41MjUgNy42MTVoLTE2OHYxNjhxMCAxMS4wNS03LjQxOCAxOC41MjUtNy40MTggNy40NzUtMTguMzg0IDcuNDc1LTEwLjk2NiAwLTE4LjU4MS03LjQ3NXQtNy42MTUtMTguNTI1di0xNjhaIi8+PC9zdmc+" />}>TaskButton</TaskButton>
+            </TableDataCell>
+            <TableDataCell>
+                Kan brukes som alternativ til en kommandoknapp for handlingen å
+                legge til noe.
+            </TableDataCell>
+        </TableRow>
+        <TableRow>
+            <TableDataCell>
+                <BackButton onClick={f => f}>Tilbake</BackButton>
+            </TableDataCell>
+            <TableDataCell>
+                Brukes bare der man vil gå tilbake til forrige steg/side
+            </TableDataCell>
+        </TableRow>
+    </TableBody>
+</Table>
+
+

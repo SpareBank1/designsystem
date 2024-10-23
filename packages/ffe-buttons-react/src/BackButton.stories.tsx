@@ -12,7 +12,6 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 const meta: Meta<typeof BackButton<any>> = {
     title: 'components/buttons/BackButton',
     component: BackButton,
-    tags: ['autodocs'],
     argTypes: {
         as: {
             options: ['a', 'button', 'custom'],

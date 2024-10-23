@@ -13,7 +13,6 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 const meta: Meta<typeof TaskButton<any>> = {
     title: 'components/buttons/TaskButton',
     component: TaskButton,
-    tags: ['autodocs'],
     argTypes: {
         as: {
             options: ['a', 'button', 'custom'],

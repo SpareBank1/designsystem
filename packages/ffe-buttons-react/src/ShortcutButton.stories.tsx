@@ -12,7 +12,6 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 const meta: Meta<typeof ShortcutButton<any>> = {
     title: 'components/buttons/ShortcutButton',
     component: ShortcutButton,
-    tags: ['autodocs'],
     argTypes: {
         as: {
             options: ['a', 'button', 'custom'],

@@ -14,7 +14,6 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 const meta: Meta<typeof InlineExpandButton<any>> = {
     title: 'components/buttons/InlineExpandButton',
     component: InlineExpandButton,
-    tags: ['autodocs'],
     argTypes: {
         as: {
             options: ['a', 'button', 'custom'],

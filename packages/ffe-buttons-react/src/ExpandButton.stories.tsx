@@ -5,7 +5,6 @@ import { ExpandButton } from './ExpandButton';
 const meta: Meta<typeof ExpandButton> = {
     title: 'components/buttons/ExpandButton',
     component: ExpandButton,
-    tags: ['autodocs'],
     argTypes: {},
 };
 export default meta;
