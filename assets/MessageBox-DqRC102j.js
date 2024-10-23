@@ -1,7 +1,0 @@
-import{ae as e,af as a,ag as m,ah as l}from"./index-CTTqSxYc.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{M as d,S as s}from"./MessageBox.stories-C0cV8WWR.js";import{C as h,a as r}from"./CheckListItem-J1TJmVlg.js";import"./iframe-TflJL6t2.js";import"../sb-preview/runtime.js";import"./index-RYns6xqu.js";import"./index-BwmuJAIN.js";import"./index-D-8MO0q_.js";import"./index-ar2LJKLv.js";import"./index-DrFu-skq.js";import"./MessageHeader-D-5XdHj2.js";import"./index-Dejnh_W_.js";import"./Content-CQCyX94A.js";import"./Icon-Dor7S2yd.js";function t(n){const o={h1:"h1",p:"p",...i(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(a,{of:d}),`
-`,e.jsx(o.h1,{id:"messagebox",children:"MessageBox"}),`
-`,e.jsx(o.p,{children:"Meldingsboksene skal inneholde informasjon som er nyttig og relevant for brukerne. De skal holdes konsise og ikke brukes til å forklare ting «man ikke finner noe annet sted til»."}),`
-`,e.jsx(o.p,{children:"Bruk meldingsbokser:"}),`
-`,e.jsxs(h,{children:[e.jsx(r,{children:"Når du trenger å informere kort om et tema"}),e.jsx(r,{children:"Der du vil utheve noe informasjon fra en større sammenheng"}),e.jsx(r,{children:"Når du har innhold som skal utheves, men som er selvforklarende uten kontekst"})]}),`
-`,e.jsx(m,{of:s}),`
-`,e.jsx(l,{of:s})]})}function S(n={}){const{wrapper:o}={...i(),...n.components};return o?e.jsx(o,{...n,children:e.jsx(t,{...n})}):t(n)}export{S as default};

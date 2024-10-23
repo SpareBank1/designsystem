@@ -1,0 +1,6 @@
+import{j as o}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as s}from"./index-CcnH5Kt0.js";import{ae as a,af as i,ag as p}from"./index-CoK0FF7v.js";import{C as m,S as t}from"./Collapse.stories-CTLEdIbu.js";import"./index-RYns6xqu.js";import"./iframe-BxR-jBJo.js";import"../sb-preview/runtime.js";import"./index-BwmuJAIN.js";import"./index-D-8MO0q_.js";import"./index-ar2LJKLv.js";import"./index-DrFu-skq.js";import"./index-Dejnh_W_.js";import"./ExpandButton-DFRzyEx2.js";import"./fixedForwardRef-BS3MIlRH.js";import"./Icon-Dor7S2yd.js";function n(r){const e={code:"code",h1:"h1",p:"p",...s(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(a,{of:m}),`
+`,o.jsx(e.h1,{id:"collapse",children:"Collapse"}),`
+`,o.jsxs(e.p,{children:["Komponent for å enkelt lage ekspanderbart område. Hvorvidt området er ekspandert eller ikke styres av konsumenten via property ",o.jsx(e.code,{children:"isOpen"}),`.
+Et callback kan gis via property `,o.jsx(e.code,{children:"onRest"})," som kjøres når transisjonen er ferdig."]}),`
+`,o.jsx(i,{of:t}),`
+`,o.jsx(p,{of:t})]})}function S(r={}){const{wrapper:e}={...s(),...r.components};return e?o.jsx(e,{...r,children:o.jsx(n,{...r})}):n(r)}export{S as default};
