@@ -1,22 +1,23 @@
 import React, { useId, ForwardedRef } from 'react';
 import { fixedForwardRef } from './fixedForwardRef';
 
-interface ListItemContainerProps<Item extends Record<string, any>> {
+interface OptionProps<Item extends Record<string, any>>
+    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
     item: Item;
     isHighlighted: boolean;
     isSelected: boolean;
     children: ({
         item,
         isHighlighted,
+        isSelected,
     }: {
         item: Item;
         isHighlighted: boolean;
+        isSelected: boolean;
     }) => React.ReactNode;
-    onClick: React.MouseEventHandler<HTMLDivElement>;
-    onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
 }
 
-function ListItemContainerWithForwardRef<Item extends Record<string, any>>(
+function OptionWithForwardRef<Item extends Record<string, any>>(
     {
         item,
         isHighlighted,
@@ -24,7 +25,8 @@ function ListItemContainerWithForwardRef<Item extends Record<string, any>>(
         children,
         onMouseEnter,
         onClick,
-    }: ListItemContainerProps<Item>,
+        ...rest
+    }: OptionProps<Item>,
     ref: ForwardedRef<any>,
 ) {
     const id = useId();
@@ -38,15 +40,15 @@ function ListItemContainerWithForwardRef<Item extends Record<string, any>>(
             ref={ref}
             onClick={onClick}
             className="ffe-searchable-dropdown__list-item-container"
+            {...rest}
         >
             {children({
                 item,
                 isHighlighted,
+                isSelected,
             })}
         </div>
     );
 }
 
-export const ListItemContainer = fixedForwardRef(
-    ListItemContainerWithForwardRef,
-);
+export const Option = fixedForwardRef(OptionWithForwardRef);

@@ -206,7 +206,7 @@ export const AccountSelector = <T extends Account = Account>({
                 onChange={handleAccountSelected}
                 searchAttributes={['name', 'accountNumber']}
                 locale={locale}
-                listElementBody={ListElementBody || AccountSuggestionSingle}
+                optionBody={ListElementBody || AccountSuggestionSingle}
                 ariaInvalid={_ariaInvalid}
                 searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                 selectedItem={selectedAccount}
