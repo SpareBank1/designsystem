@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@21.0.23...@sb1/ffe-searchable-dropdown-react@22.0.0) (2024-10-28)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Legger til multiselect. ([7bbb6ce](https://github.com/SpareBank1/designsystem/commit/7bbb6cee62d77111b8d90b346c4112f46b19dcb8))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** Endrer fra listElementBody til optionBody på eksisterende searchabledropdown
+
+
+
+
+
 ## [21.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@21.0.22...@sb1/ffe-searchable-dropdown-react@21.0.23) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

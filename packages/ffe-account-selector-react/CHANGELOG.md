@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@28.1.3...@sb1/ffe-account-selector-react@29.0.0) (2024-10-28)
+
+
+### Code Refactoring
+
+* **ffe-account-selector-react:** endret prop fra listelementBody til optionBody ([63970b9](https://github.com/SpareBank1/designsystem/commit/63970b9252d0ba8a70397caa08e5b43af2ba178b))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** endret navn fra listElementBody til optionBody. Endring i.fbm searchabledropdownmultiselect
+
+
+
+
+
 ## [28.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@28.1.2...@sb1/ffe-account-selector-react@28.1.3) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
