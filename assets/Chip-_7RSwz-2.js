@@ -1,4 +1,0 @@
-import{j as t}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as m}from"./index-CcnH5Kt0.js";import{ae as s,af as e,ag as a}from"./index-CoK0FF7v.js";import{C as p,S as r}from"./Chip.stories-CGY6lWsH.js";import"./index-RYns6xqu.js";import"./iframe-BxR-jBJo.js";import"../sb-preview/runtime.js";import"./index-BwmuJAIN.js";import"./index-D-8MO0q_.js";import"./index-ar2LJKLv.js";import"./index-DrFu-skq.js";import"./Chip-CzlxOE0a.js";import"./index-Dejnh_W_.js";import"./spacing-enBt7HlE.js";function i(o){const n={h1:"h1",...m(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{of:p}),`
-`,t.jsx(n.h1,{id:"chip",children:"Chip"}),`
-`,t.jsx(e,{of:r}),`
-`,t.jsx(a,{of:r})]})}function _(o={}){const{wrapper:n}={...m(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(i,{...o})}):i(o)}export{_ as default};
