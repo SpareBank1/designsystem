@@ -1,6 +1,8 @@
 @import 'theme';
 
 .ffe-chip {
+    --desired-height: 1.75rem;
+    --icon-size: 1.25rem;
     --border-width: 1px;
     --background-color: var(--ffe-v-chip-background-color);
     --border-color: var(--ffe-v-chip-border-color);
@@ -8,14 +10,18 @@
     --border-radius: 24px;
     --text-offset: 12px;
     --icon-offset: var(--ffe-spacing-xs);
-    --offset-y: calc(var(--ffe-spacing-2xs) - var(--border-width));
+    --offset-y: calc(
+        ((var(--desired-height) - var(--icon-size)) / 2 - var(--border-width))
+    );
     --space-between: var(--ffe-spacing-2xs);
 
     all: unset;
     display: grid;
     place-items: center;
     grid-template-columns: var(--text-offset) 1fr var(--text-offset);
-    grid-template-rows: var(--offset-y) auto var(--offset-y);
+    grid-template-rows: var(--offset-y) minmax(var(--icon-size), auto) var(
+            --offset-y
+        );
     border: var(--border-width) solid var(--border-color);
     background: var(--background-color);
     color: var(--text-color);
@@ -37,6 +43,7 @@
     &__label {
         margin: 0;
         grid-area: 2 e('/') 2 e('/') span 1 e('/') span 1;
+        line-height: 1;
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -83,16 +90,16 @@
 }
 
 .ffe-chip--md {
+    --desired-height: 2.5rem;
     --icon-offset: 12px;
     --text-offset: var(--ffe-spacing-sm);
-    --offset-y: calc(var(--ffe-spacing-xs) - var(--border-width));
     --space-between: var(--ffe-spacing-xs);
 }
 
 .ffe-chip--lg {
+    --desired-height: 3rem;
     --icon-offset: var(--ffe-spacing-sm);
     --text-offset: var(--ffe-spacing-md);
-    --offset-y: calc(12px - var(--border-width));
     --space-between: var(--ffe-spacing-xs);
 }
 
