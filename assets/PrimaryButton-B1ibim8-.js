@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as m,af as s,ag as a}from"./index-hGjA3QH2.js";import{P as p,S as n}from"./PrimaryButton.stories-CvzJN9fU.js";import"./index-RYns6xqu.js";import"./iframe-7ex1yG73.js";import"../sb-preview/runtime.js";import"./index-BwmuJAIN.js";import"./index-D-8MO0q_.js";import"./index-ar2LJKLv.js";import"./index-DrFu-skq.js";import"./PrimaryButton-C51bGnmP.js";import"./BaseButton-zBeW6ZG8.js";import"./fixedForwardRef-BDE7qUSg.js";import"./index-Dejnh_W_.js";function e(o){const r={h1:"h1",p:"p",...i(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{of:p}),`
+`,t.jsx(r.h1,{id:"primarybutton",children:"PrimaryButton"}),`
+`,t.jsx(r.p,{children:"For høyt prioriterte handlinger, som det også kan finnes flere av på en side/view."}),`
+`,t.jsx(s,{of:n}),`
+`,t.jsx(a,{of:n})]})}function S(o={}){const{wrapper:r}={...i(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(e,{...o})}):e(o)}export{S as default};
