@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { Locale } from '../types';
 import { texts } from '../i18n/texts';
@@ -15,3 +16,4 @@ export const AccountNoMatch: React.FC<AccountNoMatchProps> = ({
         <span>{value || texts[locale].NO_ACCOUNTS_FOUND}</span>
     </div>
 );
+*/

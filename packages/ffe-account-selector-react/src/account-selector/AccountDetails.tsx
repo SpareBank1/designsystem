@@ -1,22 +1,20 @@
 import React from 'react';
-import { accountFormatter, balanceWithCurrency } from '../util/format';
-import { Account, Locale } from '../types';
+import { accountFormatter } from '../format';
+import { Account } from '../types';
 import classnames from 'classnames';
 
 interface AccountDetailsProps {
     account?: Account;
-    locale: Locale;
     showBalance: boolean;
     ariaInvalid: React.ComponentPropsWithoutRef<'div'>['aria-invalid'];
 }
 
 export function AccountDetails({
     account,
-    locale,
     showBalance = true,
     ariaInvalid,
 }: AccountDetailsProps) {
-    const { balance, accountNumber, currencyCode } = account ?? {};
+    const { balance, accountNumber } = account ?? {};
     const isInvalidWithNoAccount =
         !account && (ariaInvalid === 'true' || ariaInvalid === true);
 
@@ -38,7 +36,7 @@ export function AccountDetails({
                     </div>
                     {showBalance && (
                         <div className="ffe-account-selector-single__details--right">
-                            {balanceWithCurrency(balance, locale, currencyCode)}
+                            {balance}
                         </div>
                     )}
                 </>

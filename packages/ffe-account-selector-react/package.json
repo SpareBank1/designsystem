@@ -30,14 +30,10 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-form": "^30.0.14",
-        "@sb1/ffe-form-react": "^21.1.20",
         "@sb1/ffe-formatters": "^5.0.0",
         "@sb1/ffe-icons-react": "^11.0.11",
         "@sb1/ffe-searchable-dropdown-react": "^22.0.2",
-        "@sb1/ffe-spinner-react": "^9.0.14",
         "classnames": "^2.3.1",
-        "react-auto-bind": "^0.4.2",
         "react-custom-scrollbars-2": "^4.3.0"
     },
     "devDependencies": {

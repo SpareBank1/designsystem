@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AccountSelector } from './AccountSelector';
 import { InputGroup } from '@sb1/ffe-form-react';
 import type { StoryObj, Meta } from '@storybook/react';
-import { fn } from '@storybook/test';
 import { SmallText } from '@sb1/ffe-core-react';
 
 const meta: Meta<typeof AccountSelector> = {
@@ -57,14 +56,13 @@ export const Standard: Story = {
         id: 'input-id',
         labelledById: 'label-id',
         locale: 'nb',
-        selectedAccount: undefined,
-        onReset: fn,
-        onAccountSelected: fn,
         formatAccountNumber: true,
         allowCustomAccount: false,
         onColoredBg: false,
     },
-    render: args => {
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
+
         return (
             <InputGroup
                 label="Velg konto"
@@ -72,7 +70,11 @@ export const Standard: Story = {
                 labelId={args.labelledById}
                 onColoredBg={args.onColoredBg}
             >
-                <AccountSelector {...args} />
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
             </InputGroup>
         );
     },
@@ -80,7 +82,8 @@ export const Standard: Story = {
 
 export const ShowBalance: Story = {
     args: { ...Standard.args, showBalance: true },
-    render: args => {
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
         return (
             <InputGroup
                 label="Velg konto"
@@ -88,7 +91,11 @@ export const ShowBalance: Story = {
                 labelId={args.labelledById}
                 onColoredBg={args.onColoredBg}
             >
-                <AccountSelector {...args} />
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
             </InputGroup>
         );
     },
@@ -96,7 +103,8 @@ export const ShowBalance: Story = {
 
 export const AllowCustomAccount: Story = {
     args: { ...Standard.args, allowCustomAccount: true },
-    render: args => {
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
         return (
             <InputGroup
                 label="Velg konto"
@@ -104,7 +112,11 @@ export const AllowCustomAccount: Story = {
                 labelId={args.labelledById}
                 onColoredBg={args.onColoredBg}
             >
-                <AccountSelector {...args} />
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
             </InputGroup>
         );
     },
@@ -112,7 +124,9 @@ export const AllowCustomAccount: Story = {
 
 export const NoFormatAccount: Story = {
     args: { ...Standard.args, formatAccountNumber: false },
-    render: args => {
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
+
         return (
             <InputGroup
                 label="Velg konto"
@@ -120,7 +134,11 @@ export const NoFormatAccount: Story = {
                 labelId={args.labelledById}
                 onColoredBg={args.onColoredBg}
             >
-                <AccountSelector {...args} />
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
             </InputGroup>
         );
     },
@@ -128,8 +146,9 @@ export const NoFormatAccount: Story = {
 
 export const ListElementBody: Story = {
     args: { ...Standard.args, formatAccountNumber: false },
-    render: args => {
-        const CustomListElementBody = ({
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
+        const CustomOptionBody = ({
             item,
             isHighlighted,
         }: {
@@ -166,7 +185,9 @@ export const ListElementBody: Story = {
             >
                 <AccountSelector
                     {...args}
-                    listElementBody={CustomListElementBody}
+                    optionBody={CustomOptionBody}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
                 />
             </InputGroup>
         );
@@ -175,7 +196,8 @@ export const ListElementBody: Story = {
 
 export const HideAccountDetails: Story = {
     args: { ...Standard.args, hideAccountDetails: false },
-    render: args => {
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
         return (
             <InputGroup
                 label="Velg konto"
@@ -183,7 +205,11 @@ export const HideAccountDetails: Story = {
                 labelId={args.labelledById}
                 onColoredBg={args.onColoredBg}
             >
-                <AccountSelector {...args} />
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
             </InputGroup>
         );
     },
@@ -194,7 +220,8 @@ export const PostListElement: Story = {
         ...Standard.args,
         postListElement: <span>Some text describing the list</span>,
     },
-    render: args => {
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
         return (
             <InputGroup
                 label="Velg konto"
@@ -202,7 +229,11 @@ export const PostListElement: Story = {
                 labelId={args.labelledById}
                 onColoredBg={args.onColoredBg}
             >
-                <AccountSelector {...args} />
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
             </InputGroup>
         );
     },

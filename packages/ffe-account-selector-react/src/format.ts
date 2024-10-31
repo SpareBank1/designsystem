@@ -1,14 +1,10 @@
 import { formatNumber } from '@sb1/ffe-formatters';
-import { Locale } from '../types';
-
-export const nb = 'nb';
-export const en = 'en';
-export const nn = 'nn';
+import { Locale } from './types';
 
 export const currencyAffixNOK = {
-    [nb]: 'kr',
-    [nn]: 'kr',
-    [en]: 'NOK',
+    nb: 'kr',
+    nn: 'kr',
+    en: 'NOK',
 };
 
 const getWeightedSumOfDigits = (accountNumber: string) => {

@@ -1,34 +1,12 @@
 import React, { AriaAttributes, useState } from 'react';
 import classNames from 'classnames';
-import {
-    AccountSuggestionSingle,
-    AccountSuggestionSingleProps,
-} from './AccountSuggestionSingle';
 import { AccountDetails } from './AccountDetails';
-import { Account } from '../types';
-import { formatIncompleteAccountNumber } from '../util/format';
+import { Account, Locale } from '../types';
+import { balanceWithCurrency, formatIncompleteAccountNumber } from '../format';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
-
-const getAccountsWithCustomAccounts = <T extends Account>({
-    accounts,
-    selectedAccount,
-    inputValue,
-}: {
-    accounts: T[];
-    selectedAccount: T | undefined;
-    inputValue: string;
-}) => {
-    const shouldAddSelectedAccountNotFoundInList =
-        selectedAccount &&
-        selectedAccount.name === inputValue &&
-        !accounts.find(
-            account => account.accountNumber === selectedAccount.accountNumber,
-        );
-
-    return shouldAddSelectedAccountNotFoundInList
-        ? [...accounts, selectedAccount]
-        : accounts;
-};
+import { getAccountsWithCustomAccounts } from './getAccountsWithCustomAccounts';
+import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting';
+import { texts } from '../texts';
 
 export interface AccountSelectorProps<T extends Account = Account> {
     /**
@@ -43,7 +21,7 @@ export interface AccountSelectorProps<T extends Account = Account> {
     accounts: T[];
     className?: string;
     id: string;
-    locale?: 'nb' | 'nn' | 'en';
+    locale?: Locale;
     /** Overrides default string for all locales. */
     noMatches?: {
         text: string;
@@ -61,13 +39,18 @@ export interface AccountSelectorProps<T extends Account = Account> {
     formatAccountNumber?: boolean;
     /** id of element that labels input field */
     labelledById?: string;
-    /*
+    /**
      * Allows selecting the text the user writes even if it does not match anything in the accounts array.
      * Useful e.g. if you want to pay to account that is not in yur recipients list.
      */
     allowCustomAccount?: boolean;
     /** Custom element to use for each item in the dropdown list */
-    listElementBody?: React.ComponentType<AccountSuggestionSingleProps<T>>;
+    optionBody?: React.ComponentType<{
+        item: T;
+        locale: Locale;
+        isHighlighted: boolean;
+        dropdownAttributes: (keyof T)[];
+    }>;
     /** Element to be shown below dropDownList */
     postListElement?: React.ReactNode;
     /** Sets aria-invalid on input field  */
@@ -97,7 +80,7 @@ export const AccountSelector = <T extends Account = Account>({
     onAccountSelected,
     allowCustomAccount = false,
     labelledById,
-    listElementBody: ListElementBody,
+    optionBody: OptionBody,
     postListElement,
     onReset,
     inputProps,
@@ -114,23 +97,6 @@ export const AccountSelector = <T extends Account = Account>({
         ? formatIncompleteAccountNumber
         : undefined;
 
-    /**
-     * This matcher function closely resembles the default one of SearchableDropdown,
-     * but it ignores all spaces and periods so that account number formatting won't mess with the search.
-     */
-    const searchMatcherIgnoringAccountNumberFormatting =
-        (searchString: string, searchAttributes: (keyof T)[]) => (item: T) => {
-            const cleanString = (value: unknown) =>
-                `${value}`
-                    .replace(/(\s|\.)/g, '') // Remove all spaces and periods
-                    .toLowerCase();
-            const cleanedSearchString = cleanString(searchString);
-            return searchAttributes.some(searchAttribute =>
-                cleanString(item[searchAttribute as keyof T]).includes(
-                    cleanedSearchString,
-                ),
-            );
-        };
     const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
         if (inputProps?.onChange) {
@@ -156,27 +122,14 @@ export const AccountSelector = <T extends Account = Account>({
         }
     };
 
-    const customNoMatch =
-        allowCustomAccount && inputValue.trim() !== ''
-            ? {
-                  dropdownList: [
-                      {
-                          name: formatter ? formatter(inputValue) : inputValue,
-                          accountNumber: '',
-                      } as T,
-                  ],
-              }
-            : noMatches;
-
-    const dropdownList = allowCustomAccount
-        ? getAccountsWithCustomAccounts({
-              selectedAccount,
-              accounts,
-              inputValue,
-          })
-        : accounts;
-
     const _ariaInvalid = rest['aria-invalid'] ?? ariaInvalid;
+
+    const dropdownListAccounts = accounts.map(it => ({
+        ...it,
+        balance: OptionBody
+            ? it.balance
+            : balanceWithCurrency(it.balance, locale, it.currencyCode),
+    }));
 
     return (
         <div
@@ -200,25 +153,48 @@ export const AccountSelector = <T extends Account = Account>({
                         : ['name', 'accountNumber']
                 }
                 postListElement={postListElement}
-                dropdownList={dropdownList}
-                noMatch={customNoMatch}
+                dropdownList={
+                    allowCustomAccount
+                        ? getAccountsWithCustomAccounts({
+                              selectedAccount,
+                              accounts: dropdownListAccounts,
+                              inputValue,
+                          })
+                        : dropdownListAccounts
+                }
+                noMatch={
+                    allowCustomAccount && inputValue.trim() !== ''
+                        ? {
+                              dropdownList: [
+                                  {
+                                      name: formatter
+                                          ? formatter(inputValue)
+                                          : inputValue,
+                                      accountNumber: '',
+                                  } as T,
+                              ],
+                          }
+                        : (noMatches ?? { text: texts[locale].noMatch })
+                }
                 formatter={formatter}
                 onChange={handleAccountSelected}
                 searchAttributes={['name', 'accountNumber']}
                 locale={locale}
-                optionBody={ListElementBody || AccountSuggestionSingle}
+                optionBody={OptionBody}
                 ariaInvalid={_ariaInvalid}
                 searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                 selectedItem={selectedAccount}
                 onOpen={onOpen}
                 onClose={onClose}
+                isEqual={(accountA, accountB) =>
+                    accountA.accountNumber === accountB.accountNumber
+                }
             />
 
             {!hideAccountDetails && (
                 <AccountDetails
                     ariaInvalid={_ariaInvalid}
                     account={selectedAccount}
-                    locale={locale}
                     showBalance={
                         showBalance &&
                         ['string', 'number'].includes(
