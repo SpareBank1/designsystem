@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { SearchableDropdownMultiSelect } from './SearchableDropdownMultiSelect';
 import type { StoryObj, Meta } from '@storybook/react';
 import { InputGroup } from '@sb1/ffe-form-react';
-import isEqual from 'lodash.isequal';
 import { SmallText } from '@sb1/ffe-core-react';
+import { TertiaryButton } from '@sb1/ffe-buttons-react';
 
 type Fruit = {
     color: string;
@@ -52,13 +52,9 @@ const fruits: Fruit[] = [
 const CustomOptionBody = ({
     item,
     isHighlighted,
-    dropdownAttributes,
-    locale,
 }: {
     item: Record<string, any>;
     isHighlighted: boolean;
-    dropdownAttributes: string[];
-    locale: any;
 }) => {
     return (
         <div
@@ -155,43 +151,6 @@ export const MultipleDataResults: Story = {
     },
 };
 
-export const ControlledState: Story = {
-    args: {
-        ...Standard.args,
-        dropdownAttributes: ['displayName', 'color', 'amount'],
-    },
-    render: function Render({ id, labelledById, ...args }) {
-        const [selectedOptions, setSelectedOptions] = useState<Fruit[]>([
-            fruits[0],
-        ]);
-
-        const handleDropdownChange = (
-            item: Fruit,
-            actionType: 'selected' | 'removed',
-        ) => {
-            const newList =
-                actionType === 'removed'
-                    ? selectedOptions?.filter(
-                          selectedItem => !isEqual(selectedItem, item),
-                      )
-                    : [...selectedOptions, item];
-            setSelectedOptions(newList);
-        };
-
-        return (
-            <InputGroup label="Velg frukt" labelId={labelledById} inputId={id}>
-                <SearchableDropdownMultiSelect<Fruit>
-                    id={id}
-                    labelledById={labelledById}
-                    {...args}
-                    selectedItems={selectedOptions}
-                    onChange={handleDropdownChange}
-                />
-            </InputGroup>
-        );
-    },
-};
-
 export const PreselectedItems: Story = {
     args: {
         ...Standard.args,
@@ -242,6 +201,61 @@ export const ShowNumberSelected: Story = {
                     {...args}
                 />
             </InputGroup>
+        );
+    },
+};
+
+export const ControlledState: Story = {
+    args: {
+        ...Standard.args,
+        dropdownAttributes: ['displayName', 'color', 'amount'],
+    },
+    render: function Render(args) {
+        const [selectedFruits, setSelectedFruits] = useState<Fruit[]>([
+            fruits[0],
+        ]);
+
+        return (
+            <div>
+                <InputGroup
+                    label="Velg frukt"
+                    inputId={args.id}
+                    labelId={args.labelledById}
+                >
+                    {inputProps => (
+                        <>
+                            <SearchableDropdownMultiSelect
+                                {...inputProps}
+                                {...args}
+                                selectedItems={selectedFruits}
+                                onChange={(fruit, actionType) => {
+                                    if (actionType === 'selected') {
+                                        setSelectedFruits(prevFruits =>
+                                            prevFruits.concat(fruit),
+                                        );
+                                    } else {
+                                        setSelectedFruits(prevFruits =>
+                                            prevFruits.filter(
+                                                it =>
+                                                    it.displayName !==
+                                                    fruit.displayName,
+                                            ),
+                                        );
+                                    }
+                                }}
+                            />
+                            <TertiaryButton
+                                type="button"
+                                onClick={() => {
+                                    setSelectedFruits(fruits);
+                                }}
+                            >
+                                Velg alle
+                            </TertiaryButton>
+                        </>
+                    )}
+                </InputGroup>
+            </div>
         );
     },
 };

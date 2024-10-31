@@ -6,7 +6,7 @@ type Action<Item extends Record<string, any>> = {
     type: StateChange;
     payload?: {
         inputValue?: string;
-        item?: Item;
+        items?: Item[];
         actionType?: 'selected' | 'removed';
         highlightedIndex?: number;
     };
@@ -29,12 +29,14 @@ export const createReducer =
         noMatchDropdownList,
         maxRenderedDropdownElements,
         searchMatcher,
+        isEqual,
     }: {
         dropdownList: Item[];
         searchAttributes: Array<keyof Item>;
         noMatchDropdownList: Item[] | undefined;
         maxRenderedDropdownElements: number;
         searchMatcher: SearchMatcher<Item> | undefined;
+        isEqual: (itemA: Item, itemB: Item) => boolean;
     }) =>
     (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
@@ -65,14 +67,15 @@ export const createReducer =
                 };
             }
             case 'RemoveItem': {
-                if (action.payload?.item) {
+                if (action.payload?.items) {
                     return {
                         ...state,
                         highlightedIndex: -1,
                         selectedItems: getNewList(
                             state.selectedItems,
-                            action.payload.item,
+                            action.payload.items,
                             'removed',
+                            isEqual,
                         ),
                         inputValue: '',
                     };
@@ -108,9 +111,22 @@ export const createReducer =
                     ...state,
                     isExpanded: !state.isExpanded,
                 };
+            case 'ItemSelectedProgrammatically':
+                if (action.payload?.items) {
+                    return {
+                        ...state,
+                        selectedItems: getNewList(
+                            state.selectedItems,
+                            action.payload.items,
+                            'selected',
+                            isEqual,
+                        ),
+                    };
+                }
+                return state;
             case 'ItemOnClick':
             case 'InputKeyDownEnter':
-                if (action.payload?.item) {
+                if (action.payload?.items) {
                     const { noMatch, listToRender } = getListToRender({
                         inputValue: '',
                         searchAttributes,
@@ -129,8 +145,9 @@ export const createReducer =
                                 : -1,
                         selectedItems: getNewList(
                             state.selectedItems,
-                            action.payload.item,
+                            action.payload.items,
                             action.payload?.actionType ?? 'selected',
+                            isEqual,
                         ),
                         listToRender: listToRender,
                         inputValue: '',

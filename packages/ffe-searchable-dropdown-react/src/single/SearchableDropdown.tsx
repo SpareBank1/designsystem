@@ -29,6 +29,7 @@ import { useIsExpandedCallbacks } from '../useIsExpandedCallbacks';
 import { useRefs } from '../useRefs';
 import { ToggleButton } from '../ToggleButton';
 import { ListBox } from '../ListBox';
+import isDeepEqual from 'lodash.isequal';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
@@ -92,6 +93,8 @@ export interface SearchableDropdownProps<Item extends Record<string, any>> {
     onOpen?: () => void;
     /**  Function used when dropdown closes */
     onClose?: () => void;
+    /** Custom compare between objects. Default is deep equals*/
+    isEqual?: (itemA: Item, itemB: Item) => boolean;
 }
 
 function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
@@ -116,6 +119,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         isLoading = false,
         onOpen,
         onClose,
+        isEqual = isDeepEqual,
         ...rest
     }: SearchableDropdownProps<Item>,
     ref: ForwardedRef<HTMLInputElement>,
@@ -364,6 +368,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             <ListBox ref={listBoxRef} isExpanded={state.isExpanded}>
                 {state.isExpanded && (
                     <Results
+                        isEqual={isEqual}
                         listToRender={state.listToRender}
                         OptionBody={ListItemBodyElement}
                         highlightedIndex={state.highlightedIndex}

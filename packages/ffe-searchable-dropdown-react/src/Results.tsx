@@ -3,7 +3,12 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 import { Option } from './Option';
 import { NoMatch } from './NoMatch';
 import { Locale } from './types';
-import isEqual from 'lodash.isequal';
+
+const isItemSelected = <Item extends Record<string, any>>(
+    isEqual: (itemA: Item, itemB: Item) => boolean,
+    item: Item,
+    selectedItems?: Item[],
+) => !!selectedItems?.some(selected => isEqual(item, selected));
 
 interface ResultProps<Item extends Record<string, any>> {
     noMatch?: {
@@ -32,13 +37,7 @@ interface ResultProps<Item extends Record<string, any>> {
     dropdownAttributes: (keyof Item)[];
     locale: Locale;
     onChange: (item: Item) => void;
-}
-
-function isItemSelected<Item extends Record<string, any>>(
-    item: Item,
-    selectedItems: Item[],
-): boolean {
-    return selectedItems.some(selected => isEqual(item, selected));
+    isEqual: (itemA: Item, itemB: Item) => boolean;
 }
 
 export function Results<Item extends Record<string, any>>({
@@ -52,6 +51,7 @@ export function Results<Item extends Record<string, any>>({
     locale,
     onChange,
     selectedItems,
+    isEqual,
 }: ResultProps<Item>) {
     return (
         <Scrollbars autoHeight={true} autoHeightMax={335}>
@@ -66,7 +66,11 @@ export function Results<Item extends Record<string, any>>({
             {listToRender.map((item, index) => {
                 return (
                     <Option
-                        isSelected={isItemSelected(item, selectedItems ?? [])}
+                        isSelected={isItemSelected(
+                            isEqual,
+                            item,
+                            selectedItems,
+                        )}
                         key={Object.values(item).join('-')}
                         ref={refs[index]}
                         isHighlighted={highlightedIndex === index}

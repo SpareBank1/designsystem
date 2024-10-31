@@ -30,6 +30,7 @@ function OptionWithForwardRef<Item extends Record<string, any>>(
     ref: ForwardedRef<any>,
 ) {
     const id = useId();
+
     return (
         // eslint-disable-next-line jsx-a11y/interactive-supports-focus
         <div
