@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as a,af as m,ag as s}from"./index-hnqzLvIg.js";import{B as p,S as r}from"./BackButton.stories-CeONQJY2.js";import"./index-RYns6xqu.js";import"./iframe-D-KuYr5w.js";import"../sb-preview/runtime.js";import"./index-BwmuJAIN.js";import"./index-D-8MO0q_.js";import"./index-ar2LJKLv.js";import"./index-DrFu-skq.js";import"./InlineBaseButton-DcOWGW58.js";import"./fixedForwardRef-BDE7qUSg.js";import"./index-Dejnh_W_.js";import"./Icon-Dor7S2yd.js";function e(o){const n={h1:"h1",p:"p",...i(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(a,{of:p}),`
+`,t.jsx(n.h1,{id:"backbutton",children:"BackButton"}),`
+`,t.jsx(n.p,{children:"Brukes der du vil gi brukerne muligheten til å navigere tilbake dit de var."}),`
+`,t.jsx(m,{of:r}),`
+`,t.jsx(s,{of:r})]})}function D(o={}){const{wrapper:n}={...i(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{D as default};

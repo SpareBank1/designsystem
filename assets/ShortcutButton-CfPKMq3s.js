@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as s,af as a,ag as m}from"./index-hnqzLvIg.js";import{S as p,a as r}from"./ShortcutButton.stories-CFLAmxDq.js";import"./index-RYns6xqu.js";import"./iframe-D-KuYr5w.js";import"../sb-preview/runtime.js";import"./index-BwmuJAIN.js";import"./index-D-8MO0q_.js";import"./index-ar2LJKLv.js";import"./index-DrFu-skq.js";import"./BaseButton-zBeW6ZG8.js";import"./fixedForwardRef-BDE7qUSg.js";import"./index-Dejnh_W_.js";import"./Icon-Dor7S2yd.js";function e(n){const o={h1:"h1",p:"p",...i(),...n.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{of:p}),`
+`,t.jsx(o.h1,{id:"shortcutbutton",children:"ShortcutButton"}),`
+`,t.jsx(o.p,{children:"Et alternativ til lenke der du ønsker å tilby en snarvei til et annet sted i løsningen."}),`
+`,t.jsx(a,{of:r}),`
+`,t.jsx(m,{of:r})]})}function b(n={}){const{wrapper:o}={...i(),...n.components};return o?t.jsx(o,{...n,children:t.jsx(e,{...n})}):e(n)}export{b as default};
