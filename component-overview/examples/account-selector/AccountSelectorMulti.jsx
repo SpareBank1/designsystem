@@ -1,11 +1,11 @@
 import { useState, useId } from 'react';
 import { AccountSelectorMulti } from '@sb1/ffe-account-selector-react';
-import { Label } from '@sb1/ffe-form-react';
+import { InputGroup } from '@sb1/ffe-form-react';
 
 () => {
-    const [value, setValue] = useState();
     const [selectedAccounts, setSelectedAccounts] = useState([]);
-    const id = useId();
+    const inputId = useId();
+    const labelId = useId();
 
     const accounts = [
         {
@@ -34,56 +34,28 @@ import { Label } from '@sb1/ffe-form-react';
         },
     ];
 
-    const onAccountSelected = acc => {
-        const filteredAccounts = selectedAccounts.filter(
-            a => a.accountNumber !== acc.accountNumber,
-        );
-
-        const accountAlreadySelectedAndShouldBeRemoved =
-            filteredAccounts.length !== selectedAccounts.length;
-
-        if (accountAlreadySelectedAndShouldBeRemoved) {
-            setSelectedAccounts(filteredAccounts);
-        } else {
-            setSelectedAccounts([...selectedAccounts, acc]);
-        }
-    };
-
-    const onBlur = () => {
-        setValue(selectedAccounts.map(acc => acc.name).join(', '));
-    };
-
-    const onFocus = () => {
-        setValue('');
-    };
-
-    const onSelectAll = () => {
-        selectedAccounts.length === accounts.length
-            ? setSelectedAccounts([])
-            : setSelectedAccounts(accounts);
-    };
-
-    const onReset = () => {
-        setValue('');
-        setSelectedAccounts([]);
-    };
     return (
-        <>
-            <Label htmlFor="account-selector-multi">Velg konto</Label>
+        <InputGroup label="Velg konto" inputId={inputId} labelId={labelId}>
             <AccountSelectorMulti
-                id={id}
-                locale="nb"
                 accounts={accounts}
-                onAccountSelected={onAccountSelected}
+                id={inputId}
+                formatAccountNumber={true}
                 selectedAccounts={selectedAccounts}
-                value={value}
-                onChange={val => setValue(val)}
-                showSelectAllOption={true}
-                onSelectAll={onSelectAll}
-                onBlur={onBlur}
-                onFocus={onFocus}
-                onReset={onReset}
+                onChange={(account, actionType) => {
+                    if (actionType === 'selected') {
+                        setSelectedAccounts(prevAccounts =>
+                            prevAccounts.concat(account),
+                        );
+                    } else {
+                        setSelectedAccounts(prevAccounts =>
+                            prevAccounts.filter(
+                                it =>
+                                    it.accountNumber !== account.accountNumber,
+                            ),
+                        );
+                    }
+                }}
             />
-        </>
+        </InputGroup>
     );
 };
