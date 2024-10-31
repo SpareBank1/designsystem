@@ -1,8 +1,8 @@
 export {
     SearchableDropdown,
-    SearchableDropdownProps,
-} from './SingleSelect/SearchableDropdown';
+    type SearchableDropdownProps,
+} from './single/SearchableDropdown';
 export {
     SearchableDropdownMultiSelect,
-    SearchableDropdownMultiSelectProps,
-} from './MultiSelect/SearchableDropdownMultiSelect';
+    type SearchableDropdownMultiSelectProps,
+} from './multi/SearchableDropdownMultiSelect';
