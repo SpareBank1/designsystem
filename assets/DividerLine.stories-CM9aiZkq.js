@@ -1,4 +1,0 @@
-import{R as o}from"./index-RYns6xqu.js";import{c as d}from"./index-Dejnh_W_.js";function a({className:r,...i}){return o.createElement("hr",{className:d("ffe-divider-line",r),"aria-hidden":"true",role:"presentation",...i})}a.__docgenInfo={description:"",methods:[],displayName:"DividerLine"};const p={title:"components/core/DividerLine",component:a,tags:["autodocs"]},e={args:{},render:r=>o.createElement(a,{...r})};var t,n,s;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`{
-  args: {},
-  render: args => <DividerLine {...args} />
-}`,...(s=(n=e.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};const l=["Standard"];export{e as Standard,l as __namedExportsOrder,p as default};

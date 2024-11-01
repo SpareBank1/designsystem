@@ -1,1 +1,0 @@
-import{R as e}from"./index-RYns6xqu.js";import{I as o}from"./InlineBaseButton-DcOWGW58.js";import{f as a}from"./fixedForwardRef-BDE7qUSg.js";function n(t,r){return e.createElement(o,{...t,ref:r,buttonType:"tertiary"})}const i=a(n);i.__docgenInfo={description:"",methods:[],displayName:"TertiaryButton"};export{i as T};

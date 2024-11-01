@@ -1,0 +1,1 @@
+import{R as e}from"./index-DJO9vBfz.js";import{c as i}from"./index-i5X67GZP.js";const a=({className:t,children:s,...m})=>e.createElement("li",{className:i("ffe-stylized-numbered-list__item",t),...m},e.createElement("div",{className:"ffe-stylized-numbered-list__item-content"},s));a.__docgenInfo={description:"",methods:[],displayName:"StylizedNumberedListItem"};export{a as S};

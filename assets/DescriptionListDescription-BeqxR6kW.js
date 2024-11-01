@@ -1,1 +1,0 @@
-import{R as i}from"./index-RYns6xqu.js";import{c as t}from"./index-Dejnh_W_.js";const o=({className:s,...e})=>i.createElement("dd",{className:t("ffe-description-list__description",s),...e});o.__docgenInfo={description:"",methods:[],displayName:"DescriptionListDescription"};export{o as D};
