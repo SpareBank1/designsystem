@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as i}from"./index-BrnU7xv7.js";import{ae as s,af as a,ag as m}from"./index-VAnQmgSr.js";import{A as p,S as r}from"./ActionButton.stories-CYwk_6-Y.js";import"./index-DJO9vBfz.js";import"./iframe-C0e107D4.js";import"../sb-preview/runtime.js";import"./index-DJdX7xnk.js";import"./index-D-8MO0q_.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";import"./BaseButton-DiVMmtVy.js";import"./fixedForwardRef-D76ij-MA.js";import"./index-i5X67GZP.js";function e(o){const n={h1:"h1",p:"p",...i(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{of:p}),`
+`,t.jsx(n.h1,{id:"actionbutton",children:"ActionButton"}),`
+`,t.jsx(n.p,{children:"Brukes for svært høyt prioriterte handlinger (call to action), og der du trenger en knapp som skiller seg ut. Det skal som hovedregel kun være en ActionButton per side/view."}),`
+`,t.jsx(a,{of:r}),`
+`,t.jsx(m,{of:r})]})}function B(o={}){const{wrapper:n}={...i(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{B as default};
