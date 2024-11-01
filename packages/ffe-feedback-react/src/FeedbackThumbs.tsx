@@ -1,6 +1,5 @@
 import React from 'react';
 import { txt } from './i18n/texts';
-import { ThumbUp, ThumbUpFill, ThumbDown, ThumbDownFill } from './icons';
 
 export type Thumb = 'THUMB_UP' | 'THUMB_DOWN';
 
@@ -24,18 +23,16 @@ export const FeedbackThumbs: React.FC<FeedbackThumbsProps> = ({
                 onClick={() => onClick('THUMB_UP')}
                 type="button"
             >
-                <ThumbUp className="ffe-feedback__thumb-icon" />
-                <ThumbUpFill className="ffe-feedback__thumb-icon--fill" />
+                <span className="ffe-icons ffe-icons--xl" />
             </button>
             <button
                 aria-label={txt[locale].ARIA_LABEL_THUMB_DOWN}
                 aria-describedby={headingId}
-                className="ffe-feedback__thumb"
+                className="ffe-feedback__thumb ffe-feedback__thumb--down"
                 onClick={() => onClick('THUMB_DOWN')}
                 type="button"
             >
-                <ThumbDown className="ffe-feedback__thumb-icon" />
-                <ThumbDownFill className="ffe-feedback__thumb-icon--fill" />
+                <span className="ffe-icons ffe-icons--xl" />
             </button>
         </div>
     );
