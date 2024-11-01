@@ -1,0 +1,197 @@
+import { Meta } from '@storybook/blocks';
+import { CheckList, CheckListItem } from "@sb1/ffe-lists-react";
+
+<Meta title="Universell utforming/Testing" />
+
+# Testing av universell utforming
+
+(under construction) Her finner du testveiledning for de lovpålagte uukravene
+
+## Introduksjon
+
+Det er viktig å kvalitetssikre implementeringen av Designsystemets komponenter i kontekst av siden.
+Dette betyr at selv om komponentene er grunnleggende utviklet for å imøtekomme WCAG-standarden, vil det være nødvendig å sjekke at alt fungerer som det skal når de ulike komponentene benyttes.
+På denne siden finner du en oversikt og gjennomgang av relevante WCAG testkriteria.
+Ikke-relevante kriterier vil foreløpig ikke være inkludert på denne siden.
+
+Hver enkelt komponent vil lenke direkte til testkriterie de må testes for.
+
+## Prinsipp 1: Mulig å oppfatte
+
+### Ikke-tekstlig innhold (1.1.1) 
+
+  - Inspiser koden.
+  - Hvis det ikke-tekstlige innholdet vil gi nyttig informasjon med kompenserende teknologi
+    som for eksempel skjermlesere, sjekk at det har tekstalternativ eller navn spesifisert i
+    koden (alt-tekst, aria-label, aria-labelledby, title, label, ...). Standard
+    HTML-punktlister trenger for eksempel ikke tekstalternativ for at kulepunktene skal presenteres riktig
+    med kompenserende teknologi. Se bare at standard ul- og li-elementer er brukt.
+  - Hvis det ikke-testlige innholdet er pynt eller ikke vil gi nyttig informasjon med 
+    kompenserende teknologi, sjekk at det er tilstrekkelig skjult for kompenserende teknologi 
+    i koden (alt-tekst som står tom, aria-hidden true, ...).
+  - Aktiver skjermleser.
+  - For ikke-tekstlig innhold som skal fanges opp av kompenserende teknologi, test at 
+    tekstalternativet eller navnet leses opp av skjermleseren. For standard HTML-punktlister,
+    sjekk at kulepunktene leses opp (typisk sier skjermleser for eksempel punkttegn).
+  - For innhold som skal være skjult, test at dette ikke leses opp.
+
+### Informasjon og relasjoner (1.3.1)
+
+#### Heading
+- Inspiser koden.
+- Sjekk om overskriften er kodet med enten standard HTML, spesifikt `h1` til og med `h6`.
+- Kontrollér at overskriftsnivået i koden er det samme som det visuelle nivået til overskriften i grensesnittet.
+- Sjekk at tittelen til tabellen aka tabelloverskriften ligger rett før tabellen uten tekst mellom tittel og tabell.
+- Sjekk at tabeltittelen er kodet med `caption`-elementet for å knytte den til tabellen kodemessig.
+- Kontrollér at tabelltittelen beskriver innholdet i tabellen på en god måte.
+
+#### Tabeller
+- Inspiser koden.
+- Kontrollér at tabellen er kodet med `table`-elementet og at overskriftscellene er kodet med `th`.
+
+- For komplekse tabeller kodet med med scope:
+  - `scope="col"` når overskriftscellen er overskrift for en kolonne.
+  - `scope="colgroup"` når overskriftscellen er overskrift for flere kolonner.
+  - scope="row" når overskriftscellen er overskrift for en rad.
+  - scope="rowgroup" når overskriftscellen er overskrift for flere rader.
+
+#### Lister
+  - Inspiser koden. 
+  - Se at komponenten er kodet som liste, med riktig listetype. Se også at de indre
+    elementene (`li`/`dt`/`dd`) ligger inne i de ytre elementene (`ul`/`ol`/`dl`).
+  - Aktiver skjermleser.
+  - Sjekk at det leses opp at komponenten er en liste og at alle liste-elementene leses
+    opp som en del av listen.
+
+### Meningsfylt rekkefølge (1.3.2)
+Sikre at leserekkefølgen på innhold er den samme med CSS skrudd av som vanlig visning.
+Dette betyr at rekkefølgen må være identisk, eller en rekkefølge som presenterer samme mening/funksjon.
+
+- Kontrollér rekkefølgen av innholdet på nettsiden.
+- Skru av CSS/stilark i nettleseren.
+- Se om rekkefølgen eller formålet med innholdet er det samme som med CSS/stilark skrudd på.
+
+
+
+### Bruk av farge (1.4.1)
+
+Observer komponenten i ulike tilstander. Hvis farge brukes som en måte til å
+formidle informasjon til brukeren må du sjekke at informasjonen også gis på andre måter.
+
+- Hvis informasjonen bare formidles med farger, sjekk at fargene skiller seg fra hverandre med en kontrast på minimum 3:1. 
+- Hvis brukerne må kunne identifisere en spesifikk farge for å forstå informasjonen, for eksempel om rammen på et inputfelt er grønn for gyldig eller rød for ugyldig, er det ikke nok med bare fargekontrasten. Da kreves det at vi har andre visuelle indikatorer i tillegg.
+
+
+### Kontrast (1.4.3)
+
+Test fargen på teksten i komponenten mot bakgrunnsfargen til komponenten (hex-kodene). 
+
+- Bruk en kontrastsjekker som f.eks. Color Contrast Analyser (TPGi). 
+- Hvis fargene endrer seg i ulike tilstander av komponenten, for eksempel ved hover, husk å teste disse også.
+- Tekststørrelsen i komponentene kan variere fordi den settes basert på brukerens nettleserinnstillinger. 
+- For å sikre at kravet er ivaretatt på alle ulike tekststørrelser baserer vi testene på det høyeste kontrastkravet (4.5:1).
+
+
+### Endring av tekststørrelse (1.4.4)
+
+Tekst kan bli endret til 200 % størrelse uten tap av innhold eller funksjon.
+
+  - Inspiser koden. 
+  - Sjekk at all tekst i komponenten er spesifisert i et skalerbart format, for eksempel rem. Dette gjelder også komponenten om du definerer høyde.
+  - Øk tekststørrelsen til 200% i nettleser-innstillingene. Metode avhenger av nettleser.
+    Hvis du bruker Chrome, øk tekststørrelsen på html-taggen til 200%. Det er viktig at endringen skjer på HTML-taggen, om du zoomer i body kan du potensielt få feil resultat.
+  - Se at teksten i komponenten endrer størrelse.
+  - Se at alt innhold og all funksjonalitet i komponenten fortsatt er tilgjengelig og
+    forståelig (innhold overlapper ikke annet innhold, innhold blir ikke kuttet så det
+    ikke er synlig).
+  - Sjekk i både desktop og mobilvisning. Bredde 320px kan brukes for å teste mobilvisning.
+
+Ved bruk av ord med litt lengde, i mobilvisning, kan innhold flyte ut over containeren til komponenten samt skjermen og intodusere horisontal skroll. Dette er et tolkningsspørsmål og skal ikke være brudd på krav 1.4.4. siden innholdet fortsatt er tilgjengelig og forståelig. Det anbefales likevel å forsøke å unngå dette så langt det er mulig.
+
+
+### Bilde av tekst (1.4.5)
+
+Unngå bilde av tekst med mindre dette kan direkte tilpasses av brukeren til deres behov.
+
+Logoer eller lignende med tilfredsstillende alt-tekst er akseptabelt.
+
+
+## Prinsipp 2: Mulig å betjene
+
+
+### Tastatur (2.1.1)
+
+Alt innhold skal være tilgjengelig med tastaturnavigasjon.
+
+Bruk tab-tasten til å navigere deg gjennom nettsiden og sørg for at interaktive elementer kan brukes med enter eller mellomromstasten.
+
+### Ingen tastaturfelle (2.1.2)
+
+Det skal være mulig å navigere seg ut av interaktive elementer når man benytter tastaturnavigasjon.
+
+- Bruk tastaturet og naviger til komponenten med tab-tasten.
+- Naviger deg videre til neste element på siden for å sjekke at fokuset ikke er «fanget» i komponenten.
+
+### Hoppe over blokker (2.4.1)
+
+Brukeren skal ha mulighet til å hoppe over gjentagende informasjon (typ header meny) med "hopp til hovedinnhold" og "hopp til navigasjon" lenker.
+
+### Sidetitler (2.4.2)
+
+
+### Fokusrekkefølge (2.4.3)
+
+
+### Formål med lenke i kontekst (2.4.4)
+
+
+### Flere måter (2.4.5)
+
+
+### Overskrifter og ledetekster (2.4.6)
+
+
+### Synlig fokus (2.4.7)
+
+
+## Prinsipp 3: Forståelig
+
+### Språk på siden (3.1.1)
+
+
+### Språk på deler av innhold (3.1.2)
+
+
+### Fokus (3.2.1)
+
+
+### Inndata (3.2.2)
+
+
+### Konsekvent navigering (3.2.3)
+
+
+### Konsekvent identifikasjon (3.2.4)
+
+
+### Identifikasjon av feil (3.3.1)
+
+
+### Ledetekster eller instruksjoner (3.3.2)
+
+
+### Forslag ved feil (3.3.3)
+
+
+### Forhindring av feil (3.3.4)
+
+
+## Prinsipp 4: Robust
+
+### Parsing/oppdeling (4.1.1)
+
+
+### Navn, rolle, verdi (4.1.2)
+
+
+

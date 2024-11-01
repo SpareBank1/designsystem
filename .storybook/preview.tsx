@@ -41,8 +41,15 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        viewMode: 'docs',
         docs: {
             components,
+        },
+        options: {
+            storySort: {
+                method: 'alphabetical',
+                order: ['Kom i gang', 'Profil', 'Universell utforming', 'Bidra', 'Om designsystemet', 'FAQ'],
+              },
         },
     },
     decorators: [

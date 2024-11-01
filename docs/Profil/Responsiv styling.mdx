@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Profil/Responsiv styling" />
+
+# Responsiv styling
+
+Løsningene våre skal fungere på alle skjermstørrelser
+
+## Responsive komponenter
+
+Alle komponenter i designsystemet er responsive og tilpasser seg skjermstørrelsen. Dette er viktig for at designsystemet skal fungere på alle enheter, i nettlesere så vel som i native applikasjoner.
+
+## Breakpoints
+
+Vi bruker et sett med breakpoints tilpasset de vanligste skjermstørrelsene for å definere hvordan innholdet skal se ut. Breakpointene er definert som Less-variabler i `ffe-core` og kan brukes i media queries.
+
+```less
+@breakpoint-sm: 480px;      // Mobil
+@breakpoint-md: 768px;      // Nettbrett
+@breakpoint-lg: 1024px;     // Laptop
+@breakpoint-xl: 1280px;     // Stor skjerm
+```
+
+## Mobile first
+
+Breakpointene kan i prinsippet brukes på mange forskjellige måter. Vi har valgt å bruke en mobile first-tilnærming, som betyr at vi først designer for mobil og deretter legger til stiler eller overstyringer for større skjermer, i motsetning til å designe store layouter først og deretter fjerne stiler på små skjermer. I Less/CSS-sammenheng betyr dette at vi alltid bruker `min-width` i media queries. På denne måten unngår vi også potensielle konflikter mellom `min-width` og `max-width`.
+
+Et klassisk eksempel er knapper. Her vil man ofte sette 100% bredde for å sikre stor nok klikkflate på mobil, og deretter overstyre denne med en fast bredde på større skjermer:
+
+```less
+.button { width: 100%; }
+
+@media (min-width: @breakpoint-md) {
+  .button { width: auto; }
+}
+```

@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Profil/Theming" />
+
+# Theming
+
+Gjør det mulig å tilpasse designsystemet til en annen visuell identitet
+
+## Regler for bruk
+
+Theming er lagt til for at partnerbanker skal kunne ta i bruk designsystemet med deres visuelle profil. Det skal ikke brukes til å gjøre tilpasninger på komponenter som brukes for SpareBank 1.
+
+## Bruk av theming
+
+Theming tas i bruk ved å overskrive verdiene som finnes i `theme.less`-filene i de ulike pakkene. 
+
+I FFE-core sin `theme.less`-fil defineres mange globale variabler som blir tatt i bruk i de andre pakkene. Skal du f.eks endre font kan du overskrive `--ffe-g-font` variablen i ffe-core. 
+
+For mer komponent-spesifikke ting må verdiene i komponentens egen `theme.less`-fil overskrives. Disse variablene er ikke globale og blir kun brukt i komponenten. 
+
+## Navngivning
+
+Alle theming-variabler bør ha et navn som beskriver hva variabelen brukes til - f.eks `link-color-hover`. Utenom det starter alle theming-variabler på `--ffe` og er skrevet i kun lowercase.
+
+`-g-` i navnet betyr at variabelen er global, brukes på tvers av flere ffe-pakker og ligger i ffe-core.
+
+`-v-` betyr at det er en ikke-global variabel, og som kun brukes i pakken den er definert.  

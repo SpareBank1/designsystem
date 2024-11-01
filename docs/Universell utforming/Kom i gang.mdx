@@ -1,0 +1,288 @@
+import { Meta } from '@storybook/blocks';
+import { CheckList, CheckListItem } from "@sb1/ffe-lists-react";
+
+<Meta title="Universell utforming/Kom i gang" />
+
+# Universell utforming
+
+Løsningene våre skal være tilgjengelige og brukervennlige for alle
+
+## Generelt
+
+Vi mennesker har et stort mangfold av ferdigheter, behov og ønsker. Behovene våre endrer seg også gjerne ut ifra situasjonen vi er i, omgivelsene rundt, dagsformen, alderen vår – og mye, mye mer.
+
+Kundene våre bruker løsningene på mange forskjellige måter og med mange ulike hjelpemidler. Det er viktig at vi tenker på det når vi designer og utvikler produktene og tjenestene.
+
+Noen har blant annet nedsatt syn, motorikk og bevegelighet, hørsel og kognisjon. Bufdir anslår at [mellom 15% og 18% av befolkningen har det som defineres som nedsatt funksjonsevne](https://bufdir.no/Statistikk_og_analyse/Nedsatt_funksjonsevne/Antall/), og Norges Blindeforbund anslår at [mer enn 320 000 personer lever med synshemninger i Norge](https://www.blindeforbundet.no/oyehelse-og-synshemninger/fakta-og-statistikk-om-synshemninger). De fleste av oss vil i løpet av livet oppleve en midlertidig funksjonsnedsettelse, for eksempel et brukket ben eller en annen skade som påvirker behovene våre.
+
+Mange bruker hjelpemidler eller tilrettelagt programvare. Løsningene våre vil for eksempel brukes med både skjermlesere, tastaturnavigering, talegjenkjenning, skjermforstørring og forskjellige input-enheter.
+
+Universell utforming handler om å lage løsningene på en måte som gjør at så mange som mulig kan bruke og ha glede av dem.
+
+## Bruk tydelig språk
+
+Vi leser og prosesserer tekst ulikt. Tydelig språk er viktig for at alle skal kunne forstå informasjonen.
+
+### Bruk informativ og beskrivende tekst i knapper og lenker
+
+Knapper og lenker bør ha tekst som gjør det enkelt å skjønne hvilken handling man utfører, eller hvor lenken peker.
+
+<div className="ffe-grid ffe-grid--inline sb1ds-dos-donts">
+    <div className="ffe-grid__row">
+        <div className="sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-6">
+            <div className="sb1ds-do-dont">
+                <h4>Gjør</h4>
+                <CheckList>
+                    <CheckListItem>Informativ og beskrivende tekst i knapper</CheckListItem>
+                </CheckList>
+                <div className="sb1ds-do-dont__example">
+                    <button className="ffe-button ffe-button--primary">
+                        <span className="ffe-button__label">Gå videre til betaling</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div className="sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-6">
+            <div className="sb1ds-do-dont">
+                <h4>Unngå</h4>
+                 <CheckList>
+                    <CheckListItem isCross={true}>Generisk, ukonkret tekst</CheckListItem>
+                </CheckList>
+                <div className="sb1ds-do-dont__example">
+                    <button className="ffe-button ffe-button--primary">
+                        <span className="ffe-button__label">Klikk her</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div className="ffe-grid__row">
+        <div className="sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-6">
+            <div className="sb1ds-do-dont">
+                <h4>Gjør</h4>
+                 <CheckList>
+                    <CheckListItem>Informativ og beskrivende tekst i lenker</CheckListItem>
+                </CheckList>
+                <div className="sb1ds-do-dont__example">
+                    <a href="#">Hvilket fond er best for meg?</a>
+                </div>
+            </div>
+        </div>
+        <div className="sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-6">
+            <div className="sb1ds-do-dont">
+                <h4>Unngå</h4>
+                 <CheckList>
+                    <CheckListItem isCross={true}>Generisk, ukonkret tekst</CheckListItem>
+                </CheckList>
+                <div className="sb1ds-do-dont__example">
+                    <a href="#">Les mer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+### Bruk informative og beskrivende overskrifter
+
+Mange brukere navigerer fra overskrift til overskrift med skjermlesere og tastaturnavigering.
+
+-   Overskrifter bør beskrive innholdet de representerer
+-   Vær obs på overskriftsnivå – `<h1>` er sidetittel
+
+### Ta semantisk HTML til hjelp
+
+Semantisk HTML tilbyr ekstra informasjon som kan gjøre innholdet lettere å forstå.
+
+<div className="sb1ds-do-dont">
+    <h4>Eksempel</h4>
+    <p className="sb1ds-do-dont__description ffe-small-text"><code>&lt;abbr&gt;</code> brukes for å beskrive forkortelser.</p>
+    <div className="sb1ds-do-dont__example">
+        <code>&lt;abbr title=&quot;November&quot;&gt;Nov&lt;/abbr&gt;</code>
+    </div>
+</div>
+
+### Tilby alternativer for ikke-tekstlig innhold
+
+Noen brukere kan ikke se bilder eller høre lyd. Derfor er det viktig å tilby alternativer til innhold som ikke er ren tekst.
+
+-   Videoer bør ha undertekst
+-   Bilder bør ha en beskrivende og informativ alt-tekst
+-   Unngå tekst i bilder - det blir ikke lest opp av skjermlesere
+
+## Vær visuelt tydelig
+
+Løsningene bør være enkle å forstå, uten behov for forkunnskaper eller forklaring.
+
+### Bruk gjerne kjente mønstre og konvensjoner
+
+Fokus på brukeropplevelse går hånd i hånd med universell utforming. Når vi bruker etablerte mønstre og konvensjoner som kundene kjenner igjen kan løsningene være intuitive selv om de er komplekse.
+
+### Sørg for god kontrast
+
+Teksten må ha tilstrekkelig kontrast mot bakgrunnen for å gi god nok lesbarhet. WCAG 2.0 (nivå AA) krever at kontrastforholdet er minst på 4.5:1 for stor tekst og 3.0:1 for liten tekst. Det finnes mange verktøy for å sjekke kontrasten, for eksempel [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
+
+Husk også på kontrastforholdene når du designer og utvikler for dark mode.
+
+### Sett maks 80 tegn som tekstbredde
+
+Det blir både lettere og mer effektivt å lese en tekst når tekstbredden er innenfor 80 tegn (inkludert mellomrom). Hvis tekstbredden går over dette, kan noen oppleve at det blir lettere å dette ut av teksten og tyngre å lese teksten.
+
+### Pass på at klikkflaten er stor nok
+
+Klikkbare elementer bør være lette å treffe, blant annet for brukere med motoriske utfordringer og brukere som benytter seg av musemulering eller andre input-hjelpemidler.
+
+-   Klikkbare elementer bør ha tilstrekkelig størrelse, ikke minst på mobilskjermer
+-   Avstanden mellom klikkbare elementer bør være stor nok til at faren for å klikke feil reduseres
+-   Radioknapper og sjekkbokser bør være tilknyttet et klikkbart `<label>`
+
+### Gi visuell feedback
+
+Visuell feedback hjelper brukerne med å forstå hvordan brukergrensesnittet reagerer på handlingene deres.
+
+-   `:hover`
+-   `:active`
+-   `:focus`
+
+### Ta høyde for skjermforstørring
+
+Skjermforstørrere er et hjelpemiddel for personer som er svaksynte, som forstørrer skjermbildet i forskjellig grad. Løsningene våre bør kunne forstørres uten at det hindrer bruk.
+
+-   Vær bevisst på hvordan whitespace påvirker opplevelsen i forstørret tilstand
+-   Vær obs på avstanden mellom elementer som henger sammen, for eksempel `<dt>` og `<dd>` i description list
+
+### Husk at noen forstørrer teksten
+
+Brukere skal kunne forstørre tekst inntil 200%, uten at det endrer grensesnittet på en sånn måte at det hindrer bruk.
+
+-   Vær obs på overflow
+-   Unngå hardkodet høyde på elementer der forstørret innhold tar opp mer plass enn containeren
+
+<div className="sb1ds-do-dont">
+    <h4>Eksempel</h4>
+    <p className="sb1ds-do-dont__description ffe-small-text">Hardkodet høyde kan by på problemer ved tekstforstørring, spesielt i kombinasjon med <code>overflow: hidden</code>.</p>
+    <div className="sb1ds-do-dont__example">
+        <div className="ffe-card-base ffe-text-card" style={{maxWidth: '300px', fontSize: '125%', marginNottom: 0}}>
+<p className="ffe-card-component ffe-card-component--card-name">Kortnavn</p>
+<p className="ffe-card-component ffe-card-component--title ffe-card-component--title--overflow-ellipsis">Tittel</p>
+<span className="ffe-card-component ffe-card-component--subtext">Subtext er grå</span>
+<p className="ffe-card-component ffe-card-component--text" style={{height: '115px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+    </div>
+</div>
+
+## Skriv semantisk HTML
+
+Semantisk HTML hjelper både mennesker og maskiner med å forstå strukturen i websider.
+
+### Bruk tagger som beskriver innholdet
+
+De aller fleste HTML-tagger har en semantisk betydning som beskriver dataene de inneholder. Det gjør det lettere å tolke både strukturen og innholdet for skjermlesere og andre hjelpemidler.
+
+#### Eksempler
+
+-   `<nav>` - Navigasjon
+-   `<address>` - Kontaktinformasjon
+-   `<main>` - Hovedinnhold på en side
+
+MDN har en [fullstendig liste over HTML-elementer og hvordan de brukes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+
+### Bruk ikke-semantiske elementer kun til layout, eller beskriv de med ARIA-attributter
+
+`<div>` og `<span>` er HTML-elementer som ikke har noen semantisk betydning. Derfor egner de seg til bruk som containere for andre HTML-elementer, men de kan også brukes som innholdscontainere i kombinasjon med ARIA-attributter som beskriver innholdet.
+
+### Bruk ARIA-attributter
+
+WAI-ARIA tilbyr mange attributter som kan brukes for å gjøre innholdet mer tilgjengelig. For eksempel:
+
+-   Widgeter som ikke har tilsvarende HTML-elementer
+    -   `<div role=”tablist”>`
+-   Tilstand/state
+    -   `aria-checked`
+    -   `aria-disabled`
+    -   `aria-expanded`
+-   Skjema
+    -   `aria-required`
+    -   `aria-errormessage`
+
+#### Bruk semantiske HTML-tagger i stedet, om mulig
+
+En del ARIA-attributter har samme betydning som semantiske HTML-elementer. I de tilfellene bør du velge HTML-elementene. For eksempel:
+
+-   `<main>` fremfor `<div role="main">`
+-   `<button>` fremfor `<input role="button">`
+
+[ARIA er grundig dokumentert hos MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
+
+### Vær obs på rekkefølgen på overskrifter
+
+-   `<h1>` er sidetittel – bruk bare én `<h1>` på hver side
+-   `<h2>` - `<h6>` er de resterende nivåene
+-   Unngå å hoppe over nivåer
+
+<div className="ffe-grid ffe-grid--inline sb1ds-dos-donts">
+    <div className="ffe-grid__row">
+        <div className="sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-6">
+            <div className="sb1ds-do-dont">
+                <h4>Gjør</h4>
+                 <CheckList>
+                    <CheckListItem>Ranger overskrifter i riktig rekkefølge</CheckListItem>
+                </CheckList>
+                <div className="sb1ds-do-dont__example">
+                    <pre><code>
+&lt;h1&gt;Sidetittel&lt;/h1&gt;<br/>
+&nbsp;&nbsp;&lt;h2&gt;Niv&aring; 2&lt;/h2&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;<br/>
+&nbsp;&nbsp;&lt;h2&gt;Niv&aring; 2&lt;/h2&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Niv&aring; 4&lt;/h4&gt;<br/>
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+        <div className="sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-6">
+            <div className="sb1ds-do-dont">
+                <h4>Unngå</h4>
+                 <CheckList>
+                    <CheckListItem isCross={true}>Unngå å hoppe over overskriftsnivåer</CheckListItem>
+                </CheckList>
+                <div className="sb1ds-do-dont__example">
+                    <pre><code>
+&lt;h1&gt;Sidetittel&lt;/h1&gt;<br/>
+&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;<br/>
+&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Niv&aring; 5&lt;/h5&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Niv&aring; 5&lt;/h5&gt;<br/>
+&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h6&gt;Niv&aring; 6&lt;/h6&gt;<br/>
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+### Lenker eller knapper?
+
+-   Knapper utfører en funksjon
+-   Lenker tar deg videre til en annen side
+
+### Bilder
+
+-   Bruk en beskrivende og informativ alt-tekst
+-   Bilder som brukes til ren dekorasjon kan ha tomt alt-attributtt
+-   Unngå tekst i bilder
+
+## Nyttige verktøy
+
+Browser-plugins, validering og andre automatiske verktøy kan gi verdifull informasjon underveis i utviklingen.
+
+-   [Axe](https://www.deque.com/axe/)
+-   [Wave](https://wave.webaim.org/)
+-   [Accessibility insights](https://accessibilityinsights.io/)
+-   [Colour Contrast Check](https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333)
+-   [Funkify](https://www.funkify.org/)
+-   [W3C Markup Validation](https://validator.w3.org/)
+-   [WAI valideringsverktøy](https://www.w3.org/WAI/ER/tools/)
+-   [Kontrastsjekk](https://webaim.org/resources/contrastchecker/)
+-   [WAVE Accessibility Evaluation Tool](https://wave.webaim.org/)

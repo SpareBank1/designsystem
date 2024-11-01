@@ -1,0 +1,77 @@
+import { Meta } from '@storybook/blocks';
+import { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, Paragraph, StrongText, SmallText, MicroText } from '@sb1/ffe-core-react';
+
+<Meta title="Profil/Spacing" />
+
+# Spacing
+
+Luft i og mellom komponentene er en viktig ingrediens i det visuelle designet
+
+## Bruk av spacing
+Spacing er viktig for å gi luft i og mellom komponentene.
+
+Vi bruker variabler basert på [8pt grid](https://spec.fm/specifics/8-pt-grid) for å definere spacing. På denne måten sikrer vi en forutsigbar skalering fremfor å overlate det til tilfeldighetene.
+
+## Variabler
+
+Disse Less-variablene kan brukes til å definere `margin` og `padding` i og rundt komponenter og innhold.
+
+<table class="ffe-table">
+    <tr class="ffe-table__row">
+        <th class="ffe-table__heading" scope="col">Variabel</th>
+        <th class="ffe-table__heading" scope="col">Verdi</th>
+        <th class="ffe-table__heading" scope="col">Eksempel</th>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>Base value</code></td>
+        <td class="ffe-table__cell">8px</td>
+        <td></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-xs</code></td>
+        <td class="ffe-table__cell">8px</td>
+        <td>
+            <div class="sb1ds-spacing-example sb1ds-spacing-example--xs"></div>
+        </td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-sm</code></td>
+        <td class="ffe-table__cell">16px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--sm"></div></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-md</code></td>
+        <td class="ffe-table__cell">24px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--md"></div></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-lg</code></td>
+        <td class="ffe-table__cell">32px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--lg"></div></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-xl</code></td>
+        <td class="ffe-table__cell">40px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--xl"></div></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-2xl</code></td>
+        <td class="ffe-table__cell">48px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--2xl"></div></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-3xl</code></td>
+        <td class="ffe-table__cell">64px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--3xl"></div></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-4xl</code></td>
+        <td class="ffe-table__cell">80px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--4xl"></div></td>
+    </tr>
+    <tr class="ffe-table__row">
+        <td class="ffe-table__cell"><code>@ffe-spacing-5xl</code></td>
+        <td class="ffe-table__cell">160px</td>
+        <td><div class="sb1ds-spacing-example sb1ds-spacing-example--5xl"></div></td>
+    </tr>
+</table>

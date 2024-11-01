@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     stories: [
         '../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)',
         '../packages/**/*.@(mdx)',
+        '../docs/**/*.@(mdx)',
     ],
     addons: [
         getAbsolutePath('@storybook/addon-links'),

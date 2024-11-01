@@ -1,0 +1,194 @@
+import { Meta } from '@storybook/blocks';
+import { Icon } from '@sb1/ffe-icons-react';
+
+<Meta title="Profil/Ikoner" />
+
+{/* import andreMerkevarer from "../../../static/img/ikoner/andre-merkevarer.png"
+import darkMode from "../../../static/img/ikoner/dark-mode.png"
+import lightMode from "../../../static/img/ikoner/light-mode.png"
+import materialSymbols from "../../../static/img/ikoner/material-symbols.png"
+import narBrukerViBilder from "../../../static/img/ikoner/nar-bruker-vi-bilder.png"
+import narBrukerViIkoner from "../../../static/img/ikoner/nar-bruker-vi-ikoner.png"
+import narBrukerViIllustrasjoner from "../../../static/img/ikoner/nar-bruker-vi-illustrasjoner.png"
+import konsekventBruk1 from "../../../static/img/ikoner/konsekvent-bruk1.png"
+import konsekventBruk2 from "../../../static/img/ikoner/konsekvent-bruk2.png" */}
+
+# Ikoner
+
+Ikonene skal hjelpe brukeren med å raskt finne og skille mellom ulikt innhold
+
+## Ikoner hjelper kunden å finne fram
+Ikoner brukes for å gjøre det enkelt for kunden å navigere i de digitale flatene våre. Ikonene representerer funksjoner, verktøy eller handlinger og visualiserer funksjonalitet.
+
+{/* <img src={narBrukerViIkoner} alt="Illustrasjon av hvordan vi bruker ikoner i mobilbanken" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+## Ikonbiblioteket Material Symbols
+Ikonene vi bruker kommer fra ikonbiblioteket Material Symbols. De passer godt til våre andre designelementer.
+
+Det skal ikke lages ikoner utover de ikonene som finnes i dette ikonbiblioteket.
+
+En oversikt over ikonene og navn på ikonene finner du her: https://fonts.google.com/icons?icon.style=Rounded.
+
+Du får også en oversikt over ikonene ved å bruke en plug in som heter «Material Symbols» i Figma. [Les mer om hvordan du bruker ikonene i designsystemet](/komponenter/ikoner/) under komponenter.
+
+{/* <img src={materialSymbols} alt="Illustrasjon av mye brukte ikoner fra Material symbols" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+## Spesifikasjoner
+Når vi bruker ikoner skal disse spesifikasjonene følges:
+
+### Stil
+- Rounded
+
+### Fyll
+- Av som standard
+
+### Tykkelser
+- 300
+- 400
+- 500
+
+### Farger
+- Light mode: Vann 100%, Fjell 100% og Hvit som standard
+- Dark mode: Vann 70%, Vann 30% og Svart som standard
+
+### Størrelser
+- sm: 20x20 px
+- md: 24x24 px
+- lg: 40x40 px
+- xl: 48x48 px
+
+### Grade
+- Default (0) som standard
+
+## Eksempel på light mode og dark mode
+
+### Light mode
+{/* <img src={lightMode} alt="Illustrasjon av hvordan vi bruker ikoner i light mode" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+### Dark mode
+{/* <img src={darkMode} alt="Illustrasjon av hvordan vi bruker ikoner i dark mode" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+## Ikoner fra andre merkevarer
+Andre merkevarer slik som Facebook, Twitter, LinkedIn, Apple Pay og Google Pay (for å nevne noen), har sine egne ikoner og retningslinjer for bruk av disse. Bruk deres ikoner, og sjekk at deres retningslinjer følges.
+
+{/* <img src={andreMerkevarer} alt="Illustrasjon av vi bruker ikoner/logoer fra andre merkevarer" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+## Konsekvent bruk
+Bruk samme ikon for innhold som har samme funksjonalitet. Det hjelper kundene med å enklere orientere seg og kjenne igjen funksjonalitet på tvers av sidene.
+
+Det finnes blant annet lovkrav rundt dette, som sier at «Elementer som har samme funksjonalitet på tvers av flere sider er utformet likt». [Les mer om lovkravet på uu-tilsynets hjemmeside](https://www.uutilsynet.no/wcag-standarden/324-konsekvent-identifikasjon-niva-aa/115).
+
+Under ser vi at knappen for innstillinger har et ikon på «Min økonomi» og et annet ikon på «Oversikt».
+
+{/* <img src={konsekventBruk1} alt="Eksempel hvor det er brukt ulikt ikon for å kommunisere samme funksjonalitet" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+Siden begge knappene leder til samme type funksjonalitet bør vi her bruke samme ikon.
+
+{/* <img src={konsekventBruk2} alt="Eksempel hvor det er brukt likt ikon for å kommunisere samme funksjonalitet" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+### Mest brukte ikoner
+Her kommer en oversikt over våre mest brukte ikoner og hva slags funksjon de skal brukes til.
+
+{/* <IconsUseCaseList>
+    <IconsUseCaseListItem
+        name="settings"
+        description="Brukes til det som fører til innstillinger."
+        icon={<Icon
+            size="lg"
+            fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik00MjkuNzQ0LTEwMC4wMDFxLTE0LjEwMiAwLTI0Ljg1OC05LjI0NC0xMC43NTYtOS4yNDMtMTIuOTEtMjMuMTRsLTEyLjc0NC04OC4zODVxLTE5LjA1MS02LjQ2Mi00MC40NzUtMTguNTktMjEuNDIzLTEyLjEyOS0zNy4yOTUtMjUuNzdsLTgwLjk1IDM2LjQ4OHEtMTMuNTYzIDUuNzQzLTI3LjE5MSAxLjI4Mi0xMy42MjgtNC40NjItMjEuMTkyLTE3LjIwNWwtNTAuNjE1LTg4Ljk3NHEtNy41NjQtMTIuNzQzLTQuMzg0LTI2LjQ0OCAzLjE3OS0xMy43MDUgMTQuOTc0LTIyLjY3OWw3My4wNTEtNTQuMzMzcS0xLjc5NS0xMC0yLjU3Ny0yMS4zMDh0LS43ODItMjEuMzA4cTAtOS42MTYuNzgyLTIwLjg2Ljc4Mi0xMS4yNDMgMi41NzctMjIuNTI2bC03My4wNTEtNTQuMzMzcS0xMS43OTUtOC45NzQtMTQuNzgyLTIyLjg3MS0yLjk4Ny0xMy44OTcgNC41NzctMjYuNjQxbDUwLjIzLTg3LjgycTcuNTY0LTEyLjM1OCAyMS4xOTItMTcuMDEydDI3LjE5MSAxLjA5bDgwLjU2NSAzNS44NDZxMTcuMDI2LTEzLjc2OSAzNy43ODMtMjUuNzA1IDIwLjc1Ni0xMS45MzcgMzkuOTg4LTE4LjExNmwxMy4xMjgtODkuMDUycTIuMTU0LTEzLjg5NyAxMi45MS0yMy4xNCAxMC43NTYtOS4yNDQgMjQuODU4LTkuMjQ0aDEwMC41MTJxMTQuMTAyIDAgMjQuODU4IDkuMjQ0IDEwLjc1NiA5LjI0MyAxMi45MSAyMy4xNGwxMi43NDQgODguNzdxMjAuNzE4IDcuNjE1IDQwLjI5NSAxOC41NzcgMTkuNTc4IDEwLjk2MiAzNi4zMjEgMjUuNTI2bDgyLjQ4OC0zNS44NDZxMTMuNTY0LTUuNzQ0IDI2Ljk4Ny0xLjA5IDEzLjQyMiA0LjY1NCAyMC45ODYgMTcuMDEybDUwLjY0MSA4OC4yMDVxNy41NjQgMTIuNzQzIDQuMzg0IDI2Ljc4MS0zLjE3OSAxNC4wMzgtMTQuOTc0IDIyLjM0NmwtNzQuNTkgNTQuNDFxMi41NjQgMTEuMTggMy4wOSAyMi4wMzkuNTI2IDEwLjg1OS41MjYgMjAuODg1IDAgOS42NDEtLjcxOCAyMC4yOTUtLjcxOCAxMC42NTQtMy4xMDMgMjIuNzMxbDczLjQzNiA1NC4zMDhxMTEuNzk1IDguMzA4IDE1LjE2NyAyMi4zNDYgMy4zNzEgMTQuMDM4LTQuMTkzIDI2Ljc4MWwtNTAuMTc5IDg4LjU4OXEtNy44MiAxMi43NDQtMjEuNjQgMTcuMjA1LTEzLjgyIDQuNDYxLTI3LjEyNy0xLjI4MmwtODEuMTgxLTM2LjQ4OHEtMTcuNDEgMTQuNDExLTM3IDI2LjI5NnQtMzkuNjE2IDE4LjA2NGwtMTIuNzQ0IDg4Ljc3cS0yLjE1NCAxMy44OTctMTIuOTEgMjMuMTQtMTAuNzU2IDkuMjQ0LTI0Ljg1OCA5LjI0NEg0MjkuNzQ0Wm04LjM1OS01MC4yNTVoODMuMDc3bDE0LjM4NC0xMTAuMTI5cTMxLjQzNi04IDU4LjI2OS0yMy40NzQgMjYuODM0LTE1LjQ3NCA1MS40NDktMzkuNDQ5bDEwMi43NjkgNDQuMDc3IDM5Ljc5NS02OS44OTctOTAuNTY0LTY3LjI4MnE0LjMzMy0xNy4wMjYgNi40NzQtMzIuNDg4IDIuMTQxLTE1LjQ2MSAyLjE0MS0zMS4xMDIgMC0xNi4yODItMS45MzYtMzEuMzU5LTEuOTM1LTE1LjA3Ny02LjY3OS0zMS40NjFsOTEuMzMzLTY4LjA1Mi0zOS43OTQtNjkuODk3LTEwMy45MjQgNDQuMjgycS0yMC43NDMtMjIuOTQ5LTQ5LjkzNi00MC40ODctMjkuMTkyLTE3LjUzOS01OS43ODEtMjIuNjQxbC0xMy4yODMtMTEwLjEyOWgtODMuNTg5TDQyNS4wNzctNzAwcS0zMi4zNTkgNi44Mi01OS42NDEgMjIuNDg3LTI3LjI4MiAxNS42NjctNTEuMjMxIDQwLjQzNmwtMTAzLjAyNi00My42OTItMzkuNzk0IDY5Ljg5NyA5MC40MzUgNjYuNjkycS00LjU4OSAxNS4zMDgtNi43OTQgMzEuMzA4LTIuMjA2IDE2LTIuMjA2IDMzLjI1NyAwIDE2LjI4MiAyLjIwNiAzMS44OTcgMi4yMDUgMTUuNjE1IDYuNDEgMzEuMzA4bC05MC4wNTEgNjcuMjgyIDM5Ljc5NCA2OS44OTcgMTAyLjY0MS00My44OTdxMjMuNTkgMjQuMDUxIDUxIDM5LjU5UTM5Mi4yMzEtMjY4IDQyNC42OTItMjYwbDEzLjQxMSAxMDkuNzQ0Wm00MS4yODEtMjE0LjYxN3E0OC4wMjYgMCA4MS41NzYtMzMuNTUxIDMzLjU1MS0zMy41NTEgMzMuNTUxLTgxLjU3NiAwLTQ4LjAyNS0zMy41NTEtODEuNTc2LTMzLjU1LTMzLjU1MS04MS41NzYtMzMuNTUxLTQ3Ljk3MyAwLTgxLjU1IDMzLjU1MS0zMy41NzYgMzMuNTUxLTMzLjU3NiA4MS41NzYgMCA0OC4wMjUgMzMuNTc2IDgxLjU3NiAzMy41NzcgMzMuNTUxIDgxLjU1IDMzLjU1MVpNNDgwLTQ4MFoiLz48L3N2Zz4="/>}
+    />
+    <IconsUseCaseListItem
+        name="tune"
+        description="Brukes til å redigere/justere en oversikt på en side. Visning av en side/informasjon."
+        icon={<Icon
+            size="lg"
+            fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik00NjguNjM0LTEzMC4wMDFxLTEwLjczNiAwLTE3Ljg2NC03LjIyNHQtNy4xMjgtMTcuOTAzdi0xNjIuNTY0cTAtMTAuNDI5IDcuMjYzLTE3Ljc3OSA3LjI2My03LjM0OSAxNy45OTktNy4zNDkgMTAuNzM3IDAgMTcuODY1IDcuMzQ5IDcuMTI4IDcuMzUgNy4xMjggMTcuNzc5djU2LjM1OWgzMTAuOTc1cTEwLjY3OSAwIDE3LjkwMyA3LjI2MyA3LjIyNCA3LjI2MyA3LjIyNCAxOCAwIDEwLjczNi03LjIyNCAxNy44NjR0LTE3LjkwMyA3LjEyOEg0OTMuODk3djU1Ljk1cTAgMTAuNjc5LTcuMjYzIDE3LjkwMy03LjI2MyA3LjIyNC0xOCA3LjIyNFptLTMxMy41MDYtODEuMDc3cS0xMC42NzkgMC0xNy45MDMtNy4yNjMtNy4yMjQtNy4yNjMtNy4yMjQtMTcuOTk5IDAtMTAuNzM3IDcuMjI0LTE3Ljg2NSA3LjIyNC03LjEyOCAxNy45MDMtNy4xMjhoMTczLjEyOHExMC42OCAwIDE3LjkwNCA3LjI2M3Q3LjIyNCAxOHEwIDEwLjczNi03LjIyNCAxNy44NjR0LTE3LjkwNCA3LjEyOEgxNTUuMTI4Wm0xNzIuOTkzLTE2Mi43MThxLTEwLjczNiAwLTE3Ljg2NC03LjIyNHQtNy4xMjgtMTcuOTAzdi01NS45NUgxNTUuMTI4cS0xMC42NzkgMC0xNy45MDMtNy4yNjItNy4yMjQtNy4yNjMtNy4yMjQtMTggMC0xMC43MzYgNy4yMjQtMTcuODY0dDE3LjkwMy03LjEyOGgxNDguMDAxdi01Ni43N3EwLTEwLjY4IDcuMjYzLTE3LjkwNHQxNy45OTktNy4yMjRxMTAuNzM3IDAgMTcuODY1IDcuMjI0IDcuMTI4IDcuMjI0IDcuMTI4IDE3LjkwNHYxNjIuOTc0cTAgMTAuNjc5LTcuMjYzIDE3LjkwMy03LjI2MyA3LjIyNC0xOCA3LjIyNFptMTQwLjY0OC04MS4wNzdxLTEwLjY3OSAwLTE3LjkwMy03LjI2Mi03LjIyNC03LjI2My03LjIyNC0xOCAwLTEwLjczNiA3LjIyNC0xNy44NjR0MTcuOTAzLTcuMTI4aDMzNi4xMDNxMTAuNjc5IDAgMTcuOTAzIDcuMjYyIDcuMjI0IDcuMjYzIDcuMjI0IDE4IDAgMTAuNzM2LTcuMjI0IDE3Ljg2NHQtMTcuOTAzIDcuMTI4SDQ2OC43NjlabTE2Mi44NC0xNjIuNTY0cS0xMC43MzcgMC0xNy44NjUtNy4yMjQtNy4xMjgtNy4yMjQtNy4xMjgtMTcuOTAzdi0xNjIuMzA4cTAtMTAuNjc5IDcuMjYzLTE3LjkwMyA3LjI2My03LjIyNCAxNy45OTktNy4yMjQgMTAuNzM3IDAgMTcuODY1IDcuMjI0IDcuMTI4IDcuMjI0IDcuMTI4IDE3LjkwM3Y1NS45NWgxNDguMDAxcTEwLjY3OSAwIDE3LjkwMyA3LjI2MyA3LjIyNCA3LjI2MyA3LjIyNCAxNy45OTkgMCAxMC43MzctNy4yMjQgMTcuODY1LTcuMjI0IDcuMTI4LTE3LjkwMyA3LjEyOEg2NTYuODcxdjU2LjEwM3EwIDEwLjY3OS03LjI2MyAxNy45MDMtNy4yNjMgNy4yMjQtMTcuOTk5IDcuMjI0Wm0tNDc2LjQ4MS04MS4yM3EtMTAuNjc5IDAtMTcuOTAzLTcuMjYzLTcuMjI0LTcuMjYzLTcuMjI0LTE4IDAtMTAuNzM2IDcuMjI0LTE3Ljg2NHQxNy45MDMtNy4xMjhoMzM2LjEwM3ExMC42NzkgMCAxNy45MDMgNy4yNjMgNy4yMjQgNy4yNjMgNy4yMjQgMTcuOTk5IDAgMTAuNzM3LTcuMjI0IDE3Ljg2NS03LjIyNCA3LjEyOC0xNy45MDMgNy4xMjhIMTU1LjEyOFoiLz48L3N2Zz4="/>}
+    />
+    <IconsUseCaseListItem
+        name="account_circle"
+        description="Brukes til konto/profil."
+        icon={<Icon
+            size="lg"
+            fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik0yMzQuOTc1LTI1OC4xNTNxNTYuOTQ5LTQwLjE1NCAxMTYuNTI1LTYyLjYxNVE0MTEuMDc3LTM0My4yMyA0ODAtMzQzLjIzdDEyOC43MDUgMjIuNDYycTU5Ljc4MiAyMi40NjEgMTE2LjczIDYyLjYxNSA0MS41MTMtNDcuMzU5IDYyLjkxMS0xMDIuNzkyUTgwOS43NDQtNDE2LjM3NyA4MDkuNzQ0LTQ4MHEwLTEzOC42OTItOTUuNTI2LTIzNC4yMThRNjE4LjY5Mi04MDkuNzQ0IDQ4MC04MDkuNzQ0dC0yMzQuMjE4IDk1LjUyNlExNTAuMjU2LTYxOC42OTIgMTUwLjI1Ni00ODBxMCA2My42MjMgMjEuNjAzIDExOS4wNTUgMjEuNjAzIDU1LjQzMyA2My4xMTYgMTAyLjc5MlptMjQ0Ljg4NC0xOTYuNzJxLTU0LjIxOCAwLTkxLjI5NC0zNy4yMTctMzcuMDc3LTM3LjIxNy0zNy4wNzctOTEuNDM1dDM3LjIxNy05MS4yOTVxMzcuMjE4LTM3LjA3NyA5MS40MzYtMzcuMDc3dDkxLjI5NCAzNy4yMThxMzcuMDc3IDM3LjIxNyAzNy4wNzcgOTEuNDM1dC0zNy4yMTcgOTEuMjk1cS0zNy4yMTggMzcuMDc2LTkxLjQzNiAzNy4wNzZabS40NTMgMzU0Ljg3MnEtNzkuMDU1IDAtMTQ4LjMyOC0yOS43Ny02OS4yNzItMjkuNzY5LTEyMC44NTgtODEuNDEtNTEuNTg2LTUxLjY0LTgxLjM1NS0xMjAuNzAyLTI5Ljc3LTY5LjA2Mi0yOS43Ny0xNDguMTY2IDAtNzkuMTA1IDI5Ljc3LTE0OC4xMTcgMjkuNzY5LTY5LjAxMyA4MS40MS0xMjAuNjUzIDUxLjY0LTUxLjY0MSAxMjAuNzAyLTgxLjQxIDY5LjA2Mi0yOS43NyAxNDguMTY2LTI5Ljc3IDc5LjEwNSAwIDE0OC4xMTcgMjkuNzcgNjkuMDEzIDI5Ljc2OSAxMjAuNjUzIDgxLjQxIDUxLjY0MSA1MS42NCA4MS40MSAxMjAuNjc0IDI5Ljc3IDY5LjAzNCAyOS43NyAxNDcuODMzIDAgNzkuMDU1LTI5Ljc3IDE0OC4zMjgtMjkuNzY5IDY5LjI3Mi04MS40MSAxMjAuODU4LTUxLjY0IDUxLjU4Ni0xMjAuNjc0IDgxLjM1NS02OS4wMzQgMjkuNzctMTQ3LjgzMyAyOS43N1pNNDgwLTE1MC4yNTZxNTUuMjMxIDAgMTA4LjE0MS0xNy42MjkgNTIuOTExLTE3LjYyOCA5Ny44Ni01NC40NzQtNDQuOTQ5LTMzLjUzOS05Ny4wMzktNTIuMDc4LTUyLjA5LTE4LjUzOC0xMDguOTYyLTE4LjUzOHQtMTA5LjE1NCAxOC4zNDZxLTUyLjI4MyAxOC4zNDYtOTYuNTkgNTIuMjcgNDQuNjkyIDM2Ljg0NiA5Ny42MDMgNTQuNDc0IDUyLjkxIDE3LjYyOSAxMDguMTQxIDE3LjYyOVptLjAzNi0zNTQuODcxcTMzLjg2MiAwIDU2LjA0MS0yMi4yMTYgMjIuMTgtMjIuMjE1IDIyLjE4LTU2LjA3NyAwLTMzLjg2Mi0yMi4yMTUtNTYuMDQyLTIyLjIxNi0yMi4xOC01Ni4wNzgtMjIuMTh0LTU2LjA0MSAyMi4yMTZxLTIyLjE4IDIyLjIxNS0yMi4xOCA1Ni4wNzcgMCAzMy44NjIgMjIuMjE1IDU2LjA0MiAyMi4yMTYgMjIuMTggNTYuMDc4IDIyLjE4Wk00ODAtNTgzLjM4NVptMCAzNjEuNzY5WiIvPjwvc3ZnPg=="/>}
+    />
+    <IconsUseCaseListItem
+        name="thumb_up"
+        description="Brukes tilbakemelding. Tommel opp/ned."
+        icon={<Icon size="lg"
+                    fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik04MzUuMTI3LTYxNi4yMDRxMjQuNjQxIDAgNDMuNjAyIDE4Ljk2MiAxOC45NjIgMTguOTYxIDE4Ljk2MiA0My42MDJ2NjUuNjA0cTAgNi4zODUtLjA1MSAxMy4zNzctLjA1MiA2Ljk5Mi0yLjQ2MiAxMy4yMjNMNzc3LjgyNy0xODcuMTM1cS04LjYwNyAxOS44MDUtMjguODU5IDMzLjQ2OS0yMC4yNTMgMTMuNjY1LTQxLjc3NyAxMy42NjVIMjg0LjY2N3YtNDc2LjIwM2wyMjUuMjU2LTIzMC42OTFxMTAuOTktMTEuMjU3IDI1LjkxOS0xMy41NjQgMTQuOTI5LTIuMzA4IDI4LjM4OCA1LjI1NiAxMy4zMDcgNy41NjQgMTkuNzk0IDIxLjUxMiA2LjQ4NyAxMy45NDkgMi45NzkgMjkuMTAybC00MC4wMyAxODguMzg1aDI4OC4xNTRabS01MDAuMjA1IDIxLjMzM3Y0MDQuNjE1aDM3OC43N3EzLjk3NCAwIDguNTI2LTIuMzA4IDQuNTUxLTIuMzA4IDYuODU5LTcuNjkzTDg0Ny40MzYtNDc5LjU5di03NC4wNXEwLTUuMTI5LTMuNTktOC43MTl0LTguNzE5LTMuNTlINDg0LjkyM2w0OS40ODctMjMzLjE3OS0xOTkuNDg4IDIwNC4yNTdabS0xNzIuNzY3IDQ1NC44N3EtMjUuODA4IDAtNDQuMTg2LTE4LjQ3OC0xOC4zNzgtMTguNDc3LTE4LjM3OC00NC4wODZWLTU1My42NHEwLTI1LjYwOSAxOC4zNzgtNDQuMDg2IDE4LjM3OC0xOC40NzggNDQuMTg2LTE4LjQ3OGgxMjIuNTEydjUwLjI1NUgxNjIuMTU1cS01LjM4NSAwLTguODQ3IDMuNTktMy40NjIgMy41OS0zLjQ2MiA4LjcxOXYzNTEuMDc1cTAgNS4zODUgMy40NjIgOC44NDcgMy40NjIgMy40NjIgOC44NDcgMy40NjJoMTIyLjUxMnY1MC4yNTVIMTYyLjE1NVptMTcyLjc2Ny01MC4yNTV2LTQwNC42MTUgNDA0LjYxNVoiLz48L3N2Zz4="/>}
+    />
+    <IconsUseCaseListItem
+        name="thumb_down"
+        description="Brukes tilbakemelding. Tommel opp/ned."
+        icon={<Icon size="lg"
+                    fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik0xMjUuMTI5LTM0My43OTZxLTI1IDAtNDMuNzgyLTE4Ljk2Mi0xOC43ODEtMTguOTYxLTE4Ljc4MS00My42MDJ2LTY1LjYwNHEwLTYuMzg1LS4wNzctMTMuMzc3LS4wNzctNi45OTIgMi4zMzMtMTMuMjIzbDExNy42MDctMjc0LjMwMXE4LjI2LTE5Ljc2MiAyOC41NTgtMzMuNDQ4IDIwLjI5OC0xMy42ODYgNDEuODIyLTEzLjY4Nmg0MjIuNTI0djQ3Ni4yMDNMNDUwLjA3Ny0xMTMuMTA1cS0xMC45OSAxMS4yNTctMjUuOTE5IDEzLjU2NC0xNC45MjkgMi4zMDgtMjguMzg4LTUuMjU2LTEzLjMwNy03LjU2NC0xOS43OTQtMjEuNTEyLTYuNDg3LTEzLjk0OS0yLjk3OS0yOS4xMDJsNDAuMDMtMTg4LjM4NUgxMjUuMTI5Wm00OTkuOTQ5LTIxLjMzM3YtNDA0LjYxNWgtMzc4Ljc3cS0zLjk3NCAwLTguNTI2IDIuMzA4LTQuNTUxIDIuMzA4LTYuODU5IDcuNjkzTDExMi44MjEtNDgwLjQxdjc0LjA1cTAgNS4xMjkgMy40NjEgOC43MTkgMy40NjIgMy41OSA4Ljg0NyAzLjU5aDM0OS45NDhMNDI1LjU5LTE2MC44NzJsMTk5LjQ4OC0yMDQuMjU3Wm0xNzIuNzY3LTQ1NC44N3EyNS44MDggMCA0NC4xODYgMTguNDc4IDE4LjM3OCAxOC40NzcgMTguMzc4IDQ0LjA4NnYzNTEuMDc1cTAgMjUuNjA5LTE4LjM3OCA0NC4wODYtMTguMzc4IDE4LjQ3OC00NC4xODYgMTguNDc4SDY3NS4zMzN2LTUwLjI1NWgxMjIuNTEycTUuMzg1IDAgOC44NDctMy41OSAzLjQ2Mi0zLjU5IDMuNDYyLTguNzE5di0zNTEuMDc1cTAtNS4zODUtMy40NjItOC44NDctMy40NjItMy40NjItOC44NDctMy40NjJINjc1LjMzM3YtNTAuMjU1aDEyMi41MTJabS0xNzIuNzY3IDUwLjI1NXY0MDQuNjE1LTQwNC42MTVaIi8+PC9zdmc+"/>}
+    />
+    <IconsUseCaseListItem
+        name="add_circle"
+        description="Brukes for å legge til."
+        icon={<Icon size="lg"
+                    fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik00NTYuMzYtNDUyLjk3NXYxMzcuODQ3cTAgMTAuNjc5IDcuMjYzIDE3LjkwMyA3LjI2MyA3LjIyNCAxNy45OTkgNy4yMjQgMTAuNzM3IDAgMTcuODY1LTcuMjI0IDcuMTI4LTcuMjI0IDcuMTI4LTE3LjkwM3YtMTM3Ljg0N2gxMzguMjU3cTEwLjY3OSAwIDE3LjkwMy03LjI2MyA3LjIyNC03LjI2MyA3LjIyNC0xOCAwLTEwLjczNi03LjIyNC0xNy44NjR0LTE3LjkwMy03LjEyOEg1MDYuNjE1di0xNDEuNjQycTAtMTAuNjc5LTcuMjYzLTE3LjkwMy03LjI2My03LjIyNC0xOC03LjIyNC0xMC43MzYgMC0xNy44NjQgNy4yMjR0LTcuMTI4IDE3LjkwM3YxNDEuNjQySDMxNS4xMjhxLTEwLjY3OSAwLTE3LjkwMyA3LjI2My03LjIyNCA3LjI2My03LjIyNCAxNy45OTkgMCAxMC43MzcgNy4yMjQgMTcuODY1IDcuMjI0IDcuMTI4IDE3LjkwMyA3LjEyOEg0NTYuMzZabTIzLjg4NCAzNTIuOTc0cS03OC45MTUgMC0xNDguMDUzLTI5LjkyLTY5LjEzOS0yOS45Mi0xMjAuNzMxLTgxLjU0NC01MS41OTMtNTEuNjI0LTgxLjUyNi0xMjAuNzI3LTI5LjkzMy02OS4xMDMtMjkuOTMzLTE0Ny45NDZ0MjkuOTItMTQ4LjEwNnEyOS45Mi02OS4yNjIgODEuNTQ0LTEyMC41NzUgNTEuNjI0LTUxLjMxNCAxMjAuNzI3LTgxLjI0NyA2OS4xMDMtMjkuOTMzIDE0Ny45NDYtMjkuOTMzdDE0OC4xMDYgMjkuOTJxNjkuMjYyIDI5LjkyIDEyMC41NzUgODEuMjEgNTEuMzE0IDUxLjI5MSA4MS4yNDcgMTIwLjYyOSAyOS45MzMgNjkuMzM3IDI5LjkzMyAxNDcuOTk2IDAgNzguOTE1LTI5LjkyIDE0OC4wNTMtMjkuOTIgNjkuMTM5LTgxLjIxIDEyMC42MDktNTEuMjkxIDUxLjQ2OS0xMjAuNjI5IDgxLjUyNS02OS4zMzcgMzAuMDU2LTE0Ny45OTYgMzAuMDU2Wm0tLjAzOS01MC4yNTVxMTM3LjU5IDAgMjMzLjU2NC05Ni4xOCA5NS45NzUtOTYuMTc5IDk1Ljk3NS0yMzMuNzY5dC05NS44MzItMjMzLjU2NFE2MTguMDgtODA5Ljc0NCA0ODAtODA5Ljc0NHEtMTM3LjM4NSAwLTIzMy41NjQgOTUuODMyLTk2LjE4IDk1LjgzMi05Ni4xOCAyMzMuOTEyIDAgMTM3LjM4NSA5Ni4xOCAyMzMuNTY0IDk2LjE3OSA5Ni4xOCAyMzMuNzY5IDk2LjE4Wk00ODAtNDgwWiIvPjwvc3ZnPg=="/>}
+    />
+    <IconsUseCaseListItem
+        name="edit"
+        description="Brukes for å redigere innhold."
+        icon={<Icon size="lg"
+                    fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik0xOTAuMjU2LTE5MC4yNTZoNDQuMTAybDQ0OC44NDgtNDQ4LjQzOC00NC4xMDItNDQuMTAyLTQ0OC44NDggNDQ4LjQzOHY0NC4xMDJabS0xOC45NzMgNTAuMjU1cS0xMy40NjggMC0yMi4zNzUtOC45MDd0LTguOTA3LTIyLjM3NXYtNTcuNjY1cTAtMTIuNzM1IDUuMDc3LTI0LjUwOCA1LjA3Ny0xMS43NzQgMTMuNjkzLTIwLjEzMmw1MzEuNzE4LTUzMS43NDRxNy4xNzUtNi40OTcgMTYuNDQ2LTEwLjM3NyA5LjI3MS0zLjg3OSAxOS40MDMtMy44NzkgOS43MjIgMCAxOC45NzQgMy42NTMgOS4yNTIgMy42NTQgMTYuODY3IDEwLjgwOGw0My41NjQgNDMuNzY5cTcuNTYzIDcuMzU4IDEwLjkwOSAxNi43NzIgMy4zNDcgOS40MTQgMy4zNDcgMTguODI4IDAgOS43NTctMy43MTEgMTkuMjMzLTMuNzEgOS40NzYtMTAuNTQ1IDE2LjY1MkwyNzMuNTg4LTE1OC43NzFxLTguMzU4IDguNjE2LTIwLjEzMiAxMy42OTMtMTEuNzczIDUuMDc3LTI0LjUwOCA1LjA3N2gtNTcuNjY1Wm01OTguNDM1LTU4Ni4yNTYtNDMuMDUxLTQyLjc5NCA0My4wNTEgNDIuNzk0Wm0tMTA4LjU0NCA2NS43NS0yMi4wNy0yMi4yODkgNDQuMTAyIDQ0LjEwMi0yMi4wMzItMjEuODEzWiIvPjwvc3ZnPg=="/>}
+    />
+    <IconsUseCaseListItem
+        name="login"
+        description="Brukes for å logge inn."
+        icon={<Icon size="lg"
+                    fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik01MDUuMTUzLTE0MC4wMDFxLTEwLjY5OCAwLTE3LjkxMy03LjI1LTcuMjE0LTcuMjQ5LTcuMjE0LTE3Ljk5OXQ3LjIxNC0xNy44NzhxNy4yMTUtNy4xMjggMTcuOTEzLTcuMTI4aDI1Mi4yODJxNC42MTYgMCA4LjQ2Mi0zLjg0NyAzLjg0Ny0zLjg0NiAzLjg0Ny04LjQ2MnYtNTU0Ljg3cTAtNC42MTYtMy44NDctOC40NjItMy44NDYtMy44NDctOC40NjItMy44NDdINTA1LjE1M3EtMTAuNjk4IDAtMTcuOTEzLTcuMjQ5LTcuMjE0LTcuMjUtNy4yMTQtMTcuOTk5IDAtMTAuNzUxIDcuMjE0LTE3Ljg3OSA3LjIxNS03LjEyOCAxNy45MTMtNy4xMjhoMjUyLjI4MnEyNS43ODggMCA0NC4xNzYgMTguMzg4dDE4LjM4OCA0NC4xNzZ2NTU0Ljg3cTAgMjUuNzg4LTE4LjM4OCA0NC4xNzZ0LTQ0LjE3NiAxOC4zODhINTA1LjE1M1ptLTUuNTA5LTMxNC44NzJIMTY1LjEyOXEtMTAuNjk4IDAtMTcuOTEzLTcuMjQ5dC03LjIxNS0xNy45OTlxMC0xMC43NSA3LjIxNS0xNy44Nzh0MTcuOTEzLTcuMTI4aDMzMy42OTRsLTc5Ljg5Ny03OS44OThxLTcuMjMxLTcuMjMxLTcuMjE4LTE3LjI5NC4wMTMtMTAuMDY0IDcuNjI4LTE3Ljg4NSA3LjYxNS03LjgyIDE3Ljg1Mi03Ljc5NCAxMC4yMzcuMDI2IDE4LjE0NyA3LjU4OWwxMTguODk2IDExOC44OTZxOS4zNTkgOS42MTYgOS4zNTkgMjIuMDYzIDAgMTIuNDQ4LTkuMzU5IDIxLjc4M0w0NTUuNzQ1LTMzOS4xODFxLTcuMDQ2IDcuNDM2LTE3LjIyOCA3LjMtMTAuMTgxLS4xMzUtMTguMzY1LTcuOTE1LTcuMzU1LTcuODIxLTcuMjUyLTE4IC4xMDMtMTAuMTc5IDcuNzE4LTE3Ljc5NGw3OS4wMjYtNzkuMjgzWiIvPjwvc3ZnPg=="/>}
+    />
+    <IconsUseCaseListItem
+        name="logut"
+        description="Brukes for å logge ut."
+        icon={<Icon size="lg"
+                    fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik0yMDIuNTY1LTE0MC4wMDFxLTI1Ljc4OCAwLTQ0LjE3Ni0xOC4zODh0LTE4LjM4OC00NC4xNzZ2LTU1NC44N3EwLTI1Ljc4OCAxOC4zODgtNDQuMTc2dDQ0LjE3Ni0xOC4zODhoMjUyLjI4MnExMC42OTggMCAxNy45MTMgNy4yNSA3LjIxNCA3LjI0OSA3LjIxNCAxNy45OTl0LTcuMjE0IDE3Ljg3OHEtNy4yMTUgNy4xMjgtMTcuOTEzIDcuMTI4SDIwMi41NjVxLTQuNjE2IDAtOC40NjIgMy44NDctMy44NDcgMy44NDYtMy44NDcgOC40NjJ2NTU0Ljg3cTAgNC42MTYgMy44NDcgOC40NjIgMy44NDYgMy44NDcgOC40NjIgMy44NDdoMjUyLjI4MnExMC42OTggMCAxNy45MTMgNy4yNDkgNy4yMTQgNy4yNSA3LjIxNCAxOHQtNy4yMTQgMTcuODc4cS03LjIxNSA3LjEyOC0xNy45MTMgNy4xMjhIMjAyLjU2NVptNTIwLjUzOS0zMTQuODcyaC0zMzQuMTNxLTEwLjY5OCAwLTE3LjkxMy03LjI0OXQtNy4yMTUtMTcuOTk5cTAtMTAuNzUgNy4yMTUtMTcuODc4dDE3LjkxMy03LjEyOGgzMzMuMzA5bC03OS44OTctNzkuODk4cS03LjIzMS03LjIzMS03LjIxOC0xNy4yOTQuMDEzLTEwLjA2NCA3LjYyOC0xNy44ODUgNy42MTUtNy44MiAxNy44NTItNy43OTQgMTAuMjM3LjAyNiAxOC4xNDcgNy41ODlsMTE4Ljg5NiAxMTguODk2cTkuMzU5IDkuNjE2IDkuMzU5IDIyLjA2MyAwIDEyLjQ0OC05LjM1OSAyMS43ODNMNjc5LjIwNS0zMzkuMTgxcS03LjA0NiA3LjQzNi0xNy4yMjcgNy4zLTEwLjE4Mi0uMTM1LTE4LjM2Ni03LjkxNS03LjM1NC03LjgyMS03LjI1Mi0xOCAuMTAzLTEwLjE3OSA3LjcxOC0xNy43OTRsNzkuMDI2LTc5LjI4M1oiLz48L3N2Zz4="/>}
+    />
+</IconsUseCaseList> */}
+
+## Oversikt over når du bruker ikoner, illustrasjoner og foto
+
+### Ikoner og annen grafikk
+Maks størrelse for bruk av ikoner er 48 px.
+
+Når denne størrelsen overstiges er det mulighet for mer detaljer i grafikken. Da skal illustrasjoner eller bilder brukes.
+
+#### Prioritering
+1. Bilder
+2. Illustrasjoner
+
+Ikonene brukes for å representere funksjoner, verktøy eller handlinger i grensesnittet.
+
+### Når bruker vi ikoner
+Vi bruker ikoner for å forbedre brukervennligheten, visuelt hierarki og kommunikasjon av informasjon.
+
+Ikoner gjør det enklere for brukere å navigere gjennom nettsiden og appen vår. Ikonene skal hjelpe brukere med å finne det de leter etter raskere og mer intuitivt. Ikonene skal også gi et visuelt hint om hva som skjer når man klikker på dem, noe som kan hjelpe brukere å forstå funksjonaliteten i løsningene våre.
+
+{/* <img src={narBrukerViIkoner} alt="Eksempel på ikonbruk i mobilbanken" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+### Når bruker vi foto
+- Bygge relasjoner og tillit
+- Vise ekte mennesker
+- Vise frem unike lokalmiljøer
+- Digitale og analoge annonser
+- Nettsiden
+- Styrke budskapet i PowerPoint-presentasjoner
+- Utforming av innhold for sosiale medier
+
+{/* <img src={narBrukerViBilder} alt="Eksempel på foto" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+### Når bruker vi illustrasjoner
+Bruk av illustrasjoner skal forbedre brukeropplevelsen og formidle budskapet tydeligere.
+
+- Konstruere miljøer og lokalsamfunn
+- Skape visuelle representasjoner av tjenester og produkter
+- Gi visuell tilbakemelding under prosesser
+- Utforming av nettbank- og mobilbankgrensesnitt
+- Utarbeidelse av årsrapporter, merkevarehåndbøker og andre interne trykte materialer
+- Oppsett av PowerPoint-presentasjoner
+- Utforming av innhold for sosiale medier
+
+{/* <img src={narBrukerViIllustrasjoner} alt="Eksempel på illustrasjon" className="sb1ds-layout__spacing-bottom--md" /> */}

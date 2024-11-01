@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/blocks';
+import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
+
+<Meta title="Om designsystemet/FAQ" />
+
+# FAQ
+
+Svar på spørsmål som folk ofte lurer på
+
+<Accordion headingLevel={2}>
+    <AccordionItem heading="Hva bør være en del av designsystemet, og hva bør ikke?">
+        Designsystemet består av løsninger og retningslinjer som er relevante for de fleste produktteam. Det finnes ikke et tydelig fasitsvar på hvilke retningslinjer eller komponenter som hører hjemme her, men som en tommelfingerregel skal alle deler av systemet komme til nytte for to eller flere team. Komponenter bør være generiske nok til at alle team kan bruke de, og tydelig utformet i SpareBank 1-drakt. Retningslinjene gjelder i stor grad alle, og beskriver hvordan vi bruker SpareBank 1-merkevaren i digitale flater. Ta gjerne kontakt med designsystem-teamet dersom du lurer på om noe konkret passer inn eller ikke!
+    </AccordionItem>
+    <AccordionItem heading="Når kommer endringer ut?">
+      Endringer i npm-pakkene blir publisert hver dag klokkeb 06:00, 11:00, 16:00 og 21:00.
+      Dokumentasjonen blir oppdatert hver gang det skjer endringer i den, men må trigges manuelt for å plukke opp endringer i npm-pakkene.
+    </AccordionItem>
+    <AccordionItem heading="Hvordan ser jeg hva som er nytt?">Designsystem-teamet deler jevnlig rundt hva som skjer i designsystemet – blant annet i designforum, nyhetsbrev og på Slack. Ved endringer i designsystem-bibliotekene i Figma, så vil du få en melding i Figma om at det finnes en oppdatering, med valg om å oppdatere skissene med en gang eller vente til senere. Endringer i npm-pakkene blir publisert som en ny release, og alle pakker har en CHANGELOG-fil man kan se nærmere på for å få med seg alle endringer.</AccordionItem>
+    <AccordionItem heading="Hvordan kontakter jeg designsystem-teamet?">Vi kan kontaktes via slack i #ext-designsystem kanalen, eller via mail til <a href="mailto:designsystem@sparebank1.no">designsystem@sparebank1.no</a></AccordionItem>
+</Accordion>

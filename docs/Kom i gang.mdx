@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Kom i gang" />
+
+# Kom i gang
+
+Designsystemet inneholder ressursene du trenger for å lage løsninger som er i stil med SpareBank 1s designprinsipper, stil og tone og best practices
+
+## For designere
+
+* Bli kjent med [profilen til SpareBank 1](/profil/stil-og-tone/)
+* Gå igjennom komponentseksjonen for å gjøre deg kjent med de eksisterende komponentene du kan implementere i designet ditt
+* Sjekk ut designsystem-bibliotekene i Figma. Der finner du komponentene, gridstilene, tekststilene, fargestilene, ikonene og illustrasjonene du trenger når du skal skisse ut løsninger. Du finner bibliotekene under assets. De er alltid tilgjengelige så lenge du er i SpareBank 1-organisasjonen
+
+## For utviklere
+
+FFE er en samling av gjenbrukbare komponenter basert på Less og React for å bygge nettsider og brukergrensesnitt. Komponentbiblioteket sikrer konsistent stil og oppførsel i prototyper og produksjonsarbeid.
+
+Komponentene er publisert i forskjellige pakker på npm under [@sb1-organisasjonen](https://www.npmjs.com/org/sb1). Kildekoden til pakkene ligger på [Github](https://github.com/SpareBank1/designsystem/tree/develop/packages) sammen med READMEs med mer detaljerte instruksjoner for hvordan pakkene kan brukes i prosjektet ditt.
+
+Less-pakker brukes som oftest ved å ha en egen Less-fil i ditt prosjekt med et `@import`-statement for hver pakke, som her for [@sb1/ffe-buttons](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons#usage). React-pakker brukes på lik linje med enhver JavaScript-pakke. Se siden til den komponenten du er interessert i, for å se et eksempel på en import-statement.
+
+Alle vil trenge [@sb1/ffe-core](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-core) og [@sb1/ffe-webfonts](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-webfonts). Utenom det har alle forskjellige behov, så ta en titt på komponentene for å finne det du trenger. 
+
+## Designsystem-teamet
+Designsystemet blir tatt vare på av designsystem-teamet. Du kan finne oss på Slack-kanalen #ext-designsystem. 
+
+## Bidra
+Selv om vi er et team oppfordrer vi alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres bidrag. Ta en titt under «Bidra» i sidemenyen for mer info om hvordan du går frem.

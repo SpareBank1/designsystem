@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Bidra/Guide til dokumentering" />
+
+{/* import findId from "../../../static/img/bidra-dokumentasjon/component-overview-find-id.png" */}
+
+# Guide til dokumentering
+
+På design.sparebank1.no samler vi all informasjonen om hva som finnes i designsystemet, hvordan vi bruker det og hvordan vi bidrar inn
+
+## Viktig at informasjonen er oppdatert
+Alle må kunne stole på at det som står i dokumentasjonen er oppdatert og riktig. Hjelp oss med å holde dokumentasjonen oppdatert når du gjør endringer eller legger til noe nytt og spennende.
+
+## Tilgang til dokumentasjonen
+Akkurat nå ligger selve dokumentasjonen i et annet repo enn selve designsystem-koden. Ta kontakt med designsystem-teamet for å få hjelp til tilgang.
+
+## Endring av innhold
+Alt innhold i dokumentasjonen er skrevet i markdown-filer. For å opppdatere en eksisterende side:
+1. Finn riktig markdown-fil. Alle filene skal ha navn som matcher den faktiske sidetittelen
+2. Gjør endringene du ønsker i markdown
+3. Opprett en pull request
+
+Designsystem-teamet reviewer pull requesten din, og du kan merge så fort den har blitt godkjent.
+
+## Component-overview
+Component-overview er navnet på den siden som vises når man kjører opp designsystemet-repoet lokalt. Her listes alle eksemplene ut og man har mulighet til å gå inn på hvert enkelt. Det er også live-reload sånn at du kan se endringer du gjør i en komponent. 
+
+I «component-overview/examples» mappa finner du også alle filene til eksemplene som brukes i dokumentasjonen. Alle eksemplene react-komponenter som har som mål å vise de ulike variantene og bruksområdene til ffe-komponentene. I tillegg til dokumentasjonen, bruker vi også eksemplene til å UU-teste komponentene i spesifikke scenarioer.
+
+### Legg til eksempel
+Ønsker du å legge til nytt eksempel som skal brukes lokalt eller i dokumentasjonen. Følger du disse stegene: 
+
+1. Lag ny jsx-fil med et beskrivende navn i riktig sub-mappe. 
+Hvilken sub-mappe avhenger av hvilken komponent du ønsker å legge til eksempel av, og hvilken pakke den ligger under.
+
+2. Legg til den koden du ønsker skal vises i eksempelet i filen. 
+Prøv å inkluder minst mulig kode for at eksempelet skal være tydeligst mulig. All kode du skriver inn i filen, vil vises i "vis kode" seksjonen, dersom man legger inn eksempelet i dokumentasjonen. 
+
+## Vis eksempel i dokumentasjonen
+For å vise eksempler i dokumentasjonen, har vi laget en react-komponent som heter DSExample.
+Denne importeres globalt, så det er ikke noe behov for å importere den i hver enkelt markdown-fil. 
+
+Legg inn følgende kode, hvor enn du ønsker at eksempelet skal dukke opp i innholdet
+```
+<DSExample name=""/>
+```
+
+Name er i dette tilfelle id'en til eksempelet som du finner ved å gå inn på eksempelet i component-overview. 
+
+{/* <img src={findId} alt="Viser plassering av id på component overview"/> */}

@@ -1,0 +1,776 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Profil/Farger" />
+
+{/* import fargevekting2kombo from "../../../static/img/farger/fargevekting-2fargekombo.png"
+import fargevekting3kombo from "../../../static/img/farger/fargevekting-3fargekombo.png"
+import fargevekting4kombo from "../../../static/img/farger/fargevekting-4fargekombo.png"
+import fargevektingIkkeLov from "../../../static/img/farger/fargevekting-ikke-lov.png" */}
+
+# Farger
+
+En rik fargepalett som gir rom for lokale variasjoner, samtidig som primærpaletten sørger for et enhetlig uttrykk.
+
+## Primærpalett
+
+SpareBank 1 er den lune blå banken. Våre hovedfarger er blå og vi har støttefarger som varmer opp det blå uttrykket i primærpaletten. SpareBank 1 skal alltid ha et blått etterlatt inntrykk. Derfor skal alltid hovedfargen Vann være den tydeligste fargen. 
+
+Fargene i paletten er naturlige og basert på farger vi finner i norske landskap. 
+
+Primærpaletten består av fargene:
+
+-   Vann
+-   Fjell
+-   Sand
+-   Frost
+-   Syrin
+
+Fargene i paletten kan også brukes i valører (prosentvis) i 70% eller 30% av solid farge, som vist i fargeplakatene under.
+
+<ul class="sb1ds-color-palette sb1ds-color-palette--primary">
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--vann">
+            <h4 class="sb1ds-color-palette__color-name">Vann</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-vann</dd>
+                <dt>HEX:</dt>
+                <dd>#005AA4</dd>
+                <dt>RGB:</dt>
+                <dd>0, 90, 164</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--vann-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-vann-70</dd>
+                <dt>HEX:</dt>
+                <dd>#4D8CBF</dd>
+                <dt>RGB:</dt>
+                <dd>77, 140, 191</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--vann-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-vann-30</dd>
+                <dt>HEX:</dt>
+                <dd>#B3CEE4</dd>
+                <dt>RGB:</dt>
+                <dd>179, 206, 228</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--fjell">
+            <h4 class="sb1ds-color-palette__color-name">Fjell</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-fjell</dd>
+                <dt>HEX:</dt>
+                <dd>#002776</dd>
+                <dt>RGB:</dt>
+                <dd>0, 39, 118</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--fjell-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-fjell-70</dd>
+                <dt>HEX:</dt>
+                <dd>#4D689F</dd>
+                <dt>RGB:</dt>
+                <dd>77, 104, 159</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--fjell-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-fjell-30</dd>
+                <dt>HEX:</dt>
+                <dd>#B3BED6</dd>
+                <dt>RGB:</dt>
+                <dd>179, 190, 214</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--frost">
+            <h4 class="sb1ds-color-palette__color-name">Frost</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-frost</dd>
+                <dt>HEX:</dt>
+                <dd>#7EB5D2</dd>
+                <dt>RGB:</dt>
+                <dd>126, 181, 210</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--frost-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-frost-70</dd>
+                <dt>HEX:</dt>
+                <dd>#A5CBE0</dd>
+                <dt>RGB:</dt>
+                <dd>165, 203, 224</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--frost-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-frost-30</dd>
+                <dt>HEX:</dt>
+                <dd>#D8E9F2</dd>
+                <dt>RGB:</dt>
+                <dd>216, 233, 242</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sand">
+            <h4 class="sb1ds-color-palette__color-name">Sand</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sand</dd>
+                <dt>HEX:</dt>
+                <dd>#F8E9DD</dd>
+                <dt>RGB:</dt>
+                <dd>248, 233, 221</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sand-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sand-70</dd>
+                <dt>HEX:</dt>
+                <dd>#FAf0E7</dd>
+                <dt>RGB:</dt>
+                <dd>250, 240, 231</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sand-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sand-30</dd>
+                <dt>HEX:</dt>
+                <dd>#FDF8F5</dd>
+                <dt>RGB:</dt>
+                <dd>253, 248, 245</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--syrin">
+            <h4 class="sb1ds-color-palette__color-name">Syrin</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-syrin</dd>
+                <dt>HEX:</dt>
+                <dd>#D3D3EA</dd>
+                <dt>RGB:</dt>
+                <dd>211, 211, 234</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--syrin-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-syrin-70</dd>
+                <dt>HEX:</dt>
+                <dd>#E0E0F0</dd>
+                <dt>RGB:</dt>
+                <dd>224, 224, 240</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--syrin-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-syrin-30</dd>
+                <dt>HEX:</dt>
+                <dd>#F2F2F9</dd>
+                <dt>RGB:</dt>
+                <dd>242, 242, 249</dd>
+            </dl>
+        </div>
+    </li>
+</ul>
+
+## Støttefarger
+
+Støttefargene til SpareBank 1 består av rødtoner som er gjenkjennelige fra logoen og som skal bidra til å varme opp den blå primærpaletten. I tillegg består den av grønne og gule toner hentet fra naturen, disse er utviklet for å tilføre varme og naturlige toner, i blant annet illustrasjon og infografikk. Støttefargene kan brukes ved behov for å tilføre lokalt særpreg og reflektere de ulike lokalsamfunnene.
+
+<ul class="sb1ds-color-palette sb1ds-color-palette--secondary">
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--myrull">
+            <h4 class="sb1ds-color-palette__color-name">Myrull</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-myrull</dd>
+                <dt>HEX:</dt>
+                <dd>#FAE4E0</dd>
+                <dt>RGB:</dt>
+                <dd>250, 228, 224</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--myrull-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-myrull-70</dd>
+                <dt>HEX:</dt>
+                <dd>#FCECE9</dd>
+                <dt>RGB:</dt>
+                <dd>252, 236, 233</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--myrull-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-myrull-30</dd>
+                <dt>HEX:</dt>
+                <dd>#FEF7F6</dd>
+                <dt>RGB:</dt>
+                <dd>254, 247, 246</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--villblomst">
+            <h4 class="sb1ds-color-palette__color-name">Villblomst</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-villblomst</dd>
+                <dt>HEX:</dt>
+                <dd>#EE8D9C</dd>
+                <dt>RGB:</dt>
+                <dd>238, 141, 156</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--villblomst-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-villblomst-70</dd>
+                <dt>HEX:</dt>
+                <dd>#F3AFBA</dd>
+                <dt>RGB:</dt>
+                <dd>243, 175, 186</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--villblomst-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-villblomst-30</dd>
+                <dt>HEX:</dt>
+                <dd>#FADDE1</dd>
+                <dt>RGB:</dt>
+                <dd>250, 221, 225</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--nordlys">
+            <h4 class="sb1ds-color-palette__color-name">Nordlys</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-nordlys</dd>
+                <dt>HEX:</dt>
+                <dd>#33AF85</dd>
+                <dt>RGB:</dt>
+                <dd>51, 175, 133</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--nordlys-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-nordlys-70</dd>
+                <dt>HEX:</dt>
+                <dd>#70C7AA</dd>
+                <dt>RGB:</dt>
+                <dd>112, 199, 170</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--nordlys-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-nordlys-30</dd>
+                <dt>HEX:</dt>
+                <dd>#C2E7DA</dd>
+                <dt>RGB:</dt>
+                <dd>194, 231, 218</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lyng">
+            <h4 class="sb1ds-color-palette__color-name">Lyng</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lyng</dd>
+                <dt>HEX:</dt>
+                <dd>#873953</dd>
+                <dt>RGB:</dt>
+                <dd>135, 57, 83</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lyng-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lyng-70</dd>
+                <dt>HEX:</dt>
+                <dd>#AB7487</dd>
+                <dt>RGB:</dt>
+                <dd>171, 116, 135</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lyng-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lyng-30</dd>
+                <dt>HEX:</dt>
+                <dd>#DBC4CB</dd>
+                <dt>RGB:</dt>
+                <dd>219, 196, 203</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--baer">
+            <h4 class="sb1ds-color-palette__color-name">Bær</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-baer</dd>
+                <dt>HEX:</dt>
+                <dd>#E44244</dd>
+                <dt>RGB:</dt>
+                <dd>228, 66, 68</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--baer-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-baer-70</dd>
+                <dt>HEX:</dt>
+                <dd>#EC7B7C</dd>
+                <dt>RGB:</dt>
+                <dd>236, 123, 124</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--baer-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-baer-30</dd>
+                <dt>HEX:</dt>
+                <dd>#F7C6C7</dd>
+                <dt>RGB:</dt>
+                <dd>247, 198, 199</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--skog">
+            <h4 class="sb1ds-color-palette__color-name">Skog</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-skog</dd>
+                <dt>HEX:</dt>
+                <dd>#00754E</dd>
+                <dt>RGB:</dt>
+                <dd>0, 117, 78</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--skog-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-skog-70</dd>
+                <dt>HEX:</dt>
+                <dd>#4D9E83</dd>
+                <dt>RGB:</dt>
+                <dd>77, 158, 131</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--skog-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-skog-30</dd>
+                <dt>HEX:</dt>
+                <dd>#B3D6CA</dd>
+                <dt>RGB:</dt>
+                <dd>179, 214, 202</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--multe">
+            <h4 class="sb1ds-color-palette__color-name">Multe</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-multe</dd>
+                <dt>HEX:</dt>
+                <dd>#F8B181</dd>
+                <dt>RGB:</dt>
+                <dd>248, 177, 129</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--multe-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-multe-70</dd>
+                <dt>HEX:</dt>
+                <dd>#FAC8A7</dd>
+                <dt>RGB:</dt>
+                <dd>250, 200, 167</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--multe-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-multe-30</dd>
+                <dt>HEX:</dt>
+                <dd>#FDE8D9</dd>
+                <dt>RGB:</dt>
+                <dd>253, 232, 217</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sol">
+            <h4 class="sb1ds-color-palette__color-name">Sol</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sol</dd>
+                <dt>HEX:</dt>
+                <dd>#DC8000</dd>
+                <dt>RGB:</dt>
+                <dd>220, 128, 0</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sol-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sol-70</dd>
+                <dt>HEX:</dt>
+                <dd>#E7A64D</dd>
+                <dt>RGB:</dt>
+                <dd>231, 166, 77</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sol-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sol-30</dd>
+                <dt>HEX:</dt>
+                <dd>#F5D9B3</dd>
+                <dt>RGB:</dt>
+                <dd>245, 217, 179</dd>
+            </dl>
+        </div>
+    </li>
+</ul>
+
+## Nøytrale farger
+
+Her er en oversikt over gråtoner, svart og andre nøytrale farger vi har behov for. Bestående av en blåsvart, basert på blåtonene i hovedpaletten, og resten rene svart-farger i fem fasetter + 3 varme gråtoner.
+
+<ul class="sb1ds-color-palette sb1ds-color-palette--neutral">
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--natt">
+            <h4 class="sb1ds-color-palette__color-name">Natt</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-natt</dd>
+                <dt>HEX:</dt>
+                <dd>#001032</dd>
+                <dt>RGB:</dt>
+                <dd>0, 16, 50</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--svart">
+            <h4 class="sb1ds-color-palette__color-name">Svart</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-svart</dd>
+                <dt>HEX:</dt>
+                <dd>#020A0A</dd>
+                <dt>RGB:</dt>
+                <dd>2, 10, 10</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--koksgraa">
+            <h4 class="sb1ds-color-palette__color-name">Koksgrå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-koksgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#323232</dd>
+                <dt>RGB:</dt>
+                <dd>50, 50, 50</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--moerkgraa">
+            <h4 class="sb1ds-color-palette__color-name">Mørk grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-moerkgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#676767</dd>
+                <dt>RGB:</dt>
+                <dd>103, 103, 103</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--graa">
+            <h4 class="sb1ds-color-palette__color-name">Grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-graa</dd>
+                <dt>HEX:</dt>
+                <dd>#ADADAD</dd>
+                <dt>RGB:</dt>
+                <dd>173, 173, 173</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lysgraa">
+            <h4 class="sb1ds-color-palette__color-name">Lys grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lysgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#D8D8D8</dd>
+                <dt>RGB:</dt>
+                <dd>216, 216, 216</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--moerkvarmgraa">
+            <h4 class="sb1ds-color-palette__color-name">Mørk varmgrå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-moerkvarmgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#848383</dd>
+                <dt>RGB:</dt>
+                <dd>132, 131, 131</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--varmgraa">
+            <h4 class="sb1ds-color-palette__color-name">Varm grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-varmgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#9B9797</dd>
+                <dt>RGB:</dt>
+                <dd>155, 151, 151</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lysvarmgraa">
+            <h4 class="sb1ds-color-palette__color-name">Lys varmgrå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lysvarmgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#D7D2CB</dd>
+                <dt>RGB:</dt>
+                <dd>215, 210, 203</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--hvit">
+            <h4 class="sb1ds-color-palette__color-name">Hvit</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-hvit</dd>
+                <dt>HEX:</dt>
+                <dd>#FFFFFF</dd>
+                <dt>RGB:</dt>
+                <dd>255, 255, 255</dd>
+            </dl>
+        </div>
+    </li>
+</ul>
+
+## 2 fargekombinasjoner
+Dersom designet kun skal ha to farger er disse fire kombinasjonene anbefalt:
+
+<div className="sb1ds-layout-2col-grid">
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#005AA4" d="M299.9999998572106, 149.99345501530712 A150,150 0 1 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 1 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Sand</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#F8E9DD" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#005AA4" d="M299.9999998572106, 149.99345501530712 A150,150 0 1 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 1 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Syrin</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#D3D3EA" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#005AA4" d="M299.9999998572106, 149.99345501530712 A150,150 0 1 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 1 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure ">
+        <figcaption>Vann + Frost</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#7EB5D2" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#005AA4" d="M299.9999998572106, 149.99345501530712 A150,150 0 1 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 1 0 150,150 Z"></path></svg> 
+    </figure>
+</div>
+
+Eksempler på bruk av 2 fargekombinasjoner:
+{/* <img src={fargevekting2kombo} alt="Fire eksempler på bruk av 2 fargekombinasjoner i design" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+## 3 fargekombinasjoner
+Om du vil kombinere tre farger, er disse kombinasjonene anbefalt:
+
+<div className="sb1ds-layout-2col-grid">
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#F8E9DD" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.9999998572106, 149.99345501530712 A150,150 0 0 1 150.01308996937328,299.99999942884233 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#005AA4" d="M150.01308996937328, 299.99999942884233 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg> 
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Syrin</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#D3D3EA" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.9999998572106, 149.99345501530712 A150,150 0 0 1 150.01308996937328,299.99999942884233 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#005AA4" d="M150.01308996937328, 299.99999942884233 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg> 
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Frost</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#7EB5D2" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.9999998572106, 149.99345501530712 A150,150 0 0 1 150.01308996937328,299.99999942884233 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#005AA4" d="M150.01308996937328, 299.99999942884233 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>  
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.9999998572106,149.99345501530712 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.9999998572106, 149.99345501530712 A150,150 0 0 1 150.01308996937328,299.99999942884233 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#F8E9DD" d="M150.01308996937328, 299.99999942884233 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg> 
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Villblomst</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#EE8D9C" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612947,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#005AA4" d="M145.34823385612947, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Lyng</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#873953" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612947,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#005AA4" d="M145.34823385612947, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+</div>
+
+Eksempler på bruk av 3 fargekombinasjoner:
+
+{/* <img src={fargevekting3kombo} alt="Eksempler på bruk av tre fargekombinasjoner i design" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+## 4 fargekombinasjoner
+Om du vil kombinere fire farger, er disse kombinasjonene anbefalt:
+
+<div className="sb1ds-layout-2col-grid">
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Syrin</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#D3D3EA" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Frost</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#7EB5D2" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Villblomst</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#EE8D9C" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Syrin</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#D3D3EA" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Frost</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#7EB5D2" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Villblomst</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#EE8D9C" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Lyng</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#873953" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Bær</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#E44244" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Nordlys</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#33AF85" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Lyng</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#873953" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Bær</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#E44244" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Nordlys</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#33AF85" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Multe</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#F8B181" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Sol</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#DC8000" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Vann + Fjell + Sand + Skog</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#002776" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#F8E9DD" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#285949" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#005AA4" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Multe</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#F8B181" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Sol</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#DC8000" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+    <figure className="sb1ds-layout__figure">
+        <figcaption>Sand + Vann + Fjell + Skog</figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" id="sv" width="300" height="300" viewBox="0 0 300 300"><path id="0" fill="#005AA4" d="M150, 0 A150,150 0 0 1 299.98175857047835,147.66074881495211 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="1" fill="#002776" d="M299.98175857047835, 147.66074881495211 A150,150 0 0 1 255.24504463589886,256.88068384693116 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="2" fill="#285949" d="M255.24504463589886, 256.88068384693116 A150,150 0 0 1 145.34823385612955,299.92785288845675 L150,150 A0,0 0 0 0 150,150 Z"></path><path id="3" fill="#F8E9DD" d="M145.34823385612955, 299.92785288845675 A150,150 0 0 1 149.9738200613531,0.000002284630625126738 L150,150 A0,0 0 0 0 150,150 Z"></path></svg>
+    </figure>
+</div>
+
+Eksempler på bruk av 4 fargekombinasjoner:
+
+{/* <img src={fargevekting4kombo} alt="Eksempler på bruk av fire fargekombinasjoner i design" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+### Ikke tillatt bruk av kombinasjoner
+Når det blir så mange som 4 farger eller fler (i illustrasjon eller infografikk) må man velge farger etter regelverket og bruke sunn fornuft. Under ser du eksempler hvor reglene ikke er fulgt. Alt med måte, bruk skjønn og husk gode kontraster. Alltid. 
+
+{/* <img src={fargevektingIkkeLov} alt="Eksempel på bruk fargekombinasjoner som ikke er etter retningslinjene." /> */}

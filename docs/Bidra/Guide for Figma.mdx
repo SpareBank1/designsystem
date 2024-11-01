@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Bidra/Guide for Figma" />
+
+{/* import bidraIFigma1 from "../../../static/img/bidra-i-figma/bidra-i-figma1.png"
+import bidraIFigma2 from "../../../static/img/bidra-i-figma/bidra-i-figma2.png"
+import bidraIFigma3 from "../../../static/img/bidra-i-figma/bidra-i-figma3.png"
+import bidraIFigma4 from "../../../static/img/bidra-i-figma/bidra-i-figma4.png"
+import bidraIFigma5 from "../../../static/img/bidra-i-figma/bidra-i-figma5.png"
+import bidraIFigma6 from "../../../static/img/bidra-i-figma/bidra-i-figma6.png"
+import bidraIFigma7 from "../../../static/img/bidra-i-figma/bidra-i-figma7.png"
+import bidraIFigma8 from "../../../static/img/bidra-i-figma/bidra-i-figma8.png" */}
+
+# Guide for Figma
+
+Under kan du lese mer om hvordan du bidrar til designsystem-bibliotekene i Figma
+
+## Opprett branch
+Når du skal lage forslag til endringer eller nye komponenter i designsystemet i Figma, er det viktig at du først lager en ny «branch». Det er en kopi av designsystem-fila, som du kan gjøre endringene dine på, og som designsystem-teamet kvalitetssikrer før endringene «merges» (slås sammen med hovedfila) og publiseres ut i biblioteket.
+
+Et godt tips er å heller lage flere små brancher som kan merges inn fortere, enn større brancher som blir liggende lenge, for å unngå «unødvendige» merge-konflikter.
+
+Gjør dette for å opprette en ny branch:
+1. Finn designsystem-filen du vil gjøre endringene i
+
+{/* <img src={bidraIFigma1} alt="Skjermbilde av Designsystemprosjektet i Figma" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+2. Gå inn i filen
+
+{/* <img src={bidraIFigma2} alt="Skjermbilde av filen Profil og komponenter i Figma" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+3. Klikk på pila ved siden av navnet på filen og velg «Create branch...»
+
+{/* <img src={bidraIFigma3} alt="Skjermbilde av hvordan man oppretter ny branch i Figma" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+4. Gi branchen et kort navn som beskriver endringene du tenker å gjøre og klikk på «Create»
+
+{/* <img src={bidraIFigma4} alt="Skjermbilde av navngiving ny branch i Figma" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+5. Du har laget en ny branch, og kan sette i gang med å lage endringsforslaget ditt!
+
+{/* <img src={bidraIFigma5} alt="Skjermbilde av Figma hvor man jobber i egen branch" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+Husk å dobbeltsjekke at du er inne på branchen din når du gjør disse endringene
+
+{/* <img src={bidraIFigma6} alt="Skjermbilde av verktøylinjen i figma hvor man ser hvilken branch man jobber i" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+For å gå inn i branchen igjen senere finner du bare designsystem-filen i oversikten, klikker på nedtrekkslisten som vises over filen, og velger branchen der.
+
+## Send forespørsel til designsystem-teamet
+
+Når du har gjort endringene og er klar til å sende inn forslaget ditt:
+
+1. Klikk på pila ved siden av filnavnet og velg «Review and merge changes»
+
+{/* <img src={bidraIFigma7}  alt="Skjermbilde fra Figma som viser hvor du finner «Review and merge»" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+2. Under «Reviewers», legg til Ragnhild Lie, Sindre Säfvenbom og Anders Johnsen fra designsystem-teamet ved å klikke på «Add»
+
+{/* <img src={bidraIFigma8}  alt="Skjermbilde fra Figma av «Branch review»" className="sb1ds-layout__spacing-bottom--md" /> */}
+
+3. Klikk på «Request review»
+
+4. Designsystem-teamet får melding om at du har lagt inn et forslag, og ser på det så fort vi kan. Du får beskjed når endringene dine blir publisert ut i designsystemet
+
+## Husk at det også må kodes
+Når vi kommer med forslag til endringer eller nye komponenter i Figma-bibliotekene, må vi huske på at det også skal implementeres i komponentbiblioteket som utviklerne bruker på GitHub – og motsatt.
+
+Dette er viktig for at bibliotekene holder seg oppdaterte og synkroniserte.
+
+Forslagene vil ikke bli publisert i Figma-biblioteket før vi også har en kodet variant vi kan publisere i biblioteket på GitHub.
+
+Hvis du har laget en branch med forslag til endringer eller ny komponent i Figma, kan du alliere deg meg utviklere på teamet ditt som koder samme endringer eller komponent i designsystemet på GitHub og lager en pull request som designsystem-teamet kvalitetssikrer før endringene publiseres i komponentbiblioteket.

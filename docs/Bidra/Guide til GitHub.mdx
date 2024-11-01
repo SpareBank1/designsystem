@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Bidra/Guide til GitHub" />
+
+# Guide til GitHub
+
+Her finner du mer info om hvordan du bidrar til designsystemet på GitHub
+
+## Tilganger
+For å kunne sende pull-requester eller opprette issues må du ha en GitHub-bruker.
+
+## Pull-requester
+Når du har gjort deg ferdig med koden din, er det på tide å be andre se over den. Push koden til Github og opprett en pull request som går mot develop-branchen. Legg til et par reviewere - gjerne tidligere bidragsytere, som ofte har god feedback å komme med. Er du usikker på hvem som bør legges til, spør gjerne på Slack eller se i git-loggen til koden du har endret på. Pull requester må godkjennes av minst to reviewere før de kan merges.
+
+Før du lager en pull request kan det være lurt å ta en titt gjennom denne huskelisten:
+* Er koden så konsis og forståelig som mulig?
+* Har du lagt til et test-case som bekrefter at endringen fungerer?
+* Trenger endringen å dokumenteres?
+
+Alle kan sende pull-requester fra egne forks av designsystem-repositoryet, men for en mer sømløs opplevelse kan du få [skrivetilgang til repositoryet](/faq/).
+
+## Versjonskontroll
+Commit-meldinger følger [Conventional Commits](https://conventionalcommits.org/)-formatet. Dette gjør vi for å automatisk kunne generere endringslogger og nye versjonsnumre. På grunn av denne automatiske genereringen er det viktig at hver commit kun endrer en pakke, og setter riktig "scope" (pakke) for hver commit. Innholdet i commit-meldingen er det eneste innholdet vi får i changelogen, så bruk gjerne litt tid på å beskrive hva endringen din gjør og hvorfor.
+
+Commit-meldinger består i utgangspunktet av type, scope og description. Ytterligere informasjon kan legges til i en valgfri body og/eller footer.
+
+* type beskriver hvilken type endring som commites. Vanligst er fix (bugfiks eller tilsvarende) og feat (ny eller endret funksjonalitet). Andre typer er også tillatt og brukes av og til, for eksempel refactor, chore eller docs
+* scope beskriver hvilken av pakkene våre endringen gjelder. Må være omsluttet av parenteser
+* description er et kort sammendrag av endringene
+* body og/eller footer er valgfri, men kan inneholde mer informasjon de øvrige feltene. Legges på ny linje, med en blank linje imellom
+* `BREAKING CHANGE:` markerer en endring som innebærer at brukerne av komponenten må ta aktivt stilling til den, for eksempel som følge av at komponenten endrer utseende eller API. Må legges først på en linje i body eller footer, og avsluttes med kolon. Commit-meldinger som inneholder en breaking change genererer en ny major versjon av komponenten det gjelder
+
+Formatet kan sammenfattes slik:
+```
+**type(scope):** description
+
+body
+
+footer
+```
+Skal du for eksempel innføre redesignede knapper i ffe-buttons kan commit-meldingen se slik ut:
+```
+feat(ffe-buttons): redesign av knapper
+
+knappene har nå nye farger, fonter og former
+
+BREAKING CHANGE: knapper har helt nytt utseende
+```
+
+## Styling
+
+### Less
+Våre stylesheets er skrevet i [Less](http://lesscss.org/), som deretter kompileres til CSS. På tross av mulighetene dette åpner opp for, forsøker vi å ha et nøkternt forhold til hva vi bruker av funksjonalitet for å gjøre koden så leselig og fleksibel som mulig. I fremtiden er det kanskje noe helt annet som blir brukt.
+
+### BEM
+Vår styling bruker CSS og følger [BEM-konvensjonen](http://getbem.com/). Sett deg inn i reglene denne konvensjonen pålegger oss, slik at ny kode følger samme konvensjon som den eksisterende. Alle klassenavn i designsystemet er prefikset med `ffe-`.
+
+## JavaScript og React
+React-komponentene i FFE har i stor grad automatiserte kodestandardssjekker gjennom linting. Likevel er det et par mønstre vi oppfordrer til å følge for å øke gjenbrukbarheten av en komponent:
+
+### Bruk ECMAScript
+All koden vår transpileres før den eksporteres. Dette betyr at du trygt kan bruke nye features i JavaScript-språket som ikke støttes i alle nettlesere enda.
+
+### TypeScript definition
+React-komponentene og alle andre JavaScript-pakkene har typedefinisjoner for TypeScript. Dersom du endrer eksterne metoder eller properties i en slik komponent må `index.d.ts` oppdateres tilsvarende, slik at typene er i sync med JavaScript.
+
+### Testing
+Vi bruker Jest til testing av komponentene, og oppfordrer alle til å hjelpe med å holde testene oppdaterte og relevante. 
