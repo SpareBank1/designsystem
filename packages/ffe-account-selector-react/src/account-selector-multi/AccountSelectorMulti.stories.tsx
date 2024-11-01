@@ -1,8 +1,9 @@
-import React, { useState, useId } from 'react';
+import React, { useState } from 'react';
 import { AccountSelectorMulti } from './AccountSelectorMulti';
 import { InputGroup } from '@sb1/ffe-form-react';
 import type { StoryObj, Meta } from '@storybook/react';
 import type { Account } from '../types';
+import { TertiaryButton } from '@sb1/ffe-buttons-react';
 
 const meta: Meta<typeof AccountSelectorMulti> = {
     title: 'components/account-selector/AccountSelectorMulti',
@@ -44,65 +45,70 @@ export const Standard: Story = {
         accounts,
         id: 'input-id',
         locale: 'nb',
+        formatAccountNumber: true,
+        onColoredBg: false,
     },
     render: function Render(args) {
-        const [value, setValue] = useState<string>();
+        return (
+            <InputGroup
+                label="Velg konto"
+                inputId={args.id}
+                labelId={args.labelledById}
+                onColoredBg={args.onColoredBg}
+            >
+                <AccountSelectorMulti {...args} />
+            </InputGroup>
+        );
+    },
+};
+
+export const ControlledState: Story = {
+    args: { ...Standard.args },
+    render: function Render(args) {
         const [selectedAccounts, setSelectedAccounts] = useState<Account[]>([]);
-        const id = useId();
-
-        const onAccountSelected = (selectedAccount: Account) => {
-            const filteredAccounts = selectedAccounts.filter(
-                it => it.accountNumber !== selectedAccount.accountNumber,
-            );
-
-            const accountAlreadySelectedAndShouldBeRemoved =
-                filteredAccounts.length !== selectedAccounts.length;
-
-            if (accountAlreadySelectedAndShouldBeRemoved) {
-                setSelectedAccounts(filteredAccounts);
-            } else {
-                setSelectedAccounts([...selectedAccounts, selectedAccount]);
-            }
-        };
-
-        const onBlur = () => {
-            setValue(selectedAccounts.map(acc => acc.name).join(', '));
-        };
-
-        const onFocus = () => {
-            setValue('');
-        };
-
-        const onSelectAll = () => {
-            if (selectedAccounts.length === accounts.length) {
-                setSelectedAccounts([]);
-            } else {
-                setSelectedAccounts(accounts);
-            }
-        };
-
-        const onReset = () => {
-            setValue('');
-            setSelectedAccounts([]);
-        };
 
         return (
-            <InputGroup label="Velg konto" inputId={args.id}>
-                <AccountSelectorMulti
-                    id={id}
-                    locale="nb"
-                    accounts={accounts}
-                    onAccountSelected={onAccountSelected}
-                    selectedAccounts={selectedAccounts}
-                    value={value}
-                    onChange={val => setValue(val)}
-                    showSelectAllOption={true}
-                    onSelectAll={onSelectAll}
-                    onBlur={onBlur}
-                    onFocus={onFocus}
-                    onReset={onReset}
-                />
-            </InputGroup>
+            <div>
+                <InputGroup
+                    label="Velg konto"
+                    inputId={args.id}
+                    labelId={args.labelledById}
+                    onColoredBg={args.onColoredBg}
+                >
+                    {inputProps => (
+                        <>
+                            <AccountSelectorMulti
+                                {...inputProps}
+                                {...args}
+                                selectedAccounts={selectedAccounts}
+                                onChange={(account, actionType) => {
+                                    if (actionType === 'selected') {
+                                        setSelectedAccounts(prevAccounts =>
+                                            prevAccounts.concat(account),
+                                        );
+                                    } else {
+                                        setSelectedAccounts(prevAccounts =>
+                                            prevAccounts.filter(
+                                                it =>
+                                                    it.accountNumber !==
+                                                    account.accountNumber,
+                                            ),
+                                        );
+                                    }
+                                }}
+                            />
+                            <TertiaryButton
+                                type="button"
+                                onClick={() => {
+                                    setSelectedAccounts(accounts);
+                                }}
+                            >
+                                Velg alle
+                            </TertiaryButton>
+                        </>
+                    )}
+                </InputGroup>
+            </div>
         );
     },
 };

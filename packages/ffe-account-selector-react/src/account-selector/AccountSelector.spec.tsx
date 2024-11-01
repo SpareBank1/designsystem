@@ -1,8 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Account } from '../types';
-import { AccountSuggestionSingleProps } from './AccountSuggestionSingle';
+import { Account, Locale } from '../types';
 import { AccountSelector } from './AccountSelector';
 
 describe('<AccountSelector/>', () => {
@@ -343,9 +342,12 @@ describe('<AccountSelector/>', () => {
     });
 
     it('should be able to render custom list items', () => {
-        const CustomListItemBody: React.FC<AccountSuggestionSingleProps> = ({
-            item: { accountNumber, name, balance, currencyCode },
-        }) => (
+        const CustomListItemBody: React.FC<{
+            item: Account;
+            locale: Locale;
+            isHighlighted: boolean;
+            dropdownAttributes: (keyof Account)[];
+        }> = ({ item: { accountNumber, name, balance, currencyCode } }) => (
             <div>
                 <span>{accountNumber}</span>
                 <span>FOR et navn! {name}</span>
@@ -362,7 +364,7 @@ describe('<AccountSelector/>', () => {
                 locale="nb"
                 onAccountSelected={handleAccountSelected}
                 onReset={onReset}
-                listElementBody={CustomListItemBody}
+                optionBody={CustomListItemBody}
                 ariaInvalid={false}
             />,
         );
@@ -374,7 +376,7 @@ describe('<AccountSelector/>', () => {
         expect(
             screen.getByText('FOR et navn! Jeg er en konto'),
         ).toBeInTheDocument();
-        expect(screen.getByText('Litt av en saldo! 13337')).toBeInTheDocument();
+        expect(screen.getByText('Litt av en saldo! 1337')).toBeInTheDocument();
     });
 
     it('should format input field while typing if value only contains digits and/or spaces', () => {

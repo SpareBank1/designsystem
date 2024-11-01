@@ -1,244 +1,130 @@
-import React from 'react';
-// @ts-ignore
-import autoBind from 'react-auto-bind';
-import { Checkbox } from '@sb1/ffe-form-react';
-import { BaseSelector } from '../base-selector';
-import { AccountNoMatch } from './AccountNoMatch';
-import { AccountSuggestionMulti } from './AccountSuggestionMulti';
-import { SuggestionListStatusBar } from './SuggestionListStatusBar';
+import React, { AriaAttributes } from 'react';
 import { Account, Locale } from '../types';
-import { accountFilter } from '../util/filters';
-import { texts } from '../i18n/texts';
-
-type AllAccountsElement = { id: 'all-accounts'; accountNumber: '' };
-const allAccountsElement: AllAccountsElement = {
-    id: 'all-accounts',
-    accountNumber: '',
-};
-
-const isAllAccountsElement = <T extends Account>(
-    suggestion: T | AllAccountsElement,
-): suggestion is AllAccountsElement =>
-    (suggestion as AllAccountsElement)?.id === 'all-accounts';
-
-const renderSelectAll = (allSelected: boolean, locale: Locale) => (
-    <div className="ffe-account-suggestion-multi ffe-account-suggestion-multi__select-all">
-        <Checkbox
-            checked={allSelected}
-            name="ffe-account-suggestion-multi__select-all-label"
-            inline={false}
-            tabIndex={-1}
-            disabled={true}
-            hiddenLabel={true}
-        >
-            {texts[locale].SELECT_ALL}
-        </Checkbox>
-        <div className="ffe-account-suggestion-multi__content-wrapper">
-            <span className="ffe-account-suggestion-multi__name">
-                {texts[locale].SELECT_ALL}
-            </span>
-        </div>
-    </div>
-);
+import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
+import { balanceWithCurrency, formatIncompleteAccountNumber } from '../format';
+import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting';
+import { texts } from '../texts';
 
 export interface AccountSelectorMultiProps<T extends Account = Account> {
     /**
      * Array of objects:
      *  {
      *      accountNumber: string.isRequired,
-     *      balance: number,
-     *      currencyCode: string.
      *      name: string.isRequired,
+     *      balance: number,
+     *      currencyCode: string,
      *  }
      */
-    accounts?: T[];
+    accounts: T[];
+    className?: string;
     id: string;
-    isLoading?: boolean;
-    /** 'nb', 'nn', or 'en' */
-    locale: Locale;
+    locale?: Locale;
     /** Overrides default string for all locales. */
-    noMatches?: string;
-    /** Called when an account is clicked */
-    onAccountSelected: (account: T) => void;
-    onChange?: (value: string) => void;
-    onFocus?: () => void;
-    onBlur: () => void;
-    onReset?: () => void;
-    onSelectAll: (allSelected: boolean) => void;
-    /**
-     * Array of objects:
-     *  {
-     *      accountNumber: string.isRequired,
-     *      balance: number,
-     *      currencyCode: string.
-     *      name: string.isRequired,
-     *  }
-     */
+    noMatches?: {
+        text: string;
+        dropdownList?: T[];
+    };
+    /** Props passed to the input field */
+    inputProps?: React.ComponentPropsWithoutRef<'input'>;
+    /** Called when a value is selected */
+    onChange: (account: T, actionType: 'selected' | 'removed') => void;
+    /** Default false. */
+    showBalance?: boolean;
+    /** Default true. */
+    formatAccountNumber?: boolean;
+    /** id of element that labels input field */
+    labelledById?: string;
+    /** Custom element to use for each item in the dropdown list */
+    optionBody?: React.ComponentType<{
+        item: T;
+        dropdownAttributes: (keyof T)[];
+        isHighlighted: boolean;
+        locale: Locale;
+        isSelected: boolean;
+    }>;
+    /** Element to be shown below dropDownList */
+    postListElement?: React.ReactNode;
+    /** Sets aria-invalid on input field  */
+    'aria-invalid'?: AriaAttributes['aria-invalid'];
+    ariaInvalid?: AriaAttributes['aria-invalid'];
+    /** Prop passed to the dropdown list */
+    onOpen?: () => void;
+    onClose?: () => void;
     selectedAccounts?: T[];
-    showSelectAllOption?: boolean;
-    value?: string;
+    /**
+     * Called when emptying the input field and moving focus away from the account selector
+     * */
+    onReset: () => void;
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg?: boolean;
+    /** Limits number of rendered dropdown elements */
+    maxRenderedDropdownElements?: number;
 }
 
-interface AccountSelectorMultiState {
-    suggestionListHeight: number;
-}
+export const AccountSelectorMulti = <T extends Account = Account>({
+    id,
+    className,
+    locale = 'nb',
+    selectedAccounts,
+    showBalance = false,
+    noMatches,
+    accounts,
+    onChange,
+    labelledById,
+    optionBody: OptionBody,
+    postListElement,
+    onReset,
+    inputProps,
+    formatAccountNumber = true,
+    ariaInvalid,
+    onOpen,
+    onClose,
+    onColoredBg,
+    maxRenderedDropdownElements,
+    ...rest
+}: AccountSelectorMultiProps<T>) => {
+    const formatter = formatAccountNumber
+        ? formatIncompleteAccountNumber
+        : undefined;
 
-export class AccountSelectorMulti<
-    T extends Account = Account,
-> extends React.Component<
-    AccountSelectorMultiProps<T>,
-    AccountSelectorMultiState
-> {
-    private shouldShowSuggestions?: boolean;
-    private baseRef?: BaseSelector<T | AllAccountsElement> | null;
-    constructor(props: AccountSelectorMultiProps<T>) {
-        super(props);
-        autoBind(this);
-        this.state = {
-            suggestionListHeight: 0,
-        };
-    }
-
-    filterSuggestions(value?: string) {
-        const { accounts = [], showSelectAllOption } = this.props;
-        if (showSelectAllOption && !value) {
-            return [
-                allAccountsElement,
-                ...accounts.filter(accountFilter(value)),
-            ];
-        }
-        return accounts.filter(accountFilter(value));
-    }
-
-    onSuggestionSelect(suggestion: AllAccountsElement | T) {
-        const {
-            onAccountSelected,
-            selectedAccounts = [],
-            accounts,
-        } = this.props;
-        if (suggestion) {
-            if (!isAllAccountsElement(suggestion)) {
-                onAccountSelected(suggestion);
-            } else if (suggestion.id === allAccountsElement.id) {
-                const allSelected =
-                    selectedAccounts.length === accounts?.length;
-                if (this.props.onSelectAll) {
-                    this.props.onSelectAll(!allSelected);
-                }
+    return (
+        <SearchableDropdownMultiSelect<T>
+            id={id}
+            labelledById={labelledById}
+            inputProps={inputProps}
+            dropdownAttributes={
+                showBalance
+                    ? ['name', 'accountNumber', 'balance']
+                    : ['name', 'accountNumber']
             }
-        }
-    }
-
-    renderSuggestion(account: T | AllAccountsElement) {
-        const { locale, selectedAccounts = [], accounts } = this.props;
-        const isSelected = selectedAccounts.filter(
-            it => it.accountNumber === account.accountNumber,
-        );
-        if (!isAllAccountsElement(account)) {
-            return (
-                <AccountSuggestionMulti
-                    account={account}
-                    locale={locale}
-                    selected={isSelected.length > 0}
-                />
-            );
-        }
-        return renderSelectAll(
-            selectedAccounts.length === accounts?.length,
-            locale,
-        );
-    }
-
-    onBlur() {
-        if (!this.shouldShowSuggestions) {
-            this.props.onBlur();
-        }
-        this.baseRef?.showOrHideSuggestions(!!this.shouldShowSuggestions);
-        this.shouldShowSuggestions = false;
-    }
-
-    onDone() {
-        this.baseRef?.showOrHideSuggestions(false);
-        this.props.onBlur();
-    }
-
-    renderSuggestionDetails(listHeight = 0) {
-        if (this.baseRef) {
-            let statusText;
-            const { selectedAccounts = [], isLoading = false } = this.props;
-            if (selectedAccounts.length === 0) {
-                statusText = texts[this.props.locale].NO_ACCOUNTS_SELECTED;
-            } else if (selectedAccounts.length === 1) {
-                statusText = texts[this.props.locale].ONE_ACCOUNT_SELECTED;
-            } else {
-                statusText = `${selectedAccounts.length} ${
-                    texts[this.props.locale].MULTIPLE_ACCOUNTS_SELECTED
-                }`;
+            postListElement={postListElement}
+            dropdownList={
+                OptionBody
+                    ? accounts
+                    : accounts.map(it => ({
+                          ...it,
+                          balance: balanceWithCurrency(
+                              it.balance,
+                              locale,
+                              it.currencyCode,
+                          ),
+                      }))
             }
-            const height = listHeight + this.baseRef.getInputHeight();
-            return (
-                !isLoading && (
-                    <SuggestionListStatusBar
-                        renderSelectionStatus={() => statusText}
-                        onDone={this.onDone}
-                        labelDoneButton={
-                            texts[this.props.locale].DROPDOWN_MULTISELECT_DONE
-                        }
-                        style={{
-                            position: 'absolute',
-                            zIndex: 100,
-                            top: height,
-                        }}
-                    />
-                )
-            );
-        }
-        return null;
-    }
-
-    onKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
-        if (event.key === 'Tab') {
-            this.shouldShowSuggestions = !event.shiftKey;
-        }
-    }
-
-    render() {
-        const { id, noMatches, locale, value, onChange, onFocus, onReset } =
-            this.props;
-        return (
-            // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-            <div
-                className="ffe-account-selector-multi"
-                onKeyDown={this.onKeyDown}
-            >
-                <BaseSelector
-                    id={id}
-                    value={value ?? ''}
-                    onChange={onChange}
-                    onFocus={onFocus}
-                    onReset={onReset}
-                    renderSuggestion={account => this.renderSuggestion(account)}
-                    renderNoMatches={() => (
-                        <AccountNoMatch value={noMatches} locale={locale} />
-                    )}
-                    shouldSelectHighlightedOnTab={false}
-                    shouldHideSuggestionsOnReset={true}
-                    onSuggestionSelect={this.onSuggestionSelect}
-                    locale={locale}
-                    onSuggestionListChange={height => {
-                        this.setState({ suggestionListHeight: height });
-                    }}
-                    suggestions={this.filterSuggestions(value)}
-                    ref={element => {
-                        this.baseRef = element;
-                    }}
-                    onBlur={this.onBlur}
-                />
-                {this.state.suggestionListHeight > 0 &&
-                    this.renderSuggestionDetails(
-                        this.state.suggestionListHeight,
-                    )}
-            </div>
-        );
-    }
-}
+            noMatch={noMatches ?? { text: texts[locale].noMatch }}
+            formatter={formatter}
+            onChange={onChange}
+            searchAttributes={['name', 'accountNumber']}
+            locale={locale}
+            optionBody={OptionBody}
+            ariaInvalid={rest['aria-invalid'] ?? ariaInvalid}
+            searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
+            selectedItems={selectedAccounts}
+            onOpen={onOpen}
+            onClose={onClose}
+            maxRenderedDropdownElements={maxRenderedDropdownElements}
+            isEqual={(accountA, accountB) =>
+                accountA.accountNumber === accountB.accountNumber
+            }
+        />
+    );
+};

@@ -32,6 +32,7 @@ import { useRefs } from '../useRefs';
 import { ToggleButton } from '../ToggleButton';
 import { ListBox } from '../ListBox';
 import { getSelectedLabel } from '../translations';
+import isDeepEqual from 'lodash.isequal';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
@@ -106,6 +107,8 @@ export interface SearchableDropdownMultiSelectProps<
      * If you always want "X selected" showing, pass in 0
      */
     showNumberSelectedAfter?: number;
+    /** Custom compare between objects. Default is deep equals*/
+    isEqual?: (itemA: Item, itemB: Item) => boolean;
 }
 
 function SearchableDropdownMultiSelectWithForwardRef<
@@ -133,6 +136,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
         onOpen,
         onClose,
         showNumberSelectedAfter,
+        isEqual = isDeepEqual,
         ...rest
     }: SearchableDropdownMultiSelectProps<Item>,
     ref: ForwardedRef<HTMLInputElement>,
@@ -144,10 +148,11 @@ function SearchableDropdownMultiSelectWithForwardRef<
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch?.dropdownList,
             searchMatcher,
+            isEqual,
         }),
         {
             isExpanded: false,
-            selectedItems: selectedItems ?? [],
+            selectedItems: [],
             highlightedIndex: -1,
             inputValue: '',
         },
@@ -237,7 +242,16 @@ function SearchableDropdownMultiSelectWithForwardRef<
         } else {
             setShowChips(true);
         }
-    }, [state.selectedItems]);
+    }, [state.selectedItems, showNumberSelectedAfter]);
+
+    useEffect(() => {
+        if (selectedItems) {
+            dispatch({
+                type: 'ItemSelectedProgrammatically',
+                payload: { items: selectedItems },
+            });
+        }
+    }, [selectedItems, dispatch]);
 
     useHandleContainerFocus({
         id,
@@ -249,11 +263,15 @@ function SearchableDropdownMultiSelectWithForwardRef<
         if (event.key === ENTER && state.highlightedIndex >= 0) {
             event.preventDefault();
             const clickedItem = state.listToRender[state.highlightedIndex];
-            const actionType = getActionType(state.selectedItems, clickedItem);
+            const actionType = getActionType(
+                state.selectedItems,
+                clickedItem,
+                isEqual,
+            );
             dispatch({
                 type: 'InputKeyDownEnter',
                 payload: {
-                    item: clickedItem,
+                    items: [clickedItem],
                     actionType,
                     highlightedIndex: state.highlightedIndex,
                 },
@@ -319,7 +337,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                 dispatch({
                     type: 'RemoveItem',
                     payload: {
-                        item: lastItem,
+                        items: [lastItem],
                         actionType: 'removed',
                     },
                 });
@@ -354,21 +372,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                     inputRef.current?.click();
                 }}
             >
-                {!showChips && (
-                    <Chip
-                        size="sm"
-                        aria-label={getSelectedLabel(
-                            locale,
-                            state.selectedItems.length,
-                        )}
-                        as="span"
-                        role="presentation"
-                        className="ffe-chip--multiple-selected"
-                    >
-                        {getSelectedLabel(locale, state.selectedItems.length)}
-                    </Chip>
-                )}
-                {showChips &&
+                {showChips ? (
                     state.selectedItems?.map((item, index) => {
                         return (
                             <ChipRemovable
@@ -382,7 +386,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                                     dispatch({
                                         type: 'RemoveItem',
                                         payload: {
-                                            item: item,
+                                            items: [item],
                                         },
                                     });
                                     onChange?.(item, 'removed');
@@ -392,7 +396,21 @@ function SearchableDropdownMultiSelectWithForwardRef<
                                 {item[dropdownAttributes[0]]}
                             </ChipRemovable>
                         );
-                    })}
+                    })
+                ) : (
+                    <Chip
+                        size="sm"
+                        aria-label={getSelectedLabel(
+                            locale,
+                            state.selectedItems.length,
+                        )}
+                        as="span"
+                        role="presentation"
+                        className="ffe-chip--multiple-selected"
+                    >
+                        {getSelectedLabel(locale, state.selectedItems.length)}
+                    </Chip>
+                )}
                 <input
                     {...inputProps}
                     placeholder={
@@ -458,6 +476,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             <ListBox ref={listBoxRef} isExpanded={state.isExpanded}>
                 {state.isExpanded && (
                     <Results
+                        isEqual={isEqual}
                         listToRender={state.listToRender}
                         OptionBody={OptionBody}
                         highlightedIndex={state.highlightedIndex}
@@ -468,11 +487,12 @@ function SearchableDropdownMultiSelectWithForwardRef<
                             const actionType = getActionType(
                                 state.selectedItems,
                                 item,
+                                isEqual,
                             );
                             dispatch({
                                 type: 'ItemOnClick',
                                 payload: {
-                                    item: item,
+                                    items: [item],
                                     actionType: actionType,
                                 },
                             });

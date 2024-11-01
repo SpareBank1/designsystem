@@ -1,25 +1,31 @@
-import isEqual from 'lodash.isequal';
-
 export const getNewList = <Item extends Record<string, any>>(
-    selectedList: Item[],
-    clickedElement: Item,
+    selectedItems: Item[],
+    changedItems: Item[],
     actionType: 'selected' | 'removed',
+    isEqual: (itemA: Item, itemB: Item) => boolean,
 ): Item[] => {
-    const newList =
-        actionType === 'removed'
-            ? selectedList?.filter(
-                  selectedItem => !isEqual(selectedItem, clickedElement),
-              )
-            : [...selectedList, clickedElement];
-    return newList;
+    if (actionType === 'removed') {
+        return selectedItems.filter(
+            selectedItem =>
+                !changedItems.some(changedItem =>
+                    isEqual(selectedItem, changedItem),
+                ),
+        );
+    }
+
+    return selectedItems
+        .concat(changedItems)
+        .filter(
+            (itemA, i, arr) =>
+                arr.findIndex(itemB => isEqual(itemA, itemB)) === i,
+        );
 };
 
 export const getActionType = <Item extends Record<string, any>>(
     selectedList: Item[],
     clickedElement: Item,
-): 'selected' | 'removed' => {
-    const inList = (selectedList ?? []).some(selectedItem =>
-        isEqual(selectedItem, clickedElement),
-    );
-    return inList ? 'removed' : 'selected';
-};
+    isEqual: (itemA: Item, itemB: Item) => boolean,
+): 'selected' | 'removed' =>
+    selectedList?.some(selectedItem => isEqual(selectedItem, clickedElement))
+        ? 'removed'
+        : 'selected';
