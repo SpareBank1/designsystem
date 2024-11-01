@@ -1,16 +1,14 @@
 import React from 'react';
 import { ContextMessage } from './ContextMessage';
-import { MessageHeader } from './MessageHeader';
 import type { StoryObj, Meta } from '@storybook/react';
 
-const meta: Meta<typeof ContextMessage<any>> = {
+const meta: Meta<typeof ContextMessage> = {
     title: 'components/messages/ContextMessage',
     component: ContextMessage,
-    subcomponents: { MessageHeader },
 };
 export default meta;
 
-type Story = StoryObj<typeof ContextMessage<any>>;
+type Story = StoryObj<typeof ContextMessage>;
 
 export const Standard: Story = {
     args: {

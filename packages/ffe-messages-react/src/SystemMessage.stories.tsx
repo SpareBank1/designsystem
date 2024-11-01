@@ -1,16 +1,14 @@
 import React from 'react';
 import { SystemMessage } from './SystemMessage';
 import type { StoryObj, Meta } from '@storybook/react';
-import { MessageIcon } from './MessageIcon';
 
-const meta: Meta<typeof SystemMessage<any>> = {
+const meta: Meta<typeof SystemMessage> = {
     title: 'components/messages/SystemMessage',
     component: SystemMessage,
-    subcomponents: { MessageIcon },
 };
 export default meta;
 
-type Story = StoryObj<typeof SystemMessage<any>>;
+type Story = StoryObj<typeof SystemMessage>;
 
 export const Standard: Story = {
     args: {
