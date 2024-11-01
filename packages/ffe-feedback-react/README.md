@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-feedback-react
 
 Full documentation is not yet available, but will be added to https://design.sparebank1.no/komponenter.
 
-This package depends on `@sb1/ffe-buttons-react` and `@sb1/ffe-form-react`.
+This package depends on `@sb1/ffe-buttons-react`, `@sb1/ffe-icons-react` and `@sb1/ffe-form-react`.
 Make sure you import the less-files.
 
 ## Development
