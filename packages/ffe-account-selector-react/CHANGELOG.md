@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@29.0.2...@sb1/ffe-account-selector-react@30.0.0) (2024-11-01)
+
+
+### Features
+
+* **ffe-account-selector-react:** use SearchableDropdownMultiSelect for AccountSelectorMulti ([5757516](https://github.com/SpareBank1/designsystem/commit/5757516c377f5a9f2b429eb8d55fadf5fc060d82))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** BaseSelector is removed. The new AccountSelectorMulti does not have
+an "select all" option but this can be implemented with controlled state. Se code examples.
+AccountSelectorMulti has completely new API.
+
+
+
+
+
 ## [29.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@29.0.1...@sb1/ffe-account-selector-react@29.0.2) (2024-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

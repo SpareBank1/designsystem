@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@22.0.2...@sb1/ffe-searchable-dropdown-react@22.1.0) (2024-11-01)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** custom isEqual ([9d9b854](https://github.com/SpareBank1/designsystem/commit/9d9b854dae03201818a230d07562e6abecde13be))
+
+
+
+
+
 ## [22.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@22.0.1...@sb1/ffe-searchable-dropdown-react@22.0.2) (2024-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
