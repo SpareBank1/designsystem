@@ -2,40 +2,36 @@
     width: 100%;
     flex-grow: 1;
     padding: var(--ffe-spacing-md);
+    background-color: var(--ffe-v-feedback-background-color);
 
-    // Tilgjengelige farger
     &--bg-hvit {
-        background-color: var(--ffe-farge-hvit);
+        --ffe-v-feedback-background-color: var(--ffe-farge-hvit);
     }
 
     &--bg-frost-30 {
-        background-color: var(--ffe-farge-frost-30);
+        --ffe-v-feedback-background-color: var(--ffe-farge-frost-30);
     }
 
     &--bg-sand-30 {
-        background-color: var(--ffe-farge-sand-30);
+        --ffe-v-feedback-background-color: var(--ffe-farge-sand-30);
     }
 
     &--bg-syrin-30 {
-        background-color: var(--ffe-farge-syrin-30);
+        --ffe-v-feedback-background-color: var(--ffe-farge-syrin-30);
     }
 
     &--bg-vann-30 {
-        background-color: var(--ffe-farge-vann-30);
+        --ffe-v-feedback-background-color: var(--ffe-farge-vann-30);
     }
 
-    &--dm-bg-svart {
+    @media (prefers-color-scheme: dark) {
         .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
+            &--dm-bg-svart {
+                --ffe-v-feedback-background-color: var(--ffe-farge-svart);
             }
-        }
-    }
 
-    &--dm-bg-natt {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-natt);
+            &--dm-bg-natt {
+                --ffe-v-feedback-background-color: var(--ffe-farge-natt);
             }
         }
     }
