@@ -4,7 +4,597 @@
 
 :root,
 :host {
-    /** Primærpalett */
+    /*
+    ----------
+    PRIMITIVE COLORS
+    Primitive colors should not be used directly.
+    Use the Semantic variables instead
+    -----------
+    */
+    //Neutral
+    --ffe-color-neutral-white: @ffe-color-neutral-white;
+    --ffe-color-neutral-black: @ffe-color-neutral-black;
+
+    //Vann
+    --ffe-color-vann-0: @ffe-color-vann-0;
+    --ffe-color-vann-25: @ffe-color-vann-25;
+    --ffe-color-vann-50: @ffe-color-vann-50;
+    --ffe-color-vann-75: @ffe-color-vann-75;
+    --ffe-color-vann-100: @ffe-color-vann-100;
+    --ffe-color-vann-150: @ffe-color-vann-150;
+    --ffe-color-vann-200: @ffe-color-vann-200;
+    --ffe-color-vann-250: @ffe-color-vann-250;
+    --ffe-color-vann-300: @ffe-color-vann-300;
+    --ffe-color-vann-350: @ffe-color-vann-350;
+    --ffe-color-vann-400: @ffe-color-vann-400;
+    --ffe-color-vann-450: @ffe-color-vann-450;
+    --ffe-color-vann-500: @ffe-color-vann-500;
+    --ffe-color-vann-550: @ffe-color-vann-550;
+    --ffe-color-vann-600: @ffe-color-vann-600;
+    --ffe-color-vann-650: @ffe-color-vann-650;
+    --ffe-color-vann-700: @ffe-color-vann-700;
+    --ffe-color-vann-750: @ffe-color-vann-750;
+    --ffe-color-vann-800: @ffe-color-vann-800;
+    --ffe-color-vann-850: @ffe-color-vann-850;
+    --ffe-color-vann-900: @ffe-color-vann-900;
+    --ffe-color-vann-950: @ffe-color-vann-950;
+    --ffe-color-vann-1000: @ffe-color-vann-1000;
+
+    //Geaa
+    --ffe-color-graa-0: @ffe-color-graa-0;
+    --ffe-color-graa-25: @ffe-color-graa-25;
+    --ffe-color-graa-50: @ffe-color-graa-50;
+    --ffe-color-graa-75: @ffe-color-graa-75;
+    --ffe-color-graa-100: @ffe-color-graa-100;
+    --ffe-color-graa-150: @ffe-color-graa-150;
+    --ffe-color-graa-200: @ffe-color-graa-200;
+    --ffe-color-graa-250: @ffe-color-graa-250;
+    --ffe-color-graa-300: @ffe-color-graa-300;
+    --ffe-color-graa-350: @ffe-color-graa-350;
+    --ffe-color-graa-400: @ffe-color-graa-400;
+    --ffe-color-graa-450: @ffe-color-graa-450;
+    --ffe-color-graa-500: @ffe-color-graa-500;
+    --ffe-color-graa-550: @ffe-color-graa-550;
+    --ffe-color-graa-600: @ffe-color-graa-600;
+    --ffe-color-graa-650: @ffe-color-graa-650;
+    --ffe-color-graa-700: @ffe-color-graa-700;
+    --ffe-color-graa-750: @ffe-color-graa-750;
+    --ffe-color-graa-800: @ffe-color-graa-800;
+    --ffe-color-graa-850: @ffe-color-graa-850;
+    --ffe-color-graa-900: @ffe-color-graa-900;
+    --ffe-color-graa-950: @ffe-color-graa-950;
+    --ffe-color-graa-1000: @ffe-color-graa-1000;
+
+    //Fjell
+    --ffe-color-fjell-0: @ffe-color-fjell-0;
+    --ffe-color-fjell-25: @ffe-color-fjell-25;
+    --ffe-color-fjell-50: @ffe-color-fjell-50;
+    --ffe-color-fjell-75: @ffe-color-fjell-75;
+    --ffe-color-fjell-100: @ffe-color-fjell-100;
+    --ffe-color-fjell-150: @ffe-color-fjell-150;
+    --ffe-color-fjell-200: @ffe-color-fjell-200;
+    --ffe-color-fjell-250: @ffe-color-fjell-250;
+    --ffe-color-fjell-300: @ffe-color-fjell-300;
+    --ffe-color-fjell-350: @ffe-color-fjell-350;
+    --ffe-color-fjell-400: @ffe-color-fjell-400;
+    --ffe-color-fjell-450: @ffe-color-fjell-450;
+    --ffe-color-fjell-500: @ffe-color-fjell-500;
+    --ffe-color-fjell-550: @ffe-color-fjell-550;
+    --ffe-color-fjell-600: @ffe-color-fjell-600;
+    --ffe-color-fjell-650: @ffe-color-fjell-650;
+    --ffe-color-fjell-700: @ffe-color-fjell-700;
+    --ffe-color-fjell-750: @ffe-color-fjell-750;
+    --ffe-color-fjell-800: @ffe-color-fjell-800;
+    --ffe-color-fjell-850: @ffe-color-fjell-850;
+    --ffe-color-fjell-900: @ffe-color-fjell-900;
+    --ffe-color-fjell-950: @ffe-color-fjell-950;
+    --ffe-color-fjell-1000: @ffe-color-fjell-1000;
+
+    //Natt
+    --ffe-color-natt-0: @ffe-color-natt-0;
+    --ffe-color-natt-25: @ffe-color-natt-25;
+    --ffe-color-natt-50: @ffe-color-natt-50;
+    --ffe-color-natt-75: @ffe-color-natt-75;
+    --ffe-color-natt-100: @ffe-color-natt-100;
+    --ffe-color-natt-150: @ffe-color-natt-150;
+    --ffe-color-natt-200: @ffe-color-natt-200;
+    --ffe-color-natt-250: @ffe-color-natt-250;
+    --ffe-color-natt-300: @ffe-color-natt-300;
+    --ffe-color-natt-350: @ffe-color-natt-350;
+    --ffe-color-natt-400: @ffe-color-natt-400;
+    --ffe-color-natt-450: @ffe-color-natt-450;
+    --ffe-color-natt-500: @ffe-color-natt-500;
+    --ffe-color-natt-550: @ffe-color-natt-550;
+    --ffe-color-natt-600: @ffe-color-natt-600;
+    --ffe-color-natt-650: @ffe-color-natt-650;
+    --ffe-color-natt-700: @ffe-color-natt-700;
+    --ffe-color-natt-750: @ffe-color-natt-750;
+    --ffe-color-natt-800: @ffe-color-natt-800;
+    --ffe-color-natt-850: @ffe-color-natt-850;
+    --ffe-color-natt-900: @ffe-color-natt-900;
+    --ffe-color-natt-950: @ffe-color-natt-950;
+    --ffe-color-natt-1000: @ffe-color-natt-1000;
+
+    //Frost
+    --ffe-color-frost-0: @ffe-color-frost-0;
+    --ffe-color-frost-25: @ffe-color-frost-25;
+    --ffe-color-frost-50: @ffe-color-frost-50;
+    --ffe-color-frost-75: @ffe-color-frost-75;
+    --ffe-color-frost-100: @ffe-color-frost-100;
+    --ffe-color-frost-150: @ffe-color-frost-150;
+    --ffe-color-frost-200: @ffe-color-frost-200;
+    --ffe-color-frost-250: @ffe-color-frost-250;
+    --ffe-color-frost-300: @ffe-color-frost-300;
+    --ffe-color-frost-350: @ffe-color-frost-350;
+    --ffe-color-frost-400: @ffe-color-frost-400;
+    --ffe-color-frost-450: @ffe-color-frost-450;
+    --ffe-color-frost-500: @ffe-color-frost-500;
+    --ffe-color-frost-550: @ffe-color-frost-550;
+    --ffe-color-frost-600: @ffe-color-frost-600;
+    --ffe-color-frost-650: @ffe-color-frost-650;
+    --ffe-color-frost-700: @ffe-color-frost-700;
+    --ffe-color-frost-750: @ffe-color-frost-750;
+    --ffe-color-frost-800: @ffe-color-frost-800;
+    --ffe-color-frost-850: @ffe-color-frost-850;
+    --ffe-color-frost-900: @ffe-color-frost-900;
+    --ffe-color-frost-950: @ffe-color-frost-950;
+    --ffe-color-frost-1000: @ffe-color-frost-1000;
+
+    //Villblomst
+    --ffe-color-villblomst-0: @ffe-color-villblomst-0;
+    --ffe-color-villblomst-25: @ffe-color-villblomst-25;
+    --ffe-color-villblomst-50: @ffe-color-villblomst-50;
+    --ffe-color-villblomst-75: @ffe-color-villblomst-75;
+    --ffe-color-villblomst-100: @ffe-color-villblomst-100;
+    --ffe-color-villblomst-150: @ffe-color-villblomst-150;
+    --ffe-color-villblomst-200: @ffe-color-villblomst-200;
+    --ffe-color-villblomst-250: @ffe-color-villblomst-250;
+    --ffe-color-villblomst-300: @ffe-color-villblomst-300;
+    --ffe-color-villblomst-350: @ffe-color-villblomst-350;
+    --ffe-color-villblomst-400: @ffe-color-villblomst-400;
+    --ffe-color-villblomst-450: @ffe-color-villblomst-450;
+    --ffe-color-villblomst-500: @ffe-color-villblomst-500;
+    --ffe-color-villblomst-550: @ffe-color-villblomst-550;
+    --ffe-color-villblomst-600: @ffe-color-villblomst-600;
+    --ffe-color-villblomst-650: @ffe-color-villblomst-650;
+    --ffe-color-villblomst-700: @ffe-color-villblomst-700;
+    --ffe-color-villblomst-750: @ffe-color-villblomst-750;
+    --ffe-color-villblomst-800: @ffe-color-villblomst-800;
+    --ffe-color-villblomst-850: @ffe-color-villblomst-850;
+    --ffe-color-villblomst-900: @ffe-color-villblomst-900;
+    --ffe-color-villblomst-950: @ffe-color-villblomst-950;
+    --ffe-color-villblomst-1000: @ffe-color-villblomst-1000;
+
+    //Skog
+    --ffe-color-skog-0: @ffe-color-skog-0;
+    --ffe-color-skog-25: @ffe-color-skog-25;
+    --ffe-color-skog-50: @ffe-color-skog-50;
+    --ffe-color-skog-75: @ffe-color-skog-75;
+    --ffe-color-skog-100: @ffe-color-skog-100;
+    --ffe-color-skog-150: @ffe-color-skog-150;
+    --ffe-color-skog-200: @ffe-color-skog-200;
+    --ffe-color-skog-250: @ffe-color-skog-250;
+    --ffe-color-skog-300: @ffe-color-skog-300;
+    --ffe-color-skog-350: @ffe-color-skog-350;
+    --ffe-color-skog-400: @ffe-color-skog-400;
+    --ffe-color-skog-450: @ffe-color-skog-450;
+    --ffe-color-skog-500: @ffe-color-skog-500;
+    --ffe-color-skog-550: @ffe-color-skog-550;
+    --ffe-color-skog-600: @ffe-color-skog-600;
+    --ffe-color-skog-650: @ffe-color-skog-650;
+    --ffe-color-skog-700: @ffe-color-skog-700;
+    --ffe-color-skog-750: @ffe-color-skog-750;
+    --ffe-color-skog-800: @ffe-color-skog-800;
+    --ffe-color-skog-850: @ffe-color-skog-850;
+    --ffe-color-skog-900: @ffe-color-skog-900;
+    --ffe-color-skog-950: @ffe-color-skog-950;
+    --ffe-color-skog-1000: @ffe-color-skog-1000;
+
+    //Syrin
+    --ffe-color-syrin-0: @ffe-color-syrin-0;
+    --ffe-color-syrin-25: @ffe-color-syrin-25;
+    --ffe-color-syrin-50: @ffe-color-syrin-50;
+    --ffe-color-syrin-75: @ffe-color-syrin-75;
+    --ffe-color-syrin-100: @ffe-color-syrin-100;
+    --ffe-color-syrin-150: @ffe-color-syrin-150;
+    --ffe-color-syrin-200: @ffe-color-syrin-200;
+    --ffe-color-syrin-250: @ffe-color-syrin-250;
+    --ffe-color-syrin-300: @ffe-color-syrin-300;
+    --ffe-color-syrin-350: @ffe-color-syrin-350;
+    --ffe-color-syrin-400: @ffe-color-syrin-400;
+    --ffe-color-syrin-450: @ffe-color-syrin-450;
+    --ffe-color-syrin-500: @ffe-color-syrin-500;
+    --ffe-color-syrin-550: @ffe-color-syrin-550;
+    --ffe-color-syrin-600: @ffe-color-syrin-600;
+    --ffe-color-syrin-650: @ffe-color-syrin-650;
+    --ffe-color-syrin-700: @ffe-color-syrin-700;
+    --ffe-color-syrin-750: @ffe-color-syrin-750;
+    --ffe-color-syrin-800: @ffe-color-syrin-800;
+    --ffe-color-syrin-850: @ffe-color-syrin-850;
+    --ffe-color-syrin-900: @ffe-color-syrin-900;
+    --ffe-color-syrin-950: @ffe-color-syrin-950;
+    --ffe-color-syrin-1000: @ffe-color-syrin-1000;
+
+    //Nordlys
+    --ffe-color-nordlys-0: @ffe-color-nordlys-0;
+    --ffe-color-nordlys-25: @ffe-color-nordlys-25;
+    --ffe-color-nordlys-50: @ffe-color-nordlys-50;
+    --ffe-color-nordlys-75: @ffe-color-nordlys-75;
+    --ffe-color-nordlys-100: @ffe-color-nordlys-100;
+    --ffe-color-nordlys-150: @ffe-color-nordlys-150;
+    --ffe-color-nordlys-200: @ffe-color-nordlys-200;
+    --ffe-color-nordlys-250: @ffe-color-nordlys-250;
+    --ffe-color-nordlys-300: @ffe-color-nordlys-300;
+    --ffe-color-nordlys-350: @ffe-color-nordlys-350;
+    --ffe-color-nordlys-400: @ffe-color-nordlys-400;
+    --ffe-color-nordlys-450: @ffe-color-nordlys-450;
+    --ffe-color-nordlys-500: @ffe-color-nordlys-500;
+    --ffe-color-nordlys-550: @ffe-color-nordlys-550;
+    --ffe-color-nordlys-600: @ffe-color-nordlys-600;
+    --ffe-color-nordlys-650: @ffe-color-nordlys-650;
+    --ffe-color-nordlys-700: @ffe-color-nordlys-700;
+    --ffe-color-nordlys-750: @ffe-color-nordlys-750;
+    --ffe-color-nordlys-800: @ffe-color-nordlys-800;
+    --ffe-color-nordlys-850: @ffe-color-nordlys-850;
+    --ffe-color-nordlys-900: @ffe-color-nordlys-900;
+    --ffe-color-nordlys-950: @ffe-color-nordlys-950;
+    --ffe-color-nordlys-1000: @ffe-color-nordlys-1000;
+
+    //Myrull
+    --ffe-color-myrull-0: @ffe-color-myrull-0;
+    --ffe-color-myrull-25: @ffe-color-myrull-25;
+    --ffe-color-myrull-50: @ffe-color-myrull-50;
+    --ffe-color-myrull-75: @ffe-color-myrull-75;
+    --ffe-color-myrull-100: @ffe-color-myrull-100;
+    --ffe-color-myrull-150: @ffe-color-myrull-150;
+    --ffe-color-myrull-200: @ffe-color-myrull-200;
+    --ffe-color-myrull-250: @ffe-color-myrull-250;
+    --ffe-color-myrull-300: @ffe-color-myrull-300;
+    --ffe-color-myrull-350: @ffe-color-myrull-350;
+    --ffe-color-myrull-400: @ffe-color-myrull-400;
+    --ffe-color-myrull-450: @ffe-color-myrull-450;
+    --ffe-color-myrull-500: @ffe-color-myrull-500;
+    --ffe-color-myrull-550: @ffe-color-myrull-550;
+    --ffe-color-myrull-600: @ffe-color-myrull-600;
+    --ffe-color-myrull-650: @ffe-color-myrull-650;
+    --ffe-color-myrull-700: @ffe-color-myrull-700;
+    --ffe-color-myrull-750: @ffe-color-myrull-750;
+    --ffe-color-myrull-800: @ffe-color-myrull-800;
+    --ffe-color-myrull-850: @ffe-color-myrull-850;
+    --ffe-color-myrull-900: @ffe-color-myrull-900;
+    --ffe-color-myrull-950: @ffe-color-myrull-950;
+    --ffe-color-myrull-1000: @ffe-color-myrull-1000;
+
+    //Lyng
+    --ffe-color-lyng-0: @ffe-color-lyng-0;
+    --ffe-color-lyng-25: @ffe-color-lyng-25;
+    --ffe-color-lyng-50: @ffe-color-lyng-50;
+    --ffe-color-lyng-75: @ffe-color-lyng-75;
+    --ffe-color-lyng-100: @ffe-color-lyng-100;
+    --ffe-color-lyng-150: @ffe-color-lyng-150;
+    --ffe-color-lyng-200: @ffe-color-lyng-200;
+    --ffe-color-lyng-250: @ffe-color-lyng-250;
+    --ffe-color-lyng-300: @ffe-color-lyng-300;
+    --ffe-color-lyng-350: @ffe-color-lyng-350;
+    --ffe-color-lyng-400: @ffe-color-lyng-400;
+    --ffe-color-lyng-450: @ffe-color-lyng-450;
+    --ffe-color-lyng-500: @ffe-color-lyng-500;
+    --ffe-color-lyng-550: @ffe-color-lyng-550;
+    --ffe-color-lyng-600: @ffe-color-lyng-600;
+    --ffe-color-lyng-650: @ffe-color-lyng-650;
+    --ffe-color-lyng-700: @ffe-color-lyng-700;
+    --ffe-color-lyng-750: @ffe-color-lyng-750;
+    --ffe-color-lyng-800: @ffe-color-lyng-800;
+    --ffe-color-lyng-850: @ffe-color-lyng-850;
+    --ffe-color-lyng-900: @ffe-color-lyng-900;
+    --ffe-color-lyng-950: @ffe-color-lyng-950;
+    --ffe-color-lyng-1000: @ffe-color-lyng-1000;
+
+    //Baer
+    --ffe-color-baer-0: @ffe-color-baer-0;
+    --ffe-color-baer-25: @ffe-color-baer-25;
+    --ffe-color-baer-50: @ffe-color-baer-50;
+    --ffe-color-baer-75: @ffe-color-baer-75;
+    --ffe-color-baer-100: @ffe-color-baer-100;
+    --ffe-color-baer-150: @ffe-color-baer-150;
+    --ffe-color-baer-200: @ffe-color-baer-200;
+    --ffe-color-baer-250: @ffe-color-baer-250;
+    --ffe-color-baer-300: @ffe-color-baer-300;
+    --ffe-color-baer-350: @ffe-color-baer-350;
+    --ffe-color-baer-400: @ffe-color-baer-400;
+    --ffe-color-baer-450: @ffe-color-baer-450;
+    --ffe-color-baer-500: @ffe-color-baer-500;
+    --ffe-color-baer-550: @ffe-color-baer-550;
+    --ffe-color-baer-600: @ffe-color-baer-600;
+    --ffe-color-baer-650: @ffe-color-baer-650;
+    --ffe-color-baer-700: @ffe-color-baer-700;
+    --ffe-color-baer-750: @ffe-color-baer-750;
+    --ffe-color-baer-800: @ffe-color-baer-800;
+    --ffe-color-baer-850: @ffe-color-baer-850;
+    --ffe-color-baer-900: @ffe-color-baer-900;
+    --ffe-color-baer-950: @ffe-color-baer-950;
+    --ffe-color-baer-1000: @ffe-color-baer-1000;
+
+    //Sol
+    --ffe-color-sol-0: @ffe-color-sol-0;
+    --ffe-color-sol-25: @ffe-color-sol-25;
+    --ffe-color-sol-50: @ffe-color-sol-50;
+    --ffe-color-sol-75: @ffe-color-sol-75;
+    --ffe-color-sol-100: @ffe-color-sol-100;
+    --ffe-color-sol-150: @ffe-color-sol-150;
+    --ffe-color-sol-200: @ffe-color-sol-200;
+    --ffe-color-sol-250: @ffe-color-sol-250;
+    --ffe-color-sol-300: @ffe-color-sol-300;
+    --ffe-color-sol-350: @ffe-color-sol-350;
+    --ffe-color-sol-400: @ffe-color-sol-400;
+    --ffe-color-sol-450: @ffe-color-sol-450;
+    --ffe-color-sol-500: @ffe-color-sol-500;
+    --ffe-color-sol-550: @ffe-color-sol-550;
+    --ffe-color-sol-600: @ffe-color-sol-600;
+    --ffe-color-sol-650: @ffe-color-sol-650;
+    --ffe-color-sol-700: @ffe-color-sol-700;
+    --ffe-color-sol-750: @ffe-color-sol-750;
+    --ffe-color-sol-800: @ffe-color-sol-800;
+    --ffe-color-sol-850: @ffe-color-sol-850;
+    --ffe-color-sol-900: @ffe-color-sol-900;
+    --ffe-color-sol-950: @ffe-color-sol-950;
+    --ffe-color-sol-1000: @ffe-color-sol-1000;
+
+    //Sand
+    --ffe-color-sand-0: @ffe-color-sand-0;
+    --ffe-color-sand-25: @ffe-color-sand-25;
+    --ffe-color-sand-50: @ffe-color-sand-50;
+    --ffe-color-sand-75: @ffe-color-sand-75;
+    --ffe-color-sand-100: @ffe-color-sand-100;
+    --ffe-color-sand-150: @ffe-color-sand-150;
+    --ffe-color-sand-200: @ffe-color-sand-200;
+    --ffe-color-sand-250: @ffe-color-sand-250;
+    --ffe-color-sand-300: @ffe-color-sand-300;
+    --ffe-color-sand-350: @ffe-color-sand-350;
+    --ffe-color-sand-400: @ffe-color-sand-400;
+    --ffe-color-sand-450: @ffe-color-sand-450;
+    --ffe-color-sand-500: @ffe-color-sand-500;
+    --ffe-color-sand-550: @ffe-color-sand-550;
+    --ffe-color-sand-600: @ffe-color-sand-600;
+    --ffe-color-sand-650: @ffe-color-sand-650;
+    --ffe-color-sand-700: @ffe-color-sand-700;
+    --ffe-color-sand-750: @ffe-color-sand-750;
+    --ffe-color-sand-800: @ffe-color-sand-800;
+    --ffe-color-sand-850: @ffe-color-sand-850;
+    --ffe-color-sand-900: @ffe-color-sand-900;
+    --ffe-color-sand-950: @ffe-color-sand-950;
+    --ffe-color-sand-1000: @ffe-color-sand-1000;
+
+    //Multe
+    --ffe-color-multe-0: @ffe-color-multe-0;
+    --ffe-color-multe-25: @ffe-color-multe-25;
+    --ffe-color-multe-50: @ffe-color-multe-50;
+    --ffe-color-multe-75: @ffe-color-multe-75;
+    --ffe-color-multe-100: @ffe-color-multe-100;
+    --ffe-color-multe-150: @ffe-color-multe-150;
+    --ffe-color-multe-200: @ffe-color-multe-200;
+    --ffe-color-multe-250: @ffe-color-multe-250;
+    --ffe-color-multe-300: @ffe-color-multe-300;
+    --ffe-color-multe-350: @ffe-color-multe-350;
+    --ffe-color-multe-400: @ffe-color-multe-400;
+    --ffe-color-multe-450: @ffe-color-multe-450;
+    --ffe-color-multe-500: @ffe-color-multe-500;
+    --ffe-color-multe-550: @ffe-color-multe-550;
+    --ffe-color-multe-600: @ffe-color-multe-600;
+    --ffe-color-multe-650: @ffe-color-multe-650;
+    --ffe-color-multe-700: @ffe-color-multe-700;
+    --ffe-color-multe-750: @ffe-color-multe-750;
+    --ffe-color-multe-800: @ffe-color-multe-800;
+    --ffe-color-multe-850: @ffe-color-multe-850;
+    --ffe-color-multe-900: @ffe-color-multe-900;
+    --ffe-color-multe-950: @ffe-color-multe-950;
+    --ffe-color-multe-1000: @ffe-color-multe-1000;
+
+    /*
+    ------------
+    SEMANTIC VARIABLES
+    Use these for colors in your components.
+    ------------
+    */
+    //Background
+    --ffe-color-background-default: var(--ffe-color-neutral-white);
+    --ffe-color-background-subtle: var(--ffe-color-sand-50);
+    --ffe-color-background-inverse: var(--ffe-color-vann-600);
+
+    //Surface
+    --ffe-color-surface-tertiary-default: var(--ffe-color-syrin-25);
+    --ffe-color-surface-tertiary-hover: var(--ffe-color-syrin-50);
+    --ffe-color-surface-tertiary-pressed: var(--ffe-color-syrin-75);
+    --ffe-color-surface-info-default: var(--ffe-color-vann-25);
+    --ffe-color-surface-info-inverse: var(--ffe-color-vann-25);
+    --ffe-color-surface-info-hover: var(--ffe-color-vann-75);
+    --ffe-color-surface-info-inverse-hover: var(--ffe-color-neutral-white);
+    --ffe-color-surface-success-default: var(--ffe-color-skog-25);
+    --ffe-color-surface-success-inverse: var(--ffe-color-skog-50);
+    --ffe-color-surface-warning-default: var(--ffe-color-sol-25);
+    --ffe-color-surface-warning-inverse: var(--ffe-color-sol-50);
+    --ffe-color-surface-critical-default: var(--ffe-color-baer-25);
+    --ffe-color-surface-critical-inverse: var(--ffe-color-baer-50);
+    --ffe-color-surface-secondary-default: var(--ffe-color-frost-50);
+    --ffe-color-surface-secondary-hover: var(--ffe-color-frost-100);
+    --ffe-color-surface-secondary-pressed: var(--ffe-color-frost-200);
+    --ffe-color-surface-primary-hover: var(--ffe-color-vann-25);
+    --ffe-color-surface-primary-pressed: var(--ffe-color-vann-50);
+    --ffe-color-surface-primary-default: var(--ffe-color-neutral-white);
+
+    //Text
+    --ffe-color-text-link-default: var(--ffe-color-vann-600);
+    --ffe-color-text-link-inverse: var(--ffe-color-vann-50);
+    --ffe-color-text-link-hover: var(--ffe-color-vann-700);
+    --ffe-color-text-link-pressed: var(--ffe-color-vann-800);
+    --ffe-color-text-default: var(--ffe-color-neutral-black);
+    --ffe-color-text-subtle: var(--ffe-color-graa-550);
+    --ffe-color-text-default-inverse: var(--ffe-color-neutral-white);
+    --ffe-color-text-sublte-inverse: var(--ffe-color-graa-75);
+    --ffe-color-text-emphasis: var(--ffe-color-fjell-800);
+    --ffe-color-text-emphasis-inverse: var(--ffe-color-fjell-50);
+    --ffe-color-text-label-default: var(--ffe-color-graa-1000);
+    --ffe-color-text-label-default-inverse: var(--ffe-color-neutral-white);
+
+    //Border
+    --ffe-color-border-primary-default: var(--ffe-color-graa-400);
+    --ffe-color-border-primary-subtle: var(--ffe-color-graa-50);
+    --ffe-color-border-primary-hover: var(--ffe-color-graa-500);
+    --ffe-color-border-primary-pressed: var(--ffe-color-vann-700);
+    --ffe-color-border-primary-emphasis: var(--ffe-color-vann-600);
+    --ffe-color-border-primary-selected: var(--ffe-color-vann-600);
+    --ffe-color-border-primary-inverse: var(--ffe-color-neutral-white);
+    --ffe-color-border-info-default: var(--ffe-color-vann-300);
+    --ffe-color-border-success-default: var(--ffe-color-skog-300);
+    --ffe-color-border-warning-default: var(--ffe-color-sol-300);
+    --ffe-color-border-critical-default: var(--ffe-color-baer-500);
+    --ffe-color-border-focus: var(--ffe-color-vann-600);
+    --ffe-color-border-focus-inverse: var(--ffe-color-neutral-white);
+    --ffe-color-border-secondary-default: var(--ffe-color-frost-250);
+    --ffe-color-border-secondary-hover: var(--ffe-color-frost-350);
+    --ffe-color-border-secondary-pressed: var(--ffe-color-frost-450);
+    --ffe-color-border-secondary-inverse: var(--ffe-color-frost-150);
+    --ffe-color-border-tertiary-default: var(--ffe-color-syrin-450);
+    --ffe-color-border-tertiary-hover: var(--ffe-color-syrin-550);
+    --ffe-color-border-tertiary-pressed: var(--ffe-color-syrin-650);
+    --ffe-color-border-tertiary-inverse: var(--ffe-color-syrin-100);
+
+    //Component
+    --ffe-color-component-button-secondary-fill-default: var(
+        --ffe-color-neutral-white
+    );
+    --ffe-color-component-button-secondary-fill-hover: var(--ffe-color-vann-50);
+    --ffe-color-component-button-secondary-fill-pressed: var(
+        --ffe-color-vann-75
+    );
+    --ffe-color-component-button-secondary-text-default: var(
+        --ffe-color-vann-700
+    );
+    --ffe-color-component-button-secondary-text-hover: var(
+        --ffe-color-vann-700
+    );
+    --ffe-color-component-button-secondary-border-default: var(
+        --ffe-color-vann-600
+    );
+    --ffe-color-component-button-secondary-border-hover: var(
+        --ffe-color-vann-700
+    );
+    --ffe-color-component-button-secondary-border-pressed: var(
+        --ffe-color-vann-700
+    );
+    --ffe-color-component-button-action-fill-default: var(--ffe-color-skog-600);
+    --ffe-color-component-button-action-fill-hover: var(--ffe-color-skog-700);
+    --ffe-color-component-button-action-fill-pressed: var(--ffe-color-skog-800);
+    --ffe-color-component-button-action-text-default: var(
+        --ffe-color-neutral-white
+    );
+    --ffe-color-component-button-action-text-hover: var(
+        --ffe-color-neutral-white
+    );
+    --ffe-color-component-button-action-border-default: var(
+        --ffe-color-skog-600
+    );
+    --ffe-color-component-button-action-border-hover: var(--ffe-color-skog-700);
+    --ffe-color-component-button-action-border-pressed: var(
+        --ffe-color-skog-800
+    );
+    --ffe-color-component-button-primary-text-default: var(
+        --ffe-color-neutral-white
+    );
+    --ffe-color-component-button-primary-text-hover: var(
+        --ffe-color-neutral-white
+    );
+    --ffe-color-component-button-primary-text-inverse: var(
+        --ffe-color-vann-600
+    );
+    --ffe-color-component-button-primary-fill-default: var(
+        --ffe-color-vann-600
+    );
+    --ffe-color-component-button-primary-fill-hover: var(--ffe-color-vann-700);
+    --ffe-color-component-button-primary-fill-pressed: var(
+        --ffe-color-vann-800
+    );
+    --ffe-color-component-button-primary-fill-inverse: var(
+        --ffe-color-neutral-white
+    );
+    --ffe-color-component-button-primary-border-default: var(
+        --ffe-color-vann-600
+    );
+    --ffe-color-component-button-primary-border-hover: var(
+        --ffe-color-vann-700
+    );
+    --ffe-color-component-button-primary-border-pressed: var(
+        --ffe-color-vann-800
+    );
+    --ffe-color-component-button-tertiary-text-default: var(
+        --ffe-color-vann-600
+    );
+    --ffe-color-component-button-tertiary-text-hover: var(--ffe-color-vann-600);
+    --ffe-color-component-button-tertiary-fill-hover: var(--ffe-color-vann-50);
+    --ffe-color-component-button-tertiary-fill-pressed: var(
+        --ffe-color-vann-100
+    );
+    --ffe-color-component-button-tertiary-fill-default: var(
+        --ffe-color-neutral-white
+    );
+    --ffe-color-component-button-tertiary-border-default: var(
+        --ffe-color-vann-600
+    );
+    --ffe-color-component-button-tertiary-border-hover: var(
+        --ffe-color-vann-100
+    );
+    --ffe-color-component-button-tertiary-border-pressed: var(
+        --ffe-color-vann-700
+    );
+    --ffe-color-component-logo-name: var(--ffe-color-fjell-800);
+    --ffe-color-component-logo-number1: var(--ffe-color-neutral-white);
+    --ffe-color-component-logo-circle-dark-red: #AF0000;
+    --ffe-color-component-logo-circle-light-red: #E60000;
+
+    //Fill
+    --ffe-color-fill-info-default: var(--ffe-color-vann-500);
+    --ffe-color-fill-info-inverse: var(--ffe-color-vann-500);
+    --ffe-color-fill-info-hover: var(--ffe-color-vann-500);
+    --ffe-color-fill-info-pressed: var(--ffe-color-vann-600);
+    --ffe-color-fill-success-default: var(--ffe-color-skog-500);
+    --ffe-color-fill-success-hover: var(--ffe-color-skog-500);
+    --ffe-color-fill-success-inverse: var(--ffe-color-skog-500);
+    --ffe-color-fill-success-pressed: var(--ffe-color-skog-600);
+    --ffe-color-fill-warning-default: var(--ffe-color-sol-500);
+    --ffe-color-fill-warning-hover: var(--ffe-color-sol-500);
+    --ffe-color-fill-warning-pressed: var(--ffe-color-sol-600);
+    --ffe-color-fill-warning-inverse: var(--ffe-color-sol-500);
+    --ffe-color-fill-critical-default: var(--ffe-color-baer-500);
+    --ffe-color-fill-critical-hover: var(--ffe-color-baer-600);
+    --ffe-color-fill-critical-pressed: var(--ffe-color-baer-700);
+    --ffe-color-fill-critical-inverse: var(--ffe-color-baer-500);
+    --ffe-color-fill-primary-default: var(--ffe-color-neutral-white);
+    --ffe-color-fill-primary-pressed: var(--ffe-color-frost-150);
+    --ffe-color-fill-primary-hover: var(--ffe-color-frost-50);
+    --ffe-color-fill-primary-inverse: var(--ffe-color-vann-600);
+    --ffe-color-fill-primary-selected: var(--ffe-color-vann-600);
+    --ffe-color-fill-primary-selected-inverse: var(--ffe-color-neutral-white);
+    --ffe-color-fill-primary-hover-inverse: var(--ffe-color-vann-700);
+    --ffe-color-fill-primary-pressed-inverse: var(--ffe-color-fjell-800);
+    --ffe-color-fill-primary-selected-hover: var(--ffe-color-vann-700);
+    --ffe-color-fill-primary-selected-pressed: var(--ffe-color-vann-800);
+    --ffe-color-fill-secondary-default: var(--ffe-color-graa-25);
+    --ffe-color-fill-secondary-hover: var(--ffe-color-graa-100);
+    --ffe-color-fill-secondary-pressed: var(--ffe-color-graa-200);
+    --ffe-color-fill-secondary-inverse: var(--ffe-color-neutral-white);
+    --ffe-color-fill-tertiary-default: var(--ffe-color-syrin-500);
+
+    //Icon
+    --ffe-color-icon-info: var(--ffe-color-vann-600);
+    --ffe-color-icon-success: var(--ffe-color-skog-600);
+    --ffe-color-icon-warning: var(--ffe-color-sol-500);
+    --ffe-color-icon-critical: var(--ffe-color-baer-500);
+    --ffe-color-icon-default: var(--ffe-color-text-default);
+    --ffe-color-icon-subtle: var(--ffe-color-text-subtle);
+    --ffe-color-icon-emphasis: var(--ffe-color-text-emphasis);
+    --ffe-color-icon-inverse: var(--ffe-color-text-default-inverse);
+
+    /* DEPRECATED */
     --ffe-farge-fjell: @ffe-farge-fjell;
     --ffe-farge-fjell-70: @ffe-farge-fjell-70;
     --ffe-farge-fjell-30: @ffe-farge-fjell-30;
@@ -20,8 +610,6 @@
     --ffe-farge-syrin: @ffe-farge-syrin;
     --ffe-farge-syrin-70: @ffe-farge-syrin-70;
     --ffe-farge-syrin-30: @ffe-farge-syrin-30;
-
-    /** Støttefarger */
     --ffe-farge-myrull: @ffe-farge-myrull;
     --ffe-farge-myrull-70: @ffe-farge-myrull-70;
     --ffe-farge-myrull-30: @ffe-farge-myrull-30;
@@ -46,8 +634,6 @@
     --ffe-farge-sol: @ffe-farge-sol;
     --ffe-farge-sol-70: @ffe-farge-sol-70;
     --ffe-farge-sol-30: @ffe-farge-sol-30;
-
-    /** Nøytrale farger */
     --ffe-farge-natt: @ffe-farge-natt;
     --ffe-farge-svart: @ffe-farge-svart;
     --ffe-farge-koksgraa: @ffe-farge-koksgraa;
@@ -174,6 +760,230 @@
 
     @media (prefers-color-scheme: dark) {
         .regard-color-scheme-preference {
+            /* SEMANTIC VARIABLES */
+            //Background
+            --ffe-color-background-default: var(--ffe-color-graa-1000);
+            --ffe-color-background-subtle: var(--ffe-color-sand-950);
+            --ffe-color-background-inverse: var(--ffe-color-vann-1000);
+
+            //Surface
+            --ffe-color-surface-tertiary-default: var(--ffe-color-syrin-900);
+            --ffe-color-surface-tertiary-hover: var(--ffe-color-syrin-750);
+            --ffe-color-surface-tertiary-pressed: var(--ffe-color-syrin-750);
+            --ffe-color-surface-info-default: var(--ffe-color-vann-850);
+            --ffe-color-surface-info-inverse: var(--ffe-color-vann-650);
+            --ffe-color-surface-info-hover: var(--ffe-color-vann-750);
+            --ffe-color-surface-info-inverse-hover: var(
+                --ffe-color-neutral-white
+            );
+            --ffe-color-surface-success-default: var(--ffe-color-skog-850);
+            --ffe-color-surface-success-inverse: var(--ffe-color-skog-850);
+            --ffe-color-surface-warning-default: var(--ffe-color-sol-850);
+            --ffe-color-surface-warning-inverse: var(--ffe-color-sol-850);
+            --ffe-color-surface-critical-default: var(--ffe-color-baer-850);
+            --ffe-color-surface-critical-inverse: var(--ffe-color-baer-850);
+            --ffe-color-surface-secondary-default: var(--ffe-color-frost-900);
+            --ffe-color-surface-secondary-hover: var(--ffe-color-frost-850);
+            --ffe-color-surface-secondary-pressed: var(--ffe-color-frost-800);
+            --ffe-color-surface-primary-hover: var(--ffe-color-graa-600);
+            --ffe-color-surface-primary-pressed: var(--ffe-color-graa-600);
+            --ffe-color-surface-primary-default: var(--ffe-color-graa-900);
+
+            //Text
+            --ffe-color-text-link-default: var(--ffe-color-vann-100);
+            --ffe-color-text-link-inverse: var(--ffe-color-vann-50);
+            --ffe-color-text-link-hover: var(--ffe-color-vann-200);
+            --ffe-color-text-link-pressed: var(--ffe-color-vann-300);
+            --ffe-color-text-default: var(--ffe-color-neutral-white);
+            --ffe-color-text-subtle: var(--ffe-color-graa-200);
+            --ffe-color-text-default-inverse: var(--ffe-color-neutral-white);
+            --ffe-color-text-sublte-inverse: var(--ffe-color-graa-200);
+            --ffe-color-text-emphasis: var(--ffe-color-fjell-250);
+            --ffe-color-text-emphasis-inverse: var(--ffe-color-fjell-300);
+            --ffe-color-text-label-default: var(--ffe-color-neutral-white);
+            --ffe-color-text-label-default-inverse: var(
+                --ffe-color-neutral-white
+            );
+
+            //Border
+            --ffe-color-border-primary-default: var(--ffe-color-graa-600);
+            --ffe-color-border-primary-subtle: var(--ffe-color-graa-800);
+            --ffe-color-border-primary-hover: var(--ffe-color-graa-500);
+            --ffe-color-border-primary-pressed: var(--ffe-color-vann-500);
+            --ffe-color-border-primary-emphasis: var(--ffe-color-vann-600);
+            --ffe-color-border-primary-selected: var(--ffe-color-vann-650);
+            --ffe-color-border-primary-inverse: var(--ffe-color-neutral-white);
+            --ffe-color-border-info-default: var(--ffe-color-vann-400);
+            --ffe-color-border-success-default: var(--ffe-color-skog-400);
+            --ffe-color-border-warning-default: var(--ffe-color-sol-400);
+            --ffe-color-border-critical-default: var(--ffe-color-baer-500);
+            --ffe-color-border-focus: var(--ffe-color-neutral-white);
+            --ffe-color-border-focus-inverse: var(--ffe-color-neutral-white);
+            --ffe-color-border-secondary-default: var(--ffe-color-frost-400);
+            --ffe-color-border-secondary-hover: var(--ffe-fffff);
+            --ffe-color-border-secondary-pressed: var(--ffe-fffff);
+            --ffe-color-border-secondary-inverse: var(--ffe-fffff);
+            --ffe-color-border-tertiary-default: var(--ffe-color-syrin-400);
+            --ffe-color-border-tertiary-hover: var(--ffe-fffff);
+            --ffe-color-border-tertiary-pressed: var(--ffe-fffff);
+            --ffe-color-border-tertiary-inverse: var(--ffe-fffff);
+
+            //Component
+            --ffe-color-component-button-secondary-fill-default: var(
+                --ffe-color-neutral-black
+            );
+            --ffe-color-component-button-secondary-fill-hover: var(
+                --ffe-color-vann-800
+            );
+            --ffe-color-component-button-secondary-fill-pressed: var(
+                --ffe-color-vann-600
+            );
+            --ffe-color-component-button-secondary-text-default: var(
+                --ffe-color-vann-100
+            );
+            --ffe-color-component-button-secondary-text-hover: var(
+                --ffe-color-neutral-white
+            );
+            --ffe-color-component-button-secondary-border-default: var(
+                --ffe-color-vann-300
+            );
+            --ffe-color-component-button-secondary-border-hover: var(
+                --ffe-color-vann-400
+            );
+            --ffe-color-component-button-secondary-border-pressed: var(
+                --ffe-color-vann-600
+            );
+            --ffe-color-component-button-action-fill-default: var(
+                --ffe-color-skog-600
+            );
+            --ffe-color-component-button-action-fill-hover: var(
+                --ffe-color-skog-550
+            );
+            --ffe-color-component-button-action-fill-pressed: var(
+                --ffe-color-skog-400
+            );
+            --ffe-color-component-button-action-text-default: var(
+                --ffe-color-neutral-white
+            );
+            --ffe-color-component-button-action-text-hover: var(
+                --ffe-color-neutral-white
+            );
+            --ffe-color-component-button-action-border-default: var(
+                --ffe-color-skog-600
+            );
+            --ffe-color-component-button-action-border-hover: var(
+                --ffe-color-skog-500
+            );
+            --ffe-color-component-button-action-border-pressed: var(
+                --ffe-color-skog-400
+            );
+            --ffe-color-component-button-primary-text-default: var(
+                --ffe-color-neutral-white
+            );
+            --ffe-color-component-button-primary-text-hover: var(
+                --ffe-color-neutral-white
+            );
+            --ffe-color-component-button-primary-text-inverse: var(
+                --ffe-color-neutral-white
+            );
+            --ffe-color-component-button-primary-fill-default: var(
+                --ffe-color-vann-550
+            );
+            --ffe-color-component-button-primary-fill-hover: var(
+                --ffe-color-vann-500
+            );
+            --ffe-color-component-button-primary-fill-pressed: var(
+                --ffe-color-vann-400
+            );
+            --ffe-color-component-button-primary-fill-inverse: var(
+                --ffe-color-vann-900
+            );
+            --ffe-color-component-button-primary-border-default: var(
+                --ffe-color-vann-600
+            );
+            --ffe-color-component-button-primary-border-hover: var(
+                --ffe-color-vann-500
+            );
+            --ffe-color-component-button-primary-border-pressed: var(
+                --ffe-color-vann-400
+            );
+            --ffe-color-component-button-tertiary-text-default: var(
+                --ffe-color-vann-100
+            );
+            --ffe-color-component-button-tertiary-text-hover: var(
+                --ffe-color-vann-100
+            );
+            --ffe-color-component-button-tertiary-fill-hover: var(
+                --ffe-color-vann-800
+            );
+            --ffe-color-component-button-tertiary-fill-pressed: var(
+                --ffe-color-vann-700
+            );
+            --ffe-color-component-button-tertiary-fill-default: var(
+                --ffe-color-neutral-black-0
+            );
+            --ffe-color-component-button-tertiary-border-default: var(
+                --ffe-color-graa-1000
+            );
+            --ffe-color-component-button-tertiary-border-hover: var(
+                --ffe-color-vann-500
+            );
+            --ffe-color-component-button-tertiary-border-pressed: var(
+                --ffe-color-vann-600
+            );
+            --ffe-color-component-logo-name: var(--ffe-color-neutral-white);
+            --ffe-color-component-logo-number1: var(--ffe-color-neutral-white);
+            --ffe-color-component-logo-cirle-dark-red: var(--ffe-af000);
+            --ffe-color-component-logo-cirle-light-red: var(--ffe-e6000);
+
+            //Fill
+            --ffe-color-fill-info-default: var(--ffe-color-vann-550);
+            --ffe-color-fill-info-inverse: var(--ffe-color-vann-600);
+            --ffe-color-fill-info-hover: var(--ffe-color-vann-400);
+            --ffe-color-fill-info-pressed: var(--ffe-color-vann-300);
+            --ffe-color-fill-success-default: var(--ffe-color-skog-550);
+            --ffe-color-fill-success-hover: var(--ffe-color-skog-400);
+            --ffe-color-fill-success-inverse: var(--ffe-color-skog-600);
+            --ffe-color-fill-success-pressed: var(--ffe-color-skog-300);
+            --ffe-color-fill-warning-default: var(--ffe-color-sol-550);
+            --ffe-color-fill-warning-hover: var(--ffe-color-sol-400);
+            --ffe-color-fill-warning-pressed: var(--ffe-color-sol-300);
+            --ffe-color-fill-warning-inverse: var(--ffe-color-sol-600);
+            --ffe-color-fill-critical-default: var(--ffe-color-baer-550);
+            --ffe-color-fill-critical-hover: var(--ffe-color-baer-400);
+            --ffe-color-fill-critical-pressed: var(--ffe-color-baer-300);
+            --ffe-color-fill-critical-inverse: var(--ffe-color-baer-550);
+            --ffe-color-fill-primary-default: var(--ffe-color-graa-1000);
+            --ffe-color-fill-primary-pressed: var(--ffe-color-vann-850);
+            --ffe-color-fill-primary-hover: var(--ffe-color-vann-950);
+            --ffe-color-fill-primary-inverse: var(--ffe-color-vann-1000);
+            --ffe-color-fill-primary-selected: var(--ffe-color-vann-550);
+            --ffe-color-fill-primary-selected-inverse: var(
+                --ffe-color-vann-500
+            );
+            --ffe-color-fill-primary-hover-inverse: var(--ffe-color-vann-900);
+            --ffe-color-fill-primary-pressed-inverse: var(--ffe-color-vann-800);
+            --ffe-color-fill-primary-selected-hover: var(--ffe-color-vann-400);
+            --ffe-color-fill-primary-selected-pressed: var(
+                --ffe-color-vann-300
+            );
+            --ffe-color-fill-secondary-default: var(--ffe-color-graa-750);
+            --ffe-color-fill-secondary-hover: var(--ffe-color-graa-600);
+            --ffe-color-fill-secondary-pressed: var(--ffe-color-graa-450);
+            --ffe-color-fill-secondary-inverse: var(--ffe-color-neutral-white);
+            --ffe-color-fill-tertiary-default: var(--ffe-color-syrin-700);
+
+            //Icon
+            --ffe-color-icon-info: var(--ffe-color-vann-700);
+            --ffe-color-icon-success: var(--ffe-color-skog-700);
+            --ffe-color-icon-warning: var(--ffe-color-sol-700);
+            --ffe-color-icon-critical: var(--ffe-color-baer-600);
+            --ffe-color-icon-default: var(--ffe-color-text-default);
+            --ffe-color-icon-subtle: var(--ffe-color-text-subtle);
+            --ffe-color-icon-emphasis: var(--ffe-color-text-emphasis);
+            --ffe-color-icon-inverse: var(--ffe-color-text-default-inverse);
+
+            /* DEPRECATED */
             --ffe-g-primary-color: var(--ffe-farge-vann-70);
             --ffe-g-secondary-color: var(--ffe-farge-vann-70);
             --ffe-g-border-color: var(--ffe-farge-graa);

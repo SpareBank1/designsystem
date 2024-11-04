@@ -70,12 +70,19 @@ This is how you import them:
 
 ```js
 import {
-    fargeHvit,
-    fargeFjell30,
     breakpointMd,
     spacingXl,
 } from '@sb1/ffe-core';
 ```
+## Semantic colors
+
+Semantic colors define and name colors based on how they are used, rather than their hue. The structure are based on a elevation principle with five main categories; background, surface, fill, text/icon and border. We use inverse color style on blue background.
+- Background are for body or section background.
+- Surface are background for elements on top of a background e.g. accordion, cards, modal.
+- Fill are background color for smaller elements e.g. buttons, input,
+- Text/icon are colors for foreground elements on top of background, surface or fill.
+- Border are color for borders or separators between elements.
+
 
 ## Development
 
