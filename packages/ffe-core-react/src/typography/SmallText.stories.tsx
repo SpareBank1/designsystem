@@ -3,7 +3,7 @@ import { SmallText } from './SmallText';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof SmallText> = {
-    title: 'components/core/SmallText',
+    title: 'Komponenter/Core/SmallText',
     component: SmallText,
 };
 export default meta;

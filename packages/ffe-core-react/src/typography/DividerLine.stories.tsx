@@ -3,7 +3,7 @@ import { DividerLine } from './DividerLine';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof DividerLine> = {
-    title: 'components/core/DividerLine',
+    title: 'Komponenter/Core/DividerLine',
     component: DividerLine,
     tags: ['autodocs'],
 };

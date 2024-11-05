@@ -3,7 +3,7 @@ import { MicroText } from './MicroText';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof MicroText> = {
-    title: 'components/core/MicroText',
+    title: 'Komponenter/Core/MicroText',
     component: MicroText,
 };
 export default meta;

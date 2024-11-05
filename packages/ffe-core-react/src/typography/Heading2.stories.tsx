@@ -3,7 +3,7 @@ import { Heading2 } from './Heading';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Heading2> = {
-    title: 'components/core/Heading2',
+    title: 'Komponenter/Core/Heading2',
     component: Heading2,
 };
 export default meta;

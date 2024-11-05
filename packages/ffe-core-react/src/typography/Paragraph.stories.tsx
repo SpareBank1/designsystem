@@ -3,7 +3,7 @@ import { Paragraph } from './Paragraph';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Paragraph> = {
-    title: 'components/core/Paragraph',
+    title: 'Komponenter/Core/Paragraph',
     component: Paragraph,
 };
 export default meta;
