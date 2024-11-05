@@ -5,7 +5,7 @@ import { DescriptionListDescription } from './DescriptionListDescription';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof DescriptionListMultiCol> = {
-    title: 'components/lists/DescriptionListMultiCol',
+    title: 'Komponenter/Lists/DescriptionListMultiCol',
     component: DescriptionListMultiCol,
     subcomponents: { DescriptionListTerm, DescriptionListDescription },
     tags: ['autodocs'],

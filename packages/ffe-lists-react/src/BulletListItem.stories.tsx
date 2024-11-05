@@ -3,7 +3,7 @@ import { BulletListItem } from './BulletListItem';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof BulletListItem> = {
-    title: 'components/lists/BulletListItem',
+    title: 'Komponenter/Lists/BulletListItem',
     component: BulletListItem,
     tags: ['autodocs'],
 };
