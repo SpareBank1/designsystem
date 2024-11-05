@@ -3,7 +3,7 @@ import { FileUpload } from './FileUpload';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof FileUpload> = {
-    title: 'components/file-upload/FileUpload',
+    title: 'Komponenter/File-upload/FileUpload',
     component: FileUpload,
 };
 export default meta;
