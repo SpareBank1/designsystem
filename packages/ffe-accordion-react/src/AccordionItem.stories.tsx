@@ -4,7 +4,7 @@ import { AccordionItem } from './AccordionItem.tsx';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof AccordionItem> = {
-    title: 'components/accordion/AccordionItem',
+    title: 'Komponenter/Accordion/AccordionItem',
     component: AccordionItem,
     argTypes: {
         ariaLabel: {
