@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { fargeFjell, spacingXs } from '@sb1/ffe-core';
 
 const meta: Meta<typeof ChipSelectable<any>> = {
-    title: 'components/chips/ChipSelectable',
+    title: 'Komponenter/Chips/ChipSelectable',
     component: ChipSelectable,
 };
 export default meta;
