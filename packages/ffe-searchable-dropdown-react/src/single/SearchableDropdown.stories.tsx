@@ -24,7 +24,7 @@ const companies = [
 ];
 
 const meta: Meta<typeof SearchableDropdown> = {
-    title: 'components/searchable-dropdown/SearchableDropdown',
+    title: 'Komponenter/Searchable-dropdown/SearchableDropdown',
     component: SearchableDropdown,
     argTypes: {
         postListElement: {

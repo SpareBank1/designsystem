@@ -83,7 +83,7 @@ const CustomOptionBody = ({
 };
 
 const meta: Meta<typeof SearchableDropdownMultiSelect<Fruit>> = {
-    title: 'components/searchable-dropdown/SearchableDropdownMultiSelect',
+    title: 'Komponenter/Searchable-dropdown/SearchableDropdownMultiSelect',
     component: SearchableDropdownMultiSelect,
     argTypes: {
         postListElement: {
