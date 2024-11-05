@@ -10,7 +10,7 @@ import {
 import { Heading2, Paragraph } from '@sb1/ffe-core-react';
 
 const meta: Meta<typeof Modal> = {
-    title: 'components/modals/Modal',
+    title: 'Komponenter/Modals/Modal',
     component: Modal,
 };
 export default meta;
