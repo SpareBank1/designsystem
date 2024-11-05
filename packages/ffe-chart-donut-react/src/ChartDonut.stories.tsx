@@ -3,9 +3,8 @@ import { ChartDonut } from './ChartDonut';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof ChartDonut> = {
-    title: 'components/chart-donut/ChartDonut',
+    title: 'Komponenter/Chart-donut/ChartDonut',
     component: ChartDonut,
-    tags: ['autodocs'],
 };
 export default meta;
 
