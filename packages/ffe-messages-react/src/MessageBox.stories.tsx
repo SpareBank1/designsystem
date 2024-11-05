@@ -4,7 +4,7 @@ import { MessageHeader } from './MessageHeader';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof MessageBox<any>> = {
-    title: 'components/messages/MessageBox',
+    title: 'Komponenter/Messages/MessageBox',
     component: MessageBox,
     subcomponents: { MessageHeader },
 };
