@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { ExpandButton } from '@sb1/ffe-buttons-react';
 
 const meta: Meta<typeof Collapse> = {
-    title: 'components/collapse/Collapse',
+    title: 'Komponenter/Collapse/Collapse',
     component: Collapse,
     argTypes: {},
 };
