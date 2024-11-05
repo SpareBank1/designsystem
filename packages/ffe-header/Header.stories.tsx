@@ -4,7 +4,7 @@ import { Icon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
 
 const meta: Meta<unknown> = {
-    title: 'components/header/Header',
+    title: 'Komponenter/Header/Header',
     component: () => null,
 };
 export default meta;
