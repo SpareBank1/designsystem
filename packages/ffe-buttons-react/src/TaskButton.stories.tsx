@@ -11,7 +11,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof TaskButton<any>> = {
-    title: 'components/buttons/TaskButton',
+    title: 'Komponenter/Buttons/TaskButton',
     component: TaskButton,
     argTypes: {
         as: {

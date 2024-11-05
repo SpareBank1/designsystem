@@ -10,7 +10,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof TertiaryButton<any>> = {
-    title: 'components/buttons/TertiaryButton',
+    title: 'Komponenter/Buttons/TertiaryButton',
     component: TertiaryButton,
     argTypes: {
         as: {

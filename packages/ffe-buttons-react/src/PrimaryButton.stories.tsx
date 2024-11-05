@@ -10,7 +10,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof PrimaryButton<any>> = {
-    title: 'components/buttons/PrimaryButton',
+    title: 'Komponenter/Buttons/PrimaryButton',
     component: PrimaryButton,
     argTypes: {
         as: {

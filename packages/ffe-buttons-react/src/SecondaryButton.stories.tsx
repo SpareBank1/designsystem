@@ -10,7 +10,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof SecondaryButton<any>> = {
-    title: 'components/buttons/SecondaryButton',
+    title: 'Komponenter/Buttons/SecondaryButton',
     component: SecondaryButton,
     argTypes: {
         as: {

@@ -10,7 +10,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof BackButton<any>> = {
-    title: 'components/buttons/BackButton',
+    title: 'Komponenter/Buttons/BackButton',
     component: BackButton,
     argTypes: {
         as: {

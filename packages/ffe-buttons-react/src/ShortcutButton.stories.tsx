@@ -10,7 +10,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof ShortcutButton<any>> = {
-    title: 'components/buttons/ShortcutButton',
+    title: 'Komponenter/Buttons/ShortcutButton',
     component: ShortcutButton,
     argTypes: {
         as: {
