@@ -4,7 +4,7 @@ import { InputGroup } from './InputGroup';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Input> = {
-    title: 'components/form/Input',
+    title: 'Komponenter/Form/Input',
     component: Input,
 };
 export default meta;

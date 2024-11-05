@@ -3,7 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { PhoneNumber } from './PhoneNumber';
 
 const meta: Meta<typeof PhoneNumber> = {
-    title: 'components/form/PhoneNumber',
+    title: 'Komponenter/Form/PhoneNumber',
     component: PhoneNumber,
 };
 export default meta;

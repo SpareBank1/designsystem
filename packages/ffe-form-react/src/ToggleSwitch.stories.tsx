@@ -3,7 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { ToggleSwitch } from './ToggleSwitch';
 
 const meta: Meta<typeof ToggleSwitch> = {
-    title: 'components/form/ToggleSwitch',
+    title: 'Komponenter/Form/ToggleSwitch',
     component: ToggleSwitch,
 };
 export default meta;

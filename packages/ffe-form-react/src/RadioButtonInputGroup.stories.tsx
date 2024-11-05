@@ -6,7 +6,7 @@ import { RadioSwitch } from './RadioSwitch';
 import { RadioBlock } from './RadioBlock';
 
 const meta: Meta<typeof RadioButtonInputGroup> = {
-    title: 'components/form/RadioButtonInputGroup',
+    title: 'Komponenter/Form/RadioButtonInputGroup',
     component: RadioButtonInputGroup,
 };
 export default meta;

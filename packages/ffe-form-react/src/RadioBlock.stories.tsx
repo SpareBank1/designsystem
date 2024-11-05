@@ -3,7 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { RadioBlock } from './RadioBlock';
 
 const meta: Meta<typeof RadioBlock> = {
-    title: 'components/form/RadioBlock',
+    title: 'Komponenter/Form/RadioBlock',
     component: RadioBlock,
 };
 export default meta;

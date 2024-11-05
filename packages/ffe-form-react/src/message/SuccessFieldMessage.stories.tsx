@@ -3,7 +3,7 @@ import { SuccessFieldMessage } from './SuccessFieldMessage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof SuccessFieldMessage> = {
-    title: 'components/form/SuccessFieldMessage',
+    title: 'Komponenter/Form/SuccessFieldMessage',
     component: SuccessFieldMessage,
 };
 export default meta;

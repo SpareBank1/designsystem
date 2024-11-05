@@ -4,7 +4,7 @@ import { Paragraph } from '@sb1/ffe-core-react';
 import { InputTextLike } from './InputTextLike';
 
 const meta: Meta<typeof InputTextLike> = {
-    title: 'components/form/InputTextLike',
+    title: 'Komponenter/Form/InputTextLike',
     component: InputTextLike,
 };
 export default meta;

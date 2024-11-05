@@ -5,7 +5,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { ErrorFieldMessage } from './message';
 
 const meta: Meta<typeof InputGroup> = {
-    title: 'components/form/InputGroup',
+    title: 'Komponenter/Form/InputGroup',
     component: InputGroup,
 };
 export default meta;
