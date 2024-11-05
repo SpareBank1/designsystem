@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { Paragraph } from '@sb1/ffe-core-react';
 
 const meta: Meta<typeof Spinner> = {
-    title: 'components/spinner/Spinner',
+    title: 'Komponenter/Spinner/Spinner',
     component: Spinner,
     argTypes: {
         loadingText: {
