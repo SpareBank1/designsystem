@@ -5,7 +5,7 @@ import { GridCol } from './GridCol';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof GridRow> = {
-    title: 'components/grid/GridRow',
+    title: 'Komponenter/Grid/GridRow',
     component: GridRow,
     argTypes: {
         as: { control: 'select', options: ['div', 'span'] },
