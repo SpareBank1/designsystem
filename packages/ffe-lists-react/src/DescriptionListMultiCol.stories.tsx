@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { DescriptionListMultiCol } from './DescriptionListMultiCol';
 import { DescriptionListTerm } from './DescriptionListTerm';
 import { DescriptionListDescription } from './DescriptionListDescription';
@@ -7,7 +7,11 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof DescriptionListMultiCol> = {
     title: 'Komponenter/Lists/DescriptionListMultiCol',
     component: DescriptionListMultiCol,
-    subcomponents: { DescriptionListTerm, DescriptionListDescription },
+    subcomponents: {
+        DescriptionListTerm: DescriptionListTerm as FunctionComponent<unknown>,
+        DescriptionListDescription:
+            DescriptionListDescription as FunctionComponent<unknown>,
+    },
     tags: ['autodocs'],
 };
 export default meta;

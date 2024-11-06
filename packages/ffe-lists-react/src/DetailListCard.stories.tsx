@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { DetailListCard } from './DetailListCard';
 import { DetailListCardItem } from './DetailListCardItem';
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof DetailListCard> = {
     title: 'Komponenter/Lists/DetailListCard',
     component: DetailListCard,
-    subcomponents: { DetailListCardItem },
+    subcomponents: {
+        DetailListCardItem: DetailListCardItem as FunctionComponent<unknown>,
+    },
     tags: ['autodocs'],
 };
 export default meta;

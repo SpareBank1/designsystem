@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { MessageBox } from './MessageBox';
 import { MessageHeader } from './MessageHeader';
 import type { StoryObj, Meta } from '@storybook/react';
 
-const meta: Meta<typeof MessageBox<any>> = {
+const meta: Meta<typeof MessageBox> = {
     title: 'Komponenter/Messages/MessageBox',
     component: MessageBox,
-    subcomponents: { MessageHeader },
+    subcomponents: {
+        MessageHeader: MessageHeader as FunctionComponent<unknown>,
+    },
 };
 export default meta;
 
-type Story = StoryObj<typeof MessageBox<any>>;
+type Story = StoryObj<typeof MessageBox>;
 
 export const Standard: Story = {
     args: {

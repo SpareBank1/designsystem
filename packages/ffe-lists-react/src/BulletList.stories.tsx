@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { BulletList } from './BulletList';
 import { BulletListItem } from './BulletListItem';
 import type { StoryObj, Meta } from '@storybook/react';
@@ -6,7 +6,9 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof BulletList> = {
     title: 'Komponenter/Lists/BulletList',
     component: BulletList,
-    subcomponents: { BulletListItem },
+    subcomponents: {
+        BulletListItem: BulletListItem as FunctionComponent<unknown>,
+    },
     tags: ['autodocs'],
 };
 export default meta;
