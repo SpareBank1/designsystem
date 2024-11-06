@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { StylizedNumberedList } from './StylizedNumberedList';
 import { StylizedNumberedListItem } from './StylizedNumberedListItem';
 import type { StoryObj, Meta } from '@storybook/react';
@@ -6,7 +6,10 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof StylizedNumberedList> = {
     title: 'Komponenter/Lists/StylizedNumberedList',
     component: StylizedNumberedList,
-    subcomponents: { StylizedNumberedListItem },
+    subcomponents: {
+        StylizedNumberedListItem:
+            StylizedNumberedListItem as FunctionComponent<unknown>,
+    },
     tags: ['autodocs'],
 };
 export default meta;

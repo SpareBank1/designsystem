@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { CheckList } from './CheckList';
 import { CheckListItem } from './CheckListItem';
 import type { StoryObj, Meta } from '@storybook/react';
@@ -6,7 +6,9 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof CheckList> = {
     title: 'Komponenter/Lists/CheckList',
     component: CheckList,
-    subcomponents: { CheckListItem },
+    subcomponents: {
+        CheckListItem: CheckListItem as FunctionComponent<unknown>,
+    },
     tags: ['autodocs'],
 };
 export default meta;

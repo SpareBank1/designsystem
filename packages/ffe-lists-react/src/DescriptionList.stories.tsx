@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { DescriptionList } from './DescriptionList';
 import { DescriptionListTerm } from './DescriptionListTerm';
 import { DescriptionListDescription } from './DescriptionListDescription';
@@ -7,7 +7,11 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof DescriptionList> = {
     title: 'Komponenter/Lists/DescriptionList',
     component: DescriptionList,
-    subcomponents: { DescriptionListTerm, DescriptionListDescription },
+    subcomponents: {
+        DescriptionListTerm: DescriptionListTerm as FunctionComponent<unknown>,
+        DescriptionListDescription:
+            DescriptionListDescription as FunctionComponent<unknown>,
+    },
     tags: ['autodocs'],
     argTypes: {
         size: {
@@ -27,7 +31,7 @@ type Story = StoryObj<typeof DescriptionList>;
 export const Standard: Story = {
     args: {
         horizontal: false,
-        size: 'none',
+        size: 'md',
     },
     render: args => (
         <div>
