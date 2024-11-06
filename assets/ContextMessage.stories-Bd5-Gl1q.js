@@ -1,0 +1,17 @@
+import{r as C,R as e}from"./index-DJO9vBfz.js";import{t as x,M as E,C as k,a as c}from"./Content-Cc0GRSih.js";import{c as w}from"./index-i5X67GZP.js";import{M as h,C as T}from"./MessageCollapse-5ROVvb2U.js";const r=({type:t,className:d,onColoredBg:u,locale:o="nb",children:p,onClose:a,iconFileUrl:g,header:n,compact:f,closeButton:b,...v})=>{const[y,M]=C.useState(!1);return e.createElement(h,{isClosed:y},e.createElement("div",{className:w("ffe-message","ffe-message--context",`ffe-message--${t}`,{"ffe-message--context-compact":f,"ffe-message--colored-bg":u},d),role:t==="error"?"alert":"group","aria-label":x[o][t].ariaLabel,...v},e.createElement("div",{className:"ffe-message__background"},e.createElement(E,{iconFileUrl:g}),e.createElement(k,null,typeof n=="string"?e.createElement(c,{as:"h2"},n):n,p),b&&e.createElement(T,{locale:o,onClick:()=>{M(!0),a==null||a()}}))))};r.__docgenInfo={description:"",methods:[],displayName:"ContextMessage",props:{compact:{required:!1,tsType:{name:"boolean"},description:"Renders a more compact version of the context message"},iconFileUrl:{required:!1,tsType:{name:"string"},description:"url to svg icon to override default"},locale:{required:!1,tsType:{name:"union",raw:"'nb' | 'nn' | 'en'",elements:[{name:"literal",value:"'nb'"},{name:"literal",value:"'nn'"},{name:"literal",value:"'en'"}]},description:"Decides the language of the aria-label for the close icon",defaultValue:{value:"'nb'",computed:!1}},type:{required:!0,tsType:{name:"union",raw:"'info' | 'error' | 'success' | 'tips' | 'news'",elements:[{name:"literal",value:"'info'"},{name:"literal",value:"'error'"},{name:"literal",value:"'success'"},{name:"literal",value:"'tips'"},{name:"literal",value:"'news'"}]},description:"info, success, tips, news or error"},onClose:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:"Called when closed"},closeButton:{required:!1,tsType:{name:"boolean"},description:"Show close button"},onColoredBg:{required:!1,tsType:{name:"boolean"},description:"Adds alternative styling for better contrast on certain backgrounds"},header:{required:!1,tsType:{name:"union",raw:"React.ReactElement<MessageHeaderProps> | string",elements:[{name:"ReactReactElement",raw:"React.ReactElement<MessageHeaderProps>",elements:[{name:"intersection",raw:`{
+    as?: As;
+} & DistributiveOmit<
+    ComponentPropsWithoutRef<ElementType extends As ? 'div' : As>,
+    'as'
+>`,elements:[{name:"signature",type:"object",raw:`{
+    as?: As;
+}`,signature:{properties:[{key:"as",value:{name:"As",required:!1}}]}},{name:"unknown"}]}]},{name:"string"}]},description:"The header"}}};const R={title:"Komponenter/Messages/ContextMessage",component:r,subcomponents:{MessageHeader:c}},s={args:{type:"info",closeButton:!0,header:"Meldingstittel"},render:t=>e.createElement(r,{...t},"Kontekstuelle meldinger er informasjon som skal gis i en kontekst")};var l,i,m;s.parameters={...s.parameters,docs:{...(l=s.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    type: 'info',
+    closeButton: true,
+    header: 'Meldingstittel'
+  },
+  render: args => <ContextMessage {...args}>
+            Kontekstuelle meldinger er informasjon som skal gis i en kontekst
+        </ContextMessage>
+}`,...(m=(i=s.parameters)==null?void 0:i.docs)==null?void 0:m.source}}};const _=["Standard"],B=Object.freeze(Object.defineProperty({__proto__:null,Standard:s,__namedExportsOrder:_,default:R},Symbol.toStringTag,{value:"Module"}));export{B as C,s as S};
