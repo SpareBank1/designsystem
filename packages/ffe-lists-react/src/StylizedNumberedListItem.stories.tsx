@@ -3,7 +3,7 @@ import { StylizedNumberedListItem } from './StylizedNumberedListItem';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof StylizedNumberedListItem> = {
-    title: 'components/lists/StylizedNumberedListItem',
+    title: 'Komponenter/Lists/StylizedNumberedListItem',
     component: StylizedNumberedListItem,
     tags: ['autodocs'],
 };

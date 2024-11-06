@@ -3,7 +3,7 @@ import { LinkText } from './LinkText';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof LinkText> = {
-    title: 'components/core/LinkText',
+    title: 'Komponenter/Core/LinkText',
     component: LinkText,
 };
 export default meta;

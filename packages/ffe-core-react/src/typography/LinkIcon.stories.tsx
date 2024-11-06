@@ -3,7 +3,7 @@ import { LinkIcon } from './LinkIcon';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof LinkIcon> = {
-    title: 'components/core/LinkIcon',
+    title: 'Komponenter/Core/LinkIcon',
     component: LinkIcon,
 };
 export default meta;

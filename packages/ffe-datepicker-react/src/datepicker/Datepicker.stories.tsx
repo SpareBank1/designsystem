@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { InputGroup } from '@sb1/ffe-form-react';
 
 const meta: Meta<typeof Datepicker> = {
-    title: 'components/datepicker/Datepicker',
+    title: 'Komponenter/Datepicker/Datepicker',
     component: Datepicker,
 };
 export default meta;

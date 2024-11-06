@@ -7,7 +7,7 @@ import { Heading2, Paragraph } from '@sb1/ffe-core-react';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof GroupCard> = {
-    title: 'components/cards/GroupCard',
+    title: 'Komponenter/Cards/GroupCard',
     component: GroupCard,
 };
 export default meta;

@@ -4,7 +4,7 @@ import { CheckListItem } from './CheckListItem';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof CheckList> = {
-    title: 'components/lists/CheckList',
+    title: 'Komponenter/Lists/CheckList',
     component: CheckList,
     subcomponents: { CheckListItem },
     tags: ['autodocs'],

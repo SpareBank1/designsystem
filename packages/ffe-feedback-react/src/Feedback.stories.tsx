@@ -3,7 +3,7 @@ import { Feedback } from './Feedback';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Feedback> = {
-    title: 'components/feedback/Feedback',
+    title: 'Komponenter/Feedback/Feedback',
     component: Feedback,
 };
 export default meta;

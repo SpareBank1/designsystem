@@ -3,7 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { PreformattedText } from './PreformattedText';
 
 const meta: Meta<typeof PreformattedText> = {
-    title: 'components/core/PreformattedText',
+    title: 'Komponenter/Core/PreformattedText',
     component: PreformattedText,
 };
 export default meta;

@@ -3,7 +3,7 @@ import { InfoFieldMessage } from './InfoFieldMessage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof InfoFieldMessage> = {
-    title: 'components/form/InfoFieldMessage',
+    title: 'Komponenter/Form/InfoFieldMessage',
     component: InfoFieldMessage,
 };
 export default meta;

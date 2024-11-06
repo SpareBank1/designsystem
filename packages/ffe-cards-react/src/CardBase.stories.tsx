@@ -10,7 +10,7 @@ const Custom: React.FC<React.ComponentProps<'div'>> = props => (
 );
 
 const meta: Meta<typeof CardBase<any>> = {
-    title: 'components/cards/CardBase',
+    title: 'Komponenter/Cards/CardBase',
     component: CardBase,
     argTypes: {
         as: {

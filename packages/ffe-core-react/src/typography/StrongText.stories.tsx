@@ -3,7 +3,7 @@ import { StrongText } from './StrongText';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof StrongText> = {
-    title: 'components/core/StrongText',
+    title: 'Komponenter/Core/StrongText',
     component: StrongText,
 };
 export default meta;

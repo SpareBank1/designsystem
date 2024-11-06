@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { fargeFjell, spacingXs } from '@sb1/ffe-core';
 
 const meta: Meta<typeof Chip<any>> = {
-    title: 'components/chips/Chip',
+    title: 'Komponenter/Chips/Chip',
     component: Chip,
 };
 export default meta;

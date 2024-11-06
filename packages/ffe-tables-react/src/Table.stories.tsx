@@ -13,7 +13,7 @@ import { formatNumber } from '@sb1/ffe-formatters';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
 
 const meta: Meta<typeof Table> = {
-    title: 'components/table/Table',
+    title: 'Komponenter/Table/Table',
     component: Table,
 };
 export default meta;

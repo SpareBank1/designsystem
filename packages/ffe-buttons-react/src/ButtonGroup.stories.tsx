@@ -6,7 +6,7 @@ import { TertiaryButton } from './TertiaryButton';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof ButtonGroup> = {
-    title: 'components/buttons/ButtonGroup',
+    title: 'Komponenter/Buttons/ButtonGroup',
     component: ButtonGroup,
 };
 export default meta;

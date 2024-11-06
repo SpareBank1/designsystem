@@ -4,7 +4,7 @@ import { DetailListCardItem } from './DetailListCardItem';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof DetailListCard> = {
-    title: 'components/lists/DetailListCard',
+    title: 'Komponenter/Lists/DetailListCard',
     component: DetailListCard,
     subcomponents: { DetailListCardItem },
     tags: ['autodocs'],

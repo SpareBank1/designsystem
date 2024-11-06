@@ -4,7 +4,7 @@ import { TextArea } from './TextArea';
 import { InputGroup } from './InputGroup';
 
 const meta: Meta<typeof TextArea> = {
-    title: 'components/form/TextArea',
+    title: 'Komponenter/Form/TextArea',
     component: TextArea,
 };
 export default meta;

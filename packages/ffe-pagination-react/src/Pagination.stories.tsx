@@ -14,7 +14,7 @@ import {
 } from '@sb1/ffe-tables-react';
 
 const meta: Meta<typeof Pagination> = {
-    title: 'components/pagination/Pagination',
+    title: 'Komponenter/Pagination/Pagination',
     component: Pagination,
 };
 export default meta;

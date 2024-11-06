@@ -4,7 +4,7 @@ import { MessageHeader } from './MessageHeader';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof ContextMessage<any>> = {
-    title: 'components/messages/ContextMessage',
+    title: 'Komponenter/Messages/ContextMessage',
     component: ContextMessage,
     subcomponents: { MessageHeader },
 };

@@ -3,7 +3,7 @@ import { Calendar } from './Calendar';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Calendar> = {
-    title: 'components/datepicker/Calendar',
+    title: 'Komponenter/Datepicker/Calendar',
     component: Calendar,
 };
 export default meta;

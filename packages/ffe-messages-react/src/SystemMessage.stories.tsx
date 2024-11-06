@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { MessageIcon } from './MessageIcon';
 
 const meta: Meta<typeof SystemMessage<any>> = {
-    title: 'components/messages/SystemMessage',
+    title: 'Komponenter/Messages/SystemMessage',
     component: SystemMessage,
     subcomponents: { MessageIcon },
 };

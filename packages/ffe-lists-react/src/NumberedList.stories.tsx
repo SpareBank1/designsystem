@@ -4,7 +4,7 @@ import { NumberedListItem } from './NumberedListItem';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof NumberedList> = {
-    title: 'components/lists/NumberedList',
+    title: 'Komponenter/Lists/NumberedList',
     component: NumberedList,
     subcomponents: { NumberedListItem },
     tags: ['autodocs'],

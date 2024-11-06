@@ -3,7 +3,7 @@ import { ErrorFieldMessage } from './ErrorFieldMessage';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof ErrorFieldMessage> = {
-    title: 'components/form/ErrorFieldMessage',
+    title: 'Komponenter/Form/ErrorFieldMessage',
     component: ErrorFieldMessage,
 };
 export default meta;

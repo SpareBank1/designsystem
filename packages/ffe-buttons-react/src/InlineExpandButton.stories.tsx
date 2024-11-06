@@ -12,7 +12,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof InlineExpandButton<any>> = {
-    title: 'components/buttons/InlineExpandButton',
+    title: 'Komponenter/Buttons/InlineExpandButton',
     component: InlineExpandButton,
     argTypes: {
         as: {

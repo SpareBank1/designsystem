@@ -14,7 +14,7 @@ const Custom: React.FC<React.ComponentProps<'a'>> = props => (
 );
 
 const meta: Meta<typeof CardActionComponent<any>> = {
-    title: 'components/cards/CardAction',
+    title: 'Komponenter/Cards/CardAction',
     component: CardActionComponent,
     argTypes: {
         as: {

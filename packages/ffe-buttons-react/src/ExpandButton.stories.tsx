@@ -3,7 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { ExpandButton } from './ExpandButton';
 
 const meta: Meta<typeof ExpandButton> = {
-    title: 'components/buttons/ExpandButton',
+    title: 'Komponenter/Buttons/ExpandButton',
     component: ExpandButton,
     argTypes: {},
 };

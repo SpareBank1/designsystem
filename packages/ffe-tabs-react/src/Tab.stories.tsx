@@ -3,7 +3,7 @@ import { Tab } from './Tab';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Tab> = {
-    title: 'components/tabs/Tab',
+    title: 'Komponenter/Tabs/Tab',
     component: Tab,
 };
 export default meta;

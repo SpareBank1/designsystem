@@ -41,8 +41,14 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        viewMode: 'docs',
         docs: {
             components,
+        },
+        options: {
+            storySort: {
+                method: 'alphabetical',
+              },
         },
     },
     decorators: [

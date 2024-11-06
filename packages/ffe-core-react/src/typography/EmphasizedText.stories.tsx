@@ -3,7 +3,7 @@ import { EmphasizedText } from './EmphasizedText';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof EmphasizedText> = {
-    title: 'components/core/EmphasizedText',
+    title: 'Komponenter/Core/EmphasizedText',
     component: EmphasizedText,
 };
 export default meta;

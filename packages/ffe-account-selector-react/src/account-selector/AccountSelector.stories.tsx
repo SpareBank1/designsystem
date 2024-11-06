@@ -5,7 +5,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { SmallText } from '@sb1/ffe-core-react';
 
 const meta: Meta<typeof AccountSelector> = {
-    title: 'components/account-selector/AccountSelector',
+    title: 'Komponenter/Account-selector/AccountSelector',
     component: AccountSelector,
     argTypes: {
         postListElement: {
