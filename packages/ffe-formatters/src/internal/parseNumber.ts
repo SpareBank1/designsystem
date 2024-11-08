@@ -38,7 +38,7 @@ export const parseNumber = (
     number: number | string | null | undefined,
     locale: Locale,
 ) => {
-    const parsed = new NumberParser(locale).parse(
+    const parsed = new NumberParser(locale === 'en' ? 'en' : 'nb').parse(
         `${number}`.replace(/\s/g, ''),
     );
     return Number.isNaN(parsed) ? null : parsed;
