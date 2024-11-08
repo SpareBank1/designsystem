@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@5.0.0...@sb1/ffe-formatters@5.0.1) (2024-11-08)
+
+
+### Bug Fixes
+
+* **ffe-formatters:** use nb or en in parseNumber ([dafa44d](https://github.com/SpareBank1/designsystem/commit/dafa44d692a6ffea94a62717a968356394de6983))
+
+
+
+
+
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.2.8...@sb1/ffe-formatters@5.0.0) (2024-10-11)
 
 
