@@ -1,0 +1,7 @@
+import{j as e}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as o}from"./index-BrnU7xv7.js";import{ae as s,af as a,ag as m}from"./index-CGKYBd-w.js";import{I as d,S as i}from"./InputTextLike.stories-BZ2BYH5z.js";import"./index-DJO9vBfz.js";import"./iframe-BsPJJjeJ.js";import"../sb-preview/runtime.js";import"./index-DJdX7xnk.js";import"./index-D-8MO0q_.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";import"./index-i5X67GZP.js";import"./Paragraph-RN6x_6mj.js";function r(n){const t={code:"code",h1:"h1",p:"p",...o(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(s,{of:d}),`
+`,e.jsx(t.h1,{id:"inputtextlike",children:"InputTextLike"}),`
+`,e.jsx(t.p,{children:`Text-like input er inputfelter designet for å kunne brukes inni brødtekst, som del av en setning med et minimum av luft rundt.
+Det er opp til utviklere å sette bredden på dette elementet, siden det vil variere fra gang til gang hva man ønsker.`}),`
+`,e.jsxs(t.p,{children:["Text-like input har ikke egen label og må derfor assosieres med en ",e.jsx(t.code,{children:"aria-label"}),". Dette kan legges til med den obligatoriske ",e.jsx(t.code,{children:"ariaLabel"}),"-propen i ",e.jsx(t.code,{children:"InputTextLike"}),"-komponenten."]}),`
+`,e.jsx(a,{of:i}),`
+`,e.jsx(m,{of:i})]})}function D(n={}){const{wrapper:t}={...o(),...n.components};return t?e.jsx(t,{...n,children:e.jsx(r,{...n})}):r(n)}export{D as default};
