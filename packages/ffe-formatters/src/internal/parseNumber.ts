@@ -34,12 +34,14 @@ class NumberParser {
     }
 }
 
+const nbParser = new NumberParser('nb');
+const enParser = new NumberParser('en');
+
 export const parseNumber = (
     number: number | string | null | undefined,
     locale: Locale,
 ) => {
-    const parsed = new NumberParser(locale === 'en' ? 'en' : 'nb').parse(
-        `${number}`.replace(/\s/g, ''),
-    );
+    const parser = locale === 'en' ? enParser : nbParser;
+    const parsed = parser.parse(`${number}`.replace(/\s/g, ''));
     return Number.isNaN(parsed) ? null : parsed;
 };
