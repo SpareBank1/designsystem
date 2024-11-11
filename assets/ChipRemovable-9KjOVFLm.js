@@ -1,0 +1,4 @@
+import{j as o}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as m}from"./index-BrnU7xv7.js";import{ae as i,af as s,ag as a}from"./index-C5Tw9aSU.js";import{C as p,S as n}from"./ChipRemovable.stories-yellbrke.js";import"./index-DJO9vBfz.js";import"./iframe-CeAWhR1d.js";import"../sb-preview/runtime.js";import"./index-DJdX7xnk.js";import"./index-D-8MO0q_.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";import"./Chip-B-mu3z2Y.js";import"./index-i5X67GZP.js";import"./Icon-CtPXfMQv.js";import"./spacing-enBt7HlE.js";function e(t){const r={h1:"h1",...m(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(i,{of:p}),`
+`,o.jsx(r.h1,{id:"chipremovable",children:"ChipRemovable"}),`
+`,o.jsx(s,{of:n}),`
+`,o.jsx(a,{of:n})]})}function X(t={}){const{wrapper:r}={...m(),...t.components};return r?o.jsx(r,{...t,children:o.jsx(e,{...t})}):e(t)}export{X as default};
