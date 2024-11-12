@@ -48,6 +48,22 @@ function isDateWithinMinMax(
     return !(maxDate && date.isAfter(maxDate));
 }
 
+export function getAllMonths(locale: Locale): Array<string> {
+    return Array.from(
+        { length: 12 },
+        (_, i) =>
+            // @ts-ignore
+            i18n[locale][`MONTH_${i + 1}`],
+    );
+}
+
+export function getAllYears(startYear: number, endYear: number): Array<number> {
+    return Array.from(
+        { length: endYear - startYear + 1 },
+        (_, i) => startYear + i,
+    );
+}
+
 export class SimpleCalendar {
     locale: Locale;
     focusedDate: SimpleDate;
@@ -118,6 +134,10 @@ export class SimpleCalendar {
 
     public previousMonth() {
         this.focusedDate.adjust({ period: 'M', offset: -1 });
+    }
+
+    public changeMonth(newMonth: number) {
+        this.focusedDate.month = newMonth;
     }
 
     public nextWeek() {

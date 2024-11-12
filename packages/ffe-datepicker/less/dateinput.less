@@ -1,37 +1,49 @@
 .ffe-dateinput {
     position: relative;
     display: inline-block;
+    grid-column: 1 e('/') 3;
+    grid-row: 1 e('/') -1;
+    min-width: 210px;
 
     &--full-width {
         display: block;
     }
+    //
+    //@media (hover: hover) and (pointer: fine) {
+    //    &:hover {
+    //        color: var(--ffe-g-primary-color);
+    //    }
+    //}
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            color: var(--ffe-g-primary-color);
-        }
+    &[aria-invalid='true'] {
+        border-color: var(--ffe-g-error-color);
+        border-style: solid;
+    }
+
+    //@media (hover: hover) and (pointer: fine) {
+    //    /* stylelint-disable selector-max-specificity */
+    //    &:focus + .ffe-datepicker__button:hover {
+    //        border-color: red !important;
+    //        box-shadow: 0 0 0 2px var(--ffe-v-datepicker-border-hover-color);
+    //    }
+    //    /* stylelint-enable selector-max-specificity */
+    //}
+
+    &.ffe-input-field {
+        display: flex;
+        align-items: center;
     }
 
     &__field {
-        min-width: 160px;
-        grid-column: 1 e('/') 3;
-        grid-row: 1 e('/') -1;
+        padding-block: var(--ffe-spacing-2xs);
+
+        &:focus {
+            background-color: var(--ffe-farge-frost-30);
+            outline: none;
+        }
+
         &::-ms-clear {
             display: none;
-        }
-
-        &[aria-invalid='true'] {
-            border-color: var(--ffe-g-error-color);
-            border-style: solid;
-        }
-
-        @media (hover: hover) and (pointer: fine) {
-            /* stylelint-disable selector-max-specificity */
-            &:focus + .ffe-datepicker__button:hover {
-                border-color: transparent;
-                box-shadow: 0 0 0 2px var(--ffe-v-datepicker-border-hover-color);
-            }
-            /* stylelint-enable selector-max-specificity */
         }
     }
 }
@@ -60,6 +72,7 @@
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
         width: 56px;
         cursor: pointer;
+        z-index: 1;
 
         &:focus,
         &:active {
