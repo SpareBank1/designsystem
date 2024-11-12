@@ -1,0 +1,23 @@
+{
+    "name": "@sb1/ffe-tokens",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "SpareBank1",
+    "files": [
+        "types",
+        "lib",
+        "es",
+        "less",
+        "css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "node ./scripts/build.js"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

@@ -25,6 +25,9 @@
         "clean": "rm -rf css/ gen-src/ lib/",
         "build": "./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix"
     },
+    "dependencies": {
+        "@sb1/ffe-tokens": "^1.0.0"
+    },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.0",
         "case": "^1.5.5",
