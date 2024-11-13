@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-formatters
 
 ## Usage
 
-Full documentation on formatter usage is available at https://design.sparebank1.no/komponenter/formatering/.
+Full documentation on formatter usage is available at https://design.sparebank1.no/Komponenter/Formatters.
 
 Import the formatter(s) you need the following way:
 

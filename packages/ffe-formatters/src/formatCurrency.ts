@@ -11,9 +11,7 @@ interface Opts {
 
 export const formatCurrency = (amount: number | string, opts: Opts) => {
     const { locale } = opts;
-    const { prefix, postfix } = {
-        prefix: `kr${NON_BREAKING_SPACE}`,
-        postfix: ',–',
+    const { prefix = `kr${NON_BREAKING_SPACE}`, postfix = ',–' } = {
         ...opts,
     };
 
