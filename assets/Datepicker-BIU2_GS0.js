@@ -1,4 +1,0 @@
-import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as e}from"./index-BrnU7xv7.js";import{ae as m,af as s,ag as a}from"./index-Baph_8Pn.js";import{D as p,S as n}from"./Datepicker.stories-BH0VhjWv.js";import"./index-DJO9vBfz.js";import"./iframe-DBsf0qFx.js";import"../sb-preview/runtime.js";import"./index-DJdX7xnk.js";import"./index-D-8MO0q_.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";import"./index-i5X67GZP.js";import"./Calendar-B2geP6dz.js";import"./Icon-CtPXfMQv.js";import"./v4-CQkTLCs1.js";import"./index-DJl0kRct.js";import"./InputGroup-CkIAZS7X.js";import"./Collapse-Btg5eLbY.js";function i(o){const r={h1:"h1",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{of:p}),`
-`,t.jsx(r.h1,{id:"datepicker",children:"Datepicker"}),`
-`,t.jsx(s,{of:n}),`
-`,t.jsx(a,{of:n})]})}function y(o={}){const{wrapper:r}={...e(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(i,{...o})}):i(o)}export{y as default};

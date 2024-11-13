@@ -1,2 +1,0 @@
-import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as r}from"./index-BrnU7xv7.js";import"./index-DJO9vBfz.js";function o(n){const e={h1:"h1",p:"p",...r(),...n.components};return t.jsxs(t.Fragment,{children:[t.jsx(e.h1,{id:"docs",children:"Docs"}),`
-`,t.jsx(e.p,{children:"Her kan man putte retningslinjer som ikke hører til blant komponentene."})]})}function m(n={}){const{wrapper:e}={...r(),...n.components};return e?t.jsx(e,{...n,children:t.jsx(o,{...n})}):o(n)}export{m as default};

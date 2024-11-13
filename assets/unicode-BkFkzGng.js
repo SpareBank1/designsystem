@@ -1,0 +1,1 @@
+const N=" ";export{N};

@@ -1,5 +1,0 @@
-import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as i}from"./index-BrnU7xv7.js";import{ae as m,af as s,ag as a}from"./index-Baph_8Pn.js";import{P as p,S as n}from"./PrimaryButton.stories-CnWDsjt-.js";import"./index-DJO9vBfz.js";import"./iframe-DBsf0qFx.js";import"../sb-preview/runtime.js";import"./index-DJdX7xnk.js";import"./index-D-8MO0q_.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";import"./PrimaryButton-CKxZ8iFN.js";import"./BaseButton-DiVMmtVy.js";import"./fixedForwardRef-D76ij-MA.js";import"./index-i5X67GZP.js";function e(o){const r={h1:"h1",p:"p",...i(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{of:p}),`
-`,t.jsx(r.h1,{id:"primarybutton",children:"PrimaryButton"}),`
-`,t.jsx(r.p,{children:"For høyt prioriterte handlinger, som det også kan finnes flere av på en side/view."}),`
-`,t.jsx(s,{of:n}),`
-`,t.jsx(a,{of:n})]})}function S(o={}){const{wrapper:r}={...i(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(e,{...o})}):e(o)}export{S as default};
