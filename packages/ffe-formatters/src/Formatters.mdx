@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/blocks';
+import { Table, TableHead, TableRow, TableDataCell, TableHeaderCell, TableBody, TableCaption } from "@sb1/ffe-tables-react";
+
+<Meta title="Komponenter/Formatters/Formatering" />
+
+# Formateringsprinsipper
+
+Det finnes mange formateringsprinsipper som er standardisert i Norge, og som bidrar til å øke lesbarheten. I designsystemet har vi komponenter som hjelper med formateringen, så du som utvikler ikke trenger å bekymre deg for at ting ikke vises riktig.
+
+<Table className="sb-unstyled">
+    <TableCaption  className="sb-unstyled">Utvalg av ulike formateringer som finnes:</TableCaption>
+    <TableHead className="sb-unstyled">
+        <TableRow className="sb-unstyled">
+            <TableHeaderCell className="sb-unstyled">Type</TableHeaderCell>
+            <TableHeaderCell className="sb-unstyled">Eksempel</TableHeaderCell>
+        </TableRow>
+    </TableHead>
+    <TableBody>
+        {[
+            {type :'Datoer', eksempel: '12.11.2024'},
+            {type :'Tall', eksempel: '100 000'},
+            {type :'Valuta', eksempel: 'kr 1 000,–'},
+            {type :'Prosenter', eksempel: '7 %'},
+            {type :'Kontonummer', eksempel: '1234 56 78901'},
+            {type :'Fødselsnummer', eksempel: '123456 78901'},
+            {type :'Avstander', eksempel: '50 km'},
+        ].map((it) => (
+            <TableRow className="sb-unstyled" key={it.type}>
+                <TableDataCell className="sb-unstyled">{it.type}</TableDataCell>
+                <TableDataCell className="sb-unstyled">{it.eksempel}</TableDataCell>
+            </TableRow>
+        ))}
+    </TableBody>
+</Table>
+

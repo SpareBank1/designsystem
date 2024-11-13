@@ -13,7 +13,7 @@ export const formatPercentage = (
     },
 ) => {
     if (typeof amount !== 'number') {
-        return '';
+        return `${amount.replace('.', ',')}${NON_BREAKING_SPACE}%`;
     }
 
     const percentage = amount.toLocaleString('nb-NO', {
