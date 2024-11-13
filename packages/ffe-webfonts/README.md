@@ -46,16 +46,9 @@ You need to provide a constant named `@fonts-url` after the `@import` with a URL
 @import (inline) '~@sb1/ffe-webfonts/sb1-fonts.css';
 ```
 
-## Deprecated fonts
-
-In addition to the SpareBank 1 fonts, this package currently still contains the previously used MuseoSans fonts. These are deprecated and will be removed at a later date.
-
-MuseoSans is distributed through `fonts.less`, `fonts.css` and `fonts-inline.less`. Any use of these files should be replaced with `sb1-fonts.less`, `sb1-fonts.css` and `sb1-fonts-inline.less`.
-
 # Licenses
 
 -   Source code is licensed under MIT
--   The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.
 
 ## Development
 
