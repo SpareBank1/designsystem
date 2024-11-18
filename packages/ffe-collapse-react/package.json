@@ -11,6 +11,7 @@
         "lib",
         "es",
         "less",
+        "css",
         "types"
     ],
     "main": "lib/index.js",
@@ -22,7 +23,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool tsc",
+        "build": "ffe-buildtool tsc && lessc less/collapse.less css/collapse.css --autoprefix",
         "build:es": "ffe-buildtool tsc --es",
         "lint": "eslint src --ext ts,tsx",
         "lint:fix": "eslint src --fix --ext ts,tsx",
