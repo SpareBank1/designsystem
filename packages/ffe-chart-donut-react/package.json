@@ -10,7 +10,8 @@
     "files": [
         "lib",
         "es",
-        "less"
+        "less",
+        "css"
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -20,7 +21,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool tsc",
+        "build": "ffe-buildtool tsc && lessc less/ffe-chart-donut.less css/ffe-chart-donut.css --autoprefix",
         "build:es": "ffe-buildtool tsc --es",
         "lint": "eslint src --ext ts,tsx",
         "lint:fix": "eslint src --fix --ext ts,tsx",
