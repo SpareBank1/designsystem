@@ -14,6 +14,14 @@ Full documentation on button usage is available at https://design.sparebank1.no/
 @import 'path/to/node_modules/@sb1/ffe-buttons/less/buttons';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-buttons/css/buttons.css';
+```
+
 See also `@sb1/ffe-buttons-react`.
 
 ## Theming with CSS custom properties
