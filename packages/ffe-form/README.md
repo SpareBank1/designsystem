@@ -14,6 +14,14 @@ Full documentation on form usage is available at https://design.sparebank1.no/ko
 @import 'path/to/node_modules/@sb1/ffe-form/less/form';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-form/css/form.css';
+```
+
 See also `@sb1/ffe-form-react`.
 
 ## Theming with CSS custom properties
