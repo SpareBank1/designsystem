@@ -14,6 +14,14 @@ Full documentation on file upload usage is available at https://design.sparebank
 @import 'path/to/node_modules/@sb1/ffe-file.upload/less/ffe-file-upload.less';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-file-upload/css/file-upload.css';
+```
+
 See also `@sb1/ffe-file-upload-react`.
 
 ## Theming with CSS custom properties
