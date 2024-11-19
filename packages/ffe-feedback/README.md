@@ -16,6 +16,14 @@ Full documentation is not yet available, but will be added to https://design.spa
 @import 'node_modules/@sb1/ffe-feedback/less/feedback';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-feedback/css/feedback.css';
+```
+
 See also `@sb1/ffe-feedback-react`.
 
 ## Development
