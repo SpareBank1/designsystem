@@ -21,6 +21,14 @@ For styling the account-selector use:
 @import 'path/to/node_modules/@sb1/ffe-account-selector-react/less/ffe-account-selector';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-account-selector-react/css/ffe-account-selector.css';
+```
+
 ## Development
 
 To start a local development server, run the following from the designsystem root folder:
