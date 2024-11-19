@@ -14,6 +14,14 @@ Full documentation on table usage is available at https://design.sparebank1.no/k
 @import 'path/to/node_modules/@sb1/ffe-tables/less/tables';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-tables/css/tables.css';
+```
+
 See also `@sb1/ffe-tables-react`.
 
 ## Theming with CSS custom properties
