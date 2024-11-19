@@ -14,9 +14,9 @@ npm install --save-dev less less-plugin-npm-import    # less-plugin is optional,
 
 Full documentation on usage is available at:
 
-https://design.sparebank1.no/komponenter/typografi/
-https://design.sparebank1.no/profil/farger/
-https://design.sparebank1.no/profil/spacing/
+* https://design.sparebank1.no/komponenter/typografi/
+* https://design.sparebank1.no/profil/farger/
+* https://design.sparebank1.no/profil/spacing/
 
 ```less
 /* Your project's main .less import file */
@@ -42,6 +42,14 @@ parts you require if you want:
 @import '~@sb1/ffe-core/less/typography';
 // Accessibility helpers
 @import '~@sb1/ffe-core/less/accessibility';
+```
+
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-core/css/ffe.css';
 ```
 
 ## Theming with CSS custom properties
