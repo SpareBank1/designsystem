@@ -24,6 +24,14 @@ Or pick just the ones you need from these:
 @import 'path/to/node_modules/@sb1/ffe-cards/less/image-card';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-cards/css/cards.css';
+```
+
 See also `@sb1/ffe-cards-react`.
 
 ## Theming with CSS custom properties
