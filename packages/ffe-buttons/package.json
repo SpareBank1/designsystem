@@ -4,7 +4,8 @@
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
-        "less"
+        "less",
+        "css"
     ],
     "repository": {
         "type": "git",
@@ -12,7 +13,8 @@
     },
     "scripts": {
         "lint": "ffe-buildtool stylelint less/*.less",
-        "test": "npm run lint"
+        "test": "npm run lint",
+        "build": "lessc less/buttons.less css/buttons.css --autoprefix"
     },
     "dependencies": {
         "@sb1/ffe-core": "^29.1.4"

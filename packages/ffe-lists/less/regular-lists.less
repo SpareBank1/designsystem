@@ -1,14 +1,17 @@
+@import (reference) '@sb1/ffe-core/less/breakpoints';
+@import (reference) '@sb1/ffe-core/less/typography';
+
 .ffe-numbered-list,
 .ffe-bullet-list {
     font-family: var(--ffe-g-font);
     padding: 0;
     text-align: left;
-    margin: 0 0 @ffe-spacing-sm;
+    margin: 0 0 var(--ffe-spacing-sm);
 
     > .ffe-numbered-list__item,
     > .ffe-bullet-list__item {
-        margin-top: @ffe-spacing-xs;
-        margin-left: @ffe-spacing-sm;
+        margin-top: var(--ffe-spacing-xs);
+        margin-left: var(--ffe-spacing-sm);
         overflow-wrap: anywhere;
     }
 }
@@ -33,7 +36,7 @@
 @media (min-width: @breakpoint-sm) {
     .ffe-numbered-list,
     .ffe-bullet-list {
-        margin-left: @ffe-spacing-sm;
+        margin-left: var(--ffe-spacing-sm);
 
         &--condensed {
             margin-left: 0;
@@ -45,7 +48,7 @@
 @media (min-width: @breakpoint-md) {
     .ffe-numbered-list > .ffe-numbered-list__item,
     .ffe-bullet-list > .ffe-bullet-list__item {
-        margin-left: @ffe-spacing-lg;
+        margin-left: var(--ffe-spacing-lg);
 
         &--condensed {
             margin-left: 0;
@@ -58,14 +61,14 @@
     font-family: var(--ffe-g-font);
     padding: 0;
     text-align: left;
-    margin: 0 0 @ffe-spacing-sm;
+    margin: 0 0 var(--ffe-spacing-sm);
     list-style: none;
 }
 
 .ffe-check-list__item {
     --line-height: 1.5em;
 
-    margin-top: @ffe-spacing-sm;
+    margin-top: var(--ffe-spacing-sm);
     position: relative;
     line-height: var(--line-height);
     display: grid;
@@ -93,7 +96,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: @ffe-spacing-xs;
+            gap: var(--ffe-spacing-xs);
 
             .ffe-check-list__item {
                 flex: 1 0 auto;
@@ -107,13 +110,13 @@
     --line-height: 1.5em;
 
     counter-increment: list-elements;
-    margin-top: @ffe-spacing-sm;
+    margin-top: var(--ffe-spacing-sm);
     position: relative;
     line-height: var(--line-height);
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: var(--line-height) 1fr;
-    grid-column-gap: @ffe-spacing-md;
+    grid-column-gap: var(--ffe-spacing-md);
 
     &::before {
         content: counter(list-elements);

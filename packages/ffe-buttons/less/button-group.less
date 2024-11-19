@@ -1,22 +1,9 @@
-// Button group
-//
-// Markup:
-// <div class="ffe-button-group ffe-button-group{{modifier_class}}">
-//   <button class="ffe-button ffe-button--primary">
-//     <span class="ffe-button__label">Click bait</span>
-//   </button>
-//   <button class="ffe-button ffe-button--secondary">
-//     <span class="ffe-button__label">Click bait</span>
-//   </button>
-// </div>
-//
-// --thin - Less vertical spacing
-//
-// Styleguide ffe-buttons.button-group
+@import (reference) '@sb1/ffe-core/less/breakpoints';
+
 .ffe-button-group {
     display: flex;
     flex-direction: column;
-    padding: @ffe-spacing-xl 0;
+    padding: var(--ffe-spacing-xl) 0;
     width: 100%;
 
     .ffe-button,

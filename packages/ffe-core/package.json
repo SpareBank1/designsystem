@@ -23,7 +23,7 @@
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint",
         "clean": "rm -rf css/ gen-src/ lib/",
-        "build": "./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc"
+        "build": "./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.0",
