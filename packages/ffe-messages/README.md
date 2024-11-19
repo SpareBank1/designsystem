@@ -14,6 +14,14 @@ Full documentation on lists usage is available at https://design.sparebank1.no/k
 @import 'path/to/node_modules/@sb1/ffe-messages/less/messages';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-messages/css/messages.css';
+```
+
 See also `@sb1/ffe-messages-react`.
 
 ## Theming with CSS custom properties

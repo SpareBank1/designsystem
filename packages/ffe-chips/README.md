@@ -1,27 +1,15 @@
-# @sb1/ffe-cards
+# @sb1/ffe-chips
 
 ## Install
 
 ```bash
-npm install --save @sb1/ffe-core @sb1/ffe-cards
+npm install --save @sb1/ffe-core @sb1/ffe-chips
 ```
 
 ## Usage
 
-Full documentation on card usage is available at https://design.sparebank1.no/komponenter/kort/.
-
-Import styling for all card types:
-
 ```less
-@import 'path/to/node_modules/@sb1/ffe-cards/less/cards';
-```
-
-Or pick just the ones you need from these:
-
-```less
-@import 'path/to/node_modules/@sb1/ffe-cards/less/text-card';
-@import 'path/to/node_modules/@sb1/ffe-cards/less/icon-card';
-@import 'path/to/node_modules/@sb1/ffe-cards/less/image-card';
+@import 'path/to/node_modules/@sb1/ffe-chips/less/chip';
 ```
 
 ### Importing compiled CSS
@@ -29,10 +17,10 @@ Or pick just the ones you need from these:
 If your project does not use Less, you can import the compiled styling:
 
 ```css
-@import '~@sb1/ffe-cards/css/cards.css';
+@import '~@sb1/ffe-chips/css/chip.css';
 ```
 
-See also `@sb1/ffe-cards-react`.
+See also `@sb1/ffe-chips-react`.
 
 ## Theming with CSS custom properties
 

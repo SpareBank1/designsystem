@@ -14,6 +14,14 @@ Full documentation on accordion usage is available at https://design.sparebank1.
 @import 'path/to/node_modules/@sb1/ffe-accordion/less/ffe-accordion';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-accordion/css/ffe-accordion.css';
+```
+
 See also `@sb1/ffe-accordion-react`.
 
 ## Theming with CSS custom properties

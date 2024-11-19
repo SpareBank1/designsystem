@@ -25,6 +25,14 @@ styling:
 @import "npm://ffe-searchable-dropdown-react/less/searchable-dropdown";
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-searchable-dropdown-react/css/searchable-dropdown.css';
+```
+
 ## FFE less Dependencies
 
 ```

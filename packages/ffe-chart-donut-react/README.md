@@ -16,6 +16,14 @@ Full documentation on chart donut usage is available at https://design.sparebank
 @import 'path/to/node_modules/@sb1/ffe-chart-donut-react/less/ffe-chart-donut';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-chart-donut-react/css/ffe-chart-donut.css';
+```
+
 ## Theming with CSS custom properties
 
 In order to support theming of components, this package contains styling that depends on a set of custom properties, defined in `less/theme.less`. These properties in turn depend on a base theme defined in `ffe-core`.

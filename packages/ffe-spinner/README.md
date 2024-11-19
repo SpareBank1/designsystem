@@ -14,6 +14,14 @@ Full documentation on spinner usage is available at https://design.sparebank1.no
 @import 'path/to/node_modules/@sb1/ffe-spinner/less/spinner';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-spinner/css/spinner.css';
+```
+
 See also `@sb1/ffe-spinner-react`.
 
 ## Development

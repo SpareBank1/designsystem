@@ -14,6 +14,14 @@ Remember to include the less-file in your main less-file:
 @import '~@sb1/ffe-grid/less/ffe-grid';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-grid/css/ffe-grid.css';
+```
+
 ## Usage
 
 Full documentation on grid usage is available at https://design.sparebank1.no/komponenter/grid/.

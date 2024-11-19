@@ -12,6 +12,14 @@ npm install --save @sb1/ffe-icons
 
 Full documentation on icon usage is available at https://design.sparebank1.no/komponenter/ikoner/.
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-icons/css/ffe-icons.css';
+```
+
 See also `@sb1/ffe-icons-react`.
 
 ## Updating available icons
