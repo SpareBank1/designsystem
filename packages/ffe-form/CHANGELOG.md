@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.14...@sb1/ffe-form@30.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-form:** tilbyr kompilert css i tillegg til less ([099c89a](https://github.com/SpareBank1/designsystem/commit/099c89a227b92d2a9625ccb9138415076a4a0ccb))
+
+
+
+
+
 ## [30.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.13...@sb1/ffe-form@30.0.14) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-form

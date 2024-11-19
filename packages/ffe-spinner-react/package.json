@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-spinner-react",
-    "version": "9.0.15",
+    "version": "9.0.16",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,7 +25,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-spinner": "^5.1.24"
+        "@sb1/ffe-spinner": "^5.2.0"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.0",

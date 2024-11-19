@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@14.0.5...@sb1/ffe-tabs@14.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-tabs:** tilbyr kompilert css i tillegg til less ([683c66c](https://github.com/SpareBank1/designsystem/commit/683c66c0489daa49dc5310347899f550d9cc4ee0))
+
+
+
+
+
 ## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@14.0.4...@sb1/ffe-tabs@14.0.5) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-tabs

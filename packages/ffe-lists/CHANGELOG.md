@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@17.0.6...@sb1/ffe-lists@17.1.0) (2024-11-19)
+
+
+### Bug Fixes
+
+* **ffe-lists:** retter filnavn for css og legger til info om import ([651fcc7](https://github.com/SpareBank1/designsystem/commit/651fcc76a7ebd6be3681a2e564f5d6aa058dc3d5))
+
+
+### Features
+
+* **ffe-lists:** tilbyr kompilert css i tillegg til less ([913daac](https://github.com/SpareBank1/designsystem/commit/913daace67995fbdd50123b8ea18005c443b218f))
+
+
+
+
+
 ## [17.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@17.0.5...@sb1/ffe-lists@17.0.6) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-lists

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.1.4...@sb1/ffe-core@29.2.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-core:** tilbyr kompilert css i tillegg til less ([3bcdacc](https://github.com/SpareBank1/designsystem/commit/3bcdacc4c1e210a04b7b4a745f0e57b33e96a3a5))
+
+
+
+
+
 ## [29.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.1.3...@sb1/ffe-core@29.1.4) (2024-10-23)
 
 

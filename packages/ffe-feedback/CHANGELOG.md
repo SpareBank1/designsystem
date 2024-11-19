@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@2.0.6...@sb1/ffe-feedback@2.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-feedback:** tilbyr kompilert css i tillegg til less ([c9059f4](https://github.com/SpareBank1/designsystem/commit/c9059f40aa6b232a7e28f406a6149d3281c2feda))
+
+
+
+
+
 ## [2.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@2.0.5...@sb1/ffe-feedback@2.0.6) (2024-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-feedback

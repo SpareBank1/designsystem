@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.11...@sb1/ffe-buttons@19.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-buttons:** tilbyr kompilert css i tillegg til less ([2d01d88](https://github.com/SpareBank1/designsystem/commit/2d01d88489bc1d05b11a36aebc31952f3c4093a4))
+
+
+
+
+
 ## [19.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.0.10...@sb1/ffe-buttons@19.0.11) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@1.1.1...@sb1/ffe-modals@1.2.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-modals:** tilbyr kompilert css i tillegg til less ([898b0a4](https://github.com/SpareBank1/designsystem/commit/898b0a451658c8d317ddf9a71b95e3043c93e15a))
+
+
+
+
+
 ## [1.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@1.1.0...@sb1/ffe-modals@1.1.1) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-modals

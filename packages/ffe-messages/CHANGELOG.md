@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@1.1.1...@sb1/ffe-messages@1.2.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-messages:** tilbyr kompilert css i tillegg til less ([b059b64](https://github.com/SpareBank1/designsystem/commit/b059b64d7ee9b8bd92c9e7bc884cc72c76eebe58))
+
+
+
+
+
 ## [1.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@1.1.0...@sb1/ffe-messages@1.1.1) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-messages

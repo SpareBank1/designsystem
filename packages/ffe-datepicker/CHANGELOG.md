@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.0.15...@sb1/ffe-datepicker@13.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-datepicker:** tilbyr kompilert css i tillegg til less ([ef1f6a9](https://github.com/SpareBank1/designsystem/commit/ef1f6a9feeed44bba1077c700a51a02fac744c7e))
+
+
+
+
+
 ## [13.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.0.14...@sb1/ffe-datepicker@13.0.15) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

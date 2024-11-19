@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.0.1...@sb1/ffe-icons@15.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-icons:** tilbyr kompilert css i tillegg til less ([cfbead9](https://github.com/SpareBank1/designsystem/commit/cfbead91e867ca4da702dbfe76ba4126dfd9a833))
+
+
+
+
+
 ## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.0.0...@sb1/ffe-icons@15.0.1) (2024-09-04)
 
 

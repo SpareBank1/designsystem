@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@5.0.14...@sb1/ffe-collapse-react@5.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-collapse-react:** tilbyr kompilert css i tillegg til less ([b18a556](https://github.com/SpareBank1/designsystem/commit/b18a55629c52cef3d527966a94cc30bcae38b447))
+
+
+
+
+
 ## [5.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@5.0.13...@sb1/ffe-collapse-react@5.0.14) (2024-11-06)
 
 **Note:** Version bump only for package @sb1/ffe-collapse-react

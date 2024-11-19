@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@22.1.1...@sb1/ffe-searchable-dropdown-react@22.2.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** tilbyr kompilert css i tillegg til less ([92676e7](https://github.com/SpareBank1/designsystem/commit/92676e71f1b5ee130dfa4062ed3c942440043397))
+
+
+
+
+
 ## [22.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@22.1.0...@sb1/ffe-searchable-dropdown-react@22.1.1) (2024-11-06)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

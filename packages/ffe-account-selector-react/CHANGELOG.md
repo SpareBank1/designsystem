@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.0.4...@sb1/ffe-account-selector-react@30.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-account-selector-react:** tilbyr kompilert css i tillegg til less ([705a284](https://github.com/SpareBank1/designsystem/commit/705a2842c7bd47c68b00cdad851892a494143d1c))
+
+
+
+
+
 ## [30.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.0.3...@sb1/ffe-account-selector-react@30.0.4) (2024-11-13)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

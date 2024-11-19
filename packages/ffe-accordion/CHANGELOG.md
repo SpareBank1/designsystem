@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@11.0.5...@sb1/ffe-accordion@11.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-accordion:** tilbyr kompilert css i tillegg til less ([8651821](https://github.com/SpareBank1/designsystem/commit/865182170aca1b9ce6c018402e4a44573ccce86f))
+
+
+
+
+
 ## [11.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@11.0.4...@sb1/ffe-accordion@11.0.5) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

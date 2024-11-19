@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@1.2.1...@sb1/ffe-chips@1.3.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-chips:** tilbyr kompilert css i tillegg til less ([d9d5e8d](https://github.com/SpareBank1/designsystem/commit/d9d5e8d0895fab3e669ffdd07913ddd012d627a1))
+
+
+
+
+
 ## [1.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@1.2.0...@sb1/ffe-chips@1.2.1) (2024-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-chips

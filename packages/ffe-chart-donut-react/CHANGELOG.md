@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@8.0.5...@sb1/ffe-chart-donut-react@8.1.0) (2024-11-19)
+
+
+### Features
+
+* **ffe-chart-donut-react:** tilbyr kompilert css i tillegg til less ([4b11ddc](https://github.com/SpareBank1/designsystem/commit/4b11ddcc36210953c468602db5ca3d03b58d8914))
+
+
+
+
+
 ## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@8.0.4...@sb1/ffe-chart-donut-react@8.0.5) (2024-11-06)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
