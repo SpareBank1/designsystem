@@ -24,6 +24,14 @@ You need styles for both the dateinput field and the calendar.
 @import 'node_modules/@sb1/ffe-form/less/form.less';
 ```
 
+### Importing compiled CSS
+
+If your project does not use Less, you can import the compiled styling:
+
+```css
+@import '~@sb1/ffe-datepicker/css/datepicker.css';
+```
+
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
 
 ```html
