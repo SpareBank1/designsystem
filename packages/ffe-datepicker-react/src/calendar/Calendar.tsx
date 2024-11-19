@@ -6,9 +6,17 @@ import { Header } from './Header';
 import {
     getSimpleDateFromString,
     getSimpleDateFromTimestamp,
+    SimpleDate,
 } from '../datelogic/simpledate';
 import { SimpleCalendar } from '../datelogic/simplecalendar';
 import { CalendarButtonState } from '../datelogic/types';
+
+const MinDate: SimpleDate = new SimpleDate(
+    new Date(),
+    new Date().getFullYear() - 100,
+);
+
+const MaxDate: SimpleDate = new SimpleDate(new Date());
 
 export interface CalendarProps {
     calendarClassName?: string;
@@ -48,7 +56,8 @@ export class Calendar extends Component<CalendarProps, State> {
         this.mouseClick = this.mouseClick.bind(this);
         this.nextMonth = this.nextMonth.bind(this);
         this.previousMonth = this.previousMonth.bind(this);
-
+        this.updateMonth = this.updateMonth.bind(this);
+        this.updateYear = this.updateYear.bind(this);
         this.renderDate = this.renderDate.bind(this);
         this.renderWeek = this.renderWeek.bind(this);
         this.renderDay = this.renderDay.bind(this);
@@ -168,6 +177,24 @@ export class Calendar extends Component<CalendarProps, State> {
         this.forceUpdate();
     }
 
+    updateMonth(evt: React.ChangeEvent<HTMLSelectElement>) {
+        evt.preventDefault();
+        this.state.calendar.updateFocusedMonth(parseInt(evt.target.value));
+        this.forceUpdate();
+    }
+
+    updateYear(evt: React.ChangeEvent<HTMLSelectElement>) {
+        evt.preventDefault();
+        this.state.calendar.focusedDate.updateDate({
+            period: 'Y',
+            newValue: Number(evt.target.value),
+            minDate: this.state.calendar.minDate ?? MinDate,
+            maxDate: this.state.calendar.maxDate ?? MaxDate,
+        });
+        this.state.calendar.updateFocusedYear(parseInt(evt.target.value));
+        this.forceUpdate();
+    }
+
     renderDate(calendarButtonState: CalendarButtonState, index: number) {
         const { calendar } = this.state;
 
@@ -183,7 +210,7 @@ export class Calendar extends Component<CalendarProps, State> {
         return (
             <ClickableDate
                 calendarButtonState={calendarButtonState}
-                month={calendar.focusedMonth}
+                month={calendar.focusedMonthName}
                 year={calendar.focusedYear}
                 headers={`header__${this.datepickerId}__${index}`}
                 key={calendarButtonState.timestamp}
@@ -272,13 +299,16 @@ export class Calendar extends Component<CalendarProps, State> {
                     onKeyDown={this.focusTrap}
                 >
                     <Header
+                        calendar={calendar}
                         datepickerId={this.datepickerId}
-                        month={calendar.focusedMonth}
+                        monthIndex={calendar.focusedDate.month}
+                        monthHandler={this.updateMonth}
                         nextMonthHandler={this.nextMonth}
                         nextMonthLabel={calendar.nextName}
                         previousMonthHandler={this.previousMonth}
                         previousMonthLabel={calendar.previousName}
-                        year={calendar.focusedYear}
+                        getAllMonths={calendar.allAvailableMonths}
+                        yearHandler={this.updateYear}
                         prevMonthButtonElement={this.prevMonthButtonElementRef}
                         nextMonthButtonElement={this.nextMonthButtonElementRef}
                     />

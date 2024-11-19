@@ -14,11 +14,11 @@ type Story = StoryObj<typeof Datepicker>;
 export const Standard: Story = {
     args: {
         locale: 'nb',
-        maxDate: '31.12.2016',
-        minDate: '01.01.2016',
+        maxDate: '28.04.2017',
+        minDate: '01.03.2016',
     },
     render: function Render({ value, onChange, ...args }) {
-        const [date, setDate] = useState('01.01.2016');
+        const [date, setDate] = useState('03.03.2016');
         return (
             <InputGroup label="Dato">
                 <Datepicker

@@ -15,11 +15,15 @@ function daysInMonth(year: number, month: number) {
 export class SimpleDate {
     internalDate: Date;
 
-    constructor(date?: Date) {
+    constructor(date?: Date, year?: number) {
         if (isDate(date)) {
             this.internalDate = date;
         } else {
             this.internalDate = new Date();
+        }
+
+        if (year) {
+            this.year = year;
         }
     }
 
@@ -72,6 +76,36 @@ export class SimpleDate {
 
         if (period !== 'D') {
             date = Math.max(1, Math.min(date, daysInMonth(year, month)));
+        }
+
+        this.internalDate = new Date(year, month, date);
+    }
+
+    public updateDate({
+        period,
+        newValue,
+        minDate,
+        maxDate,
+    }: {
+        period: 'D' | 'M' | 'Y';
+        newValue: number;
+        minDate: SimpleDate;
+        maxDate: SimpleDate;
+    }) {
+        let date = this.date;
+        let month = this.month;
+        const year = period === 'Y' ? newValue : this.year;
+
+        if (period !== 'D') {
+            date = Math.max(1, Math.min(date, daysInMonth(year, month)));
+        }
+
+        if (period === 'Y' && year === newValue) {
+            if (month < minDate.month) {
+                month = minDate.month;
+            } else if (month > maxDate.month) {
+                month = maxDate.month;
+            }
         }
 
         this.internalDate = new Date(year, month, date);

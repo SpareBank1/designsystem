@@ -1,26 +1,36 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
+import { getAllYears, SimpleCalendar } from '../datelogic/simplecalendar';
+import classNames from 'classnames';
 
 interface HeaderProps {
+    calendar: SimpleCalendar;
     datepickerId: string;
-    month: string;
+    monthHandler: (evt: React.ChangeEvent<HTMLSelectElement>) => void;
     nextMonthHandler: React.MouseEventHandler<HTMLButtonElement>;
     nextMonthLabel: string;
     previousMonthHandler: React.MouseEventHandler<HTMLButtonElement>;
     previousMonthLabel: string;
-    year: number;
+    getAllMonths: Array<{
+        name: string;
+        index: number;
+    }>;
+    yearHandler: (evt: React.ChangeEvent<HTMLSelectElement>) => void;
     prevMonthButtonElement: React.RefObject<HTMLButtonElement>;
     nextMonthButtonElement: React.RefObject<HTMLButtonElement>;
 }
 
 export const Header: React.FC<HeaderProps> = ({
+    calendar,
     datepickerId,
-    month,
+    monthHandler,
     nextMonthHandler,
     nextMonthLabel,
     previousMonthHandler,
     previousMonthLabel,
-    year,
+    getAllMonths,
+    yearHandler,
     prevMonthButtonElement,
     nextMonthButtonElement,
 }) => {
@@ -31,7 +41,17 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="ffe-calendar__header">
             <div className="ffe-calendar__header-inner-wrapper">
                 <button
-                    className="ffe-calendar__month-nav ffe-calendar__previous"
+                    className={classNames(
+                        'ffe-calendar__month-nav',
+                        'ffe-calendar__previous',
+                        {
+                            [`ffe-calendar__month-nav--hidden`]:
+                                calendar.focusedDate.year ===
+                                    calendar.minDate?.year &&
+                                calendar.focusedDate.month ===
+                                    calendar.minDate?.month,
+                        },
+                    )}
                     onClick={previousMonthHandler}
                     aria-label={previousMonthLabel}
                     type="button"
@@ -49,13 +69,60 @@ export const Header: React.FC<HeaderProps> = ({
                     className="ffe-calendar__title"
                     id={`${datepickerId}-title`}
                 >
-                    <div id={`${datepickerId}__month-label`}>
-                        <span className="ffe-calendar__month">{month}</span>
-                        <span className="ffe-calendar__year">{year}</span>
+                    <div
+                        id={`${datepickerId}__month-label`}
+                        className="ffe-calendar__month-label"
+                    >
+                        <span className="ffe-calendar__month">
+                            <Dropdown
+                                value={calendar.focusedDate.month}
+                                inline={true}
+                                onChange={monthHandler}
+                            >
+                                {getAllMonths.map(({ name, index }) => (
+                                    <option key={index} value={index - 1}>
+                                        {name}
+                                    </option>
+                                ))}
+                            </Dropdown>
+                        </span>
+                        <span className="ffe-calendar__year">
+                            <Dropdown
+                                value={calendar.focusedYear}
+                                inline={true}
+                                onChange={yearHandler}
+                            >
+                                {getAllYears(
+                                    calendar.minDate?.year ??
+                                        new Date().getFullYear() - 100,
+                                    calendar.maxDate?.year ??
+                                        new Date().getFullYear(),
+                                ).map(yearOption => {
+                                    return (
+                                        <option
+                                            key={yearOption}
+                                            value={yearOption}
+                                        >
+                                            {yearOption}
+                                        </option>
+                                    );
+                                })}
+                            </Dropdown>
+                        </span>
                     </div>
                 </header>
                 <button
-                    className="ffe-calendar__month-nav ffe-calendar__next"
+                    className={classNames(
+                        'ffe-calendar__month-nav',
+                        'ffe-calendar__next',
+                        {
+                            [`ffe-calendar__month-nav--hidden`]:
+                                calendar.focusedDate.year ===
+                                    calendar.maxDate?.year &&
+                                calendar.focusedDate.month ===
+                                    calendar.maxDate?.month,
+                        },
+                    )}
                     onClick={nextMonthHandler}
                     aria-label={nextMonthLabel}
                     type="button"

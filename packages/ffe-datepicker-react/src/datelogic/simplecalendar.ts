@@ -31,6 +31,13 @@ function iso8601Week(date: SimpleDate) {
     return Math.floor(Math.round(daysSince1Jan / 7) + 1);
 }
 
+export function getAllYears(startYear: number, endYear: number): Array<number> {
+    return Array.from(
+        { length: endYear - startYear + 1 },
+        (_, i) => startYear + i,
+    );
+}
+
 function firstDayOfMonth(simpledate: SimpleDate) {
     const clone = simpledate.clone();
     clone.date = 1;
@@ -74,7 +81,7 @@ export class SimpleCalendar {
         this.firstDay = i18n[locale].FIRST_DAY_OF_WEEK;
     }
 
-    public get focusedMonth() {
+    public get focusedMonthName() {
         // @ts-ignore
         return i18n[this.locale][`MONTH_${this.focusedDate.month + 1}`];
     }
@@ -112,6 +119,13 @@ export class SimpleCalendar {
         this.focusedDate.adjust({ period: 'Y', offset: 1 });
     }
 
+    public updateFocusedYear(year: number) {
+        this.focusedDate.adjust({
+            period: 'Y',
+            offset: year - this.focusedYear,
+        });
+    }
+
     public nextMonth() {
         this.focusedDate.adjust({ period: 'M', offset: 1 });
     }
@@ -120,6 +134,30 @@ export class SimpleCalendar {
         this.focusedDate.adjust({ period: 'M', offset: -1 });
     }
 
+    public updateFocusedMonth(newMonthIndex: number) {
+        this.focusedDate.month = newMonthIndex;
+    }
+
+    public get allAvailableMonths(): Array<{
+        name: string;
+        index: number;
+    }> {
+        const locale = this.locale;
+        const monthAvailableFrom =
+            this.focusedYear === this.minDate?.year ? this.minDate.month : 0;
+        const monthAvailableTo =
+            this.focusedYear === this.maxDate?.year
+                ? this.maxDate.month + 1
+                : 12;
+        return Array.from(
+            { length: monthAvailableTo - monthAvailableFrom },
+            (_, i) => i + monthAvailableFrom,
+        ).map(i => ({
+            // @ts-ignore
+            name: i18n[locale][`MONTH_${i + 1}`],
+            index: i + 1,
+        }));
+    }
     public nextWeek() {
         this.focusedDate.adjust({ period: 'D', offset: 7 });
     }

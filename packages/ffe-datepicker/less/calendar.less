@@ -28,12 +28,17 @@
 
     &__header-inner-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        gap: var(--ffe-spacing-sm);
     }
 
     &__month {
         padding-right: var(--ffe-spacing-xs);
+    }
+
+    &__month-label {
+        display: flex;
     }
 
     &__month-nav {
@@ -44,6 +49,10 @@
         border-radius: 4px;
         display: grid;
         place-items: center;
+
+        &--hidden {
+            visibility: hidden;
+        }
 
         &:focus,
         &:active {
