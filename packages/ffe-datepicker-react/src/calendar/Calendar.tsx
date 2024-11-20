@@ -124,9 +124,10 @@ export const Calendar: React.FC<CalendarProps> = props => {
 
     function mouseClick(date: CalendarButtonState) {
         const pickedDate = getSimpleDateFromTimestamp(date.timestamp);
+        console.log(pickedDate);
         if (calendar.isDateWithinDateRange(pickedDate)) {
             calendar.selectTimestamp(date.timestamp);
-            props.onDatePicked(calendar.selected());
+            /* props.onDatePicked(calendar.selected());*/
             updateMonth(pickedDate.month);
             setYear(pickedDate.year.toString());
         }
