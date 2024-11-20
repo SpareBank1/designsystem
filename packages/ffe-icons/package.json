@@ -17,7 +17,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build:": "lessc less/ffe-icons.less css/ffe-icons.css --autoprefix",
+        "build": "lessc less/ffe-icons.less css/ffe-icons.css --autoprefix",
         "build:icons": "node bin/build.js",
         "lint": "eslint bin",
         "test": "npm run lint"
