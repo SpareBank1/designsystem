@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.1.0...@sb1/ffe-icons@15.1.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* **ffe-icons:** fikser typo i byggescript ([c809dfd](https://github.com/SpareBank1/designsystem/commit/c809dfd3761db89f046adbfea9b37b930538d0de))
+
+
+
+
+
 # [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.0.1...@sb1/ffe-icons@15.1.0) (2024-11-19)
 
 
