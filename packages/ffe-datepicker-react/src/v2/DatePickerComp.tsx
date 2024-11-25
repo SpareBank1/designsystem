@@ -1,94 +1,69 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { DatePickerContext } from './DatePickerContext';
 import { SpinnButton } from './SpinnButton';
+import { PadZero } from './PadZero';
+import { Button } from '../button';
+import { Calendar } from './calendar';
+import { CalendarWrapper, CalendarWrapperHandle } from './CalenderWrapper';
 
 export const DatePickerComp: React.FC = () => {
-    /*
-    const dayRef = useRef<HTMLSpanElement>(null);
-*/
+    const containerRef = useRef<HTMLDivElement>(null);
     const monthRef = useRef<HTMLSpanElement>(null);
     const yearRef = useRef<HTMLSpanElement>(null);
-    const { day, setDay, year, setYear, month, setMonth } =
+    const { day, setDay, year, setYear, month, setMonth, locale } =
         useContext(DatePickerContext);
-
-    const handleDayChange = (evt: React.KeyboardEvent<HTMLSpanElement>) => {
-        evt.stopPropagation();
-        if (/\d/.test(evt.key)) {
-            setDay(parseInt(evt.key), () =>
-                monthRef.current?.focus({ preventScroll: true }),
-            );
-        }
-    };
-
-    const handleMonthChange = (evt: React.KeyboardEvent<HTMLSpanElement>) => {
-        evt.stopPropagation();
-        if (/\d/.test(evt.key)) {
-            setMonth(parseInt(evt.key), () =>
-                yearRef.current?.focus({ preventScroll: true }),
-            );
-        }
-    };
-
-    const handleYearChange = (evt: React.KeyboardEvent<HTMLSpanElement>) => {
-        evt.stopPropagation();
-        if (/\d/.test(evt.key)) {
-            setYear(parseInt(evt.key));
-        }
-    };
+    const calendarRef = useRef<CalendarWrapperHandle>(null);
 
     return (
-        <div className="ffe-datepicker--wrapper">
-            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
-            <div
-                className="ffe-input-field ffe-dateinput"
-                /*  tabIndex={0}*/
-            >
-                {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
-                {/* <span
-                    className="ffe-dateinput__field"
-                    tabIndex={0}
-                    onKeyDown={handleDayChange}
-                >
-                    {typeof day === 'number'
-                        ? `${day < 10 ? '0' : ''}${day}`
-                        : 'dd'}
-                </span>*/}
+        <div className="ffe-datepicker" ref={containerRef}>
+            <div className="ffe-input-field ffe-dateinput">
                 <SpinnButton
-                    onChange={history => {
-                        console.log(history);
+                    onChange={value => {
+                        setDay(value, () =>
+                            monthRef.current?.focus({ preventScroll: true }),
+                        );
                     }}
+                    maxLength={2}
                 >
-                    {typeof day === 'number'
-                        ? `${day < 10 ? '0' : ''}${day}`
-                        : 'dd'}
+                    {day ? <PadZero value={day} /> : 'dd'}
                 </SpinnButton>
                 .
-                {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
-                <span
-                    className="ffe-dateinput__field"
-                    tabIndex={0}
+                <SpinnButton
                     ref={monthRef}
-                    onKeyDown={handleMonthChange}
+                    onChange={value => {
+                        setMonth(value, () =>
+                            yearRef.current?.focus({ preventScroll: true }),
+                        );
+                    }}
+                    maxLength={2}
                 >
-                    {month ?? 'mm'}
-                </span>
+                    {month ? <PadZero value={month} /> : 'mm'}
+                </SpinnButton>
                 .
-                {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
-                <span
-                    className="ffe-dateinput__field"
-                    tabIndex={0}
+                <SpinnButton
                     ref={yearRef}
-                    onKeyDown={handleYearChange}
+                    onChange={value => {
+                        setYear(value);
+                    }}
+                    maxLength={4}
                 >
-                    {year ?? 'yyyy'}
-                </span>
+                    {year ? year : 'yyyy'}
+                </SpinnButton>
             </div>
-            {/* <Button
-                    onClick={calendarButtonClickHandler}
-                    value={value}
-                    locale={locale}
-                    ref={buttonRef}
-                />*/}
+            <Button
+                onClick={() => {
+                    const rect = containerRef.current?.getBoundingClientRect();
+                    calendarRef.current?.open({
+                        top: rect?.bottom ?? 0,
+                        left: rect?.left ?? 0,
+                    });
+                }}
+                value={'TODO'}
+                locale={locale}
+            />
+            <CalendarWrapper ref={calendarRef}>
+                <Calendar />
+            </CalendarWrapper>
         </div>
     );
 };

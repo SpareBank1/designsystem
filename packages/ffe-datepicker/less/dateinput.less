@@ -8,26 +8,11 @@
     &--full-width {
         display: block;
     }
-    //
-    //@media (hover: hover) and (pointer: fine) {
-    //    &:hover {
-    //        color: var(--ffe-g-primary-color);
-    //    }
-    //}
 
     &[aria-invalid='true'] {
         border-color: var(--ffe-g-error-color);
         border-style: solid;
     }
-
-    //@media (hover: hover) and (pointer: fine) {
-    //    /* stylelint-disable selector-max-specificity */
-    //    &:focus + .ffe-datepicker__button:hover {
-    //        border-color: red !important;
-    //        box-shadow: 0 0 0 2px var(--ffe-v-datepicker-border-hover-color);
-    //    }
-    //    /* stylelint-enable selector-max-specificity */
-    //}
 
     &.ffe-input-field {
         display: flex;
@@ -49,16 +34,11 @@
 }
 
 .ffe-datepicker {
-    display: inline-block;
     position: relative;
-
+    display: grid;
+    grid-template-columns: 1fr auto;
     &--full-width {
         display: block;
-    }
-
-    &--wrapper {
-        display: grid;
-        grid-template-columns: 1fr auto;
     }
 
     &__button {
@@ -96,5 +76,20 @@
                 color: var(--ffe-v-datepicker-icon-color-hover);
             }
         }
+    }
+
+    &__dialog::backdrop {
+        background-color: transparent;
+    }
+
+    &__dialog {
+        --left: 0;
+        --top: 0;
+        padding: 0;
+        margin: 0;
+        left: var(--left);
+        top: var(--top);
+        border: none;
+        width: fit-content;
     }
 }

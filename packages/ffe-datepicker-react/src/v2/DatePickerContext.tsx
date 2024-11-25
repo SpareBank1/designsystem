@@ -1,12 +1,14 @@
 import React, { createContext, useState } from 'react';
+import { Locale } from './types';
 
 interface DatePickerContextInterface {
     day?: number | null;
     month?: number | null;
     year?: number | null;
-    setDay: (value: number, focusNext: () => void) => void;
-    setMonth: (value: number, focusNext: () => void) => void;
-    setYear: (value: number) => void;
+    setDay: (value: number[], focusNext: () => void) => void;
+    setMonth: (value: number[], focusNext: () => void) => void;
+    setYear: (value: number[]) => void;
+    locale: Locale;
 }
 
 export const DatePickerContext = createContext<DatePickerContextInterface>({
@@ -16,19 +18,31 @@ export const DatePickerContext = createContext<DatePickerContextInterface>({
     setDay: () => null,
     setMonth: () => null,
     setYear: () => null,
+    locale: 'nb',
 });
 
 interface Props {
+    locale: Locale;
     children: React.ReactNode;
 }
 
 const MONTHS_PER_YEAR = 12;
-const MAX_MONTH = 31; // TODO noen logik her avhenge av månad?
+const MAX_DAYS = 31;
 
-export const DatePickerProvider: React.FC<Props> = ({ children }) => {
-    const [day, setDay] = useState<number>([]);
+export const DatePickerProvider: React.FC<Props> = ({ children, locale }) => {
+    const [day, setDay] = useState<number>();
     const [month, setMonth] = useState<number>();
     const [year, setYear] = useState<number>();
+
+    const getTotal = (numbers: (number | undefined)[]) => {
+        const validNumbers = numbers.filter(it => typeof it === 'number');
+        return validNumbers
+            .map(
+                (it, index) =>
+                    it * Math.pow(10, validNumbers.length - index - 1),
+            )
+            .reduce((acc, curr) => acc + curr, 0);
+    };
 
     return (
         <DatePickerContext.Provider
@@ -37,47 +51,48 @@ export const DatePickerProvider: React.FC<Props> = ({ children }) => {
                 month,
                 year,
                 setDay: (value, focusNext) => {
-                    const next = parseInt(`${day ?? 0}${value}`);
-                    if (next > MAX_MONTH) {
-                        console.log('her nå', next);
-                        setDay(value);
-                        /* focusNext();*/
+                    const numbers = value.slice(-2);
+                    const [first, second] = numbers;
+                    const total = getTotal(numbers);
+                    if (total > MAX_DAYS) {
+                        focusNext();
+                    } else if (first > 3) {
+                        setDay(total);
+                        focusNext();
                     } else {
-                        console.log(value, day, next);
-                        setDay(next);
+                        setDay(total);
+                        if (second !== undefined) {
+                            focusNext();
+                        }
                     }
-
-                    /* const parsedCurrent = parseInt(day);
-                    const parsedNext = parseInt(`${value}${parsedCurrent}`);
-                    if (day === 'dd' || parsedNext < 10) {
-                        setDay(`0${value}`);
-                    } else if (value >= 4 || parsedCurrent >= 4) {
-                        setDay(`0${value}`);
-                        focusNext();
-                    } else {
-                        setDay(`${parsedNext}`);
-                        focusNext();
-                    }*/
                 },
                 setMonth: (value, focusNext) => {
-                    /* const current = parseInt(month);
-                    if (
-                        month === 'mm' ||
-                        parseInt(`${current}${value}`) > MONTHS_PER_YEAR
-                    ) {
-                        setMonth(`0${value}`);
-                    } else {
-                        setMonth(`${current}${value}`);
+                    const numbers = value.slice(-2);
+                    const [first, second] = numbers;
+                    const total = getTotal(numbers);
+
+                    if (total > MONTHS_PER_YEAR) {
                         focusNext();
-                    }*/
+                    } else if (first > 1) {
+                        setMonth(total);
+                        focusNext();
+                    } else {
+                        setMonth(total);
+                        if (second !== undefined) {
+                            focusNext();
+                        }
+                    }
                 },
                 setYear: value => {
+                    setYear(getTotal(value.slice(-4)));
+
                     /*   if (year === 'yyyy' || `${year}${value}`.length > 4) {
                         setYear(`${value}`);
                     } else {
                         setYear(`${year}${value}`);
                     }*/
                 },
+                locale,
             }}
         >
             {children}

@@ -6,9 +6,9 @@ interface Props {
     locale?: 'nb' | 'nn' | 'en';
 }
 
-export const DatePicker: React.FC<Props> = () => {
+export const DatePicker: React.FC<Props> = ({ locale = 'nb' }) => {
     return (
-        <DatePickerProvider>
+        <DatePickerProvider locale={locale}>
             <DatePickerComp />
         </DatePickerProvider>
     );
