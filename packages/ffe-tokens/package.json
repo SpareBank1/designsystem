@@ -8,7 +8,8 @@
         "lib",
         "es",
         "less",
-        "css"
+        "css",
+        "ts"
     ],
     "repository": {
         "type": "git",
