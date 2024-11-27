@@ -19,6 +19,7 @@ export interface FeedbackProps {
     texts?: {
         feedbackNotSentHeading?: string;
     };
+    className?: string;
 }
 export const Feedback: React.FC<FeedbackProps> = ({
     headingLevel,
@@ -29,6 +30,7 @@ export const Feedback: React.FC<FeedbackProps> = ({
     bgDarkmodeColor,
     contactLink,
     texts,
+    className,
 }) => {
     const feedbackSentRef = useRef<HTMLHeadingElement>();
     const expandedRef = useRef<HTMLHeadingElement>();
@@ -37,10 +39,14 @@ export const Feedback: React.FC<FeedbackProps> = ({
     const [feedbackSent, setFeedbackSent] = useState(false);
     const headingId = useId();
 
-    const feedbackClassnames = classNames('ffe-feedback', {
-        [`ffe-feedback--bg-${bgColor}`]: bgColor,
-        [`ffe-feedback--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,
-    });
+    const feedbackClassnames = classNames(
+        'ffe-feedback',
+        {
+            [`ffe-feedback--bg-${bgColor}`]: bgColor,
+            [`ffe-feedback--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,
+        },
+        className,
+    );
 
     const handleThumbClicked = (thumb: Thumb) => {
         setFeedbackThumbClicked(thumb);
