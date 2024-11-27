@@ -1,4 +1,0 @@
-import{ae as t,af as e,ag as m,ah as i}from"./index-HlIebk1M.js";import{useMDXComponents as s}from"./index-BrnU7xv7.js";import{f as c,S as r}from"./formatDistance.stories-K5_kHyPc.js";import"./iframe-VHIOJ4Iu.js";import"../sb-preview/runtime.js";import"./index-DJO9vBfz.js";import"./index-DJdX7xnk.js";import"./index-D-8MO0q_.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";import"./formatNumber-C9f3jMU7.js";import"./unicode-BkFkzGng.js";function a(o){const n={h1:"h1",...s(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(e,{of:c}),`
-`,t.jsx(n.h1,{id:"formatdistance",children:"formatDistance"}),`
-`,t.jsx(m,{of:r}),`
-`,t.jsx(i,{of:r})]})}function X(o={}){const{wrapper:n}={...s(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(a,{...o})}):a(o)}export{X as default};
