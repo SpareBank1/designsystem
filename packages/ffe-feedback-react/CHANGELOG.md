@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.1.15...@sb1/ffe-feedback-react@4.2.0) (2024-11-27)
+
+
+### Features
+
+* **ffe-feedback-react:** legg til className prop ([39bce9c](https://github.com/SpareBank1/designsystem/commit/39bce9cfd9ff617b6c2e6a24fdd07044dbefbcb6))
+
+
+
+
+
 ## [4.1.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.1.14...@sb1/ffe-feedback-react@4.1.15) (2024-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
