@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.5.10...@sb1/ffe-cards-react@17.6.0) (2024-11-28)
+
+
+### Features
+
+* **ffe-cards-react:** legg til rightImg-prop ([693118a](https://github.com/SpareBank1/designsystem/commit/693118ad24b4ccf6d90533e12c61ffed1411f08a))
+
+
+
+
+
 ## [17.5.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.5.9...@sb1/ffe-cards-react@17.5.10) (2024-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

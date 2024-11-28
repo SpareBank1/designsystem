@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.3.0...@sb1/ffe-cards@20.4.0) (2024-11-28)
+
+
+### Features
+
+* **ffe-cards:** legger til muligheten til å ha 2 ikoner og ikon på høyre side ([8ac543e](https://github.com/SpareBank1/designsystem/commit/8ac543ebee4f68866aa42d42372c39abaf4d2f4d))
+
+
+
+
+
 # [20.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.2.3...@sb1/ffe-cards@20.3.0) (2024-11-19)
 
 

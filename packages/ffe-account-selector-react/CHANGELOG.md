@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.1.1...@sb1/ffe-account-selector-react@30.1.2) (2024-11-28)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** format account number in drodown ([8b3e4c5](https://github.com/SpareBank1/designsystem/commit/8b3e4c50e56b295bf912004918bb23a346de5475))
+
+
+
+
+
 ## [30.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.1.0...@sb1/ffe-account-selector-react@30.1.1) (2024-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
