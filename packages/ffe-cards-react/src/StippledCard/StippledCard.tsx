@@ -4,6 +4,10 @@ import classNames from 'classnames';
 import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
 import { fixedForwardRef } from '../fixedForwardRef';
 
+type Img = {
+    element: ReactNode;
+    type: 'icon' | 'custom';
+};
 export type StippledCardProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,
     'children'
@@ -11,10 +15,8 @@ export type StippledCardProps<As extends ElementType = 'div'> = Omit<
     /** Smaller icon and less space */
     condensed?: boolean;
     /** Image to be rendered*/
-    img?: {
-        element: ReactNode;
-        type: 'icon' | 'custom';
-    };
+    img?: Img;
+    rightImg?: Img;
     /** No margin on card */
     noMargin?: boolean;
     children:
@@ -26,7 +28,8 @@ function StippledCardWithForwardRef<As extends ElementType>(
     props: StippledCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, condensed, img, noMargin, children, ...rest } = props;
+    const { className, condensed, img, noMargin, rightImg, children, ...rest } =
+        props;
 
     return (
         <WithCardAction
@@ -53,7 +56,7 @@ function StippledCardWithForwardRef<As extends ElementType>(
                             {img?.element}
                         </div>
                     )}
-                    <div>
+                    <div className={'ffe-stippled-card__content'}>
                         {typeof children === 'function'
                             ? children({
                                   CardName,
@@ -64,6 +67,17 @@ function StippledCardWithForwardRef<As extends ElementType>(
                               })
                             : children}
                     </div>
+                    {rightImg && (
+                        <div
+                            className={classNames('ffe-stippled-card__img', {
+                                'ffe-stippled-card__img--icon':
+                                    rightImg?.type === 'icon',
+                            })}
+                            aria-hidden={rightImg?.type === 'icon'}
+                        >
+                            {rightImg?.element}
+                        </div>
+                    )}
                 </>
             )}
         </WithCardAction>
