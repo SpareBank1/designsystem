@@ -25,15 +25,23 @@
     background: transparent;
     border: 2px dashed var(--ffe-v-cards-stippled-border-color);
     box-shadow: none;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
     padding: var(--ffe-spacing-md);
     gap: var(--ffe-spacing-md);
 }
 
+.ffe-stippled-card__content {
+    flex-grow: 1;
+}
+.ffe-stippled-card__img {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
 .ffe-stippled-card__img--icon {
     margin: 0 var(--ffe-spacing-md);
+    display: flex;
 }
 
 .ffe-stippled-card--condensed {
