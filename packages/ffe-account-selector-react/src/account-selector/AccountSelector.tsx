@@ -2,7 +2,11 @@ import React, { AriaAttributes, useState } from 'react';
 import classNames from 'classnames';
 import { AccountDetails } from './AccountDetails';
 import { Account, Locale } from '../types';
-import { balanceWithCurrency, formatIncompleteAccountNumber } from '../format';
+import {
+    balanceWithCurrency,
+    formatIncompleteAccountNumber,
+    accountFormatter,
+} from '../format';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 import { getAccountsWithCustomAccounts } from './getAccountsWithCustomAccounts';
 import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting';
@@ -126,6 +130,7 @@ export const AccountSelector = <T extends Account = Account>({
 
     const dropdownListAccounts = accounts.map(it => ({
         ...it,
+        accountNumber: accountFormatter(it.accountNumber),
         balance: OptionBody
             ? it.balance
             : balanceWithCurrency(it.balance, locale, it.currencyCode),
