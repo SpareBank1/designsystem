@@ -4,6 +4,11 @@
 .ffe-description-list-multicol {
     --vertical-seperation: 1rem;
 
+    .ffe-description-list__description,
+    .ffe-description-list__term {
+        &:extend(.ffe-body-text);
+    }
+
     .ffe-description-list__term {
         color: var(--ffe-v-lists-title-color);
         font-size: var(--ffe-fontsize-h6);
@@ -16,7 +21,6 @@
         padding-bottom: var(--vertical-seperation);
         margin-left: 0;
         color: var(--ffe-v-lists-description-description-color);
-        &:extend(.ffe-body-text);
     }
 
     .ffe-description-list__description + .ffe-description-list__description {
