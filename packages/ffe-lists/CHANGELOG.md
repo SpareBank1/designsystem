@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@17.1.0...@sb1/ffe-lists@17.1.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* **ffe-lists:** term same line heigth as description in description list ([074fe53](https://github.com/SpareBank1/designsystem/commit/074fe533e2ded6b6880d21cb41d33aaf275cb3ca))
+
+
+
+
+
 # [17.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@17.0.6...@sb1/ffe-lists@17.1.0) (2024-11-19)
 
 

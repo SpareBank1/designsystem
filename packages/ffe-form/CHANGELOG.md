@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.1.0...@sb1/ffe-form@30.1.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* **ffe-form:** z-index isolation on checkbox and radio ([2aff89b](https://github.com/SpareBank1/designsystem/commit/2aff89b8f47b841b45eb798f2dd131b2072b2e7d))
+
+
+
+
+
 # [30.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.0.14...@sb1/ffe-form@30.1.0) (2024-11-19)
 
 
