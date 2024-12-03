@@ -238,3 +238,28 @@ export const PostListElement: Story = {
         );
     },
 };
+
+export const InitialValue: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>(
+            accounts[2],
+        );
+        return (
+            <InputGroup
+                label="Velg konto"
+                inputId={args.id}
+                labelId={args.labelledById}
+                onColoredBg={args.onColoredBg}
+            >
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
+            </InputGroup>
+        );
+    },
+};

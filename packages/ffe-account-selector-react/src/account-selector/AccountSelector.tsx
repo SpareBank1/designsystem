@@ -102,7 +102,10 @@ export const AccountSelector = <T extends Account = Account>({
         : undefined;
 
     const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputValue(event.target.value);
+        if (allowCustomAccount) {
+            setInputValue(event.target.value);
+        }
+
         if (inputProps?.onChange) {
             inputProps.onChange(event);
         }
