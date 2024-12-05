@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 const path = require('path');
-
-const writeToFile = require('./lib/writeToFile');
-const renderLessVarsToCSSProps = require('./lib/renderLessVarsToCSSProps');
-const extractCustomProps = require('./lib/extractCustomProps');
-const { genTSSource, genTSModIndex } = require('./lib/genTypeScript');
-
+const tokens = require('./tokens');
+const parseLess = require('./parseLess');
+const toCss = require('./toCss');
+const toTs = require('./toTs');
+const toLess = require('./toLess');
 const configFilePath = process.argv[2];
 
 if (!configFilePath) {
@@ -15,24 +14,20 @@ if (!configFilePath) {
 
 const config = require(path.resolve(configFilePath));
 const lessFiles = config.sources.map(p => path.resolve(p));
+const { getLightMode } = tokens;
 
-const basename = fname => path.basename(fname, '.less');
-const cssFilePathFor = fname =>
-    path.join(config.output.css, `${basename(fname)}.css`);
-const tsFilePathFor = fname =>
-    path.join(config.output.typescript, `${basename(fname)}.ts`);
+/*console.log(getLightMode());
+console.log(lessFiles);*/
 
-const pipeline = lessFile =>
-    renderLessVarsToCSSProps(lessFile)
-        .then(writeToFile(cssFilePathFor(lessFile)))
-        .then(extractCustomProps)
-        .then(genTSSource)
-        .then(writeToFile(tsFilePathFor(lessFile)));
+/*console.log(configFilePath);
 
-Promise.all(lessFiles.map(pipeline))
-    .then(() => genTSModIndex(lessFiles.map(basename)))
-    .then(writeToFile(path.join(config.output.typescript, 'index.ts')))
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    });
+parseLess(lessFiles[0]).then(it => console.log(it));
+parseLess(lessFiles[1]).then(it => console.log(it));*/
+
+Promise.all(lessFiles.map(parseLess)).then(([it]) => {
+    console.log(toCss(it));
+    console.log(toTs(it));
+    console.log(toLess(it));
+});
+
+/*console.log(toCss(getLightMode()));*/
