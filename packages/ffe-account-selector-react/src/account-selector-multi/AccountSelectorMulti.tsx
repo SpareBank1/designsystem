@@ -1,9 +1,10 @@
 import React, { AriaAttributes } from 'react';
 import { Account, Locale } from '../types';
 import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
-import { balanceWithCurrency, formatIncompleteAccountNumber } from '../format';
+import { formatIncompleteAccountNumber } from '../format';
 import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting';
 import { texts } from '../texts';
+import { AccountMultiselectOptionBody } from './AccountMultiselectOptionBody';
 
 export interface AccountSelectorMultiProps<T extends Account = Account> {
     /**
@@ -98,24 +99,32 @@ export const AccountSelectorMulti = <T extends Account = Account>({
                     : ['name', 'accountNumber']
             }
             postListElement={postListElement}
-            dropdownList={
-                OptionBody
-                    ? accounts
-                    : accounts.map(it => ({
-                          ...it,
-                          balance: balanceWithCurrency(
-                              it.balance,
-                              locale,
-                              it.currencyCode,
-                          ),
-                      }))
-            }
+            dropdownList={accounts}
             noMatch={noMatches ?? { text: texts[locale].noMatch }}
             formatter={formatter}
             onChange={onChange}
             searchAttributes={['name', 'accountNumber']}
             locale={locale}
-            optionBody={OptionBody}
+            optionBody={({ item, isHighlighted, ...restOptionBody }) => {
+                if (OptionBody) {
+                    return (
+                        <OptionBody
+                            item={item}
+                            isHighlighted={isHighlighted}
+                            {...restOptionBody}
+                        />
+                    );
+                }
+
+                return (
+                    <AccountMultiselectOptionBody
+                        item={item}
+                        isHighlighted={isHighlighted}
+                        locale={locale}
+                        showBalance={showBalance}
+                    />
+                );
+            }}
             ariaInvalid={rest['aria-invalid'] ?? ariaInvalid}
             searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
             selectedItems={selectedAccounts}
