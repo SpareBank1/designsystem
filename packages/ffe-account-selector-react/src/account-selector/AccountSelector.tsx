@@ -2,15 +2,12 @@ import React, { AriaAttributes, useState } from 'react';
 import classNames from 'classnames';
 import { AccountDetails } from './AccountDetails';
 import { Account, Locale } from '../types';
-import {
-    balanceWithCurrency,
-    formatIncompleteAccountNumber,
-    accountFormatter,
-} from '../format';
+import { formatIncompleteAccountNumber } from '../format';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 import { getAccountsWithCustomAccounts } from './getAccountsWithCustomAccounts';
 import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting';
 import { texts } from '../texts';
+import { AccountActionBody } from './AccountOptionBody';
 
 export interface AccountSelectorProps<T extends Account = Account> {
     /**
@@ -131,14 +128,6 @@ export const AccountSelector = <T extends Account = Account>({
 
     const _ariaInvalid = rest['aria-invalid'] ?? ariaInvalid;
 
-    const dropdownListAccounts = accounts.map(it => ({
-        ...it,
-        accountNumber: accountFormatter(it.accountNumber),
-        balance: OptionBody
-            ? it.balance
-            : balanceWithCurrency(it.balance, locale, it.currencyCode),
-    }));
-
     return (
         <div
             className={classNames(
@@ -165,10 +154,10 @@ export const AccountSelector = <T extends Account = Account>({
                     allowCustomAccount
                         ? getAccountsWithCustomAccounts({
                               selectedAccount,
-                              accounts: dropdownListAccounts,
+                              accounts,
                               inputValue,
                           })
-                        : dropdownListAccounts
+                        : accounts
                 }
                 noMatch={
                     allowCustomAccount && inputValue.trim() !== ''
@@ -188,7 +177,26 @@ export const AccountSelector = <T extends Account = Account>({
                 onChange={handleAccountSelected}
                 searchAttributes={['name', 'accountNumber']}
                 locale={locale}
-                optionBody={OptionBody}
+                optionBody={({ item, isHighlighted, ...restOptionBody }) => {
+                    if (OptionBody) {
+                        return (
+                            <OptionBody
+                                item={item}
+                                isHighlighted={isHighlighted}
+                                {...restOptionBody}
+                            />
+                        );
+                    }
+
+                    return (
+                        <AccountActionBody
+                            item={item}
+                            isHighlighted={isHighlighted}
+                            locale={locale}
+                            showBalance={showBalance}
+                        />
+                    );
+                }}
                 ariaInvalid={_ariaInvalid}
                 searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                 selectedItem={selectedAccount}
@@ -209,6 +217,7 @@ export const AccountSelector = <T extends Account = Account>({
                             typeof selectedAccount?.balance,
                         )
                     }
+                    locale={locale}
                 />
             )}
         </div>
