@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.1.5...@sb1/ffe-account-selector-react@30.1.6) (2024-12-05)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** do not mutate accounts passed in multiselect ([4ce701f](https://github.com/SpareBank1/designsystem/commit/4ce701f19d2de0db40707ef4326c832eef825e9e))
+
+
+
+
+
 ## [30.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.1.4...@sb1/ffe-account-selector-react@30.1.5) (2024-12-05)
 
 
