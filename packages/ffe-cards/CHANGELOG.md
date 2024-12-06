@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.4.0...@sb1/ffe-cards@20.4.1) (2024-12-06)
+
+
+### Bug Fixes
+
+* **ffe-cards:** fjerner extends fra tekststiler ([f3182a4](https://github.com/SpareBank1/designsystem/commit/f3182a44b0d2db71aa178990e0a8958e15800c79))
+
+
+
+
+
 # [20.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.3.0...@sb1/ffe-cards@20.4.0) (2024-11-28)
 
 
