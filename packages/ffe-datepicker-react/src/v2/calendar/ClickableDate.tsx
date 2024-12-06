@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { CalendarButtonState } from '../datelogic/types';
-import i18n from '../i18n/i18n';
+import i18n from '..//i18n';
 
 interface ClickableDateProps {
     calendarButtonState: CalendarButtonState;
@@ -63,10 +63,7 @@ export class ClickableDate extends Component<ClickableDateProps> {
             year,
         } = this.props;
 
-        const monthName =
-            locale === 'en'
-                ? i18n[locale][`MONTH_${month + 1}`]
-                : i18n[locale][`MONTH_${month + 1}`]?.toLowerCase();
+        const monthName = '';
         //const monthName = locale === 'en' ? month : month.toLowerCase();
 
         return (
