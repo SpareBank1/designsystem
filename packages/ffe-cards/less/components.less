@@ -10,15 +10,24 @@
     }
 
     &__subtext {
-        &:extend(.ffe-small-text);
-
+        font-family: var(--ffe-g-font);
+        font-weight: normal;
+        font-variant-numeric: tabular-nums;
+        line-height: 1.25rem;
+        font-size: var(--ffe-fontsize-small-text);
         color: var(--ffe-v-cards-subtext-color);
         margin: var(--ffe-spacing-2xs) 0 0 0;
     }
 
     &__title {
-        &:extend(.ffe-h5);
-
+        font-family: var(--ffe-g-font-heading-small);
+        font-variant-numeric: tabular-nums;
+        color: var(--ffe-g-heading-color);
+        font-weight: normal;
+        text-wrap: balance;
+        overflow-wrap: anywhere;
+        line-height: 1.25rem;
+        font-size: var(--ffe-fontsize-h5);
         margin: 0;
 
         &--overflow-ellipsis {
