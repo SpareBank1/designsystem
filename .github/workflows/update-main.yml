@@ -2,14 +2,14 @@ name: Update main
 
 on:
     schedule:
-        # Run every day at 6:00, 11:00, 16:00 and 21:00, Norwegian time.
+        # Run every day Monday-Friday at 09:00, 12:00, 14:00, 16:00 Norwegian time.
         # schedule uses UTC time, so this cron expression has to be adjusted twice a year
         # because of daylight saving time.
         #
-        # Central European Time (CET): '0 5-20/5 * * *'
-        # Central European Summer Time (CEST): '0 4-19/5 * * *'
+        # Central European Time (CET): '0 8,11,13,15 * * 1-5'
+        # Central European Summer Time (CEST): '0 7,10,12,14 * * 1-5'
         #
-        - cron: '0 5-20/5 * * *'
+        - cron: '0 8,11,13,15 * * 1-5'
 
 jobs:
     merge:
