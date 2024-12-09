@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@1.2.0...@sb1/ffe-modals@1.2.1) (2024-12-09)
+
+
+### Bug Fixes
+
+* **ffe-modals:** Add missing focus color for close button ([2dd157c](https://github.com/SpareBank1/designsystem/commit/2dd157ced02e21ca83e16089058d3ef0146e2ec6))
+
+
+
+
+
 # [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@1.1.1...@sb1/ffe-modals@1.2.0) (2024-11-19)
 
 
