@@ -1,25 +1,43 @@
 import React, { useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
-import { Icon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
+import { Icon } from '@sb1/ffe-icons-react';
 
-const meta: Meta<unknown> = {
+type PagePropsAndCustomArgs = React.Component & {
+    enableLinkToProfile: boolean;
+};
+
+const meta: Meta<PagePropsAndCustomArgs> = {
     title: 'Komponenter/Header/Header',
     component: () => null,
+    argTypes: {
+        enableLinkToProfile: {
+            control: { type: 'boolean' },
+            description:
+                "When enabled, the user is sent to the Profile page when clicking the user's name (or icon). This is instead of the dropdown menu. This toggle will also change some of the html as well as applying new classes.",
+        },
+    },
 };
 export default meta;
 
-type Story = StoryObj<unknown>;
+type Story = StoryObj<PagePropsAndCustomArgs>;
 
 export const Standard: Story = {
-    args: {},
-    render: function Render() {
+    args: {
+        enableLinkToProfile: false,
+    },
+    render: function Render({ enableLinkToProfile }) {
         const [isUserNavOpen, setIsUserNavOpen] = useState(false);
         const [isSiteNavOpen, setIsSiteNavOpen] = useState(false);
         /* eslint-disable jsx-a11y/anchor-is-valid */
         return (
             <div>
-                <header className="ffe-header">
+                <header
+                    className={classNames('ffe-header', {
+                        'ffe-header--enable-link-to-profile':
+                            enableLinkToProfile,
+                    })}
+                >
                     <div className="ffe-header__wrapper">
                         <nav
                             className="ffe-header__secondary-nav"
@@ -79,128 +97,168 @@ export const Standard: Story = {
                         </div>
 
                         <div className="ffe-header__user-nav-toggle">
-                            <button
-                                className="ffe-header__icon-button ffe-header__icon-button--user-nav"
-                                onClick={() => {
-                                    setIsUserNavOpen(prev => !prev);
-                                    setIsSiteNavOpen(false);
-                                }}
-                            >
-                                <span className="ffe-header__user-name">
-                                    Jomar Beate Skrothaug
-                                    <span className="ffe-header__user-chevron">
+                            {enableLinkToProfile ? (
+                                <a
+                                    className="ffe-header__icon-button ffe-header__icon-button--user-nav"
+                                    href="#"
+                                >
+                                    <span className="ffe-header__user-name">
+                                        Jomar Beate Skrothaug
+                                    </span>
+                                    <span className="ffe-header__svg-icon ffe-header__user-icon">
                                         <Icon
-                                            fileUrl="./icons/open/300/md/expand_more.svg"
-                                            size="md"
-                                            className={classNames(
-                                                'ffe-header__user-chevron-icon',
-                                                {
-                                                    'ffe-header__user-chevron--expanded':
-                                                        isUserNavOpen,
-                                                },
-                                            )}
+                                            fileUrl="./icons/open/400/md/account_circle.svg"
+                                            aria-label="profil"
                                         />
                                     </span>
-                                </span>
-                                <span className="ffe-header__svg-icon ffe-header__user-icon">
-                                    <Icon
-                                        fileUrl="./icons/open/300/xl/person.svg"
-                                        aria-label="bruker"
-                                        size="xl"
-                                    />
-                                </span>
-                                <span className="ffe-header__notification-bubble">
-                                    5
-                                </span>
-                            </button>
+                                    <span className="ffe-header__notification-bubble">
+                                        5
+                                    </span>
+                                    <span className="ffe-header__notification-bubble-small" />
+                                </a>
+                            ) : (
+                                <button
+                                    className="ffe-header__icon-button ffe-header__icon-button--user-nav"
+                                    onClick={() => {
+                                        setIsUserNavOpen(prev => !prev);
+                                        setIsSiteNavOpen(false);
+                                    }}
+                                >
+                                    <span className="ffe-header__user-name">
+                                        Jomar Beate Skrothaug
+                                        <span className="ffe-header__user-chevron">
+                                            <Icon
+                                                fileUrl="./icons/open/300/md/expand_more.svg"
+                                                size="md"
+                                                className={classNames(
+                                                    'ffe-header__user-chevron-icon',
+                                                    {
+                                                        'ffe-header__user-chevron--expanded':
+                                                            isUserNavOpen,
+                                                    },
+                                                )}
+                                            />
+                                        </span>
+                                    </span>
+                                    <span className="ffe-header__svg-icon ffe-header__user-icon">
+                                        <Icon
+                                            fileUrl="./icons/open/300/xl/person.svg"
+                                            aria-label="bruker"
+                                            size="xl"
+                                        />
+                                    </span>
+                                    <span className="ffe-header__notification-bubble">
+                                        5
+                                    </span>
+                                </button>
+                            )}
                         </div>
-
                         <div className="ffe-header__site-nav-toggle">
                             <button
                                 className="ffe-header__icon-button ffe-header__icon-button--site-nav"
                                 type="button"
                                 onClick={() => {
                                     setIsUserNavOpen(false);
-                                    setIsSiteNavOpen(prev => !prev);
+                                    if (enableLinkToProfile) {
+                                        setIsSiteNavOpen(prev => !prev);
+                                    }
                                 }}
                             >
-                                <span
-                                    className={classNames(
-                                        'ffe-header__site-nav-hamburger',
-                                        {
-                                            'ffe-header__site-nav-hamburger--expanded':
-                                                isSiteNavOpen,
-                                        },
-                                    )}
-                                >
-                                    <span className="ffe-header__site-nav-hamburger-bar" />
-                                </span>
+                                {enableLinkToProfile ? (
+                                    <Icon
+                                        fileUrl={
+                                            isSiteNavOpen
+                                                ? './icons/open/400/md/close.svg'
+                                                : './icons/open/400/md/menu.svg'
+                                        }
+                                        aria-label={
+                                            isSiteNavOpen ? 'lukk' : 'meny'
+                                        }
+                                    />
+                                ) : (
+                                    <span
+                                        className={classNames(
+                                            'ffe-header__site-nav-hamburger',
+                                            {
+                                                'ffe-header__site-nav-hamburger--expanded':
+                                                    isSiteNavOpen,
+                                            },
+                                        )}
+                                    >
+                                        <span className="ffe-header__site-nav-hamburger-bar" />
+                                    </span>
+                                )}
                             </button>
                         </div>
                     </div>
 
                     <div className="ffe-header__border">
                         <div className="ffe-header__wrapper">
-                            <nav
-                                className={classNames('ffe-header__user-nav', {
-                                    'ffe-header__user-nav--visible':
-                                        isUserNavOpen,
-                                })}
-                            >
-                                <ul
+                            {!enableLinkToProfile && (
+                                <nav
                                     className={classNames(
-                                        'ffe-header__list ffe-header__user-nav-list',
+                                        'ffe-header__user-nav',
+                                        {
+                                            'ffe-header__user-nav--visible':
+                                                isUserNavOpen,
+                                        },
                                     )}
                                 >
-                                    <li className="ffe-header__list-item">
-                                        <a
-                                            className="ffe-header__link"
-                                            href="#"
-                                        >
-                                            Huskeliste{' '}
-                                            <span className="ffe-header__notification-bubble">
-                                                1
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li className="ffe-header__list-item">
-                                        <a
-                                            className="ffe-header__link"
-                                            href="#"
-                                        >
-                                            Postkasse{' '}
-                                            <span className="ffe-header__notification-bubble">
-                                                22
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li className="ffe-header__list-item">
-                                        <a
-                                            className="ffe-header__link"
-                                            href="#"
-                                        >
-                                            Innstillinger
-                                        </a>
-                                    </li>
-                                    <li className="ffe-header__list-item">
-                                        <div className="ffe-header__link ffe-header__link--disabled">
-                                            Chat - stengt
-                                        </div>
-                                    </li>
-                                    <li className="ffe-header__list-item">
-                                        <button className="ffe-header__logout-button">
-                                            <span className="ffe-header__logout-button-label">
-                                                Logg ut
-                                            </span>
-                                            <div
-                                                className="ffe-header__logout-button-spinner"
-                                                aria-hidden="true"
-                                                aria-label="Logger deg ut"
-                                            />
-                                        </button>
-                                    </li>
-                                </ul>
-                            </nav>
+                                    <ul
+                                        className={classNames(
+                                            'ffe-header__list ffe-header__user-nav-list',
+                                        )}
+                                    >
+                                        <li className="ffe-header__list-item">
+                                            <a
+                                                className="ffe-header__link"
+                                                href="#"
+                                            >
+                                                Huskeliste{' '}
+                                                <span className="ffe-header__notification-bubble">
+                                                    1
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li className="ffe-header__list-item">
+                                            <a
+                                                className="ffe-header__link"
+                                                href="#"
+                                            >
+                                                Postkasse{' '}
+                                                <span className="ffe-header__notification-bubble">
+                                                    22
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li className="ffe-header__list-item">
+                                            <a
+                                                className="ffe-header__link"
+                                                href="#"
+                                            >
+                                                Innstillinger
+                                            </a>
+                                        </li>
+                                        <li className="ffe-header__list-item">
+                                            <div className="ffe-header__link ffe-header__link--disabled">
+                                                Chat - stengt
+                                            </div>
+                                        </li>
+                                        <li className="ffe-header__list-item">
+                                            <button className="ffe-header__logout-button">
+                                                <span className="ffe-header__logout-button-label">
+                                                    Logg ut
+                                                </span>
+                                                <div
+                                                    className="ffe-header__logout-button-spinner"
+                                                    aria-hidden="true"
+                                                    aria-label="Logger deg ut"
+                                                />
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            )}
 
                             <nav
                                 className="ffe-header__site-nav"
@@ -218,7 +276,7 @@ export const Standard: Story = {
                                 >
                                     <li className="ffe-header__list-item">
                                         <a
-                                            className="ffe-header__link"
+                                            className="ffe-header__link ffe-header__link--active"
                                             href="#"
                                         >
                                             Oversikt
@@ -272,6 +330,20 @@ export const Standard: Story = {
                                             Kundeservice
                                         </a>
                                     </li>
+                                    {enableLinkToProfile && (
+                                        <li className="ffe-header__list-item ffe-header__list-item--logout">
+                                            <button className="ffe-header__logout-button">
+                                                <span className="ffe-header__logout-button-label">
+                                                    Logg ut
+                                                </span>
+                                                <div
+                                                    className="ffe-header__logout-button-spinner"
+                                                    aria-hidden="true"
+                                                    aria-label="Logger deg ut"
+                                                />
+                                            </button>
+                                        </li>
+                                    )}
                                 </ul>
                             </nav>
                         </div>
