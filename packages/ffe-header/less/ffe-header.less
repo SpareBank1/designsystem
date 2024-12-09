@@ -241,15 +241,15 @@
         position: relative;
         vertical-align: middle;
         display: inline-block;
-        height: 25px;
-        width: 25px;
+        height: 24px;
+        width: 24px;
 
         &-bar,
         &::before,
         &::after {
             display: inline-block;
             background: var(--ffe-v-primary-color);
-            width: 25px;
+            width: 24px;
             height: 4px;
             border-radius: 2px;
         }
@@ -371,6 +371,10 @@
                 margin: 0 var(--ffe-spacing-xs);
             }
 
+            .ffe-header__list-item--logout {
+                display: none;
+            }
+
             .ffe-header__link {
                 padding: 0;
             }
@@ -405,9 +409,19 @@
             padding: var(--ffe-spacing-md) 0;
         }
     }
+
+    // === Override styles for new header ===
+    .ffe-header--enable-link-to-profile {
+        .ffe-header__icon-button--user-nav {
+            .ffe-header__notification-bubble {
+                margin-right: var(--ffe-spacing-xs);
+            }
+        }
+    }
+    // === End override styles for new header ===
 }
 
-@media (max-width: (@breakpoint-md - 1)) {
+@media (max-width: (@breakpoint-md)) {
     .ffe-header {
         &__border {
             &:last-child {
@@ -448,7 +462,46 @@
                 background-color: var(--ffe-v-background-color);
             }
         }
+        &__list-item--logout {
+            display: block;
+        }
     }
+
+    // === Override styles for new header ===
+    .ffe-header--enable-link-to-profile {
+        .ffe-header {
+            &__notification-bubble {
+                display: none;
+            }
+
+            &__user-icon--with-notification::after {
+                display: block;
+                position: absolute;
+                width: 10px;
+                aspect-ratio: 1;
+                background: var(--ffe-v-notification-bubble-background-color);
+                border-radius: 50%;
+                content: '';
+            }
+
+            &__user-nav-toggle {
+                display: inline-flex;
+
+                & .ffe-header__svg-icon {
+                    display: inline-flex;
+                }
+            }
+
+            &__site-nav-toggle {
+                display: inline-flex;
+
+                & .ffe-header__svg-icon {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+    // === End override styles for new header ===
 }
 
 @media print {
