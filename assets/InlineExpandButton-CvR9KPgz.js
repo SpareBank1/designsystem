@@ -1,0 +1,5 @@
+import{ae as t,af as i,ag as a,ah as m}from"./index-BSshjTkY.js";import{useMDXComponents as s}from"./index-CVdx34fM.js";import{I as p,S as e}from"./InlineExpandButton.stories-B9rlCuFd.js";import"./iframe-DVEgArOO.js";import"../sb-preview/runtime.js";import"./index-eCxJ45ll.js";import"./index-BVyQ2LRr.js";import"./index-CNjFNOVn.js";import"./index-D-8MO0q_.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./InlineBaseButton-Bjw20TZM.js";import"./fixedForwardRef-Cb2PomjO.js";import"./index-DezCrw0f.js";import"./Icon-B88nEPeu.js";import"./Paragraph-Qjq98ToE.js";import"./Collapse-CKwb5mfJ.js";function r(n){const o={h1:"h1",p:"p",...s(),...n.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:p}),`
+`,t.jsx(o.h1,{id:"inlineexpandbutton",children:"InlineExpandButton"}),`
+`,t.jsx(o.p,{children:"Samme som ExpandButton, bortsett fra at denne brukes når du vil ekspandere/kollapse en seksjon fra en linje med tekst."}),`
+`,t.jsx(a,{of:e}),`
+`,t.jsx(m,{of:e})]})}function X(n={}){const{wrapper:o}={...s(),...n.components};return o?t.jsx(o,{...n,children:t.jsx(r,{...n})}):r(n)}export{X as default};
