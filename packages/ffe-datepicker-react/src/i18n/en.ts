@@ -1,4 +1,7 @@
 export default {
+    DAY: 'Day',
+    MONTH: 'Month',
+    YEAR: 'Year',
     DAY_1_SHORT: 'Mon',
     DAY_2_SHORT: 'Tue',
     DAY_3_SHORT: 'Wed',

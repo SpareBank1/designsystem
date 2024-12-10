@@ -7,3 +7,5 @@ export type CalendarButtonState = {
     isSelected: boolean;
     isEnabled: boolean;
 };
+
+export type Locale = 'nb' | 'nn' | 'en';
