@@ -1,5 +1,5 @@
 import React from 'react';
-import { Datepicker, DatepickerProps } from './Datepicker';
+import { Datepicker, DatepickerProviderProps } from './Datepicker';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -8,7 +8,7 @@ const defaultProps = {
     onChange: () => {},
 };
 
-const renderDatePicker = (props?: Partial<DatepickerProps>) =>
+const renderDatePicker = (props?: Partial<DatepickerProviderProps>) =>
     render(<Datepicker {...defaultProps} {...props} />);
 
 describe('<Datepicker />', () => {
@@ -54,8 +54,8 @@ describe('<Datepicker />', () => {
             it('calls onChange method', async () => {
                 const onChange = jest.fn();
                 renderDatePicker({ onChange });
-                const input = screen.getByRole('textbox');
-                await user.type(input, '1');
+                const input = screen.getAllByRole('spinbutton');
+                await user.type(input[0], '1');
                 expect(onChange).toHaveBeenCalledTimes(1);
             });
         });
