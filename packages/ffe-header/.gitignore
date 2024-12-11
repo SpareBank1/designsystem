@@ -1,5 +1,2 @@
 # Specific ignores for ffe-header
-examples/fonts/
-examples/examples.css
-examples/ffe-header.css
 css
