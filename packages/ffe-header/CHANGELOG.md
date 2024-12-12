@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.20...@sb1/ffe-header@22.1.0) (2024-12-12)
+
+
+### Features
+
+* **ffe-header:** Add new styling of header. ([d1621bf](https://github.com/SpareBank1/designsystem/commit/d1621bfae7ac5a9b597d4cfa3cd116e119ddceef))
+
+
+
+
+
 ## [22.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.0.19...@sb1/ffe-header@22.0.20) (2024-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-header
