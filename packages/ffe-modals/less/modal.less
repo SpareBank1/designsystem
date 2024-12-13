@@ -43,7 +43,6 @@
     --background-color: var(--ffe-v-modal-bg-color);
     --border-color: var(--ffe-v-modal-close-button-border-color);
     --text-color: var(--ffe-v-modal-close-button-cross-color);
-    --outline-color: transparent;
 
     aspect-ratio: 1;
     background: var(--background-color);
@@ -51,7 +50,7 @@
     border: 2px solid var(--border-color);
     font: inherit;
     cursor: pointer;
-    outline: 2px solid var(--outline-color);
+    outline: 2px solid transparent;
     padding: var(--ffe-spacing-2xs);
     border-radius: 50%;
     float: right;
@@ -71,7 +70,7 @@
     }
 
     &:focus-visible {
-        --outline-color: var(--ffe-v-modal-close-button-color);
+        outline: 2px solid var(--ffe-v-modal-close-button-color);
     }
 
     @media (hover: hover) and (pointer: fine) {
