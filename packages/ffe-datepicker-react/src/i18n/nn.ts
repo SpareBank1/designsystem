@@ -1,4 +1,7 @@
 export default {
+    DAY: 'Dag',
+    MONTH: 'Måned',
+    YEAR: 'År',
     DAY_1_SHORT: 'Man',
     DAY_2_SHORT: 'Tir',
     DAY_3_SHORT: 'Ons',
