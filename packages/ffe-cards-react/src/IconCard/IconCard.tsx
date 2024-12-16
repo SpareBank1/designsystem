@@ -1,5 +1,9 @@
 import React, { ElementType, ForwardedRef, ReactElement } from 'react';
-import { CardRenderProps, ComponentAsPropParams } from '../types';
+import {
+    CardRenderProps,
+    ComponentAsPropParams,
+    CardActionRenderProps,
+} from '../types';
 import classNames from 'classnames';
 import { WithCardAction, Text, Subtext, Title, CardName } from '../components';
 import { fixedForwardRef } from '../fixedForwardRef';
@@ -48,7 +52,7 @@ function IconCardWithForwardRef<As extends ElementType>(
             {...(rest as Record<string, unknown>)}
             ref={ref}
         >
-            {({ CardAction }) => {
+            {({ CardAction }: CardActionRenderProps) => {
                 const bodyElement = (
                     <div className="ffe-icon-card__body">
                         {typeof children === 'function'

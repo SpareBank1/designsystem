@@ -1,5 +1,9 @@
 import React, { ElementType, ForwardedRef, ReactNode } from 'react';
-import { CardRenderProps, ComponentAsPropParams } from '../types';
+import {
+    CardRenderProps,
+    ComponentAsPropParams,
+    CardActionRenderProps,
+} from '../types';
 import classNames from 'classnames';
 import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
 import { fixedForwardRef } from '../fixedForwardRef';
@@ -43,7 +47,7 @@ function StippledCardWithForwardRef<As extends ElementType>(
             {...(rest as Record<string, unknown>)}
             ref={ref}
         >
-            {({ CardAction }) => (
+            {({ CardAction }: CardActionRenderProps) => (
                 <>
                     {img && (
                         <div

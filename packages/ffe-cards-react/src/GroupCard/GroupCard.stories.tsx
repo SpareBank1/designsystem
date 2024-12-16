@@ -5,6 +5,7 @@ import { GroupCardElement } from './GroupCardElement';
 import { GroupCardFooter } from './GroupCardFooter';
 import { Heading2, Paragraph } from '@sb1/ffe-core-react';
 import type { StoryObj, Meta } from '@storybook/react';
+import { CardRenderProps } from '../types';
 
 const meta: Meta<typeof GroupCard> = {
     title: 'Komponenter/Cards/GroupCard',
@@ -27,7 +28,7 @@ export const Standard: Story = {
             <GroupCardElement>Dette er et element i GroupCard</GroupCardElement>
             <GroupCardElement>Dette er et element i GroupCard</GroupCardElement>
             <GroupCardFooter>
-                {({ CardAction }) => (
+                {({ CardAction }: CardRenderProps) => (
                     <CardAction href="https://design.sparebank1.no">
                         Vis mer
                     </CardAction>
@@ -83,7 +84,13 @@ export const WithCardAction: Story = {
                 <Heading2 lookLike={5}>Tittel på gruppe</Heading2>
             </GroupCardTitle>
             <GroupCardElement>
-                {({ CardAction, CardName, Title, Subtext, Text }) => (
+                {({
+                    CardAction,
+                    CardName,
+                    Title,
+                    Subtext,
+                    Text,
+                }: CardRenderProps) => (
                     <>
                         <CardName>Kortnavn</CardName>
                         <Title>
@@ -97,7 +104,7 @@ export const WithCardAction: Story = {
                 )}
             </GroupCardElement>
             <GroupCardElement>
-                {({ CardAction }) => (
+                {({ CardAction }: CardRenderProps) => (
                     <>
                         <Heading2>
                             <CardAction as="button">Knapp</CardAction>
@@ -107,7 +114,7 @@ export const WithCardAction: Story = {
                 )}
             </GroupCardElement>
             <GroupCardElement>
-                {({ CardAction }) => (
+                {({ CardAction }: CardRenderProps) => (
                     <>
                         <Heading2>
                             <CardAction href="https://design.sparebank1.no">
@@ -119,7 +126,7 @@ export const WithCardAction: Story = {
                 )}
             </GroupCardElement>
             <GroupCardFooter>
-                {({ CardAction }) => (
+                {({ CardAction }: CardRenderProps) => (
                     <CardAction href="https://design.sparebank1.no">
                         Vis mer
                     </CardAction>

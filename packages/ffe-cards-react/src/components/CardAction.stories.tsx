@@ -5,6 +5,7 @@ import { CardBase } from '../CardBase';
 import { Heading2, Paragraph } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
 import { IconCard } from '../IconCard/IconCard';
+import { CardActionRenderProps, CardRenderProps } from '../types';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -39,7 +40,7 @@ export const Standard: Story = {
     },
     render: args => (
         <CardBase shadow={true}>
-            {({ CardAction }) => (
+            {({ CardAction }: CardActionRenderProps) => (
                 <>
                     <Heading2>
                         <CardAction {...args}>Lenke</CardAction>
@@ -58,7 +59,7 @@ export const AsButton: Story = {
     },
     render: args => (
         <CardBase shadow={true}>
-            {({ CardAction }) => (
+            {({ CardAction }: CardActionRenderProps) => (
                 <>
                     <Heading2>
                         <CardAction {...args}>Knapp</CardAction>
@@ -79,7 +80,13 @@ export const WithinTitle: Story = {
         <IconCard
             icon={<Icon fileUrl="icons/open/300/xl/savings.svg" size="xl" />}
         >
-            {({ CardAction, CardName, Title, Subtext, Text }) => (
+            {({
+                CardAction,
+                CardName,
+                Title,
+                Subtext,
+                Text,
+            }: CardRenderProps) => (
                 <>
                     <CardName>Kortnavn</CardName>
                     <Title>

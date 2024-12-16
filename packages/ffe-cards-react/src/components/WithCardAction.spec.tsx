@@ -2,12 +2,13 @@ import React from 'react';
 import { WithCardAction } from './WithCardAction';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { CardActionRenderProps } from '../types';
 
 describe('<WithCardAction />', () => {
     it('should render a <CardAction /> link by default', () => {
         render(
             <WithCardAction baseClassName="ffe-card-x">
-                {({ CardAction }) => (
+                {({ CardAction }: CardActionRenderProps) => (
                     <h1>
                         <CardAction href="/test">en lenke</CardAction>
                     </h1>
@@ -21,7 +22,7 @@ describe('<WithCardAction />', () => {
     it('should apply class to <CardAction />', () => {
         render(
             <WithCardAction baseClassName="ffe-card-x">
-                {({ CardAction }) => (
+                {({ CardAction }: CardActionRenderProps) => (
                     <CardAction href="/test" className="my-class">
                         en lenke
                     </CardAction>
@@ -37,7 +38,7 @@ describe('<WithCardAction />', () => {
     it('should render a custom <CardAction />', () => {
         render(
             <WithCardAction baseClassName="ffe-card-x">
-                {({ CardAction }) => (
+                {({ CardAction }: CardActionRenderProps) => (
                     <CardAction as="button">en knapp</CardAction>
                 )}
             </WithCardAction>,
@@ -52,7 +53,7 @@ describe('<WithCardAction />', () => {
 
         render(
             <WithCardAction baseClassName="ffe-card-x">
-                {({ CardAction }) => (
+                {({ CardAction }: CardActionRenderProps) => (
                     <>
                         <CardAction as="button" onClick={cardActionSpy}>
                             en knapp
@@ -71,7 +72,7 @@ describe('<WithCardAction />', () => {
         const ref = React.createRef<HTMLButtonElement>();
         render(
             <WithCardAction baseClassName="ffe-card-x">
-                {({ CardAction }) => (
+                {({ CardAction }: CardActionRenderProps) => (
                     <CardAction as="button" ref={ref}>
                         en knapp
                     </CardAction>
@@ -86,7 +87,7 @@ describe('<WithCardAction />', () => {
         const ref = React.createRef<HTMLButtonElement>();
         render(
             <WithCardAction baseClassName="ffe-card-x">
-                {({ CardAction }) => (
+                {({ CardAction }: CardActionRenderProps) => (
                     <CardAction as="button" ref={ref}>
                         en knapp
                     </CardAction>
@@ -101,7 +102,7 @@ describe('<WithCardAction />', () => {
         const TEST_ID = 'test-id';
         render(
             <WithCardAction baseClassName="ffe-card-x" data-testid={TEST_ID}>
-                {({ CardAction }) => (
+                {({ CardAction }: CardActionRenderProps) => (
                     <CardAction as="button">en knapp</CardAction>
                 )}
             </WithCardAction>,
