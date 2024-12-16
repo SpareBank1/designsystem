@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.6.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.6.1...@sb1/ffe-cards-react@17.6.2) (2024-12-16)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** add types to render props ([f518c02](https://github.com/SpareBank1/designsystem/commit/f518c02a5b66fed4ccf7b150540d3c253d6520ed))
+
+
+
+
+
 ## [17.6.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.6.0...@sb1/ffe-cards-react@17.6.1) (2024-12-06)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
