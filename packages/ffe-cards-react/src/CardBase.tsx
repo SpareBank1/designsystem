@@ -1,7 +1,12 @@
 import React, { ElementType, ForwardedRef } from 'react';
 import classNames from 'classnames';
 import { WithCardActionProps, WithCardAction } from './components';
-import { BgColor, BgColorDarkmode, ComponentAsPropParams } from './types';
+import {
+    BgColor,
+    BgColorDarkmode,
+    ComponentAsPropParams,
+    CardActionRenderProps,
+} from './types';
 import { fixedForwardRef } from './fixedForwardRef';
 
 export type CardBaseProps<As extends ElementType = 'div'> = Omit<
@@ -48,7 +53,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
             {...(rest as Record<string, unknown>)}
             ref={ref}
         >
-            {({ CardAction }) =>
+            {({ CardAction }: CardActionRenderProps) =>
                 typeof children === 'function'
                     ? children({ CardAction })
                     : children

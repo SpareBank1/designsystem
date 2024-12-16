@@ -1,6 +1,7 @@
 import React from 'react';
 import { IllustrationCard } from './IllustrationCard';
 import { render, screen } from '@testing-library/react';
+import { CardRenderProps } from '../types';
 
 const children = <div>Hello world</div>;
 const TEST_ID = 'test-id';
@@ -54,7 +55,7 @@ describe('IllustrationCard', () => {
             <IllustrationCard
                 data-testid={TEST_ID}
                 img={illustration}
-                children={Components => (
+                children={(Components: CardRenderProps) => (
                     <Components.Text>Hello world</Components.Text>
                 )}
             />,

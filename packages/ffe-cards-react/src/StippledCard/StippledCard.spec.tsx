@@ -2,6 +2,7 @@ import React from 'react';
 import { StippledCard } from './StippledCard';
 import { Icon } from '@sb1/ffe-icons-react';
 import { render, screen, within } from '@testing-library/react';
+import { CardRenderProps } from '../types';
 
 const children = <div>Hello world</div>;
 const TEST_ID = 'test-id';
@@ -52,7 +53,7 @@ describe('StippledCard', () => {
                     element: <Icon fileUrl="monitoring" size="md" />,
                     type: 'icon',
                 }}
-                children={Components => (
+                children={(Components: CardRenderProps) => (
                     <Components.Text>Hello world</Components.Text>
                 )}
             />,

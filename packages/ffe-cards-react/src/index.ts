@@ -23,3 +23,4 @@ export {
     StippledCard,
     type StippledCardProps,
 } from './StippledCard/StippledCard';
+export type { CardRenderProps, CardActionRenderProps } from './types';

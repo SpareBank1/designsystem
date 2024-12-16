@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextCard } from './TextCard';
 import { render, screen } from '@testing-library/react';
+import { CardRenderProps } from '../types';
 
 const children = <div>Hello world</div>;
 const TEST_ID = 'test-id';
@@ -16,7 +17,7 @@ describe('TextCard', () => {
         render(
             <TextCard
                 data-testid={TEST_ID}
-                children={Components => (
+                children={(Components: CardRenderProps) => (
                     <Components.Text>Hello world</Components.Text>
                 )}
             />,

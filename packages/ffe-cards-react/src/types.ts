@@ -22,6 +22,10 @@ export interface CardRenderProps {
     CardAction: typeof CardAction;
 }
 
+export interface CardActionRenderProps {
+    CardAction: typeof CardAction;
+}
+
 export type BgColor =
     | 'sand-30'
     | 'sand-70'

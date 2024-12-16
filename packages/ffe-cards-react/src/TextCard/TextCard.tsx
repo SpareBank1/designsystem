@@ -1,5 +1,9 @@
 import React, { ElementType, ForwardedRef } from 'react';
-import { CardRenderProps, ComponentAsPropParams } from '../types';
+import {
+    CardRenderProps,
+    ComponentAsPropParams,
+    CardActionRenderProps,
+} from '../types';
 import classNames from 'classnames';
 import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
 import { fixedForwardRef } from '../fixedForwardRef';
@@ -36,7 +40,7 @@ function TextCardWithForwardRef<As extends ElementType>(
             {...(rest as Record<string, unknown>)}
             ref={ref}
         >
-            {({ CardAction }) =>
+            {({ CardAction }: CardActionRenderProps) =>
                 typeof children === 'function'
                     ? children({ Text, Subtext, Title, CardName, CardAction })
                     : children

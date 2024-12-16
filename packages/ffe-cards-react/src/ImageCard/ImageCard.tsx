@@ -1,5 +1,9 @@
 import React, { ElementType, ForwardedRef } from 'react';
-import { CardRenderProps, ComponentAsPropParams } from '../types';
+import {
+    CardRenderProps,
+    ComponentAsPropParams,
+    CardActionRenderProps,
+} from '../types';
 import classNames from 'classnames';
 import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
 import { fixedForwardRef } from '../fixedForwardRef';
@@ -37,7 +41,7 @@ function ImageCardWithForwardRef<As extends ElementType>(
             {...(rest as Record<string, unknown>)}
             ref={ref}
         >
-            {({ CardAction }) => (
+            {({ CardAction }: CardActionRenderProps) => (
                 <>
                     <div className="ffe-image-card__image-container">
                         <div className="ffe-image-card__image-overlay" />
