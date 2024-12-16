@@ -3,26 +3,6 @@
     position: relative;
     padding: 0 0 calc(1lh + var(--ffe-spacing-xs));
 
-    [aria-invalid='true'] {
-        border-color: var(--ffe-g-error-color);
-        border-style: solid;
-
-        &:focus {
-            border-color: var(--ffe-v-input-bg-color);
-            box-shadow: 0 0 0 2px var(--ffe-g-error-color);
-        }
-    }
-
-    .ffe-input-field--text-like {
-        &[aria-invalid='true'] {
-            border-bottom: 2px solid;
-            border-color: var(--ffe-g-error-color);
-            border-left-style: none;
-            border-right-style: none;
-            border-top-style: none;
-        }
-    }
-
     > * {
         margin-top: 0;
         margin-bottom: var(--ffe-spacing-xs);

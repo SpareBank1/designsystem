@@ -29,3 +29,14 @@
         opacity: 1;
     }
 }
+
+.ffe-textarea--invalid,
+:where(textarea).ffe-textarea[aria-invalid='true'] {
+    border-color: var(--ffe-g-error-color);
+    border-style: solid;
+
+    &:focus {
+        border-color: var(--ffe-v-input-bg-color);
+        box-shadow: 0 0 0 2px var(--ffe-g-error-color);
+    }
+}
