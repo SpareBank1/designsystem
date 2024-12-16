@@ -1,0 +1,5 @@
+import{ae as t,af as a,ag as i,ah as m}from"./index-rdRjOtid.js";import{useMDXComponents as s}from"./index-CVdx34fM.js";import{T as p,S as r}from"./TaskButton.stories-D2bB_mgI.js";import"./iframe-CMDkZxuR.js";import"../sb-preview/runtime.js";import"./index-eCxJ45ll.js";import"./index-BVyQ2LRr.js";import"./index-CNjFNOVn.js";import"./index-D-8MO0q_.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./BaseButton-D99V6fdL.js";import"./fixedForwardRef-Cb2PomjO.js";import"./index-DezCrw0f.js";import"./Icon-B88nEPeu.js";function e(o){const n={h1:"h1",p:"p",...s(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(a,{of:p}),`
+`,t.jsx(n.h1,{id:"taskbutton",children:"TaskButton"}),`
+`,t.jsx(n.p,{children:"Kan brukes som et alternativ til en kommandoknapp i scenarioer der man ønsker å legge til noe."}),`
+`,t.jsx(i,{of:r}),`
+`,t.jsx(m,{of:r})]})}function X(o={}){const{wrapper:n}={...s(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{X as default};
