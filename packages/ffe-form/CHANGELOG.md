@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.1.1...@sb1/ffe-form@30.2.0) (2024-12-16)
+
+
+### Features
+
+* **ffe-form:** move invalid styling to components ([bb5553a](https://github.com/SpareBank1/designsystem/commit/bb5553adc3bd9598ae6e58925ac498cb73aeea01))
+
+
+
+
+
 ## [30.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.1.0...@sb1/ffe-form@30.1.1) (2024-12-02)
 
 
