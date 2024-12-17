@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.1.2...@sb1/ffe-datepicker@13.2.0) (2024-12-17)
+
+
+### Features
+
+* **ffe-datepicker:** nytt format på datepicker input ([111330d](https://github.com/SpareBank1/designsystem/commit/111330d7b36678efad4b5d150c37ef8c3cf1f4ed))
+
+
+
+
+
 ## [13.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.1.1...@sb1/ffe-datepicker@13.1.2) (2024-12-16)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

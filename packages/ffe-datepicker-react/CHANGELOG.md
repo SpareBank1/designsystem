@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@9.1.29...@sb1/ffe-datepicker-react@10.0.0) (2024-12-17)
+
+
+### Features
+
+* **ffe-datepicker-react:** nytt format på datepicker ([bdc3549](https://github.com/SpareBank1/designsystem/commit/bdc3549ccb37d9ff5c818a215b94fdda4e183ffc))
+
+
+### BREAKING CHANGES
+
+* **ffe-datepicker-react:** Fjernet inputProps. labelId påkrevd
+
+
+
+
+
 ## [9.1.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@9.1.28...@sb1/ffe-datepicker-react@9.1.29) (2024-12-16)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
