@@ -17,7 +17,7 @@ export const Standard: Story = {
     args: {
         inline: false,
         onColoredBg: false,
-        name: 'name',
+        name: 'favorittlukt',
         label: 'Hva er din favorittlukt?',
     },
     render: function Render(args) {
@@ -42,7 +42,7 @@ export const Standard: Story = {
 };
 
 export const FieldMessage: Story = {
-    args: { ...Standard.args, fieldMessage: 'Feil lukt' },
+    args: { ...Standard.args, fieldMessage: 'Feil lukt', name: 'feil-lukt' },
     render: function Render(args) {
         return (
             <RadioButtonInputGroup {...args}>
@@ -65,7 +65,7 @@ export const FieldMessage: Story = {
 };
 
 export const WithRadioSwitch: Story = {
-    args: { ...Standard.args },
+    args: { ...Standard.args, name: 'radio-switch' },
     render: function Render(args) {
         return (
             <RadioButtonInputGroup {...args}>
@@ -84,7 +84,7 @@ export const WithRadioSwitch: Story = {
 };
 
 export const WithRadioBlock: Story = {
-    args: { ...Standard.args, selectedValue: 'yes' },
+    args: { ...Standard.args, selectedValue: 'yes', name: 'radio-block' },
     render: function Render(args) {
         return (
             <RadioButtonInputGroup {...args}>
