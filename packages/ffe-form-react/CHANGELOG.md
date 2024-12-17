@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@21.1.26...@sb1/ffe-form-react@22.0.0) (2024-12-17)
+
+
+### Features
+
+* **ffe-form-react:** standardize selectedValue in radio components ([97f596d](https://github.com/SpareBank1/designsystem/commit/97f596d0b85462e5c942f5547225532fd70341ae))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** limit selectedValue in radio komponents
+to string, null, undefined.
+
+
+
+
+
 ## [21.1.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@21.1.25...@sb1/ffe-form-react@21.1.26) (2024-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
