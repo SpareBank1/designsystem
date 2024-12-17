@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar } from './Calendar';
 import type { StoryObj, Meta } from '@storybook/react';
 
@@ -18,8 +18,19 @@ export const Standard: Story = {
         maxDate: null,
         minDate: null,
         onDatePicked: (date: string) => null,
-        selectedDate: null,
+        selectedDate: '17.12.2024',
         focusOnMount: false,
     },
-    render: args => <Calendar {...args} />,
+    render: function Render(args) {
+        const [selectedDate, setSelectedDate] = useState<
+            string | null | undefined
+        >(args.selectedDate);
+        return (
+            <Calendar
+                {...args}
+                selectedDate={selectedDate}
+                onDatePicked={setSelectedDate}
+            />
+        );
+    },
 };
