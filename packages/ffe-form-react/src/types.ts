@@ -24,3 +24,5 @@ export type ComponentWithRefAsPropParams<As extends ElementType> = {
 >;
 
 export type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
+
+export type SelectedRadioValue = string | null | undefined;

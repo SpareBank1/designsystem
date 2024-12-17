@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { RadioButtonInputGroup } from './RadioButtonInputGroup';
 import { RadioButton } from './RadioButton';
@@ -21,8 +21,14 @@ export const Standard: Story = {
         label: 'Hva er din favorittlukt?',
     },
     render: function Render(args) {
+        type Value = 'grass' | 'asphalt' | 'pollen';
+        const [selectedValue, setSelectedValue] = useState<Value>('asphalt');
         return (
-            <RadioButtonInputGroup {...args}>
+            <RadioButtonInputGroup
+                {...args}
+                selectedValue={selectedValue}
+                onChange={e => setSelectedValue(e.target.value as Value)}
+            >
                 {inputProps => (
                     <>
                         <RadioButton {...inputProps} value="grass">
@@ -44,8 +50,14 @@ export const Standard: Story = {
 export const FieldMessage: Story = {
     args: { ...Standard.args, fieldMessage: 'Feil lukt', name: 'feil-lukt' },
     render: function Render(args) {
+        type Value = 'grass' | 'asphalt' | 'pollen';
+        const [selectedValue, setSelectedValue] = useState<Value>('pollen');
         return (
-            <RadioButtonInputGroup {...args}>
+            <RadioButtonInputGroup
+                {...args}
+                selectedValue={selectedValue}
+                onChange={e => setSelectedValue(e.target.value as Value)}
+            >
                 {inputProps => (
                     <>
                         <RadioButton {...inputProps} value="grass">
@@ -67,14 +79,20 @@ export const FieldMessage: Story = {
 export const WithRadioSwitch: Story = {
     args: { ...Standard.args, name: 'radio-switch' },
     render: function Render(args) {
+        type Value = 'yes' | 'no';
+        const [selectedValue, setSelectedValue] = useState<Value>('yes');
         return (
-            <RadioButtonInputGroup {...args}>
+            <RadioButtonInputGroup
+                {...args}
+                selectedValue={selectedValue}
+                onChange={e => setSelectedValue(e.target.value as Value)}
+            >
                 {inputProps => (
                     <RadioSwitch
                         leftLabel="Ja"
-                        leftValue={true}
+                        leftValue="yes"
                         rightLabel="Nei"
-                        rightValue={false}
+                        rightValue="no"
                         {...inputProps}
                     />
                 )}
@@ -84,23 +102,22 @@ export const WithRadioSwitch: Story = {
 };
 
 export const WithRadioBlock: Story = {
-    args: { ...Standard.args, selectedValue: 'yes', name: 'radio-block' },
+    args: { ...Standard.args, name: 'radio-block' },
     render: function Render(args) {
+        type Value = 'yes' | 'no';
+        const [selectedValue, setSelectedValue] = useState<Value>('yes');
+
         return (
-            <RadioButtonInputGroup {...args}>
+            <RadioButtonInputGroup
+                {...args}
+                selectedValue={selectedValue}
+                onChange={e => setSelectedValue(e.target.value as Value)}
+            >
                 {inputProps => (
                     <>
+                        <RadioBlock {...inputProps} label="Ja" value="yes" />
                         <RadioBlock
                             {...inputProps}
-                            label="Ja"
-                            value="yes"
-                            // @ts-ignore
-                            selectedValue={args.selectedValue}
-                        />
-                        <RadioBlock
-                            {...inputProps}
-                            // @ts-ignore
-                            selectedValue={args.selectedValue}
                             label="Nei"
                             showChildren={true}
                             value="no"
