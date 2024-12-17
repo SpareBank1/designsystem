@@ -6,6 +6,8 @@ import userEvent from '@testing-library/user-event';
 const defaultProps = {
     value: '',
     onChange: () => {},
+    locale: 'nb' as const,
+    labelId: 'datepicker-label',
 };
 
 const renderDatePicker = (props?: Partial<DatepickerProps>) =>
@@ -23,12 +25,38 @@ describe('<Datepicker />', () => {
 
         it('contains a single DateInput component', () => {
             renderDatePicker();
-            expect(screen.getByRole('textbox')).toBeInTheDocument();
+            expect(screen.getByRole('group')).toBeInTheDocument();
         });
 
         it('does not contain a Calendar component', () => {
             renderDatePicker();
             expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+        });
+
+        it('responds to arrow up and down', async () => {
+            renderDatePicker();
+            const [dayInput] = screen.getAllByRole('spinbutton');
+            await userEvent.type(dayInput, '{arrowup}');
+            expect(dayInput).toHaveValue(1);
+            await userEvent.type(dayInput, '{arrowdown}');
+            expect(dayInput).toHaveValue(31);
+        });
+
+        it('triggers onchange when arrows are used', async () => {
+            const onChange = jest.fn();
+            renderDatePicker({ onChange });
+            const [dayInput] = screen.getAllByRole('spinbutton');
+            await userEvent.type(dayInput, '{arrowup}');
+            expect(onChange).toHaveBeenCalledTimes(1);
+        });
+
+        it('reponds to arrow left and right', async () => {
+            renderDatePicker();
+            const [dayInput, monthInput] = screen.getAllByRole('spinbutton');
+            await userEvent.type(dayInput, '{arrowright}');
+            expect(monthInput).toHaveFocus();
+            await userEvent.type(monthInput, '{arrowleft}');
+            expect(dayInput).toHaveFocus();
         });
 
         describe('with click on button', () => {
@@ -54,8 +82,8 @@ describe('<Datepicker />', () => {
             it('calls onChange method', async () => {
                 const onChange = jest.fn();
                 renderDatePicker({ onChange });
-                const input = screen.getByRole('textbox');
-                await user.type(input, '1');
+                const [dayInput] = screen.getAllByRole('spinbutton');
+                await user.type(dayInput, '4');
                 expect(onChange).toHaveBeenCalledTimes(1);
             });
         });
@@ -81,33 +109,24 @@ describe('<Datepicker />', () => {
             describe('ariaInvalid', () => {
                 it('has correct aria-invalid value if given prop', () => {
                     renderDatePicker({ ariaInvalid: true });
-                    const input = screen.getByRole('textbox');
-                    expect(input.getAttribute('aria-invalid')).toBe('true');
+                    const [date, month, year] =
+                        screen.getAllByRole('spinbutton');
+                    expect(date.getAttribute('aria-invalid')).toBe('true');
+                    expect(month.getAttribute('aria-invalid')).toBe('true');
+                    expect(year.getAttribute('aria-invalid')).toBe('true');
                 });
 
                 it('has correct aria-describedby if aria-describedby given as input prop', () => {
-                    const inputProps = {
-                        'aria-describedby': 'test',
-                    };
                     renderDatePicker({
                         ariaInvalid: true,
-                        inputProps,
+                        ariaDescribedby: 'test',
                     });
-                    const input = screen.getByRole('textbox');
-                    expect(input.getAttribute('aria-describedby')).toBe('test');
-                });
-            });
 
-            describe('inputProps', () => {
-                it('is passed on to input field', () => {
-                    const inputProps = {
-                        className: 'customClass',
-                        id: 'custom-input-id',
-                    };
-                    renderDatePicker({ inputProps });
-                    const input = screen.getByRole('textbox');
-                    expect(input.classList.contains('customClass')).toBe(true);
-                    expect(input.getAttribute('id')).toBe('custom-input-id');
+                    const [date, month, year] =
+                        screen.getAllByRole('spinbutton');
+                    expect(date.getAttribute('aria-describedby')).toBe('test');
+                    expect(month.getAttribute('aria-describedby')).toBe('test');
+                    expect(year.getAttribute('aria-describedby')).toBe('test');
                 });
             });
 
@@ -126,43 +145,14 @@ describe('<Datepicker />', () => {
         });
     });
 
-    describe('try to be smart in which century to place an input of two digit years', () => {
-        const user = userEvent.setup();
-        it('defaults to the 20th century', async () => {
-            const onChange = jest.fn();
-            renderDatePicker({ onChange, value: '101099' });
+    describe('with value', () => {
+        it('has correct value in input field', () => {
+            renderDatePicker({ value: '01.01.2021' });
 
-            const input = screen.getByRole('textbox');
-            await user.type(input, '{Tab}');
-            expect(onChange).toHaveBeenCalledWith('10.10.2099');
-        });
-
-        it('assumes last century if maxDate is today-ish', async () => {
-            const onChange = jest.fn();
-            renderDatePicker({
-                maxDate: '02.02.2022',
-                onChange,
-                value: '111199',
-            });
-
-            const input = screen.getByRole('textbox');
-            await user.type(input, '{Tab}');
-
-            expect(onChange).toHaveBeenCalledWith('11.11.1999');
-        });
-
-        it('assumes this century if maxDate is today-ish but input is rather close to it', async () => {
-            const onChange = jest.fn();
-            renderDatePicker({
-                maxDate: '02.02.2022',
-                onChange,
-                value: '121220',
-            });
-
-            const input = screen.getByRole('textbox');
-            await user.type(input, '{Tab}');
-
-            expect(onChange).toHaveBeenCalledWith('12.12.2020');
+            const [date, month, year] = screen.getAllByRole('spinbutton');
+            expect(date).toHaveValue(1);
+            expect(month).toHaveValue(1);
+            expect(year).toHaveValue(2021);
         });
     });
 });

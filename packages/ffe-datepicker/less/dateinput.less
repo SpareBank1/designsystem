@@ -1,52 +1,114 @@
 .ffe-dateinput {
     position: relative;
     display: inline-block;
+    grid-column: 1 e('/') 3;
+    grid-row: 1 e('/') -1;
+    min-width: 210px;
 
     &--full-width {
         display: block;
     }
 
+    &:focus-within {
+        border-color: var(--ffe-v-datepicker-bg-color);
+        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        outline: none;
+
+        & + .ffe-datepicker__button {
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    border-color: var(--ffe-v-datepicker-bg-color);
+                    box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+                    outline: none;
+                }
+            }
+        }
+    }
+
     @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            color: var(--ffe-g-primary-color);
+        &:focus-within:hover {
+            border-color: transparent;
+        }
+    }
+
+    &.ffe-input-field {
+        display: flex;
+        align-items: center;
+
+        &--invalid {
+            border-color: var(--ffe-g-error-color);
+            border-style: solid;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    border-color: var(--ffe-g-error-color);
+                    box-shadow: none;
+                }
+                &:focus-within:hover {
+                    border-color: var(--ffe-v-datepicker-bg-color);
+                }
+            }
+
+            &:focus-within {
+                border-color: var(--ffe-v-datepicker-bg-color);
+                box-shadow: 0 0 0 2px var(--ffe-g-error-color);
+                outline: none;
+            }
+
+            & + .ffe-datepicker__button {
+                &:focus-visible {
+                    border-color: var(--ffe-g-error-color);
+                    border-style: solid;
+                }
+
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        border-color: var(--ffe-v-datepicker-bg-color);
+                        box-shadow: 0 0 0 2px var(--ffe-g-error-color);
+                        outline: none;
+                    }
+                }
+            }
         }
     }
 
     &__field {
-        min-width: 160px;
-        grid-column: 1 e('/') 3;
-        grid-row: 1 e('/') -1;
+        padding-block: var(--ffe-spacing-2xs);
+
+        &-year {
+            min-width: 4ch;
+        }
+
+        &:focus {
+            background-color: var(--ffe-v-datepicker-spinbutton-hover-color);
+            outline: none;
+        }
+
         &::-ms-clear {
             display: none;
         }
 
-        &[aria-invalid='true'] {
-            border-color: var(--ffe-g-error-color);
-            border-style: solid;
+        &[role='spinbutton'][aria-invalid='true'] {
+            border-color: transparent;
+            border-style: none;
         }
-
-        @media (hover: hover) and (pointer: fine) {
-            /* stylelint-disable selector-max-specificity */
-            &:focus + .ffe-datepicker__button:hover {
-                border-color: transparent;
-                box-shadow: 0 0 0 2px var(--ffe-v-datepicker-border-hover-color);
-            }
-            /* stylelint-enable selector-max-specificity */
+        &[role='spinbutton'][aria-invalid='true']:focus {
+            box-shadow: none;
         }
+    }
+    &--message {
+        padding-bottom: 0;
     }
 }
 
 .ffe-datepicker {
-    display: inline-block;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: fit-content;
 
     &--full-width {
-        display: block;
-    }
-
-    &--wrapper {
-        display: grid;
-        grid-template-columns: 1fr auto;
+        width: 100%;
     }
 
     &__button {
@@ -60,6 +122,8 @@
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
         width: 56px;
         cursor: pointer;
+        z-index: 1;
+        isolation: isolate;
 
         &:focus,
         &:active {
