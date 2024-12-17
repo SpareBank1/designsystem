@@ -2,6 +2,7 @@ import React, { useId } from 'react';
 import classNames from 'classnames';
 import { ErrorFieldMessage } from './message';
 import { Tooltip } from './Tooltip';
+import { SelectedRadioValue } from './types';
 
 export interface RadioButtonInputGroupProps
     extends Omit<
@@ -17,7 +18,7 @@ export interface RadioButtonInputGroupProps
         inline?: boolean;
         name: string;
         onChange: React.ChangeEventHandler<HTMLInputElement>;
-        selectedValue?: boolean | string | number | null;
+        selectedValue?: SelectedRadioValue;
         onColoredBg?: boolean;
     }) => React.ReactNode;
     /** Additional class names applied to the fieldset */
@@ -50,7 +51,7 @@ export interface RadioButtonInputGroupProps
     /** Change handler, receives value of selected radio button */
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
     /** The currently selected value */
-    selectedValue?: string | boolean | number | null;
+    selectedValue?: SelectedRadioValue;
     /**
      * String or Tooltip component with further detail about the radio button
      * set

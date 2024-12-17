@@ -51,18 +51,6 @@ describe('<BaseRadioButton />', () => {
         expect(radio).not.toBeChecked();
     });
 
-    it('accepts boolean values and checks the input if it is selected', () => {
-        renderBaseRadioButton({ selectedValue: true, value: true });
-        const radio = screen.getByRole('radio');
-        expect(radio).toBeChecked();
-    });
-
-    it('accepts boolean values and does not check the input if it is not selected', () => {
-        renderBaseRadioButton({ selectedValue: 'false', value: true });
-        const radio = screen.getByRole('radio');
-        expect(radio).not.toBeChecked();
-    });
-
     describe('id', () => {
         it('is unique across instances', () => {
             renderBaseRadioButton();

@@ -1,15 +1,16 @@
 import React, { useId } from 'react';
 import classNames from 'classnames';
 import { Tooltip, TooltipProps } from './Tooltip';
+import { SelectedRadioValue } from './types';
 
 export interface BaseRadioButtonProps
     extends Omit<React.ComponentPropsWithoutRef<'input'>, 'value'> {
     /** Additional props passed to the label element */
     labelProps?: React.ComponentProps<'label'>;
     /** The selected value of the radio button set */
-    selectedValue?: boolean | string | number | null;
+    selectedValue?: SelectedRadioValue;
     /** The value of the radio button */
-    value: boolean | string | number;
+    value: string;
     /** Tooltip providing further detail about the choice */
     tooltip?: string;
     tooltipProps?: TooltipProps;

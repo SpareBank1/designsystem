@@ -1,9 +1,10 @@
 import React, { useId } from 'react';
 import classNames from 'classnames';
+import { SelectedRadioValue } from './types';
 
 export interface RadioBlockProps
     extends React.ComponentPropsWithoutRef<'input'> {
-    /** Whether or not the radio block is selected */
+    /** Whether the radio block is selected */
     checked?: boolean;
     /** The always visible label of the radio block */
     label: React.ReactNode;
@@ -12,8 +13,8 @@ export interface RadioBlockProps
     /** The name of the radio button set */
     name: string;
     /** The selected value of the radio button set */
-    selectedValue?: string | null;
-    /** Whether or not children are always visible */
+    selectedValue?: SelectedRadioValue;
+    /** Whether children are always visible */
     showChildren?: boolean;
     /** The value of the radio block */
     value: string;

@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 
 const defaultProps = {
     leftLabel: 'Ja',
-    leftValue: true,
+    leftValue: 'ja',
     name: 'choice',
     rightLabel: 'Nei',
     rightValue: 'nei',
@@ -17,7 +17,7 @@ describe('<RadioSwitch />', () => {
     it('sets aria-invalid correctly', () => {
         renderRadioSwitch({
             'aria-invalid': 'true',
-            selectedValue: true,
+            selectedValue: 'ja',
         });
 
         const [radioLeft, radioRight] = screen.getAllByRole('radio');

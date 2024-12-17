@@ -1,9 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-
 import { BaseRadioButton } from './BaseRadioButton';
-
-type Value = boolean | string | number;
+import { SelectedRadioValue } from './types';
 
 export interface RadioSwitchProps
     extends Omit<React.ComponentPropsWithoutRef<'input'>, 'value'> {
@@ -12,17 +10,17 @@ export interface RadioSwitchProps
     /** The label of the choice to the left */
     leftLabel: string;
     /** The value of the choice to the left */
-    leftValue: Value /** Ref-setting function, or ref created by useRef, passed to the input element */;
+    leftValue: string /** Ref-setting function, or ref created by useRef, passed to the input element */;
     /** Ref to left radio */
     leftInnerRef?: React.Ref<HTMLInputElement>;
     /** The label of the choice to the right */
     rightLabel: string;
     /** The value of the choice to the right */
-    rightValue: Value;
+    rightValue: string;
     /** Ref to right radio */
     rightInnerRef?: React.Ref<HTMLInputElement>;
     /** The selected value of the radio button set */
-    selectedValue?: Value | null;
+    selectedValue?: SelectedRadioValue;
     /** Condensed modifier. Use in condensed designs */
     condensed?: boolean;
 }
