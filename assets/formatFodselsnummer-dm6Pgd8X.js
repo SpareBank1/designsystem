@@ -1,4 +1,0 @@
-import{ae as o,af as e,ag as a,ah as i}from"./index-C8VVPGfr.js";import{useMDXComponents as s}from"./index-CVdx34fM.js";import{f,S as r}from"./formatFodselsnummer.stories-CHNw5OhL.js";import"./iframe-1I2PRVRO.js";import"../sb-preview/runtime.js";import"./index-eCxJ45ll.js";import"./index-BVyQ2LRr.js";import"./index-CNjFNOVn.js";import"./index-D-8MO0q_.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./unicode-BkFkzGng.js";function m(t){const n={h1:"h1",...s(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(e,{of:f}),`
-`,o.jsx(n.h1,{id:"formatfodselsnummer",children:"formatFodselsnummer"}),`
-`,o.jsx(a,{of:r}),`
-`,o.jsx(i,{of:r})]})}function S(t={}){const{wrapper:n}={...s(),...t.components};return n?o.jsx(n,{...t,children:o.jsx(m,{...t})}):m(t)}export{S as default};
