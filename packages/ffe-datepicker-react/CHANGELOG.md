@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.1...@sb1/ffe-datepicker-react@10.0.2) (2024-12-18)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** onBlur should be triggered on all input fields ([560c892](https://github.com/SpareBank1/designsystem/commit/560c892e47712612a762c4457ddad64a67189bd2))
+
+
+
+
+
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.0...@sb1/ffe-datepicker-react@10.0.1) (2024-12-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
