@@ -24,7 +24,7 @@ export interface DatepickerCompProps {
     ariaInvalid?: React.ComponentProps<'input'>['aria-invalid'];
     'aria-describedby'?: React.ComponentProps<'input'>['aria-describedby'];
     ariaDescribedby?: React.ComponentProps<'input'>['aria-describedby'];
-    /** Blur used for e.g. validating the date. Triggered on blur of the last field, i.e. year. */
+    /** Triggered when focus leaves one of the fields (dd, mm, yyyy), and the next focused element is not one of these fields.*/
     onBlur?: (evt: React.FocusEvent) => void;
     calendarAbove?: boolean;
     id?: string;
@@ -238,10 +238,22 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
             role={'group'}
             id={id}
         >
+            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions */}
             <div
                 className={classNames('ffe-input-field', 'ffe-dateinput', {
                     'ffe-input-field--invalid': ariaInvalid(),
                 })}
+                onBlur={evt => {
+                    const elementReceivingFocus = evt.relatedTarget;
+
+                    if (
+                        elementReceivingFocus !== yearRef.current &&
+                        elementReceivingFocus !== dayRef.current &&
+                        elementReceivingFocus !== monthRef.current
+                    ) {
+                        onBlur?.(evt);
+                    }
+                }}
             >
                 <SpinButton
                     ref={dayRef}
@@ -320,7 +332,6 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     aria-valuetext={`${year}`}
                     aria-valuenow={typeof year === 'number' ? year : undefined}
                     aria-label={i18n[locale].YEAR}
-                    onBlur={onBlur}
                     aria-describedby={ariaDescribedby()}
                     aria-labelledby={labelId}
                 >
