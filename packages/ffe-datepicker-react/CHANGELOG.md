@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.2...@sb1/ffe-datepicker-react@10.0.3) (2024-12-19)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** event type onBlur ([e38c307](https://github.com/SpareBank1/designsystem/commit/e38c307f3c25adef83305603b440cd58a8491b5a))
+
+
+
+
+
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.1...@sb1/ffe-datepicker-react@10.0.2) (2024-12-18)
 
 

@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-feedback-react",
-    "version": "4.2.4",
+    "version": "4.2.5",
     "description": "React component for ffe-feedback",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -29,7 +29,7 @@
         "@sb1/ffe-buttons-react": "^24.0.27",
         "@sb1/ffe-core-react": "^9.1.8",
         "@sb1/ffe-feedback": "^2.1.0",
-        "@sb1/ffe-form-react": "^22.0.0",
+        "@sb1/ffe-form-react": "^22.0.1",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
