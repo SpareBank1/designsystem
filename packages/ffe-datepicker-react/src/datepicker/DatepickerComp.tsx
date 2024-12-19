@@ -15,7 +15,7 @@ import { isDateInputWithTwoDigitYear, validateDate } from '../util/dateUtil';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
 import { getSimpleDateFromString } from '../datelogic/simpledate';
-import { ErrorFieldMessage } from '@sb1/ffe-form-react/src/message';
+import { ErrorFieldMessage } from '@sb1/ffe-form-react';
 import i18n from '../i18n/i18n';
 import { isMonth } from '../types';
 
@@ -25,7 +25,7 @@ export interface DatepickerCompProps {
     'aria-describedby'?: React.ComponentProps<'input'>['aria-describedby'];
     ariaDescribedby?: React.ComponentProps<'input'>['aria-describedby'];
     /** Triggered when focus leaves one of the fields (dd, mm, yyyy), and the next focused element is not one of these fields.*/
-    onBlur?: (evt: React.FocusEvent) => void;
+    onBlur?: (evt: React.FocusEvent<HTMLElement>) => void;
     calendarAbove?: boolean;
     id?: string;
     maxDate?: string | null;
