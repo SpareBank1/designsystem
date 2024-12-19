@@ -288,7 +288,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     min={1}
                     max={12}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
-                        onChange(`${newValue}.${month}.${year}`);
+                        onChange(`${day}.${newValue}.${year}`);
                         return allowFocusNext
                             ? setMonth(newValue, () =>
                                   yearRef.current?.focus({
@@ -323,7 +323,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     min={1}
                     max={9999}
                     onSpinButtonChange={newValue => {
-                        onChange(`${newValue}.${month}.${year}`);
+                        onChange(`${day}.${month}.${newValue}`);
                         setYear(newValue);
                     }}
                     prevSpinButton={monthRef}
