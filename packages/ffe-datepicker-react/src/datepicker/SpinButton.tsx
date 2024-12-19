@@ -44,20 +44,24 @@ export const SpinButton = React.forwardRef<HTMLSpanElement, SpinButtonProps>(
                 history.current = [];
                 onSpinButtonChange(history.current);
             } else if (evt.key === 'ArrowUp') {
+                evt.preventDefault();
                 let newValue = (value ?? 0) + 1;
                 if (newValue && newValue !== null && newValue > max) {
                     newValue = min;
                 }
                 onSpinButtonChange([newValue], false);
             } else if (evt.key === 'ArrowDown') {
+                evt.preventDefault();
                 let newValue = (value ?? 0) - 1;
                 if (newValue < min) {
                     newValue = max;
                 }
                 onSpinButtonChange([newValue], false);
             } else if (evt.key === 'ArrowLeft') {
+                evt.preventDefault();
                 prevSpinButton?.current?.focus();
             } else if (evt.key === 'ArrowRight') {
+                evt.preventDefault();
                 nextSpinButton?.current?.focus();
             }
         };
