@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.4...@sb1/ffe-datepicker-react@10.0.5) (2024-12-19)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** need to pad day and month in onChange ([b634117](https://github.com/SpareBank1/designsystem/commit/b63411753db334db1ac3eeb5ff0493f428655f01))
+
+
+
+
+
 ## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.3...@sb1/ffe-datepicker-react@10.0.4) (2024-12-19)
 
 
