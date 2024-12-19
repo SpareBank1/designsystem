@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import { DatepickerContext } from './DatepickerContext';
 import { SpinButton } from './SpinButton';
-import { PadZero } from './PadZero';
+import { padZero } from './padZero';
 import { Button } from '../button';
 import { Calendar } from '../calendar';
 import { isDateInputWithTwoDigitYear, validateDate } from '../util/dateUtil';
@@ -18,6 +18,7 @@ import { getSimpleDateFromString } from '../datelogic/simpledate';
 import { ErrorFieldMessage } from '@sb1/ffe-form-react';
 import i18n from '../i18n/i18n';
 import { isMonth } from '../types';
+import { toNumber } from './toNumber';
 
 export interface DatepickerCompProps {
     'aria-invalid'?: React.ComponentProps<'input'>['aria-invalid'];
@@ -261,7 +262,10 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     min={1}
                     max={31}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
-                        onChange(`${newValue}.${month}.${year}`);
+                        onChange(
+                            `${padZero(toNumber(newValue))}.${month}.${year}`,
+                        );
+
                         return allowFocusNext
                             ? setDay(newValue, () =>
                                   monthRef.current?.focus({
@@ -279,7 +283,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     aria-describedby={ariaDescribedby()}
                     aria-labelledby={labelId}
                 >
-                    {day ? <PadZero value={day} /> : 'dd'}
+                    {day ? padZero(day) : 'dd'}
                 </SpinButton>
                 .
                 <SpinButton
@@ -288,7 +292,9 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     min={1}
                     max={12}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
-                        onChange(`${day}.${newValue}.${year}`);
+                        onChange(
+                            `${day}.${padZero(toNumber(newValue))}.${year}`,
+                        );
                         return allowFocusNext
                             ? setMonth(newValue, () =>
                                   yearRef.current?.focus({
@@ -313,7 +319,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     aria-describedby={ariaDescribedby()}
                     aria-labelledby={labelId}
                 >
-                    {month ? <PadZero value={month} /> : 'mm'}
+                    {month ? padZero(month) : 'mm'}
                 </SpinButton>
                 .
                 <SpinButton

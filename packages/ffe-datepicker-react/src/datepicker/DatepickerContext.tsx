@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react';
 import { Locale } from '../datelogic/types';
 import { validateDate } from '../util/dateUtil';
 import { getSimpleDateFromString } from '../datelogic/simpledate';
+import { toNumber } from './toNumber';
 
 interface DatepickerContextInterface {
     day?: number | null;
@@ -55,16 +56,6 @@ export const DatepickerProvider: React.FC<Props> = ({
         newDate?.toString() ?? '',
     );
 
-    const getTotal = (numbers: (number | undefined)[]) => {
-        const validNumbers = numbers.filter(it => typeof it === 'number');
-        return validNumbers
-            .map(
-                (it, index) =>
-                    (it ?? 1) * Math.pow(10, validNumbers.length - index - 1),
-            )
-            .reduce((acc, curr) => acc + curr, 0);
-    };
-
     return (
         <DatepickerContext.Provider
             value={{
@@ -74,7 +65,7 @@ export const DatepickerProvider: React.FC<Props> = ({
                 setDay: (newValue, focusNext = undefined) => {
                     const numbers = newValue.slice(-2);
                     const [first, second] = numbers;
-                    const total = getTotal(numbers);
+                    const total = toNumber(numbers);
                     if (total > MAX_DAYS) {
                         focusNext?.();
                     } else if (first > 3) {
@@ -90,7 +81,7 @@ export const DatepickerProvider: React.FC<Props> = ({
                 setMonth: (newValue, focusNext = undefined) => {
                     const numbers = newValue.slice(-2);
                     const [first, second] = numbers;
-                    const total = getTotal(numbers);
+                    const total = toNumber(numbers);
 
                     if (total > MONTHS_PER_YEAR) {
                         focusNext?.();
@@ -105,7 +96,7 @@ export const DatepickerProvider: React.FC<Props> = ({
                     }
                 },
                 setYear: newValue => {
-                    setYear(getTotal(newValue.slice(-4)));
+                    setYear(toNumber(newValue.slice(-4)));
                 },
                 calendarActiveDate,
                 setCalendarActiveDate: date => {
