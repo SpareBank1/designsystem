@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.5...@sb1/ffe-datepicker-react@10.0.6) (2024-12-19)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** prevent scroll when arrow buttons are pressed for changing date ([bd1e291](https://github.com/SpareBank1/designsystem/commit/bd1e291b4367080f18d7adb3ab42c811cd1837d3))
+
+
+
+
+
 ## [10.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.4...@sb1/ffe-datepicker-react@10.0.5) (2024-12-19)
 
 
