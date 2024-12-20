@@ -40,9 +40,14 @@ export const SpinButton = React.forwardRef<HTMLSpanElement, SpinButtonProps>(
                         ? (history.current = [parseInt(evt.key)])
                         : history.current.concat(parseInt(evt.key));
                 onSpinButtonChange(history.current);
-            } else if (evt.key === 'Backspace') {
+            } else if (evt.key === 'Backspace' || evt.key === 'Delete') {
                 history.current = [];
-                onSpinButtonChange(history.current);
+                if (value === 0) {
+                    prevSpinButton?.current?.focus();
+                    return;
+                }
+                const newValue = value?.toString().slice(0, -1);
+                onSpinButtonChange(newValue ? [parseInt(newValue)] : []);
             } else if (evt.key === 'ArrowUp') {
                 evt.preventDefault();
                 let newValue = (value ?? 0) + 1;

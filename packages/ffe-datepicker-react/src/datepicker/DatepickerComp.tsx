@@ -29,7 +29,9 @@ export interface DatepickerCompProps {
     onBlur?: (evt: React.FocusEvent<HTMLElement>) => void;
     calendarAbove?: boolean;
     id?: string;
+    /* Latest allowed date. With format 'dd.mm.yyyy'*/
     maxDate?: string | null;
+    /* Earliest allowed date. With format 'dd.mm.yyyy'*/
     minDate?: string | null;
     onChange: (date: string) => void;
     fullWidth?: boolean;
@@ -116,6 +118,9 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
 
             if (formattedDate !== dateString) {
                 onChange(formattedDate);
+                setDay([date.date]);
+                setMonth([date.month + 1]);
+                setYear([date.year]);
             }
             setLastValidDate(formattedDate);
         });
@@ -224,6 +229,19 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
         return ariaDescribedbyTotal as unknown as React.ComponentPropsWithRef<'span'>['aria-describedby'];
     };
 
+    const handlePaste = (evt: React.ClipboardEvent) => {
+        evt.preventDefault();
+
+        const paste = (evt.clipboardData || window.Clipboard).getData('text');
+        const date = getSimpleDateFromString(paste);
+        if (date) {
+            setDay([date.date]);
+            setMonth([date.month + 1]);
+            setYear([date.year]);
+            onChange(`${day}.${month}.${year}`);
+        }
+    };
+
     return (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions
         <div
@@ -253,6 +271,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                         elementReceivingFocus !== monthRef.current
                     ) {
                         onBlur?.(evt);
+                        validateDateIntervals();
                     }
                 }}
             >
@@ -261,6 +280,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     value={day ?? undefined}
                     min={1}
                     max={31}
+                    onPaste={handlePaste}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
                         onChange(
                             `${padZero(toNumber(newValue))}.${month}.${year}`,
@@ -291,6 +311,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     value={month ?? undefined}
                     min={1}
                     max={12}
+                    onPaste={handlePaste}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
                         onChange(
                             `${day}.${padZero(toNumber(newValue))}.${year}`,
@@ -328,6 +349,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     value={year ?? undefined}
                     min={1}
                     max={9999}
+                    onPaste={handlePaste}
                     onSpinButtonChange={newValue => {
                         onChange(`${day}.${month}.${newValue}`);
                         setYear(newValue);
