@@ -1,0 +1,59 @@
+@import '@sb1/ffe-core/less/spacing';
+@import '@sb1/ffe-core/less/breakpoints';
+// Variables
+@import '@sb1/ffe-core/less/colors';
+@import '@sb1/ffe-core/less/breakpoints';
+@import '@sb1/ffe-core/less/dimensions';
+@import '@sb1/ffe-core/less/motion';
+@import '@sb1/ffe-core/less/spacing';
+@import '@sb1/ffe-core/less/theme';
+
+// Basic ypography
+@import '@sb1/ffe-core/less/typography';
+// Accessbility helpers
+@import '@sb1/ffe-core/less/accessibility';
+
+.sbanky-home-grid {
+    background-color: @ffe-farge-frost-30;
+    height: 100%;
+    padding: @ffe-spacing-2xl;
+    min-height: 1000px;
+
+    .content {
+        padding: @ffe-spacing-md;
+    }
+
+    body.native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-farge-svart;
+        }
+    }
+}
+
+.sbanky-wave-wrapper {
+    position: relative;
+
+    .sbanky-wave {
+        position: absolute;
+        width: 100%;
+        padding-top: 310px;
+
+        @media (min-width: @breakpoint-sm) {
+            padding-top: 310px;
+        }
+
+        @media (min-width: @breakpoint-lg) {
+            padding-top: 410px;
+        }
+    }
+
+    &__thin {
+        .sbanky-wave {
+            padding-top: 160px;
+
+            body.native & {
+                padding-top: @ffe-spacing-4xl;
+            }
+        }
+    }
+}
