@@ -24,7 +24,8 @@
         display: inline-grid;
         grid-template-columns: auto 1fr;
         position: relative;
-        border: 2px solid var(--ffe-radio-block-border-color);
+        border: var(--ffe-g-border-width) solid
+            var(--ffe-radio-block-border-color);
         border-radius: var(--ffe-g-border-radius);
         margin-right: var(--ffe-spacing-xs);
         color: var(--ffe-v-input-color);
@@ -38,7 +39,8 @@
             left: 20px;
             z-index: 1;
             background-color: var(--ffe-v-input-bg-color);
-            border: 2px solid var(--ffe-radio-block-border-color);
+            border: var(--ffe-g-border-width) solid
+                var(--ffe-radio-block-border-color);
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -53,9 +55,9 @@
         display: block;
         padding: var(--ffe-spacing-xs) var(--ffe-spacing-3xl)
             var(--ffe-spacing-xs);
-        border-bottom: thin solid var(--ffe-radio-block-border-color);
         color: var(--ffe-radio-block-header-color);
         background-color: var(--ffe-radio-block-header-bg-color);
+        border-radius: var(--ffe-g-border-radius) var(--ffe-g-border-radius) 0 0;
     }
 
     &__wrapper {
