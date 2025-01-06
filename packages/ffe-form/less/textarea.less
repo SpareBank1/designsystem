@@ -1,14 +1,14 @@
 .ffe-textarea {
     display: block;
     width: 100%;
-    padding: var(--ffe-spacing-sm);
+    padding: var(--ffe-v-input-padding);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     border-radius: var(--ffe-g-border-radius);
-    border: 2px solid var(--ffe-g-border-color);
+    border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
     background-color: var(--ffe-v-input-bg-color);
     color: var(--ffe-v-input-color);
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
     font-size: var(--ffe-fontsize-form-input);
 
     @media (hover: hover) and (pointer: fine) {
@@ -19,8 +19,7 @@
 
     &:focus,
     &:active {
-        border-color: var(--ffe-v-input-bg-color);
-        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
         outline: none;
     }
 
@@ -36,7 +35,6 @@
     border-style: solid;
 
     &:focus {
-        border-color: var(--ffe-v-input-bg-color);
-        box-shadow: 0 0 0 2px var(--ffe-g-error-color);
+        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
     }
 }

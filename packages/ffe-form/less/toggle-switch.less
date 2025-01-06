@@ -52,7 +52,7 @@
             width: 56px;
             height: 30px;
             background: var(--ffe-g-border-color);
-            border-radius: 15px;
+            border-radius: 52px;
             left: auto;
             right: 0;
             transition:
@@ -68,8 +68,8 @@
             background: var(--ffe-v-input-bg-color);
             border-radius: 50%;
             position: absolute;
-            left: 2px;
-            transition: transform var(--ffe-transition-duration) var(--ffe-ease)-in-out-back;
+            left: 4px;
+            transition: transform var(--ffe-transition-duration) var(--ffe-ease);
         }
 
         @media (hover: hover) and (pointer: fine) {
@@ -80,7 +80,7 @@
     }
 
     &__input:checked + &__label &__switch::after {
-        transform: translateX(27px);
+        transform: translateX(24px);
     }
 
     &__input:checked + &__label &__switch::before {
