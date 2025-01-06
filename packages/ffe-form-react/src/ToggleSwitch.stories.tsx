@@ -15,20 +15,41 @@ export const Standard: Story = {
         children: 'Jeg vil gjerne ha reklame',
     },
     render: function Render(args) {
-        return <ToggleSwitch {...args} />;
+        const [checked, setChecked] = React.useState(true);
+        return (
+            <ToggleSwitch
+                {...args}
+                checked={checked}
+                onChange={e => setChecked(e.target.checked)}
+            />
+        );
     },
 };
 
 export const HideOnOff: Story = {
     args: { ...Standard.args, hideOnOff: true },
     render: function Render(args) {
-        return <ToggleSwitch {...args} />;
+        const [checked, setChecked] = React.useState(true);
+        return (
+            <ToggleSwitch
+                {...args}
+                checked={checked}
+                onChange={e => setChecked(e.target.checked)}
+            />
+        );
     },
 };
 
 export const Description: Story = {
     args: { ...Standard.args, description: 'Send meg spam' },
     render: function Render(args) {
-        return <ToggleSwitch {...args} />;
+        const [checked, setChecked] = React.useState(true);
+        return (
+            <ToggleSwitch
+                {...args}
+                checked={checked}
+                onChange={e => setChecked(e.target.checked)}
+            />
+        );
     },
 };
