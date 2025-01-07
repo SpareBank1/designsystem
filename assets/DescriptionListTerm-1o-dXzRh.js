@@ -1,0 +1,1 @@
+import{R as t}from"./index-ne9I_3bB.js";import{c as r}from"./index-B6-3w37c.js";const i=({className:e,...s})=>t.createElement("dt",{className:r("ffe-description-list__term",e),...s});i.__docgenInfo={description:"",methods:[],displayName:"DescriptionListTerm"};export{i as D};
