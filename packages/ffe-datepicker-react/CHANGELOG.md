@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.6...@sb1/ffe-datepicker-react@10.1.0) (2025-01-07)
+
+
+### Features
+
+* **ffe-datepicker-react:** tillater kopiering inn i datepicker-feltet. Og flere fixer ([3b4bf08](https://github.com/SpareBank1/designsystem/commit/3b4bf08c4b6d398413f4d7a45b78f82be7cfccd7))
+
+
+
+
+
 ## [10.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.0.5...@sb1/ffe-datepicker-react@10.0.6) (2024-12-19)
 
 
