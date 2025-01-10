@@ -79,7 +79,7 @@ export default defineConfig({
       less: {
         javascriptEnabled: true,
         math: 'always',
-        additionalData: '@import "@sb1/ffe-core/less/colors.less";'
+        additionalData: '@import "@sb1/ffe-core/less/ffe.less";'
       }
     }
   }
