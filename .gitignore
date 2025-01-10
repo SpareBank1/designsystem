@@ -26,3 +26,11 @@ types/
 
 storybook-static
 *storybook.log
+
+dist
+*.local
+.env
+.env.*
+!.env.example
+coverage
+.vite

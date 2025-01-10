@@ -8,11 +8,13 @@
     "preview": "vite preview",
     "prebuild": "node scripts/collect-less.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@sb1/ffe-accordion": "^11.1.0",
     "@sb1/ffe-account-selector-react": "^30.1.7",
     "@sb1/ffe-buttons": "^19.1.0",
     "@sb1/ffe-buttons-react": "^24.0.27",
@@ -43,9 +45,20 @@
     "@sb1/ffe-system-message-react": "^11.0.24",
     "@sb1/ffe-tables-react": "^11.0.18",
     "@sb1/ffe-tabs-react": "^10.0.15",
-    "glob": "^11.0.0",
-    "less": "^4.2.1",
+    "@sb1/ffe-webfonts": "^5.0.13",
+    "postcss-preset-env": "^10.1.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@types/node": "^20.11.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "glob": "^10.3.10",
+    "less": "^4.2.0",
+    "postcss": "^8.4.31",
+    "typescript": "^5.3.3",
+    "vite": "^6.0.7",
+    "vite-plugin-static-copy": "^2.2.0"
   }
 }
