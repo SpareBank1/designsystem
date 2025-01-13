@@ -1,12 +1,20 @@
+@import (reference) '@sb1/ffe-core/less/colors';
+
 .sb1-sidebar {
     background-color: var(--ffe-farge-frost-30);
-    padding: var(--ffe-spacing-lg);
+    padding: var(--ffe-spacing-md);
+    min-height: 100vh;
     border-radius: var(--ffe-g-border-radius);
-    margin-bottom: var(--ffe-spacing-lg);
+    margin-bottom: var(--ffe-spacing-md);
+    position: sticky;
+    top: var(--ffe-spacing-md);
 
     &__title {
         color: var(--ffe-g-heading-color);
         margin-bottom: var(--ffe-spacing-md);
+        padding-bottom: var(--ffe-spacing-xs);
+        border-bottom: 1px solid var(--ffe-farge-frost-70);
+        font-size: var(--ffe-font-size-lg);
     }
 
     &__nav {
@@ -17,43 +25,93 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--ffe-spacing-3xs);
     }
 
     &__item {
-        margin-bottom: var(--ffe-spacing-xs);
+        margin: 0;
 
-        &:last-child {
-            margin-bottom: 0;
+        &--active {
+            .sb1-sidebar__link {
+                background-color: var(--ffe-farge-frost-70);
+                color: var(--ffe-farge-fjell);
+                font-weight: var(--ffe-g-font-weight-bold);
+            }
         }
     }
 
-    &__link {
-        display: block;
+    // Modify FFELink styles when used in sidebar
+    .ffe-link.sb1-sidebar__link {
+        display: flex;
+        align-items: center;
+        width: 60%;
         padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
-        color: var(--ffe-g-link-color);
-        text-decoration: none;
-        border-radius: var(--ffe-g-border-radius);
+        border-radius: var(--ffe-g-border-radius-sm);
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        border: 2px solid transparent;
+        text-decoration: none;
+        font-size: var(--ffe-font-size-md);
+        line-height: var(--ffe-line-height-md);
+        gap: var(--ffe-spacing-xs);
 
-        &:hover {
-            background-color: var(--ffe-farge-frost);
-            color: var(--ffe-g-link-color-hover);
-            text-decoration: none;
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(--ffe-farge-frost-70);
+                color: var(--ffe-farge-fjell);
+                transform: translateX(var(--ffe-spacing-4xs));
+            }
         }
 
         &:focus {
             outline: none;
+            border-color: var(--ffe-farge-vann);
             box-shadow: 0 0 0 2px var(--ffe-farge-vann);
+            transform: translateX(var(--ffe-spacing-4xs));
+        }
+
+        &:active {
+            background-color: var(--ffe-farge-frost-100);
+            border-color: var(--ffe-farge-vann);
+            transform: translateX(var(--ffe-spacing-3xs));
         }
     }
 
     // Dark mode support
     @media (prefers-color-scheme: dark) {
-        background-color: var(--ffe-farge-svart);
+        body.native & {
+            background-color: var(--ffe-farge-svart);
 
-        &__link {
-            &:hover {
-                background-color: var(--ffe-farge-natt);
+            &__title {
+                border-bottom-color: var(--ffe-farge-koksgraa);
+            }
+
+            .ffe-link.sb1-sidebar__link {
+                color: var(--ffe-farge-hvit);
+
+                &:hover {
+                    background-color: var(--ffe-farge-natt);
+                    color: var(--ffe-farge-vann-70);
+                }
+
+                &:focus {
+                    border-color: var(--ffe-farge-vann-70);
+                    box-shadow: 0 0 0 2px var(--ffe-farge-vann-70);
+                }
+
+                &:active {
+                    background-color: var(--ffe-farge-koksgraa);
+                }
+
+                &--active {
+                    background-color: var(--ffe-farge-natt);
+                }
             }
         }
     }

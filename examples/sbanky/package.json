@@ -47,6 +47,7 @@
         "@sb1/ffe-tables-react": "^11.0.18",
         "@sb1/ffe-tabs-react": "^10.0.15",
         "@sb1/ffe-webfonts": "^5.0.13",
+        "lucide-react": "^0.471.1",
         "postcss-preset-env": "^10.1.3",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
