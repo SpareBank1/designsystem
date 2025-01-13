@@ -1,6 +1,6 @@
 import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
 import { ButtonsDemo } from './components/ButtonsDemo';
-import { Wave } from '@sb1/ffe-core-react';
+import { Paragraph, Wave } from '@sb1/ffe-core-react';
 import { ContextMessage } from '@sb1/ffe-messages-react';
 import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
 
@@ -19,8 +19,11 @@ export const SbankyWave = () => (
 const App = () => {
     return (
         <Grid gap="lg" className="sbanky-home-grid">
-            {/*<SbankyWave />*/}
+            <SbankyWave />
             <GridRow>
+                <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
+                    <Paragraph>Paragraph component, er fonten med?</Paragraph>
+                </GridCol>
                 <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
                     <ContextMessage
                         closeButton={true}
