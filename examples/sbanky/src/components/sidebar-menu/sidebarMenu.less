@@ -1,0 +1,60 @@
+.sb1-sidebar {
+    background-color: var(--ffe-farge-frost-30);
+    padding: var(--ffe-spacing-lg);
+    border-radius: var(--ffe-g-border-radius);
+    margin-bottom: var(--ffe-spacing-lg);
+
+    &__title {
+        color: var(--ffe-g-heading-color);
+        margin-bottom: var(--ffe-spacing-md);
+    }
+
+    &__nav {
+        width: 100%;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        margin-bottom: var(--ffe-spacing-xs);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
+        color: var(--ffe-g-link-color);
+        text-decoration: none;
+        border-radius: var(--ffe-g-border-radius);
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+        &:hover {
+            background-color: var(--ffe-farge-frost);
+            color: var(--ffe-g-link-color-hover);
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--ffe-farge-vann);
+        }
+    }
+
+    // Dark mode support
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--ffe-farge-svart);
+
+        &__link {
+            &:hover {
+                background-color: var(--ffe-farge-natt);
+            }
+        }
+    }
+}
