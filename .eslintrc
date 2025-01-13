@@ -8,6 +8,7 @@
       }
     },
     "rules": {
+      "react/ react-in-jsx-scope": "off",
       "no-duplicate-imports": 0, // Skru av denne fordi den krasjer med import/no-duplicates
       "import/no-duplicates": 2,
       "no-use-before-define": 0,
