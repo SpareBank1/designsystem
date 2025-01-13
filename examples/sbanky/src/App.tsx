@@ -1,8 +1,9 @@
 import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
-import { ButtonsDemo } from './components/ButtonsDemo';
+import { ButtonPair } from './components/button-pair.tsx/ButtonPair';
 import { Paragraph, Wave } from '@sb1/ffe-core-react';
 import { ContextMessage } from '@sb1/ffe-messages-react';
 import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
+import SidebarMenu from './components/sidebar-menu/SidebarMenu';
 
 export const SbankyWave = () => (
     <div className="sbanky-wave-wrapper">
@@ -19,6 +20,7 @@ export const SbankyWave = () => (
 const App = () => {
     return (
         <Grid gap="lg" className="sbanky-home-grid">
+            <SidebarMenu />
             <SbankyWave />
             <GridRow>
                 <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
@@ -35,7 +37,7 @@ const App = () => {
                     </ContextMessage>
                 </GridCol>
                 <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
-                    <ButtonsDemo
+                    <ButtonPair
                         onPrimaryClick={() => console.log('Primary clicked')}
                         onSecondaryClick={() =>
                             console.log('Secondary clicked')
