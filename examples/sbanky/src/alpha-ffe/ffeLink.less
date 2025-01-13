@@ -1,0 +1,108 @@
+@import (reference) '@sb1/ffe-core/less/colors';
+@import (reference) '@sb1/ffe-core/less/motion';
+
+.ffe-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--ffe-spacing-xs);
+    color: @ffe-blue-azure;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: @ffe-transition-duration @ffe-ease-in-out-back;
+    font-family: var(--ffe-g-font);
+
+    // Variants
+    &--primary {
+        color: @ffe-blue-azure;
+
+        &:hover {
+            color: @ffe-blue-royal;
+            text-decoration: none;
+        }
+
+        &:visited {
+            color: @ffe-purple-magenta;
+        }
+    }
+
+    &--secondary {
+        color: @ffe-farge-fjell;
+
+        &:hover {
+            color: @ffe-blue-royal;
+            text-decoration: none;
+        }
+    }
+
+    // Modifiers
+    &--no-underline {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--inline {
+        display: inline;
+
+        > svg {
+            margin: 0.1em 0.1em -0.1em;
+            transform: translateY(0.05em);
+            display: inline;
+            vertical-align: baseline;
+        }
+    }
+
+    // Focus states
+    &:focus-visible {
+        outline: none;
+        color: @ffe-blue-azure;
+        text-decoration: none;
+        background-color: fade(@ffe-blue-azure, 10%);
+        box-shadow: 0 0 0 2px @ffe-blue-azure;
+        border-radius: 2px;
+    }
+
+    &:active {
+        outline: none;
+        color: @ffe-blue-royal;
+        text-decoration: none;
+        background-color: fade(@ffe-blue-royal, 10%);
+        box-shadow: 0 0 0 2px @ffe-blue-royal;
+    }
+
+    // Icon support
+    svg {
+        color: inherit;
+        flex-shrink: 0;
+    }
+
+    // Dark mode support
+    body.native & {
+        @media (prefers-color-scheme: dark) {
+            &--primary {
+                color: @ffe-farge-vann-70;
+
+                &:hover {
+                    color: @ffe-farge-vann-30;
+                }
+            }
+
+            &--secondary {
+                color: @ffe-farge-lysgraa;
+
+                &:hover {
+                    color: @ffe-farge-vann-30;
+                }
+            }
+
+            &:focus-visible,
+            &:active {
+                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
+                background-color: fade(@ffe-farge-vann-70, 10%);
+            }
+        }
+    }
+}
