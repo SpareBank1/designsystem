@@ -1,3 +1,12 @@
+# Sparebank1 Designsystem Example App
+
+## About
+
+This example app is meant to help you see how the designssystem components can be used in a React app.
+Do not copy this and assume it is ready for production in your Sparebank1 project, but use it as a starting
+point. Only the actual components imported from the designsystem have gone through the processes that ensure it is
+up to our standards when it comes to accessibility, performance, and design.
+
 ## How this app was setup
 
 ```bash
