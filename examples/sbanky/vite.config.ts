@@ -71,6 +71,7 @@ export default defineConfig(async () => {
             alias: {
                 '@': resolve(__dirname, 'src'),
                 '@src': resolve(__dirname, 'src'),
+                '@affe': resolve(__dirname, 'src/alpha-ffe'),
                 '@components': resolve(__dirname, 'src/components'),
                 '@styles': resolve(__dirname, 'src/styles'),
             },

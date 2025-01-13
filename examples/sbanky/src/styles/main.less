@@ -1,16 +1,28 @@
 .sbanky-home-grid {
     height: 100%;
-    padding: @ffe-spacing-2xl;
+    padding: var(--ffe-spacing-2xl);
     min-height: 1000px;
 
     .content {
-        padding: @ffe-spacing-md;
+        padding: var(--ffe-spacing-md);
     }
 
     body.native & {
         @media (prefers-color-scheme: dark) {
             background-color: @ffe-farge-svart;
         }
+    }
+}
+
+.sb1-sidebar {
+    position: sticky;
+    top: var(--ffe-spacing-2xl);
+    height: fit-content;
+    margin-bottom: 0;
+
+    @media (max-width: @breakpoint-md) {
+        position: static;
+        margin-bottom: var(--ffe-spacing-lg);
     }
 }
 
