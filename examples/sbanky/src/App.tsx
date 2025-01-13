@@ -20,42 +20,56 @@ export const SbankyWave = () => (
 const App = () => {
     return (
         <Grid gap="lg" className="sbanky-home-grid">
-            <SidebarMenu />
-            <SbankyWave />
             <GridRow>
-                <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
-                    <Paragraph>Paragraph component, er fonten med?</Paragraph>
+                <GridCol sm={12} md={3} lg={4}>
+                    <SidebarMenu />
                 </GridCol>
-                <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
-                    <ContextMessage
-                        closeButton={true}
-                        header="Meldingstittel"
-                        type="info"
-                    >
-                        Kontekstuelle meldinger er informasjon som skal gis i en
-                        kontekst
-                    </ContextMessage>
-                </GridCol>
-                <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
-                    <ButtonPair
-                        onPrimaryClick={() => console.log('Primary clicked')}
-                        onSecondaryClick={() =>
-                            console.log('Secondary clicked')
-                        }
-                    />
-                </GridCol>
-                <GridCol md={{ cols: 12 }} lg={{ cols: 12 }}>
-                    <Accordion headingLevel={2}>
-                        <AccordionItem heading="Tittel">
-                            Skjult innhold
-                        </AccordionItem>
-                        <AccordionItem heading={<span>Enda en tittel</span>}>
-                            Mer skjult innhold
-                        </AccordionItem>
-                        <AccordionItem heading="En siste tittel">
-                            Enda mer innhold
-                        </AccordionItem>
-                    </Accordion>
+                <GridCol sm={12} md={6} lg={8}>
+                    <SbankyWave />
+                    <GridRow>
+                        <GridCol md={12} lg={12}>
+                            <Paragraph
+                                style={{ color: '#fff', padding: '10px' }}
+                            >
+                                Paragraph component, er fonten med?
+                            </Paragraph>
+                        </GridCol>
+                        <GridCol md={12} lg={12}>
+                            <ContextMessage
+                                closeButton={true}
+                                header="Meldingstittel"
+                                type="info"
+                            >
+                                Kontekstuelle meldinger er informasjon som skal
+                                gis i en kontekst
+                            </ContextMessage>
+                        </GridCol>
+                        <GridCol md={12} lg={12}>
+                            <ButtonPair
+                                onPrimaryClick={() =>
+                                    console.log('Primary clicked')
+                                }
+                                onSecondaryClick={() =>
+                                    console.log('Secondary clicked')
+                                }
+                            />
+                        </GridCol>
+                        <GridCol md={12} lg={12}>
+                            <Accordion headingLevel={2}>
+                                <AccordionItem heading="Tittel">
+                                    Skjult innhold
+                                </AccordionItem>
+                                <AccordionItem
+                                    heading={<span>Enda en tittel</span>}
+                                >
+                                    Mer skjult innhold
+                                </AccordionItem>
+                                <AccordionItem heading="En siste tittel">
+                                    Enda mer innhold
+                                </AccordionItem>
+                            </Accordion>
+                        </GridCol>
+                    </GridRow>
                 </GridCol>
             </GridRow>
         </Grid>
