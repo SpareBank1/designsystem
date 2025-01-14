@@ -3,6 +3,8 @@ import type { UserConfig, PluginOption } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { glob } from 'glob';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 import purgecss from '@fullhuman/postcss-purgecss';
 
 async function collectFfeImports() {
@@ -46,6 +48,8 @@ export default defineConfig(async () => {
             },
             postcss: {
                 plugins: [
+                    autoprefixer,
+                    tailwindcss,
                     purgecss({
                         content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
                         defaultExtractor: content =>

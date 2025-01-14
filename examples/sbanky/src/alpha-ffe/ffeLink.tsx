@@ -1,76 +1,21 @@
-import cl from 'classnames';
 import React, { forwardRef } from 'react';
-import './ffeLink.less';
+import { clsx } from 'clsx';
 
 export type LinkVariant = 'primary' | 'secondary' | 'tertiary';
 
 export interface FFELinkBaseProps {
-    /**
-     * Controls link underline behavior.
-     * Defaults to true for accessibility, can only be disabled in clear navigation contexts
-     * @default true
-     */
     underline?: boolean;
-
-    /**
-     * Makes the link inline for better text flow
-     * @default false
-     */
     inline?: boolean;
-
-    /**
-     * Visual style variant of the link
-     * @default "primary"
-     */
     variant?: LinkVariant;
-
-    /**
-     * Link content
-     */
     children: React.ReactNode;
-
-    /**
-     * Additional className
-     */
     className?: string;
 }
 
 export type FFELinkProps<C extends React.ElementType = 'a'> =
     FFELinkBaseProps & {
-        /**
-         * Element or component to render as
-         * @default 'a'
-         */
         as?: C;
     } & Omit<React.ComponentPropsWithoutRef<C>, keyof FFELinkBaseProps>;
 
-export type FFELinkComponent = <C extends React.ElementType = 'a'>(
-    props: FFELinkProps<C>,
-) => React.ReactElement | null;
-
-/**
- * Link component following SpareBank1 design system.
- * Supports polymorphic "as" prop for rendering as different elements while maintaining proper typing.
- *
- * @example Basic usage
- * ```jsx
- * <FFELink href="#">Standard link</FFELink>
- * ```
- *
- * @example With variant and inline
- * ```jsx
- * <FFELink href="#" variant="secondary" inline>
- *   Inline secondary link
- * </FFELink>
- * ```
- *
- * @example As a different element
- * ```jsx
- * <FFELink as={RouterLink} to="/path">
- *   Router link
- * </FFELink>
- * ```
- */
 export const FFELink = forwardRef(
     (
         {
@@ -86,14 +31,36 @@ export const FFELink = forwardRef(
     ) => {
         const Component = as || 'a';
 
+        const baseStyles =
+            'relative flex items-center gap-2 transition-all duration-200';
+        const variantStyles = {
+            primary:
+                'text-blue-600 hover:text-blue-800 visited:text-purple-600 dark:text-blue-400 dark:hover:text-blue-300',
+            secondary:
+                'text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-blue-300',
+            tertiary:
+                'text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200',
+        };
+        const underlineStyles = underline
+            ? 'underline hover:no-underline'
+            : 'no-underline hover:underline';
+        const inlineStyles = inline ? 'inline' : 'inline-flex';
+        const focusStyles =
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:bg-blue-50 dark:focus-visible:ring-blue-400 dark:focus-visible:bg-blue-900/20';
+
         return (
             <Component
                 {...rest}
                 ref={ref}
-                className={cl('ffe-link', className, `ffe-link--${variant}`, {
-                    'ffe-link--no-underline': !underline,
-                    'ffe-link--inline': inline,
-                })}
+                className={clsx(
+                    baseStyles,
+                    variantStyles[variant],
+                    underlineStyles,
+                    inlineStyles,
+                    focusStyles,
+                    'active:ring-2 active:ring-blue-700 active:bg-blue-100 dark:active:ring-blue-300 dark:active:bg-blue-900/30',
+                    className,
+                )}
             >
                 {children}
             </Component>
@@ -102,5 +69,3 @@ export const FFELink = forwardRef(
 );
 
 FFELink.displayName = 'FFELink';
-
-export default FFELink;

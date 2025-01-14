@@ -1,34 +1,36 @@
-# Sparebank1 Designsystem Example App
+# Sparebank1 Designsystem Eksempel App
 
-## About
+## Om
 
-This example app is meant to help you see how the designssystem components can be used in a React app.
-Do not copy this and assume it is ready for production in your Sparebank1 project, but use it as a starting
-point. Only the actual components imported from the designsystem have gone through the processes that ensure it is
-up to our standards when it comes to accessibility, performance, and design.
+Denne eksempel-appen er ment å hjelpe deg å se hvordan designsystem-komponentene kan brukes i en React-app.
+Ikke kopier dette og anta at det er klart for produksjon i ditt Sparebank1-prosjekt, men bruk det som et
+utgangspunkt. Bare de faktiske komponentene importert fra designsystemet har gjennomgått prosessene som sikrer at det
+oppfyller våre standarder når det gjelder tilgjengelighet, ytelse og design.
 
-## How this app was setup
+Det er også opinionert og er kulminasjonen av vår erfaring med å utvikle apper innen AWL-plattformen til Sparebank1.
+
+## Hvordan denne appen ble satt opp
 
 ```bash
-# Create project directory
+# Opprett prosjektmappe
 mkdir sbanky
 cd sbanky
 ```
 
-### Initialize project with npm
+### Initialiser prosjekt med npm
 
 ```bash
 npm init -y
 ```
 
-### Install core dependencies for React + TypeScript + Vite
+### Installer kjerneavhengigheter for React + TypeScript + Vite
 ```bash
 
 npm install react react-dom
 npm install -D @vitejs/plugin-react vite typescript @types/react @types/react-dom
 ```
 
-### Install SB1/FFE design system components
+### Installer SB1/FFE designsystem komponenter
 ```bash
 npm install @sb1/ffe-account-selector-react @sb1/ffe-buttons-react @sb1/ffe-cards-react @sb1/ffe-chart-donut-react @sb1/ffe-collapse-react @sb1/ffe-context-message-react @sb1/ffe-core-react @sb1/ffe-datepicker-react @sb1/ffe-dropdown-react @sb1/ffe-feedback-react @sb1/ffe-file-upload-react @sb1/ffe-form-react @sb1/ffe-grid-react @sb1/ffe-icons-react @sb1/ffe-lists-react @sb1/ffe-message-box-react @sb1/ffe-messages-react @sb1/ffe-modals-react @sb1/ffe-chips-react @sb1/ffe-pagination-react @sb1/ffe-searchable-dropdown-react @sb1/ffe-spinner-react @sb1/ffe-symbols-react @sb1/ffe-system-message-react @sb1/ffe-tables-react @sb1/ffe-tabs-react```
 
