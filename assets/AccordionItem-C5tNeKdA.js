@@ -1,0 +1,7 @@
+import{ae as e,af as i,ag as a,ah as m}from"./index-DotkUySp.js";import{useMDXComponents as s}from"./index-LJFj7xbY.js";import{A as d,S as t}from"./AccordionItem.stories-BrD1Frel.js";import"./iframe-DZIa2S0w.js";import"../sb-preview/runtime.js";import"./index-ne9I_3bB.js";import"./index-Dr3x3wil.js";import"./index-C9wxJjzh.js";import"./index-Cu4lwwaE.js";import"./index-NOh9rqHv.js";import"./index-ogSvIofg.js";import"./AccordionItem-CULETVil.js";import"./index-B6-3w37c.js";import"./Icon-D2PqKf0B.js";import"./Collapse-BarxkNu_.js";function r(o){const n={code:"code",h1:"h1",p:"p",...s(),...o.components};return e.jsxs(e.Fragment,{children:[e.jsx(i,{of:d}),`
+`,e.jsx(n.h1,{id:"accordionitem",children:"AccordionItem"}),`
+`,e.jsxs(n.p,{children:["AccordionItem er hver enkel «header»- og «panel»-seksjon. De er lukket by default, men du kan velge at den skal være åpen fra start ved å sende med property ",e.jsx(n.code,{children:"defaultOpen"}),`.
+Alle `,e.jsx(n.code,{children:"<AccordionItem />"}),"-komponenter har innebygget funksjonalitet for å styre åpning og lukking. Men om ønskelig kan du også overstyre dette. Et bruksområde kan være å lage en komponent som kun kan ha ett element åpent om gangen."]}),`
+`,e.jsx(n.p,{children:"Bruker man isOpen-propen vil intern-logikk som styrer åpning og lukking være skrudd av."}),`
+`,e.jsx(a,{of:t}),`
+`,e.jsx(m,{of:t})]})}function D(o={}){const{wrapper:n}={...s(),...o.components};return n?e.jsx(n,{...o,children:e.jsx(r,{...o})}):r(o)}export{D as default};
