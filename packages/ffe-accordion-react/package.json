@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-accordion-react",
-    "version": "13.0.26",
+    "version": "13.0.27",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -27,7 +27,7 @@
     "dependencies": {
         "@sb1/ffe-accordion": "^11.1.1",
         "@sb1/ffe-collapse-react": "^5.1.1",
-        "@sb1/ffe-icons-react": "^11.0.14",
+        "@sb1/ffe-icons-react": "^11.0.15",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
