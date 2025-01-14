@@ -23,9 +23,10 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "mkdirp": "^1.0.4",
+        "husky": "^9.1.7",
+        "mkdirp": "^3.0.1",
         "svgstore": "^3.0.1",
-        "yargs": "^16.0.0"
+        "yargs": "^17.7.2"
     },
     "devDependencies": {
         "eslint": "^8.57.0"
