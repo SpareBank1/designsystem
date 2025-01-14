@@ -1,13 +1,14 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
 
 .ffe-radio-switch {
-    padding: 6px var(--ffe-spacing-sm);
+    padding: var(--ffe-spacing-xs) var(--ffe-spacing-md) var(--ffe-spacing-xs)
+        var(--ffe-spacing-xs);
     grid-template-columns: auto 1fr;
     grid-column-gap: var(--ffe-spacing-xs);
     position: relative;
     background-color: var(--ffe-v-input-bg-color);
-    border: 2px solid var(--ffe-g-border-color);
-    border-radius: 22px;
+    border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
+    border-radius: 48px;
     display: inline-grid;
     place-items: center;
     min-width: 100px;
@@ -16,8 +17,7 @@
     font-family: var(--ffe-g-font-strong);
     font-variant-numeric: tabular-nums;
     cursor: pointer;
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+    transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
     margin-bottom: var(--ffe-spacing-2xs);
     margin-top: var(--ffe-spacing-sm);
     line-height: 1.5;
@@ -28,9 +28,9 @@
         left: 12px;
         top: 8px;
         background-color: var(--ffe-v-input-bg-color);
-        border: 2px solid var(--ffe-g-border-color);
-        width: 20px;
-        height: 20px;
+        border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
         pointer-events: none;
     }
@@ -68,6 +68,7 @@
         box-shadow:
             0 0 0 3px var(--ffe-v-input-bg-color),
             0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
+        outline: none;
     }
 
     &:checked + .ffe-radio-switch::before {

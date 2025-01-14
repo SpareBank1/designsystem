@@ -1,14 +1,14 @@
 .ffe-input-field {
     display: block;
     height: 2.8125rem;
-    padding: 0 var(--ffe-spacing-sm);
+    padding: var(--ffe-v-input-padding);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     background-color: var(--ffe-v-input-bg-color);
     color: var(--ffe-v-input-color);
     border-radius: var(--ffe-g-border-radius);
-    border: 2px solid var(--ffe-g-border-color);
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
+    transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-input);
 
@@ -28,8 +28,7 @@
 
     &:focus,
     &:active {
-        border-color: var(--ffe-v-input-bg-color);
-        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
         outline: none;
     }
 
@@ -48,19 +47,24 @@
 
     &--text-like.ffe-input-field {
         border: none;
-        border-bottom: 2px solid var(--ffe-g-border-color);
-        border-radius: 4px 4px 0 0;
+        border-bottom: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
+        border-radius: var(--ffe-g-border-width) var(--ffe-g-border-width) 0 0;
         box-shadow: none;
         text-align: center;
         padding: 0;
         display: inline-block;
         height: 2em;
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
         background-color: transparent;
 
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-color: var(--ffe-g-primary-color);
+            }
+        }
+
         &:focus {
-            box-shadow: none;
-            border-color: var(--ffe-g-primary-color);
+            border-bottom: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
         }
 
         &[aria-invalid='true'] {
@@ -87,7 +91,6 @@
     border-style: solid;
 
     &:focus {
-        border-color: var(--ffe-v-input-bg-color);
-        box-shadow: 0 0 0 2px var(--ffe-g-error-color);
+        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
     }
 }
