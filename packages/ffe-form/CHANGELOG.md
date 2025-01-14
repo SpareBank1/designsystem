@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.2.0...@sb1/ffe-form@30.3.0) (2025-01-14)
+
+
+### Features
+
+* **ffe-form:** modernisering av skjemaelementer ([108eb12](https://github.com/SpareBank1/designsystem/commit/108eb12f968b09ca36b37e507ec88e346f903658))
+
+
+
+
+
 # [30.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.1.1...@sb1/ffe-form@30.2.0) (2024-12-16)
 
 
