@@ -15,8 +15,8 @@ jobs:
               with:
                   node-version: 18
             - run: npm install
-            - run: npm run build
             - run: npm run lint
+            - run: npm run build
             - run: npm test -- --ci
             - name: Build component overview page
               if: ${{ !github.event.pull_request.head.repo.fork }}
