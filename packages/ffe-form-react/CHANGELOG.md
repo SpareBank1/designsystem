@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@22.0.1...@sb1/ffe-form-react@22.1.0) (2025-01-14)
+
+
+### Features
+
+* **ffe-form-react:** modernisering av skjemaelementer ([f7d9af3](https://github.com/SpareBank1/designsystem/commit/f7d9af3efe0fdd3224662aa209b3d4c99644a27a))
+* **ffe-form:** modernisering av skjemaelementer ([108eb12](https://github.com/SpareBank1/designsystem/commit/108eb12f968b09ca36b37e507ec88e346f903658))
+
+
+
+
+
 ## [22.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@22.0.0...@sb1/ffe-form-react@22.0.1) (2024-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

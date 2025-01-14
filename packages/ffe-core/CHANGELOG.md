@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.2.0...@sb1/ffe-core@29.3.0) (2025-01-14)
+
+
+### Features
+
+* **ffe-core:** modernisering av komponenter ([0b086ae](https://github.com/SpareBank1/designsystem/commit/0b086aee0d87c8c94410b0e2e21bdfd96259c527))
+
+
+
+
+
 # [29.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.1.4...@sb1/ffe-core@29.2.0) (2024-11-19)
 
 
