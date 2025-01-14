@@ -2,12 +2,12 @@ import React from 'react';
 import { PrimaryButton, SecondaryButton } from '@sb1/ffe-buttons-react';
 import { Grid, GridCol, GridRow } from '@sb1/ffe-grid-react';
 
-interface ButtonsDemoProps {
+interface Props {
     onPrimaryClick?: () => void;
     onSecondaryClick?: () => void;
 }
 
-export const ButtonsDemo: React.FC<ButtonsDemoProps> = ({
+export const ButtonPair: React.FC<Props> = ({
     onPrimaryClick,
     onSecondaryClick,
 }) => {
