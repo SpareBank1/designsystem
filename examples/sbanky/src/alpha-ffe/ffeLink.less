@@ -1,0 +1,125 @@
+.ffe-link {
+    // Base styles
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+    // Display variants
+    &--inline {
+        display: inline;
+    }
+
+    &--inline-flex {
+        display: inline-flex;
+    }
+
+    // Underline variants
+    &--underline {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &--no-underline {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // Color variants
+    &--primary {
+        color: var(--ffe-farge-vann);
+
+        &:hover {
+            color: var(--ffe-farge-fjell);
+        }
+
+        &:visited {
+            color: var(--ffe-farge-lyng);
+        }
+
+        .regard-color-scheme-preference & {
+            @media (prefers-color-scheme: dark) {
+                color: var(--ffe-farge-vann-70);
+
+                &:hover {
+                    color: var(--ffe-farge-vann-30);
+                }
+
+                &:visited {
+                    color: var(--ffe-farge-lyng-70);
+                }
+            }
+        }
+    }
+
+    &--secondary {
+        color: var(--ffe-farge-koksgraa);
+
+        &:hover {
+            color: var(--ffe-farge-fjell);
+        }
+
+        .regard-color-scheme-preference & {
+            @media (prefers-color-scheme: dark) {
+                color: var(--ffe-farge-lysgraa);
+
+                &:hover {
+                    color: var(--ffe-farge-vann-30);
+                }
+            }
+        }
+    }
+
+    &--tertiary {
+        color: var(--ffe-farge-moerkgraa);
+
+        &:hover {
+            color: var(--ffe-farge-koksgraa);
+        }
+
+        .regard-color-scheme-preference & {
+            @media (prefers-color-scheme: dark) {
+                color: var(--ffe-farge-graa);
+
+                &:hover {
+                    color: var(--ffe-farge-lysgraa);
+                }
+            }
+        }
+    }
+
+    // Focus states
+    &:focus-visible {
+        outline: none;
+        ring: 2px solid var(--ffe-farge-vann);
+        ring-offset: 2px;
+        background-color: fade(var(--ffe-farge-vann), 10%);
+
+        .regard-color-scheme-preference & {
+            @media (prefers-color-scheme: dark) {
+                ring-color: var(--ffe-farge-vann-70);
+                background-color: fade(var(--ffe-farge-vann), 20%);
+            }
+        }
+    }
+
+    // Active states
+    &:active {
+        ring: 2px solid var(--ffe-farge-fjell);
+        background-color: fade(var(--ffe-farge-vann), 20%);
+
+        .regard-color-scheme-preference & {
+            @media (prefers-color-scheme: dark) {
+                ring-color: var(--ffe-farge-vann-30);
+                background-color: fade(var(--ffe-farge-vann), 30%);
+            }
+        }
+    }
+}
