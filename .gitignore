@@ -26,3 +26,6 @@ types/
 
 storybook-static
 *storybook.log
+
+#Figma API Variable files
+.env

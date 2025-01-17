@@ -1,9 +1,5 @@
-import React from 'react';
-import './main.less';
-import './preview.less';
-import type { Preview } from '@storybook/react';
 import {
-    Paragraph,
+    EmphasizedText,
     Heading1,
     Heading2,
     Heading3,
@@ -11,10 +7,14 @@ import {
     Heading5,
     Heading6,
     LinkText,
+    Paragraph,
     StrongText,
-    EmphasizedText,
 } from '@sb1/ffe-core-react';
 import { BulletList, BulletListItem } from '@sb1/ffe-lists-react';
+import type { Preview } from '@storybook/react';
+import React from 'react';
+import './main.less';
+import './preview.less';
 
 type Props = Record<string, unknown>;
 
@@ -48,36 +48,40 @@ const preview: Preview = {
         options: {
             storySort: {
                 method: 'alphabetical',
-              },
+            },
         },
     },
     decorators: [
         (Story, context) => {
-            const { scheme } = context.globals;
-            if (scheme === 'both') {
-                return (
-                    <>
-                        <div className="ffe-docs-content-container">
-                            <Story />
-                        </div>
-                        <div className="ffe-docs-content-container ffe-docs-content-container--dark-mode regard-color-scheme-preference">
-                            <Story />
-                        </div>
-                    </>
-                );
-            }
-            if (scheme === 'dark') {
-                return (
-                    <div className="ffe-docs-content-container ffe-docs-content-container--dark-mode regard-color-scheme-preference">
-                        <Story />
-                    </div>
-                );
-            }
+            const { scheme, accent } = context.globals;
 
             return (
-                <div className="ffe-docs-content-container">
-                    <Story />
-                </div>
+                <>
+                    {(scheme === 'both' || scheme === 'light') &&
+                        (accent === 'both' || accent === 'default') && (
+                            <div className="ffe-docs-content-container ">
+                                <Story />
+                            </div>
+                        )}
+                    {(scheme === 'both' || scheme === 'light') &&
+                        (accent === 'both' || accent === 'accent') && (
+                            <div className="ffe-docs-content-container accent">
+                                <Story />
+                            </div>
+                        )}
+                    {(scheme === 'both' || scheme === 'dark') &&
+                        (accent === 'both' || accent === 'default') && (
+                            <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference">
+                                <Story />
+                            </div>
+                        )}
+                    {(scheme === 'both' || scheme === 'dark') &&
+                        (accent === 'both' || accent === 'accent') && (
+                            <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference accent">
+                                <Story />
+                            </div>
+                        )}
+                </>
             );
         },
     ],
@@ -90,9 +94,35 @@ const preview: Preview = {
                     detail: 'light',
                 },
             },
+            defaultValue: 'light',
             toolbar: {
-                icon: 'mirror',
-                items: ['light', 'dark', 'both'],
+                items: [
+                    { icon: 'sun', value: 'light', title: 'Light' },
+                    { icon: 'moon', value: 'dark', title: 'Dark' },
+                    { icon: 'stacked', value: 'both', title: 'Both modes' },
+                ],
+                dynamicTitle: true,
+            },
+        },
+        accent: {
+            name: 'Accent',
+            description: 'Select accent [WIP]',
+            table: {
+                defaultValue: {
+                    detail: 'default',
+                },
+            },
+            defaultValue: 'default',
+            toolbar: {
+                items: [
+                    {
+                        icon: 'lightningoff',
+                        value: 'default',
+                        title: 'Default',
+                    },
+                    { icon: 'lightning', value: 'accent', title: 'Accent' },
+                    { icon: 'stacked', value: 'both', title: 'Both accents' },
+                ],
                 dynamicTitle: true,
             },
         },
