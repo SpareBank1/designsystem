@@ -100,12 +100,12 @@
         outline: none;
         ring: 2px solid var(--ffe-farge-vann);
         ring-offset: 2px;
-        background-color: fade(var(--ffe-farge-vann), 10%);
+        background-color: rgba(0, 90, 164, 0.1); // Using the hex value of vann with opacity
 
         .regard-color-scheme-preference & {
             @media (prefers-color-scheme: dark) {
                 ring-color: var(--ffe-farge-vann-70);
-                background-color: fade(var(--ffe-farge-vann), 20%);
+                background-color: rgba(0, 90, 164, 0.2); // Darker version
             }
         }
     }
@@ -113,12 +113,12 @@
     // Active states
     &:active {
         ring: 2px solid var(--ffe-farge-fjell);
-        background-color: fade(var(--ffe-farge-vann), 20%);
+        background-color: rgba(0, 90, 164, 0.2); // Using the hex value of vann with opacity
 
         .regard-color-scheme-preference & {
             @media (prefers-color-scheme: dark) {
                 ring-color: var(--ffe-farge-vann-30);
-                background-color: fade(var(--ffe-farge-vann), 30%);
+                background-color: rgba(0, 90, 164, 0.3); // Darker version
             }
         }
     }

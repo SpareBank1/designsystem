@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { clsx } from 'clsx';
+import './ffeLink.less';
 
 export type LinkVariant = 'primary' | 'secondary' | 'tertiary';
 
