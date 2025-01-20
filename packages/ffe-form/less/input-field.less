@@ -8,7 +8,9 @@
     color: var(--ffe-v-input-color);
     border-radius: var(--ffe-g-border-radius);
     border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
-    transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
+    transition:
+        border-color var(--ffe-transition-duration) var(--ffe-ease),
+        box-shadow var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-input);
 
@@ -30,6 +32,9 @@
     &:active {
         border: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
         outline: none;
+    }
+    &:hover {
+        box-shadow: 0 0 0 1px var(--ffe-g-primary-color);
     }
 
     &--inline {
@@ -64,7 +69,8 @@
         }
 
         &:focus {
-            border-bottom: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
+            border-bottom: var(--ffe-g-border-width-focus) solid
+                var(--ffe-g-primary-color);
         }
 
         &[aria-invalid='true'] {
