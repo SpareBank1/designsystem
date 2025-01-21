@@ -65,7 +65,7 @@ const preview: Preview = {
                         )}
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'accent') && (
-                            <div className="ffe-docs-content-container accent">
+                            <div className="ffe-docs-content-container ffe-accent-mode">
                                 <Story />
                             </div>
                         )}
@@ -77,7 +77,7 @@ const preview: Preview = {
                         )}
                     {(scheme === 'both' || scheme === 'dark') &&
                         (accent === 'both' || accent === 'accent') && (
-                            <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference accent">
+                            <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference ffe-accent-mode">
                                 <Story />
                             </div>
                         )}
