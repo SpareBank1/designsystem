@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@1.2.2...@sb1/ffe-messages@2.0.0) (2025-01-21)
+
+
+### Features
+
+* **ffe-messages:** bruker semantiske farger. ([f7f89ec](https://github.com/SpareBank1/designsystem/commit/f7f89ecccd92b4cd3320e8a76c4d9f0b879dadb9))
+
+
+### BREAKING CHANGES
+
+* **ffe-messages:** tar i bruk semantiske farger. Ingen endringer nødvendig
+i css, men oncoloredbg blir fjernet, og typen news er descricated.
+
+
+
+
+
 ## [1.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@1.2.1...@sb1/ffe-messages@1.2.2) (2025-01-21)
 
 **Note:** Version bump only for package @sb1/ffe-messages

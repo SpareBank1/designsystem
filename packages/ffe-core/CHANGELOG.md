@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.4.0...@sb1/ffe-core@29.5.0) (2025-01-21)
+
+
+### Bug Fixes
+
+* **ffe-core:** Oppdater accent klassenavnet ([84e0c3d](https://github.com/SpareBank1/designsystem/commit/84e0c3d7d35d4f27fc82443edb45795ad3cd424f))
+
+
+### Features
+
+* **ffe-core:** legger til en større variant av border radius som kan brukes globalt ([ca4d507](https://github.com/SpareBank1/designsystem/commit/ca4d507ae0990281b3b72b1b77673b30b02c4074))
+
+
+
+
+
 # [29.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.3.0...@sb1/ffe-core@29.4.0) (2025-01-21)
 
 
