@@ -138,7 +138,7 @@ function filePath(filename) {
 
 function generateSemanticColors() {
     let cssContent = '// Generated from Figma tokens';
-    cssContent += `\n\n// Context accent \n.accent {\n${convertContextJsonToCss(filePath(files.contextAccent)).join('\n')}}\n`;
+    cssContent += `\n\n// Context accent \n.ffe-accent-mode {\n${convertContextJsonToCss(filePath(files.contextAccent)).join('\n')}}\n`;
     cssContent += `\n\n// Context \n:root,\n:host {\n${convertContextJsonToCss(filePath(files.context)).join('\n')}}\n`;
     cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticLight))}`;
     cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticDark), filePath(files.context), filePath(files.contextAccent))}`;
