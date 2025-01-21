@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@1.3.3...@sb1/ffe-chips@2.0.0) (2025-01-21)
+
+
+* feat(ffe-chips)!: Semantiske farger ([4c96f0a](https://github.com/SpareBank1/designsystem/commit/4c96f0a171f81458c41f866e1f03994ff38fe90a))
+
+
+### BREAKING CHANGES
+
+* Komponenten er oppdatert til å støtte semantiske farger. klassen `ffe-chip--on-colored-bg` er derfor fjernet og en må oppdatere `ffe-core` for at dark mode og accent mode av komponenten skal fortsette å fungere.
+
+
+
+
+
 ## [1.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@1.3.2...@sb1/ffe-chips@1.3.3) (2025-01-21)
 
 **Note:** Version bump only for package @sb1/ffe-chips

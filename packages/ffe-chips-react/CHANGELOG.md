@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@1.2.10...@sb1/ffe-chips-react@2.0.0) (2025-01-21)
+
+
+* feat(ffe-chips-react)!: Semantiske farger ([44037df](https://github.com/SpareBank1/designsystem/commit/44037df0f9a230297712f495f4165c75ed61d339))
+
+
+### BREAKING CHANGES
+
+* Komponenten er oppdatert til å støtte semantiske farger. Propertien `onColoredBg` er derfor fjernet og en oppnår samme effekt ved å gi komponenten eller en parent klassen `accent`. Komponenten er og avhengig av at `ffe-core` og `ffe-chips` er oppdatert.
+
+
+
+
+
 ## [1.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@1.2.9...@sb1/ffe-chips-react@1.2.10) (2025-01-21)
 
 **Note:** Version bump only for package @sb1/ffe-chips-react
