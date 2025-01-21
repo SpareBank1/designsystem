@@ -10,7 +10,7 @@ describe('<MessageBox />', () => {
         ['error', 'alert', 'Feilmelding'],
         ['success', 'group', 'Suksessmelding'],
         ['tips', 'group', 'Tipsmelding'],
-        ['news', 'group', 'Nyhetsmelding'],
+        ['warning', 'group', 'Advarsel'],
     ] as const)('should render each type %s', (type, role, name) => {
         render(<MessageBox type={type} />);
         expect(screen.getByRole(role, { name })).toBeInTheDocument();
@@ -64,16 +64,5 @@ describe('<MessageBox />', () => {
         expect(group.classList.contains('ffe-message--info')).toBeTruthy();
         expect(group.classList.contains('my-class')).toBeTruthy();
         expect(group.classList.contains('ffe-message--colored-bg')).toBeFalsy();
-    });
-
-    it('should --colored-bg modifier classes ', () => {
-        render(<MessageBox type="info" onColoredBg={true} />);
-        const group = screen.getByRole('group');
-        expect(group.classList.contains('ffe-message')).toBeTruthy();
-        expect(group.classList.contains('ffe-message--box')).toBeTruthy();
-        expect(
-            group.classList.contains('ffe-message--colored-bg'),
-        ).toBeTruthy();
-        expect(group.classList.contains('ffe-message--info')).toBeTruthy();
     });
 });

@@ -9,7 +9,7 @@ describe('<ContextMessage />', () => {
         ['error', 'alert', 'Feilmelding'],
         ['success', 'group', 'Suksessmelding'],
         ['tips', 'group', 'Tipsmelding'],
-        ['news', 'group', 'Nyhetsmelding'],
+        ['warning', 'group', 'Advarsel'],
     ] as const)('should render each type %s', (type, role, name) => {
         render(<ContextMessage type={type} />);
         expect(screen.getByRole(role, { name })).toBeInTheDocument();
@@ -75,17 +75,6 @@ describe('<ContextMessage />', () => {
         expect(group.classList.contains('ffe-message--context')).toBeTruthy();
         expect(
             group.classList.contains('ffe-message--context-compact'),
-        ).toBeTruthy();
-        expect(group.classList.contains('ffe-message--info')).toBeTruthy();
-    });
-
-    it('should --colored-bg modifier classes ', () => {
-        render(<ContextMessage type="info" onColoredBg={true} />);
-        const group = screen.getByRole('group');
-        expect(group.classList.contains('ffe-message')).toBeTruthy();
-        expect(group.classList.contains('ffe-message--context')).toBeTruthy();
-        expect(
-            group.classList.contains('ffe-message--colored-bg'),
         ).toBeTruthy();
         expect(group.classList.contains('ffe-message--info')).toBeTruthy();
     });

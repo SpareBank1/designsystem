@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ElementType } from 'react';
 
-export type MessageType = 'info' | 'error' | 'success' | 'tips' | 'news';
+export type MessageType = 'info' | 'error' | 'success' | 'tips' | 'warning';
 export type Locale = 'nb' | 'nn' | 'en';
 
 export type DistributiveOmit<T, Omitted extends PropertyKey> = T extends any
