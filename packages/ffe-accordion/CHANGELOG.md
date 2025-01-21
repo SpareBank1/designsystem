@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@11.1.1...@sb1/ffe-accordion@12.0.0) (2025-01-21)
+
+
+### Features
+
+* **ffe-accordion:** modernisering og oppdatering til semantiske farger ([fdd902c](https://github.com/SpareBank1/designsystem/commit/fdd902cd3d0c6cb48d505909526a052ee3f9b123))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion:** Nye semantiske farger. Slettet theme.less. Ingen
+endringer nødvendig
+
+
+
+
+
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@11.1.0...@sb1/ffe-accordion@11.1.1) (2025-01-14)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
