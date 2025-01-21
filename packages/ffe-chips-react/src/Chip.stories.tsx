@@ -1,7 +1,6 @@
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Chip } from './Chip';
-import type { StoryObj, Meta } from '@storybook/react';
-import { fargeFjell, spacingXs } from '@sb1/ffe-core';
 
 const meta: Meta<typeof Chip<any>> = {
     title: 'Komponenter/Chips/Chip',
@@ -17,20 +16,5 @@ export const Standard: Story = {
         children: 'Label',
         size: 'sm',
     },
-    render: args => <Chip {...args} />,
-};
-
-export const OnColoredBg: Story = {
-    args: {
-        ...Standard.args,
-        onColoredBg: true,
-    },
-    decorators: [
-        OnColoredBgStory => (
-            <div style={{ background: fargeFjell, padding: spacingXs }}>
-                <OnColoredBgStory />
-            </div>
-        ),
-    ],
     render: args => <Chip {...args} />,
 };
