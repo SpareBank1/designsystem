@@ -1,65 +1,45 @@
-:root,
-:host {
-    /** Tips */
-    --ffe-v-messages-tips-bg-color: var(--ffe-farge-sol-30);
-    --ffe-v-messages-tips-icon-bg-color: var(--ffe-farge-sol);
-    --ffe-v-messages-tips-icon-color: var(--ffe-farge-sol-30);
-    --ffe-v-messages-tips-variant-bg-color: var(--ffe-farge-hvit);
-    --ffe-v-messages-tips-icon-variant-bg-color: var(--ffe-farge-sol);
-
+.ffe-message {
     /** Info */
-    --ffe-v-messages-info-bg-color: var(--ffe-farge-vann-30);
-    --ffe-v-messages-info-icon-bg-color: var(--ffe-farge-vann);
-    --ffe-v-messages-info-icon-color: var(--ffe-farge-vann-30);
-    --ffe-v-messages-info-variant-bg-color: var(--ffe-farge-hvit);
-    --ffe-v-messages-info-icon-variant-bg-color: var(--ffe-farge-fjell);
+    --ffe-v-messages-background-color-info: var(--ffe-color-surface-feedback-info);
+    --ffe-v-messages-text-color-info: var(--ffe-color-foreground-feedback-info);
+    --ffe-v-messages-border-color-info: var(--ffe-color-border-feedback-info);
+    --ffe-v-messages-icon-background-color-info: var(--ffe-color-fill-feedback-info);
+    --ffe-v-messages-icon-color-info: var(--ffe-color-foreground-on-fill-default);
+    --ffe-v-messages-close-button-color-info: var(--ffe-color-foreground-feedback-info);
+
+    /** Tips */
+    --ffe-v-messages-background-color-tip: var(--ffe-color-surface-feedback-tip);
+    --ffe-v-messages-text-color-tip: var(--ffe-color-foreground-feedback-tip);
+    --ffe-v-messages-border-color-tip: var(--ffe-color-border-feedback-tip);
+    --ffe-v-messages-icon-background-color-tip: var(--ffe-color-fill-feedback-tip);
+    --ffe-v-messages-icon-color-tip: var(--ffe-color-foreground-on-fill-default);
+    --ffe-v-messages-close-button-color-tip: var(--ffe-color-foreground-feedback-tip);
 
     /** Success */
-    --ffe-v-messages-success-bg-color: var(--ffe-farge-skog-30);
-    --ffe-v-messages-success-icon-bg-color: var(--ffe-farge-skog);
-    --ffe-v-messages-success-icon-color: var(--ffe-farge-skog-30);
-    --ffe-v-messages-success-variant-bg-color: var(--ffe-farge-hvit);
-    --ffe-v-messages-success-icon-variant-bg-color: var(--ffe-farge-skog);
+    --ffe-v-messages-background-color-success: var(--ffe-color-surface-feedback-success);
+    --ffe-v-messages-text-color-success: var(--ffe-color-foreground-feedback-success);
+    --ffe-v-messages-border-color-success: var(--ffe-color-border-feedback-success);
+    --ffe-v-messages-icon-background-color-success: var(--ffe-color-fill-feedback-success);
+    --ffe-v-messages-icon-color-success: var(--ffe-color-foreground-on-fill-default);
+    --ffe-v-messages-close-button-color-success: var(--ffe-color-foreground-feedback-success);
+
+    /** Warning */
+    --ffe-v-messages-background-color-warning: var(--ffe-color-surface-feedback-warning);
+    --ffe-v-messages-text-color-warning: var(--ffe-color-foreground-feedback-warning);
+    --ffe-v-messages-border-color-warning: var(--ffe-color-border-feedback-warning);
+    --ffe-v-messages-icon-background-color-warning: var(--ffe-color-fill-feedback-warning);
+    --ffe-v-messages-icon-color-warning: var(--ffe-color-foreground-on-fill-default);
+    --ffe-v-messages-close-button-color-warning: var(--ffe-color-foreground-feedback-warning);
 
     /** Error */
-    --ffe-v-messages-error-bg-color: var(--ffe-farge-baer-30);
-    --ffe-v-messages-error-icon-bg-color: var(--ffe-farge-baer);
-    --ffe-v-messages-error-icon-color: var(--ffe-farge-baer-30);
-    --ffe-v-messages-error-variant-bg-color: var(--ffe-farge-hvit);
-    --ffe-v-messages-error-icon-variant-bg-color: var(--ffe-farge-baer);
-
-    /** News */
-    --ffe-v-messages-news-bg-color: var(--ffe-farge-lysgraa);
-    --ffe-v-messages-news-icon-bg-color: var(--ffe-farge-koksgraa);
-    --ffe-v-messages-news-icon-color: var(--ffe-farge-lysgraa);
-    --ffe-v-messages-news-variant-bg-color: var(--ffe-farge-hvit);
-    --ffe-v-messages-news-icon-variant-bg-color: var(--ffe-farge-koksgraa);
+    --ffe-v-messages-background-color-error: var(--ffe-color-surface-feedback-critical);
+    --ffe-v-messages-text-color-error: var(--ffe-color-foreground-feedback-critical);
+    --ffe-v-messages-border-color-error: var(--ffe-color-border-feedback-critical);
+    --ffe-v-messages-icon-background-color-error: var(--ffe-color-fill-feedback-critical);
+    --ffe-v-messages-icon-color-error: var(--ffe-color-foreground-on-fill-default);
+    --ffe-v-messages-close-button-color-error: var(--ffe-color-foreground-feedback-critical);
+    --ffe-v-messages-link-color-error: var(--ffe-foreground-feedback-critical);
 
     /** Close button */
-    --ffe-v-messages-close-button-color: var(--ffe-farge-moerkgraa);
-    --ffe-v-messages-close-button-color-hover: var(--ffe-farge-svart);
-    --ffe-v-messages-close-button-border-color-focus: var(--ffe-farge-vann);
-
-    /** Text */
-    --ffe-v-messages-text-color: var(--ffe-farge-svart);
-
-    /** Link colors */
-    --ffe-v-messages-link-color: var(--ffe-farge-vann);
-    --ffe-v-messages-link-color-hover: var(--ffe-farge-fjell);
-    --ffe-v-messages-link-color-visited: var(--ffe-farge-lyng);
-    --ffe-v-messages-link-color-focus: var(--ffe-farge-hvit);
-
-    @media (prefers-color-scheme: dark) {
-        .regard-color-scheme-preference {
-            --ffe-v-messages-tips-icon-variant-bg-color: var(--ffe-farge-sol);
-            --ffe-v-messages-info-icon-variant-bg-color: var(--ffe-farge-vann);
-            --ffe-v-messages-success-icon-variant-bg-color: var(
-                --ffe-farge-skog
-            );
-            --ffe-v-messages-error-icon-variant-bg-color: var(--ffe-farge-baer);
-            --ffe-v-messages-news-icon-variant-bg-color: var(
-                --ffe-farge-koksgraa
-            );
-        }
-    }
+    --ffe-v-messages-close-button-border-color-focus: var(--ffe-color-border-interactive-focus);
 }
