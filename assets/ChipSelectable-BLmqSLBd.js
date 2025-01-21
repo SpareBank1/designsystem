@@ -1,4 +1,0 @@
-import{j as t,M as i,C as m,a}from"./index-JRrfKRAu.js";import{useMDXComponents as s}from"./index-LJFj7xbY.js";import{C as p,S as e}from"./ChipSelectable.stories-DA0IcGS9.js";import"./iframe-DeC1FzQG.js";import"./index-ne9I_3bB.js";import"./index-Cd5v2cQ1.js";import"./index-C9wxJjzh.js";import"./index-Cu4lwwaE.js";import"./index-NOh9rqHv.js";import"./index-ogSvIofg.js";import"./Chip-DL8SQ9Vw.js";import"./index-B6-3w37c.js";import"./spacing-enBt7HlE.js";function r(o){const n={h1:"h1",...s(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:p}),`
-`,t.jsx(n.h1,{id:"chipselectable",children:"ChipSelectable"}),`
-`,t.jsx(m,{of:e}),`
-`,t.jsx(a,{of:e})]})}function X(o={}){const{wrapper:n}={...s(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(r,{...o})}):r(o)}export{X as default};
