@@ -10,10 +10,8 @@ import { txt } from './texts';
 /*Remove me*/
 export interface SystemMessageProps
     extends React.ComponentPropsWithoutRef<'div'> {
-    /** info, success, tips, news or error */
+    /** info, success, tips, warning or error */
     type: MessageType;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
     /** url to svg icon to override default*/
     iconFileUrl?: string;
     /** nn, nb or en */
@@ -25,7 +23,6 @@ export interface SystemMessageProps
 export const SystemMessage: React.FC<SystemMessageProps> = ({
     type,
     className,
-    onColoredBg,
     locale = 'nb',
     children,
     onClose,
@@ -41,9 +38,6 @@ export const SystemMessage: React.FC<SystemMessageProps> = ({
                     `ffe-message`,
                     `ffe-message--system`,
                     `ffe-message--${type}`,
-                    {
-                        'ffe-message--colored-bg': onColoredBg,
-                    },
                     className,
                 )}
                 role={type === 'error' ? 'alert' : 'group'}

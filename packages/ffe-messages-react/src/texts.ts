@@ -9,8 +9,8 @@ const nb = {
     success: {
         ariaLabel: 'Suksessmelding',
     },
-    news: {
-        ariaLabel: 'Nyhetsmelding',
+    warning: {
+        ariaLabel: 'Advarsel',
     },
     tips: {
         ariaLabel: 'Tipsmelding',
@@ -27,8 +27,8 @@ const nn = {
     success: {
         ariaLabel: 'Suksessmelding',
     },
-    news: {
-        ariaLabel: 'Nyheitsmelding',
+    warning: {
+        ariaLabel: 'Advarsel',
     },
     tips: {
         ariaLabel: 'Tipsmelding',
@@ -45,8 +45,8 @@ const en = {
     success: {
         ariaLabel: 'Success message',
     },
-    news: {
-        ariaLabel: 'News message',
+    warning: {
+        ariaLabel: 'Warning message',
     },
     tips: {
         ariaLabel: 'Tip Message',

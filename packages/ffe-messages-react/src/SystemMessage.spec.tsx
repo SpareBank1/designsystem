@@ -8,7 +8,7 @@ describe('<SystemMessage />', () => {
         ['error', 'alert', 'Feilmelding'],
         ['success', 'group', 'Suksessmelding'],
         ['tips', 'group', 'Tipsmelding'],
-        ['news', 'group', 'Nyhetsmelding'],
+        ['warning', 'group', 'Advarsel'],
     ] as const)('should render each type %s', (type, role, name) => {
         render(<SystemMessage type={type} />);
         expect(screen.getByRole(role, { name })).toBeInTheDocument();
@@ -22,17 +22,6 @@ describe('<SystemMessage />', () => {
         expect(group.classList.contains('ffe-message--info')).toBeTruthy();
         expect(group.classList.contains('my-class')).toBeTruthy();
         expect(group.classList.contains('ffe-message--colored-bg')).toBeFalsy();
-    });
-
-    it('should --colored-bg modifier classes ', () => {
-        render(<SystemMessage type="info" onColoredBg={true} />);
-        const group = screen.getByRole('group');
-        expect(group.classList.contains('ffe-message')).toBeTruthy();
-        expect(group.classList.contains('ffe-message--system')).toBeTruthy();
-        expect(
-            group.classList.contains('ffe-message--colored-bg'),
-        ).toBeTruthy();
-        expect(group.classList.contains('ffe-message--info')).toBeTruthy();
     });
 
     it('should be closeable', async () => {
