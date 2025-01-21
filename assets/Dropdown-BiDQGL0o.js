@@ -1,5 +1,0 @@
-import{j as o,M as m,C as i,a}from"./index-DD1_RL50.js";import{useMDXComponents as s}from"./index-LJFj7xbY.js";import{D as p,S as t}from"./Dropdown.stories-BMTKcS26.js";import"./iframe-Bhq8a_mr.js";import"./index-ne9I_3bB.js";import"./index-Cd5v2cQ1.js";import"./index-C9wxJjzh.js";import"./index-Cu4lwwaE.js";import"./index-NOh9rqHv.js";import"./index-ogSvIofg.js";import"./index-B6-3w37c.js";import"./InputGroup-CX8SHRAV.js";import"./Collapse-BarxkNu_.js";import"./Icon-D2PqKf0B.js";function e(n){const r={h1:"h1",p:"p",...s(),...n.components};return o.jsxs(o.Fragment,{children:[o.jsx(m,{of:p}),`
-`,o.jsx(r.h1,{id:"dropdown",children:"Dropdown"}),`
-`,o.jsx(r.p,{children:"Dropdown er en vanlig nedtrekksliste som kan brukes man når man har 5-10 valg å velge mellom. Har du mindre enn 5 valg, bruk radio buttons istedenfor."}),`
-`,o.jsx(i,{of:t}),`
-`,o.jsx(a,{of:t})]})}function w(n={}){const{wrapper:r}={...s(),...n.components};return r?o.jsx(r,{...n,children:o.jsx(e,{...n})}):e(n)}export{w as default};
