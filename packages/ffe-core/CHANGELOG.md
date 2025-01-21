@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.3.0...@sb1/ffe-core@29.4.0) (2025-01-21)
+
+
+### Features
+
+* **ffe-core:** sync figma og kode, Figma Variables API ([3e92a38](https://github.com/SpareBank1/designsystem/commit/3e92a386fe16605da13dd02cdd03d09bd8682e8a))
+
+
+
+
+
 # [29.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.2.0...@sb1/ffe-core@29.3.0) (2025-01-14)
 
 
