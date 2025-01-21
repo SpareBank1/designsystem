@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@1.1.7...@sb1/ffe-messages-react@2.0.0) (2025-01-21)
+
+
+### Features
+
+* **ffe-messages-react:** fjerner oncoloredbg. ([5c2a5e3](https://github.com/SpareBank1/designsystem/commit/5c2a5e30cafa33382854ec91664ab6aff3ec96d9))
+
+
+### BREAKING CHANGES
+
+* **ffe-messages-react:** Fjerner onColoredBg. Bruk .ffe-accent-mode på området i
+stedet. Typen NEWS er også fjernet. Warning er introdusert.
+
+
+
+
+
 ## [1.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@1.1.6...@sb1/ffe-messages-react@1.1.7) (2025-01-21)
 
 **Note:** Version bump only for package @sb1/ffe-messages-react
