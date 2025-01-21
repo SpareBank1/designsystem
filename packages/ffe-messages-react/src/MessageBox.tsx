@@ -11,10 +11,8 @@ export interface MessageBoxProps extends React.ComponentPropsWithoutRef<'div'> {
     iconFileUrl?: string;
     /** The header */
     header?: React.ReactElement<MessageHeaderProps> | string;
-    /** info, success, tips, news or error */
+    /** info, success, tips, warning or error */
     type: MessageType;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
     /** Decides the language of the aria-label for the close icon */
     locale?: Locale;
 }
@@ -25,7 +23,6 @@ export const MessageBox: React.FC<MessageBoxProps> = ({
     iconFileUrl,
     children,
     locale = 'nb',
-    onColoredBg,
     className,
     ...rest
 }) => {
@@ -35,9 +32,6 @@ export const MessageBox: React.FC<MessageBoxProps> = ({
                 `ffe-message`,
                 `ffe-message--box`,
                 `ffe-message--${type}`,
-                {
-                    'ffe-message--colored-bg': onColoredBg,
-                },
                 className,
             )}
             role={type === 'error' ? 'alert' : 'group'}

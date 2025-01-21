@@ -16,14 +16,12 @@ export interface ContextMessageProps
     iconFileUrl?: string;
     /** Decides the language of the aria-label for the close icon */
     locale?: Locale;
-    /** info, success, tips, news or error */
+    /** info, success, tips, warning or error */
     type: MessageType;
     /** Called when closed */
     onClose?: () => void;
     /** Show close button */
     closeButton?: boolean;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
     /** The header */
     header?: React.ReactElement<MessageHeaderProps> | string;
 }
@@ -31,7 +29,6 @@ export interface ContextMessageProps
 export const ContextMessage: React.FC<ContextMessageProps> = ({
     type,
     className,
-    onColoredBg,
     locale = 'nb',
     children,
     onClose,
@@ -52,7 +49,6 @@ export const ContextMessage: React.FC<ContextMessageProps> = ({
                     `ffe-message--${type}`,
                     {
                         'ffe-message--context-compact': compact,
-                        'ffe-message--colored-bg': onColoredBg,
                     },
                     className,
                 )}
