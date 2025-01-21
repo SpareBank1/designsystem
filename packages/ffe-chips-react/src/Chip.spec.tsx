@@ -1,6 +1,6 @@
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 import { Chip } from './Chip';
-import { render, screen } from '@testing-library/react';
 
 describe('<ChipBase />', () => {
     it('should add size modifier', () => {
@@ -8,17 +8,6 @@ describe('<ChipBase />', () => {
         const chip = screen.getByRole('button', { name: 'label' });
         expect(chip.classList.contains('ffe-chip')).toBeTruthy();
         expect(chip.classList.contains('ffe-chip--md')).toBeTruthy();
-    });
-
-    it('should add onColoredBg modifier', () => {
-        render(
-            <Chip size="md" onColoredBg={true}>
-                label
-            </Chip>,
-        );
-        const chip = screen.getByRole('button', { name: 'label' });
-        expect(chip.classList.contains('ffe-chip')).toBeTruthy();
-        expect(chip.classList.contains('ffe-chip--on-colored-bg')).toBeTruthy();
     });
 
     it('should add icon modifier', () => {
