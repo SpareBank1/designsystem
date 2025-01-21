@@ -1,7 +1,7 @@
-import React, { ElementType, ForwardedRef } from 'react';
-import { ComponentAsPropParams } from './types';
 import classNames from 'classnames';
+import React, { ElementType, ForwardedRef } from 'react';
 import { fixedForwardRef } from './fixedForwardRef';
+import { ComponentAsPropParams } from './types';
 
 type LeftIcon = {
     /**  Icon on left side */
@@ -21,7 +21,6 @@ export type ChipProps<As extends ElementType = 'button'> =
         /** Size of chip*/
         size: 'sm' | 'md' | 'lg';
         /** Adds alternative styling for better contrast on certain backgrounds */
-        onColoredBg?: boolean;
     } & LeftOrRightIcon;
 
 function ChipWithForwardRef<As extends ElementType>(
@@ -35,7 +34,6 @@ function ChipWithForwardRef<As extends ElementType>(
         leftIcon,
         rightIcon,
         children,
-        onColoredBg,
         ...rest
     } = props;
 
@@ -55,7 +53,6 @@ function ChipWithForwardRef<As extends ElementType>(
             className={classNames(
                 'ffe-chip',
                 {
-                    'ffe-chip--on-colored-bg': onColoredBg,
                     'ffe-chip--sm': size === 'sm',
                     'ffe-chip--md': size === 'md',
                     'ffe-chip--lg': size === 'lg',
