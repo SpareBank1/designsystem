@@ -38,8 +38,8 @@ jobs:
             - name: Build packages
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: |
-                  npm run build
                   npm run lint
+                  npm run build
                   npm test -- --ci
 
             - name: lerna publish to registry.npmjs.com
