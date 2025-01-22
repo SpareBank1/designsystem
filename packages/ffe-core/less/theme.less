@@ -3,9 +3,10 @@
 /**
  * These variables are intended to support theming of components. Override any value to create your own look and feel.
  */
-
 :root,
 :host {
+    /* DEPRICATED, bruk colors-semantic i stedet for */
+
     /** Primærpalett */
     --ffe-farge-fjell: @ffe-farge-fjell;
     --ffe-farge-fjell-70: @ffe-farge-fjell-70;
@@ -60,6 +61,8 @@
     --ffe-farge-varmgraa: @ffe-farge-varmgraa;
     --ffe-farge-lysvarmgraa: @ffe-farge-lysvarmgraa;
     --ffe-farge-hvit: @ffe-farge-hvit;
+
+    /* END depricated */
 
     /** Font sizes */
     --ffe-fontsize-body-text: 1rem;
@@ -125,18 +128,18 @@
     /** Theme base colors */
 
     /* Links, buttons and similar */
-    --ffe-g-primary-color: var(--ffe-farge-vann);
+    --ffe-g-primary-color: var(--ffe-color-fill-primary-default); //Depricated
 
     /* Headings, labels, hover, etc */
-    --ffe-g-secondary-color: var(--ffe-farge-fjell);
+    --ffe-g-secondary-color: var(--ffe-color-foreground-emphasis); //Depricated
 
     /* Error messages, invalid inputs, etc  */
-    --ffe-g-error-color: var(--ffe-farge-baer);
+    --ffe-g-error-color: var(--ffe-color-fill-feedback-critical); //Depricated
 
     /** Theme borders */
 
     /* Form element borders */
-    --ffe-g-border-color: var(--ffe-farge-varmgraa);
+    --ffe-g-border-color: var(--ffe-color-border-primary-default); //Depricated
     --ffe-g-border-radius: 8px;
     --ffe-g-border-radius-lg: 16px;
     --ffe-g-border-width: 1px;
@@ -162,34 +165,26 @@
     /** Typography */
 
     /* Default body text color */
-    --ffe-g-text-color: var(--ffe-farge-svart);
+    --ffe-g-text-color: var(--ffe-color-foreground-default);
 
     /* Lead paragraph */
-    --ffe-g-lead-color: var(--ffe-farge-fjell);
+    --ffe-g-lead-color: var(--ffe-color-border-primary-subtle);
 
     /* Headings */
-    --ffe-g-heading-color: var(--ffe-farge-fjell);
+    --ffe-g-heading-color: var(--ffe-color-border-primary-emphasis);
 
     /* Links */
-    --ffe-g-link-color: var(--ffe-farge-vann);
-    --ffe-g-link-color-hover: var(--ffe-farge-fjell);
-    --ffe-g-link-color-visited: var(--ffe-farge-lyng);
-    --ffe-g-link-icon-color-hover: var(--ffe-farge-natt);
-    --ffe-g-link-icon-color-focus: var(--ffe-farge-vann);
-
-    @media (prefers-color-scheme: dark) {
-        .regard-color-scheme-preference {
-            --ffe-g-primary-color: var(--ffe-farge-vann-70);
-            --ffe-g-secondary-color: var(--ffe-farge-vann-70);
-            --ffe-g-border-color: var(--ffe-farge-graa);
-            --ffe-g-text-color: var(--ffe-farge-lysgraa);
-            --ffe-g-lead-color: var(--ffe-farge-vann-70);
-            --ffe-g-heading-color: var(--ffe-farge-vann-70);
-            --ffe-g-link-color: var(--ffe-farge-vann-70);
-            --ffe-g-link-color-hover: var(--ffe-farge-vann-30);
-            --ffe-g-link-color-visited: var(--ffe-farge-lyng-70);
-            --ffe-g-link-icon-color-hover: var(--ffe-farge-vann-30);
-            --ffe-g-link-icon-color-focus: var(--ffe-farge-hvit);
-        }
-    }
+    --ffe-g-link-color: var(--ffe-color-foreground-interactive-link);
+    --ffe-g-link-color-hover: var(
+        --ffe-color-foreground-interactive-link-hover
+    );
+    --ffe-g-link-color-visited: var(
+        --ffe-color-foreground-interactive-link-pressed
+    );
+    --ffe-g-link-icon-color-hover: var(
+        --ffe-color-foreground-interactive-link-hover
+    );
+    --ffe-g-link-icon-color-focus: var(
+        --ffe-color-foreground-interactive-link-pressed
+    );
 }
