@@ -9,7 +9,7 @@ module.exports = {
             },
         ],
         'media-feature-name-no-vendor-prefix': true,
-        'property-no-vendor-prefix': true,
+        'property-no-vendor-prefix': null,
         'selector-max-specificity': [
             '0,3,0',
             {
