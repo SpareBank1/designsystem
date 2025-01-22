@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.1.2...@sb1/ffe-icons@16.0.0) (2025-01-22)
+
+
+### Features
+
+* **ffe-icons:** update lg and xl sizes of icons ([1f81bf9](https://github.com/SpareBank1/designsystem/commit/1f81bf92ee3675660207ab1677bb3de881b57dac))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons:** The lg size of icons is now 32px, and the xl size is 40px (was 48px).
+
+
+
+
+
 ## [15.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.1.1...@sb1/ffe-icons@15.1.2) (2025-01-14)
 
 **Note:** Version bump only for package @sb1/ffe-icons
