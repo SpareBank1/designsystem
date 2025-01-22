@@ -28,7 +28,8 @@ Running `npm run build:icons` or the Github action: `update ffe-icons svgs` will
 
 The script will:
 
--   Set available variants, like size, weight and fill/no fill
--   Get the names of all icons available in Material Symbols
--   Compare available names with existing SVG-files. If an icon has been deleted since last update, it'll delete all SVG-files of the removed icon.
--   Download SVG-files for all missing variants/icons, and place it in the right folder.
+- Set available variants, like size, weight and fill/no fill
+- Get the names of all icons available in Material Symbols
+- Compare available names with existing SVG-files. If an icon has been deleted since last update, it'll delete all SVG-files of the removed icon.
+- Download SVG-files for all missing variants/icons, and place it in the right folder.
+- Resize the 40px icons to 32px, since they are not available at 32px in Material Symbols.
