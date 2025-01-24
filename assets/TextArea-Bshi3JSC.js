@@ -1,4 +1,0 @@
-import{j as t,M as i,C as s,a}from"./index-BNw0ddEj.js";import{useMDXComponents as m}from"./index-LJFj7xbY.js";import{T as p,S as n}from"./TextArea.stories-D5pycFCz.js";import"./iframe-BaM3sTSQ.js";import"./index-ne9I_3bB.js";import"./index-Cd5v2cQ1.js";import"./index-C9wxJjzh.js";import"./index-Cu4lwwaE.js";import"./index-NOh9rqHv.js";import"./index-ogSvIofg.js";import"./index-B6-3w37c.js";import"./InputGroup-Cewqow7z.js";import"./Tooltip-CGL9FnMI.js";import"./Collapse-BarxkNu_.js";import"./Label-C0fuSG3i.js";import"./ErrorFieldMessage-CgmGPyFt.js";import"./BaseFieldMessage-BDbin9o8.js";import"./Icon-D2PqKf0B.js";function e(o){const r={h1:"h1",...m(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:p}),`
-`,t.jsx(r.h1,{id:"textarea",children:"TextArea"}),`
-`,t.jsx(s,{of:n}),`
-`,t.jsx(a,{of:n})]})}function w(o={}){const{wrapper:r}={...m(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(e,{...o})}):e(o)}export{w as default};
