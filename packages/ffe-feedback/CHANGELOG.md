@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@2.1.3...@sb1/ffe-feedback@2.1.4) (2025-01-24)
+
+
+### Bug Fixes
+
+* **ffe-feedback:** fix thumb con to look good with new 40px xl sizee ([820f463](https://github.com/SpareBank1/designsystem/commit/820f463854e54ce78da83ae8384ef95fdd610584))
+
+
+
+
+
 ## [2.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@2.1.2...@sb1/ffe-feedback@2.1.3) (2025-01-21)
 
 **Note:** Version bump only for package @sb1/ffe-feedback
