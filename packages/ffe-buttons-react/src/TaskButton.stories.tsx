@@ -3,25 +3,36 @@ import { TaskButton } from './TaskButton';
 import type { StoryObj, Meta } from '@storybook/react';
 import { Icon } from '@sb1/ffe-icons-react';
 
-const Custom: React.FC<React.ComponentProps<'a'>> = props => (
-    <a {...props}>
-        {`Custom `}
-        {props.children}
-    </a>
-);
-
 const meta: Meta<typeof TaskButton<any>> = {
     title: 'Komponenter/Buttons/TaskButton',
     component: TaskButton,
+    parameters: {
+        docs: {
+            description: {
+                component:
+                    'TaskButton brukes for å starte en oppgave eller handling. Den har støtte for å vise et ikon sammen med teksten.',
+            },
+        },
+    },
     argTypes: {
         as: {
-            options: ['a', 'button', 'custom'],
+            description: 'HTML-elementet som skal brukes',
+            options: ['button'],
             mapping: {
                 '': 'button',
-                a: 'a',
                 button: 'button',
-                custom: Custom,
             },
+        },
+        icon: {
+            description: 'Ikon som vises før teksten',
+        },
+        isLoading: {
+            description: 'Viser en spinner når knappen laster',
+            control: 'boolean',
+        },
+        ariaLoadingMessage: {
+            description:
+                'Tekst som leses opp av skjermleser når knappen laster',
         },
     },
 };
@@ -29,16 +40,40 @@ export default meta;
 
 type Story = StoryObj<typeof TaskButton<any>>;
 
+const buttonArgs = {
+    as: 'button',
+    ariaLoadingMessage: 'Vennligst vent...',
+    isLoading: false,
+};
+
 export const Standard: Story = {
     args: {
-        as: 'button',
+        ...buttonArgs,
     },
     render: function Render(args) {
         return (
             <TaskButton
-                icon={<Icon fileUrl="./icons/open/300/md/add.svg" {...args} />}
+                {...args}
+                icon={<Icon fileUrl="./icons/open/300/md/add.svg" />}
             >
                 Legg til bruker
+            </TaskButton>
+        );
+    },
+};
+
+export const Loading: Story = {
+    args: {
+        ...buttonArgs,
+        isLoading: true,
+    },
+    render: function Render(args) {
+        return (
+            <TaskButton
+                {...args}
+                icon={<Icon fileUrl="./icons/open/300/md/add.svg" />}
+            >
+                Legger til bruker...
             </TaskButton>
         );
     },
