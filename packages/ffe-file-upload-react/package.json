@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-file-upload-react",
-    "version": "12.0.39",
+    "version": "12.0.40",
     "description": "Upload file button with validation and list of uploaded files.",
     "keywords": [
         "ffe"
@@ -29,14 +29,14 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-buttons-react": "^24.0.32",
-        "@sb1/ffe-file-upload": "^11.1.6",
-        "@sb1/ffe-form": "^30.3.3",
-        "@sb1/ffe-icons-react": "^11.0.16",
+        "@sb1/ffe-buttons-react": "^24.0.33",
+        "@sb1/ffe-file-upload": "^11.1.7",
+        "@sb1/ffe-form": "^30.3.4",
+        "@sb1/ffe-icons-react": "^11.0.17",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.9.0",
+        "@sb1/ffe-buildtool": "^0.9.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

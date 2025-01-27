@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-file-upload",
-    "version": "11.1.6",
+    "version": "11.1.7",
     "description": "File upload module",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -18,11 +18,11 @@
         "build": "lessc less/file-upload.less css/file-upload.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^29.5.0",
-        "@sb1/ffe-form": "^30.3.3"
+        "@sb1/ffe-core": "^29.5.1",
+        "@sb1/ffe-form": "^30.3.4"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.9.0"
+        "@sb1/ffe-buildtool": "^0.9.1"
     },
     "publishConfig": {
         "access": "public"
