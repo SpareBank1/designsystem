@@ -46,51 +46,78 @@
 }
 
 .ffe-inline-button--back {
-    color: var(--ffe-v-button-primary-color);
-    line-height: 1;
-    padding: var(--ffe-spacing-xs) var(--ffe-spacing-md) var(--ffe-spacing-xs)
-        var(--ffe-spacing-2xl);
-    outline: none;
+    background-color: var(--background-color);
+    color: var(--ffe-color-component-button-tertiary-foreground-default);
+    padding: var(--ffe-spacing-xs) var(--ffe-spacing-md);
 
     .ffe-inline-button__label {
-        transition: all transform var(--ffe-transition-duration) var(--ffe-ease);
-        border-bottom: 1px solid transparent;
-    }
-
-    .ffe-inline-button__icon {
-        color: var(--ffe-v-button-primary-color);
-        display: block;
+        &::after {
+            border-bottom: solid 1px currentcolor;
+            content: ' ';
+            display: block;
+            width: 100%;
+        }
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover .ffe-inline-button__icon {
-            color: var(--ffe-v-button-primary-color-hover);
-        }
+        &:hover {
+            background-color: var(
+                --ffe-color-component-button-tertiary-fill-hover
+            );
 
-        &:hover .ffe-inline-button__label {
-            color: var(--ffe-v-button-primary-color-hover);
-            border-bottom-color: var(--ffe-v-button-primary-color-hover);
+            color: var(--ffe-color-component-button-tertiary-foreground-hover);
         }
+    }
+
+    &:active {
+        background-color: var(
+            --ffe-color-component-button-tertiary-fill-pressed
+        );
+    }
+
+    .ffe-button__icon {
+        color: var(--text-color);
     }
 }
 
 .ffe-inline-button--expand {
-    color: var(--ffe-v-button-primary-color);
+    --text-color: var(
+        --ffe-color-component-button-secondary-foreground-default
+    );
+    --background-color: var(
+        --ffe-color-component-button-secondary-fill-default
+    );
+
+    color: var(--text-color);
+    background-color: var(--background-color);
     padding: 0 var(--ffe-spacing-xs);
     margin: 0;
     align-items: center;
 
     .ffe-inline-button__icon {
-        color: var(--ffe-v-button-primary-color);
+        color: var(--text-color);
         transition: transform var(--ffe-transition-duration)
             var(--ffe-ease-in-out-back);
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover .ffe-inline-button__icon,
-        &:hover .ffe-inline-button__label {
-            color: var(--ffe-v-button-primary-color-hover);
+        &:hover {
+            --text-color: var(
+                --ffe-color-component-button-secondary-foreground-hover
+            );
+            --background-color: var(
+                --ffe-color-component-button-secondary-fill-hover
+            );
         }
+    }
+
+    &:active {
+        --text-color: var(
+            --ffe-color-component-button-secondary-foreground-hover
+        );
+        --background-color: var(
+            --ffe-color-component-button-secondary-fill-pressed
+        );
     }
 }
 
@@ -99,14 +126,14 @@
     --border-width: 1px;
 
     align-content: center;
-    color: var(--ffe-v-button-tertiary-color);
+    color: var(--ffe-color-component-button-tertiary-foreground-default);
     flex-wrap: wrap;
     padding: var(--ffe-spacing-xs) calc(var(--ffe-spacing-sm));
     border: 2px solid transparent;
     line-height: calc(var(--icon-size-md) - var(--border-width));
 
     .ffe-inline-button__icon {
-        color: var(--ffe-v-button-tertiary-color);
+        color: var(--ffe-color-component-button-tertiary-foreground-default);
     }
 
     .ffe-inline-button__label {
@@ -120,21 +147,38 @@
 
     &:focus {
         box-shadow: none;
-        border-color: var(--ffe-v-button-tertiary-color-focus);
-        color: var(--ffe-v-button-tertiary-color);
+        border-color: var(--ffe-color-border-interactive-focus);
+        color: var(--ffe-color-component-button-tertiary-foreground-default);
 
         &:not(:focus-visible) {
             border-color: transparent;
         }
     }
 
+    &:active,
+    &.ffe-button--pressed {
+        transform: scale(0.97);
+        background-color: var(--ffe-color-default-feedback-success-strongest);
+    }
+
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            color: var(--ffe-v-button-tertiary-color-hover);
+            color: var(--ffe-color-component-button-tertiary-border-hover);
+            background-color: var(
+                --ffe-color-component-button-tertiary-fill-hover
+            );
 
             .ffe-inline-button__icon {
-                color: var(--ffe-v-button-tertiary-color-hover);
+                color: var(
+                    --ffe-color-component-button-tertiary-foreground-hover
+                );
             }
         }
+    }
+
+    &:active {
+        background-color: var(
+            --ffe-color-component-button-secondary-fill-pressed
+        );
     }
 }
