@@ -1,5 +1,42 @@
 module.exports = {
     extends: ['stylelint-config-standard', '@sb1/stylelint-config-ffe'],
+    ignoreFiles: [
+        '**/colors-semantic.less',
+        '**/colors-semantic-storybook.less',
+    ],
+    overrides: [
+        {
+            files: [
+                '**/colors-semantic.less',
+                '**/colors-semantic-storybook.less',
+            ],
+            rules: {
+                'selector-class-pattern': null,
+                'no-duplicate-selectors': null,
+                'color-hex-length': null,
+            },
+        },
+        {
+            files: ['**/*.less'],
+            customSyntax: 'postcss-less',
+            rules: {
+                'color-function-notation': null,
+                'import-notation': 'string',
+                '@sb1/ffe-no-deprecated-color-vars': [
+                    true,
+                    {
+                        severity: 'warning',
+                    },
+                ],
+                'function-no-unknown': [
+                    true,
+                    {
+                        ignoreFunctions: ['extend', 'fade', 'data-uri', 'e'],
+                    },
+                ],
+            },
+        },
+    ],
     rules: {
         'at-rule-no-vendor-prefix': true,
         'max-nesting-depth': [
@@ -56,26 +93,4 @@ module.exports = {
             },
         ],
     },
-    overrides: [
-        {
-            files: ['**/*.less'],
-            customSyntax: 'postcss-less',
-            rules: {
-                'color-function-notation': null,
-                'import-notation': 'string',
-                '@sb1/ffe-no-deprecated-color-vars': [
-                    true,
-                    {
-                        severity: 'warning',
-                    },
-                ],
-                'function-no-unknown': [
-                    true,
-                    {
-                        ignoreFunctions: ['extend', 'fade', 'data-uri', 'e'],
-                    },
-                ],
-            },
-        },
-    ],
 };
