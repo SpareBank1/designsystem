@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.3.2...@sb1/ffe-form@30.3.3) (2025-01-27)
+
+
+### Bug Fixes
+
+* **ffe-form:** add 1px to border of input when :hover state is active ([ffc515f](https://github.com/SpareBank1/designsystem/commit/ffc515f91ec92d67d5039185c8188bd6cafe085b))
+
+
+
+
+
 ## [30.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.3.1...@sb1/ffe-form@30.3.2) (2025-01-21)
 
 **Note:** Version bump only for package @sb1/ffe-form
