@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 import { createRequire } from 'module';
+import { dirname, join } from 'path';
 const require = createRequire(import.meta.url);
-import { join, dirname } from 'path';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -13,6 +13,7 @@ function getAbsolutePath(value: string): any {
 
 const config: StorybookConfig = {
     stories: [
+        '../packages/ffe-core/documentation/Index.mdx',
         '../packages/**/*.@(mdx)',
         '../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     ],
