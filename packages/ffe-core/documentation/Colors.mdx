@@ -1,0 +1,60 @@
+import { Meta } from '@storybook/blocks';
+import { colors } from '../gen-src/semantic-color-names.json';
+
+<Meta title="Design/Farger" />
+
+# Farger
+
+I designsystemet bruker vi semantiske farger. Det vil si at vi bruker farger med navn som
+`--ffe-color-background-default` i stedet for fargekoder som `#000000`. Ved å bruke slike navn
+kan vi variere hvilke farge som vises på tvers av appen. Vi støtter 4 moduser i dag:
+
+- Light - default
+- Light accent - for å fremheve elementer
+- Dark - for mørk modus
+- Dark accent - for å fremheve elementer i mørk modus
+
+Dark mode aktiveres automatisk basert på brukerens systeminnstillinger.
+Accent mode aktiveres med å legge klassen `ffe-accent-mode` på elementet eller på
+containeren til elementet.
+
+Bruken av accent er der en har en blokk på side med en annen bakgrunnsfarge enn resten.
+
+Se eksempelet [på en slik side med en accent section]() WIP
+
+
+## Liste over de semantiske fargene
+
+ 
+ <table class="ffe-color-table">
+    <thead>
+        <tr>
+            <th>Farge navn</th>
+            <th>Light</th>
+            <th>Light accent</th>
+            <th>Dark</th>
+            <th>Dark accent</th>
+        </tr>
+    </thead>
+    <tbody>
+        {colors.map(color => (
+            <tr key={color}>
+                <td>{color}</td>
+                <td style={{ backgroundColor: `var(${color})` }}></td>
+                <td
+                    class="ffe-accent-mode"
+                    style={{ backgroundColor: `var(${color})` }}
+                ></td>
+                <td
+                    class="dark-mode"
+                    style={{ backgroundColor: `var(${color})` }}
+                ></td>
+                <td
+                    class="dark-mode ffe-accent-color"
+                    style={{ backgroundColor: `var(${color})` }}
+                ></td>
+            </tr>
+        ))}
+    </tbody>
+</table>
+

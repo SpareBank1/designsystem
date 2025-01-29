@@ -5,6 +5,7 @@ const writeToFile = require('./lib/writeToFile');
 
 const usedPrimitive = {};
 const usedSemantic = {};
+const semanticColorNames = [];
 
 const files = {
     primitive: '01 Primitive.value.json',
@@ -46,6 +47,7 @@ const convertPrimitivesJsonToCss = jsonFile => {
 const convertContextJsonToCss = jsonFile => {
     const jsonContent = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
     const cssLines = [];
+    const saveColors = semanticColorNames.length === 0;
 
     const processColorTokens = (obj, prefix = '') => {
         for (const [key, value] of Object.entries(obj)) {
@@ -64,6 +66,7 @@ const convertContextJsonToCss = jsonFile => {
                     : value.$value;
                 cssLines.push(`${cssVarName}: ${cssVarValue};`);
                 usedSemantic[cssVarValue] = true;
+                if (saveColors) semanticColorNames.push(cssVarName);
             } else if (typeof value === 'object') {
                 processColorTokens(value, `${prefix}${key}-`);
             }
@@ -80,7 +83,6 @@ const convertContextJsonToCss = jsonFile => {
 const convertSemanticJsonToCss = (
     jsonFile,
     contextJsonFile,
-    contextAccentJsonFile,
     isStorybook = false,
 ) => {
     const jsonContent = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
@@ -141,16 +143,18 @@ function generateSemanticColors() {
     cssContent += `\n\n// Context accent \n.ffe-accent-mode {\n${convertContextJsonToCss(filePath(files.contextAccent)).join('\n')}}\n`;
     cssContent += `\n\n// Context \n:root,\n:host {\n${convertContextJsonToCss(filePath(files.context)).join('\n')}}\n`;
     cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticLight))}`;
-    cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticDark), filePath(files.context), filePath(files.contextAccent))}`;
+    cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticDark), filePath(files.context))}`;
     cssContent += `\n\n${convertPrimitivesJsonToCss(filePath(files.primitive))}`;
 
     writeToFile('less/colors-semantic.less')(cssContent);
     writeToFile('css/colors-semantic.css')(cssContent);
+    writeToFile('gen-src/semantic-color-names.json')(
+        JSON.stringify({ colors: semanticColorNames }),
+    );
 
     const storybookCssContent = convertSemanticJsonToCss(
         filePath(files.semanticDark),
         filePath(files.context),
-        filePath(files.contextAccent),
         true,
     );
     writeToFile('less/colors-semantic-storybook.less')(storybookCssContent);
