@@ -14,7 +14,6 @@ types/
 
 # Editors
 .idea/
-.vscode/
 *.iml
 *.code-workspace
 
