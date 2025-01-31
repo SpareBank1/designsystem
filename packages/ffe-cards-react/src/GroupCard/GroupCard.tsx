@@ -1,11 +1,10 @@
-import React, { ForwardedRef } from 'react';
 import classNames from 'classnames';
+import React, { ForwardedRef } from 'react';
 import { fixedForwardRef } from '../fixedForwardRef';
 import { BgColor, BgColorDarkmode } from '../types';
 
 export interface GroupCardProps
     extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
-    shadow?: boolean;
     /** The children of the GroupCard component */
     children: React.ReactNode;
     /** The background color of the whole groupcard element */
@@ -18,7 +17,6 @@ export interface GroupCardProps
 
 function GroupCardWithForwardRef(
     {
-        shadow,
         className,
         children,
         bgColor,
@@ -33,7 +31,6 @@ function GroupCardWithForwardRef(
             className={classNames(
                 'ffe-group-card',
                 {
-                    'ffe-group-card--shadow': shadow,
                     'ffe-group-card--no-margin': noMargin,
                     [`ffe-group-card--bg-${bgColor}`]: bgColor,
                     [`ffe-group-card--dm-bg-${bgDarkmodeColor}`]:

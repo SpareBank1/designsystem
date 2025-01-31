@@ -1,6 +1,6 @@
+import { render, screen, within } from '@testing-library/react';
 import React from 'react';
 import { CardBase } from './CardBase';
-import { render, screen, within } from '@testing-library/react';
 
 const TEST_ID = 'test-id';
 
@@ -47,15 +47,6 @@ describe('<CardBase/>', () => {
         expect(
             card.classList.contains('ffe-card-base--dm-bg-natt'),
         ).toBeTruthy();
-    });
-    it('should set shadow-prop correctly', () => {
-        render(
-            <CardBase data-testid={TEST_ID} shadow={true}>
-                <div />
-            </CardBase>,
-        );
-        const card = screen.getByTestId(TEST_ID);
-        expect(card.classList.contains('ffe-card-base--shadow')).toBeTruthy();
     });
     it('should set noMargin-prop correctly', () => {
         render(

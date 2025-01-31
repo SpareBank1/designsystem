@@ -1,19 +1,18 @@
-import React, { ElementType, ForwardedRef } from 'react';
 import classNames from 'classnames';
-import { WithCardActionProps, WithCardAction } from './components';
+import React, { ElementType, ForwardedRef } from 'react';
+import { WithCardAction, WithCardActionProps } from './components';
+import { fixedForwardRef } from './fixedForwardRef';
 import {
     BgColor,
     BgColorDarkmode,
-    ComponentAsPropParams,
     CardActionRenderProps,
+    ComponentAsPropParams,
 } from './types';
-import { fixedForwardRef } from './fixedForwardRef';
 
 export type CardBaseProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,
     'children'
 > & {
-    shadow?: boolean;
     /** No margin on card */
     noMargin?: boolean;
     textCenter?: boolean;
@@ -29,7 +28,6 @@ function CardBaseWithForwardRef<As extends ElementType>(
 ) {
     const {
         className,
-        shadow,
         noMargin,
         textCenter,
         bgColor,
@@ -45,7 +43,6 @@ function CardBaseWithForwardRef<As extends ElementType>(
             className={classNames('ffe-card-base', className, {
                 [`ffe-card-base--bg-${bgColor}`]: bgColor,
                 [`ffe-card-base--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,
-                'ffe-card-base--shadow': shadow,
                 'ffe-card-base--no-margin': noMargin,
                 'ffe-card-base--text-center': textCenter,
                 'ffe-card-base--no-padding': noPadding,
