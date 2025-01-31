@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.4.5...@sb1/ffe-cards@21.0.0) (2025-01-29)
+
+
+### Features
+
+* **ffe-cards:** allow two icons on iconCard ([d262e43](https://github.com/SpareBank1/designsystem/commit/d262e43a90cee0cd2747941ff5518ec58f9d6b0f))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** removes "iconPosition"-related styling
+
+
+
+
+
 ## [20.4.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@20.4.4...@sb1/ffe-cards@20.4.5) (2025-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards
