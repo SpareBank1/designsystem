@@ -1,4 +1,4 @@
-import { Heading2, Heading4, Paragraph } from '@sb1/ffe-core-react';
+import { Heading4, Paragraph } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
