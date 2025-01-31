@@ -1,10 +1,16 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
 
 .common-card-styling() {
+    --ffe-v-cards-common-card-background-color: var(
+        --ffe-color-surface-primary-default
+    );
+    --ffe-v-cards-common-card-border-color: var(
+        --ffe-color-border-primary-default
+    );
+
     background: var(--ffe-v-cards-common-card-background-color);
-    box-shadow: var(--ffe-v-cards-common-card-box-shadow);
     margin: 0 0 var(--ffe-spacing-xs);
-    border: 2px solid var(--ffe-v-cards-common-card-border-color);
+    border: 1px solid var(--ffe-v-cards-common-card-border-color);
     border-radius: var(--ffe-v-cards-common-card-border-radius);
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     outline: none;
@@ -56,8 +62,11 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             cursor: pointer;
-            border-color: var(--ffe-g-primary-color);
+            border-color: var(--ffe-color-border-primary-hover);
 
+            --ffe-v-cards-common-card-background-color: var(
+                --ffe-color-surface-primary-default-hover
+            );
             &
                 :where(
                     .ffe-card-body__card-name,
@@ -70,8 +79,7 @@
         }
     }
     &:focus-within {
-        border-color: var(--ffe-g-primary-color);
-        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        border-color: var(--ffe-color-border-primary-hover);
 
         &
             :where(
