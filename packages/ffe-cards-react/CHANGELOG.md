@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.6.8...@sb1/ffe-cards-react@18.0.0) (2025-01-29)
+
+
+### Features
+
+* **ffe-cards-react:** allow two icons on iconCard ([f30f94d](https://github.com/SpareBank1/designsystem/commit/f30f94d120aa92ee70c2597b05d09528ec116d12))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards-react:** removes and replaces "IconPosition"-prop and styling with "rightIcon" prop.
+
+
+
+
+
 ## [17.6.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@17.6.7...@sb1/ffe-cards-react@17.6.8) (2025-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
