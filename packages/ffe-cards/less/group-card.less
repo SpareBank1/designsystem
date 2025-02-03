@@ -4,13 +4,14 @@
     .common-card-styling();
     .card-background-styling();
 
-    position: relative;
-    border: var(--ffe-v-cards-common-group-card-border);
-    box-shadow: none;
+    --ffe-v-cards-common-group-card-border: var(
+            --ffe-v-cards-common-card-border-radius
+        )
+        var(--ffe-color-border-primary-default);
 
-    &--shadow {
-        box-shadow: var(--ffe-v-cards-common-card-box-shadow);
-    }
+    color: var(--ffe-color-foreground-default);
+    position: relative;
+    border: 1px solid var(--ffe-color-border-primary-default);
 
     &--no-margin {
         margin: 0;
@@ -40,7 +41,6 @@
     }
 
     &__footer {
-        background-color: var(--ffe-v-group-card-footer-background-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,14 +79,6 @@
             border-bottom-color: transparent;
         }
 
-        border-bottom-color: var(
-            --ffe-v-cards-common-group-card-separation-border-color
-        );
-    }
-
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            .card-background-dm-styling();
-        }
+        border-bottom-color: var(--ffe-color-border-primary-default);
     }
 }
