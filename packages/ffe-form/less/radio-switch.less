@@ -1,23 +1,24 @@
-@import (reference) '@sb1/ffe-core/less/breakpoints';
-
 .ffe-radio-switch {
+    --outer-circle-color: var(--ffe-color-border-primary-default);
+    --inner-circle-color: var(--ffe-color-fill-primary-pressed);
+    --circle-background: var(--ffe-color-surface-primary-default);
+    color: var(--ffe-color-foreground-default);
+
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-md) var(--ffe-spacing-xs)
         var(--ffe-spacing-xs);
     grid-template-columns: auto 1fr;
     grid-column-gap: var(--ffe-spacing-xs);
     position: relative;
-    background-color: var(--ffe-v-input-bg-color);
-    border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
+    border: var(--ffe-g-border-width) solid var(--outer-circle-color);
     border-radius: 48px;
     display: inline-grid;
     place-items: center;
     min-width: 100px;
     text-align: left;
-    color: var(--ffe-v-radio-button-label-color);
-    font-family: var(--ffe-g-font-strong);
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     cursor: pointer;
-    transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     margin-bottom: var(--ffe-spacing-2xs);
     margin-top: var(--ffe-spacing-sm);
     line-height: 1.5;
@@ -27,8 +28,8 @@
         content: '';
         left: 12px;
         top: 8px;
-        background-color: var(--ffe-v-input-bg-color);
-        border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
+        background-color: var(--inner-circle-color);
+        border: var(--ffe-g-border-width) solid var(--outer-circle-color);
         width: 24px;
         height: 24px;
         border-radius: 50%;
@@ -49,30 +50,42 @@
 }
 
 .ffe-radio-input {
-    &:checked + .ffe-radio-switch {
-        &:not(.ffe-radio-button--invalid) {
-            border-color: var(--ffe-g-secondary-color);
-        }
-
-        background-color: var(--ffe-g-secondary-color);
-        color: var(--ffe-v-input-bg-color);
+    &:where(:checked, :focus, :active, :hover) + .ffe-radio-switch::before {
+        outline: none;
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover + .ffe-radio-switch {
-            border-color: var(--ffe-g-secondary-color);
+            --circle-background: var(--ffe-color-surface-primary-default-hover);
         }
     }
 
-    &:focus-visible + .ffe-radio-switch {
-        box-shadow:
-            0 0 0 3px var(--ffe-v-input-bg-color),
-            0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
-        outline: none;
+    &:checked + .ffe-radio-switch {
+        --outer-circle-color: var(--ffe-color-fill-primary-selected);
+        --inner-circle-color: var(--ffe-color-fill-primary-pressed);
+        background-color: var(--ffe-color-fill-primary-pressed);
+        color: var(--ffe-color-foreground-on-fill-default);
+
+        &::before {
+            border: 5px solid var(--ffe-color-surface-primary-default);
+            background-color: var(--ffe-color-fill-primary-selected);
+        }
     }
 
-    &:checked + .ffe-radio-switch::before {
-        border: 5px solid var(--ffe-v-input-bg-color);
-        background-color: var(--ffe-v-checkbox-selected-color);
+    &:focus + .ffe-radio-switch {
+        --outer-circle-color: var(--ffe-color-border-interactive-focus);
+        outline: none;
+        box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
+    }
+
+    &:disabled + .ffe-radio-switch {
+        cursor: not-allowed;
+        --outer-circle-color: var(--ffe-color-border-primary-subtle);
+        --circle-background: var(--ffe-color-surface-primary-default);
+        color: var(--ffe-color-foreground-subtle);
+    }
+
+    &[aria-invalid='true'] + .ffe-radio-switch {
+        --outer-circle-color: var(--ffe-color-border-feedback-critical);
     }
 }

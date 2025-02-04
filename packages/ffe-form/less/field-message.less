@@ -1,6 +1,6 @@
 .ffe-field-message {
     font-family: var(--ffe-g-font);
-    color: var(--ffe-v-input-color);
+    color: var(--ffe-color-foreground-default);
     margin: var(--ffe-spacing-2xs) 0 var(--ffe-spacing-xs);
     display: grid;
     grid-template-columns: auto 1fr;
@@ -14,34 +14,41 @@
 
     &__icon {
         place-self: center;
-        background-color: var(--ffe-v-info-message-icon-color);
         border-radius: 50%;
         width: 18px;
         height: 18px;
         display: inline-flex;
+        color: var(--ffe-color-foreground-on-fill-default);
         align-items: center;
         justify-content: center;
     }
 
     .ffe-icons {
-        color: var(--ffe-v-info-message-icon-fill);
+        color: var(--ffe-color-foreground-on-fill-default);
     }
 }
 
 .ffe-field-message--success .ffe-field-message__icon {
-    background-color: var(--ffe-v-success-message-icon-color);
+    background-color: var(--ffe-color-fill-feedback-success);
     .ffe-icons {
-        color: var(--ffe-v-success-message-icon-fill);
+        color: var(--ffe-color-foreground-on-fill-default);
+    }
+}
+
+.ffe-field-message--info .ffe-field-message__icon {
+    background-color: var(--ffe-color-fill-feedback-info);
+    .ffe-icons {
+        color: var(--ffe-color-foreground-on-fill-default);
     }
 }
 
 .ffe-field-message--error .ffe-field-message__icon {
-    background-color: var(--ffe-v-error-message-icon-color);
+    background: var(--ffe-color-fill-feedback-critical);
     .ffe-icons {
-        color: var(--ffe-v-error-message-icon-fill);
+        color: var(--ffe-color-foreground-on-fill-default);
     }
 }
 
 .ffe-field-message--on-colored-bg {
-    color: var(--ffe-v-text-on-colored-bg-color);
+    color: var(--ffe-color-foreground-inverse);
 }

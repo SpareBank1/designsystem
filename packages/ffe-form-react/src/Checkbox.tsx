@@ -15,7 +15,7 @@ export interface CheckboxProps
               className: string;
               htmlFor: string;
           }) => React.ReactNode);
-    /** Adds alternative styling for better contrast on certain backgrounds */
+    /**@deprecated Adds alternative styling for better contrast on certain backgrounds */
     onColoredBg?: boolean;
 }
 
@@ -41,7 +41,6 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                 'ffe-checkbox--inline': inline,
                 'ffe-checkbox--no-margin': noMargins,
                 'ffe-checkbox--hidden-label': hiddenLabel,
-                'ffe-checkbox--on-colored-bg': onColoredBg,
             }),
             htmlFor: inputId,
         };
