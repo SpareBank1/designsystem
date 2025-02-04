@@ -2,9 +2,10 @@
 
 .ffe-checkbox {
     --line-height: 1.5rem;
-    --square-color: var(--ffe-v-checkbox-color);
-    --square-background-color: var(--ffe-v-input-bg-color);
+    --square-color: var(--ffe-color-border-primary-default);
+    --square-background-color: var(--ffe-color-component-form-input-fill-default);
     --checkmark-color: transparent;
+    --text-color: var(--ffe-color-foreground-default);
 
     isolation: isolate;
     line-height: var(--line-height);
@@ -18,7 +19,7 @@
     text-align: left;
     padding-left: 0;
     -webkit-tap-highlight-color: fade(@ffe-farge-vann, 15%);
-    color: var(--ffe-v-input-color);
+    color: var(--text-color);
     grid-template-columns: auto 1fr;
     grid-template-rows: var(--line-height) 1fr;
     overflow-wrap: anywhere;
@@ -34,23 +35,6 @@
         margin-right: var(--ffe-spacing-sm);
     }
 
-    &::before,
-    &::after {
-        place-self: center;
-        content: '';
-        grid-column: 1 e('/') 2;
-        grid-row: 1 e('/') 2;
-        transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
-    }
-
-    &::before {
-        background: var(--square-background-color);
-        border: var(--ffe-g-border-width) solid var(--square-color);
-        border-radius: calc(var(--ffe-g-border-radius) / 2);
-        height: 20px;
-        width: 20px;
-    }
-
     &--hidden-label {
         margin: 0;
         padding-left: 20px;
@@ -59,6 +43,23 @@
         &::before {
             margin-right: 0;
         }
+    }
+
+    &::before,
+    &::after {
+        place-self: center;
+        content: '';
+        grid-column: 1 e('/') 2;
+        grid-row: 1 e('/') 2;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    }
+
+    &::before {
+        background: var(--square-background-color);
+        border: 1px solid var(--square-color);
+        border-radius: calc(var(--ffe-g-border-radius) / 2);
+        height: 20px;
+        width: 20px;
     }
 
     &::after {
@@ -79,6 +80,7 @@
 .ffe-checkbox__content {
     grid-column: 2 e('/') 3;
     grid-row: 1 e('/') -1;
+    color: var(--ffe-color-foreground-default);
 }
 
 .ffe-hidden-checkbox {
@@ -94,26 +96,44 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover + .ffe-checkbox {
-            --square-color: var(--ffe-v-checkbox-selected-color);
+            --square-color: var(--ffe-color-component-form-input-border-hover);
+            --square-background-color: var(--ffe-color-component-form-input-fill-default-hover);
         }
     }
 
+    &:focus + .ffe-checkbox::before,
     &:focus-visible + .ffe-checkbox::before {
-        border: var(--ffe-g-border-width-focus) solid var(--ffe-v-checkbox-focus-outline-color);
+        border: var(--ffe-g-border-width-focus) solid var(--ffe-color-border-primary-selected);
+        box-shadow: 0 0 0 2px var(--ffe-color-border-primary-selected);
+    }
+
+    &:active + .ffe-checkbox {
+        --square-color: var(--ffe-color-component-form-input-border-pressed);
+        --square-background-color: var(--ffe-color-component-form-input-fill-default-pressed);
     }
 
     &:checked + .ffe-checkbox {
-        --square-color: var(--ffe-v-checkbox-selected-color);
-        --checkmark-color: var(--ffe-v-checkbox-marker-color);
+        --square-color: var(--ffe-color-border-primary-selected);
+        --square-background-color: var(--ffe-color-component-form-input-fill-selected);
+        --checkmark-color: var(--ffe-color-foreground-inverse);
     }
 
     &[aria-invalid='true'] + .ffe-checkbox {
-        --square-color: var(--ffe-g-error-color);
+        --square-color: var(--ffe-color-border-feedback-critical);
+        --square-background-color: var(--ffe-color-component-form-input-fill-critical);
     }
 }
 
-.ffe-form-label--on-colored-bg {
-    color: var(--ffe-v-text-on-colored-bg-color);
+.ffe-form-label {
+    color: var(--ffe-color-foreground-default);
+}
+
+.ffe-checkbox__description {
+    color: var(--ffe-color-foreground-subtle);
+}
+
+.ffe-checkbox__icon {
+    color: var(--ffe-color-foreground-emphasis);
 }
 
 .ffe-checkbox--on-colored-bg .ffe-checkbox__content {
