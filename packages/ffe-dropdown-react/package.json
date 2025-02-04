@@ -30,12 +30,12 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.1",
-        "eslint": "^8.57.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "eslint": "^9.19.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
     },
     "peerDependencies": {
-        "react": ">=18.2.0"
+        "react": ">=19.0.0"
     },
     "publishConfig": {
         "access": "public"

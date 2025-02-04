@@ -33,21 +33,18 @@
         "@sb1/ffe-form": "^30.3.4",
         "@sb1/ffe-icons-react": "^11.0.17",
         "@sb1/ffe-spinner-react": "^9.0.20",
-        "@types/lodash.isequal": "^4.5.8",
         "classnames": "^2.3.1",
         "compute-scroll-into-view": "^3.1.0",
-        "lodash.debounce": "^4.0.8",
-        "lodash.isequal": "^4.5.0",
-        "react-custom-scrollbars-2": "^4.3.0"
+        "lodash.debounce": "^4.0.8"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.1",
-        "eslint": "^8.57.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "eslint": "^9.19.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
     },
     "peerDependencies": {
-        "react": ">=18.2.0"
+        "react": ">=19.0.0"
     },
     "publishConfig": {
         "access": "public"

@@ -88,8 +88,8 @@
         "@sb1/ffe-tabs-react": "^10.0.19",
         "@sb1/ffe-webfonts": "^5.0.14",
         "prism-react-renderer": "^2.3.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
         "react-helmet": "^6.1.0",
         "react-live": "^4.1.7",
         "react-router-dom": "^6.23.1"
