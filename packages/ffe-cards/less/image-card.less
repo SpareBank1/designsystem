@@ -3,6 +3,10 @@
 @import 'components';
 
 .ffe-image-card {
+    --ffe-v-cards-common-card-border-color: var(
+        --ffe-color-border-primary-default
+    );
+
     .common-card-styling();
 
     &--clickable {
@@ -13,27 +17,29 @@
         margin: 0;
     }
 
-    --border-color: transparent;
-
     display: flex;
     padding: 0;
     max-width: 290px;
-    border: var(--ffe-v-cards-image-card-border);
+    border: var(--ffe-v-cards-common-card-border-color);
     flex-flow: column nowrap;
 
     .ffe-image-card__image-overlay,
     .ffe-image-card__body {
-        border-color: var(--border-color);
+        border-color: var(--ffe-v-cards-common-card-border-color);
     }
 
     &:has(.ffe-card__action:active, .ffe-card__action:focus) {
-        --border-color: var(--ffe-v-cards-border-hover-color);
+        --ffe-v-cards-common-card-border-color: var(
+            --ffe-color-border-primary-hover
+        );
     }
 
     &:has(.ffe-card__action) {
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                --border-color: var(--ffe-v-cards-border-hover-color);
+                --ffe-v-cards-common-card-border-color: var(
+                    --ffe-color-border-primary-hover
+                );
             }
         }
     }
@@ -54,7 +60,7 @@
     &__body {
         width: 100%;
         overflow: hidden;
-        border: 2px solid transparent;
+        border: 1px solid transparent;
         transition: border-color var(--ffe-transition-duration);
     }
 
