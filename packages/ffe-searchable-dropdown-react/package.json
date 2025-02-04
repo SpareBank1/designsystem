@@ -35,7 +35,9 @@
         "@sb1/ffe-spinner-react": "^9.0.20",
         "classnames": "^2.3.1",
         "compute-scroll-into-view": "^3.1.0",
-        "lodash.debounce": "^4.0.8"
+        "lodash.debounce": "^4.0.8",
+        "react-custom-scrollbars-2": "^4.3.0"
+        // denne er veldig enkel vi kan kanskje inline den? https://github.com/RobPethick/react-custom-scrollbars-2
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.1",

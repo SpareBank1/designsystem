@@ -34,7 +34,9 @@
         "@sb1/ffe-formatters": "^5.0.4",
         "@sb1/ffe-icons-react": "^11.0.17",
         "@sb1/ffe-searchable-dropdown-react": "^22.2.11",
-        "classnames": "^2.5.1"
+        "classnames": "^2.5.1",
+        "react-custom-scrollbars-2": "^4.3.0"
+        // denne er veldig enkel vi kan kanskje inline den? https://github.com/RobPethick/react-custom-scrollbars-2
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.9.1",
