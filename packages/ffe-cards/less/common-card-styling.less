@@ -1,10 +1,9 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
 
 .common-card-styling() {
-    background: var(--ffe-v-cards-common-card-background-color);
-    box-shadow: var(--ffe-v-cards-common-card-box-shadow);
+    background: var(--ffe-color-surface-primary-default);
     margin: 0 0 var(--ffe-spacing-xs);
-    border: 2px solid var(--ffe-v-cards-common-card-border-color);
+    border: 1px solid var(--ffe-color-border-primary-default);
     border-radius: var(--ffe-v-cards-common-card-border-radius);
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     outline: none;
@@ -17,38 +16,16 @@
 }
 
 .card-background-styling() {
-    &--bg-sand-30 {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-sand-30);
+    &--bg-primary {
+        background: var(--ffe-color-surface-primary-default);
     }
 
-    &--bg-sand-70 {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-sand-70);
+    &--bg-secondary {
+        background: var(--ffe-color-surface-secondary-default);
     }
 
-    &--bg-frost-30 {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-frost-30);
-    }
-
-    &--bg-syrin-30 {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-syrin-30);
-    }
-
-    &--bg-syrin-70 {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-syrin-70);
-    }
-}
-
-.card-background-dm-styling() {
-    &--dm-bg-svart {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-svart);
-    }
-
-    &--dm-bg-natt {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-natt);
-    }
-
-    &--dm-bg-koksgraa {
-        --ffe-v-cards-common-card-background-color: var(--ffe-farge-koksgraa);
+    &--bg-tertiary {
+        background: var(--ffe-color-surface-tertiary-default);
     }
 }
 
@@ -56,8 +33,8 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             cursor: pointer;
-            border-color: var(--ffe-g-primary-color);
-
+            border-color: var(--ffe-color-border-primary-hover);
+            background: var(--ffe-color-surface-primary-default-hover);
             &
                 :where(
                     .ffe-card-body__card-name,
@@ -70,8 +47,7 @@
         }
     }
     &:focus-within {
-        border-color: var(--ffe-g-primary-color);
-        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        border-color: var(--ffe-color-border-primary-hover);
 
         &
             :where(
@@ -101,6 +77,6 @@
     }
 
     .ffe-card__action--raw:visited {
-        color: var(--ffe-v-cards-clickabe-card-link-visited-color);
+        color: var(inherit);
     }
 }

@@ -1,14 +1,14 @@
 @import 'common-card-styling';
 
 .ffe-card-base {
+    color: var(--ffe-color-foreground-default);
     .common-card-styling();
 
     &--clickable {
         .clickable-card-styling();
     }
 
-    padding: var(--ffe-spacing-sm);
-    box-shadow: none; // Overwrite common-card-styling
+    padding: var(--ffe-spacing-md);
 
     &--no-padding {
         padding: 0;
@@ -16,21 +16,11 @@
 
     .card-background-styling();
 
-    &--shadow {
-        box-shadow: var(--ffe-v-cards-common-card-box-shadow);
-    }
-
     &--no-margin {
         margin: 0;
     }
 
     &--text-center {
         text-align: center;
-    }
-
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            .card-background-dm-styling();
-        }
     }
 }

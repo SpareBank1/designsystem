@@ -1,4 +1,4 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { Canvas, Controls, Meta } from '@storybook/blocks';
 import * as GroupCardStories from './GroupCard.stories.tsx';
 
 <Meta of={GroupCardStories} />
@@ -9,10 +9,6 @@ GroupCard er et kort med en liste av elementer inni. Det kan bestå av `GroupCar
 
 <Canvas of={GroupCardStories.Standard} />
 <Controls of={GroupCardStories.Standard} />
-
-Man kan modifisere GroupCard til å ikke ha skygge med `shadow={false}`.
-
-<Canvas of={GroupCardStories.ShadowFalse} />
 
 `GroupCardElement` har linjer mellom elementene som standard, men det kan fjernes med `noSeparator`.
 

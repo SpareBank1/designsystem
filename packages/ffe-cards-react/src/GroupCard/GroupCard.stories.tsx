@@ -1,11 +1,11 @@
+import { Heading2, Paragraph } from '@sb1/ffe-core-react';
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+import { CardRenderProps } from '../types';
 import { GroupCard } from './GroupCard';
-import { GroupCardTitle } from './GroupCardTitle';
 import { GroupCardElement } from './GroupCardElement';
 import { GroupCardFooter } from './GroupCardFooter';
-import { Heading2, Paragraph } from '@sb1/ffe-core-react';
-import type { StoryObj, Meta } from '@storybook/react';
-import { CardRenderProps } from '../types';
+import { GroupCardTitle } from './GroupCardTitle';
 
 const meta: Meta<typeof GroupCard> = {
     title: 'Komponenter/Cards/GroupCard',
@@ -16,9 +16,7 @@ export default meta;
 type Story = StoryObj<typeof GroupCard>;
 
 export const Standard: Story = {
-    args: {
-        shadow: true,
-    },
+    args: {},
     render: args => (
         <GroupCard {...args}>
             <GroupCardTitle>
@@ -38,19 +36,6 @@ export const Standard: Story = {
     ),
 };
 
-export const ShadowFalse: Story = {
-    args: {
-        ...Standard.args,
-        shadow: false,
-    },
-    render: args => (
-        <GroupCard {...args}>
-            <GroupCardElement>Innhold nr 1</GroupCardElement>
-            <GroupCardElement>Innhold nr 2</GroupCardElement>
-            <GroupCardElement>Innhold nr 3</GroupCardElement>
-        </GroupCard>
-    ),
-};
 export const NoSeparator: Story = {
     args: {
         ...Standard.args,

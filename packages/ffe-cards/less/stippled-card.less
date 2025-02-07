@@ -2,6 +2,8 @@
 @import 'components';
 
 .ffe-stippled-card {
+    --ffe-v-cards-stippled-border-color: var(--ffe-color-foreground-emphasis);
+
     .common-card-styling();
 
     &--clickable {
@@ -24,7 +26,6 @@
 
     background: transparent;
     border: 2px dashed var(--ffe-v-cards-stippled-border-color);
-    box-shadow: none;
     display: flex;
     align-items: center;
     padding: var(--ffe-spacing-md);
@@ -54,5 +55,5 @@
 }
 
 .ffe-stippled-card .ffe-icons {
-    color: var(--ffe-v-cards-icon-color);
+    color: var(--ffe-color-foreground-emphasis);
 }

@@ -5,7 +5,7 @@
     appearance: none;
     border: 2px solid transparent;
     border-radius: var(--ffe-v-buttons-border-radius);
-    color: var(--ffe-farge-hvit);
+    color: var(--ffe-color-component-button-primary-foreground-default);
     cursor: pointer;
     display: flex;
     font-family: var(--ffe-g-font);
@@ -30,7 +30,7 @@
         background: transparent;
         border-radius: 1.5rem;
         inset: -5px;
-        box-shadow: 0 0 0 2px var(--ffe-v-button-shadow-color);
+        box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
         transition: opacity var(--ffe-transition-duration) var(--ffe-ease);
     }
 
@@ -50,10 +50,13 @@
 
     &:active {
         transform: scale(0.97);
+        background-color: var(
+            --ffe-color-component-button-primary-fill-pressed
+        );
     }
 
     &:visited {
-        color: var(--ffe-v-button-text-color);
+        color: var(--ffe-color-component-button-primary-foreground-default);
     }
 
     @media (min-width: @breakpoint-sm) {
@@ -67,55 +70,65 @@
 }
 
 .ffe-button--action {
-    --background-color: var(--ffe-v-button-action-color);
-    --color: var(--ffe-v-button-action-color-text);
-
-    background-color: var(--background-color);
-    color: var(--color);
+    background-color: var(--ffe-color-component-button-action-fill-default);
+    color: var(--ffe-color-default-neutral-inverted);
+    border: none;
 
     :where(.ffe-button__icon) {
-        color: var(--color);
+        color: var(--ffe-color-default-neutral-inverted);
     }
 
-    &:focus {
-        --background-color: var(--ffe-v-button-action-color);
+    &:active {
+        transform: scale(0.97);
+        background-color: var(--ffe-color-default-feedback-success-strongest);
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            --background-color: var(--ffe-v-button-action-color-hover);
+        &:hover:not(:active):not(.ffe-button--pressed) {
+            background-color: var(
+                --ffe-color-default-feedback-success-stronger
+            );
         }
     }
 }
 
 .ffe-button--primary {
-    --background-color: var(--ffe-v-button-primary-color);
-    --color: var(--ffe-v-button-primary-color-text);
+    --background-color: var(--ffe-color-component-button-primary-fill-default);
+    --text-color: var(--ffe-color-component-button-primary-foreground-default);
 
     background-color: var(--background-color);
-    color: var(--color);
+    color: var(--text-color);
 
     :where(.ffe-button__icon) {
-        color: var(--color);
+        color: var(--text-color);
     }
 
-    &:focus {
-        --background-color: var(--ffe-v-button-primary-color);
+    &:active {
+        transform: scale(0.97);
+
+        --background-color: var(
+            --ffe-color-component-button-primary-fill-pressed
+        );
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            --background-color: var(--ffe-v-button-primary-color-hover);
+            --background-color: var(
+                --ffe-color-component-button-primary-fill-hover
+            );
         }
     }
 }
 
 .ffe-button--secondary,
-.ffe-button--shortcut,
 .ffe-button--expand {
-    --background-color: var(--ffe-v-button-secondary-color);
-    --border-color: var(--ffe-v-button-secondary-border-color);
-    --text-color: var(--ffe-v-button-secondary-color-text);
+    --background-color: var(
+        --ffe-color-component-button-secondary-fill-default
+    );
+    --border-color: var(--ffe-color-component-button-secondary-border-default);
+    --text-color: var(
+        --ffe-color-component-button-secondary-foreground-default
+    );
 
     background-color: var(--background-color);
     border: solid 2px var(--border-color);
@@ -124,40 +137,80 @@
     :where(.ffe-button__label, .ffe-button__icon) {
         color: var(--text-color);
     }
-    &:active,
-    &:focus,
-    &:visited {
-        color: var(--ffe-v-button-secondary-color-text);
-    }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            --background-color: var(--ffe-v-button-secondary-color-bg-hover);
-            --border-color: var(--ffe-v-button-secondary-color-bg-hover);
-            --text-color: var(--ffe-v-button-secondary-color-text-hover);
+            --background-color: var(
+                --ffe-color-component-button-secondary-fill-hover
+            );
+            --border-color: var(
+                --ffe-color-component-button-secondary-border-hover
+            );
+            --text-color: var(
+                --ffe-color-component-button-secondary-foreground-hover
+            );
         }
+    }
+
+    &:focus,
+    &:visited {
+        color: var(--ffe-color-component-button-secondary-foreground-default);
+        background-color: var(
+            --ffe-color-component-button-secondary-fill-hover
+        );
+    }
+
+    &:active {
+        transform: scale(0.97);
+        background-color: var(
+            --ffe-color-component-button-secondary-fill-pressed
+        );
+        border-color: var(
+            --ffe-color-component-button-secondary-border-pressed
+        );
+        color: var(--ffe-color-component-button-secondary-foreground-hover);
     }
 }
 
 .ffe-button--shortcut {
-    &:focus {
-        transform: translateX(12px);
-    }
+    background-color: var(--ffe-color-component-button-secondary-fill-default);
+    border: solid 2px var(--ffe-color-component-button-secondary-border-default);
+    color: var(--ffe-color-component-button-secondary-foreground-default);
 
     .ffe-button__icon {
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
-        will-change: transform;
+        color: var(--ffe-color-component-button-secondary-foreground-default);
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover .ffe-button__icon {
-            transform: translateX(12px);
+        &:hover {
+            background-color: var(
+                --ffe-color-component-button-secondary-fill-hover
+            );
+            color: var(--ffe-color-component-button-secondary-foreground-hover);
+
+            .ffe-button__icon {
+                color: var(
+                    --ffe-color-component-button-secondary-foreground-hover
+                );
+            }
         }
     }
-}
 
-.ffe-button--expand {
-    border-radius: 34px;
+    &:active {
+        transform: scale(0.97);
+        background-color: var(
+            --ffe-color-component-button-secondary-fill-pressed
+        );
+        color: var(--ffe-color-component-button-secondary-foreground-hover);
+
+        .ffe-button__icon {
+            color: var(--ffe-color-component-button-secondary-foreground-hover);
+        }
+    }
+
+    &:focus {
+        transform: translateX(12px);
+    }
 }
 
 .ffe-button--expanded {
@@ -166,13 +219,11 @@
 }
 
 .ffe-button--task {
-    --icon-color: var(--ffe-v-button-task-color-icon);
-    --text-color: var(--ffe-v-button-task-color-text);
-    --border-color: transparent;
+    --text-color: var(--ffe-color-foreground-emphasis);
 
     background: transparent;
     border-radius: 1.75rem;
-    border: 2px solid var(--border-color);
+    border: none;
     box-shadow: none;
     color: var(--text-color);
     display: inline-block;
@@ -183,12 +234,12 @@
     width: auto;
 
     :where(.ffe-button__icon) {
-        --border-color: var(--ffe-v-button-task-color-border);
-        --background-color: var(--ffe-v-button-task-color);
-        --color: var(--icon-color);
+        --icon-border-color: var(--ffe-color-foreground-emphasis);
+        --icon-background-color: transparent;
+        --icon-color: var(--ffe-color-foreground-emphasis);
 
-        border: 2px solid var(--border-color);
-        background-color: var(--background-color);
+        border: 2px solid var(--icon-border-color);
+        background-color: var(--icon-background-color);
         border-radius: 50%;
         height: 45px;
         width: 45px;
@@ -199,28 +250,38 @@
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
         :where(.ffe-icons) {
-            color: var(--color);
-        }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        &:hover .ffe-button__icon {
-            --background-color: var(--ffe-v-button-task-color-hover);
-            --border-color: var(--ffe-v-button-task-color-border-hover);
-            --icon-color: var(--ffe-v-button-task-color-icon-hover);
+            color: var(--icon-color);
         }
     }
 
     &:focus {
-        --border-color: var(--ffe-v-button-task-border-focus);
-
         &::after {
-            display: none;
+            box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
         }
     }
 
-    &:focus:not(:focus-visible) {
-        --border-color: transparent;
+    &:active {
+        transform: scale(0.97);
+        background-color: transparent;
+
+        .ffe-button__icon {
+            background-color: var(
+                --ffe-color-component-button-secondary-fill-pressed
+            );
+
+            --icon-border-color: var(--ffe-color-foreground-emphasis);
+        }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            .ffe-button__icon {
+                --icon-background-color: var(
+                    --ffe-color-component-button-secondary-fill-hover
+                );
+                --icon-border-color: var(--ffe-color-foreground-emphasis);
+            }
+        }
     }
 }
 
