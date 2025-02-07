@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.1...@sb1/ffe-messages@2.0.2) (2025-02-07)
+
+
+### Bug Fixes
+
+* **ffe-messages:** add mask image css variable on icon inside ffe-messages ([d952cbb](https://github.com/SpareBank1/designsystem/commit/d952cbba5a6505ca784d0699bddca1ff40806c20))
+
+
+
+
+
 ## [2.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.0...@sb1/ffe-messages@2.0.1) (2025-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-messages
