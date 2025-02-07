@@ -1248,7 +1248,7 @@
       "tertiary": {
         "subtlest": {
           "$type": "color",
-          "$value": "{color.syrin.800}",
+          "$value": "{color.syrin.600}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1260,7 +1260,7 @@
         },
         "subtler": {
           "$type": "color",
-          "$value": "{color.syrin.700}",
+          "$value": "{color.syrin.500}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1272,7 +1272,7 @@
         },
         "subtle": {
           "$type": "color",
-          "$value": "{color.syrin.600}",
+          "$value": "{color.syrin.400}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1284,7 +1284,7 @@
         },
         "default": {
           "$type": "color",
-          "$value": "{color.syrin.500}",
+          "$value": "{color.syrin.300}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1296,7 +1296,7 @@
         },
         "medium": {
           "$type": "color",
-          "$value": "{color.syrin.400}",
+          "$value": "{color.syrin.200}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1308,7 +1308,7 @@
         },
         "strong": {
           "$type": "color",
-          "$value": "{color.syrin.300}",
+          "$value": "{color.syrin.100}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1320,7 +1320,7 @@
         },
         "stronger": {
           "$type": "color",
-          "$value": "{color.syrin.200}",
+          "$value": "{color.syrin.50}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1332,7 +1332,7 @@
         },
         "strongest": {
           "$type": "color",
-          "$value": "{color.syrin.100}",
+          "$value": "{color.syrin.25}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -2096,6 +2096,22 @@
     }
   },
   "speciality": {
+    "logo": {
+      "name": {
+        "$type": "color",
+        "$value": "{color.vann.800}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {}
+          }
+        }
+      }
+    },
     "background": {
       "default": {
         "$type": "color",
@@ -2123,7 +2139,7 @@
       },
       "accent": {
         "$type": "color",
-        "$value": "{color.vann.600}",
+        "$value": "{color.vann.650}",
         "$description": "",
         "$extensions": {
           "com.figma": {
