@@ -78,7 +78,7 @@
       "secondary": {
         "default": {
           "$type": "color",
-          "$value": "{accent.brand.secondary.default}",
+          "$value": "{accent.brand.secondary.subtlest}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -92,7 +92,7 @@
         },
         "hover": {
           "$type": "color",
-          "$value": "{default.brand.secondary.subtle}",
+          "$value": "{accent.brand.secondary.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -106,7 +106,7 @@
         },
         "pressed": {
           "$type": "color",
-          "$value": "{default.brand.secondary.subtler}",
+          "$value": "{accent.brand.secondary.subtle}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -122,7 +122,7 @@
       "tertiary": {
         "default": {
           "$type": "color",
-          "$value": "{default.brand.tertiary.subtler}",
+          "$value": "{accent.brand.tertiary.subtlest}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -136,7 +136,7 @@
         },
         "hover": {
           "$type": "color",
-          "$value": "{default.brand.tertiary.subtle}",
+          "$value": "{accent.brand.tertiary.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -150,7 +150,7 @@
         },
         "pressed": {
           "$type": "color",
-          "$value": "{default.brand.tertiary.default}",
+          "$value": "{accent.brand.tertiary.subtle}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -877,7 +877,7 @@
       },
       "subtle": {
         "$type": "color",
-        "$value": "{accent.neutral.stronger}",
+        "$value": "{accent.neutral.strongest}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -891,7 +891,7 @@
       },
       "emphasis": {
         "$type": "color",
-        "$value": "{accent.brand.emphasis.stronger}",
+        "$value": "{accent.brand.emphasis.strongest}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -1880,7 +1880,7 @@
           "fill": {
             "default": {
               "$type": "color",
-              "$value": "{accent.neutral.sublest}",
+              "$value": "{accent.neutral.subtler}",
               "$description": "",
               "$extensions": {
                 "com.figma": {
@@ -2157,6 +2157,20 @@
             "selected-pressed": {
               "$type": "color",
               "$value": "{accent.brand.primary.strongest}",
+              "$description": "",
+              "$extensions": {
+                "com.figma": {
+                  "hiddenFromPublishing": false,
+                  "scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "codeSyntax": {}
+                }
+              }
+            },
+            "critical": {
+              "$type": "color",
+              "$value": "{accent.feedback.critical.medium}",
               "$description": "",
               "$extensions": {
                 "com.figma": {

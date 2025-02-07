@@ -1320,7 +1320,7 @@
         },
         "stronger": {
           "$type": "color",
-          "$value": "{color.syrin.150}",
+          "$value": "{color.syrin.100}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1332,7 +1332,7 @@
         },
         "strongest": {
           "$type": "color",
-          "$value": "{color.syrin.75}",
+          "$value": "{color.syrin.50}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -1358,7 +1358,7 @@
         },
         "subtler": {
           "$type": "color",
-          "$value": "{color.vann.750}",
+          "$value": "{color.vann.700}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -2096,6 +2096,22 @@
     }
   },
   "speciality": {
+    "logo": {
+      "name": {
+        "$type": "color",
+        "$value": "{color.alpha.white.100}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {}
+          }
+        }
+      }
+    },
     "background": {
       "default": {
         "$type": "color",
