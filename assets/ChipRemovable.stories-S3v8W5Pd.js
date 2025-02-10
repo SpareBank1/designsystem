@@ -1,0 +1,8 @@
+import{R as a}from"./index-eCxJ45ll.js";import{f as m,C as M}from"./Chip-Dr2Jz6pd.js";import{I as l}from"./Icon-B88nEPeu.js";const d="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00ODAtNDI5IDMxNi0yNjVxLTExIDExLTI1IDEwLjVUMjY2LTI2NnEtMTEtMTEtMTEtMjUuNXQxMS0yNS41bDE2My0xNjMtMTY0LTE2NHEtMTEtMTEtMTAuNS0yNS41VDI2Ni02OTVxMTEtMTEgMjUuNS0xMXQyNS41IDExbDE2MyAxNjQgMTY0LTE2NHExMS0xMSAyNS41LTExdDI1LjUgMTFxMTEgMTEgMTEgMjUuNVQ2OTUtNjQ0TDUzMS00ODBsMTY0IDE2NHExMSAxMSAxMSAyNXQtMTEgMjVxLTExIDExLTI1LjUgMTFUNjQ0LTI2Nkw0ODAtNDI5WiIvPjwvc3ZnPg==";function c(t,i){return a.createElement(M,{ref:i,rightIcon:a.createElement(l,{size:"sm",fileUrl:d}),...t})}const r=m(c);r.__docgenInfo={description:"",methods:[],displayName:"ChipRemovable",props:{as:{required:!1,tsType:{name:"As"},description:""},size:{required:!0,tsType:{name:"union",raw:"'sm' | 'md' | 'lg'",elements:[{name:"literal",value:"'sm'"},{name:"literal",value:"'md'"},{name:"literal",value:"'lg'"}]},description:"Size of chip"}}};const T={title:"Komponenter/Chips/ChipRemovable",component:r},e={args:{as:"button",children:"Label",size:"sm"},render:t=>a.createElement(r,{...t})};var o,s,n;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    as: 'button',
+    children: 'Label',
+    size: 'sm'
+  },
+  render: args => <ChipRemovable {...args} />
+}`,...(n=(s=e.parameters)==null?void 0:s.docs)==null?void 0:n.source}}};const p=["Standard"],g=Object.freeze(Object.defineProperty({__proto__:null,Standard:e,__namedExportsOrder:p,default:T},Symbol.toStringTag,{value:"Module"}));export{g as C,e as S};

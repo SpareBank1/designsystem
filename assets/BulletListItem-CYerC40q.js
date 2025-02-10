@@ -1,1 +1,0 @@
-import{R as s}from"./index-ne9I_3bB.js";import{c as l}from"./index-B6-3w37c.js";const m=({className:e,...t})=>s.createElement("li",{className:l("ffe-bullet-list__item",e),...t});m.__docgenInfo={description:"",methods:[],displayName:"BulletListItem"};export{m as B};
