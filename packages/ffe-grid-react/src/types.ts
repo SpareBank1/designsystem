@@ -52,3 +52,38 @@ export type BackgroundColor =
     | 'hvit';
 
 export type BackgroundColorDark = 'svart' | 'natt' | 'koksgraa';
+
+type ColumnsRange =
+    | 0
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5
+    | 6
+    | 7
+    | 8
+    | 9
+    | 10
+    | 11
+    | 12
+    | '0'
+    | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+
+interface GridColSize {
+    cols: ColumnsRange;
+    offset?: ColumnsRange;
+}
+
+export type SizeModifier = ColumnsRange | GridColSize;
