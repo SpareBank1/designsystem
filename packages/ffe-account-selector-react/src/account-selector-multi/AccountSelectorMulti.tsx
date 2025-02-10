@@ -56,8 +56,6 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
      * Called when emptying the input field and moving focus away from the account selector
      * */
     onReset: () => void;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
     /** Limits number of rendered dropdown elements */
     maxRenderedDropdownElements?: number;
 }
@@ -80,7 +78,6 @@ export const AccountSelectorMulti = <T extends Account = Account>({
     ariaInvalid,
     onOpen,
     onClose,
-    onColoredBg,
     maxRenderedDropdownElements,
     ...rest
 }: AccountSelectorMultiProps<T>) => {

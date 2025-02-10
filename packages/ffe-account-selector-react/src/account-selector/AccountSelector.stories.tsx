@@ -58,7 +58,6 @@ export const Standard: Story = {
         locale: 'nb',
         formatAccountNumber: true,
         allowCustomAccount: false,
-        onColoredBg: false,
     },
     render: function Render(args) {
         const [selectedAccount, setSelectedAccount] = useState<Account>();
@@ -68,7 +67,6 @@ export const Standard: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
@@ -89,7 +87,6 @@ export const ShowBalance: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
@@ -110,7 +107,6 @@ export const AllowCustomAccount: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
@@ -132,7 +128,6 @@ export const NoFormatAccount: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
@@ -181,7 +176,6 @@ export const ListElementBody: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
@@ -203,7 +197,6 @@ export const HideAccountDetails: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
@@ -227,7 +220,6 @@ export const PostListElement: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
@@ -252,7 +244,6 @@ export const InitialValue: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelector
                     {...args}
