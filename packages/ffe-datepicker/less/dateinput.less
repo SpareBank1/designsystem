@@ -16,7 +16,8 @@
         & + .ffe-datepicker__button {
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
-                    border: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
+                    border: var(--ffe-g-border-width-focus) solid
+                        var(--ffe-g-primary-color);
                     outline: none;
                 }
             }
@@ -35,12 +36,14 @@
                     border-color: var(--ffe-g-error-color);
                 }
                 &:focus-within:hover {
-                    border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
+                    border: var(--ffe-g-border-width-focus) solid
+                        var(--ffe-g-error-color);
                 }
             }
 
             &:focus-within {
-                border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
+                border: var(--ffe-g-border-width-focus) solid
+                    var(--ffe-g-error-color);
                 outline: none;
             }
 
@@ -52,7 +55,8 @@
 
                 @media (hover: hover) and (pointer: fine) {
                     &:hover {
-                        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
+                        border: var(--ffe-g-border-width-focus) solid
+                            var(--ffe-g-error-color);
                         outline: none;
                     }
                 }
@@ -101,12 +105,12 @@
         transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
         width: 56px;
         cursor: pointer;
-        z-index: 1;
         isolation: isolate;
 
         &:focus,
         &:active {
-            border: var(--ffe-g-border-width-focus) solid var(--ffe-v-datepicker-border-hover-color);
+            border: var(--ffe-g-border-width-focus) solid
+                var(--ffe-v-datepicker-border-hover-color);
         }
 
         @media (hover: hover) and (pointer: fine) {
