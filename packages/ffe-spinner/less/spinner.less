@@ -1,6 +1,4 @@
 .ffe-loading-spinner {
-    --color: var(--ffe-g-primary-color);
-
     display: inline-block;
     vertical-align: middle;
 
@@ -9,7 +7,7 @@
         display: inline-block;
         width: 20px;
         height: 20px;
-        border: 3px solid var(--color);
+        border: 3px solid var(--ffe-color-foreground-emphasis);
         border-top-color: transparent;
         border-radius: 50%;
         animation: spin 1s linear infinite;
@@ -45,9 +43,5 @@
     &--immediate::before {
         visibility: visible;
         animation-delay: 0ms;
-    }
-
-    &--on-colored-bg {
-        --color: var(--ffe-farge-hvit);
     }
 }
