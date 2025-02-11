@@ -46,7 +46,6 @@ export const Standard: Story = {
         id: 'input-id',
         locale: 'nb',
         formatAccountNumber: true,
-        onColoredBg: false,
     },
     render: function Render(args) {
         return (
@@ -54,7 +53,6 @@ export const Standard: Story = {
                 label="Velg konto"
                 inputId={args.id}
                 labelId={args.labelledById}
-                onColoredBg={args.onColoredBg}
             >
                 <AccountSelectorMulti {...args} />
             </InputGroup>
@@ -73,7 +71,6 @@ export const ControlledState: Story = {
                     label="Velg konto"
                     inputId={args.id}
                     labelId={args.labelledById}
-                    onColoredBg={args.onColoredBg}
                 >
                     {inputProps => (
                         <>

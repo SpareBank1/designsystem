@@ -3,84 +3,208 @@
     /** Buttons */
 
     /* Common button text color */
-    --ffe-v-button-text-color: var(--ffe-farge-hvit);
+    --ffe-v-button-text-color: var(
+        --ffe-color-component-button-primary-foreground-default
+    );
 
     /* Button border radius renders as 50% */
     --ffe-v-buttons-border-radius: 6em;
 
     /* Button box shadow */
-    --ffe-v-button-shadow-color: var(--ffe-farge-vann);
+    --ffe-v-button-shadow-color: var(--ffe-color-border-interactive-focus);
 
     /** Action button */
-    --ffe-v-button-action-color: var(--ffe-farge-skog);
-    --ffe-v-button-action-color-hover: #095139;
-    --ffe-v-button-action-color-text: var(--ffe-farge-hvit);
+    --ffe-v-button-action-color: var(
+        --ffe-color-component-button-action-fill-default
+    );
+    --ffe-v-button-action-color-hover: var(
+        --ffe-color-component-button-action-fill-hover
+    );
+    --ffe-v-button-action-color-pressed: var(
+        --ffe-color-component-button-action-fill-pressed
+    );
+    --ffe-v-button-action-color-text: var(
+        --ffe-color-component-button-action-foreground-default
+    );
 
     /** Primary button */
-    --ffe-v-button-primary-color: var(--ffe-farge-vann);
-    --ffe-v-button-primary-color-hover: var(--ffe-farge-fjell);
-    --ffe-v-button-primary-color-text: var(--ffe-farge-hvit);
+    --ffe-v-button-primary-color: var(
+        --ffe-color-component-button-primary-fill-default
+    );
+    --ffe-v-button-primary-color-hover: var(
+        --ffe-color-component-button-primary-fill-hover
+    );
+    --ffe-v-button-primary-color-pressed: var(
+        --ffe-color-component-button-primary-fill-pressed
+    );
+    --ffe-v-button-primary-color-text: var(
+        --ffe-color-component-button-primary-foreground-default
+    );
 
     /** Secondary buttons (+ back, expand, etc) */
-    --ffe-v-button-secondary-color: var(--ffe-farge-hvit);
-    --ffe-v-button-secondary-border-color: var(--ffe-farge-vann);
-    --ffe-v-button-secondary-color-text-hover: var(--ffe-farge-hvit);
-    --ffe-v-button-secondary-color-bg-hover: var(--ffe-farge-vann);
-    --ffe-v-button-secondary-color-text: var(--ffe-farge-vann);
+    --ffe-v-button-secondary-color: var(
+        --ffe-color-component-button-secondary-fill-default
+    );
+    --ffe-v-button-secondary-border-color: var(
+        --ffe-color-component-button-secondary-border-default
+    );
+    --ffe-v-button-secondary-color-text-hover: var(
+        --ffe-color-component-button-secondary-foreground-hover
+    );
+    --ffe-v-button-secondary-color-bg-hover: var(
+        --ffe-color-component-button-secondary-fill-hover
+    );
+    --ffe-v-button-secondary-color-bg-pressed: var(
+        --ffe-color-component-button-secondary-fill-pressed
+    );
+    --ffe-v-button-secondary-color-text: var(
+        --ffe-color-component-button-secondary-foreground-default
+    );
 
     /** Tertiary button */
-    --ffe-v-button-tertiary-color: var(--ffe-farge-vann);
-    --ffe-v-button-tertiary-color-hover: var(--ffe-farge-fjell);
-    --ffe-v-button-tertiary-color-focus: var(--ffe-farge-vann);
+    --ffe-v-button-tertiary-color: var(
+        --ffe-color-component-button-tertiary-fill-default
+    );
+    --ffe-v-button-tertiary-color-hover: var(
+        --ffe-color-component-button-tertiary-fill-hover
+    );
+    --ffe-v-button-tertiary-color-pressed: var(
+        --ffe-color-component-button-tertiary-fill-pressed
+    );
+    --ffe-v-button-tertiary-color-focus: var(
+        --ffe-color-border-interactive-focus
+    );
 
     /** Task button */
-    --ffe-v-button-task-color: var(--ffe-farge-hvit);
-    --ffe-v-button-task-color-hover: var(--ffe-farge-vann);
-    --ffe-v-button-task-color-border-hover: var(--ffe-farge-vann);
-    --ffe-v-button-task-color-border: var(--ffe-farge-vann);
-    --ffe-v-button-task-color-text: var(--ffe-farge-vann);
-    --ffe-v-button-task-color-text-hover: var(--ffe-farge-fjell);
-    --ffe-v-button-task-color-icon: var(--ffe-farge-vann);
-    --ffe-v-button-task-color-icon-hover: var(--ffe-farge-hvit);
-    --ffe-v-button-task-border-focus: var(--ffe-farge-vann);
+    --ffe-v-button-task-color: var(
+        --ffe-color-component-button-secondary-fill-default
+    );
+    --ffe-v-button-task-color-hover: var(
+        --ffe-color-component-button-secondary-fill-hover
+    );
+    --ffe-v-button-task-color-pressed: var(
+        --ffe-color-component-button-secondary-fill-pressed
+    );
+    --ffe-v-button-task-color-border-hover: var(
+        --ffe-color-component-button-secondary-border-hover
+    );
+    --ffe-v-button-task-color-border: var(
+        --ffe-color-component-button-secondary-border-default
+    );
+    --ffe-v-button-task-color-text: var(
+        --ffe-color-component-button-secondary-foreground-default
+    );
+    --ffe-v-button-task-color-text-hover: var(
+        --ffe-color-component-button-secondary-foreground-hover
+    );
+    --ffe-v-button-task-color-icon: var(
+        --ffe-color-component-button-secondary-foreground-default
+    );
+    --ffe-v-button-task-color-icon-hover: var(
+        --ffe-color-component-button-secondary-foreground-hover
+    );
+    --ffe-v-button-task-border-focus: var(--ffe-color-border-interactive-focus);
 
     @media (prefers-color-scheme: dark) {
         .regard-color-scheme-preference {
-            --ffe-v-button-text-color: var(--ffe-farge-svart);
-            --ffe-v-button-shadow-color: var(--ffe-farge-hvit);
+            --ffe-v-button-text-color: var(
+                --ffe-color-component-button-primary-foreground-default
+            );
+            --ffe-v-button-shadow-color: var(
+                --ffe-color-border-interactive-focus
+            );
 
             /** Action button */
-            --ffe-v-button-action-color: var(--ffe-farge-skog-70);
-            --ffe-v-button-action-color-hover: var(--ffe-farge-skog-30);
-            --ffe-v-button-action-color-text: var(--ffe-farge-svart);
+            --ffe-v-button-action-color: var(
+                --ffe-color-component-button-action-fill-inverse
+            );
+            --ffe-v-button-action-color-hover: var(
+                --ffe-color-component-button-action-fill-inverse-hover
+            );
+            --ffe-v-button-action-color-pressed: var(
+                --ffe-color-component-button-action-fill-inverse-pressed
+            );
+            --ffe-v-button-action-color-text: var(
+                --ffe-color-component-button-action-foreground-inverse
+            );
 
             /** Primary button */
-            --ffe-v-button-primary-color: var(--ffe-farge-vann-70);
-            --ffe-v-button-primary-color-hover: var(--ffe-farge-vann-30);
-            --ffe-v-button-primary-color-text: var(--ffe-farge-svart);
+            --ffe-v-button-primary-color: var(
+                --ffe-color-component-button-primary-fill-inverse
+            );
+            --ffe-v-button-primary-color-hover: var(
+                --ffe-color-component-button-primary-fill-inverse-hover
+            );
+            --ffe-v-button-primary-color-pressed: var(
+                --ffe-color-component-button-primary-fill-inverse-pressed
+            );
+            --ffe-v-button-primary-color-text: var(
+                --ffe-color-component-button-primary-foreground-inverse
+            );
 
             /** Secondary buttons (+ task, back, expand, etc) */
-            --ffe-v-button-secondary-color: var(--ffe-farge-svart);
-            --ffe-v-button-secondary-border-color: var(--ffe-farge-vann-70);
-            --ffe-v-button-secondary-color-text-hover: var(--ffe-farge-svart);
-            --ffe-v-button-secondary-color-bg-hover: var(--ffe-farge-vann-30);
-            --ffe-v-button-secondary-color-text: var(--ffe-farge-vann-30);
+            --ffe-v-button-secondary-color: var(
+                --ffe-color-component-button-secondary-fill-inverse
+            );
+            --ffe-v-button-secondary-border-color: var(
+                --ffe-color-component-button-secondary-border-inverse
+            );
+            --ffe-v-button-secondary-color-text-hover: var(
+                --ffe-color-component-button-secondary-foreground-inverse-hover
+            );
+            --ffe-v-button-secondary-color-bg-hover: var(
+                --ffe-color-component-button-secondary-fill-inverse-hover
+            );
+            --ffe-v-button-secondary-color-bg-pressed: var(
+                --ffe-color-component-button-secondary-fill-inverse-pressed
+            );
+            --ffe-v-button-secondary-color-text: var(
+                --ffe-color-component-button-secondary-foreground-inverse
+            );
 
             /** Tertiary button */
-            --ffe-v-button-tertiary-color: var(--ffe-farge-vann-30);
-            --ffe-v-button-tertiary-color-hover: var(--ffe-farge-hvit);
-            --ffe-v-button-tertiary-color-focus: var(--ffe-farge-hvit);
+            --ffe-v-button-tertiary-color: var(
+                --ffe-color-component-button-tertiary-fill-inverse
+            );
+            --ffe-v-button-tertiary-color-hover: var(
+                --ffe-color-component-button-tertiary-fill-inverse-hover
+            );
+            --ffe-v-button-tertiary-color-pressed: var(
+                --ffe-color-component-button-tertiary-fill-inverse-pressed
+            );
+            --ffe-v-button-tertiary-color-focus: var(
+                --ffe-color-border-interactive-focus
+            );
 
             /** Task button */
             --ffe-v-button-task-color: transparent;
-            --ffe-v-button-task-color-hover: var(--ffe-farge-vann-70);
-            --ffe-v-button-task-color-border-hover: var(--ffe-farge-vann-70);
-            --ffe-v-button-task-color-border: var(--ffe-farge-vann-30);
-            --ffe-v-button-task-color-text: var(--ffe-farge-vann-30);
-            --ffe-v-button-task-color-text-hover: var(--ffe-farge-hvit);
-            --ffe-v-button-task-color-icon: var(--ffe-farge-vann-30);
-            --ffe-v-button-task-color-icon-hover: var(--ffe-farge-svart);
-            --ffe-v-button-task-border-focus: var(--ffe-farge-hvit);
+            --ffe-v-button-task-color-hover: var(
+                --ffe-color-component-button-secondary-fill-inverse-hover
+            );
+            --ffe-v-button-task-color-pressed: var(
+                --ffe-color-component-button-secondary-fill-inverse-pressed
+            );
+            --ffe-v-button-task-color-border-hover: var(
+                --ffe-color-component-button-secondary-border-inverse-hover
+            );
+            --ffe-v-button-task-color-border: var(
+                --ffe-color-component-button-secondary-border-inverse
+            );
+            --ffe-v-button-task-color-text: var(
+                --ffe-color-component-button-secondary-foreground-inverse
+            );
+            --ffe-v-button-task-color-text-hover: var(
+                --ffe-color-component-button-secondary-foreground-inverse-hover
+            );
+            --ffe-v-button-task-color-icon: var(
+                --ffe-color-component-button-secondary-foreground-inverse
+            );
+            --ffe-v-button-task-color-icon-hover: var(
+                --ffe-color-component-button-secondary-foreground-inverse
+            );
+            --ffe-v-button-task-border-focus: var(
+                --ffe-color-border-interactive-focus
+            );
         }
     }
 }

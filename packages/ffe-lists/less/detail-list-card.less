@@ -1,14 +1,15 @@
 .ffe-detail-list-card {
-    --detail-list-bg-color: var(--ffe-v-detail-list-card-background-color);
+    --detail-list-bg-color: var(--ffe-color-surface-primary-default);
 
     background-color: var(--detail-list-bg-color);
+    border: 1px solid var(--ffe-color-border-primary-subtle);
     border-radius: var(--ffe-v-detail-list-card-border-radius);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     container-type: inline-size;
 
     &__item:not(:last-child) {
-        border-bottom: 1px solid var(--ffe-v-detail-list-card-border-color);
+        border-bottom: 1px solid var(--ffe-color-border-primary-subtle);
     }
 
     &__item {
@@ -45,13 +46,14 @@
 
         &-label {
             font-family: var(--ffe-g-font-heading-small);
-            color: var(--ffe-g-secondary-color);
+            color: var(--ffe-color-foreground-emphasis);
         }
 
         &-value {
             margin: 0; // Removes the default dd-element margin when it breaks to a new line
             display: flex;
             align-items: center;
+            color: var(--ffe-color-foreground-default);
 
             & > a,
             & > button {
@@ -65,41 +67,15 @@
         }
     }
 
-    &--bg-sand-30 {
-        --detail-list-bg-color: var(--ffe-farge-sand-30);
+    &--bg-primary {
+        --detail-list-bg-color: var(--ffe-color-surface-primary-default);
     }
 
-    &--bg-sand-70 {
-        --detail-list-bg-color: var(--ffe-farge-sand-70);
+    &--bg-secondary {
+        --detail-list-bg-color: var(--ffe-color-surface-secondary-default);
     }
 
-    &--bg-frost-30 {
-        --detail-list-bg-color: var(--ffe-farge-frost-30);
-    }
-
-    &--bg-syrin-30 {
-        --detail-list-bg-color: var(--ffe-farge-syrin-30);
-    }
-
-    &--bg-syrin-70 {
-        --detail-list-bg-color: var(--ffe-farge-syrin-70);
-    }
-}
-
-.regard-color-scheme-preference & {
-    @media (prefers-color-scheme: dark) {
-        .ffe-detail-list-card {
-            &--dm-bg-svart {
-                --detail-list-bg-color: var(--ffe-farge-svart);
-            }
-
-            &--dm-bg-natt {
-                --detail-list-bg-color: var(--ffe-farge-natt);
-            }
-
-            &--dm-bg-koksgraa {
-                --detail-list-bg-color: var(--ffe-farge-koksgraa);
-            }
-        }
+    &--bg-tertiary {
+        --detail-list-bg-color: var(--ffe-color-surface-tertiary-default);
     }
 }

@@ -1,5 +1,4 @@
 @import 'breakpoints';
-@import 'colors';
 
 .ffe-h1 {
     line-height: 2.25rem;
@@ -33,7 +32,7 @@
 
 .ffe-small-text,
 .ffe-micro-text {
-    color: var(--ffe-g-text-color);
+    color: var(--ffe-color-foreground-default);
     font-family: var(--ffe-g-font);
     font-weight: normal;
     font-variant-numeric: tabular-nums;
@@ -59,7 +58,7 @@
 .ffe-h4,
 .ffe-h5,
 .ffe-h6 {
-    color: var(--ffe-g-heading-color);
+    color: var(--ffe-color-foreground-emphasis);
     font-weight: normal;
     margin-bottom: var(--ffe-spacing-xs);
     margin-top: 0;
@@ -67,7 +66,7 @@
     overflow-wrap: anywhere;
 
     &--error {
-        color: var(--ffe-g-error-color);
+        color: var(--ffe-color-foreground-feedback-critical);
     }
 
     &--inline {
@@ -79,13 +78,8 @@
     }
 
     &--with-border {
-        border-bottom: 1px solid var(--ffe-farge-lysgraa);
+        border-bottom: var(--ffe-g-border-width) solid var(--ffe-color-foreground-emphasis);
         padding-bottom: var(--ffe-spacing-xs);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                border-color: var(--ffe-farge-graa);
-            }
-        }
     }
 
     &--no-underline {
@@ -111,7 +105,7 @@
 }
 
 .ffe-body-text {
-    color: var(--ffe-g-text-color);
+    color: var(--ffe-color-foreground-default);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     line-height: 1.5rem;
@@ -124,7 +118,7 @@
     margin-bottom: 1em;
     margin-top: 0;
     line-height: 1.5rem;
-    color: var(--ffe-g-text-color);
+    color: var(--ffe-color-foreground-default);
     text-wrap: pretty;
 
     &--text-center {
@@ -150,20 +144,20 @@
 }
 
 .ffe-lead-paragraph {
-    color: var(--ffe-g-lead-color);
+    color: var(--ffe-color-foreground-emphasis);
     line-height: 1.5rem;
     font-size: var(--ffe-fontsize-lead-paragraph);
 }
 
 .ffe-sub-lead-paragraph {
-    color: var(--ffe-g-text-color);
+    color: var(--ffe-color-foreground-default);
     line-height: 1.5rem;
     font-size: var(--ffe-fontsize-sub-lead-paragraph);
 }
 
 .ffe-link-text {
-    border-bottom: 1px solid var(--ffe-g-link-color);
-    color: var(--ffe-g-link-color);
+    border-bottom: var(--ffe-g-border-width) solid var(--ffe-color-foreground-interactive-link);
+    color: var(--ffe-color-foreground-interactive-link);
     cursor: pointer;
     text-decoration: none;
     word-wrap: break-all;
@@ -172,15 +166,15 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            border-bottom-color: var(--ffe-g-link-color-hover);
-            color: var(--ffe-g-link-color-hover);
+            border-bottom-color: var(--ffe-color-foreground-interactive-link-hover);
+            color: var(--ffe-color-foreground-interactive-link-hover);
             text-decoration: none;
         }
     }
 
     &:visited {
-        border-bottom-color: var(--ffe-g-link-color-visited);
-        color: var(--ffe-g-link-color-visited);
+        border-bottom-color: var(--ffe-color-foreground-interactive-link-pressed);
+        color: var(--ffe-color-foreground-interactive-link-pressed);
         text-decoration: none;
     }
 
@@ -189,24 +183,17 @@
     }
 
     &:focus {
-        border-color: var(--ffe-farge-hvit);
-        color: var(--ffe-farge-hvit);
+        border-color: var(--ffe-color-foreground-interactive-link-pressed);
+        color: var(--ffe-color-foreground-interactive-link-pressed);
         border-radius: 1px;
-        background-color: var(--ffe-g-link-color);
-        box-shadow: 0 0 0 2px var(--ffe-g-link-color);
+        background-color: var(--ffe-color-foreground-interactive-link);
+        box-shadow: 0 0 0 2px var(--ffe-color-foreground-interactive-link);
         outline: none;
-
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                border-color: var(--ffe-farge-svart) !important;
-                color: var(--ffe-farge-svart) !important;
-            }
-        }
     }
 }
 
 .ffe-link-icon {
-    fill: var(--ffe-g-link-color);
+    fill: var(--ffe-color-foreground-interactive-link);
     display: inline-flex;
     border-radius: 1.5rem;
     border: 2px solid transparent;
@@ -215,30 +202,26 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            fill: var(--ffe-g-link-icon-color-hover);
+            fill: var(--ffe-color-foreground-interactive-link-hover);
         }
     }
 
     &:focus {
-        box-shadow: 0 0 0 2px var(--ffe-g-link-icon-color-focus);
+        box-shadow: 0 0 0 2px var(--ffe-color-foreground-interactive-link-pressed);
     }
 }
 
 .ffe-divider-line {
     border: none;
-    border-bottom: solid 1px var(--ffe-farge-lysgraa);
+    border-bottom: var(--ffe-g-border-width) solid var(--ffe-color-border-primary-default);
     padding-top: 1px;
     padding-bottom: 1px;
     width: 100%;
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            border-color: var(--ffe-farge-graa);
-        }
-    }
 }
 
 .ffe-strong-text {
     font-family: var(--ffe-g-font-strong);
+    color: var(--ffe-color-foreground-default);
     font-variant-numeric: tabular-nums;
     font-weight: normal;
 }
@@ -248,18 +231,15 @@
     font-variant-numeric: tabular-nums;
     font-weight: normal;
     font-style: normal;
+    color: var(--ffe-color-foreground-default);
 }
 
 .ffe-pre-text {
-    background-color: var(--ffe-farge-sand-70);
+    background-color: var(--ffe-color-background-subtle);
+    color: var(--ffe-color-foreground-default);
     font-family: consolas, menlo, monaco, monospace;
     margin: 0;
     text-align: left;
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            background-color: var(--ffe-farge-koksgraa);
-        }
-    }
 }
 
 .ffe-inline-separator {

@@ -90,7 +90,11 @@ export const Feedback: React.FC<FeedbackProps> = ({
                 <div className="ffe-feedback__content">
                     {React.createElement(
                         `h${headingLevel}`,
-                        { ref: expandedRef, tabIndex: -1, className: 'ffe-h5' },
+                        {
+                            ref: expandedRef,
+                            tabIndex: -1,
+                            className: 'ffe-h5 ffe-feedback__heading',
+                        },
                         feedbackThumbClicked === 'THUMB_UP'
                             ? txt[locale].FEEDBACK_GOOD
                             : txt[locale].FEEDBACK_IMPROVE,
@@ -111,7 +115,11 @@ export const Feedback: React.FC<FeedbackProps> = ({
             <div className="ffe-feedback__content">
                 {React.createElement(
                     `h${headingLevel}`,
-                    { id: headingId, className: 'ffe-h4 ffe-h4--text-center' },
+                    {
+                        id: headingId,
+                        className:
+                            'ffe-h4 ffe-h4--text-center ffe-feedback__heading',
+                    },
                     texts?.feedbackNotSentHeading ??
                         txt[locale].FEEDBACK_NOT_SENT_HEADING,
                 )}

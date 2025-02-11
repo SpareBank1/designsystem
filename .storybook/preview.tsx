@@ -48,6 +48,7 @@ const preview: Preview = {
         options: {
             storySort: {
                 method: 'alphabetical',
+                order: ['Introduksjon', 'Design', 'Komponenter', 'Sider'],
             },
         },
     },

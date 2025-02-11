@@ -1,2 +1,16 @@
-@import 'theme';
-@import 'ffe-account-selector-single';
+.ffe-account-selector-single {
+    position: relative;
+    display: block;
+
+    &__details {
+        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-2xs) 0;
+        color: var(--ffe-color-foreground-default);
+        min-height: calc(1lh);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__details--invalid-empty {
+        display: none;
+    }
+}

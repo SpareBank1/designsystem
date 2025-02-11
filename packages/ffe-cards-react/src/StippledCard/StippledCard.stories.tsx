@@ -1,8 +1,8 @@
-import React from 'react';
-import { StippledCard } from './StippledCard';
-import type { StoryObj, Meta } from '@storybook/react';
 import { Icon } from '@sb1/ffe-icons-react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
 import utvalgte from './illustrations/utvalgte.svg';
+import { StippledCard } from './StippledCard';
 
 const Custom: React.FC<React.ComponentProps<'div'>> = props => (
     <div {...props}>
@@ -190,6 +190,32 @@ export const Condensed: Story = {
                 <>
                     <Title>Sparekonto voksen 25</Title>
                     <Subtext>7 004,00</Subtext>
+                </>
+            )}
+        </StippledCard>
+    ),
+};
+
+export const WithCardAction: Story = {
+    args: {
+        as: 'div',
+    },
+    render: args => (
+        <StippledCard {...args}>
+            {({ CardName, Title, Subtext, Text, CardAction }) => (
+                <>
+                    <CardName>CardName</CardName>
+                    <Title>
+                        <CardAction>Tittel</CardAction>
+                    </Title>
+                    <Subtext as="span">Subtext er grå</Subtext>
+                    <Text>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                    </Text>
                 </>
             )}
         </StippledCard>
