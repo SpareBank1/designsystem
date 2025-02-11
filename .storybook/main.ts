@@ -16,6 +16,7 @@ const config: StorybookConfig = {
         '../packages/ffe-core/documentation/Index.mdx',
         '../packages/**/*.@(mdx)',
         '../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+        '../documentation/**/*.@(mdx)',
     ],
     addons: [
         getAbsolutePath('@storybook/addon-links'),
