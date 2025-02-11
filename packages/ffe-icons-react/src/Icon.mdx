@@ -1,8 +1,8 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as IconStories from './Icon.stories.tsx';
-import bytteIkonSrc from './img/bytte-ikon.png'
-import velgerTextStilSrc from './img/velger-tekststil.png'
-import velgerColorSrc from './img/velger-color.png'
+import bytteIkonSrc from './img/bytte-ikon.png';
+import velgerTextStilSrc from './img/velger-tekststil.png';
+import velgerColorSrc from './img/velger-color.png';
 
 <Meta of={IconStories} />
 
@@ -11,7 +11,6 @@ import velgerColorSrc from './img/velger-color.png'
 Ikoner skal gjøre det enkelt for kunden å navigere i de digitale flatene våre. Ikonene representerer funksjoner, verktøy eller handlinger og visualiserer funksjonalitet.
 
 Ikonene vi bruker kommer fra ikonbiblioteket Material Symbols. [Les mer om ikonene](https://design.sparebank1.no/profil/ikoner/) under profil.
-
 
 ## Figma
 
@@ -48,7 +47,6 @@ return <Icon fileUrl={homeIcon} size="md" ariaLabel="hjem" />;
 
 Dersom man ønsker å legge inn ikoner som data-URL må man selv konvertere ikonene til et passende format, for eksempel [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
 
-
 <Canvas of={IconStories.Standard} />
 <Controls of={IconStories.Standard} />
 
@@ -79,10 +77,7 @@ Velg mellom tykkelsene 300, 400 og 500.
 
 ## Farger
 
-Disse fargene brukes som standard:
-
-* Light mode: Vann, Fjell, Hvit
-* Dark mode: Vann 70%, Vann 30%, Svart
+Ikon bruker `--ffe-color-foreground-emphasis` som standard farge.
 
 Du kan også velge fra de andre fargene i SpareBank 1-paletten.
 

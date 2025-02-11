@@ -1,2 +1,38 @@
-@import 'theme';
-@import 'icons';
+:root,
+:host {
+    --ffe-v-icons-size-sm: 20px;
+    --ffe-v-icons-size-md: 24px;
+    --ffe-v-icons-size-lg: 32px;
+    --ffe-v-icons-size-xl: 40px;
+}
+
+.ffe-icons {
+    mask-repeat: no-repeat;
+    mask-position: top;
+    background-color: currentcolor;
+    display: inline-block;
+
+    &--sm {
+        height: var(--ffe-v-icons-size-sm);
+        width: var(--ffe-v-icons-size-sm);
+    }
+
+    &--md {
+        height: var(--ffe-v-icons-size-md);
+        width: var(--ffe-v-icons-size-md);
+    }
+
+    &--lg {
+        height: var(--ffe-v-icons-size-lg);
+        width: var(--ffe-v-icons-size-lg);
+    }
+
+    &--xl {
+        height: var(--ffe-v-icons-size-xl);
+        width: var(--ffe-v-icons-size-xl);
+    }
+}
+
+&:where(.ffe-icons) {
+    color: var(--ffe-color-foreground-emphasis);
+}
