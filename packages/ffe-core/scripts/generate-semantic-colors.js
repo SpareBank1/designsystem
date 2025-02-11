@@ -138,6 +138,35 @@ function filePath(filename) {
     return path.resolve('tokens', filename);
 }
 
+function transformColorName(colorName) {
+    return colorName
+        .replace('--ffe-color-', '')
+        .split('-')
+        .map((word, index) =>
+            index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1),
+        )
+        .join('');
+}
+
+function generateSemanticColorModule(_semanticColorNames) {
+    let moduleContent = `"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+`;
+    let moduleVars = '';
+
+    _semanticColorNames.forEach(colorName => {
+        const transformedName = transformColorName(colorName);
+        moduleVars += `exports.${transformedName} = 'var(${colorName})';\n`;
+        moduleContent += `exports.${transformedName} = `;
+    });
+
+    moduleContent += 'void 0\n';
+    moduleContent += moduleVars;
+
+    return moduleContent;
+}
+
 function generateSemanticColors() {
     let cssContent = '// Generated from Figma tokens';
     cssContent += `\n\n// Context accent \n.ffe-accent-mode {\n${convertContextJsonToCss(filePath(files.contextAccent)).join('\n')}}\n`;
@@ -158,6 +187,11 @@ function generateSemanticColors() {
         true,
     );
     writeToFile('less/colors-semantic-storybook.less')(storybookCssContent);
+
+    // Generate and write the semantic color module
+    const semanticColorModuleContent =
+        generateSemanticColorModule(semanticColorNames);
+    writeToFile('lib/semanticColors.js')(semanticColorModuleContent);
 }
 
 generateSemanticColors();
