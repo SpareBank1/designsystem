@@ -68,7 +68,6 @@
         color: var(--text-color);
     }
 
-
     &__background {
         background: var(--background);
         border-radius: var(--ffe-g-border-radius-lg);
@@ -76,19 +75,19 @@
     }
 
     &--context {
-         --icon-size: var(--ffe-v-icons-size-lg);
-         --icon-padding: var(--ffe-spacing-xs);
+        --icon-size: var(--ffe-v-icons-size-lg);
+        --icon-padding: var(--ffe-spacing-xs);
 
-         .ffe-message__heading {
-             font-size: var(--ffe-fontsize-h6);
-             margin: 0 0 var(--ffe-spacing-2xs);
-         }
+        .ffe-message__heading {
+            font-size: var(--ffe-fontsize-h6);
+            margin: 0 0 var(--ffe-spacing-2xs);
+        }
 
         &.ffe-message--context-compact {
             --icon-size: var(--ffe-v-icons-size-md);
             --icon-padding: var(--ffe-spacing-2xs);
         }
-     }
+    }
 }
 
 .ffe-message__icon-container {
@@ -200,6 +199,7 @@
     mask-position: center;
     background-color: currentcolor;
     mask-image: var(--mask-image);
+    -webkit-mask-image: var(--mask-image);
     height: var(--icon-size);
     aspect-ratio: 1;
     mask-size: contain;

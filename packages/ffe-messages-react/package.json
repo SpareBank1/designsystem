@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-messages-react",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,12 +25,12 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-icons-react": "^11.0.17",
-        "@sb1/ffe-messages": "^2.0.1",
+        "@sb1/ffe-icons-react": "^11.0.18",
+        "@sb1/ffe-messages": "^2.0.2",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.9.1",
+        "@sb1/ffe-buildtool": "^0.9.2",
         "eslint": "^8.57.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"

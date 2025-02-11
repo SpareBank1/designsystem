@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.3.5...@sb1/ffe-datepicker@13.3.6) (2025-02-11)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** Fjern unødvendig z-index ([68152f1](https://github.com/SpareBank1/designsystem/commit/68152f18f6305f995e1d3aaa3fd7cd61e2a514b3))
+
+
+
+
+
+## [13.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.3.4...@sb1/ffe-datepicker@13.3.5) (2025-02-07)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+
+
+
+
 ## [13.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.3.3...@sb1/ffe-datepicker@13.3.4) (2025-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
