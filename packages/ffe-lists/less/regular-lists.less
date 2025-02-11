@@ -4,6 +4,7 @@
 .ffe-numbered-list,
 .ffe-bullet-list {
     font-family: var(--ffe-g-font);
+    color: var(--ffe-color-foreground-default);
     padding: 0;
     text-align: left;
     margin: 0 0 var(--ffe-spacing-sm);
@@ -59,6 +60,7 @@
 .ffe-check-list,
 .ffe-stylized-numbered-list {
     font-family: var(--ffe-g-font);
+    color: var(--ffe-color-foreground-default);
     padding: 0;
     text-align: left;
     margin: 0 0 var(--ffe-spacing-sm);
@@ -83,11 +85,11 @@
         grid-row: 1 e('/') 2;
         place-self: center;
         &--check.ffe-icons {
-            color: var(--ffe-v-lists-check-list-check-icon-color);
+            color: var(--ffe-color-fill-feedback-success);
         }
 
         &--cross.ffe-icons {
-            color: var(--ffe-v-lists-check-list-cross-icon-color);
+            color: var(--ffe-color-fill-feedback-critical);
         }
     }
 
@@ -122,7 +124,7 @@
         content: counter(list-elements);
         grid-column: 1 e('/') 2;
         grid-row: 1 e('/') 2;
-        color: var(--ffe-v-lists-title-color);
+        color: var(--ffe-color-foreground-emphasis);
         &:extend(.ffe-strong-text);
     }
 }
