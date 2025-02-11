@@ -15,7 +15,7 @@ export type CardBaseProps<As extends ElementType = 'div'> = Omit<
     /** No margin on card */
     noMargin?: boolean;
     textCenter?: boolean;
-    backgroundColor?: BackgroundColor;
+    bgColor?: BackgroundColor;
     noPadding?: boolean;
     children: WithCardActionProps['children'] | React.ReactNode;
 };
@@ -28,7 +28,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
         className,
         noMargin,
         textCenter,
-        backgroundColor = 'primary',
+        bgColor = 'primary',
         noPadding,
         children,
         ...rest
@@ -38,7 +38,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
         <WithCardAction
             baseClassName="ffe-card-base"
             className={classNames('ffe-card-base', className, {
-                [`ffe-card-base--bg-${backgroundColor}`]: backgroundColor,
+                [`ffe-card-base--bg-${bgColor}`]: bgColor,
                 'ffe-card-base--no-margin': noMargin,
                 'ffe-card-base--text-center': textCenter,
                 'ffe-card-base--no-padding': noPadding,

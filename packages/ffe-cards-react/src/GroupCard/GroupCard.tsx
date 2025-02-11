@@ -8,7 +8,7 @@ export interface GroupCardProps
     /** The children of the GroupCard component */
     children: React.ReactNode;
     /** The background color of the whole groupcard element */
-    backgroundColor?: BackgroundColor;
+    bgColor?: BackgroundColor;
     /** No margin on card */
     noMargin?: boolean;
 }
@@ -17,7 +17,7 @@ function GroupCardWithForwardRef(
     {
         className,
         children,
-        backgroundColor = 'primary',
+        bgColor = 'primary',
         noMargin,
         ...rest
     }: GroupCardProps,
@@ -29,7 +29,7 @@ function GroupCardWithForwardRef(
                 'ffe-group-card',
                 {
                     'ffe-group-card--no-margin': noMargin,
-                    [`ffe-group-card--bg-${backgroundColor}`]: backgroundColor,
+                    [`ffe-group-card--bg-${bgColor}`]: bgColor,
                 },
                 className,
             )}
