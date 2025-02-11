@@ -8,8 +8,6 @@ export interface SpinnerProps extends ComponentPropsWithoutRef<'div'> {
     loadingText?: React.ReactNode;
     /** 'nb', 'nn', or 'en' */
     locale?: 'nb' | 'nn' | 'en';
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
 }
 
 export const Spinner: React.FC<SpinnerProps> = ({
@@ -18,7 +16,6 @@ export const Spinner: React.FC<SpinnerProps> = ({
     large = false,
     loadingText,
     locale = 'nb',
-    onColoredBg,
     ...rest
 }) => (
     <div
@@ -30,7 +27,6 @@ export const Spinner: React.FC<SpinnerProps> = ({
         <span
             className={classNames(
                 'ffe-loading-spinner',
-                { 'ffe-loading-spinner--on-colored-bg': onColoredBg },
                 { 'ffe-loading-spinner--immediate': immediate },
                 { 'ffe-loading-spinner--large': large },
             )}
