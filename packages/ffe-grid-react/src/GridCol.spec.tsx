@@ -69,18 +69,10 @@ describe('<GridCol/>', () => {
     });
 
     it('sets background color class if valid', () => {
-        renderGridCol({ background: 'frost-30' });
+        renderGridCol({ bgColor: 'secondary' });
         const gridCol = screen.getByTestId(TEST_ID);
         expect(
-            gridCol.classList.contains(`ffe-grid__col--bg-frost-30`),
-        ).toBeTruthy();
-    });
-
-    it('sets background color class if valid', () => {
-        renderGridCol({ backgroundDark: 'koksgraa' });
-        const gridCol = screen.getByTestId(TEST_ID);
-        expect(
-            gridCol.classList.contains(`ffe-grid__col--bg-dark-koksgraa`),
+            gridCol.classList.contains(`ffe-grid__col--bg-secondary`),
         ).toBeTruthy();
     });
 

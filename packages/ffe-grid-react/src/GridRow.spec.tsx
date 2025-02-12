@@ -34,28 +34,16 @@ describe('<GridRow/>', () => {
     });
 
     it('adds correct class for all valid background colors', () => {
-        renderGridRow({ background: 'sand' });
+        renderGridRow({ bgColor: 'secondary' });
         const gridRow = screen.getByTestId(TEST_ID);
 
-        expect(gridRow.classList.contains(`ffe-grid__row--bg-sand`)).toBe(true);
-    });
-
-    it('adds correct class for all valid dark background colors', () => {
-        renderGridRow({ backgroundDark: 'natt' });
-        const gridRow = screen.getByTestId(TEST_ID);
-        expect(gridRow.classList.contains(`ffe-grid__row--bg-dark-natt`)).toBe(
+        expect(gridRow.classList.contains(`ffe-grid__row--bg-secondary`)).toBe(
             true,
         );
     });
 
     it('renders rows with extra wrappers when background is set', () => {
-        renderGridRow({ background: 'sand' });
-        const gridRow = screen.getByTestId(TEST_ID);
-        expect(gridRow.querySelector('.ffe-grid__row-wrapper')).toBeTruthy();
-    });
-
-    it('renders rows with extra wrappers when dark background is set', () => {
-        renderGridRow({ backgroundDark: 'koksgraa' });
+        renderGridRow({ bgColor: 'secondary' });
         const gridRow = screen.getByTestId(TEST_ID);
         expect(gridRow.querySelector('.ffe-grid__row-wrapper')).toBeTruthy();
     });

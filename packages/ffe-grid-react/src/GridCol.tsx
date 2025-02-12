@@ -2,7 +2,6 @@ import React, { ElementType } from 'react';
 import classNames from 'classnames';
 import {
     BackgroundColor,
-    BackgroundColorDark,
     ComponentWithoutRefAsPropParams,
     SizeModifier,
 } from './types';
@@ -10,9 +9,7 @@ import {
 export type GridColProps<As extends ElementType = any> =
     ComponentWithoutRefAsPropParams<As> & {
         /** Supported background colors */
-        background?: BackgroundColor;
-        /** Supported dark background colors */
-        backgroundDark?: BackgroundColorDark;
+        bgColor?: BackgroundColor;
         /** Center text content horizontally */
         centerText?: boolean;
         /** Center content vertically */
@@ -45,15 +42,11 @@ const centerTextClass = (centerText?: boolean) =>
 const centerClass = (center?: boolean) =>
     center ? 'ffe-grid__col--center' : null;
 
-const backgroundClass = (background?: BackgroundColor) =>
-    background ? `ffe-grid__col--bg-${background}` : null;
-
-const backgroundDarkClass = (backgroundDark?: BackgroundColorDark) =>
-    backgroundDark ? `ffe-grid__col--bg-dark-${backgroundDark}` : null;
+const backgroundClass = (bgColor?: BackgroundColor) =>
+    bgColor ? `ffe-grid__col--bg-${bgColor}` : null;
 
 export const GridCol: React.FC<GridColProps> = ({
-    background,
-    backgroundDark,
+    bgColor,
     className,
     as: Comp = 'div',
     centerText,
@@ -74,8 +67,7 @@ export const GridCol: React.FC<GridColProps> = ({
                 sizeClasses('sm', !sm && !lg && !md ? 12 : sm),
                 centerTextClass(centerText),
                 centerClass(center),
-                backgroundClass(background),
-                backgroundDarkClass(backgroundDark),
+                backgroundClass(bgColor),
             ]
                 .filter(x => x)
                 .join(' ')}
