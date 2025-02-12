@@ -35,8 +35,7 @@ export const ColBackground: Story = {
         sm: 12,
         md: 12,
         lg: { cols: 6, offset: 3 },
-        background: 'syrin-70',
-        backgroundDark: 'natt',
+        bgColor: 'secondary',
     },
     render: args => (
         <Grid>

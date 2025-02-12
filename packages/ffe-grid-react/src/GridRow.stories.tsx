@@ -33,7 +33,7 @@ export const Standard: Story = {
 };
 
 export const RowBackground: Story = {
-    args: { ...Standard.args, background: 'syrin-70', backgroundDark: 'natt' },
+    args: { ...Standard.args, bgColor: 'secondary' },
     render: args => (
         <Grid>
             <GridRow {...args}>
