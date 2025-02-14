@@ -28,7 +28,7 @@ describe('<CardBase/>', () => {
 
     it('should set bgColor-prop correctly', () => {
         render(
-            <CardBase data-testid={TEST_ID} backgroundColor="secondary">
+            <CardBase data-testid={TEST_ID} bgColor="secondary">
                 <div />
             </CardBase>,
         );
