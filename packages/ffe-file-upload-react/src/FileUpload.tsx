@@ -4,6 +4,28 @@ import classNames from 'classnames';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';
 
+/**
+ * Generates a unique filename for iOS camera uploads, ensuring the name isn't too long
+ * @param originalFile - Original File object
+ * @returns A new File object with a unique, length-constrained name
+ */
+const generateUniqueFileName = (originalFile: File): File => {
+    // Only handle 'image.jpg' from iOS camera
+    if (originalFile.name !== 'image.jpg') {
+        return originalFile;
+    }
+
+    // Use timestamp for uniqueness, no need for additional randomness
+    const timestamp = new Date().getTime();
+    const newName = `image_${timestamp}.jpg`;
+
+    // Create a new File object with the unique name
+    return new File([originalFile], newName, {
+        type: originalFile.type,
+        lastModified: originalFile.lastModified,
+    });
+};
+
 export interface FileUploadProps<Document> {
     /** ID for the input field. The ID is used as a base for the label ID as well. */
     id: string;
@@ -54,6 +76,45 @@ export interface FileUploadProps<Document> {
     accept?: string;
 }
 
+/**
+ * En komponent for opplasting av filer, som kan brukes til å håndtere dokumentopplasting i ulike formater.
+ *
+ * Filer kan lastes opp på to måter:
+ * 1. Via den native filopplastingsdialogen i nettleseren
+ * 2. Ved å dra og slippe filer direkte i opplastingssonen
+ *
+ * Filhåndteringsflyt:
+ * 1. Brukeren velger filer via opplastingsdialog eller drag-and-drop
+ * 2. Nettleseren sender event-callback med info om valgte filer
+ * 3. Konsumenten må selv hente filinnholdet fra brukerens filsystem
+ * 4. Konsumenten oppretter et objekt med filinformasjon som sendes til komponenten
+ * 5. Validering av filstørrelse og type må håndteres av konsumenten
+ *
+ * Files-objektet er indeksert på filnavn og har følgende struktur:
+ * @example
+ * ```typescript
+ * const files = {
+ *     fileBeingUploaded: {
+ *         name: 'fileBeingUploaded',
+ *     },
+ *     fileWithError: {
+ *         name: 'fileWithError',
+ *         error: 'Feil filtype',
+ *     },
+ *     fileUploaded: {
+ *         name: 'fileUploaded',
+ *         document: {
+ *             content: '(data)',
+ *         },
+ *     },
+ * };
+ * ```
+ *
+ * Merk:
+ * - Komponenten er tilstandsløs - all filhåndtering må gjøres i foreldrekomponenten
+ * - Duplikate filnavn støttes ikke
+ * - Ved opplasting fra iOS-kamera omdøpes filer automatisk med timestamp
+ */
 export function FileUpload<Document>({
     id,
     label,
@@ -80,15 +141,33 @@ export function FileUpload<Document>({
     const handleFilesDropped = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
         setIsHover(false);
-        onFilesDropped(event.dataTransfer.files);
+        const processedFiles = processFiles(event.dataTransfer.files);
+        onFilesDropped(processedFiles);
+    };
+
+    const processFiles = (fileList: FileList | null): FileList | null => {
+        if (!fileList) return null;
+
+        const dataTransfer = new DataTransfer();
+        Array.from(fileList).forEach(file => {
+            const processedFile = generateUniqueFileName(file);
+            dataTransfer.items.add(processedFile);
+        });
+        return dataTransfer.files;
     };
 
     const handleFileDeleted = (event: React.MouseEvent<HTMLButtonElement>) => {
         onFileDeleted(files[event.currentTarget.id]);
     };
 
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            triggerUploadFileNativeHandler();
+        }
+    };
+
     const triggerUploadFileNativeHandler = () => {
-        // clear file input to trigger onChange when uploading same filename
         if (fileInputElement.current) {
             fileInputElement.current.value = '';
             fileInputElement.current.click();
@@ -96,7 +175,8 @@ export function FileUpload<Document>({
     };
 
     const handleFileSelected = (event: React.ChangeEvent<HTMLInputElement>) => {
-        onFilesSelected(event.target.files);
+        const processedFiles = processFiles(event.target.files);
+        onFilesSelected(processedFiles);
     };
 
     return (
@@ -124,7 +204,6 @@ export function FileUpload<Document>({
                     </div>
                 </div>
             )}
-            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
             <div
                 className="ffe-file-upload__upload-section"
                 onDrop={handleFilesDropped}
@@ -133,6 +212,10 @@ export function FileUpload<Document>({
                     setIsHover(true);
                 }}
                 onDragLeave={() => setIsHover(false)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={handleKeyDown}
+                aria-label={label}
             >
                 <div
                     className={classNames(
