@@ -1,5 +1,4 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
-@import 'theme';
 
 .ffe-pagination {
     --circular-button-size: 2.5rem;
@@ -123,7 +122,7 @@
 }
 
 .ffe-pagination-dots {
-    fill: var(--ffe-v-pagination-dots);
+    fill: var(--ffe-color-component-button-primary-fill-default);
 }
 
 .ffe-pagination-page-button {
@@ -132,10 +131,12 @@
     white-space: nowrap;
     &--active,
     &--active:focus {
-        background-color: var(--ffe-farge-vann);
-        border-color: var(--ffe-farge-vann);
+        background-color: var(
+            --ffe-color-component-button-primary-fill-default
+        );
+        border-color: var(--ffe-color-component-button-primary-fill-default);
         .ffe-button__label {
-            color: var(--ffe-farge-hvit);
+            color: var(--ffe-color-component-button-primary-foreground-default);
         }
     }
 }
