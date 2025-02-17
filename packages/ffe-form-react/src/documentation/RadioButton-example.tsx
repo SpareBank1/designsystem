@@ -1,8 +1,5 @@
-import { useState } from 'react';
-import {
-    RadioButtonInputGroup,
-    RadioButton,
-} from '@sb1/ffe-form-react';
+import React, { useState } from 'react';
+import { RadioButtonInputGroup, RadioButton } from '@sb1/ffe-form-react';
 
 export default () => {
     const [accountType, setAccountType] = useState<string>('savings');
@@ -74,35 +71,6 @@ export default () => {
                             </>
                         )}
                     </RadioButtonInputGroup>
-                </div>
-            </div>
-
-            <div className="ffe-grid__row" style={{ marginTop: '2rem' }}>
-                <div className="ffe-grid__col--md-12 ffe-grid__col--sm-12">
-                    {/* On colored background */}
-                    <div style={{ background: 'var(--ffe-color-surface-highlight)', padding: '2rem' }}>
-                        <RadioButtonInputGroup
-                            label="Insurance coverage"
-                            name="insurance-type"
-                            onChange={e => setInsuranceType(e.target.value)}
-                            selectedValue={insuranceType}
-                            onColoredBg={true}
-                        >
-                            {inputProps => (
-                                <>
-                                    <RadioButton value="full" {...inputProps}>
-                                        Full Coverage
-                                    </RadioButton>
-                                    <RadioButton value="partial" {...inputProps}>
-                                        Partial Coverage
-                                    </RadioButton>
-                                    <RadioButton value="basic" {...inputProps}>
-                                        Basic Coverage
-                                    </RadioButton>
-                                </>
-                            )}
-                        </RadioButtonInputGroup>
-                    </div>
                 </div>
             </div>
         </div>

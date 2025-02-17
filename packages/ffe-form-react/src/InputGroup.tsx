@@ -28,7 +28,14 @@ export interface InputGroupProps
     /** Use the ErrorFieldMessage component if you need more flexibility in how the content is rendered. */
     fieldMessage?:
         | string
-        | React.ReactElement<{ id: string; onColoredBg?: boolean }>
+        | React.ReactElement<{
+              id: string;
+              /** @deprecated as part of update to Semantic Colors
+               *
+               * Use the `ffe-accent-color` class on the component or on the container of the component instead
+               * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+              onColoredBg?: never;
+          }>
         | null;
     /** To just render a static, always visible tooltip, use this. */
     description?: string;
@@ -38,13 +45,20 @@ export interface InputGroupProps
         | React.ReactElement<{
               id: string;
               htmlFor: string;
-              onColoredBg?: boolean;
+              /** @deprecated as part of update to Semantic Colors
+               *
+               * Use the `ffe-accent-color` class on the component or on the container of the component instead
+               * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+              onColoredBg?: never;
           }>;
     onTooltipToggle?: TooltipProps['onClick'];
     /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
     tooltip?: React.ReactNode;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
+    /** @deprecated as part of update to Semantic Colors
+     *
+     * Use the `ffe-accent-color` class on the component or on the container of the component instead
+     * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+    onColoredBg?: never;
 }
 const getChildrenWithExtraProps = (
     children: InputGroupProps['children'],
@@ -69,7 +83,6 @@ export const InputGroup: React.FC<InputGroupProps> = ({
     tooltip,
     onTooltipToggle,
     labelId,
-    onColoredBg,
     ...rest
 }) => {
     const generatedInputId = useId();
@@ -135,7 +148,6 @@ export const InputGroup: React.FC<InputGroupProps> = ({
             className={classNames(
                 'ffe-input-group',
                 {
-                    'ffe-input-group--on-colored-bg': onColoredBg,
                     'ffe-input-group--no-extra-margin': !extraMargin,
                     'ffe-input-group--message': hasMessage,
                 },
@@ -144,7 +156,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
             {...rest}
         >
             {typeof label === 'string' ? (
-                <Label htmlFor={id} id={labelId} onColoredBg={onColoredBg}>
+                <Label htmlFor={id} id={labelId}>
                     {label}
                 </Label>
             ) : (
@@ -152,19 +164,14 @@ export const InputGroup: React.FC<InputGroupProps> = ({
                 React.cloneElement(label, {
                     htmlFor: id,
                     id: labelId,
-                    onColoredBg,
                 })
             )}
 
             {typeof tooltip === 'string' && (
-                <Tooltip onClick={onTooltipToggle} onColoredBg={onColoredBg}>
-                    {tooltip}
-                </Tooltip>
+                <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
             )}
 
-            {tooltip === true && (
-                <Tooltip onClick={onTooltipToggle} onColoredBg={onColoredBg} />
-            )}
+            {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
 
             {React.isValidElement(tooltip) && tooltip}
 
@@ -180,11 +187,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
             {modifiedChildren}
 
             {typeof fieldMessage === 'string' && (
-                <ErrorFieldMessage
-                    as="p"
-                    id={fieldMessageId}
-                    onColoredBg={onColoredBg}
-                >
+                <ErrorFieldMessage as="p" id={fieldMessageId}>
                     {fieldMessage}
                 </ErrorFieldMessage>
             )}

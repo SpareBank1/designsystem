@@ -59,35 +59,4 @@
         overflow: visible;
         visibility: visible;
     }
-
-    &--on-colored-bg {
-        .ffe-tooltip__icon {
-            background: var(--ffe-color-surface-on-colored-bg);
-            border-color: var(--ffe-color-border-on-colored-bg);
-            color: var(--ffe-color-foreground-on-colored-bg);
-
-            @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    border-color: var(--ffe-color-border-on-colored-bg-hover);
-                    background: var(--ffe-color-surface-on-colored-bg-hover);
-                }
-            }
-
-            &:focus-visible {
-                box-shadow: 0 0 0 2px
-                    var(--ffe-color-border-on-colored-bg-focus);
-                border-color: var(--ffe-color-border-on-colored-bg-focus);
-            }
-
-            &:active,
-            .ffe-tooltip--open & {
-                border-color: var(--ffe-color-border-on-colored-bg-selected);
-                background: var(--ffe-color-surface-on-colored-bg-active);
-            }
-        }
-
-        .ffe-tooltip__text {
-            color: var(--ffe-color-foreground-on-colored-bg);
-        }
-    }
 }
