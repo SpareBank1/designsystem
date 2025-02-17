@@ -2,8 +2,9 @@
 
 .ffe-tab {
     display: flex;
-    background-color: var(--ffe-v-tabs-secondary-color);
-    color: var(--ffe-v-tabs-primary-color);
+
+    background-color: var(--ffe-color-surface-primary-default);
+    color: var(--ffe-color-foreground-on-fill-inverse);
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-md);
     border-radius: 40px;
     border: 2px solid transparent;
@@ -21,50 +22,47 @@
     flex-grow: 1;
     overflow-wrap: anywhere;
 
-    &::after {
-        content: '';
-        opacity: 0;
-        display: block;
-        position: absolute;
-        background: transparent;
-        border-radius: 1.5rem;
-        inset: -5px;
-        box-shadow: 0 0 0 2px var(--ffe-v-tabs-tab-focus-color);
-        transition: opacity var(--ffe-transition-duration) var(--ffe-ease);
-    }
-
-    &:focus::after {
-        opacity: 1;
-    }
-
-    &:focus:not(:focus-visible)::after {
-        opacity: 0;
-    }
-
     &:focus {
         outline: none;
         position: relative;
         overflow: unset;
+        border-color: var(--ffe-color-border-interactive-focus);
+        background-color: var(--ffe-color-fill-primary-subtle-hover);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            color: var(--ffe-v-tabs-secondary-color);
-            background-color: var(--ffe-v-tabs-tab-hover-color);
+            border-color: transparent;
+            background-color: var(--ffe-color-fill-primary-subtle-hover);
+            color: var(--ffe-color-foreground-on-fill-inverse);
         }
     }
 
-    &--selected,
-    &:active {
-        background-color: var(--ffe-v-tabs-primary-color);
-        color: var(--ffe-v-tabs-secondary-color);
+    &--selected {
+        background-color: var(--ffe-color-fill-primary-selected);
+        color: var(--ffe-color-foreground-on-fill-default);
         z-index: 2;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                background-color: var(--ffe-v-tabs-tab-active-hover-color);
+                border-color: transparent;
+                background-color: var(--ffe-color-fill-primary-hover);
+                color: var(--ffe-color-foreground-on-fill-default);
             }
         }
+
+        &:focus {
+            outline: none;
+            position: relative;
+            overflow: unset;
+            border-color: var(--ffe-color-border-interactive-focus);
+            background-color: var(--ffe-color-fill-primary-hover);
+        }
+    }
+
+    &:active {
+        background-color: var(--ffe-color-fill-primary-subtle-pressed);
+        z-index: 2;
     }
 
     @media (min-width: @breakpoint-sm) {
