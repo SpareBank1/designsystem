@@ -19,7 +19,11 @@ export interface RadioButtonInputGroupProps
         name: string;
         onChange: React.ChangeEventHandler<HTMLInputElement>;
         selectedValue?: SelectedRadioValue;
-        onColoredBg?: boolean;
+        /** @deprecated as part of update to Semantic Colors
+         *
+         * Use the `ffe-accent-color` class on the component or on the container of the component instead
+         * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+        onColoredBg?: never;
     }) => React.ReactNode;
     /** Additional class names applied to the fieldset */
     className?: string;
@@ -33,7 +37,13 @@ export interface RadioButtonInputGroupProps
     /** String or ErrorFieldMessage component with message */
     fieldMessage?:
         | string
-        | React.ReactElement<{ onColoredBg?: boolean }>
+        | React.ReactElement<{
+              /** @deprecated as part of update to Semantic Colors
+               *
+               * Use the `ffe-accent-color` class on the component or on the container of the component instead
+               * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+              onColoredBg?: never;
+          }>
         | null;
     /**
      * Indicates whether the radio buttons inside this radio button group is
@@ -57,8 +67,11 @@ export interface RadioButtonInputGroupProps
      * set
      * */
     tooltip?: React.ReactNode;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
+    /** @deprecated as part of update to Semantic Colors
+     *
+     * Use the `ffe-accent-color` class on the component or on the container of the component instead
+     * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+    onColoredBg?: never;
 }
 
 export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
@@ -73,7 +86,6 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
     selectedValue,
     tooltip,
     onChange,
-    onColoredBg,
     ...rest
 }) => {
     if (tooltip && description) {
@@ -88,7 +100,6 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
             aria-labelledby={id}
             className={classNames(
                 'ffe-input-group',
-                { 'ffe-input-group--on-colored-bg': onColoredBg },
                 { 'ffe-input-group--no-extra-margin': !extraMargin },
                 { 'ffe-input-group--message': !!fieldMessage },
                 className,
@@ -101,12 +112,11 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
                     className={classNames(
                         'ffe-form-label',
                         'ffe-form-label--block',
-                        { 'ffe-form-label--on-colored-bg': onColoredBg },
                     )}
                 >
                     {label}
                     {typeof tooltip === 'string' && (
-                        <Tooltip onColoredBg={onColoredBg}>{tooltip}</Tooltip>
+                        <Tooltip>{tooltip}</Tooltip>
                     )}
                     {React.isValidElement(tooltip) && tooltip}
                 </div>
@@ -124,18 +134,12 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
                     onChange?.(e);
                 },
                 selectedValue,
-                onColoredBg,
             })}
 
             {typeof fieldMessage === 'string' ? (
-                <ErrorFieldMessage as="p" onColoredBg={onColoredBg}>
-                    {fieldMessage}
-                </ErrorFieldMessage>
+                <ErrorFieldMessage as="p">{fieldMessage}</ErrorFieldMessage>
             ) : (
-                React.isValidElement(fieldMessage) &&
-                React.cloneElement(fieldMessage, {
-                    onColoredBg,
-                })
+                fieldMessage
             )}
         </fieldset>
     );

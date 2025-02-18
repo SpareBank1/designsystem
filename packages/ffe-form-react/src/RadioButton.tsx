@@ -6,14 +6,16 @@ import { BaseRadioButton, BaseRadioButtonProps } from './BaseRadioButton';
 export interface RadioButtonProps extends BaseRadioButtonProps {
     /** Indicates whether the radio button is rendered inline or as a block */
     inline?: boolean;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
+    /** @deprecated as part of update to Semantic Colors
+     *
+     * Use the `ffe-accent-color` class on the component or on the container of the component instead
+     * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+    onColoredBg?: never;
 }
 
 export const RadioButton: React.FC<RadioButtonProps> = ({
     className,
     inline,
-    onColoredBg,
     ...rest
 }) => {
     return (
@@ -23,7 +25,6 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
 
                 {
                     'ffe-radio-button--inline': inline,
-                    'ffe-radio-button--on-colored-bg': onColoredBg,
                 },
                 className,
             )}
