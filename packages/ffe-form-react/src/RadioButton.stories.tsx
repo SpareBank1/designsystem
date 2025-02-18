@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { RadioButton } from './RadioButton';
+import { RadioButtonInputGroup } from './RadioButtonInputGroup';
 
 const meta: Meta<typeof RadioButton> = {
     title: 'Komponenter/Form/RadioButton',
@@ -10,27 +11,157 @@ export default meta;
 
 type Story = StoryObj<typeof RadioButton>;
 
+const RadioButtonWithGroup = (args: any) => {
+    const [selected, setSelected] = useState(args.selectedValue);
+
+    return (
+        <RadioButtonInputGroup
+            label="Velg kundetype"
+            name="radio-button-demo"
+            onChange={e => setSelected(e.target.value)}
+            selectedValue={selected}
+        >
+            {inputProps => (
+                <>
+                    <RadioButton value="bankkunde" {...inputProps}>
+                        Bankkunde
+                    </RadioButton>
+                    <RadioButton value="bedriftskunde" {...inputProps}>
+                        Bedriftskunde
+                    </RadioButton>
+                </>
+            )}
+        </RadioButtonInputGroup>
+    );
+};
+
+const RadioButtonInlineWithGroup = (args: any) => {
+    const [selected, setSelected] = useState(args.selectedValue);
+
+    return (
+        <RadioButtonInputGroup
+            label="Velg betalingsfrekvens"
+            name="radio-button-inline-demo"
+            onChange={e => setSelected(e.target.value)}
+            selectedValue={selected}
+            inline={true}
+        >
+            {inputProps => (
+                <>
+                    <RadioButton value="monthly" {...inputProps}>
+                        Månedlig
+                    </RadioButton>
+                    <RadioButton value="quarterly" {...inputProps}>
+                        Kvartalsvis
+                    </RadioButton>
+                    <RadioButton value="yearly" {...inputProps}>
+                        Årlig
+                    </RadioButton>
+                </>
+            )}
+        </RadioButtonInputGroup>
+    );
+};
+
+const RadioButtonColoredBgWithGroup = (args: any) => {
+    const [selected, setSelected] = useState(args.selectedValue);
+
+    return (
+        <div
+            style={{
+                background: 'var(--ffe-color-surface-highlight)',
+                padding: '2rem',
+            }}
+        >
+            <RadioButtonInputGroup
+                label="Velg forsikringstype"
+                name="radio-button-colored-demo"
+                onChange={e => setSelected(e.target.value)}
+                selectedValue={selected}
+                onColoredBg={true}
+            >
+                {inputProps => (
+                    <>
+                        <RadioButton value="full" {...inputProps}>
+                            Fullkasko
+                        </RadioButton>
+                        <RadioButton value="partial" {...inputProps}>
+                            Delkasko
+                        </RadioButton>
+                        <RadioButton value="liability" {...inputProps}>
+                            Ansvar
+                        </RadioButton>
+                    </>
+                )}
+            </RadioButtonInputGroup>
+        </div>
+    );
+};
+
+const RadioButtonWithGroupTooltip = (args: any) => {
+    const [selected, setSelected] = useState(args.selectedValue);
+
+    return (
+        <RadioButtonInputGroup
+            label="Velg faktureringstype"
+            name="radio-button-tooltip-demo"
+            onChange={e => setSelected(e.target.value)}
+            selectedValue={selected}
+        >
+            {inputProps => (
+                <>
+                    <RadioButton
+                        value="monthly"
+                        tooltip="Månedlig fakturering er enklest å planlegge for. Passer for deg som liker å planlegge litt etter hvert."
+                        {...inputProps}
+                    >
+                        Månedlig fakturering
+                    </RadioButton>
+                    <RadioButton
+                        value="quarterly"
+                        tooltip="Kvartalsvis fakturering gir deg mer oversikt. Passer for deg som liker å planlegge godt."
+                        {...inputProps}
+                    >
+                        Kvartalsvis fakturering
+                    </RadioButton>
+                </>
+            )}
+        </RadioButtonInputGroup>
+    );
+};
+
 export const Standard: Story = {
     args: {
-        inline: false,
-        onColoredBg: false,
-        labelProps: {},
         selectedValue: 'bankkunde',
-        value: 'bankkunde',
-        children: 'Bankkunde',
     },
     render: function Render(args) {
-        return <RadioButton {...args} />;
+        return <RadioButtonWithGroup {...args} />;
     },
 };
-export const ToolTip: Story = {
+
+export const Inline: Story = {
     args: {
-        ...Standard.args,
-        children: 'Månedlig fakturering',
-        tooltip:
-            'Månedlig fakturering er enklest å planlegge for. Passer for deg som liker å planlegge litt etter hvert.',
+        selectedValue: 'monthly',
     },
     render: function Render(args) {
-        return <RadioButton {...args} />;
+        return <RadioButtonInlineWithGroup {...args} />;
+    },
+};
+
+export const ColoredBackground: Story = {
+    args: {
+        selectedValue: 'full',
+    },
+    render: function Render(args) {
+        return <RadioButtonColoredBgWithGroup {...args} />;
+    },
+};
+
+export const WithTooltip: Story = {
+    args: {
+        selectedValue: 'monthly',
+    },
+    render: function Render(args) {
+        return <RadioButtonWithGroupTooltip {...args} />;
     },
 };

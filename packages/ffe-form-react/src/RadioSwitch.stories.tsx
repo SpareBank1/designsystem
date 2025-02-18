@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { RadioSwitch } from './RadioSwitch';
+import { RadioButtonInputGroup } from './RadioButtonInputGroup';
 
 const meta: Meta<typeof RadioSwitch> = {
     title: 'Komponenter/Form/RadioSwitch',
@@ -9,6 +10,21 @@ const meta: Meta<typeof RadioSwitch> = {
 export default meta;
 
 type Story = StoryObj<typeof RadioSwitch>;
+
+const RadioSwitchWithGroup = (args: any) => {
+    const [selected, setSelected] = useState(args.selectedValue);
+
+    return (
+        <RadioButtonInputGroup
+            label="Velg et alternativ"
+            name="radio-switch-demo"
+            onChange={e => setSelected(e.target.value)}
+            selectedValue={selected}
+        >
+            {inputProps => <RadioSwitch {...args} {...inputProps} />}
+        </RadioButtonInputGroup>
+    );
+};
 
 export const Standard: Story = {
     args: {
@@ -19,6 +35,6 @@ export const Standard: Story = {
         selectedValue: 'true',
     },
     render: function Render(args) {
-        return <RadioSwitch {...args} />;
+        return <RadioSwitchWithGroup {...args} />;
     },
 };

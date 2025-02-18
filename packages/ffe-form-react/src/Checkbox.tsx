@@ -15,8 +15,11 @@ export interface CheckboxProps
               className: string;
               htmlFor: string;
           }) => React.ReactNode);
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
+    /** @deprecated as part of update to Semantic Colors
+     *
+     * Use the `ffe-accent-color` class on the component or on the container of the component instead
+     * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+    onColoredBg?: never;
 }
 
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
@@ -27,7 +30,6 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             inline = true,
             noMargins,
             id,
-            onColoredBg,
             checked,
             ...rest
         },
@@ -41,7 +43,6 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                 'ffe-checkbox--inline': inline,
                 'ffe-checkbox--no-margin': noMargins,
                 'ffe-checkbox--hidden-label': hiddenLabel,
-                'ffe-checkbox--on-colored-bg': onColoredBg,
             }),
             htmlFor: inputId,
         };
