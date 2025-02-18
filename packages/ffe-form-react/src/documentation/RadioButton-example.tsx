@@ -4,7 +4,6 @@ import { RadioButtonInputGroup, RadioButton } from '@sb1/ffe-form-react';
 export default () => {
     const [accountType, setAccountType] = useState<string>('savings');
     const [paymentFreq, setPaymentFreq] = useState<string>('monthly');
-    const [insuranceType, setInsuranceType] = useState<string>('full');
 
     return (
         <div className="ffe-grid">
