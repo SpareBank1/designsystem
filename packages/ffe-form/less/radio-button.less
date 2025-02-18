@@ -3,8 +3,8 @@
     --outer-circle-color: var(--ffe-color-border-primary-default);
     --inner-circle-color: var(--ffe-color-fill-primary-pressed);
     --circle-background: var(--ffe-color-surface-primary-default);
-    color: var(--ffe-color-foreground-default);
 
+    color: var(--ffe-color-foreground-default);
     isolation: isolate;
     line-height: var(--line-height);
     overflow-wrap: anywhere;
@@ -114,9 +114,10 @@
     }
 
     &:disabled + .ffe-radio-button {
-        cursor: not-allowed;
         --outer-circle-color: var(--ffe-color-border-primary-subtle);
         --circle-background: var(--ffe-color-surface-primary-default);
+
+        cursor: not-allowed;
         color: var(--ffe-color-foreground-subtle);
     }
 

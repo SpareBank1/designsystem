@@ -63,6 +63,7 @@
     &:checked + .ffe-radio-switch {
         --outer-circle-color: var(--ffe-color-fill-primary-selected);
         --inner-circle-color: var(--ffe-color-fill-primary-pressed);
+
         background-color: var(--ffe-color-fill-primary-pressed);
         color: var(--ffe-color-foreground-on-fill-default);
 
@@ -79,9 +80,10 @@
     }
 
     &:disabled + .ffe-radio-switch {
-        cursor: not-allowed;
         --outer-circle-color: var(--ffe-color-border-primary-subtle);
         --circle-background: var(--ffe-color-surface-primary-default);
+
+        cursor: not-allowed;
         color: var(--ffe-color-foreground-subtle);
     }
 
