@@ -7,8 +7,11 @@ export interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
      * Set this to `true` if you don't use tooltips and need the label to be `display: block;`.
      */
     block?: boolean;
-    /** Adds alternative styling for better contrast on certain backgrounds */
-    onColoredBg?: boolean;
+    /** @deprecated as part of update to Semantic Colors
+     *
+     * Use the `ffe-accent-color` class on the component or on the container of the component instead
+     * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+    onColoredBg?: never;
 }
 
 export const Label: React.FC<LabelProps> = ({
@@ -16,13 +19,11 @@ export const Label: React.FC<LabelProps> = ({
     children,
     className,
     htmlFor,
-    onColoredBg,
     ...rest
 }) => (
     <label
         className={classNames('ffe-form-label', className, {
             'ffe-form-label--block': block,
-            'ffe-form-label--on-colored-bg': onColoredBg,
         })}
         htmlFor={htmlFor}
         {...rest}
