@@ -219,6 +219,51 @@ const SiteNav = ({ visible, includeLogoutButton }: SiteNavProps) => {
     );
 };
 
+const DummyArticle = () => {
+    const containerStyle = {
+        maxWidth: '800px',
+        margin: '2rem auto',
+        padding: '2rem',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        borderRadius: '8px',
+    };
+
+    const headerStyle = {
+        fontSize: '2rem',
+        marginBottom: '1.5rem',
+        fontWeight: '600',
+        lineHeight: '1.2',
+    };
+
+    const paragraphStyle = {
+        fontSize: '1.1rem',
+        lineHeight: '1.6',
+        marginBottom: '1rem',
+    };
+
+    return (
+        <div style={containerStyle}>
+            <h1 style={headerStyle}>The Art of Lorem Ipsum</h1>
+            <p style={paragraphStyle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                non lectus in quam iaculis molestie ut nec turpis. Curabitur
+                feugiat turpis dignissim ex scelerisque ultricies in vitae est.
+            </p>
+            <p style={paragraphStyle}>
+                Proin bibendum tellus leo, non vulputate elit tempor sed. Cras
+                efficitur justo nisi, non vehicula metus faucibus ac. Interdum
+                et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+            <p style={paragraphStyle}>
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae; Sed at lorem vel nisi consequat
+                malesuada. Mauris venenatis tortor vel nunc cursus, at placerat
+                dolor ultrices.
+            </p>
+        </div>
+    );
+};
+
 export const Standard: Story = {
     args: {
         showNotificationBubbles: true,
@@ -366,16 +411,8 @@ export const Standard: Story = {
                     </div>
                 </header>
 
-                <div className="lorem-ipsum">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Proin non lectus in quam iaculis molestie ut nec turpis.
-                        Curabitur feugiat turpis dignissim ex scelerisque
-                        ultricies in vitae est. Proin bibendum tellus leo, non
-                        vulputate elit tempor sed. Cras efficitur justo nisi,
-                        non vehicula metus faucibus ac. Interdum et malesuada
-                        fames ac ante ipsum primis in faucibus.
-                    </p>
+                <div style={{ zIndex: 1 }} className="ffe-header lorem-ipsum">
+                    <DummyArticle />
                 </div>
             </div>
         );

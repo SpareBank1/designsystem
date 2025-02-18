@@ -3,7 +3,7 @@
 .ffe-header {
     &:extend(.ffe-body-text);
 
-    background: var(--ffe-v-background-color);
+    background: var(--ffe-color-background-default);
     text-align: center;
     isolation: isolate;
     position: relative;
@@ -28,7 +28,7 @@
     }
 
     &__border {
-        border-bottom: 1px solid var(--ffe-v-header-border-bottom-color);
+        border-bottom: 1px solid var(--ffe-color-border-primary-default);
         & .ffe-header__wrapper {
             justify-content: center;
         }
@@ -43,19 +43,17 @@
         &:link,
         &:visited,
         &:active {
-            color: var(--ffe-v-link-color);
+            color: var(--ffe-color-foreground-default);
             text-decoration: none;
         }
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                color: var(--ffe-v-link-hover-color);
+                color: var(--ffe-color-foreground-interactive-link-hover);
 
                 .ffe-header__user-nav & {
-                    background: var(
-                        --ffe-v-usernav-link-hover-background-color
-                    );
-                    color: var(--ffe-v-usernav-list-hover-color);
+                    background: var(--ffe-color-surface-primary-default-hover);
+                    color: var(--ffe-color-foreground-default);
                 }
             }
         }
@@ -63,13 +61,13 @@
         &--active:link,
         &--active:visited {
             position: relative;
-            color: var(--ffe-v-primary-color);
+            color: var(--ffe-color-foreground-emphasis);
         }
 
         &--active::after {
             content: '';
             display: inline-block;
-            border-bottom: 2px solid var(--ffe-v-primary-color);
+            border-bottom: 2px solid var(--ffe-color-foreground-emphasis);
             position: absolute;
             width: 100%;
             bottom: -2px;
@@ -82,13 +80,13 @@
 
         &:focus {
             border-radius: 1rem;
-            box-shadow: 0 0 0 2px var(--ffe-v-link-focus-box-shadow-color);
+            box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
             outline: none;
 
             .ffe-header__user-nav & {
                 border-radius: 0;
                 background-color: var(
-                    --ffe-v-usernav-link-focus-background-color
+                    --ffe-color-surface-primary-default-pressed
                 );
             }
         }
@@ -96,11 +94,11 @@
         &:focus:not(:focus-visible) {
             background-color: transparent;
             box-shadow: none;
-            color: var(--ffe-v-primary-color);
+            color: var(--ffe-color-foreground-emphasis);
         }
 
         &--disabled {
-            color: var(--ffe-v-link-disabled-color);
+            color: var(--ffe-color-foreground-subtle);
             cursor: default;
         }
     }
@@ -117,16 +115,14 @@
 
         a {
             &:focus {
-                box-shadow: 0 0 0 2px var(--ffe-v-link-focus-box-shadow-color);
+                box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
                 border-radius: 1rem;
                 padding: var(--ffe-spacing-xs);
             }
         }
 
         &-text {
-            fill: var(
-                --ffe-v-header-logo-color
-            ); //not everyone will have this setup, but it will set a good example
+            fill: var(--ffe-color-foreground-interactive-link-pressed);
         }
     }
 
@@ -148,11 +144,11 @@
     }
 
     &__icon-button {
-        color: var(--ffe-v-header-icon-button-color);
+        color: var(--ffe-color-foreground-default);
         display: inline-grid;
         grid-template-columns: auto 1fr;
         &:focus-visible {
-            outline: 2px solid var(--ffe-v-header-icon-button-color);
+            outline: 2px solid var(--ffe-color-foreground-default);
             outline-offset: 2px;
         }
 
@@ -163,14 +159,20 @@
     }
 
     &__logout-button {
-        --color: var(--ffe-v-header-logout-color);
-        --color-hover: var(--ffe-v-header-logout-color-hover);
-        --background-color: var(--ffe-v-header-logout-background-color);
-        --background-color-hover: var(
-            --ffe-v-header-logout-background-color-hover
+        --color: var(--ffe-color-foreground-interactive-link);
+        --color-hover: var(--ffe-color-foreground-interactive-link-hover);
+        --background-color: var(
+            --ffe-color-component-button-secondary-fill-default
         );
-        --border-color: var(--ffe-v-header-logout-border-color);
-        --border-color-hover: var(--ffe-v-header-logout-border-color-hover);
+        --background-color-hover: var(
+            --ffe-color-component-button-secondary-fill-hover
+        );
+        --border-color: var(
+            --ffe-color-component-button-secondary-border-default
+        );
+        --border-color-hover: var(
+            --ffe-color-component-button-secondary-border-hover
+        );
 
         color: var(--color);
         background: var(--background-color);
@@ -196,7 +198,7 @@
     &__user-icon,
     &__user-chevron-icon,
     &__site-nav-icon {
-        color: var(--ffe-v-primary-color);
+        color: var(--ffe-color-foreground-emphasis);
     }
 
     &__user-icon,
@@ -209,7 +211,7 @@
         margin-left: var(--ffe-spacing-xs);
         transition: transform var(--ffe-transition-duration)
             var(--ffe-ease-in-out-back);
-        color: var(--ffe-v-header-icon-button-color);
+        color: var(--ffe-color-foreground-default);
     }
 
     &__user-chevron--expanded &__user-chevron-icon {
@@ -250,7 +252,7 @@
         &::before,
         &::after {
             display: inline-block;
-            background: var(--ffe-v-primary-color);
+            background: var(--ffe-color-foreground-emphasis);
             width: 24px;
             height: 4px;
             border-radius: 2px;
@@ -310,14 +312,14 @@
     &__notification-bubble {
         font-family: var(--ffe-v-font-strong);
         font-weight: normal;
-        font-size: .9rem;
+        font-size: 0.9rem;
         line-height: 1;
         display: inline-grid;
         place-items: center;
         width: 1.5rem;
         aspect-ratio: 1;
-        background: var(--ffe-v-notification-bubble-background-color);
-        color: var(--ffe-v-notification-bubble-text-color);
+        background: var(--ffe-color-fill-feedback-critical);
+        color: var(--ffe-color-foreground-on-fill-default);
         border-radius: 50%;
     }
 }
@@ -404,10 +406,10 @@
             right: 20px;
             top: -16px;
             min-width: 225px;
-            background: var(--ffe-v-background-color);
+            background: var(--ffe-color-background-default);
             border-radius: 24px;
-            box-shadow: var(--ffe-v-usernav-box-shadow);
-            border: 2px solid var(--ffe-v-usernav-border-color);
+            box-shadow: var(--ffe-shadow-md);
+            border: 2px solid var(--ffe-color-border-primary-default);
             padding: var(--ffe-spacing-md) 0;
         }
     }
@@ -452,7 +454,7 @@
             left: 0;
             top: 1px;
             padding: var(--ffe-spacing-sm) 0;
-            border-bottom: 1px solid var(--ffe-v-header-border-bottom-color);
+            border-bottom: 1px solid var(--ffe-color-border-primary-default);
             transform: translateY(-25px);
             transition: transform var(--ffe-transition-duration) var(--ffe-ease);
 
@@ -461,7 +463,7 @@
                 height: auto;
                 width: 100%;
                 transform: translateY(0);
-                background-color: var(--ffe-v-background-color);
+                background-color: var(--ffe-color-background-default);
             }
         }
         &__list-item--logout {
@@ -481,7 +483,7 @@
                 position: absolute;
                 width: 10px;
                 aspect-ratio: 1;
-                background: var(--ffe-v-notification-bubble-background-color);
+                background: var(--ffe-color-fill-feedback-critical);
                 border-radius: 50%;
                 content: '';
             }
