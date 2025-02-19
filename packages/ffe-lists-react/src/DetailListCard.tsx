@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { BackgroundColor } from '../../ffe-cards-react/src/types';
+
+export type BackgroundColor = 'primary' | 'secondary' | 'tertiary';
 
 export interface DetailListCardProps
     extends React.ComponentPropsWithoutRef<'dl'> {
