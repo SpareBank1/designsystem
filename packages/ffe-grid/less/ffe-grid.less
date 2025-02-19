@@ -25,6 +25,7 @@
 .ffe-grid__row {
     padding-right: var(--ffe-spacing-sm);
     padding-left: var(--ffe-spacing-sm);
+    color: var(--ffe-color-foreground-default);
 }
 
 .ffe-grid__row,
@@ -557,117 +558,16 @@
         }
     }
 
-    &--bg-frost-30 {
-        background-color: var(--ffe-farge-frost-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
+    &--bg-primary {
+        background-color: var(--ffe-color-surface-primary-default);
     }
 
-    &--bg-sand {
-        background-color: var(--ffe-farge-sand);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
+    &--bg-secondary {
+        background-color: var(--ffe-color-surface-secondary-default);
     }
 
-    &--bg-sand-70 {
-        background-color: var(--ffe-farge-sand-70);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-sand-30 {
-        background-color: var(--ffe-farge-sand-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-    &--bg-syrin-70 {
-        background-color: var(--ffe-farge-syrin-70);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-    &--bg-syrin-30 {
-        background-color: var(--ffe-farge-syrin-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-vann {
-        background-color: var(--ffe-farge-vann);
-        color: var(--ffe-farge-hvit);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-    &--bg-vann-30 {
-        background-color: var(--ffe-farge-vann-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-fjell {
-        background-color: var(--ffe-farge-fjell);
-        color: var(--ffe-farge-hvit);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-hvit {
-        background-color: var(--ffe-farge-hvit);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-dark-svart {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-dark-natt {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-natt);
-            }
-        }
-    }
-
-    &--bg-dark-koksgraa {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-koksgraa);
-            }
-        }
+    &--bg-tertiary {
+        background-color: var(--ffe-color-surface-tertiary-default);
     }
 }
 
@@ -679,116 +579,16 @@
 .ffe-grid__col {
     grid-column: auto e('/') span 12;
 
-    &--bg-frost-30 {
-        background-color: var(--ffe-farge-frost-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
+    &--bg-primary {
+        background-color: var(--ffe-color-surface-primary-default);
     }
 
-    &--bg-sand {
-        background-color: var(--ffe-farge-sand);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
+    &--bg-secondary {
+        background-color: var(--ffe-color-surface-secondary-default);
     }
 
-    &--bg-sand-70 {
-        background-color: var(--ffe-farge-sand-70);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-sand-30 {
-        background-color: var(--ffe-farge-sand-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-    &--bg-syrin-70 {
-        background-color: var(--ffe-farge-syrin-70);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-    &--bg-syrin-30 {
-        background-color: var(--ffe-farge-syrin-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-vann {
-        background-color: var(--ffe-farge-vann);
-        color: var(--ffe-farge-hvit);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-    &--bg-vann-30 {
-        background-color: var(--ffe-farge-vann-30);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-    &--bg-fjell {
-        background-color: var(--ffe-farge-fjell);
-        color: var(--ffe-farge-hvit);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-hvit {
-        background-color: var(--ffe-farge-hvit);
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-dark-svart {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-svart);
-            }
-        }
-    }
-
-    &--bg-dark-natt {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-natt);
-            }
-        }
-    }
-
-    &--bg-dark-koksgraa {
-        .regard-color-scheme-preference & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-farge-koksgraa);
-            }
-        }
+    &--bg-tertiary {
+        background-color: var(--ffe-color-surface-tertiary-default);
     }
 
     &--center-text {

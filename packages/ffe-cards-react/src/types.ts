@@ -26,11 +26,4 @@ export interface CardActionRenderProps {
     CardAction: typeof CardAction;
 }
 
-export type BgColor =
-    | 'sand-30'
-    | 'sand-70'
-    | 'frost-30'
-    | 'syrin-30'
-    | 'syrin-70';
-
-export type BgColorDarkmode = 'natt' | 'svart' | 'koksgraa';
+export type BackgroundColor = 'primary' | 'secondary' | 'tertiary';

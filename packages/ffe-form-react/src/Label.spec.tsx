@@ -34,13 +34,4 @@ describe('<Label>', () => {
         rerender(<Label {...defaultProps} block={true} />);
         expect(label.classList.contains('ffe-form-label--block')).toBe(true);
     });
-
-    it('ads the on colored on-colored-bg modifier', () => {
-        render(<Label {...defaultProps} block={false} onColoredBg={true} />);
-        const label = screen.getByText('label text');
-        expect(label.classList.contains('ffe-form-label')).toBe(true);
-        expect(label.classList.contains('ffe-form-label--on-colored-bg')).toBe(
-            true,
-        );
-    });
 });

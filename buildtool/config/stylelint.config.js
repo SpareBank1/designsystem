@@ -45,6 +45,14 @@ module.exports = {
                 ignoreAtRules: ['media'],
             },
         ],
+        'declaration-empty-line-before': [
+            'always',
+            {
+                except: ['first-nested'],
+                ignore: ['after-comment', 'after-declaration'],
+                severity: 'warning',
+            },
+        ],
         'media-feature-name-no-vendor-prefix': true,
         'property-no-vendor-prefix': null,
         'selector-max-specificity': [

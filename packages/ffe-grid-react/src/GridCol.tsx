@@ -2,17 +2,20 @@ import React, { ElementType } from 'react';
 import classNames from 'classnames';
 import {
     BackgroundColor,
-    BackgroundColorDark,
     ComponentWithoutRefAsPropParams,
     SizeModifier,
 } from './types';
 
 export type GridColProps<As extends ElementType = any> =
     ComponentWithoutRefAsPropParams<As> & {
-        /** Supported background colors */
-        background?: BackgroundColor;
-        /** Supported dark background colors */
-        backgroundDark?: BackgroundColorDark;
+        /**
+         * Supported background colors
+         *
+         * Property has new values that work with dark and accent mode as part of the Semantic Color update
+         * Possible values: `primary` `secondary` `tertiary`
+         * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger)
+         */
+        bgColor?: BackgroundColor;
         /** Center text content horizontally */
         centerText?: boolean;
         /** Center content vertically */
@@ -45,15 +48,11 @@ const centerTextClass = (centerText?: boolean) =>
 const centerClass = (center?: boolean) =>
     center ? 'ffe-grid__col--center' : null;
 
-const backgroundClass = (background?: BackgroundColor) =>
-    background ? `ffe-grid__col--bg-${background}` : null;
-
-const backgroundDarkClass = (backgroundDark?: BackgroundColorDark) =>
-    backgroundDark ? `ffe-grid__col--bg-dark-${backgroundDark}` : null;
+const backgroundClass = (bgColor?: BackgroundColor) =>
+    bgColor ? `ffe-grid__col--bg-${bgColor}` : null;
 
 export const GridCol: React.FC<GridColProps> = ({
-    background,
-    backgroundDark,
+    bgColor,
     className,
     as: Comp = 'div',
     centerText,
@@ -74,8 +73,7 @@ export const GridCol: React.FC<GridColProps> = ({
                 sizeClasses('sm', !sm && !lg && !md ? 12 : sm),
                 centerTextClass(centerText),
                 centerClass(center),
-                backgroundClass(background),
-                backgroundDarkClass(backgroundDark),
+                backgroundClass(bgColor),
             ]
                 .filter(x => x)
                 .join(' ')}

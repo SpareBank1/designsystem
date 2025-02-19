@@ -1,11 +1,11 @@
-import React from 'react';
-import { CardAction as CardActionComponent } from './CardAction';
-import type { StoryObj, Meta } from '@storybook/react';
-import { CardBase } from '../CardBase';
-import { Heading2, Paragraph } from '@sb1/ffe-core-react';
+import { Heading4, Paragraph } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
+import { CardBase } from '../CardBase';
 import { IconCard } from '../IconCard/IconCard';
 import { CardActionRenderProps, CardRenderProps } from '../types';
+import { CardAction as CardActionComponent } from './CardAction';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -39,12 +39,12 @@ export const Standard: Story = {
         href: 'https://design.sparebank1.no',
     },
     render: args => (
-        <CardBase shadow={true}>
+        <CardBase>
             {({ CardAction }: CardActionRenderProps) => (
                 <>
-                    <Heading2>
+                    <Heading4>
                         <CardAction {...args}>Lenke</CardAction>
-                    </Heading2>
+                    </Heading4>
                     <Paragraph>Hele kortet er klikkbart</Paragraph>
                 </>
             )}
@@ -58,12 +58,12 @@ export const AsButton: Story = {
         type: 'button',
     },
     render: args => (
-        <CardBase shadow={true}>
+        <CardBase>
             {({ CardAction }: CardActionRenderProps) => (
                 <>
-                    <Heading2>
+                    <Heading4>
                         <CardAction {...args}>Knapp</CardAction>
-                    </Heading2>
+                    </Heading4>
                     <Paragraph>Hele kortet er klikkbart</Paragraph>
                 </>
             )}

@@ -1,6 +1,6 @@
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { CardBase } from './CardBase';
-import type { StoryObj, Meta } from '@storybook/react';
 
 const Custom: React.FC<React.ComponentProps<'div'>> = props => (
     <div {...props}>
@@ -30,7 +30,6 @@ type Story = StoryObj<typeof CardBase<any>>;
 export const Standard: Story = {
     args: {
         as: 'div',
-        shadow: true,
     },
     render: args => (
         <CardBase {...args}>Dette er basisen for alle kort</CardBase>

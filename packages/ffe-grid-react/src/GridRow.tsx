@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import {
     ComponentWithoutRefAsPropParams,
     BackgroundColor,
-    BackgroundColorDark,
     Margin,
     Padding,
 } from './types';
@@ -21,10 +20,14 @@ export type GridRowProps<As extends ElementType = any> =
         padding?: Padding;
         /** Margin in the top and bottom of the row */
         margin?: Margin;
-        /** Supported background colors */
-        background?: BackgroundColor;
-        /** Supported dark background colors */
-        backgroundDark?: BackgroundColorDark;
+        /**
+         * Supported background colors
+         *
+         * Property has new values that work with dark and accent mode as part of the Semantic Color update
+         * Possible values: `primary` `secondary` `tertiary`
+         * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger)
+         */
+        bgColor?: BackgroundColor;
         /** Size modifiers for small screen sizes */
         sm?: SizeModifier;
         /** Size modifiers for medium screen sizes */
@@ -47,8 +50,7 @@ const sizeClasses = (size: 'sm' | 'md' | 'lg', def?: SizeModifier) => {
 };
 
 export const GridRow: React.FC<GridRowProps> = ({
-    background,
-    backgroundDark,
+    bgColor,
     className,
     children,
     as: Comp = 'div',
@@ -59,14 +61,12 @@ export const GridRow: React.FC<GridRowProps> = ({
     margin,
     ...rest
 }) => {
-    const hasBackgroundColor = !!background;
-    const hasBackgroundDarkColor = !!backgroundDark;
-    const content =
-        hasBackgroundColor || hasBackgroundDarkColor ? (
-            <div className="ffe-grid__row-wrapper">{children}</div>
-        ) : (
-            children
-        );
+    const hasBackgroundColor = !!bgColor;
+    const content = hasBackgroundColor ? (
+        <div className="ffe-grid__row-wrapper">{children}</div>
+    ) : (
+        children
+    );
 
     return (
         <Comp
@@ -76,11 +76,7 @@ export const GridRow: React.FC<GridRowProps> = ({
                 sizeClasses('md', md),
                 sizeClasses('sm', sm),
                 'ffe-grid__row',
-                { [`ffe-grid__row--bg-${background}`]: hasBackgroundColor },
-                {
-                    [`ffe-grid__row--bg-dark-${backgroundDark}`]:
-                        hasBackgroundDarkColor,
-                },
+                { [`ffe-grid__row--bg-${bgColor}`]: hasBackgroundColor },
                 { [`ffe-grid__row--padding-${padding}`]: padding },
                 { [`ffe-grid__row--margin-${margin}`]: margin },
             )}

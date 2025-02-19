@@ -39,19 +39,7 @@ export type Padding =
 
 export type Gap = 'none' | '2xs' | 'xs' | 'sm' | 'md' | 'lg';
 
-export type BackgroundColor =
-    | 'frost-30'
-    | 'sand'
-    | 'sand-70'
-    | 'sand-30'
-    | 'syrin-70'
-    | 'syrin-30'
-    | 'vann'
-    | 'vann-30'
-    | 'fjell'
-    | 'hvit';
-
-export type BackgroundColorDark = 'svart' | 'natt' | 'koksgraa';
+export type BackgroundColor = 'primary' | 'secondary' | 'tertiary';
 
 type ColumnsRange =
     | 0

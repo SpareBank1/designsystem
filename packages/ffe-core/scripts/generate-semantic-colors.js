@@ -5,6 +5,7 @@ const writeToFile = require('./lib/writeToFile');
 
 const usedPrimitive = {};
 const usedSemantic = {};
+const semanticColorNames = [];
 
 const files = {
     primitive: '01 Primitive.value.json',
@@ -46,6 +47,7 @@ const convertPrimitivesJsonToCss = jsonFile => {
 const convertContextJsonToCss = jsonFile => {
     const jsonContent = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
     const cssLines = [];
+    const saveColors = semanticColorNames.length === 0;
 
     const processColorTokens = (obj, prefix = '') => {
         for (const [key, value] of Object.entries(obj)) {
@@ -64,6 +66,7 @@ const convertContextJsonToCss = jsonFile => {
                     : value.$value;
                 cssLines.push(`${cssVarName}: ${cssVarValue};`);
                 usedSemantic[cssVarValue] = true;
+                if (saveColors) semanticColorNames.push(cssVarName);
             } else if (typeof value === 'object') {
                 processColorTokens(value, `${prefix}${key}-`);
             }
@@ -80,7 +83,6 @@ const convertContextJsonToCss = jsonFile => {
 const convertSemanticJsonToCss = (
     jsonFile,
     contextJsonFile,
-    contextAccentJsonFile,
     isStorybook = false,
 ) => {
     const jsonContent = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
@@ -136,24 +138,60 @@ function filePath(filename) {
     return path.resolve('tokens', filename);
 }
 
+function transformColorName(colorName) {
+    return colorName
+        .replace('--ffe-color-', '')
+        .split('-')
+        .map((word, index) =>
+            index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1),
+        )
+        .join('');
+}
+
+function generateSemanticColorModule(_semanticColorNames) {
+    let moduleContent = `"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+`;
+    let moduleVars = '';
+
+    _semanticColorNames.forEach(colorName => {
+        const transformedName = transformColorName(colorName);
+        moduleVars += `exports.${transformedName} = 'var(${colorName})';\n`;
+        moduleContent += `exports.${transformedName} = `;
+    });
+
+    moduleContent += 'void 0\n';
+    moduleContent += moduleVars;
+
+    return moduleContent;
+}
+
 function generateSemanticColors() {
     let cssContent = '// Generated from Figma tokens';
     cssContent += `\n\n// Context accent \n.ffe-accent-mode {\n${convertContextJsonToCss(filePath(files.contextAccent)).join('\n')}}\n`;
     cssContent += `\n\n// Context \n:root,\n:host {\n${convertContextJsonToCss(filePath(files.context)).join('\n')}}\n`;
     cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticLight))}`;
-    cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticDark), filePath(files.context), filePath(files.contextAccent))}`;
+    cssContent += `\n\n${convertSemanticJsonToCss(filePath(files.semanticDark), filePath(files.context))}`;
     cssContent += `\n\n${convertPrimitivesJsonToCss(filePath(files.primitive))}`;
 
     writeToFile('less/colors-semantic.less')(cssContent);
     writeToFile('css/colors-semantic.css')(cssContent);
+    writeToFile('gen-src/semantic-color-names.json')(
+        JSON.stringify({ colors: semanticColorNames }),
+    );
 
     const storybookCssContent = convertSemanticJsonToCss(
         filePath(files.semanticDark),
         filePath(files.context),
-        filePath(files.contextAccent),
         true,
     );
     writeToFile('less/colors-semantic-storybook.less')(storybookCssContent);
+
+    // Generate and write the semantic color module
+    const semanticColorModuleContent =
+        generateSemanticColorModule(semanticColorNames);
+    writeToFile('lib/semanticColors.js')(semanticColorModuleContent);
 }
 
 generateSemanticColors();

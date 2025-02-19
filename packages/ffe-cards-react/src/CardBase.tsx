@@ -1,24 +1,31 @@
-import React, { ElementType, ForwardedRef } from 'react';
 import classNames from 'classnames';
-import { WithCardActionProps, WithCardAction } from './components';
-import {
-    BgColor,
-    BgColorDarkmode,
-    ComponentAsPropParams,
-    CardActionRenderProps,
-} from './types';
+import React, { ElementType, ForwardedRef } from 'react';
+import { WithCardAction, WithCardActionProps } from './components';
 import { fixedForwardRef } from './fixedForwardRef';
+import {
+    BackgroundColor,
+    CardActionRenderProps,
+    ComponentAsPropParams,
+} from './types';
 
 export type CardBaseProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,
     'children'
 > & {
-    shadow?: boolean;
     /** No margin on card */
     noMargin?: boolean;
     textCenter?: boolean;
-    bgColor?: BgColor;
-    bgDarkmodeColor?: BgColorDarkmode;
+    /**
+     * Property has new values that work with dark and accent mode as part of the Semantic Color update
+     * Possible values: `primary` `secondary` `tertiary`
+     * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger)
+     */
+    bgColor?: BackgroundColor;
+    /** @deprecated as part of update to Semantic Colors
+     *
+     * Property is replaced by the updated values for `bgColor` that works on dark mode
+     * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
+    bgDarkmodeColor?: never;
     noPadding?: boolean;
     children: WithCardActionProps['children'] | React.ReactNode;
 };
@@ -29,11 +36,9 @@ function CardBaseWithForwardRef<As extends ElementType>(
 ) {
     const {
         className,
-        shadow,
         noMargin,
         textCenter,
-        bgColor,
-        bgDarkmodeColor,
+        bgColor = 'primary',
         noPadding,
         children,
         ...rest
@@ -44,8 +49,6 @@ function CardBaseWithForwardRef<As extends ElementType>(
             baseClassName="ffe-card-base"
             className={classNames('ffe-card-base', className, {
                 [`ffe-card-base--bg-${bgColor}`]: bgColor,
-                [`ffe-card-base--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,
-                'ffe-card-base--shadow': shadow,
                 'ffe-card-base--no-margin': noMargin,
                 'ffe-card-base--text-center': textCenter,
                 'ffe-card-base--no-padding': noPadding,

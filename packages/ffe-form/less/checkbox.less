@@ -1,13 +1,11 @@
 @import (reference) '@sb1/ffe-core/less/colors';
 
 .ffe-checkbox {
-    --line-height: 1.5rem;
-    --square-color: var(--ffe-v-checkbox-color);
-    --square-background-color: var(--ffe-v-input-bg-color);
-    --checkmark-color: transparent;
+    line-height: 1.5rem;
+    background-color: var(--ffe-color-surface-primary-default);
+    color: var(--ffe-color-foreground-default);
 
     isolation: isolate;
-    line-height: var(--line-height);
     display: grid;
     grid-column-gap: var(--ffe-spacing-xs);
     align-items: center;
@@ -18,9 +16,8 @@
     text-align: left;
     padding-left: 0;
     -webkit-tap-highlight-color: fade(@ffe-farge-vann, 15%);
-    color: var(--ffe-v-input-color);
     grid-template-columns: auto 1fr;
-    grid-template-rows: var(--line-height) 1fr;
+    grid-template-rows: 1.5rem 1fr;
     overflow-wrap: anywhere;
     hyphens: auto;
 
@@ -34,23 +31,6 @@
         margin-right: var(--ffe-spacing-sm);
     }
 
-    &::before,
-    &::after {
-        place-self: center;
-        content: '';
-        grid-column: 1 e('/') 2;
-        grid-row: 1 e('/') 2;
-        transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
-    }
-
-    &::before {
-        background: var(--square-background-color);
-        border: var(--ffe-g-border-width) solid var(--square-color);
-        border-radius: calc(var(--ffe-g-border-radius) / 2);
-        height: 20px;
-        width: 20px;
-    }
-
     &--hidden-label {
         margin: 0;
         padding-left: 20px;
@@ -61,10 +41,27 @@
         }
     }
 
+    &::before,
+    &::after {
+        place-self: center;
+        content: '';
+        grid-column: 1 e('/') 2;
+        grid-row: 1 e('/') 2;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    }
+
+    &::before {
+        background: var(--ffe-color-surface-primary-default);
+        border: 1px solid var(--ffe-color-border-primary-default);
+        border-radius: calc(var(--ffe-g-border-radius) / 2);
+        height: 20px;
+        width: 20px;
+    }
+
     &::after {
         transform: scaleX(-1) rotate(180deg + -45deg);
-        border-right: 3px solid var(--checkmark-color);
-        border-top: 3px solid var(--checkmark-color);
+        border-right: 3px solid transparent;
+        border-top: 3px solid transparent;
         width: 6px;
         height: 11px;
         margin-bottom: 2px;
@@ -79,6 +76,7 @@
 .ffe-checkbox__content {
     grid-column: 2 e('/') 3;
     grid-row: 1 e('/') -1;
+    color: var(--ffe-color-foreground-default);
 }
 
 .ffe-hidden-checkbox {
@@ -94,28 +92,53 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover + .ffe-checkbox {
-            --square-color: var(--ffe-v-checkbox-selected-color);
+            &::before {
+                border-color: var(--ffe-color-border-primary-hover);
+                background: var(--ffe-color-surface-primary-default-hover);
+            }
         }
     }
 
+    &:focus + .ffe-checkbox::before,
     &:focus-visible + .ffe-checkbox::before {
-        border: var(--ffe-g-border-width-focus) solid var(--ffe-v-checkbox-focus-outline-color);
+        border: var(--ffe-g-border-width-focus) solid
+            var(--ffe-color-border-primary-selected);
+        box-shadow: 0 0 0 2px var(--ffe-color-border-primary-selected);
+    }
+
+    &:active + .ffe-checkbox {
+        &::before {
+            border-color: var(--ffe-color-border-primary-default);
+            background: var(--ffe-color-surface-primary-default-pressed);
+        }
     }
 
     &:checked + .ffe-checkbox {
-        --square-color: var(--ffe-v-checkbox-selected-color);
-        --checkmark-color: var(--ffe-v-checkbox-marker-color);
+        &::before {
+            border-color: var(--ffe-color-border-primary-selected);
+            background: var(--ffe-color-fill-primary-selected, #002776);
+        }
+        &::after {
+            border-color: var(--ffe-color-foreground-inverse);
+        }
     }
 
     &[aria-invalid='true'] + .ffe-checkbox {
-        --square-color: var(--ffe-g-error-color);
+        &::before {
+            border-color: var(--ffe-color-border-feedback-critical);
+            background: var(--ffe-color-surface-feedback-critical);
+        }
     }
 }
 
-.ffe-form-label--on-colored-bg {
-    color: var(--ffe-v-text-on-colored-bg-color);
+.ffe-form-label {
+    color: var(--ffe-color-foreground-default);
 }
 
-.ffe-checkbox--on-colored-bg .ffe-checkbox__content {
-    color: var(--ffe-v-text-on-colored-bg-color);
+.ffe-checkbox__description {
+    color: var(--ffe-color-foreground-subtle);
+}
+
+.ffe-checkbox__icon {
+    color: var(--ffe-color-foreground-emphasis);
 }

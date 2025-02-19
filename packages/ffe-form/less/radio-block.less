@@ -1,10 +1,9 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
 
 .ffe-radio-block {
-    --ffe-radio-block-border-color: var(--ffe-g-border-color);
-    --ffe-radio-block-header-color: var(--ffe-v-input-color);
-    --ffe-radio-block-header-bg-color: none;
-    --ffe-radio-block-header-selected-bg-color: var(--ffe-g-secondary-color);
+    --outer-circle-color: var(--ffe-color-border-primary-default);
+    --inner-circle-color: var(--ffe-color-fill-primary-pressed);
+    --block-background: var(--ffe-color-surface-primary-default);
 
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
@@ -24,12 +23,11 @@
         display: inline-grid;
         grid-template-columns: auto 1fr;
         position: relative;
-        border: var(--ffe-g-border-width) solid
-            var(--ffe-radio-block-border-color);
-        border-radius: var(--ffe-g-border-radius);
+        border: 2px solid var(--outer-circle-color);
+        border-radius: var(--ffe-radius-md);
         margin-right: var(--ffe-spacing-xs);
-        color: var(--ffe-v-input-color);
-        background-color: var(--ffe-v-input-bg-color);
+        color: var(--ffe-color-foreground-default);
+        background-color: var(--block-background);
 
         &::before {
             place-self: center;
@@ -38,9 +36,8 @@
             content: '';
             left: 20px;
             z-index: 1;
-            background-color: var(--ffe-v-input-bg-color);
-            border: var(--ffe-g-border-width) solid
-                var(--ffe-radio-block-border-color);
+            background-color: transparent;
+            border: 2px solid var(--outer-circle-color);
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -55,9 +52,9 @@
         display: block;
         padding: var(--ffe-spacing-xs) var(--ffe-spacing-3xl)
             var(--ffe-spacing-xs);
-        color: var(--ffe-radio-block-header-color);
-        background-color: var(--ffe-radio-block-header-bg-color);
-        border-radius: var(--ffe-g-border-radius) var(--ffe-g-border-radius) 0 0;
+        color: var(--ffe-color-foreground-default);
+        background-color: transparent;
+        border-radius: var(--ffe-radius-md) var(--ffe-radius-md) 0 0;
     }
 
     &__wrapper {
@@ -66,6 +63,7 @@
         padding: var(--ffe-spacing-sm) var(--ffe-spacing-sm)
             var(--ffe-spacing-lg);
         cursor: auto;
+        color: var(--ffe-color-foreground-default);
 
         &--empty {
             padding: 0;
@@ -81,42 +79,56 @@
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            --ffe-radio-block-border-color: var(--ffe-g-primary-color);
+        &:hover .ffe-radio-block__content {
+            --block-background: var(--ffe-color-surface-primary-default-hover);
+            --outer-circle-color: var(--ffe-color-border-primary-hover);
         }
     }
 
-    .ffe-fieldset--error & {
-        --ffe-radio-block-border-color: var(--ffe-g-error-color);
+    &:active .ffe-radio-block__content {
+        --block-background: var(--ffe-color-surface-primary-default-pressed);
+        --outer-circle-color: var(--ffe-color-border-primary-pressed);
     }
 }
 
-// Weakness: Requires specific dom structure to work. Rewrite?
 .ffe-radio-input {
-    &,
-    + .ffe-radio-block__content[role='presentation'],
-    > .ffe-radio-block__header {
-        border-bottom: none;
-    }
-
     &:checked + .ffe-radio-block__content {
-        --ffe-radio-block-header-color: var(--ffe-v-input-bg-color);
-        --ffe-radio-block-header-bg-color: var(
-            --ffe-radio-block-header-selected-bg-color
-        );
-        --ffe-radio-block-border-color: var(
-            --ffe-radio-block-header-selected-bg-color
-        );
+        --outer-circle-color: var(--ffe-color-border-interactive-focus);
+
+        &::before {
+            background-color: var(--ffe-color-fill-primary-pressed);
+            border: 5px solid var(--block-background);
+        }
+
+        .ffe-radio-block__header {
+            background-color: var(--ffe-color-fill-primary-selected);
+            color: var(--ffe-color-foreground-on-fill-default);
+        }
     }
 
-    &:checked + .ffe-radio-block__content::before {
-        background-color: var(--ffe-g-primary-color);
-        border: 5px solid var(--ffe-v-input-bg-color);
+    &:focus + .ffe-radio-block__content {
+        --outer-circle-color: var(--ffe-color-border-interactive-focus);
+        outline: none;
+        box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
     }
 
-    &:focus-visible + .ffe-radio-block__content {
-        box-shadow:
-            0 0 0 3px var(--ffe-v-input-bg-color),
-            0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
+    &:disabled + .ffe-radio-block__content {
+        --outer-circle-color: var(--ffe-color-border-primary-subtle);
+        --block-background: var(--ffe-color-surface-primary-default);
+
+        cursor: not-allowed;
+        color: var(--ffe-color-foreground-subtle);
+
+        .ffe-radio-block__header {
+            color: var(--ffe-color-foreground-subtle);
+        }
+
+        .ffe-radio-block__wrapper {
+            color: var(--ffe-color-foreground-subtle);
+        }
+    }
+
+    &[aria-invalid='true'] + .ffe-radio-block__content {
+        --outer-circle-color: var(--ffe-color-border-feedback-critical);
     }
 }

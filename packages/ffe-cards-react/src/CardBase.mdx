@@ -1,4 +1,4 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { Canvas, Controls, Meta } from '@storybook/blocks';
 import * as CardBaseStories from './CardBase.stories.tsx';
 
 <Meta of={CardBaseStories} />
@@ -7,7 +7,7 @@ import * as CardBaseStories from './CardBase.stories.tsx';
 
 Dette er basisen for alle kort. Komponeten kan brukes direkte for å få en ramme du kan fylle dersom du trenger et spesialtilpassert kort.
 
-Du kan skru av/på box-shadow med `shadow`-prop, skru av margin med `noMargin`-prop, og sette bakgrunnsfargen i både light- og darkmode med `bgColorog` `bgDarkmodeColor`.
+Du kan skru av margin med `noMargin`-prop, og sette bakgrunnsfargen i både light- og darkmode med `bgColor` og `bgDarkmodeColor`.
 
 <Canvas of={CardBaseStories.Standard} />
 <Controls of={CardBaseStories.Standard} />

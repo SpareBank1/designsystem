@@ -39,17 +39,17 @@ export const Spacing: Story = {
     },
     render: args => (
         <Grid gap="lg">
-            <GridRow margin="5xl" padding="2xl" background="frost-30">
-                <GridCol sm="6" md="4" lg="3" background="syrin-30">
+            <GridRow margin="5xl" padding="2xl" bgColor="secondary">
+                <GridCol sm="6" md="4" lg="3" bgColor="tertiary">
                     Litt innhold
                 </GridCol>
-                <GridCol sm="6" md="4" lg="3" background="syrin-30">
+                <GridCol sm="6" md="4" lg="3" bgColor="tertiary">
                     Litt innhold
                 </GridCol>
-                <GridCol sm="6" md="4" lg="3" background="syrin-30">
+                <GridCol sm="6" md="4" lg="3" bgColor="tertiary">
                     Litt innhold
                 </GridCol>
-                <GridCol sm="6" md="4" lg="3" background="syrin-30">
+                <GridCol sm="6" md="4" lg="3" bgColor="tertiary">
                     Litt innhold
                 </GridCol>
             </GridRow>
