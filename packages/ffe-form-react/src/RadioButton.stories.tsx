@@ -78,7 +78,6 @@ const RadioButtonColoredBgWithGroup = (args: any) => {
                 name="radio-button-colored-demo"
                 onChange={e => setSelected(e.target.value)}
                 selectedValue={selected}
-                onColoredBg={true}
             >
                 {inputProps => (
                     <>
