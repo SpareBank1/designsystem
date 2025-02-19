@@ -1,4 +1,0 @@
-import{j as e,M as i}from"./index-BBlAae_u.js";import{useMDXComponents as o}from"./index-CVdx34fM.js";import"./iframe-Dfe-GkgN.js";import"./index-eCxJ45ll.js";import"./index-bx79Xo3A.js";import"./index-irJGEjIJ.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";function r(n){const t={h1:"h1",h2:"h2",p:"p",...o(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(i,{title:"Komponenter/Cards/Cards"}),`
-`,e.jsx(t.h1,{id:"kort",children:"Kort"}),`
-`,e.jsx(t.h2,{id:"bruk-av-kort",children:"Bruk av kort"}),`
-`,e.jsx(t.p,{children:"Kortene skal hjelpe brukerne med å navigere seg til riktig side. De skal gi en kort og tydelig oppsummering av hva slags informasjon som finnes på undersiden."})]})}function j(n={}){const{wrapper:t}={...o(),...n.components};return t?e.jsx(t,{...n,children:e.jsx(r,{...n})}):r(n)}export{j as default};

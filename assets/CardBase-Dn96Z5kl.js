@@ -1,6 +1,0 @@
-import{j as e,M as a,C as d,a as i}from"./index-BBlAae_u.js";import{useMDXComponents as s}from"./index-CVdx34fM.js";import{C as m,S as n}from"./CardBase.stories-CbqkP5mC.js";import"./iframe-Dfe-GkgN.js";import"./index-eCxJ45ll.js";import"./index-bx79Xo3A.js";import"./index-irJGEjIJ.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./CardBase-CXngqGzu.js";import"./index-DezCrw0f.js";import"./WithCardAction-D8xJ0iKc.js";function t(r){const o={code:"code",h1:"h1",p:"p",...s(),...r.components};return e.jsxs(e.Fragment,{children:[e.jsx(a,{of:m}),`
-`,e.jsx(o.h1,{id:"cardbase",children:"CardBase"}),`
-`,e.jsx(o.p,{children:"Dette er basisen for alle kort. Komponeten kan brukes direkte for å få en ramme du kan fylle dersom du trenger et spesialtilpassert kort."}),`
-`,e.jsxs(o.p,{children:["Du kan skru av/på box-shadow med ",e.jsx(o.code,{children:"shadow"}),"-prop, skru av margin med ",e.jsx(o.code,{children:"noMargin"}),"-prop, og sette bakgrunnsfargen i både light- og darkmode med ",e.jsx(o.code,{children:"bgColorog"})," ",e.jsx(o.code,{children:"bgDarkmodeColor"}),"."]}),`
-`,e.jsx(d,{of:n}),`
-`,e.jsx(i,{of:n})]})}function D(r={}){const{wrapper:o}={...s(),...r.components};return o?e.jsx(o,{...r,children:e.jsx(t,{...r})}):t(r)}export{D as default};
