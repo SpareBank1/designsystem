@@ -25,6 +25,14 @@ function countStoryFiles(directoryPath) {
         'ffe-pagination-react',
         'ffe-searchable-dropdown-react',
         'ffe-spinner-react',
+        'ffe-chart-donut-react',
+        'ffe-spinner-react',
+        'ffe-account-selector-react',
+        'ffe-modals-react',
+        'ffe-core-react',
+        'ffe-tabs-react',
+        'ffe-formatters',
+        'ffe-header'
     ];
 
     const colors = {
