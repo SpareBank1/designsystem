@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { RadioButtonInputGroup, RadioButton } from '@sb1/ffe-form-react';
+import { RadioButton } from '../RadioButton';
+import { RadioButtonInputGroup } from '../RadioButtonInputGroup';
 
 export default () => {
     const [accountType, setAccountType] = useState<string>('savings');

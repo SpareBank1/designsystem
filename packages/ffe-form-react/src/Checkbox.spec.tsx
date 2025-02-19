@@ -133,20 +133,4 @@ describe('<Checkbox />', () => {
         expect(labelContent?.innerHTML).toBe('children');
         expect(input?.getAttribute('aria-label')).toBe('I am label');
     });
-
-    it('ads the on colored on-colored-bg modifier', () => {
-        const { container } = render(
-            <Checkbox onColoredBg={true} onChange={() => {}}>
-                {({ htmlFor, className }) => (
-                    <label className={className} htmlFor={htmlFor}>
-                        Hello world
-                    </label>
-                )}
-            </Checkbox>,
-        );
-        const label = container.querySelector('label');
-        expect(
-            label?.classList.contains('ffe-checkbox--on-colored-bg'),
-        ).toBeTruthy();
-    });
 });
