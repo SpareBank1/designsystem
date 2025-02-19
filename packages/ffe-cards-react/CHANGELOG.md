@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@18.0.1...@sb1/ffe-cards-react@19.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** Gi bedre feilmelding ved bruk av utdatert property ([ad27b31](https://github.com/SpareBank1/designsystem/commit/ad27b31040696c86084f1321733f1151a8418f99))
+* **ffe-cards-react:** retter oppdatert prop i test ([52dd777](https://github.com/SpareBank1/designsystem/commit/52dd77745825eb94b4f843bbc45028900da586d7))
+* **ffe-cards-react:** Reverter endring av bgColor property name ([c00c662](https://github.com/SpareBank1/designsystem/commit/c00c662500cabc9872007bd9adc40686c86ab409))
+
+
+* feat(ffe-cards-react)!: Semantiske farger ([3debb89](https://github.com/SpareBank1/designsystem/commit/3debb89840f5984cc0ad8d74811795faa141110a))
+
+
+### BREAKING CHANGES
+
+* Fjerner shadow, bgColor og bgDarkmodeColor som paramater siden cards går over til å bruke border og backgroundColor i stede for å støtte semantiske farger
+
+
+
+
+
 ## [18.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@18.0.0...@sb1/ffe-cards-react@18.0.1) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

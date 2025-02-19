@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@22.1.7...@sb1/ffe-form-react@23.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** Fix documentation ([c06149a](https://github.com/SpareBank1/designsystem/commit/c06149aeab086024a8a82672c12234a62df5c74b))
+* **ffe-form-react:** Fix linting ([b54d9e5](https://github.com/SpareBank1/designsystem/commit/b54d9e53970d8b58fb3a00d0b58e2b53ce94154c))
+
+
+* feat(ffe-form-react)!: oppdaterte alle komponenter med semantiske farger ([fbcedbb](https://github.com/SpareBank1/designsystem/commit/fbcedbbe1fa5d337112422f12158d5177231e62f))
+
+
+### BREAKING CHANGES
+
+* Oppdaterer til semantiske farger
+
+
+
+
+
 ## [22.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@22.1.6...@sb1/ffe-form-react@22.1.7) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

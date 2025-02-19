@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@17.1.6...@sb1/ffe-lists@18.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-lists:** Remove unused custom properties ([d214aea](https://github.com/SpareBank1/designsystem/commit/d214aea8192cafd2f1842410f7b0ac3c8f272469))
+
+
+### Features
+
+* **ffe-lists:** semantiske farger i lists ([8e40f26](https://github.com/SpareBank1/designsystem/commit/8e40f2697c4e23a9104710fb7ec392d6561423a9))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists:** nye farger i komponentene, bgDarkmodeColor er fjernet fra DetailListCard
+
+
+
+
+
 ## [17.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@17.1.5...@sb1/ffe-lists@17.1.6) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-lists

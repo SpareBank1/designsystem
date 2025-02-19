@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@2.1.6...@sb1/ffe-feedback@3.0.0) (2025-02-19)
+
+
+### Features
+
+* **ffe-feedback:** semantiske farger i feedback ([1756d89](https://github.com/SpareBank1/designsystem/commit/1756d8927e90890bbf89b9aa88158f2dfd438b74))
+
+
+### BREAKING CHANGES
+
+* **ffe-feedback:** noe endringer i farger og styling
+
+
+
+
+
 ## [2.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@2.1.5...@sb1/ffe-feedback@2.1.6) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-feedback

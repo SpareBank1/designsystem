@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@15.1.5...@sb1/ffe-grid@16.0.0) (2025-02-19)
+
+
+### Features
+
+* **ffe-grid:** semantiske farger i grid ([d02c84b](https://github.com/SpareBank1/designsystem/commit/d02c84b41e8989b28a68410672c3b122266e0f3c))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** fjernet gamle bakgrunnsfarger og erstattet med semantiske
+
+
+
+
+
 ## [15.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@15.1.4...@sb1/ffe-grid@15.1.5) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-grid

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@16.0.0...@sb1/ffe-icons@17.0.0) (2025-02-19)
+
+
+* feat(ffe-icons)!: Semantiske farger ([2359a06](https://github.com/SpareBank1/designsystem/commit/2359a06366e9d8ccf08ef13d1759973144525fcc))
+
+
+### BREAKING CHANGES
+
+* oppdaterte icon farger til semantiske farger
+
+
+
+
+
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@15.1.2...@sb1/ffe-icons@16.0.0) (2025-01-22)
 
 

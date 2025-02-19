@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.3...@sb1/ffe-chips-react@2.0.4) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-chips-react:** Gi bedre feilmelding ved bruk av utdatert property ([e0e43ae](https://github.com/SpareBank1/designsystem/commit/e0e43aec315c9921aff3f8ead6cb5d3c4b70b56b))
+
+
+
+
+
 ## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.2...@sb1/ffe-chips-react@2.0.3) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-chips-react

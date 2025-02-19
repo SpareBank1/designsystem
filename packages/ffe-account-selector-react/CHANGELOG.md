@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [31.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.1.16...@sb1/ffe-account-selector-react@31.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Gi bedre feilmelding ved bruk av utdatert property ([ee3b23b](https://github.com/SpareBank1/designsystem/commit/ee3b23b9865b6c4ff08922617f7746cb0e8d093d))
+
+
+* feat(ffe-account-selector)!: Semantiske farger ([8a4e692](https://github.com/SpareBank1/designsystem/commit/8a4e692a937222d4970610ba418c8e7746408e4a))
+
+
+### BREAKING CHANGES
+
+* oppdaterer til semantiske farger
+
+
+
+
+
 ## [30.1.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@30.1.15...@sb1/ffe-account-selector-react@30.1.16) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

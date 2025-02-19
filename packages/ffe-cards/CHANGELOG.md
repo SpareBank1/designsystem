@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@21.0.1...@sb1/ffe-cards@22.0.0) (2025-02-19)
+
+
+* feat(ffe-cards)!: Semantiske farger ([6a8ff6b](https://github.com/SpareBank1/designsystem/commit/6a8ff6b535ff5a61c8fe4be9d3c837cd5c47eae0))
+
+
+### BREAKING CHANGES
+
+* infører semantiske farger
+
+
+
+
+
 ## [21.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@21.0.0...@sb1/ffe-cards@21.0.1) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-cards

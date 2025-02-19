@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.2.14...@sb1/ffe-feedback-react@5.0.0) (2025-02-19)
+
+
+### Features
+
+* **ffe-feedback-react:** semantiske farger i feedback ([e78718a](https://github.com/SpareBank1/designsystem/commit/e78718a6395095ed54f3f4824a82b505f88dc011))
+
+
+### BREAKING CHANGES
+
+* **ffe-feedback-react:** noe endringer i farger og styling
+
+
+
+
+
 ## [4.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@4.2.13...@sb1/ffe-feedback-react@4.2.14) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@15.1.0...@sb1/ffe-grid-react@16.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-grid-react:** Gi bedre feilmelding ved bruk av utdatert property ([37e1263](https://github.com/SpareBank1/designsystem/commit/37e12631727fa4f5c7d025d11228bd0c10bcc8bc))
+
+
+### Features
+
+* **ffe-grid-react:** semantiske farger i grid ([9a7ef98](https://github.com/SpareBank1/designsystem/commit/9a7ef987c369065b665b1a2f0d2692bfb7cf6b1c))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid-react:** fjernet gamle bakgrunnsfarger og erstattet med semantiske
+
+
+
+
+
 # [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@15.0.21...@sb1/ffe-grid-react@15.1.0) (2025-02-10)
 
 

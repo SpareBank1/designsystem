@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [31.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.3.5...@sb1/ffe-form@31.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-form:** Fix linting ([ad2dea1](https://github.com/SpareBank1/designsystem/commit/ad2dea1a3ad175f3961e7343e42fae2ce27bacda))
+
+
+* feat(ffe-form)!: oppdaterte alle komponenter med semantiske farger ([4564579](https://github.com/SpareBank1/designsystem/commit/456457955204a6221efd9e04f6f864bfc6e61db5))
+
+
+### BREAKING CHANGES
+
+* Oppdaterer til semantiske farger
+
+
+
+
+
 ## [30.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@30.3.4...@sb1/ffe-form@30.3.5) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-form

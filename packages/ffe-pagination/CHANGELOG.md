@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@2.1.5...@sb1/ffe-pagination@3.0.0) (2025-02-19)
+
+
+### Features
+
+* **ffe-pagination:** semantiske farger i pagination ([38644b5](https://github.com/SpareBank1/designsystem/commit/38644b57e39457a4a3e47e81d2bb4f8a725bdabe))
+
+
+### BREAKING CHANGES
+
+* **ffe-pagination:** oppdaterte farger
+
+
+
+
+
 ## [2.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@2.1.4...@sb1/ffe-pagination@2.1.5) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-pagination

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.1.5...@sb1/ffe-buttons@20.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** fix linting ([01f2e52](https://github.com/SpareBank1/designsystem/commit/01f2e5243348a17aab56f84092f514d425dba725))
+
+
+### Features
+
+* **ffe-buttons:** semantiske farger for alle knapper ([376a3fe](https://github.com/SpareBank1/designsystem/commit/376a3fe24896f5ca0d0532310b6677f48ef6f32b))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** knappene kan ha endret farge og noe mer styling på forskjellige knappetilstander
+
+
+
+
+
 ## [19.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@19.1.4...@sb1/ffe-buttons@19.1.5) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

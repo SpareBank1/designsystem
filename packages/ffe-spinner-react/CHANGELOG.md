@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@9.0.21...@sb1/ffe-spinner-react@10.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-spinner-react:** Gi bedre feilmelding ved bruk av utdatert property ([765312d](https://github.com/SpareBank1/designsystem/commit/765312d318bee74ad4eae63b7ae5f36b14e26eb3))
+
+
+* feat(ffe-spinner-react)!: Semantiske farger ([cf1a8f0](https://github.com/SpareBank1/designsystem/commit/cf1a8f0594b22f3f14b181aa30f61c0a1b639c1c))
+
+
+### BREAKING CHANGES
+
+* oppdaterer til semantiske farger. Fjerner onColoredBg
+
+
+
+
+
 ## [9.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@9.0.20...@sb1/ffe-spinner-react@9.0.21) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react

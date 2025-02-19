@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@11.0.18...@sb1/ffe-icons-react@11.0.19) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** Oppdater dokumentasjonen i sammenheng med semantiske farger ([a52c665](https://github.com/SpareBank1/designsystem/commit/a52c66556d1decdd7dc22d4a8c817e82c043e72f))
+
+
+
+
+
 ## [11.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@11.0.17...@sb1/ffe-icons-react@11.0.18) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

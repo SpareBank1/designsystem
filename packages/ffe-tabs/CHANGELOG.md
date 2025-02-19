@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@14.1.5...@sb1/ffe-tabs@15.0.0) (2025-02-19)
+
+
+* feat(ffe-tabs)!: Semantiske farger ([9f16c48](https://github.com/SpareBank1/designsystem/commit/9f16c48d3e4075149291928454139626c645aaac))
+
+
+### BREAKING CHANGES
+
+* oppgraderer til semantiske farger
+
+
+
+
+
 ## [14.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@14.1.4...@sb1/ffe-tabs@14.1.5) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-tabs

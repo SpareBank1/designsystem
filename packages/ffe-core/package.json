@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-core",
-    "version": "29.5.2",
+    "version": "30.0.0",
     "description": "Rammeverk for Felles Front End",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -27,7 +27,7 @@
         "build": "npm run generate-semantic-colors && ./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.9.2",
+        "@sb1/ffe-buildtool": "^0.10.0",
         "case": "^1.5.5",
         "less": "^4.1.2",
         "postcss": "^8.3.6"

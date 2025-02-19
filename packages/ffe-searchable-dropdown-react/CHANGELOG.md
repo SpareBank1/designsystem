@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@22.2.12...@sb1/ffe-searchable-dropdown-react@23.0.0) (2025-02-19)
+
+
+* feat(ffe-searchable-dropdown-react)!: Semantiske farger ([e0e809a](https://github.com/SpareBank1/designsystem/commit/e0e809a84f89ec2f5c2b54c9fcf3dc646e1e18df))
+
+
+### BREAKING CHANGES
+
+* oppdaterer til semantiske farger
+
+
+
+
+
 ## [22.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@22.2.11...@sb1/ffe-searchable-dropdown-react@22.2.12) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

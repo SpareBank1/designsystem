@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.9.2...@sb1/ffe-buildtool@0.10.0) (2025-02-19)
+
+
+### Features
+
+* **ffe-datepicker:** add semantic colors to components ([e736678](https://github.com/SpareBank1/designsystem/commit/e7366780b5cce353dd9676024769b64d0ed45c50))
+
+
+
+
+
 ## [0.9.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.9.1...@sb1/ffe-buildtool@0.9.2) (2025-02-07)
 
 

@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.5.2...@sb1/ffe-core@30.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-core:** Oppdater farger fra figma ([d510dfa](https://github.com/SpareBank1/designsystem/commit/d510dfa86499e1baec11dc3a1bd3a9bb160b5b99))
+* **ffe-core:** Oppdater farger fra figma ([1b775fc](https://github.com/SpareBank1/designsystem/commit/1b775fc42a8cb9a6728ac98436dbe0012a10f79c))
+* **ffe-core:** synker oppdaterte tokens ([d2d23b6](https://github.com/SpareBank1/designsystem/commit/d2d23b657702a5075f5a634af5aadc734de0a5c4))
+
+
+### Features
+
+* **ffe-core:** Generer semanticColors.js for å støtte tailwind ([90fad7a](https://github.com/SpareBank1/designsystem/commit/90fad7ad3374cf6b593f4f1c933ccdf0136df027))
+* **ffe-core:** nye semantiske farger. ([1fbf619](https://github.com/SpareBank1/designsystem/commit/1fbf6196c0cdc26408a01d8cf9bdf1d4f8eb64f6))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** nye farger. Ingen ting å gjøre hvis man ikke har
+justert fargene.
+
+
+
+
+
 ## [29.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.5.1...@sb1/ffe-core@29.5.2) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-core

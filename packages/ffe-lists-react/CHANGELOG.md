@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@12.0.29...@sb1/ffe-lists-react@13.0.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **ffe-list-react:** Gi bedre feilmelding ved bruk av utdatert property ([b44e7fc](https://github.com/SpareBank1/designsystem/commit/b44e7fcf1b84dc7b824d8adc365b7f36db693723))
+* **ffe-lists-react:** Fix import ([893bd34](https://github.com/SpareBank1/designsystem/commit/893bd343c2a24fac774404137928dbc4aa7824a5))
+
+
+### Features
+
+* **ffe-lists-react:** semantiske farger i lists ([8c87285](https://github.com/SpareBank1/designsystem/commit/8c87285735db2a791c2f7da9941e59f37fe85334))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists-react:** nye farger i komponentene, bgDarkmodeColor er fjernet fra DetailListCard
+
+
+
+
+
 ## [12.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@12.0.28...@sb1/ffe-lists-react@12.0.29) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react

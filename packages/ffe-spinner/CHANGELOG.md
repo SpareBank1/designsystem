@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@5.2.5...@sb1/ffe-spinner@6.0.0) (2025-02-19)
+
+
+* feat(ffe-spinner)!: Semantiske farger ([c01b88f](https://github.com/SpareBank1/designsystem/commit/c01b88f2632df33b8df8406f223ba624f8f219e9))
+
+
+### BREAKING CHANGES
+
+* Semantiske farger
+
+
+
+
+
 ## [5.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@5.2.4...@sb1/ffe-spinner@5.2.5) (2025-02-07)
 
 **Note:** Version bump only for package @sb1/ffe-spinner
