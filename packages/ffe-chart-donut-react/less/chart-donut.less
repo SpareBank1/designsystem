@@ -7,12 +7,13 @@
     position: relative;
     text-align: left;
 
+    // Using brand colors for the donut segments to maintain visual hierarchy
     &--first {
-        stroke: var(--ffe-v-chart-donut-first-color);
+        stroke: var(--ffe-color-default-brand-primary-subtle);
     }
 
     &--last {
-        stroke: var(--ffe-v-chart-donut-last-color);
+        stroke: var(--ffe-color-foreground-emphasis);
     }
 
     &__circle,
@@ -31,7 +32,8 @@
     }
 
     &__name {
-        color: var(--ffe-v-chart-donut-text-color);
+        // Using emphasis color for the chart title to make it stand out
+        color: var(--ffe-color-foreground-emphasis);
         text-align: center;
     }
 
@@ -40,11 +42,13 @@
         grid-template-columns: auto 1px auto;
         grid-template-rows: auto auto;
         grid-column-gap: var(--ffe-spacing-xs);
+
         &::after {
             grid-column: 2 e('/') 3;
             grid-row: 1 e('/') 2;
             display: flex;
-            background: var(--ffe-v-chart-donut-text-color);
+            // Using subtle border color for the separator
+            background: var(--ffe-color-border-primary-subtle);
             height: 1lh;
             content: '';
         }
@@ -56,13 +60,15 @@
     }
 
     .ffe-chart-donut__amount {
-        color: var(--ffe-v-chart-donut-text-color);
+        // Using default text color for the numerical values
+        color: var(--ffe-color-foreground-default);
     }
 
     &__fraction:first-of-type {
         grid-column: 1 e('/') 2;
         grid-row: 1 e('/') 3;
     }
+
     &__fraction:last-of-type {
         grid-column: 3 e('/') 4;
         grid-row: 1 e('/') 3;
