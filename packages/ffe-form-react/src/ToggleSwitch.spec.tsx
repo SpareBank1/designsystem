@@ -10,9 +10,9 @@ const renderToggleSwitch = (props?: Partial<ToggleSwitchProps>) =>
     );
 
 describe('<ToggleSwitch />', () => {
-    it('should render a checkbox', () => {
+    it('should render a switch', () => {
         renderToggleSwitch();
-        expect(screen.getByRole('checkbox')).toBeInTheDocument();
+        expect(screen.getByRole('switch')).toBeInTheDocument();
     });
 
     it('should render a default value if passed', () => {
@@ -21,14 +21,14 @@ describe('<ToggleSwitch />', () => {
                 Hello world
             </ToggleSwitch>,
         );
-        const checkbox = screen.getByRole('checkbox');
-        expect(checkbox).not.toBeChecked();
+        const switchElement = screen.getByRole('switch');
+        expect(switchElement).not.toBeChecked();
         rerender(
             <ToggleSwitch onChange={() => {}} checked={true}>
                 Hello world
             </ToggleSwitch>,
         );
-        expect(checkbox).toBeChecked();
+        expect(switchElement).toBeChecked();
     });
 
     it('should apply the same id to <label> and <input>', () => {
@@ -36,9 +36,11 @@ describe('<ToggleSwitch />', () => {
             name: 'Some text goes here',
         });
         const label = container.querySelector('label');
-        const checkbox = screen.getByRole('checkbox');
+        const switchElement = screen.getByRole('switch');
 
-        expect(label?.getAttribute('for')).toBe(checkbox?.getAttribute('id'));
+        expect(label?.getAttribute('for')).toBe(
+            switchElement?.getAttribute('id'),
+        );
     });
 
     it('should apply a unique id for each instance', () => {
@@ -46,7 +48,7 @@ describe('<ToggleSwitch />', () => {
         renderToggleSwitch({ name: 'Some other text goes here' });
 
         const [id1, id2] = screen
-            .getAllByRole('checkbox')
+            .getAllByRole('switch')
             .map(it => it.getAttribute('id'));
 
         expect(id1).not.toBe(id2);
@@ -58,15 +60,15 @@ describe('<ToggleSwitch />', () => {
                 Hello world
             </ToggleSwitch>,
         );
-        const checkbox = screen.getByRole('checkbox');
-        const idFirstRender = checkbox.getAttribute('id');
+        const switchElement = screen.getByRole('switch');
+        const idFirstRender = switchElement.getAttribute('id');
 
         rerender(
             <ToggleSwitch onChange={() => {}} checked={undefined}>
                 Hello world
             </ToggleSwitch>,
         );
-        const idSecondRender = checkbox.getAttribute('id');
+        const idSecondRender = switchElement.getAttribute('id');
 
         expect(idFirstRender).toBe(idSecondRender);
     });
@@ -79,10 +81,10 @@ describe('<ToggleSwitch />', () => {
         });
 
         const label = container.querySelector('label');
-        const checkbox = screen.getByRole('checkbox');
+        const switchElement = screen.getByRole('switch');
 
         expect(label?.getAttribute('for')).toBe(id);
-        expect(checkbox.getAttribute('id')).toBe(id);
+        expect(switchElement.getAttribute('id')).toBe(id);
     });
 
     it('should set arbitrary props (rest) on input', () => {
@@ -91,9 +93,9 @@ describe('<ToggleSwitch />', () => {
             tabIndex: -1,
         });
 
-        const checkbox = screen.getByRole('checkbox');
-        expect(checkbox.getAttribute('name')).toBe('toggle');
-        expect(checkbox.getAttribute('tabIndex')).toBe('-1');
+        const switchElement = screen.getByRole('switch');
+        expect(switchElement.getAttribute('name')).toBe('toggle');
+        expect(switchElement.getAttribute('tabIndex')).toBe('-1');
     });
 
     it('should render additional props if passed', () => {
