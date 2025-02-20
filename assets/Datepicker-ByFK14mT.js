@@ -1,0 +1,4 @@
+import{j as t,M as m,C as s,a as p}from"./index-D4UobaES.js";import{useMDXComponents as e}from"./index-CVdx34fM.js";import{D as a,S as n}from"./Datepicker.stories-BCeJiaWF.js";import"./iframe-C4f3kgU_.js";import"./index-eCxJ45ll.js";import"./index-SF9__3rG.js";import"./index-irJGEjIJ.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./Calendar-BjqUWBU_.js";import"./index-DezCrw0f.js";import"./Icon-B88nEPeu.js";import"./v4-CtRu48qb.js";import"./index-DrzhKqaf.js";import"./InputGroup-CV5U44El.js";import"./Collapse-CKwb5mfJ.js";function i(o){const r={h1:"h1",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{of:a}),`
+`,t.jsx(r.h1,{id:"datepicker",children:"Datepicker"}),`
+`,t.jsx(s,{of:n}),`
+`,t.jsx(p,{of:n})]})}function w(o={}){const{wrapper:r}={...e(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(i,{...o})}):i(o)}export{w as default};

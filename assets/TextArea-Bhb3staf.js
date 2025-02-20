@@ -1,4 +1,0 @@
-import{j as t,M as i,C as s,a}from"./index-n85yGU8w.js";import{useMDXComponents as m}from"./index-CVdx34fM.js";import{T as p,S as n}from"./TextArea.stories-Cx3hu-qo.js";import"./iframe-OZaG2QRJ.js";import"./index-eCxJ45ll.js";import"./index-SF9__3rG.js";import"./index-irJGEjIJ.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./index-DezCrw0f.js";import"./InputGroup-BiOcNWdb.js";import"./Tooltip-CPJirHS1.js";import"./Collapse-CKwb5mfJ.js";import"./Label-DD3UyPji.js";import"./ErrorFieldMessage-BZeYW4Z5.js";import"./BaseFieldMessage-BxD39Ejl.js";import"./Icon-B88nEPeu.js";function e(o){const r={h1:"h1",...m(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:p}),`
-`,t.jsx(r.h1,{id:"textarea",children:"TextArea"}),`
-`,t.jsx(s,{of:n}),`
-`,t.jsx(a,{of:n})]})}function w(o={}){const{wrapper:r}={...m(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(e,{...o})}):e(o)}export{w as default};
