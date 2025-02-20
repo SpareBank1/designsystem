@@ -48,6 +48,7 @@ export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
             <input
                 className="ffe-toggle-switch__input"
                 type="checkbox"
+                role="switch"
                 id={id}
                 value={value}
                 checked={!!checked}
