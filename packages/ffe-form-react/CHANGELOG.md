@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.0.0...@sb1/ffe-form-react@23.1.0) (2025-02-20)
+
+
+### Features
+
+* **ffe-form-react:** legg til role=switch på toggleswitch for bedre skjermleser-støtte ([762098d](https://github.com/SpareBank1/designsystem/commit/762098dc274b3232280ff75a8da2d33ac2ae1dd4))
+
+
+
+
+
 # [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@22.1.7...@sb1/ffe-form-react@23.0.0) (2025-02-19)
 
 
