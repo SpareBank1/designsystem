@@ -1,8 +1,8 @@
 .ffe-chip {
     --border-width: 1px;
-    --background-color: var(--ffe-color-component-chips-default-fill-default);
-    --border-color: var(--ffe-color-component-chips-default-border-default);
-    --text-color: var(--ffe-color-component-chips-default-foreground-default);
+    --background-color: var(--ffe-color-fill-primary-invisible);
+    --border-color: var(--ffe-color-border-primary-default);
+    --text-color: var(--ffe-color-foreground-default);
     --border-radius: 24px;
     --text-offset: 12px;
     --icon-offset: var(--ffe-spacing-xs);
@@ -39,15 +39,8 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            --background-color: var(
-                --ffe-color-component-chips-default-fill-hover
-            );
-            --border-color: var(
-                --ffe-color-component-chips-default-border-hover
-            );
-            --text-color: var(
-                --ffe-color-component-chips-default-foreground-hover
-            );
+            --background-color: var(--ffe-color-fill-primary-subtle-hover);
+            --border-color: var(--ffe-color-border-primary-hover);
         }
     }
 
@@ -57,50 +50,27 @@
     }
 
     &:active {
-        --background-color: var(
-            --ffe-color-component-chips-default-fill-pressed
-        );
-        --border-color: var(--ffe-color-component-chips-default-border-pressed);
-        --text-color: var(--ffe-color-component-chips-default-foreground-hover);
+        --background-color: var(var(--ffe-color-fill-primary-subtle-pressed));
+        --border-color: var(--ffe-color-border-primary-pressed);
 
         transform: scale(0.97);
     }
 
     &--selected {
-        --background-color: var(
-            --ffe-color-component-chips-selected-fill-default
-        );
-        --border-color: var(
-            --ffe-color-component-chips-selected-border-default
-        );
-        --text-color: var(
-            --ffe-color-component-chips-selected-foreground-default
-        );
+        --background-color: var(--ffe-color-fill-primary-selected);
+        --border-color: var(--ffe-color-border-primary-selected);
+        --text-color: var(--ffe-color-foreground-inverse);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 --background-color: var(
-                    --ffe-color-component-chips-selected-fill-hover
-                );
-                --border-color: var(
-                    --ffe-color-component-chips-selected-border-hover
-                );
-                --text-color: var(
-                    --ffe-color-component-chips-selected-foreground-hover
+                    --ffe-color-fill-primary-selected-hover
                 );
             }
         }
 
         &:active {
-            --background-color: var(
-                --ffe-color-component-chips-selected-fill-pressed
-            );
-            --border-color: var(
-                --ffe-color-component-chips-selected-border-pressed
-            );
-            --text-color: var(
-                --ffe-color-component-chips-selected-foreground-hover
-            );
+            --background-color: var(--ffe-color-fill-primary-selected-pressed);
 
             transform: scale(0.97);
         }
