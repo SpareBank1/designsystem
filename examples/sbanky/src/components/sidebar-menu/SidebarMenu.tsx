@@ -1,19 +1,7 @@
 import React from 'react';
 import { Heading4 } from '@sb1/ffe-core-react';
-import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
-import { FFELink } from '../../alpha-ffe/ffeLink';
-import cl from 'classnames';
-import {
-    LayoutGrid,
-    Type,
-    ChevronDown,
-    MessageSquare,
-    FormInput,
-    Monitor,
-    Table2,
-    LayoutIcon,
-} from 'lucide-react';
-import './sidebarMenu.less';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 interface MenuItem {
     id: string;
@@ -23,117 +11,79 @@ interface MenuItem {
 }
 
 interface SidebarMenuProps {
-    className?: string;
-    /**
-     * Current active path
-     */
-    activePath?: string;
-    /**
-     * Optional title for the sidebar
-     */
-    title?: string;
+    isOpen?: boolean;
+    onClose?: () => void;
+    onMenuItemClick?: (path: string) => void;
+    menuItems: MenuItem[];
 }
 
 export const SidebarMenu: React.FC<SidebarMenuProps> = ({
-    className = '',
-    activePath,
-    title = 'Examples',
+    isOpen = false,
+    onClose,
+    onMenuItemClick,
+    menuItems,
 }) => {
-    const menuItems: MenuItem[] = [
-        {
-            id: 'buttons',
-            label: 'Buttons',
-            path: '/buttons',
-            icon: <LayoutIcon size={18} />,
-        },
-        {
-            id: 'grid',
-            label: 'Grid System',
-            path: '/grid',
-            icon: <LayoutGrid size={18} />,
-        },
-        {
-            id: 'typography',
-            label: 'Typography',
-            path: '/typography',
-            icon: <Type size={18} />,
-        },
-        {
-            id: 'accordion',
-            label: 'Accordion',
-            path: '/accordion',
-            icon: <ChevronDown size={18} />,
-        },
-        {
-            id: 'messages',
-            label: 'Messages',
-            path: '/messages',
-            icon: <MessageSquare size={18} />,
-        },
-        {
-            id: 'forms',
-            label: 'Form Elements',
-            path: '/forms',
-            icon: <FormInput size={18} />,
-        },
-        {
-            id: 'modals',
-            label: 'Modal Dialogs',
-            path: '/modals',
-            icon: <Monitor size={18} />,
-        },
-        {
-            id: 'tables',
-            label: 'Tables',
-            path: '/tables',
-            icon: <Table2 size={18} />,
-        },
-    ];
+    const location = useLocation();
 
     return (
-        <aside className={cl('sb1-sidebar', className)}>
-            <Grid>
-                <GridRow>
-                    <GridCol sm={12}>
-                        <Heading4 className="sb1-sidebar__title">
-                            {title}
-                        </Heading4>
-                        <nav
-                            className="sb1-sidebar__nav"
-                            aria-label="Component navigation"
+        <>
+            {/* Mobile menu button */}
+            <div className="fixed top-0 left-0 p-4 md:hidden z-20">
+                <button
+                    onClick={onClose}
+                    className="p-2 rounded-lg hover:bg-gray-100"
+                >
+                    <Menu size={24} />
+                </button>
+            </div>
+
+            {/* Backdrop */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden"
+                    onClick={onClose}
+                />
+            )}
+
+            {/* Sidebar */}
+            <div
+                className={`fixed inset-y-0 left-0 transform ${
+                    isOpen ? 'translate-x-0' : '-translate-x-full'
+                } md:relative md:translate-x-0 z-30 transition-transform duration-300 ease-in-out`}
+            >
+                <div className="h-full w-64 bg-white border-r border-gray-200 shadow-lg md:shadow-none">
+                    <div className="flex items-center justify-between p-4 border-b border-gray-200 md:hidden">
+                        <Heading4>Meny</Heading4>
+                        <button
+                            onClick={onClose}
+                            className="p-2 rounded-lg hover:bg-gray-100"
                         >
-                            <ul className="sb1-sidebar__list" role="list">
-                                {menuItems.map(({ id, label, path, icon }) => (
-                                    <li
-                                        key={id}
-                                        className={cl('sb1-sidebar__item', {
-                                            'sb1-sidebar__item--active':
-                                                path === activePath,
-                                        })}
-                                    >
-                                        <FFELink
-                                            href={path}
-                                            underline={false}
-                                            variant="primary"
-                                            className="sb1-sidebar__link"
-                                            aria-current={
-                                                path === activePath
-                                                    ? 'page'
-                                                    : undefined
-                                            }
+                            <X size={24} />
+                        </button>
+                    </div>
+
+                    <div className="p-4">
+                        <nav>
+                            <ul className="list-none space-y-2">
+                                {menuItems.map((item) => (
+                                    <li key={item.id}>
+                                        <Link
+                                            to={item.path}
+                                            onClick={() => onMenuItemClick?.(item.path)}
+                                            className={`w-full flex items-center gap-2 px-4 py-2 rounded no-underline cursor-pointer hover:bg-gray-100 ${
+                                                location.pathname === item.path ? 'bg-gray-100' : ''
+                                            }`}
                                         >
-                                            {icon}
-                                            {label}
-                                        </FFELink>
+                                            {item.icon}
+                                            <span>{item.label}</span>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
                         </nav>
-                    </GridCol>
-                </GridRow>
-            </Grid>
-        </aside>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 };
-
-export default SidebarMenu;

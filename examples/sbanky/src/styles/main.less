@@ -1,56 +1,19 @@
-.sbanky-home-grid {
-    height: 100%;
-    padding: var(--ffe-spacing-2xl);
-    min-height: 1000px;
+// Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    .content {
-        padding: var(--ffe-spacing-md);
-    }
-
-    body.native & {
-        @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-svart;
-        }
-    }
+// FFE styles will be automatically injected here by the ffe-vite-less plugin
+// Custom styles
+:root {
+  --ffe-transition-duration: 0.2s;
+  --ffe-ease: ease-in-out;
 }
 
-.sb1-sidebar {
-    position: sticky;
-    top: var(--ffe-spacing-2xl);
-    height: fit-content;
-    margin-bottom: 0;
-
-    @media (max-width: @breakpoint-md) {
-        position: static;
-        margin-bottom: var(--ffe-spacing-lg);
-    }
-}
-
-.sbanky-wave-wrapper {
-    position: relative;
-    z-index: -1;
-
-    .sbanky-wave {
-        position: absolute;
-        width: 100%;
-        padding-top: 310px;
-
-        @media (min-width: @breakpoint-sm) {
-            padding-top: 310px;
-        }
-
-        @media (min-width: @breakpoint-lg) {
-            padding-top: 410px;
-        }
-    }
-
-    &__thin {
-        .sbanky-wave {
-            padding-top: 160px;
-
-            body.native & {
-                padding-top: @ffe-spacing-4xl;
-            }
-        }
-    }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ffe-font-family);
+  color: var(--ffe-farge-svart);
+  background-color: var(--ffe-farge-hvit);
 }

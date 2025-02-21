@@ -1,65 +1,41 @@
 import { defineConfig } from 'vite';
 import type { UserConfig, PluginOption } from 'vite';
 import react from '@vitejs/plugin-react';
+import { ffeLessPlugin } from '@sb1/ffe-vite-less';
 import { resolve } from 'path';
-import { glob } from 'glob';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 import purgecss from '@fullhuman/postcss-purgecss';
-
-async function collectFfeImports() {
-    const nodeModulesPath = resolve(__dirname, 'node_modules/@sb1');
-    const lessFiles = await glob('**/less/*.less', {
-        cwd: nodeModulesPath,
-        ignore: ['**/node_modules/**'],
-    });
-    const imports = ['@import "@sb1/ffe-core/less/colors";'];
-    for (const file of lessFiles) {
-        if (!file.includes('ffe-core/less/variables.less')) {
-            const importPath = file.replace('.less', '');
-            imports.push(`@import "@sb1/${importPath}";`);
-        }
-    }
-    return imports.join('\n');
-}
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig(async () => {
-    const { viteStaticCopy } = await import('vite-plugin-static-copy');
     const config: UserConfig = {
         plugins: [
-            react() as PluginOption,
+            react(),
+            ffeLessPlugin({
+                nodeModulesPath: resolve(__dirname, 'node_modules')
+            }) as unknown as PluginOption,
             viteStaticCopy({
                 targets: [
                     {
-                        src: 'node_modules/@sb1/**/fonts/*',
-                        dest: 'assets/fonts',
-                    },
-                ],
+                        src: 'node_modules/@sb1/ffe-webfonts/fonts/*',
+                        dest: 'fonts'
+                    }
+                ]
             }) as PluginOption,
         ],
         css: {
-            preprocessorOptions: {
-                less: {
-                    javascriptEnabled: true,
-                    math: 'always',
-                    additionalData: await collectFfeImports(),
-                    paths: [resolve(__dirname, 'node_modules')],
-                },
-            },
             postcss: {
                 plugins: [
+                    tailwindcss(),
+                    autoprefixer(),
                     purgecss({
-                        content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
-                        defaultExtractor: content =>
-                            content.match(/[\w-/:]+(?<!:)/g) || [],
+                        content: ['./src/**/*.{js,jsx,ts,tsx}', './index.html'],
+                        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
                         safelist: {
-                            standard: [
-                                /^ffe-/,
-                                /^sb1-/,
-                                'js-focus-visible',
-                                /^data-/,
-                                /^aria-/,
-                            ],
-                            deep: [/ffe-.+$/, /sb1-.+$/],
-                            greedy: [/^ffe-.*$/, /^sb1-.*$/, /^js-.*$/],
+                            standard: [/^ffe-/, /^sb1-/],
+                            deep: [/^ffe-/, /^sb1-/],
+                            greedy: [/^ffe-/, /^sb1-/],
                             keyframes: [/^ffe-/, /^sb1-/],
                             variables: [/^--ffe-/, /^--sb1-/],
                         },
@@ -71,12 +47,14 @@ export default defineConfig(async () => {
             alias: {
                 '@': resolve(__dirname, 'src'),
                 '@src': resolve(__dirname, 'src'),
-                '@affe': resolve(__dirname, 'src/alpha-ffe'),
                 '@components': resolve(__dirname, 'src/components'),
                 '@styles': resolve(__dirname, 'src/styles'),
-            },
+                '@affe': resolve(__dirname, 'src/alpha-ffe'),
+                '@sb1': resolve(__dirname, 'node_modules/@sb1')
+            }
         },
         build: {
+            sourcemap: true,
             rollupOptions: {
                 output: {
                     manualChunks: {
@@ -86,7 +64,8 @@ export default defineConfig(async () => {
                 },
             },
             cssCodeSplit: true,
-        },
+        }
     };
+
     return config;
 });
