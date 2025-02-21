@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@8.1.3...@sb1/ffe-chart-donut-react@9.0.0) (2025-02-21)
+
+
+### Features
+
+* **ffe-chart-donut-react:** update to semantic colors ([fd16eae](https://github.com/SpareBank1/designsystem/commit/fd16eae0354c484411ec38d558409d1ea8358456))
+
+
+### BREAKING CHANGES
+
+* **ffe-chart-donut-react:** Liten endring av farge.
+
+
+
+
+
 ## [8.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@8.1.2...@sb1/ffe-chart-donut-react@8.1.3) (2025-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
