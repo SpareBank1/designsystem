@@ -1,5 +1,0 @@
-import{j as t,M as s,C as a,a as m}from"./index-D4UobaES.js";import{useMDXComponents as i}from"./index-CVdx34fM.js";import{T as p,S as e}from"./TertiaryButton.stories-DBeRTD--.js";import"./iframe-C4f3kgU_.js";import"./index-eCxJ45ll.js";import"./index-SF9__3rG.js";import"./index-irJGEjIJ.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./TertiaryButton-DjkyhFn8.js";import"./InlineBaseButton-Bjw20TZM.js";import"./fixedForwardRef-Cb2PomjO.js";import"./index-DezCrw0f.js";function n(r){const o={h1:"h1",p:"p",...i(),...r.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{of:p}),`
-`,t.jsx(o.h1,{id:"tertiarybutton",children:"TertiaryButton"}),`
-`,t.jsx(o.p,{children:"For lavt prioriterte handlinger, eller i situasjoner der du trenger å «linke» til innhold på samme side. For eksempel «anchors» som leder deg til et avsnitt i en artikkel."}),`
-`,t.jsx(a,{of:e}),`
-`,t.jsx(m,{of:e})]})}function D(r={}){const{wrapper:o}={...i(),...r.components};return o?t.jsx(o,{...r,children:t.jsx(n,{...r})}):n(r)}export{D as default};
