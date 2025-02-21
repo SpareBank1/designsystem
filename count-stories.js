@@ -8,31 +8,28 @@ function countStoryFiles(directoryPath) {
 
     // Folders to exclude
     const excludeFolders = [
-        'ffe-buttons-react',
-        'ffe-messages-react',
-        'ffe-feedback-react',
-        'ffe-chips-react',
-        'ffe-core',
         'ffe-accordion-react',
-        'ffe-datepicker-react',
-        'ffe-form-react',
+        'ffe-account-selector-react',
+        'ffe-buttons-react',
         'ffe-cards-react',
+        'ffe-chips-react',
         'ffe-collapse-react',
+        'ffe-core',
+        'ffe-core-react',
         'ffe-datepicker-react',
+        'ffe-chart-donut-react',
+        'ffe-feedback-react',
+        'ffe-formatters',
+        'ffe-form-react',
         'ffe-grid-react',
         'ffe-icons-react',
         'ffe-lists-react',
+        'ffe-messages-react',
+        'ffe-modals-react',
         'ffe-pagination-react',
         'ffe-searchable-dropdown-react',
         'ffe-spinner-react',
-        'ffe-chart-donut-react',
-        'ffe-spinner-react',
-        'ffe-account-selector-react',
-        'ffe-modals-react',
-        'ffe-core-react',
         'ffe-tabs-react',
-        'ffe-formatters',
-        'ffe-header'
     ];
 
     const colors = {
