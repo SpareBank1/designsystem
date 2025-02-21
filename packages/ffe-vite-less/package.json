@@ -1,0 +1,38 @@
+{
+  "name": "@sb1/ffe-vite-less",
+  "version": "1.0.0",
+  "description": "Vite plugin for automatically injecting FFE LESS imports",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib"
+  },
+  "dependencies": {
+    "glob": "^10.3.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.3.3",
+    "vite": "5.4.14"
+  },
+  "peerDependencies": {
+    "less": "^4.0.0",
+    "vite": "^6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
