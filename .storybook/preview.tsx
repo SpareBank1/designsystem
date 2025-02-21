@@ -57,7 +57,7 @@ const preview: Preview = {
             const { scheme, accent } = context.globals;
 
             return (
-                <>
+                <div className="ffe-body-text">
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'default') && (
                             <div className="ffe-docs-content-container ">
@@ -82,7 +82,7 @@ const preview: Preview = {
                                 <Story />
                             </div>
                         )}
-                </>
+                </div>
             );
         },
     ],
