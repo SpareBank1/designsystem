@@ -1,29 +1,22 @@
-.ffe-input-group {
-    > .ffe-form-label {
-        color: var(--ffe-color-foreground-default) !important;
-    }
-}
-
 .ffe-dateinput {
     position: relative;
     display: inline-block;
     grid-column: 1 e('/') 3;
     grid-row: 1 e('/') -1;
     min-width: 210px;
-    color: var(--ffe-color-foreground-default);
 
     &--full-width {
         display: block;
     }
 
     &:focus-within {
-        border: 2px solid var(--ffe-color-border-interactive-focus);
+        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
         outline: none;
 
         & + .ffe-datepicker__button {
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
-                    border: 2px solid var(--ffe-color-border-interactive-focus);
+                    border: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
                     outline: none;
                 }
             }
@@ -33,47 +26,33 @@
     &.ffe-input-field {
         display: flex;
         align-items: center;
-        border: 2px solid var(--ffe-color-border-primary-default);
-        background-color: var(--ffe-color-component-form-input-fill-default);
-
-        @media (hover: hover) and (pointer: fine) {
-            &:hover,
-            &:has(+ .ffe-datepicker__button:hover) {
-                border-color: var(--ffe-color-border-primary-hover);
-
-                & + .ffe-datepicker__button {
-                    border-color: var(--ffe-color-border-primary-hover);
-                }
-            }
-        }
 
         &--invalid {
-            border: 2px solid var(--ffe-color-border-feedback-critical);
+            border: var(--ffe-g-border-width) solid var(--ffe-g-error-color);
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
-                    border-color: var(--ffe-color-border-feedback-critical);
+                    border-color: var(--ffe-g-error-color);
                 }
                 &:focus-within:hover {
-                    border: 2px solid var(--ffe-color-border-feedback-critical);
+                    border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
                 }
             }
 
             &:focus-within {
-                border: 2px solid var(--ffe-color-border-feedback-critical);
+                border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
                 outline: none;
             }
 
             & + .ffe-datepicker__button {
                 &:focus-visible {
-                    border-color: var(--ffe-color-border-feedback-critical);
+                    border-color: var(--ffe-g-error-color);
                     border-style: solid;
                 }
 
                 @media (hover: hover) and (pointer: fine) {
                     &:hover {
-                        border: 2px solid
-                            var(--ffe-color-border-feedback-critical);
+                        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
                         outline: none;
                     }
                 }
@@ -83,15 +62,13 @@
 
     &__field {
         padding-block: var(--ffe-spacing-2xs);
-        color: var(--ffe-color-foreground-default);
-        background-color: transparent;
 
         &-year {
             min-width: 4ch;
         }
 
         &:focus {
-            background-color: transparent;
+            background-color: var(--ffe-v-datepicker-spinbutton-hover-color);
             outline: none;
         }
 
@@ -115,8 +92,8 @@
     }
 
     &__button {
-        background-color: var(--ffe-color-background-default);
-        border: 2px solid var(--ffe-color-border-primary-default);
+        background-color: transparent;
+        border: var(--ffe-g-border-width) solid transparent;
         grid-column: 2 e('/') 3;
         grid-row: 1 e('/') -1;
         outline: none;
@@ -128,28 +105,24 @@
 
         &:focus,
         &:active {
-            border: 2px solid var(--ffe-color-border-interactive-focus);
+            border: var(--ffe-g-border-width-focus) solid var(--ffe-v-datepicker-border-hover-color);
         }
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                border-color: var(--ffe-color-border-primary-hover);
-
-                & ~ .ffe-input-field {
-                    border-color: var(--ffe-color-border-primary-hover);
-                }
+                border-color: var(--ffe-v-datepicker-border-hover-color);
             }
         }
     }
 
     &__icon.ffe-icons {
         vertical-align: middle;
-        color: var(--ffe-color-foreground-interactive-link);
+        color: var(--ffe-v-datepicker-icon-color);
         transition: color var(--ffe-transition-duration) var(--ffe-ease);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                color: var(--ffe-color-foreground-interactive-link-hover);
+                color: var(--ffe-v-datepicker-icon-color-hover);
             }
         }
     }
