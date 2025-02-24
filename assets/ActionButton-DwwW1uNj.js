@@ -1,5 +1,0 @@
-import{j as t,M as s,C as a,a as m}from"./index-Dmf8s7U0.js";import{useMDXComponents as i}from"./index-CVdx34fM.js";import{A as p,S as r}from"./ActionButton.stories-8S7FvGsY.js";import"./iframe-B9wUkI9E.js";import"./index-eCxJ45ll.js";import"./index-SF9__3rG.js";import"./index-irJGEjIJ.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./BaseButton-D99V6fdL.js";import"./fixedForwardRef-Cb2PomjO.js";import"./index-DezCrw0f.js";function e(o){const n={h1:"h1",p:"p",...i(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{of:p}),`
-`,t.jsx(n.h1,{id:"actionbutton",children:"ActionButton"}),`
-`,t.jsx(n.p,{children:"Brukes for svært høyt prioriterte handlinger (call to action), og der du trenger en knapp som skiller seg ut. Det skal som hovedregel kun være en ActionButton per side/view."}),`
-`,t.jsx(a,{of:r}),`
-`,t.jsx(m,{of:r})]})}function A(o={}){const{wrapper:n}={...i(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{A as default};
