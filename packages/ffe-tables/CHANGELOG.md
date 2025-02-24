@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@17.1.6...@sb1/ffe-tables@18.0.0) (2025-02-24)
+
+
+### Bug Fixes
+
+* **ffe-tables:** semantiske farger i tables ([3f43a95](https://github.com/SpareBank1/designsystem/commit/3f43a957251c6918bf2789648cb54372f46fd8ac))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables:** endrede farger og tildels former i tables
+
+
+
+
+
 ## [17.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@17.1.5...@sb1/ffe-tables@17.1.6) (2025-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-tables
