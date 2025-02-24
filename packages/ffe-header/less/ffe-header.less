@@ -8,9 +8,6 @@
     isolation: isolate;
     position: relative;
     z-index: 999;
-    &__border {
-        border-bottom: 1px solid var(--ffe-v-header-border-bottom-color);
-    }
 
     &__user-chevron--expanded {
         transform: rotate(180deg);
@@ -21,14 +18,20 @@
     }
 
     &__wrapper {
-        display: grid;
-        column-gap: var(--ffe-spacing-md);
-        grid-template-columns: auto 1fr auto;
-        place-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
         margin: 0 auto;
         padding: 0 var(--ffe-spacing-sm);
         max-width: 1280px;
+    }
+
+    &__border {
+        border-bottom: 1px solid var(--ffe-v-header-border-bottom-color);
+        & .ffe-header__wrapper {
+            justify-content: center;
+        }
     }
 
     &__link {
@@ -110,7 +113,6 @@
     }
 
     &__logo {
-        flex-grow: 1;
         margin: var(--ffe-spacing-xs) 0;
 
         a {
@@ -308,11 +310,11 @@
     &__notification-bubble {
         font-family: var(--ffe-v-font-strong);
         font-weight: normal;
-        font-size: 0.75rem;
+        font-size: .9rem;
         line-height: 1;
         display: inline-grid;
         place-items: center;
-        width: 1.6rem;
+        width: 1.5rem;
         aspect-ratio: 1;
         background: var(--ffe-v-notification-bubble-background-color);
         color: var(--ffe-v-notification-bubble-text-color);
@@ -335,8 +337,6 @@
         }
 
         &__icon-button--user-nav {
-            display: grid;
-            grid-template-columns: 1fr auto;
             .ffe-header__notification-bubble {
                 grid-area: 1 e('/') 1 e('/') span 1 e('/') span 1;
                 margin-right: var(--ffe-spacing-sm);
@@ -386,6 +386,7 @@
 
         &__secondary-nav {
             display: block;
+            flex: 1;
 
             .ffe-header__list-item {
                 display: inline-block;
@@ -395,6 +396,7 @@
 
         &__user-nav-toggle {
             text-align: right;
+            flex: 1;
         }
 
         &__user-nav {
