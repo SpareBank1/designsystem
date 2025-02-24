@@ -1,16 +1,17 @@
 @import (reference) '@sb1/ffe-core/less/accessibility';
 @import (reference) '@sb1/ffe-core/less/breakpoints';
-@import 'theme';
 
 .ffe-table {
     --outline-width: 2px;
     --outline-offset: 2px;
+    --border-radius: 8px;
     --expand-button-size: var(--ffe-v-icons-size-md);
 
     border-collapse: collapse;
     border-spacing: 0;
     display: table;
     width: 100%;
+    color: var(--ffe-color-foreground-default);
 
     tr,
     td,
@@ -20,7 +21,7 @@
 
     &__caption {
         margin-bottom: var(--ffe-spacing-md);
-        color: var(--ffe-g-heading-color);
+        color: var(--ffe-color-foreground-emphasis);
         font-size: var(--ffe-fontsize-h4);
     }
 
@@ -42,15 +43,15 @@
 
     &__body {
         .ffe-table__tr {
-            border-bottom: 1px solid var(--ffe-v-table-row-bordercolor);
+            border-bottom: 1px solid var(--ffe-color-border-primary-default);
 
             &:first-of-type {
-                border-top: 1px solid var(--ffe-v-table-row-bordercolor);
+                border-top: 1px solid var(--ffe-color-border-primary-default);
             }
         }
 
         .ffe-table__cell-content {
-            color: var(--ffe-v-table-content-color);
+            color: var(--ffe-color-foreground-default);
         }
     }
 
@@ -82,7 +83,7 @@
 
         .ffe-icons {
             transition: all var(--ffe-transition-duration) var(--ffe-ease);
-            color: var(--ffe-v-table-expand-icon-color);
+            color: var(--ffe-color-foreground-default);
         }
 
         &--open {
@@ -93,7 +94,7 @@
     }
 
     &__expand-content {
-        background: var(--ffe-v-table-expanded-content-bg);
+        background: var(--ffe-color-surface-primary-default-pressed);
     }
 
     &__th,
@@ -104,27 +105,29 @@
     }
 
     &__th {
-        color: var(--ffe-v-table-heading-color);
+        color: var(--ffe-color-foreground-default);
     }
 
     &__th--sortable {
         --border-color: transparent;
 
-        color: var(--ffe-v-table-heading-color-sortable);
+        color: var(--ffe-color-foreground-emphasis);
         cursor: pointer;
+        transition: background var(--ffe-transition-duration) var(--ffe-ease);
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
 
         &-ascending,
         &-descending {
-            background: var(--ffe-v-table-sortable-header-active-color);
+            background: var(--ffe-color-surface-primary-default-pressed);
         }
 
-        .ffe-table__sort-button {
-            border-bottom: 2px solid var(--border-color);
+        &:hover {
+            background: var(--ffe-color-surface-primary-default-hover);
         }
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                --border-color: var(--ffe-v-table-sortable-header-hover-color);
+                --border-color: var(--ffe-color-fill-primary-hover);
             }
         }
     }
@@ -144,13 +147,13 @@
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                background: var(--ffe-v-table-expanded-row-bg);
+                background: var(--ffe-color-surface-primary-default-hover);
             }
         }
     }
 
     &__tr--expand-open {
-        background: var(--ffe-v-table-expanded-row-bg);
+        background: var(--ffe-color-surface-primary-default-hover);
     }
 
     &__column-header {
@@ -163,7 +166,8 @@
 }
 
 :is(.ffe-table__expand-button, .ffe-table__sort-button):focus-visible {
-    outline: var(--outline-width) solid var(--ffe-v-table-button-focus-outline);
+    outline: var(--outline-width) solid
+        var(--ffe-color-border-interactive-focus);
     outline-offset: var(--outline-offset);
 }
 
