@@ -18,12 +18,19 @@ En modal skal alltid ha en heading nivå 2. Ikke bruk modalvinduer for funksjone
 For å lukke eller åpne en modal brukes `ModalHandle`. Innhold kan plasseres i en eller flere `<ModalBlock/>`.
 
 ## Standard
+
 <Canvas of={ModalStories.Standard} />
 <Controls of={ModalStories.Standard} />
 
 ## Tilpasset bakgrunn
 
 <Canvas of={ModalStories.Custom} />
+
+## Utsene i dark modalen
+
+Modalen følger css classen `regard-color-scheme-preference` og vil se slik ut i dark mode.
+
+<Canvas of={ModalStories.DarkMode} />
 
 ## Veiledning for bruk
 
@@ -46,6 +53,7 @@ Ettersom modaler lett kan lukkes bør de ikke inneholde for mange funksjoner ell
 side vurderes. Funksjonelle prosesser over flere steg må aldri legges i en modal.
 
 ### Informasjonsmodaler
+
 Modaler med informasjon skal brukes på samme måte som tooltip eller pop-over, men i større format og med plass til mer tekst.
 Teksten er oftest midtstilt, men kan også være venstrestilt i større modaler med mye tekst.
 Informasjonsmodaler kan inneholde flere steg, men bør da ha knapper både for ‘Neste’ og for ‘Avbryt’.
@@ -58,12 +66,14 @@ Knappene skal plasseres midtstilt i mindre modaler, og høyrestilt i større mod
 primærknappen som aktiverer funksjonen (f.eks. «ok» eller «send inn).
 
 ### Kontrollmodaler
-Modalvinduer som benyttes for å kontrollere eller varsle om handlinger/endringer. Eksempler på dette vil være:
-* Å kontrollere input og endringer: «er du sikker på at du vil endre telefonnummer?»
-* Varslinger om utlogging ved lengre perioder med inaktivitet
 
+Modalvinduer som benyttes for å kontrollere eller varsle om handlinger/endringer. Eksempler på dette vil være:
+
+- Å kontrollere input og endringer: «er du sikker på at du vil endre telefonnummer?»
+- Varslinger om utlogging ved lengre perioder med inaktivitet
 
 ## Universell Utforming
+
 For å opprettholde dokumentstruktur med tanke på overskriftshierarki må modalvinduet benytte `<h2/>` som overskriftsnivå
 for sin hovedoverskrift. Ikke tillat tastaturnavigasjon utenfor eller «bak» modalvinduet. Så lenge modalen er aktivert
 vil tastaturnavigasjon måtte begrenses til selve modalen.
