@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@2.0.4...@sb1/ffe-messages-react@2.0.5) (2025-02-24)
+
+
+### Bug Fixes
+
+* **ffe-messages-react:** Gi bedre feilmelding ved bruk av utdatert property ([34a4ca5](https://github.com/SpareBank1/designsystem/commit/34a4ca57b1e08f61e8fcabea5f2bc0f8f5fb1fdf))
+
+
+
+
+
 ## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@2.0.3...@sb1/ffe-messages-react@2.0.4) (2025-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-messages-react

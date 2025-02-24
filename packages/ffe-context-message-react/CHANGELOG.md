@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@12.0.29...@sb1/ffe-context-message-react@12.0.30) (2025-02-24)
+
+
+### Bug Fixes
+
+* **ffe-context-message-react:** Gi bedre feilmelding ved bruk av utdatert property ([e760b20](https://github.com/SpareBank1/designsystem/commit/e760b20820aef4c437ffed3de2c3cdd0f6526e17))
+
+
+
+
+
 ## [12.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@12.0.28...@sb1/ffe-context-message-react@12.0.29) (2025-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
