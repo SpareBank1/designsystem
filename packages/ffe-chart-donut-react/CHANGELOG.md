@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@9.0.0...@sb1/ffe-chart-donut-react@9.0.1) (2025-02-24)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** Remove unused files ([4c5a247](https://github.com/SpareBank1/designsystem/commit/4c5a247d3f8c193e232e78c23ad5de2c31ecf656))
+
+
+
+
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@8.1.3...@sb1/ffe-chart-donut-react@9.0.0) (2025-02-21)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.0.33...@sb1/ffe-accordion-react@13.0.34) (2025-02-24)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+
+
+
+
 ## [13.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.0.32...@sb1/ffe-accordion-react@13.0.33) (2025-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

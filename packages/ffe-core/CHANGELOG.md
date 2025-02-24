@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.0...@sb1/ffe-core@30.0.1) (2025-02-24)
+
+
+### Bug Fixes
+
+* **ffe-core:** Update semantic colors ([27613e4](https://github.com/SpareBank1/designsystem/commit/27613e49ff2733c969d98987c2ac7cf10a784ae7))
+
+
+
+
+
 # [30.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@29.5.2...@sb1/ffe-core@30.0.0) (2025-02-19)
 
 

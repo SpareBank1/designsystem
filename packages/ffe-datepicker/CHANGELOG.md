@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.4.0...@sb1/ffe-datepicker@14.0.0) (2025-02-24)
+
+
+* feat(ffe-datepicker)!: add semantic colors to components ([d07bae8](https://github.com/SpareBank1/designsystem/commit/d07bae8600284a2014c3768ec80f34347ef5aa46))
+
+
+### Features
+
+* **ffe-datepicker:** revert semantic colors to components ([a05c5ee](https://github.com/SpareBank1/designsystem/commit/a05c5ee2cedc18624174aeb544e9e01608815380))
+
+
+### BREAKING CHANGES
+
+* Add semantic colors
+
+
+
+
+
 # [13.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@13.3.6...@sb1/ffe-datepicker@13.4.0) (2025-02-19)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@3.0.0...@sb1/ffe-feedback@4.0.0) (2025-02-24)
+
+
+### Bug Fixes
+
+* **ffe-feedback:** endrer bgColor og oppdaterer farger ([179bb9e](https://github.com/SpareBank1/designsystem/commit/179bb9e13747932a30b4c78c13bb98c0451a8187))
+
+
+### BREAKING CHANGES
+
+* **ffe-feedback:** bgColor støtter nå kun semantiske farger
+
+
+
+
+
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@2.1.6...@sb1/ffe-feedback@3.0.0) (2025-02-19)
 
 
