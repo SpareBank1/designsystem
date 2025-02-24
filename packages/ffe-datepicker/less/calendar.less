@@ -1,10 +1,11 @@
 @import (reference) '@sb1/ffe-core/less/typography';
 
 .ffe-calendar {
-    border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
+    border: 1px solid var(--ffe-color-foreground-default);
     border-radius: var(--ffe-g-border-radius);
     padding: var(--ffe-spacing-2xs);
-    background: var(--ffe-v-datepicker-bg-color);
+    background: var(--ffe-color-background-default);
+    color: var(--ffe-color-foreground);
     overflow-y: auto;
 
     &--datepicker {
@@ -23,9 +24,11 @@
 
     &__header {
         text-align: center;
+        color: var(--ffe-color-foreground-emphasis);
         padding: var(--ffe-spacing-sm) var(--ffe-spacing-2xs)
             var(--ffe-spacing-2xs);
         width: 100%;
+        margin-bottom: var(--ffe-spacing-xs);
     }
 
     &__header-inner-wrapper {
@@ -34,8 +37,15 @@
         align-items: center;
     }
 
-    &__month {
+    &__month,
+    &__title {
         padding-right: var(--ffe-spacing-xs);
+        color: var(--ffe-color-foreground-emphasis);
+        font-family: var(--ffe-g-font-heading-small);
+        font-size: var(--ffe-fontsize-h5);
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
     }
 
     &__month-nav {
@@ -65,21 +75,11 @@
 
     &__icon-prev.ffe-icons,
     &__icon-next.ffe-icons {
-        color: var(--ffe-v-datepicker-icon-color);
+        color: var(--ffe-color-foreground-emphasis);
     }
 
     &__icon-next {
         transform: rotate(180deg);
-    }
-
-    &__title {
-        font-family: var(--ffe-g-font-heading-small);
-        font-size: var(--ffe-fontsize-h5);
-        color: var(--ffe-v-datepicker-title-color);
-        display: inline-block;
-        vertical-align: middle;
-        min-width: 50%;
-        margin-bottom: 0;
     }
 
     &__accessible-text {
@@ -100,8 +100,29 @@
 
     &__weekday {
         .ffe-small-text();
-        border-bottom: 1px solid var(--ffe-v-datepicker-weekday-border-color);
-        color: var(--ffe-v-datepicker-weekday-color);
+        color: var(--ffe-color-foreground-subtle);
+    }
+
+    &__weekdays {
+        margin-bottom: var(--ffe-spacing-2xs);
+    }
+
+    thead {
+        display: block;
+        border-bottom: 1px solid var(--ffe-color-foreground-emphasis);
+        margin-bottom: var(--ffe-spacing-2xs);
+        padding-bottom: var(--ffe-spacing-3xs);
+    }
+
+    tr {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    td,
+    th {
+        flex: 1;
+        text-align: center;
     }
 
     &__day {
@@ -114,53 +135,39 @@
         .ffe-small-text();
 
         font-size: 1rem;
-        background-color: var(--ffe-v-datepicker-bg-color);
+        background-color: var();
         width: 2.1875rem;
         aspect-ratio: 1;
-        color: var(--ffe-v-datepicker-date-color);
+        color: var(--ffe-color-foreground-default);
         border-radius: 4px;
         display: inline-block;
         line-height: 2.1875;
-        border: 2px solid transparent;
         cursor: pointer;
 
         &--today {
             border: 1px solid var(--ffe-v-datepicker-date-color-today);
         }
 
-        &:focus {
-            border: 2px solid var(--ffe-v-datepicker-border-hover-color);
-            color: var(--ffe-v-datepicker-date-color-hover);
-            outline: none;
-        }
-
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                border: 2px solid var(--ffe-v-datepicker-border-hover-color);
-                color: var(--ffe-v-datepicker-date-color-hover);
+                background: var(--ffe-color-fill-primary-hover);
+                color: var(--ffe-color-foreground-inverse);
             }
         }
 
-        &--focus {
-            border: 2px solid var(--ffe-v-datepicker-border-hover-color);
-            background: var(--ffe-v-datepicker-bg-color);
+        &:active {
+            background: var(--ffe-color-fill-primary-pressed);
         }
 
         &--selected {
-            background: var(--ffe-v-datepicker-border-hover-color);
-            color: var(--ffe-v-datepicker-bg-color);
+            background: var(--ffe-color-fill-primary-selected);
+            color: var(--ffe-color-foreground-inverse);
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
                     color: var(--ffe-v-datepicker-bg-color);
                 }
             }
-        }
-
-        &--focus&--selected {
-            box-shadow:
-                0 0 0 2px var(--ffe-v-datepicker-bg-color),
-                0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
         }
 
         &--disabled {
@@ -182,6 +189,75 @@
 
         &--disabled-focus {
             border: 2px solid var(--ffe-v-datepicker-date-color-disabled);
+        }
+    }
+}
+
+:root,
+:host {
+    --ffe-v-datepicker-bg-color: var(
+        --ffe-color-component-form-input-fill-default
+    );
+    --ffe-v-datepicker-border-hover-color: var(
+        --ffe-color-border-primary-hover
+    );
+    --ffe-v-datepicker-icon-color: var(--ffe-color-foreground-interactive-link);
+    --ffe-v-datepicker-icon-color-hover: var(
+        --ffe-color-foreground-interactive-link-hover
+    );
+    --ffe-v-datepicker-title-color: var(--ffe-color-foreground-default);
+    --ffe-v-datepicker-weekday-color: var(--ffe-color-foreground-subtle);
+    --ffe-v-datepicker-weekday-border-color: var(
+        --ffe-color-border-primary-subtle
+    );
+    --ffe-v-datepicker-date-color: var(--ffe-color-foreground-default);
+    --ffe-v-datepicker-date-color-today: var(
+        --ffe-color-border-primary-emphasis
+    );
+    --ffe-v-datepicker-date-color-hover: var(--ffe-color-fill-primary-hover);
+    --ffe-v-datepicker-date-color-focus: var(
+        --ffe-color-border-interactive-focus
+    );
+    --ffe-v-datepicker-date-color-disabled: var(--ffe-color-foreground-subtle);
+    --ffe-v-datepicker-spinbutton-hover-color: var(
+        --ffe-color-surface-primary-default-hover
+    );
+
+    @media (prefers-color-scheme: dark) {
+        .regard-color-scheme-preference {
+            --ffe-v-datepicker-bg-color: var(--ffe-color-background-default);
+            --ffe-v-datepicker-border-hover-color: var(
+                --ffe-color-border-primary-hover
+            );
+            --ffe-v-datepicker-icon-color: var(
+                --ffe-color-foreground-interactive-link
+            );
+            --ffe-v-datepicker-icon-color-hover: var(
+                --ffe-color-foreground-interactive-link-hover
+            );
+            --ffe-v-datepicker-title-color: var(--ffe-color-foreground-default);
+            --ffe-v-datepicker-weekday-color: var(
+                --ffe-color-foreground-subtle
+            );
+            --ffe-v-datepicker-weekday-border-color: var(
+                --ffe-color-border-primary-subtle
+            );
+            --ffe-v-datepicker-date-color: var(--ffe-color-foreground-default);
+            --ffe-v-datepicker-date-color-today: var(
+                --ffe-color-border-primary-emphasis
+            );
+            --ffe-v-datepicker-date-color-hover: var(
+                --ffe-color-fill-primary-hover
+            );
+            --ffe-v-datepicker-date-color-focus: var(
+                --ffe-color-border-interactive-focus
+            );
+            --ffe-v-datepicker-date-color-disabled: var(
+                --ffe-color-foreground-subtle
+            );
+            --ffe-v-datepicker-spinbutton-hover-color: var(
+                --ffe-color-surface-primary-default-hover
+            );
         }
     }
 }
