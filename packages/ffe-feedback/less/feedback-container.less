@@ -2,37 +2,17 @@
     width: 100%;
     flex-grow: 1;
     padding: var(--ffe-spacing-md);
-    background-color: var(--ffe-v-feedback-background-color);
+    background-color: var(--ffe-color-surface-primary-default);
 
-    &--bg-hvit {
-        --ffe-v-feedback-background-color: var(--ffe-farge-hvit);
+    &--bg-primary {
+        background-color: var(--ffe-color-surface-primary-default);
     }
 
-    &--bg-frost-30 {
-        --ffe-v-feedback-background-color: var(--ffe-farge-frost-30);
+    &--bg-secondary {
+        background-color: var(--ffe-color-surface-secondary-default);
     }
 
-    &--bg-sand-30 {
-        --ffe-v-feedback-background-color: var(--ffe-farge-sand-30);
-    }
-
-    &--bg-syrin-30 {
-        --ffe-v-feedback-background-color: var(--ffe-farge-syrin-30);
-    }
-
-    &--bg-vann-30 {
-        --ffe-v-feedback-background-color: var(--ffe-farge-vann-30);
-    }
-
-    @media (prefers-color-scheme: dark) {
-        .regard-color-scheme-preference & {
-            &--dm-bg-svart {
-                --ffe-v-feedback-background-color: var(--ffe-farge-svart);
-            }
-
-            &--dm-bg-natt {
-                --ffe-v-feedback-background-color: var(--ffe-farge-natt);
-            }
-        }
+    &--bg-tertiary {
+        background-color: var(--ffe-color-surface-tertiary-default);
     }
 }

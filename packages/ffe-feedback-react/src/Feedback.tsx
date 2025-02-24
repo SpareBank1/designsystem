@@ -11,10 +11,8 @@ export interface FeedbackProps {
     locale?: 'nb' | 'nn' | 'en';
     onThumbClick: (thumb: Thumb) => void;
     onFeedbackSend: (feedbackText: string) => void;
-    /** Set the background color of the feedback container. Accepts ffe-color variables without the "ffe-farge-" bit of the name. */
-    bgColor?: 'hvit' | 'frost-30' | 'sand-30' | 'syrin-30' | 'vann-30';
-    /** Set the background color of the feedback container in darkmode */
-    bgDarkmodeColor?: 'svart' | 'natt';
+    /** Set the background color of the feedback container. */
+    bgColor?: 'primary' | 'secondary' | 'tertiary';
     contactLink?: FeedbackExpandedProps['contactLink'];
     texts?: {
         feedbackNotSentHeading?: string;
@@ -27,7 +25,6 @@ export const Feedback: React.FC<FeedbackProps> = ({
     onThumbClick,
     onFeedbackSend,
     bgColor,
-    bgDarkmodeColor,
     contactLink,
     texts,
     className,
@@ -43,7 +40,6 @@ export const Feedback: React.FC<FeedbackProps> = ({
         'ffe-feedback',
         {
             [`ffe-feedback--bg-${bgColor}`]: bgColor,
-            [`ffe-feedback--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,
         },
         className,
     );
