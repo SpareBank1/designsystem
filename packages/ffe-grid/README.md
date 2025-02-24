@@ -109,7 +109,7 @@ Text inside a grid column can be centered using the `.ffe-grid__col--center-text
 The background color of rows can be changed using modifiers. This requires that the children of `.ffe-grid__row` are wrapped in `.ffe-grid__row-wrapper`.
 
 ```html
-<div class="ffe-grid__row ffe-grid__row--bg-sand">
+<div class="ffe-grid__row ffe-grid__row--bg-primary">
     <div class="ffe-grid__row-wrapper">
         <div class="ffe-grid__col--md-6">
             <!-- content -->
@@ -121,45 +121,19 @@ The background color of rows can be changed using modifiers. This requires that 
 </div>
 ```
 
-#### `.ffe-grid__row--bg-frost-30`
+Supported background colors are limited to `surface` colors in the semantic color palette. This means you can choose from the following backgrounds, which in turn adhere to which mode the parent element is set to (i.e. light mode, dark mode, accent mode).
 
-Sets the row background color to `@ffe-farge-frost-30`
+#### `.ffe-grid__row--bg-primary`
 
-#### `.ffe-grid__row--bg-sand`
+Sets the row background color to `--ffe-color-surface-primary-default`
 
-Sets the row background color to `@ffe-farge-sand`
+#### `.ffe-grid__row--bg-secondary`
 
-#### `.ffe-grid__row--bg-sand-70`
+Sets the row background color to `--ffe-color-surface-primary-secondary`
 
-Sets the row background color to `@ffe-farge-sand-70`
+#### `.ffe-grid__row--bg-tertiary`
 
-#### `.ffe-grid__row--bg-sand-30`
-
-Sets the row background color to `@ffe-farge-sand-30`
-
-#### `.ffe-grid__row--bg-syrin-70`
-
-Sets the row background color to `@ffe-farge-syrin-70`
-
-#### `.ffe-grid__row--bg-syrin-30`
-
-Sets the row background color to `@ffe-farge-syrin-30`
-
-#### `.ffe-grid__row--bg-vann`
-
-Sets the row background color to `@ffe-farge-vann`
-
-#### `.ffe-grid__row--bg-vann-30`
-
-Sets the row background color to `@ffe-farge-vann-30`
-
-#### `.ffe-grid__row--bg-fjell`
-
-Sets the row background color to `@ffe-farge-fjell`
-
-#### `.ffe-grid__row--bg-hvit`
-
-Sets the row background color to `@ffe-farge-hvit`
+Sets the row background color to `--ffe-color-surface-primary-tertiary`
 
 ## Development
 
