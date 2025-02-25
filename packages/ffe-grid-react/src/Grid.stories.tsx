@@ -16,11 +16,7 @@ export default meta;
 type Story = StoryObj<typeof Grid>;
 
 export const Standard: Story = {
-    args: {
-        sm: { gap: 'none' },
-        md: { gap: 'none' },
-        lg: 'none',
-    },
+    args: {},
     render: args => (
         <Grid {...args}>
             <GridRow>
@@ -32,11 +28,7 @@ export const Standard: Story = {
 };
 
 export const Spacing: Story = {
-    args: {
-        sm: { gap: 'lg' },
-        md: { gap: 'lg' },
-        lg: { gap: 'lg' },
-    },
+    args: {},
     render: args => (
         <Grid gap="lg">
             <GridRow margin="5xl" padding="2xl" bgColor="secondary">
