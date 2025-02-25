@@ -22,11 +22,26 @@ Bruken av accent er der en har en blokk på side med en annen bakgrunnsfarge enn
 
 Se eksempelet [på en slik side med en accent section]() WIP
 
+## Tailwind
+
+For å bruke semantiske farger i Tailwind importerer en `@sb1/ffe-core/lib/senamticColors`.
+
+```tsx
+import * as colors from '@sb1/ffe-core/lib/senamticColors';
+module.exports = {
+    theme: {
+        colors: {
+            ...colors,
+        },
+    },
+};
+```
+
+Da blir fargene tilgjengelige på i camelCase uten `--fee-color`. Feks `--ffe-color-background-default` -> `backgroundDefault`
 
 ## Liste over de semantiske fargene
 
- 
- <table class="ffe-color-table">
+<table class="ffe-color-table">
     <thead>
         <tr>
             <th>Farge navn</th>
@@ -57,4 +72,3 @@ Se eksempelet [på en slik side med en accent section]() WIP
         ))}
     </tbody>
 </table>
-
