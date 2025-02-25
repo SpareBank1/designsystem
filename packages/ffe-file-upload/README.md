@@ -11,7 +11,7 @@ npm install --save @sb1/ffe-file-upload
 Full documentation on file upload usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#fileupload.
 
 ```less
-@import 'path/to/node_modules/@sb1/ffe-file.upload/less/ffe-file-upload.less';
+@import 'path/to/node_modules/@sb1/ffe-file.upload/less/file-upload.less';
 ```
 
 ### Importing compiled CSS
@@ -23,16 +23,6 @@ If your project does not use Less, you can import the compiled styling:
 ```
 
 See also `@sb1/ffe-file-upload-react`.
-
-## Theming with CSS custom properties
-
-In order to support theming of components, this package contains styling that depends on a set of custom properties, defined in `less/theme.less`. These properties in turn depend on a base theme defined in `ffe-core`.
-
-If your project uses the `ffe-core`, you're probably good to go. If not, make sure to import the core properties in `theme.less`:
-
-```css
-@import '~@sb1/ffe-core/less/theme';
-```
 
 ## Development
 
