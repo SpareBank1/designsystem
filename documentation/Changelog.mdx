@@ -6,7 +6,7 @@ import { Canvas, Meta } from '@storybook/blocks';
 
 Denne siden lister breaking changes og større endringer i designsystemet. For alle oppdateringer på en komponent kan en se historikken i hver enkelt komponent.
 
-Feks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
+F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
 
 ## 2025 - februar - Semantiske Farger
 
@@ -21,11 +21,9 @@ Det er et sett med parametere som ikke lenger er i bruk da det løses med semant
 
 Flere av dagens komponenter støtter at en kan sette bakgrunnsfargen selv. Disse er oppdatert slik at det er nå mulig å velge mellom default + 2 farger, altså 3 farger totalt som fungerer på tvers av light, dark og accent modes.
 
-- `bgColor` - endres fra `'sand-30' | 'sand-70' | 'frost-30' | 'syrin-30' | 'syrin-70'` til `'primary' | 'seccondary' | 'tertiery'`
+- `bgColor` - endres fra `'sand-30' | 'sand-70' | 'frost-30' | 'syrin-30' | 'syrin-70'` til `'primary' | 'secondary' | 'tertiary'`
 
-Variablene som var i komponentene av formen `--ffe-v-` fases ut. Disse var for å legge til rette for ekstern teaming ev systemet som ikke lenger er et behov. Grunnen for utfasing er primært tekniske begresninger med semantiskefarger
-det ble rett og slett farger som ikke ble oppdatert riktig i enkelte kontekster og vi fant ikke noen annen vei rundt enn å redusere nivået på variabler brukt.
+Variablene som var i komponentene av formen `--ffe-v-` fases ut. Disse var opprinnelig ment for å legge til rette for ekstern theming av systemet, noe som ikke lenger er et behov. Grunnen for utfasing er primært tekniske begrensninger med semantiske farger - det var rett og slett farger som ikke ble oppdatert riktig i enkelte kontekster og vi fant ikke noen annen vei rundt enn å redusere bruk av variabler.
 Bruken av `--ffe-v-` har og sklidd ut i senere tid generelt i systemet.
 
-Fargene på format `--ffe-farge` er fremdeles tilgjengelig, men vi anbefaler å bytte ut med passende farger som funnet på fargesiden på formatet `--ffe-color-` da disse er semantiske
-og vil fungere i alle kontekster.
+Fargene i formatet `--ffe-farge-` er fremdeles tilgjengelig, men vi anbefaler å bytte de ut med passende farger i formatet `--ffe-color-`, som man finner på fargesiden. Disse er semantiske og vil fungere i alle kontekster.
