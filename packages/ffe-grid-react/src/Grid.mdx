@@ -80,16 +80,26 @@ Dette kan overstyres ved hjelp av gap-modifieren på `<Grid>`. Tillatte verdier 
 men kan ikke være større enn 32px (`lg`). I tillegg kan spacingen fjernes helt med verdien `none`.
 
 ```
-<Grid gap="none">
+<Grid gap="md">
     <GridRow>
         <GridCol />
     </GridRow>
 </Grid>
 ```
 
+Gap kan defineres responsivt ved ved hjelp av størrelsesmodifierne `sm`, `md` og `lg` -  se også _Responsiv spacing_.
+
+```
+<Grid sm={{ gap: 'sm' }} md={{ gap: 'md' }} lg={{ gap: 'lg' }}>
+    <GridRow>
+        <GridCol/>
+    </GridRow>
+</Grid>
+```
+
 ## Responsiv spacing
 
-Spacing kan også defineres responsivt ved hjelp av størrelsesmodifierne sm, md og lg. Dette gjør det mulig å ha ulik spacing på ulike skjermstørrelser.
+Spacing kan også defineres responsivt ved hjelp av størrelsesmodifierne `sm`, `md` og `lg`. Dette gjør det mulig å ha ulik spacing på ulike skjermstørrelser.
 Props som kan endres på denne måten er gap på `<Grid>`-elementet, samt margin og padding på `<GridRow>`.
 Tillatte verdier er tilsvarende som for de ikke-responsive variantene av gap, margin og padding.
 <br/>
