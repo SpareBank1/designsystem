@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.2...@sb1/ffe-core@30.0.3) (2025-02-26)
+
+
+### Bug Fixes
+
+* **ffe-core:** Introduce class ffe-default-mode ([9f4fa27](https://github.com/SpareBank1/designsystem/commit/9f4fa271fc70be12c7b1f89a9d50c7d0aba42aff))
+
+
+
+
+
 ## [30.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.1...@sb1/ffe-core@30.0.2) (2025-02-26)
 
 **Note:** Version bump only for package @sb1/ffe-core

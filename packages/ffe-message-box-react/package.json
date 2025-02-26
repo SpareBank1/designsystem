@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-message-box-react",
-    "version": "13.0.29",
+    "version": "13.0.30",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -26,7 +26,7 @@
     },
     "dependencies": {
         "@sb1/ffe-icons-react": "^11.0.19",
-        "@sb1/ffe-message-box": "^14.0.14",
+        "@sb1/ffe-message-box": "^14.0.15",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
