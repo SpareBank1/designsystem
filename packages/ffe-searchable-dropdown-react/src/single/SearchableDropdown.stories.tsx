@@ -227,3 +227,27 @@ export const PostListElement: Story = {
         );
     },
 };
+
+export const CustomDisplayAttribute: Story = {
+    args: {
+        ...Standard.args,
+        displayAttribute: 'organizationNumber',
+        dropdownAttributes: ['organizationName', 'organizationNumber'],
+        searchAttributes: ['organizationNumber', 'organizationName'],
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+            >
+                <SearchableDropdown
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};

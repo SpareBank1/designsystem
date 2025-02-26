@@ -35,7 +35,7 @@ export const getListToRender = <Item extends Record<string, any>>({
     searchMatcher?: SearchMatcher<Item>;
     showAllItemsInDropdown: boolean;
 }): { noMatch: boolean; listToRender: Item[] } => {
-    const trimmedInput = inputValue ? inputValue.trim() : '';
+    const trimmedInput = inputValue ? String(inputValue).trim() : '';
 
     const shouldFilter = trimmedInput.length > 0;
 

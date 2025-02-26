@@ -1026,4 +1026,33 @@ describe('SearchableDropdown', () => {
         await user.click(input);
         await screen.findByText('Dette er et postListElement!');
     });
+
+    it('allows passing a custom display attribute', async () => {
+        const onChange = jest.fn();
+        const user = userEvent.setup();
+
+        render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                displayAttribute={'organizationNumber'}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        expect(input.getAttribute('value')).toBe('');
+        await user.type(input, 'Be');
+
+        await user.click(screen.getByText('Beslag skytter'));
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(companies[2]);
+        expect(input.getAttribute('value')).toEqual('812602552');
+    });
 });

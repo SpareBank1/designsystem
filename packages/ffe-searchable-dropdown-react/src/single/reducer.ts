@@ -24,6 +24,7 @@ export const createReducer =
     <Item extends Record<string, any>>({
         searchAttributes,
         dropdownList,
+        displayAttribute,
         noMatchDropdownList,
         maxRenderedDropdownElements,
         searchMatcher,
@@ -31,6 +32,7 @@ export const createReducer =
     }: {
         dropdownList: Item[];
         searchAttributes: Array<keyof Item>;
+        displayAttribute: keyof Item;
         noMatchDropdownList: Item[] | undefined;
         maxRenderedDropdownElements: number;
         searchMatcher: SearchMatcher<Item> | undefined;
@@ -38,16 +40,17 @@ export const createReducer =
     }) =>
     (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
-            case 'InputKeyDownEscape':
+            case 'InputKeyDownEscape': {
                 return {
                     ...state,
                     noMatch: false,
                     isExpanded: false,
                     highlightedIndex: -1,
                     inputValue: state.selectedItem
-                        ? state.selectedItem[searchAttributes[0]]
+                        ? state.selectedItem[displayAttribute]
                         : '',
                 };
+            }
             case 'InputClick': {
                 const { noMatch, listToRender } = getListToRender({
                     inputValue: state.inputValue,
@@ -90,23 +93,24 @@ export const createReducer =
                     noMatch,
                 };
             }
-            case 'ToggleButtonPressed':
+            case 'ToggleButtonPressed': {
                 return {
                     ...state,
                     isExpanded: !state.isExpanded,
                 };
+            }
             case 'ItemSelectedProgrammatically':
             case 'ItemOnClick':
-            case 'InputKeyDownEnter':
+            case 'InputKeyDownEnter': {
                 return {
                     ...state,
                     isExpanded: false,
                     highlightedIndex: -1,
                     selectedItem: action.payload?.selectedItem,
                     inputValue:
-                        action.payload?.selectedItem?.[searchAttributes[0]] ||
-                        '',
+                        action.payload?.selectedItem?.[displayAttribute] || '',
                 };
+            }
 
             case 'InputKeyDownArrowDown':
             case 'InputKeyDownArrowUp': {
@@ -153,7 +157,7 @@ export const createReducer =
                 }
 
                 const inputValue = selectedItem
-                    ? selectedItem[searchAttributes[0]]
+                    ? selectedItem[displayAttribute]
                     : '';
                 return {
                     ...state,
