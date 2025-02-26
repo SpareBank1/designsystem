@@ -179,6 +179,7 @@
 
     .ffe-button__icon {
         color: var(--ffe-color-component-button-secondary-foreground-default);
+        transition: transform var(--ffe-transition-duration) var(--ffe-ease);
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -208,8 +209,19 @@
         }
     }
 
+    &:focus,
+    &:visited {
+        color: var(--ffe-color-component-button-secondary-foreground-default);
+        background-color: var(
+            --ffe-color-component-button-secondary-fill-hover
+        );
+    }
+
+    &:hover,
     &:focus {
-        transform: translateX(12px);
+        .ffe-button__icon {
+            transform: translateX(4px);
+        }
     }
 }
 
