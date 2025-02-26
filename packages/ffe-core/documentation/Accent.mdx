@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/blocks';
+import { colors } from '../gen-src/semantic-color-names.json';
+
+<Meta title="Design/Farger/Accent" />
+
+# Accent
+
+Accent mode aktiveres med å legge klassen `ffe-accent-mode` på elementet eller på
+containeren til elementet. Trenger en default mode inne i eccentmode kan en legge på klassen `.ffe-default-mode`.
+
+Noen vanlige eksempler på bruk av accent mode
+
+```jsx
+// En komponent med accent mode
+<PrimaryButton
+    className="ffe-accent-mode">
+    Primærknapp
+</PrimaryButton>
+
+
+// Flere komponenter med accent mode i samme område
+<div
+   className="ffe-accent-mode"
+   style={{backgroundColor:"var(--ffe-color-background-default)"}}>
+   <PrimaryButton>
+      Primærknapp
+   </PrimaryButton>
+   <SecondaryButton>
+      Sekundærknapp
+   </SecondaryButton>
+</div>
+
+
+// En komponent med accent mode i et accentområde og en komponent med default mode
+<div
+   className="ffe-accent-mode"
+   style={{backgroundColor:"var(--ffe-color-background-default)"}}>
+   <PrimaryButton>
+      Primærknapp
+   </PrimaryButton>
+   <SecondaryButton className="ffe-default-mode">
+      Sekundærknapp
+   </SecondaryButton>
+</div>
+```
+
+Se eksempelet [på en slik side med en accent section]() WIP
