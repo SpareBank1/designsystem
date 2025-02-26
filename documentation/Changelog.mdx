@@ -27,3 +27,22 @@ Variablene som var i komponentene av formen `--ffe-v-` fases ut. Disse var oppri
 Bruken av `--ffe-v-` har og sklidd ut i senere tid generelt i systemet.
 
 Fargene i formatet `--ffe-farge-` er fremdeles tilgjengelig, men vi anbefaler å bytte de ut med passende farger i formatet `--ffe-color-`, som man finner på fargesiden. Disse er semantiske og vil fungere i alle kontekster.
+
+Farger i `ffe-core/less/colors-deprecated.less` fjernes også. Dette er gamle Less-variabler på formatet `@ffe-blue-royal`
+
+#### Tailwind
+
+For de som bruker Tailwind kan en oppdatere importen fra `@sb1/ffe-core/lib/colors` til `@sb1/ffe-core/lib/senamticColors`.
+
+```tsx
+import * as colors from '@sb1/ffe-core/lib/senamticColors';
+module.exports = {
+    theme: {
+        colors: {
+            ...colors,
+        },
+    },
+};
+```
+
+Da blir fargene tilgjengelige i camelCase uten `--ffe-color`. Feks `--ffe-color-background-default` -> `backgroundDefault`
