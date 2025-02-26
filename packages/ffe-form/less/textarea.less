@@ -1,40 +1,41 @@
 .ffe-textarea {
     display: block;
     width: 100%;
-    padding: var(--ffe-v-input-padding);
+    padding: 12px var(--ffe-spacing-sm);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     border-radius: var(--ffe-g-border-radius);
-    border: var(--ffe-g-border-width) solid var(--ffe-g-border-color);
-    background-color: var(--ffe-v-input-bg-color);
-    color: var(--ffe-v-input-color);
+    border: 1px solid var(--ffe-color-border-primary-default);
+    background-color: var(--ffe-color-surface-primary-default);
+    color: var(--ffe-color-foreground-default);
     transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
     font-size: var(--ffe-fontsize-form-input);
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            border-color: var(--ffe-g-primary-color);
+            border-color: var(--ffe-color-border-primary-hover);
+            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-hover);
         }
     }
 
     &:focus,
     &:active {
-        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-primary-color);
+        border: 1px solid var(--ffe-color-border-interactive-focus);
+        box-shadow: 0 0 0 1px var(--ffe-color-border-interactive-focus);
         outline: none;
     }
 
     &::placeholder {
-        color: var(--ffe-v-input-placeholder-color);
+        color: var(--ffe-color-foreground-subtle);
         opacity: 1;
     }
 }
 
 .ffe-textarea--invalid,
 :where(textarea).ffe-textarea[aria-invalid='true'] {
-    border-color: var(--ffe-g-error-color);
-    border-style: solid;
+    border: 1px solid var(--ffe-color-border-feedback-critical);
 
     &:focus {
-        border: var(--ffe-g-border-width-focus) solid var(--ffe-g-error-color);
+        box-shadow: 0 0 0 1px var(--ffe-color-border-feedback-critical);
     }
 }
