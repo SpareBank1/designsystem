@@ -3,6 +3,7 @@ import { AccountSelector } from './AccountSelector';
 import { InputGroup } from '@sb1/ffe-form-react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { SmallText } from '@sb1/ffe-core-react';
+import { accountFormatter } from '../format';
 
 const meta: Meta<typeof AccountSelector> = {
     title: 'Komponenter/Account-selector/AccountSelector',
@@ -246,6 +247,44 @@ export const InitialValue: Story = {
                 labelId={args.labelledById}
             >
                 <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+type PrettyAccount = Account & { prettyName: string };
+
+const prettyAccounts: PrettyAccount[] = accounts.map(account => ({
+    ...account,
+    prettyName: `${account.name} - ${accountFormatter(account.accountNumber)}`,
+}));
+export const CustomDisplayAttribute: StoryObj<
+    typeof AccountSelector<PrettyAccount>
+> = {
+    args: {
+        id: 'input-id',
+        labelledById: 'label-id',
+        locale: 'nb',
+        formatAccountNumber: true,
+        allowCustomAccount: false,
+        displayAttribute: 'prettyName',
+        accounts: prettyAccounts,
+    },
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<PrettyAccount>(
+            prettyAccounts[2],
+        );
+        return (
+            <InputGroup
+                label="Velg konto"
+                inputId={args.id}
+                labelId={args.labelledById}
+            >
+                <AccountSelector<PrettyAccount>
                     {...args}
                     selectedAccount={selectedAccount}
                     onAccountSelected={setSelectedAccount}

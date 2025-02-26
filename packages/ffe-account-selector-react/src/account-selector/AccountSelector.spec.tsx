@@ -618,4 +618,70 @@ describe('<AccountSelector/>', () => {
         expect(a11yStatusMessage).toHaveTextContent('');
         jest.useRealTimers();
     });
+
+    it('allows passing a custom display attribute', async () => {
+        const handleAccountSelectedMock = jest.fn();
+
+        render(
+            <AccountSelector
+                id="id"
+                labelledById="labelId"
+                accounts={accounts}
+                displayAttribute={'accountNumber'}
+                locale="nb"
+                onAccountSelected={handleAccountSelectedMock}
+                onReset={onReset}
+                selectedAccount={selectedAccount}
+                ariaInvalid={false}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        expect(input.getAttribute('value')).toBe('');
+        fireEvent.change(input, { target: { value: 'Gr' } });
+
+        fireEvent.click(screen.getByText('Gris'));
+
+        expect(handleAccountSelectedMock).toHaveBeenCalledTimes(1);
+        expect(handleAccountSelectedMock).toHaveBeenCalledWith(accounts[3]);
+        expect(input.getAttribute('value')).toEqual('1253 47 789102');
+    });
+
+    it('passing displayAttribute should make it searchable', async () => {
+        type FunkyAccounts = Account & { funkySmell: string };
+        const funkyAccounts: FunkyAccounts[] = accounts.map((account, idx) => ({
+            ...account,
+            funkySmell: `Smells like money${idx}`,
+        }));
+
+        render(
+            <AccountSelector<FunkyAccounts>
+                id="id"
+                labelledById="labelId"
+                accounts={funkyAccounts}
+                displayAttribute={'funkySmell'}
+                locale="nb"
+                onAccountSelected={handleAccountSelected}
+                onReset={onReset}
+                selectedAccount={funkyAccounts[0]}
+                ariaInvalid={false}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        fireEvent.click(input);
+
+        expect(screen.queryByText('Ingen samsvarende konto')).toBeNull();
+        fireEvent.change(input, {
+            target: { value: 'Dette skal få ingen match' },
+        });
+        expect(
+            screen.queryByText('Ingen samsvarende konto'),
+        ).toBeInTheDocument();
+
+        fireEvent.change(input, { target: { value: 'money3' } });
+        fireEvent.click(screen.getByText('Gris'));
+        expect(input.getAttribute('value')).toEqual('Smells like money3');
+    });
 });
