@@ -2,7 +2,6 @@
 
 .ffe-checkbox {
     line-height: 1.5rem;
-    background-color: var(--ffe-color-surface-primary-default);
     color: var(--ffe-color-foreground-default);
 
     isolation: isolate;
@@ -52,7 +51,7 @@
 
     &::before {
         background: var(--ffe-color-surface-primary-default);
-        border: 1px solid var(--ffe-color-border-primary-default);
+        border: 1px solid var(--ffe-color-foreground-subtle);
         border-radius: calc(var(--ffe-g-border-radius) / 2);
         height: 20px;
         width: 20px;
@@ -60,8 +59,8 @@
 
     &::after {
         transform: scaleX(-1) rotate(180deg + -45deg);
-        border-right: 3px solid transparent;
-        border-top: 3px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 1px solid transparent;
         width: 6px;
         height: 11px;
         margin-bottom: 2px;
@@ -77,8 +76,8 @@
     grid-column: 2 e('/') 3;
     grid-row: 1 e('/') -1;
     color: var(--ffe-color-foreground-default);
+    background: transparent;
 }
-
 .ffe-hidden-checkbox {
     position: absolute;
     opacity: 0;
@@ -101,9 +100,8 @@
 
     &:focus + .ffe-checkbox::before,
     &:focus-visible + .ffe-checkbox::before {
-        border: var(--ffe-g-border-width-focus) solid
-            var(--ffe-color-border-primary-selected);
-        box-shadow: 0 0 0 2px var(--ffe-color-border-primary-selected);
+        border: 1px solid var(--ffe-color-border-primary-selected); // Changed border width to 1px
+        box-shadow: 0 0 0 1px var(--ffe-color-border-primary-selected); // Changed box-shadow width to 1px
     }
 
     &:active + .ffe-checkbox {
@@ -137,6 +135,7 @@
 
 .ffe-checkbox__description {
     color: var(--ffe-color-foreground-subtle);
+    background: transparent;
 }
 
 .ffe-checkbox__icon {
