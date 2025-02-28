@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@2.0.3...@sb1/ffe-modals@2.0.4) (2025-02-28)
+
+**Note:** Version bump only for package @sb1/ffe-modals
+
+
+
+
+
 ## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@2.0.2...@sb1/ffe-modals@2.0.3) (2025-02-26)
 
 **Note:** Version bump only for package @sb1/ffe-modals

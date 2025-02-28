@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-accordion-react",
-    "version": "13.0.36",
+    "version": "13.0.37",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,8 +25,8 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-accordion": "^12.0.7",
-        "@sb1/ffe-collapse-react": "^5.1.9",
+        "@sb1/ffe-accordion": "^12.0.8",
+        "@sb1/ffe-collapse-react": "^5.1.10",
         "@sb1/ffe-icons-react": "^11.0.19",
         "classnames": "^2.3.1"
     },

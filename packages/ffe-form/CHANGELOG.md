@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [32.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@31.0.4...@sb1/ffe-form@32.0.0) (2025-02-28)
+
+
+### Bug Fixes
+
+* **ffe-form:** remove background from checkbox wrapper ([3c6a5d5](https://github.com/SpareBank1/designsystem/commit/3c6a5d537b942356bf54fcc07246509c9c5b9e59))
+* **ffe-form:** semantiske farger og bugfikser ([eaab5ee](https://github.com/SpareBank1/designsystem/commit/eaab5ee2e3a160a122c359b8372f1dcad42f8992))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** visuelle endringer i flere komponenter
+
+
+
+
+
 ## [31.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@31.0.3...@sb1/ffe-form@31.0.4) (2025-02-26)
 
 **Note:** Version bump only for package @sb1/ffe-form

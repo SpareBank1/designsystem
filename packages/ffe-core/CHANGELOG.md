@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.3...@sb1/ffe-core@30.0.4) (2025-02-28)
+
+
+### Bug Fixes
+
+* **ffe-core:** Update colors from figma ([02b0aaf](https://github.com/SpareBank1/designsystem/commit/02b0aaff3c274b9fd39e0b356946e082655b1b20))
+
+
+
+
+
 ## [30.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.2...@sb1/ffe-core@30.0.3) (2025-02-26)
 
 

@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-dropdown-react",
-    "version": "8.0.36",
+    "version": "8.0.37",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,7 +25,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-form": "^31.0.4",
+        "@sb1/ffe-form": "^32.0.0",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
