@@ -4,7 +4,7 @@ import { AccordionItem } from './AccordionItem';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Accordion> = {
-    title: 'Komponenter/Accordion/Accordion',
+    title: 'Komponenter/Accordion',
     component: Accordion,
 };
 export default meta;
