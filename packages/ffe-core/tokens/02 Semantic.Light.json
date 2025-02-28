@@ -2279,7 +2279,7 @@
       },
       "focus": {
         "$type": "color",
-        "$value": "{default.brand.primary.stronger}",
+        "$value": "{color.alpha.white.100}",
         "$description": "",
         "$extensions": {
           "com.figma": {
