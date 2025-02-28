@@ -1,0 +1,6 @@
+import{j as t,M as a,C as s,a as p}from"./index-DHOK-dV1.js";import{useMDXComponents as e}from"./index-CVdx34fM.js";import{R as m,S as n}from"./RadioSwitch.stories-kx4KO4lf.js";import"./iframe-oCkeZWNF.js";import"./index-eCxJ45ll.js";import"./index-BhUHFDTH.js";import"./index-D3-0uUTW.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./RadioSwitch--eENCzvt.js";import"./index-DezCrw0f.js";import"./RadioButtonInputGroup-OeJ8yTP0.js";import"./Tooltip-CPJirHS1.js";import"./Collapse-CKwb5mfJ.js";import"./ErrorFieldMessage-BZeYW4Z5.js";import"./BaseFieldMessage-BxD39Ejl.js";import"./Icon-B88nEPeu.js";function i(o){const r={h1:"h1",p:"p",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(a,{of:m}),`
+`,t.jsx(r.h1,{id:"radioswitch",children:"RadioSwitch"}),`
+`,t.jsx(r.p,{children:'Brukes når kunden skal ta stilling til enkle valg - typisk i formen "ja/nei", eller "av/på" og hvor du i tillegg har behov for en lagreknapp. Har du behov for mer enn 3 radio-switcher i en liste, skal du bruke radioknapper.'}),`
+`,t.jsx(r.p,{children:"Radio-switcher uten defaultvalg."}),`
+`,t.jsx(s,{of:n}),`
+`,t.jsx(p,{of:n})]})}function D(o={}){const{wrapper:r}={...e(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(i,{...o})}):i(o)}export{D as default};
