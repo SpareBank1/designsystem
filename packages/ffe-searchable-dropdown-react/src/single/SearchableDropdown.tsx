@@ -51,6 +51,8 @@ export interface SearchableDropdownProps<Item extends Record<string, any>> {
     dropdownAttributes: (keyof Item)[];
     /** Array of attributes used when filtering search */
     searchAttributes: (keyof Item)[];
+    /** Attribute used in the input when an item is selected. Defaults to first in searchAttributes **/
+    displayAttribute?: keyof Item;
     /** Props used on input field */
     inputProps?: React.ComponentProps<'input'>;
     /** Limits number of rendered dropdown elements */
@@ -105,6 +107,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         dropdownList,
         dropdownAttributes,
         searchAttributes,
+        displayAttribute = searchAttributes[0],
         maxRenderedDropdownElements = Number.MAX_SAFE_INTEGER,
         onChange,
         inputProps,
@@ -127,6 +130,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
     const [state, dispatch] = useReducer(
         createReducer({
             dropdownList,
+            displayAttribute: displayAttribute,
             searchAttributes,
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch?.dropdownList,
@@ -137,7 +141,8 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             isExpanded: false,
             selectedItems: [],
             highlightedIndex: -1,
-            inputValue: selectedItem ? selectedItem[dropdownAttributes[0]] : '',
+            formattedInputValue: '',
+            inputValue: selectedItem ? selectedItem[displayAttribute] : '',
         },
         initialState => {
             return {
@@ -189,7 +194,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         isLoading,
         locale,
         resultCount: state.listToRender.length,
-        selectedValue: state.selectedItem?.[searchAttributes[0]],
+        selectedValue: state.selectedItem?.[displayAttribute],
     });
 
     useLayoutEffect(() => {

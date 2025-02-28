@@ -40,6 +40,8 @@ export interface AccountSelectorProps<T extends Account = Account> {
     formatAccountNumber?: boolean;
     /** id of element that labels input field */
     labelledById?: string;
+    /** Attribute used in the input when an item is selected. **/
+    displayAttribute?: keyof T;
     /**
      * Allows selecting the text the user writes even if it does not match anything in the accounts array.
      * Useful e.g. if you want to pay to account that is not in yur recipients list.
@@ -91,6 +93,7 @@ export const AccountSelector = <T extends Account = Account>({
     ariaInvalid,
     onOpen,
     onClose,
+    displayAttribute,
     ...rest
 }: AccountSelectorProps<T>) => {
     const [inputValue, setInputValue] = useState(selectedAccount?.name || '');
@@ -119,6 +122,7 @@ export const AccountSelector = <T extends Account = Account>({
             onAccountSelected({
                 name: value.name,
                 accountNumber: value.name,
+                ...(displayAttribute ? { [displayAttribute]: value.name } : {}),
             } as T);
             setInputValue(value.name);
         } else {
@@ -137,6 +141,7 @@ export const AccountSelector = <T extends Account = Account>({
             <SearchableDropdown<T>
                 id={id}
                 labelledById={labelledById}
+                displayAttribute={displayAttribute}
                 inputProps={{
                     ...inputProps,
                     onChange: onInputChange,
@@ -165,6 +170,13 @@ export const AccountSelector = <T extends Account = Account>({
                                           ? formatter(inputValue)
                                           : inputValue,
                                       accountNumber: '',
+                                      ...(displayAttribute
+                                          ? {
+                                                [displayAttribute]: formatter
+                                                    ? formatter(inputValue)
+                                                    : inputValue,
+                                            }
+                                          : {}),
                                   } as T,
                               ],
                           }
@@ -172,7 +184,11 @@ export const AccountSelector = <T extends Account = Account>({
                 }
                 formatter={formatter}
                 onChange={handleAccountSelected}
-                searchAttributes={['name', 'accountNumber']}
+                searchAttributes={[
+                    'name',
+                    'accountNumber',
+                    ...(displayAttribute ? [displayAttribute] : []),
+                ]}
                 locale={locale}
                 optionBody={({ item, isHighlighted, ...restOptionBody }) => {
                     if (OptionBody) {
