@@ -4,10 +4,10 @@
     padding: var(--ffe-spacing-2xs) var(--ffe-spacing-xs); /* Increased horizontal padding */
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
-    background-color: var(--ffe-color-component-form-input-fill-default);
+    background-color: var(--ffe-color-surface-primary-default);
     color: var(--ffe-color-foreground-default);
     border-radius: var(--ffe-g-border-radius);
-    border: 2px solid var(--ffe-color-border-primary-default);
+    border: 1px solid var(--ffe-color-border-primary-default);
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-input);
@@ -24,15 +24,14 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             border-color: var(--ffe-color-border-primary-hover);
-            background-color: var(
-                --ffe-color-component-form-input-fill-default-hover
-            );
+            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-hover);
         }
     }
 
     &:focus,
     &:focus-within {
-        border: 2px solid var(--ffe-color-border-interactive-focus);
+        border: 1px solid var(--ffe-color-border-interactive-focus);
+        box-shadow: 0 0 0 1px var(--ffe-color-border-interactive-focus);
         outline: none;
     }
 
@@ -52,7 +51,7 @@
     &--text-like.ffe-input-field {
         border: none;
         border-bottom: 2px solid var(--ffe-color-border-primary-default);
-        border-radius: var(--ffe-g-border-width) var(--ffe-g-border-width) 0 0;
+        border-radius: 0;
         box-shadow: none;
         text-align: center;
         padding: 0;
@@ -75,6 +74,7 @@
         }
 
         &[aria-invalid='true'] {
+            background: var(--ffe-color-surface-feedback-critical);
             border-bottom: 2px solid var(--ffe-color-border-feedback-critical);
             border-left-style: none;
             border-right-style: none;

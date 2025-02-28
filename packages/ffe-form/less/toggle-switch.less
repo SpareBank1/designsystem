@@ -12,7 +12,7 @@
         align-items: center;
         position: relative;
         cursor: pointer;
-        color: var(--ffe-g-secondary-color);
+        color: var(--ffe-color-foreground-default);
         font-family: var(--ffe-g-font);
         font-variant-numeric: tabular-nums;
         min-height: 44px;
@@ -51,7 +51,7 @@
             content: '';
             width: 56px;
             height: 30px;
-            background: var(--ffe-g-border-color);
+            background: var(--ffe-color-component-toggleswitch-fill-default);
             border-radius: 52px;
             left: auto;
             right: 0;
@@ -65,7 +65,7 @@
             content: '';
             width: 24px;
             height: 24px;
-            background: var(--ffe-v-input-bg-color);
+            background: var(--ffe-color-surface-primary-default);
             border-radius: 50%;
             position: absolute;
             left: 4px;
@@ -74,7 +74,9 @@
 
         @media (hover: hover) and (pointer: fine) {
             .ffe-toggle-switch__label:hover &::before {
-                background: var(--ffe-v-toggle-switch-hover-color);
+                background: var(
+                    --ffe-color-component-toggleswitch-fill-default-hover
+                );
             }
         }
     }
@@ -84,12 +86,14 @@
     }
 
     &__input:checked + &__label &__switch::before {
-        background: var(--ffe-g-primary-color);
+        background: var(--ffe-color-component-toggleswitch-fill-selected);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &__input:checked + &__label:hover &__switch::before {
-            background: var(--ffe-g-secondary-color);
+            background: var(
+                --ffe-color-component-toggleswitch-fill-selected-hover
+            );
         }
     }
 
@@ -98,6 +102,14 @@
     }
 
     &__input:focus + &__label &__switch::before {
-        box-shadow: var(--ffe-v-toggle-switch-box-shadow);
+        box-shadow:
+            0 0 0 3px var(--ffe-color-surface-primary-default),
+            0 0 0 5px var(--ffe-color-border-interactive-focus);
+    }
+
+    :active + &__label &__switch::before {
+        background: var(
+            --ffe-color-component-toggleswitch-fill-default-pressed
+        );
     }
 }
