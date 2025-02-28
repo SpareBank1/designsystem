@@ -19,7 +19,7 @@
         "ghpages": "lerna run ghpages",
         "lint": "lerna run lint --stream",
         "lint:fix": "lerna run lint:fix --stream",
-        "start": "npm run storybook",
+        "start": "npm run build && npm run storybook",
         "watch:component-overview": "lerna run watch --scope='@sb1/ffe-component-index'",
         "start:component-overview": "lerna run start --scope='@sb1/ffe-component-index'",
         "test": "./buildtool/bin/cli.js jest",
