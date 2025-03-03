@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-lists",
-    "version": "18.0.4",
+    "version": "18.0.5",
     "description": "Lists in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -18,7 +18,7 @@
         "build": "lessc less/lists.less css/lists.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^30.0.4"
+        "@sb1/ffe-core": "^30.0.5"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0"

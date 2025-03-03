@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.4...@sb1/ffe-core@30.0.5) (2025-03-03)
+
+
+### Bug Fixes
+
+* **ffe-core:** correct styling on ffe-body ([d9792e2](https://github.com/SpareBank1/designsystem/commit/d9792e283d209ec6bfae78e49c6fdedfb3bd4fa9))
+
+
+
+
+
 ## [30.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.3...@sb1/ffe-core@30.0.4) (2025-02-28)
 
 
