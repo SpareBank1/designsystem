@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.45](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.44...@sb1/ffe-pagination-react@1.2.45) (2025-03-03)
+
+**Note:** Version bump only for package @sb1/ffe-pagination-react
+
+
+
+
+
 ## [1.2.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.43...@sb1/ffe-pagination-react@1.2.44) (2025-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-pagination-react

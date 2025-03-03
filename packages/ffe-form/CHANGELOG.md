@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.0...@sb1/ffe-form@32.0.1) (2025-03-03)
+
+
+### Bug Fixes
+
+* **ffe-form:** riktig horisontal padding på input ([093b9a9](https://github.com/SpareBank1/designsystem/commit/093b9a9e89bb4149c6f90848797a27bb95047a68))
+
+
+
+
+
 # [32.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@31.0.4...@sb1/ffe-form@32.0.0) (2025-02-28)
 
 
