@@ -1,6 +1,6 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as MessageBoxStories from './MessageBox.stories.tsx';
-import { CheckList, CheckListItem } from "@sb1/ffe-lists-react";
+import { CheckList, CheckListItem } from '@sb1/ffe-lists-react';
 
 <Meta of={MessageBoxStories} />
 
@@ -12,9 +12,16 @@ Bruk meldingsbokser:
 
 <CheckList>
     <CheckListItem>Når du trenger å informere kort om et tema</CheckListItem>
-    <CheckListItem>Der du vil utheve noe informasjon fra en større sammenheng</CheckListItem>
-    <CheckListItem>Når du har innhold som skal utheves, men som er selvforklarende uten kontekst</CheckListItem>
+    <CheckListItem>
+        Der du vil utheve noe informasjon fra en større sammenheng
+    </CheckListItem>
+    <CheckListItem>
+        Når du har innhold som skal utheves, men som er selvforklarende uten
+        kontekst
+    </CheckListItem>
 </CheckList>
+
+## Forhåndsvisning
 
 <Canvas of={MessageBoxStories.Standard} />
 <Controls of={MessageBoxStories.Standard} />
