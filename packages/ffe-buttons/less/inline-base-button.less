@@ -19,7 +19,7 @@
     }
 
     &:focus {
-        box-shadow: 0 0 0 2px var(--ffe-v-button-shadow-color);
+        box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
         outline: none;
     }
 
@@ -48,7 +48,8 @@
 .ffe-inline-button--back {
     background-color: var(--background-color);
     color: var(--ffe-color-component-button-tertiary-foreground-default);
-    padding: var(--ffe-spacing-xs) var(--ffe-spacing-md);
+    padding: var(--ffe-spacing-xs) var(--ffe-spacing-md) var(--ffe-spacing-xs)
+        var(--ffe-spacing-sm);
 
     .ffe-inline-button__label {
         &::after {
@@ -162,7 +163,7 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            color: var(--ffe-color-component-button-tertiary-border-hover);
+            color: var(--ffe-color-component-button-tertiary-foreground-hover);
             background-color: var(
                 --ffe-color-component-button-tertiary-fill-hover
             );
