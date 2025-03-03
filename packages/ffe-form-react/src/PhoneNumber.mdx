@@ -5,14 +5,19 @@ import * as PhoneNumberStories from './PhoneNumber.stories.tsx';
 
 # PhoneNumber
 
+## Forhåndsvisning
+
 <Canvas of={PhoneNumberStories.Standard} />
-<Controls of={PhoneNumberStories.Standard}/>
+<Controls of={PhoneNumberStories.Standard} />
 
 Ved feil eller manglende landkode:
+
 <Canvas of={PhoneNumberStories.ErrorCountryCode} />
 
 Ved feil eller manglende telefonnummer:
+
 <Canvas of={PhoneNumberStories.ErrorNumber} />
 
 Feilmelding i begge feltene:
+
 <Canvas of={PhoneNumberStories.ErrorBoth} />
