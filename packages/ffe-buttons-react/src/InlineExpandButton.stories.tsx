@@ -52,7 +52,7 @@ export const Standard: Story = {
                         isExpanded={isExpanded}
                         onClick={() => setExpanded(!isExpanded)}
                     >
-                        {isExpanded ? 'Vis mer' : 'Vis mindre'}
+                        {isExpanded ? 'Vis mindre' : 'Vis mer'}
                     </InlineExpandButton>
                 </Paragraph>
 

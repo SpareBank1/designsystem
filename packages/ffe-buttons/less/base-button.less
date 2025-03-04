@@ -4,7 +4,7 @@
     align-items: center;
     appearance: none;
     border: 2px solid transparent;
-    border-radius: var(--ffe-v-buttons-border-radius);
+    border-radius: 6em;
     color: var(--ffe-color-component-button-primary-foreground-default);
     cursor: pointer;
     display: flex;
@@ -71,22 +71,22 @@
 
 .ffe-button--action {
     background-color: var(--ffe-color-component-button-action-fill-default);
-    color: var(--ffe-color-default-neutral-inverted);
+    color: var(--ffe-color-component-button-action-foreground-default);
     border: none;
 
     :where(.ffe-button__icon) {
-        color: var(--ffe-color-default-neutral-inverted);
+        color: var(--ffe-color-component-button-action-foreground-default);
     }
 
     &:active {
         transform: scale(0.97);
-        background-color: var(--ffe-color-default-feedback-success-strongest);
+        background-color: var(--ffe-color-component-button-action-fill-pressed);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover:not(:active):not(.ffe-button--pressed) {
             background-color: var(
-                --ffe-color-default-feedback-success-stronger
+                --ffe-color-component-button-action-fill-hover
             );
         }
     }
@@ -232,7 +232,6 @@
 
 .ffe-button--task {
     --text-color: var(--ffe-color-foreground-emphasis);
-
     background: transparent;
     border-radius: 1.75rem;
     border: none;
@@ -258,7 +257,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 var(--ffe-spacing-xs) 0 0;
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
         :where(.ffe-icons) {
