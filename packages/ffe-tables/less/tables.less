@@ -116,13 +116,27 @@
         transition: background var(--ffe-transition-duration) var(--ffe-ease);
         border-radius: var(--border-radius) var(--border-radius) 0 0;
 
-        &-ascending,
-        &-descending {
+        &:hover {
+            background: var(--ffe-color-surface-primary-default-hover);
+        }
+
+        &:active {
             background: var(--ffe-color-surface-primary-default-pressed);
         }
 
-        &:hover {
-            background: var(--ffe-color-surface-primary-default-hover);
+        &-ascending,
+        &-descending {
+            background: var(--ffe-color-fill-primary-selected);
+            color: var(--ffe-color-foreground-inverse);
+
+            &:hover {
+                background: var(--ffe-color-fill-primary-selected);
+                color: var(--ffe-color-foreground-inverse);
+            }
+
+            &:active {
+                background: var(--ffe-color-fill-primary-pressed);
+            }
         }
 
         @media (hover: hover) and (pointer: fine) {
@@ -149,6 +163,10 @@
             &:hover {
                 background: var(--ffe-color-surface-primary-default-hover);
             }
+        }
+
+        &:active {
+            background: var(--ffe-color-surface-primary-default-pressed);
         }
     }
 
