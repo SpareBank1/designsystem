@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.1.3...@sb1/ffe-searchable-dropdown-react@23.1.4) (2025-03-04)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Fikser semantiske farger. Fjerner at chevronen oppfører seg som en knapp ([5f964a8](https://github.com/SpareBank1/designsystem/commit/5f964a81c582157e648f8f76bdd02b34eed0e53d))
+
+
+
+
+
 ## [23.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.1.2...@sb1/ffe-searchable-dropdown-react@23.1.3) (2025-03-04)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

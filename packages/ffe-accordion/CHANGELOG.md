@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@12.0.9...@sb1/ffe-accordion@12.0.10) (2025-03-04)
+
+
+### Bug Fixes
+
+* **ffe-accordion:** legger til bakgrunnsfarge på accordion ([bbe0fce](https://github.com/SpareBank1/designsystem/commit/bbe0fce49514cf745293b3bc1a0256e7d45bb879))
+
+
+
+
+
 ## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@12.0.8...@sb1/ffe-accordion@12.0.9) (2025-03-03)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

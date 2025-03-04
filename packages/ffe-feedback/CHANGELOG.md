@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@4.0.4...@sb1/ffe-feedback@4.0.5) (2025-03-04)
+
+
+### Bug Fixes
+
+* **ffe-feedback-react:** samkjør semantiske HTML-overskrifter med LESS-klasser ([1efd574](https://github.com/SpareBank1/designsystem/commit/1efd574e7f5a89e582f8c064e07c4199142d2a0e))
+* **ffe-feedback:** remove background and refactor less into one file ([12dc6ad](https://github.com/SpareBank1/designsystem/commit/12dc6ad2d0492d390677ffcb7f56740ad485f153))
+
+
+
+
+
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@4.0.3...@sb1/ffe-feedback@4.0.4) (2025-03-03)
 
 **Note:** Version bump only for package @sb1/ffe-feedback
