@@ -3,13 +3,13 @@ import { RefObject, useEffect } from 'react';
 interface Params {
     id: string;
     containerRef: RefObject<HTMLDivElement>;
-    handelFocusMovedOutside: () => void;
+    handleFocusMovedOutside: () => void;
 }
 
 export const useHandleContainerFocus = ({
     id,
     containerRef,
-    handelFocusMovedOutside,
+    handleFocusMovedOutside,
 }: Params) => {
     useEffect(() => {
         /**
@@ -25,7 +25,7 @@ export const useHandleContainerFocus = ({
                 e.__eventFromFFESearchableDropdownId === id;
 
             if (!isFocusInside) {
-                handelFocusMovedOutside();
+                handleFocusMovedOutside();
             }
         };
 
@@ -35,5 +35,5 @@ export const useHandleContainerFocus = ({
             document.removeEventListener('mousedown', handleContainerFocus);
             document.removeEventListener('focusin', handleContainerFocus);
         };
-    }, [id, containerRef, handelFocusMovedOutside]);
+    }, [id, containerRef, handleFocusMovedOutside]);
 };

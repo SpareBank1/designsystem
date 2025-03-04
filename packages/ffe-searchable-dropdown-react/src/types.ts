@@ -24,3 +24,13 @@ export type SearchMatcher<Item extends Record<string, any>> = (
 ) => (item: Item) => boolean;
 
 export type ActionType = 'selected' | 'removed';
+
+export type State<Item extends Record<string, any>> = {
+    noMatch: boolean;
+    isExpanded: boolean;
+    highlightedIndex: number;
+    selectedItem?: Item;
+    inputValue: string;
+    listToRender: Item[];
+    noMatchDropdownList?: Item[] | undefined;
+};

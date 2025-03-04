@@ -168,13 +168,6 @@ export const createReducer =
                 }
                 return state;
             }
-            case 'TabPressed': {
-                return {
-                    ...state,
-                    highlightedIndex: -1,
-                };
-            }
-
             case 'FocusMovedOutSide': {
                 return {
                     ...state,
