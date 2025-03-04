@@ -1,5 +1,6 @@
 import { getListToRender } from '../getListToRender';
-import { StateChange, SearchMatcher } from '../types';
+import { StateChange, SearchMatcher, State } from '../types';
+import { moveFocusOutside } from '../moveFocusOutside';
 
 type Action<Item extends Record<string, any>> = {
     type: StateChange;
@@ -8,16 +9,6 @@ type Action<Item extends Record<string, any>> = {
         selectedItem?: Item;
         highlightedIndex?: number;
     };
-};
-
-type State<Item extends Record<string, any>> = {
-    noMatch: boolean;
-    isExpanded: boolean;
-    highlightedIndex: number;
-    selectedItem?: Item;
-    inputValue: string;
-    listToRender: Item[];
-    noMatchDropdownList?: Item[] | undefined;
 };
 
 export const createReducer =
@@ -94,6 +85,28 @@ export const createReducer =
                 };
             }
             case 'ToggleButtonPressed': {
+                if (state.isExpanded) {
+                    const { listToRender, inputValue, selectedItem } =
+                        moveFocusOutside({
+                            state,
+                            searchAttributes,
+                            maxRenderedDropdownElements,
+                            dropdownList,
+                            noMatchDropdownList,
+                            searchMatcher,
+                            displayAttribute,
+                            onChange,
+                        });
+                    return {
+                        ...state,
+                        isExpanded: false,
+                        highlightedIndex: -1,
+                        inputValue,
+                        selectedItem,
+                        listToRender,
+                    };
+                }
+
                 return {
                     ...state,
                     isExpanded: !state.isExpanded,
@@ -122,43 +135,18 @@ export const createReducer =
             }
 
             case 'FocusMovedOutSide': {
-                const { listToRender } = getListToRender({
-                    inputValue: state.inputValue,
-                    searchAttributes,
-                    maxRenderedDropdownElements,
-                    dropdownList,
-                    noMatchDropdownList,
-                    searchMatcher,
-                    showAllItemsInDropdown: true,
-                });
+                const { listToRender, inputValue, selectedItem } =
+                    moveFocusOutside({
+                        state,
+                        searchAttributes,
+                        maxRenderedDropdownElements,
+                        dropdownList,
+                        noMatchDropdownList,
+                        searchMatcher,
+                        displayAttribute,
+                        onChange,
+                    });
 
-                const shouldEmptySelectedItem =
-                    state.inputValue === '' && !!state.selectedItem;
-
-                const shouldAutomaticallySetSelectedItem =
-                    state.listToRender.length === 1 &&
-                    searchAttributes
-                        .map(
-                            searchAttribute =>
-                                state.listToRender[0][searchAttribute] ===
-                                state.selectedItem?.[searchAttribute],
-                        )
-                        .includes(false) &&
-                    state.highlightedIndex !== -1;
-
-                let selectedItem = state.selectedItem;
-
-                if (shouldEmptySelectedItem) {
-                    onChange?.(null);
-                    selectedItem = undefined;
-                } else if (shouldAutomaticallySetSelectedItem) {
-                    onChange?.(state.listToRender[0]);
-                    selectedItem = state.listToRender[0];
-                }
-
-                const inputValue = selectedItem
-                    ? selectedItem[displayAttribute]
-                    : '';
                 return {
                     ...state,
                     isExpanded: false,

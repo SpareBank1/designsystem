@@ -193,7 +193,7 @@ describe('SearchableDropdownMultiSelect', () => {
 
         const input = screen.getByRole('combobox');
         await user.click(input);
-        await user.type(input, 'some thing without a match');
+        await user.type(input, 'something without a match');
 
         expect(screen.getByText(noMatchText)).toBeInTheDocument();
         expect(screen.getByText('Rør og sånt')).toBeInTheDocument();
@@ -208,6 +208,66 @@ describe('SearchableDropdownMultiSelect', () => {
         expect(screen.queryByText('812602399')).toBeNull();
         expect(screen.queryByText('Kaffekoppen')).toBeNull();
         expect(screen.queryByText('812602222')).toBeNull();
+    });
+
+    it('should open and close using tab', async function () {
+        const user = userEvent.setup();
+        const onChangeMultiSelect = jest.fn();
+
+        render(
+            <SearchableDropdownMultiSelect
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                onChange={onChangeMultiSelect}
+                selectedItems={[]}
+            />,
+        );
+
+        await user.tab();
+
+        expect(screen.getByText('Bedriften')).toBeInTheDocument();
+        expect(screen.getByText('912602370')).toBeInTheDocument();
+        expect(screen.queryByText('Sønn & co')).toBeInTheDocument();
+        expect(screen.queryByText('812602372')).toBeInTheDocument();
+        expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
+        expect(screen.getByText('812602552')).toBeInTheDocument();
+
+        await user.tab();
+
+        expect(screen.queryByText('Bedriften')).toBeNull();
+        expect(screen.queryByText('912602370')).toBeNull();
+        expect(screen.queryByText('Beslag skytter')).toBeNull();
+        expect(screen.queryByText('812602552')).toBeNull();
+    });
+
+    it('should navigate to selected items using tab', async function () {
+        const user = userEvent.setup();
+        const onChangeMultiSelect = jest.fn();
+
+        render(
+            <SearchableDropdownMultiSelect
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                onChange={onChangeMultiSelect}
+                selectedItems={[companies[0], companies[1]]}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        await user.click(input);
+        expect(input).toHaveFocus();
+
+        await userEvent.keyboard('{Shift>}{Tab}{/Shift}');
+
+        expect(screen.getByLabelText('Sønn & co, fjern valg')).toHaveFocus();
     });
 
     it('should be a wai-aria 1.0 combobox', async () => {

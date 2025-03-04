@@ -1,6 +1,6 @@
 .ffe-searchable-dropdown {
     --button-width: 40px;
-    --border-width: 2px;
+    --border-width: var(--ffe-g-border-width);
     --border-color: var(--ffe-color-border-primary-default);
     --detail-text-color: var(
         --ffe-color-component-form-input-foreground-on-fill-subtle
@@ -17,25 +17,24 @@
     border-radius: var(--ffe-g-border-radius);
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     color: var(--text-color);
+    border: var(--border-width) solid var(--border-color);
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
     :where(.ffe-searchable-dropdown__button) {
         all: unset;
     }
-    &__input,
-    &__button {
-        border: var(--border-width) solid var(--border-color);
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
-        @media (hover: hover) and (pointer: fine) {
-            &:hover {
-                --border-color: var(--ffe-color-border-primary-hover);
-            }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            --border-color: var(--ffe-color-border-primary-hover);
+            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-hover);
         }
     }
-    &:has(input:focus-visible, input:active) {
-        .ffe-searchable-dropdown__button,
-        .ffe-searchable-dropdown__input {
-            --border-color: var(--ffe-color-border-primary-selected);
-        }
+
+    &:focus-within {
+        --border-color: var(--ffe-color-border-primary-selected);
+        box-shadow: 0 0 0 1px var(--ffe-color-border-primary-selected);
     }
+
     &__input {
         display: grid;
         border-radius: var(--ffe-g-border-radius) 0 0 var(--ffe-g-border-radius);
@@ -46,12 +45,6 @@
                 --border-color: var(--ffe-color-border-primary-hover);
             }
         }
-        &:focus-within {
-            --border-color: var(--ffe-color-border-primary-selected);
-            & + .ffe-searchable-dropdown__button {
-                --border-color: var(--ffe-color-border-primary-selected);
-            }
-        }
     }
     &__button {
         cursor: pointer;
@@ -60,21 +53,8 @@
         border-left: none;
         border-radius: 0 var(--ffe-g-border-radius) var(--ffe-g-border-radius) 0;
         .ffe-icons {
-            color: var(--ffe-g-primary-color);
+            color: var(--ffe-color-foreground-default);
             display: block;
-        }
-        &--hidden {
-            display: none;
-        }
-        &:focus-visible {
-            --border-color: var(--ffe-color-border-primary--selected);
-            border-left: var(--border-width) solid var(--border-color);
-        }
-        @media (hover: hover) and (pointer: fine) {
-            &:hover {
-                --border-color: var(--ffe-color-border-primary-hover);
-                border-left: var(--border-width) solid var(--border-color);
-            }
         }
         &-icon {
             transition:
@@ -150,7 +130,7 @@
             }
         }
         &--highlighted {
-            background: var(--ffe-color-surface-primary-default);
+            background: var(--ffe-color-surface-primary-default-hover);
         }
     }
     &__list-item-body-details {

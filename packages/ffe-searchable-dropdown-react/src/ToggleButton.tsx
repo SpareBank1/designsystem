@@ -1,28 +1,19 @@
 import React from 'react';
-import { getButtonLabelClose, getButtonLabelOpen } from './translations';
 import classNames from 'classnames';
 import { Spinner } from '@sb1/ffe-spinner-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { Locale } from './types';
 
 interface Props {
-    locale: Locale;
     isExpanded: boolean;
     onClick: () => void;
     isLoading: boolean;
 }
 
 export const ToggleButton = React.forwardRef<HTMLButtonElement, Props>(
-    ({ locale, isExpanded, onClick, isLoading }, ref) => {
+    ({ isExpanded, onClick, isLoading }, ref) => {
         return (
-            <button
-                type="button"
-                ref={ref}
-                aria-label={
-                    isExpanded
-                        ? getButtonLabelClose(locale)
-                        : getButtonLabelOpen(locale)
-                }
+            <div
+                aria-hidden="true"
                 className={classNames('ffe-searchable-dropdown__button', {
                     'ffe-searchable-dropdown__button--flip': isExpanded,
                 })}
@@ -37,7 +28,7 @@ export const ToggleButton = React.forwardRef<HTMLButtonElement, Props>(
                         className="ffe-searchable-dropdown__button-icon"
                     />
                 )}
-            </button>
+            </div>
         );
     },
 );

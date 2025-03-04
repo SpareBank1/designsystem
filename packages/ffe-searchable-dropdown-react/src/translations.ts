@@ -1,27 +1,5 @@
 import { Locale } from './types';
 
-export const getButtonLabelClose = (locale: Locale) => {
-    switch (locale) {
-        case 'nn':
-            return 'lukk alternativer';
-        case 'en':
-            return 'close alternatives';
-        default:
-            return 'lukk alternativer';
-    }
-};
-
-export const getButtonLabelOpen = (locale: Locale) => {
-    switch (locale) {
-        case 'nn':
-            return 'åpne alternativer';
-        case 'en':
-            return 'open alternatives';
-        default:
-            return 'åpne alternativer';
-    }
-};
-
 export const getSelectedLabel = (locale: Locale, amountSelected: number) => {
     switch (locale) {
         case 'en':

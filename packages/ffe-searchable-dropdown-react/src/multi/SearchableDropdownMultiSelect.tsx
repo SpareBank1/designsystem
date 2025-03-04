@@ -174,13 +174,11 @@ function SearchableDropdownMultiSelectWithForwardRef<
     const refs = useRefs({ listToRender: state.listToRender });
     const [hasFocus, setHasFocus] = useState(false);
     const inputRef = useRef<HTMLInputElement>(null);
-    const toggleButtonRef = useRef<HTMLButtonElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
     const OptionBody = CustomOptionBody || MultiselectOptionBody;
     const listBoxRef = useRef<HTMLDivElement>(null);
     const noMatchMessageId = useId();
-    const shouldFocusToggleButton = useRef(false);
     const shouldFocusInput = useRef(false);
     const [showChips, setShowChips] = useState(true);
 
@@ -208,10 +206,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
     });
 
     useLayoutEffect(() => {
-        if (shouldFocusToggleButton.current) {
-            toggleButtonRef.current?.focus();
-            shouldFocusToggleButton.current = false;
-        } else if (shouldFocusInput.current) {
+        if (shouldFocusInput.current) {
             inputRef.current?.focus();
             shouldFocusInput.current = false;
         }
@@ -225,7 +220,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
 
     useIsExpandedCallbacks({ isExpanded: state.isExpanded, onClose, onOpen });
 
-    const handelFocusMovedOutside = useCallback(
+    const handleFocusMovedOutside = useCallback(
         () =>
             dispatch({
                 type: 'FocusMovedOutSide',
@@ -256,7 +251,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
     useHandleContainerFocus({
         id,
         containerRef,
-        handelFocusMovedOutside,
+        handleFocusMovedOutside,
     });
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -345,8 +340,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             }
         } else if (event.key === TAB) {
             dispatch({
-                type: 'TabPressed',
-                payload: { highlightedIndex: -1 },
+                type: 'FocusMovedOutSide',
             });
             return;
         }
@@ -429,7 +423,10 @@ function SearchableDropdownMultiSelectWithForwardRef<
                             payload: { inputValue: e.target.value },
                         });
                     }}
-                    onFocus={() => setHasFocus(true)}
+                    onFocus={() => {
+                        setHasFocus(true);
+                        dispatch({ type: 'InputClick' });
+                    }}
                     onBlur={handleInputBlur}
                     aria-describedby={
                         [
@@ -462,17 +459,14 @@ function SearchableDropdownMultiSelectWithForwardRef<
                 />
             </div>
             <ToggleButton
-                ref={toggleButtonRef}
                 isExpanded={state.isExpanded}
                 onClick={() =>
                     dispatch({
                         type: 'ToggleButtonPressed',
                     })
                 }
-                locale={locale}
                 isLoading={isLoading}
             />
-
             <ListBox ref={listBoxRef} isExpanded={state.isExpanded}>
                 {state.isExpanded && (
                     <Results

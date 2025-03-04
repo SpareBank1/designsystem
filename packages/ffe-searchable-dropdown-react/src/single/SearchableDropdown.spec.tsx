@@ -246,11 +246,9 @@ describe('SearchableDropdown', () => {
             />,
         );
 
-        const openButton = screen.getByRole('button', {
-            name: /åpne alternativer/i,
-        });
+        const input = screen.getByRole('combobox');
 
-        await user.click(openButton);
+        await user.click(input);
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -259,11 +257,43 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
         expect(screen.getByText('812602552')).toBeInTheDocument();
 
-        const closeButton = screen.getByRole('button', {
-            name: /lukk alternativer/i,
-        });
-
+        const closeButton = document.getElementsByClassName(
+            'ffe-searchable-dropdown__button',
+        )[0];
         await user.click(closeButton);
+
+        expect(screen.queryByText('Bedriften')).toBeNull();
+        expect(screen.queryByText('912602370')).toBeNull();
+        expect(screen.queryByText('Sønn & co')).toBeNull();
+        expect(screen.queryByText('812602372')).toBeNull();
+        expect(screen.queryByText('Beslag skytter')).toBeNull();
+        expect(screen.queryByText('812602552')).toBeNull();
+    });
+
+    it('should open and close using tab', async function () {
+        const user = userEvent.setup();
+
+        render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        await user.tab();
+
+        expect(screen.getByText('Bedriften')).toBeInTheDocument();
+        expect(screen.getByText('912602370')).toBeInTheDocument();
+        expect(screen.getByText('Sønn & co')).toBeInTheDocument();
+        expect(screen.getByText('812602372')).toBeInTheDocument();
+        expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
+        expect(screen.getByText('812602552')).toBeInTheDocument();
+
+        await user.tab();
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -582,29 +612,6 @@ describe('SearchableDropdown', () => {
         await user.keyboard('{Esc}');
 
         expect(input.getAttribute('value')).toEqual('Bedriften');
-    });
-
-    it('should move focus to toggle button when selecting from dropdown', async () => {
-        const onChange = jest.fn();
-        const user = userEvent.setup();
-        render(
-            <SearchableDropdown
-                id="id"
-                labelledById="labelId"
-                dropdownAttributes={['organizationName', 'organizationNumber']}
-                dropdownList={companies}
-                onChange={onChange}
-                searchAttributes={['organizationName', 'organizationNumber']}
-                locale="nb"
-            />,
-        );
-
-        const input = screen.getByRole('combobox');
-        await user.click(input);
-        await user.click(screen.getByText('Bedriften'));
-
-        const toggleButton = screen.getByLabelText('åpne alternativer');
-        expect(document.activeElement).toEqual(toggleButton);
     });
 
     it('should select item when losing focus if there is one single match', async () => {
