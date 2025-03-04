@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@20.0.6...@sb1/ffe-buttons@21.0.0) (2025-03-04)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** bugfikser ifm semantiske farger ([21b2440](https://github.com/SpareBank1/designsystem/commit/21b24402537fe33cafc2d2ab768c454546f63e7c))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** theme.less er ikke lenger i bruk
+
+
+
+
+
 ## [20.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@20.0.5...@sb1/ffe-buttons@20.0.6) (2025-03-03)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
