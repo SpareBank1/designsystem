@@ -1,5 +1,5 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
-import * as AccordionStories from './Accordion.stories.tsx';
+import * as AccordionStories from './Accordion.stories';
 
 <Meta of={AccordionStories} />
 
@@ -8,6 +8,15 @@ import * as AccordionStories from './Accordion.stories.tsx';
 Accordion brukes der du har mye informasjon som du ønsker å gjøre tilgjengelig for brukere, uten at alt er visuelt synlig samtidig. En accordion er bygget opp av en «header» og et «panel», og i SpareBank 1 er hele «headeren» klikkbar.
 
 En accordion er bygget opp av to komponenter: `Accordion` og `AccordionItem`. Accordion-komponenten legges rundt alle AccordionItem's, for å gruppere og sette samme overskriftsnivå på alle.
+
+## Med subtil bakgrunn
+
+<Canvas of={AccordionStories.WithSubtleBackground} />
+
+## Med ingen bakgrunn
+
+<Canvas of={AccordionStories.Standard} />
+<Controls of={AccordionStories.Standard} />
 
 ## Installasjon
 
@@ -32,6 +41,3 @@ import { Accordion, AccordionItem } from '@sb1/ffe-accordion';
     <AccordionItem heading="En siste tittel">Enda mer innhold</AccordionItem>
 </Accordion>;
 ```
-
-<Canvas of={AccordionStories.Standard} />
-<Controls of={AccordionStories.Standard} />
