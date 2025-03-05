@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { ElementType } from 'react';
 import classNames from 'classnames';
 
 export interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
+    as?: ElementType;
     /**
      * Labels default to `display: inline-block;` to have tooltips appear immediately to the right.
      * Set this to `true` if you don't use tooltips and need the label to be `display: block;`.
@@ -15,13 +16,14 @@ export interface LabelProps extends React.ComponentPropsWithoutRef<'label'> {
 }
 
 export const Label: React.FC<LabelProps> = ({
+    as: Comp = 'label',
     block,
     children,
     className,
     htmlFor,
     ...rest
 }) => (
-    <label
+    <Comp
         className={classNames('ffe-form-label', className, {
             'ffe-form-label--block': block,
         })}
@@ -29,5 +31,5 @@ export const Label: React.FC<LabelProps> = ({
         {...rest}
     >
         {children}
-    </label>
+    </Comp>
 );

@@ -15,7 +15,6 @@ export const Standard: Story = {
         noMargins: false,
         hiddenLabel: false,
         inline: true,
-        onColoredBg: false,
     },
     render: args => (
         <fieldset className="ffe-input-group">
