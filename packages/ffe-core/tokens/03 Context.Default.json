@@ -452,7 +452,7 @@
         },
         "subtle": {
           "$type": "color",
-          "$value": "{default.brand.secondary.subtler}",
+          "$value": "{default.brand.secondary.subtlest}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -467,7 +467,7 @@
         },
         "subtle-hover": {
           "$type": "color",
-          "$value": "{default.brand.secondary.subtle}",
+          "$value": "{default.brand.secondary.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -482,7 +482,7 @@
         },
         "subtle-pressed": {
           "$type": "color",
-          "$value": "{default.brand.secondary.default}",
+          "$value": "{default.brand.secondary.subtle}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -544,7 +544,7 @@
         },
         "subtle": {
           "$type": "color",
-          "$value": "{default.brand.tertiary.subtler}",
+          "$value": "{default.brand.tertiary.subtlest}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -559,7 +559,7 @@
         },
         "subtle-hover": {
           "$type": "color",
-          "$value": "{default.brand.tertiary.subtle}",
+          "$value": "{default.brand.tertiary.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -574,7 +574,7 @@
         },
         "subtle-pressed": {
           "$type": "color",
-          "$value": "{default.brand.tertiary.default}",
+          "$value": "{default.brand.tertiary.subtle}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -604,9 +604,39 @@
             }
           }
         },
+        "info-subtle": {
+          "$type": "color",
+          "$value": "{default.feedback.info.subtler}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL"
+              ],
+              "codeSyntax": {}
+            }
+          }
+        },
         "success": {
           "$type": "color",
           "$value": "{default.feedback.success.strong}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL"
+              ],
+              "codeSyntax": {}
+            }
+          }
+        },
+        "success-subtle": {
+          "$type": "color",
+          "$value": "{default.feedback.success.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -634,6 +664,21 @@
             }
           }
         },
+        "warning-subtle": {
+          "$type": "color",
+          "$value": "{default.feedback.warning.subtler}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL"
+              ],
+              "codeSyntax": {}
+            }
+          }
+        },
         "critical": {
           "$type": "color",
           "$value": "{default.feedback.critical.strong}",
@@ -649,9 +694,39 @@
             }
           }
         },
+        "critical-subtle": {
+          "$type": "color",
+          "$value": "{default.feedback.critical.subtler}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL"
+              ],
+              "codeSyntax": {}
+            }
+          }
+        },
         "tip": {
           "$type": "color",
           "$value": "{default.feedback.tip.stronger}",
+          "$description": "",
+          "$extensions": {
+            "com.figma": {
+              "hiddenFromPublishing": false,
+              "scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL"
+              ],
+              "codeSyntax": {}
+            }
+          }
+        },
+        "tip-subtle": {
+          "$type": "color",
+          "$value": "{default.feedback.tip.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -888,7 +963,7 @@
         },
         "hover": {
           "$type": "color",
-          "$value": "{default.neutral.stronger}",
+          "$value": "{default.neutral.strong}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -916,7 +991,7 @@
         },
         "subtle": {
           "$type": "color",
-          "$value": "{default.neutral.subtle}",
+          "$value": "{default.neutral.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {

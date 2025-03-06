@@ -2046,7 +2046,7 @@
         },
         "subtler": {
           "$type": "color",
-          "$value": "{color.syrin.500}",
+          "$value": "{color.syrin.550}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -2321,7 +2321,7 @@
       },
       "subtle": {
         "$type": "color",
-        "$value": "{color.sand.25}",
+        "$value": "{color.sand.0}",
         "$description": "",
         "$extensions": {
           "com.figma": {

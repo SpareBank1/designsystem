@@ -837,7 +837,7 @@
     "sand": {
       "0": {
         "$type": "color",
-        "$value": "#fdfaf7",
+        "$value": "#fdf8f5",
         "$description": "",
         "$extensions": {
           "com.figma": {
