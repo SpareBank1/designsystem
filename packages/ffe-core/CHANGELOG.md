@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.6...@sb1/ffe-core@30.0.7) (2025-03-07)
+
+
+### Bug Fixes
+
+* **ffe-core:** Export chevron less variables ([825ecfc](https://github.com/SpareBank1/designsystem/commit/825ecfc4343c57c2dabb74e22f3ed1b0bafea124))
+
+
+
+
+
 ## [30.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.5...@sb1/ffe-core@30.0.6) (2025-03-06)
 
 
