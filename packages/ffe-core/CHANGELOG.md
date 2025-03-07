@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [30.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.7...@sb1/ffe-core@30.1.0) (2025-03-07)
+
+
+### Features
+
+* **ffe-core:** legger til numeric variabler som brukes i en egen fil ([48e2e26](https://github.com/SpareBank1/designsystem/commit/48e2e26bc9d419f493c24fb922c5c6edeebfcc7a))
+
+
+
+
+
 ## [30.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.6...@sb1/ffe-core@30.0.7) (2025-03-07)
 
 

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.1.20...@sb1/ffe-datepicker-react@10.2.0) (2025-03-07)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** comment out failing test to restore pipeline ([fe136c1](https://github.com/SpareBank1/designsystem/commit/fe136c17e3e0941691f18905b04dd317a646e833))
+* **ffe-datepicker-react:** komponenten oppfører seg nå som en kontrollert komponent ([a87c6c5](https://github.com/SpareBank1/designsystem/commit/a87c6c5e669f209a59ebac2780f9f738ac990c32))
+
+
+### Features
+
+* **ffe-datepicker-react:** Add test helper to make it easier ot test datepicker with RTL ([dbee191](https://github.com/SpareBank1/designsystem/commit/dbee191b108bf9481d5347f729e0668d27210a08))
+
+
+
+
+
 ## [10.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.1.19...@sb1/ffe-datepicker-react@10.1.20) (2025-03-07)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.1.10...@sb1/ffe-form-react@23.2.0) (2025-03-07)
+
+
+### Features
+
+* **ffe-form-react:** Add parameter to input group to change the element of label to improve accessability ([2666f88](https://github.com/SpareBank1/designsystem/commit/2666f886d8b7d16134e7e3991f82df7004486d8c))
+
+
+
+
+
 ## [23.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.1.9...@sb1/ffe-form-react@23.1.10) (2025-03-07)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
