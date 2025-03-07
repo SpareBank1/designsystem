@@ -13,7 +13,7 @@ const defaultProps = {
 
 const renderDatePicker = (props?: Partial<DatepickerProps>) =>
     render(
-        <InputGroup label="Dato velger">
+        <InputGroup label="Datovelger">
             <Datepicker {...defaultProps} {...props} />
         </InputGroup>,
     );
@@ -22,7 +22,7 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
     it('empty datepicker returns null from testing functions', () => {
         renderDatePicker();
 
-        const datepicker = getDatepickerByLabelText('Dato velger');
+        const datepicker = getDatepickerByLabelText('Datovelger');
         expect(
             datepicker.element.classList.contains('ffe-datepicker'),
         ).toBeTruthy();
@@ -32,7 +32,7 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
     it('datepicker returns value from testing functions', () => {
         renderDatePicker({ value: '01.02.2024' });
 
-        const datepicker = getDatepickerByLabelText('Dato velger');
+        const datepicker = getDatepickerByLabelText('Datovelger');
 
         expect(datepicker.getValue()).toStrictEqual('01.02.2024');
     });
@@ -40,7 +40,7 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
     it('datepicker can be updated by testing functions', async () => {
         renderDatePicker({ value: '01.01.2024' });
 
-        const datepicker = getDatepickerByLabelText('Dato velger');
+        const datepicker = getDatepickerByLabelText('Datovelger');
         await datepicker.setValue('6.5.2024');
 
         expect(datepicker.getValue()).toStrictEqual('06.05.2024');
