@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Datepicker, DatepickerProps } from './Datepicker';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -10,8 +10,30 @@ const defaultProps = {
     labelId: 'datepicker-label',
 };
 
+const DatepickerWithChangeButton: React.FC<DatepickerProps> = ({
+    value,
+    ...props
+}: DatepickerProps) => {
+    const [date, setDate] = useState(value);
+    return (
+        <>
+            <button
+                data-testid="change-date-input"
+                onClick={() => {
+                    setDate('02.02.2022');
+                }}
+            />
+            <Datepicker value={date} {...props} />
+        </>
+    );
+};
+
 const renderDatePicker = (props?: Partial<DatepickerProps>) =>
     render(<Datepicker {...defaultProps} {...props} />);
+
+const renderDatePickerWithChangeButton = (props?: Partial<DatepickerProps>) => {
+    return render(<DatepickerWithChangeButton {...defaultProps} {...props} />);
+};
 
 describe('<Datepicker />', () => {
     describe('with empty value', () => {
@@ -150,9 +172,22 @@ describe('<Datepicker />', () => {
             renderDatePicker({ value: '01.01.2021' });
 
             const [date, month, year] = screen.getAllByRole('spinbutton');
+
             expect(date).toHaveValue(1);
             expect(month).toHaveValue(1);
             expect(year).toHaveValue(2021);
+        });
+
+        it('input field changes when value changes', async () => {
+            const user = userEvent.setup();
+            renderDatePickerWithChangeButton({ value: '01.01.2021' });
+
+            await user.click(screen.getByTestId('change-date-input'));
+
+            const [date, month, year] = screen.getAllByRole('spinbutton');
+            expect(date).toHaveValue(2);
+            expect(month).toHaveValue(2);
+            expect(year).toHaveValue(2022);
         });
     });
 });
