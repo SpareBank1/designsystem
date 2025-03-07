@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const writeToFile = require('./lib/writeToFile');
+const generateChevronColors = require('./chevron');
 
 const usedPrimitive = {};
 const usedSemantic = {};
@@ -192,6 +193,8 @@ function generateSemanticColors() {
     const semanticColorModuleContent =
         generateSemanticColorModule(semanticColorNames);
     writeToFile('lib/semanticColors.js')(semanticColorModuleContent);
+
+    generateChevronColors();
 }
 
 generateSemanticColors();
