@@ -9,6 +9,7 @@ export interface DatepickerProps extends DatepickerCompProps {
     /** Hack that changes InputGroups label to a span to be wcag complient  */
     setInputGroupLabelAsSpan?: () => void;
 }
+
 export const Datepicker: React.FC<DatepickerProps> = ({
     locale = 'nb' as const,
     value,
