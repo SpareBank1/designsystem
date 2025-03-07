@@ -129,13 +129,15 @@
             background: var(--ffe-color-fill-primary-selected);
             color: var(--ffe-color-foreground-inverse);
 
-            &:hover {
-                background: var(--ffe-color-fill-primary-selected);
-                color: var(--ffe-color-foreground-inverse);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background: var(--ffe-color-fill-primary-selected-hover);
+                    color: var(--ffe-color-foreground-inverse);
+                }
             }
 
             &:active {
-                background: var(--ffe-color-fill-primary-pressed);
+                background: var(--ffe-color-fill-primary-selected-pressed);
             }
         }
 
