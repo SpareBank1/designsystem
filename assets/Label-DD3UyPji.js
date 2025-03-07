@@ -1,4 +1,0 @@
-import{R as n}from"./index-eCxJ45ll.js";import{c as r}from"./index-DezCrw0f.js";const l=({block:e,children:o,className:t,htmlFor:a,...s})=>n.createElement("label",{className:r("ffe-form-label",t,{"ffe-form-label--block":e}),htmlFor:a,...s},o);l.__docgenInfo={description:"",methods:[],displayName:"Label",props:{block:{required:!1,tsType:{name:"boolean"},description:"Labels default to `display: inline-block;` to have tooltips appear immediately to the right.\nSet this to `true` if you don't use tooltips and need the label to be `display: block;`."},onColoredBg:{required:!1,tsType:{name:"never"},description:`@deprecated as part of update to Semantic Colors
-
-Use the \`ffe-accent-color\` class on the component or on the container of the component instead
-[Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger)`}}};export{l as L};
