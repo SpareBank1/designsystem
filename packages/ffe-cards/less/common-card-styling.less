@@ -33,7 +33,9 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             cursor: pointer;
-            border-color: var(--ffe-color-border-primary-hover);
+            border-color: transparent;
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-primary-hover);
             background: var(--ffe-color-surface-primary-default-hover);
             &
                 :where(
@@ -47,7 +49,9 @@
         }
     }
     &:focus-within {
-        border-color: var(--ffe-color-border-primary-hover);
+        border-color: transparent;
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-primary-pressed);
 
         &
             :where(
