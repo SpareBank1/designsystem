@@ -1,6 +1,6 @@
 import React from 'react';
-import { Accordion } from './Accordion.tsx';
-import { AccordionItem } from './AccordionItem.tsx';
+import { Accordion } from './Accordion';
+import { AccordionItem } from './AccordionItem';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof AccordionItem> = {
@@ -12,6 +12,7 @@ const meta: Meta<typeof AccordionItem> = {
         },
     },
 };
+
 export default meta;
 
 type Story = StoryObj<typeof AccordionItem>;

@@ -11,6 +11,43 @@ export default meta;
 
 type Story = StoryObj<typeof Accordion>;
 
+export const WithSubtleBackground: Story = {
+    args: {
+        headingLevel: 2,
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Dette eksempelet viser ',
+            },
+        },
+    },
+    render: args => (
+        <div
+            style={{
+                backgroundColor: 'var(--ffe-color-background-subtle)',
+                padding: 'var(--ffe-spacing-md)',
+                borderRadius: '8px',
+                border: '1px dashed var(--ffe-color-border-primary-subtle)',
+            }}
+        >
+            <Accordion {...args}>
+                <AccordionItem heading="Accordion med subtil bakgrunn">
+                    Denne accordionen vises på en subtil bakgrunn
+                </AccordionItem>
+                <AccordionItem heading="Mer informasjon">
+                    Accordion-innholdet har standard bakgrunnsfarge
+                </AccordionItem>
+                <AccordionItem heading="Ytterligere detaljer">
+                    Legg merke til kontrasten mellom den subtile
+                    container-bakgrunnen og standardbakgrunnen til det utvidede
+                    innholdet
+                </AccordionItem>
+            </Accordion>
+        </div>
+    ),
+};
+
 export const Standard: Story = {
     args: {
         headingLevel: 2,
