@@ -7,3 +7,50 @@ import * as DatepickerStories from './Datepicker.stories.tsx';
 
 <Canvas of={DatepickerStories.Standard} />
 <Controls of={DatepickerStories.Standard} />
+
+
+## Testing med React Testing Library
+
+Testing av `Datepicker` krever litt ekstra kode, så vi har gjort det enklere ved å tilby en funksjon som 
+skal gjøre det enklere å teste komponenten med React Testing Library.
+
+Funksjonen er avhengig av `@testing-library/react`, så dette biblioteket må installeres.
+
+```sh
+npm i --save-dev @testing-library/react
+```
+
+```tsx
+function getDatepickerByLabelText(
+    label: string,
+    index = 0,
+): {
+    /** The datepicker element */
+    element: Element;
+    /** Function to get the value of the datepicker
+     * @returns string in the format 'dd.mm.yyyy' or null if the datepicker is empty */
+    getValue: () => string | null;
+    /**Function to set the value of the datepicker
+     * @param value string in the format 'dd.mm.yyyy'
+     * @returns void
+     */
+    setValue: (value: string) => Promise<void>;
+};
+```
+
+```tsx
+describe('Datepicker test', () => {
+    it('datepicker provides methods to simplify testing', async () => {
+        
+        // Code for rendering your page / component
+
+        const datepicker = getDatepickerByLabelText('Dato velger');
+
+        expect(datepicker.getValue()).toStrictEqual('01.02.2024');
+    
+        await datepicker.setValue('6.5.2024');
+        expect(datepicker.getValue()).toStrictEqual('06.05.2024');
+    });
+});
+
+```
