@@ -1,4 +1,4 @@
-import { Canvas, Meta , Controls} from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as InputGroupStories from './InputGroup.stories.tsx';
 
 <Meta of={InputGroupStories} />
@@ -8,14 +8,15 @@ import * as InputGroupStories from './InputGroup.stories.tsx';
 En input group er en standarisert omverden for enkelt-inputs i et skjema. En gruppe består av en label, et valgfritt tooltip,
 skjemaelementet, og en feilmelding for valideringsfeil som vil bli vist om det er feil i skjemaet.
 
+## Forhåndsvisning
+
 <Canvas of={InputGroupStories.Standard} />
-<Controls of={InputGroupStories.Standard}/>
+<Controls of={InputGroupStories.Standard} />
 
 Default oppførsel er at det holdes av plass under inputfeltene for å vise en feilmelding uten at innholdet lengre ned endres.
 Dersom man ikke ønsker dette kan det skrus av med å sette extraMargin prop til false.
 
 <Canvas of={InputGroupStories.ExtraMarginFalse} />
-
 
 Dersom man skal vise en hjelpetekst som alltid er synlig brukes description i stedet for tooltip.
 
