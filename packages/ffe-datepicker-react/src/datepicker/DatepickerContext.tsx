@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { Locale } from '../datelogic/types';
 import { validateDate } from '../util/dateUtil';
 import { getSimpleDateFromString } from '../datelogic/simpledate';
@@ -52,9 +52,17 @@ export const DatepickerProvider: React.FC<Props> = ({
     const [year, setYear] = useState<number | null>(
         newDate ? newDate.year : null,
     );
+
     const [calendarActiveDate, setCalendarActiveDate] = useState<string>(
         newDate?.toString() ?? '',
     );
+
+    useEffect(() => {
+        setDay(newDate ? newDate.date : null);
+        setMonth(newDate ? newDate.month + 1 : null);
+        setYear(newDate ? newDate.year : null);
+        setCalendarActiveDate(newDate?.toString() ?? '');
+    }, [newDate]);
 
     return (
         <DatepickerContext.Provider
