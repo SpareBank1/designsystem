@@ -15,7 +15,7 @@ describe('<Tooltip>', () => {
         renderTooltip({ 'aria-label': 'button-label', onClick });
         const button = screen.getByRole('button', { name: 'button-label' });
 
-        expect(button.ariaLabel).toBe('?');
+        expect(button.getAttribute('aria-label')).toBe('button-label');
         expect(button.classList.contains('ffe-tooltip__icon')).toBeTruthy();
 
         await user.click(button);
