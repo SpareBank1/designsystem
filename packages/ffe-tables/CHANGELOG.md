@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@18.0.8...@sb1/ffe-tables@18.0.9) (2025-03-07)
+
+
+### Bug Fixes
+
+* **ffe-tables:** legger til riktig farger på hover og pressed selected ([3a4ccc3](https://github.com/SpareBank1/designsystem/commit/3a4ccc3805d406c37809382b1270e6e970f1af3c))
+
+
+
+
+
 ## [18.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@18.0.7...@sb1/ffe-tables@18.0.8) (2025-03-07)
 
 **Note:** Version bump only for package @sb1/ffe-tables
