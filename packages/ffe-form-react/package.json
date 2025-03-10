@@ -28,11 +28,11 @@
     "dependencies": {
         "@sb1/ffe-collapse-react": "^5.1.15",
         "@sb1/ffe-form": "^32.0.7",
+        "@sb1/ffe-icons-react": "^11.0.19",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
-        "@sb1/ffe-icons-react": "^11.0.19",
         "eslint": "^8.57.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"

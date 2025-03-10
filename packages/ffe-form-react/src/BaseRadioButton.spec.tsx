@@ -82,7 +82,7 @@ describe('<BaseRadioButton />', () => {
             const button = screen.getByRole('button', {
                 name: 'Vis hjelpetekst',
             });
-            expect(button.textContent).toBe('?');
+            expect(button.getAttribute('aria-label')).toBe('Vis hjelpetekst');
         });
         it('add the correct class if present', () => {
             const { rerender, container } = render(
