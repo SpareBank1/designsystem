@@ -45,7 +45,7 @@ const files = {
 
 function getValueRecursive(obj, p, addColor) {
     const keys = p.slice(1, -1).split('.');
-    return keys.reduce((acc, key) => acc[key], obj).$value;
+    return keys.reduce((acc, key) => acc[key], obj).$value.replace('#', '');
 }
 
 module.exports = () => {

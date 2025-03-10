@@ -1,20 +1,36 @@
+@import (reference) '@sb1/ffe-core/less/colors-semantic-chevron';
+
+.chevron (@color) {
+    background-image: url("data:image/svg+xml,%3Csvg id='testid' xmlns='http://www.w3.org/2000/svg' fill='%23@{color}' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M480-373.539q-7.231 0-13.461-2.308-6.231-2.308-11.846-7.923L274.924-563.539q-8.308-8.307-8.5-20.884-.193-12.577 8.5-21.269 8.692-8.692 21.076-8.692t21.076 8.692L480-442.768l162.924-162.924q8.307-8.307 20.884-8.5 12.576-.192 21.268 8.5 8.693 8.692 8.693 21.077 0 12.384-8.693 21.076L505.307-383.77q-5.615 5.615-11.846 7.923-6.23 2.308-13.461 2.308Z'/%3E%3C/svg%3E%0A");
+}
+
+.ffe-accent-mode {
+    .ffe-dropdown {
+        .chevron(@ffe-color-chevron-light-accent);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :where(.regard-color-scheme-preference) {
+        &.ffe-accent-mode, .ffe-accent-mode {
+            .ffe-dropdown {
+                .chevron(@ffe-color-chevron-dark-accent);
+            }
+        }
+    }
+}
+
 .ffe-dropdown {
     appearance: none;
     background-color: var(--ffe-color-surface-primary-default);
     background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: calc(100% - 6px) 50%;
-    border: 2px solid var(--ffe-g-border-color);
+    border: var(--ffe-g-border-width) solid
+        var(--ffe-color-border-primary-default);
     border-radius: var(--ffe-g-border-radius);
     color: var(--ffe-color-foreground-default);
     display: block;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath fill='%23005aa4' d='M480-373.539q-7.231 0-13.461-2.308-6.231-2.308-11.846-7.923L274.924-563.539q-8.308-8.307-8.5-20.884-.193-12.577 8.5-21.269 8.692-8.692 21.076-8.692t21.076 8.692L480-442.768l162.924-162.924q8.307-8.307 20.884-8.5 12.576-.192 21.268 8.5 8.693 8.692 8.693 21.077 0 12.384-8.693 21.076L505.307-383.77q-5.615 5.615-11.846 7.923-6.23 2.308-13.461 2.308Z'/%3E%3C/svg%3E%0A");
-    .regard-color-scheme-preference & {
-        @media (prefers-color-scheme: dark) {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath fill='%234d8cbf' d='M480-373.539q-7.231 0-13.461-2.308-6.231-2.308-11.846-7.923L274.924-563.539q-8.308-8.307-8.5-20.884-.193-12.577 8.5-21.269 8.692-8.692 21.076-8.692t21.076 8.692L480-442.768l162.924-162.924q8.307-8.307 20.884-8.5 12.576-.192 21.268 8.5 8.693 8.692 8.693 21.077 0 12.384-8.693 21.076L505.307-383.77q-5.615 5.615-11.846 7.923-6.23 2.308-13.461 2.308Z'/%3E%3C/svg%3E%0A");
-        }
-    }
-
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     height: 2.8125rem;
@@ -22,17 +38,27 @@
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-dropdown);
+    .chevron(@ffe-color-chevron-light-default);
+
+    @media (prefers-color-scheme: dark) {
+        :where(.regard-color-scheme-preference) & {
+            .chevron(@ffe-color-chevron-dark-default);
+        }
+    }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            border-color: var(--ffe-g-primary-color);
+            border-color: var(--ffe-color-border-primary-hover);
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-primary-hover);
         }
     }
 
     &:focus,
     &:active {
-        border-color: var(--ffe-color-surface-primary-default);
-        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        border-color: var(--ffe-color-border-primary-pressed);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-interactive-focus);
         outline: none;
     }
 
