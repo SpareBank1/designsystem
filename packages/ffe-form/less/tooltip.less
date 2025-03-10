@@ -2,18 +2,19 @@
     display: inline;
 
     &__icon {
-        background: var(--ffe-color-surface-primary-default);
+        background: transparent;
         border-radius: 50%;
-        border: 2px solid var(--ffe-color-border-interactive-default);
-        color: var(--ffe-color-foreground-default);
+        border: none;
+        color: var(--ffe-color-foreground-emphasis);
         cursor: help;
         height: 1.5625rem;
         aspect-ratio: 1;
         margin: 0;
         padding: 0;
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
-        display: inline-grid;
-        place-items: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         font-family: sans-serif;
         line-height: 1;
         font-size: var(--ffe-fontsize-button);
@@ -24,21 +25,24 @@
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                border-color: var(--ffe-color-border-interactive-hover);
-                background: var(--ffe-color-surface-primary-default-hover);
+                background: var(--ffe-color-fill-primary-subtle-hover);
+                box-shadow: 0 0 0 4px var(--ffe-color-fill-primary-subtle-hover);
             }
-        }
-
-        &:focus-visible {
-            box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
-            border-color: var(--ffe-color-border-interactive-focus);
-            outline: none;
         }
 
         &:active,
         .ffe-tooltip--open & {
-            border-color: var(--ffe-color-border-interactive-selected);
-            background: var(--ffe-color-surface-primary-default-active);
+            background: var(--ffe-color-fill-primary-subtle-pressed);
+            box-shadow: 0 0 0 4px var(--ffe-color-fill-primary-subtle-pressed);
+        }
+
+        &:focus-visible {
+            background: var(--ffe-color-fill-primary-subtle-hover);
+            box-shadow:
+                0 0 0 4px var(--ffe-color-fill-primary-subtle-hover),
+                0 0 0 6px var(--ffe-color-surface-primary-default),
+                0 0 0 8px var(--ffe-color-border-interactive-focus);
+            outline: none;
         }
     }
 
