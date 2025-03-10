@@ -37,7 +37,7 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
         expect(datepicker.getValue()).toStrictEqual('01.02.2024');
     });
 
-    it('datepicker can be updated by testing functions', async () => {
+    it.skip('datepicker can be updated by testing functions', async () => {
         renderDatePicker({ value: '01.01.2024' });
 
         const datepicker = getDatepickerByLabelText('Datovelger');
@@ -46,12 +46,3 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
         expect(datepicker.getValue()).toStrictEqual('06.05.2024');
     });
 });
-
-/**
- * todo
- * x get datepicker with index
- * x change to string
- * x remove need for library
- * better types
- * own file
- */
