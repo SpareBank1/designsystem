@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.7...@sb1/ffe-form@32.0.8) (2025-03-10)
+
+
+### Bug Fixes
+
+* **ffe-form:** oppdatering av tooltip-ikon ([a4ec019](https://github.com/SpareBank1/designsystem/commit/a4ec019f3f295b7cc1344a4dda62ae4f4dc73573))
+
+
+
+
+
 ## [32.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.6...@sb1/ffe-form@32.0.7) (2025-03-10)
 
 

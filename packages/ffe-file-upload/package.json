@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-file-upload",
-    "version": "12.0.10",
+    "version": "12.0.11",
     "description": "File upload module",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "@sb1/ffe-core": "^30.1.1",
-        "@sb1/ffe-form": "^32.0.7"
+        "@sb1/ffe-form": "^32.0.8"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0"

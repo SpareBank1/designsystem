@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@3.0.9...@sb1/ffe-pagination@3.0.10) (2025-03-10)
+
+
+### Bug Fixes
+
+* **ffe-pagination:** fix semantiske farger og knappehøyde pagniering ([0224647](https://github.com/SpareBank1/designsystem/commit/02246479dca97dcd309c1559b5c0e9614a780539))
+
+
+
+
+
 ## [3.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@3.0.8...@sb1/ffe-pagination@3.0.9) (2025-03-10)
 
 **Note:** Version bump only for package @sb1/ffe-pagination

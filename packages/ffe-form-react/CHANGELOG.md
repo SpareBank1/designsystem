@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.1...@sb1/ffe-form-react@23.2.2) (2025-03-10)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** oppdatering av tooltip-ikon ([9a915e8](https://github.com/SpareBank1/designsystem/commit/9a915e88a3d2e1ea0560e5ae143401db74263d75))
+
+
+
+
+
 ## [23.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.0...@sb1/ffe-form-react@23.2.1) (2025-03-10)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
