@@ -18,7 +18,7 @@
       },
       "subtle": {
         "$type": "color",
-        "$value": "{speciality.background.accent}",
+        "$value": "{speciality.background.accent-subtle}",
         "$description": "",
         "$extensions": {
           "com.figma": {
