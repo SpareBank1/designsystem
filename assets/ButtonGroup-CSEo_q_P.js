@@ -1,0 +1,5 @@
+import{j as t,M as m,C as s,a as i}from"./index-BzIi2iqi.js";import{useMDXComponents as p}from"./index-CVdx34fM.js";import{B as a,S as r}from"./ButtonGroup.stories-NcPmfHrb.js";import"./iframe-B9y8CEWx.js";import"./index-eCxJ45ll.js";import"./index-BhUHFDTH.js";import"./index-D3-0uUTW.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./index-DezCrw0f.js";import"./PrimaryButton-xT0dGNl9.js";import"./BaseButton-D99V6fdL.js";import"./fixedForwardRef-Cb2PomjO.js";import"./SecondaryButton-DrzIwwIr.js";import"./TertiaryButton-DjkyhFn8.js";import"./InlineBaseButton-Bjw20TZM.js";function e(o){const n={h1:"h1",p:"p",...p(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{of:a}),`
+`,t.jsx(n.h1,{id:"buttongroup",children:"ButtonGroup"}),`
+`,t.jsx(n.p,{children:"ButtonGroup hjelper deg med å samle alle knappene og få de på en rad. På mindre skjermer vil knappene vises under hverandre."}),`
+`,t.jsx(s,{of:r}),`
+`,t.jsx(i,{of:r})]})}function S(o={}){const{wrapper:n}={...p(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{S as default};
