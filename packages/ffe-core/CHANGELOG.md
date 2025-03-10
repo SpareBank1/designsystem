@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.1.0...@sb1/ffe-core@30.1.1) (2025-03-10)
+
+
+### Bug Fixes
+
+* **ffe-core:** fjerner # fra hex-variablene for å få de til å fungere som de skal ([eab80ce](https://github.com/SpareBank1/designsystem/commit/eab80ce9bd87167eb5594bae6af0388438bb641b))
+* **ffe-core:** Update colors ([f290972](https://github.com/SpareBank1/designsystem/commit/f29097233ca07d61d7dc0e7e8163108b9765419b))
+* **ffe-form:** semantiske farger dropdown fikser ([3a4c433](https://github.com/SpareBank1/designsystem/commit/3a4c4338cbca89fed63091ffadf79cfed5c5a68b))
+
+
+
+
+
 # [30.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.0.7...@sb1/ffe-core@30.1.0) (2025-03-07)
 
 

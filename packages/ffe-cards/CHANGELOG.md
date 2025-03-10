@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@22.0.8...@sb1/ffe-cards@22.0.9) (2025-03-10)
+
+
+### Bug Fixes
+
+* **ffe-cards:** pirk på styling av action cards/group cards ([03c22da](https://github.com/SpareBank1/designsystem/commit/03c22dafb4c81b19818573cb7c2b5570132c013a))
+
+
+
+
+
 ## [22.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@22.0.7...@sb1/ffe-cards@22.0.8) (2025-03-07)
 
 **Note:** Version bump only for package @sb1/ffe-cards
