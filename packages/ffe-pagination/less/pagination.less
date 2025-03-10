@@ -14,6 +14,7 @@
         justify-content: space-between;
         align-items: center;
         gap: var(--ffe-spacing-sm);
+        color: var(--ffe-color-foreground-default);
 
         @media (min-width: @breakpoint-sm) {
             flex-direction: row;
@@ -107,6 +108,7 @@
         .ffe-button {
             width: var(--circular-button-size);
             aspect-ratio: 1;
+            padding-block: 12px; //Mellomløsning til vi har forskjellige knappestørrelser
         }
     }
 
