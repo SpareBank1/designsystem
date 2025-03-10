@@ -17,12 +17,6 @@ async function simulateTyping(element: Element, text: string, delay = 100) {
                     element.dispatchEvent(
                         new KeyboardEvent('keydown', eventOptions),
                     );
-                    element.dispatchEvent(
-                        new Event('input', { bubbles: true }),
-                    );
-                    element.dispatchEvent(
-                        new KeyboardEvent('keyup', eventOptions),
-                    );
                 });
 
                 index++;

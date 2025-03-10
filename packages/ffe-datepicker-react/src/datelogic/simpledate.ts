@@ -107,6 +107,10 @@ export class SimpleDate {
                 : normalizedMonthNumber;
         return `${day}.${month}.${this.year}`;
     }
+
+    public toString() {
+        return this.format();
+    }
 }
 
 export const getSimpleDateToday = (): SimpleDate => new SimpleDate();
