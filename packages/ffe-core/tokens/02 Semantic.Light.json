@@ -2343,6 +2343,18 @@
           }
         }
       },
+      "accent-subtle": {
+        "$type": "color",
+        "$value": "{color.vann.850}",
+        "$description": "",
+        "$extensions": {
+          "com.figma": {
+            "hiddenFromPublishing": false,
+            "scopes": [],
+            "codeSyntax": {}
+          }
+        }
+      },
       "surface": {
         "default": {
           "$type": "color",
