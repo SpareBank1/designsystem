@@ -296,17 +296,19 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     max={31}
                     onPaste={handlePaste}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
-                        onChange(
-                            `${padZero(toNumber(newValue))}.${month}.${year}`,
-                        );
+                        if (!(newValue.length === 1 && newValue[0] === 0)) {
+                            onChange(
+                                `${padZero(toNumber(newValue))}.${month}.${year}`,
+                            );
 
-                        return allowFocusNext
-                            ? setDay(newValue, () =>
-                                  monthRef.current?.focus({
-                                      preventScroll: true,
-                                  }),
-                              )
-                            : setDay(newValue);
+                            return allowFocusNext
+                                ? setDay(newValue, () =>
+                                      monthRef.current?.focus({
+                                          preventScroll: true,
+                                      }),
+                                  )
+                                : setDay(newValue);
+                        }
                     }}
                     nextSpinButton={monthRef}
                     maxLength={2}
@@ -327,16 +329,18 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     max={12}
                     onPaste={handlePaste}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
-                        onChange(
-                            `${day}.${padZero(toNumber(newValue))}.${year}`,
-                        );
-                        return allowFocusNext
-                            ? setMonth(newValue, () =>
-                                  yearRef.current?.focus({
-                                      preventScroll: true,
-                                  }),
-                              )
-                            : setMonth(newValue);
+                        if (!(newValue.length === 1 && newValue[0] === 0)) {
+                            onChange(
+                                `${day}.${padZero(toNumber(newValue))}.${year}`,
+                            );
+                            return allowFocusNext
+                                ? setMonth(newValue, () =>
+                                      yearRef.current?.focus({
+                                          preventScroll: true,
+                                      }),
+                                  )
+                                : setMonth(newValue);
+                        }
                     }}
                     nextSpinButton={yearRef}
                     prevSpinButton={dayRef}
@@ -365,7 +369,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     max={9999}
                     onPaste={handlePaste}
                     onSpinButtonChange={newValue => {
-                        onChange(`${day}.${month}.${newValue}`);
+                        onChange(`${day}.${month}.${toNumber(newValue)}`);
                         setYear(newValue);
                     }}
                     prevSpinButton={monthRef}
