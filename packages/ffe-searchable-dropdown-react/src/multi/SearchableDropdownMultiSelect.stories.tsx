@@ -3,7 +3,7 @@ import { SearchableDropdownMultiSelect } from './SearchableDropdownMultiSelect';
 import type { StoryObj, Meta } from '@storybook/react';
 import { InputGroup } from '@sb1/ffe-form-react';
 import { SmallText } from '@sb1/ffe-core-react';
-import { TertiaryButton } from '@sb1/ffe-buttons-react';
+import { ActionButton, TertiaryButton } from '@sb1/ffe-buttons-react';
 
 type Fruit = {
     color: string;
@@ -157,14 +157,47 @@ export const PreselectedItems: Story = {
         selectedItems: [fruits[2], fruits[4]],
     },
     render: function Render({ id, labelledById, ...args }) {
+        const [items, setItems] = useState(args.selectedItems);
         return (
-            <InputGroup label="Velg frukt" labelId={labelledById} inputId={id}>
-                <SearchableDropdownMultiSelect
-                    id={id}
-                    labelledById={labelledById}
-                    {...args}
-                />
-            </InputGroup>
+            <>
+                <InputGroup
+                    label="Velg frukt"
+                    labelId={labelledById}
+                    inputId={id}
+                >
+                    <SearchableDropdownMultiSelect
+                        id={id}
+                        labelledById={labelledById}
+                        {...args}
+                        selectedItems={items}
+                        onChange={(item, actionType) => {
+                            if (actionType === 'selected') {
+                                setItems([...(items ?? []), item]);
+                            } else {
+                                setItems(
+                                    (items ?? []).filter(it => it !== item),
+                                );
+                            }
+                        }}
+                    />
+                </InputGroup>
+                <ActionButton
+                    type="button"
+                    onClick={() => {
+                        setItems([]);
+                    }}
+                >
+                    Tøm listen
+                </ActionButton>
+                <ActionButton
+                    type="button"
+                    onClick={() => {
+                        setItems([...(items ?? []), fruits[1]]);
+                    }}
+                >
+                    Legg til i listen
+                </ActionButton>
+            </>
         );
     },
 };
