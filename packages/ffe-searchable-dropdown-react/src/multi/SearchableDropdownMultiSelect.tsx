@@ -240,7 +240,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
     }, [state.selectedItems, showNumberSelectedAfter]);
 
     useEffect(() => {
-        if (selectedItems) {
+        if (selectedItems !== undefined && selectedItems !== null) {
             dispatch({
                 type: 'ItemSelectedProgrammatically',
                 payload: { items: selectedItems },

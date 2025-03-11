@@ -112,15 +112,10 @@ export const createReducer =
                     isExpanded: !state.isExpanded,
                 };
             case 'ItemSelectedProgrammatically':
-                if (action.payload?.items) {
+                if (action.payload?.items !== undefined) {
                     return {
                         ...state,
-                        selectedItems: getNewList(
-                            state.selectedItems,
-                            action.payload.items,
-                            'selected',
-                            isEqual,
-                        ),
+                        selectedItems: action.payload.items,
                     };
                 }
                 return state;

@@ -1,27 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { SearchableDropdownMultiSelect } from './SearchableDropdownMultiSelect';
+import { SearchableDropdownMultiSelectProps } from '../../types';
+
+const companies = [
+    {
+        organizationName: 'Bedriften',
+        organizationNumber: '912602370',
+        quantityUnprocessedMessages: 5,
+    },
+    {
+        organizationName: 'Sønn & co',
+        organizationNumber: '812602372',
+        quantityUnprocessedMessages: 3,
+    },
+    {
+        organizationName: 'Beslag skytter',
+        organizationNumber: '812602552',
+        quantityUnprocessedMessages: 1,
+    },
+];
+
+const SearchableDropdownMultiSelectButton: React.FC<
+    SearchableDropdownMultiSelectProps<(typeof companies)[0]>
+> = ({
+    ...props
+}: SearchableDropdownMultiSelectProps<(typeof companies)[0]>) => {
+    const [items, setItems] = useState([companies[0]]);
+    return (
+        <>
+            <button
+                data-testid="change-multiselect-input"
+                onClick={() => {
+                    setItems([]);
+                }}
+            />
+            <button
+                data-testid="change-multiselect-input-add"
+                onClick={() => {
+                    setItems([companies[0], companies[1]]);
+                }}
+            />
+            <SearchableDropdownMultiSelect {...props} selectedItems={items} />
+        </>
+    );
+};
 
 describe('SearchableDropdownMultiSelect', () => {
-    const companies = [
-        {
-            organizationName: 'Bedriften',
-            organizationNumber: '912602370',
-            quantityUnprocessedMessages: 5,
-        },
-        {
-            organizationName: 'Sønn & co',
-            organizationNumber: '812602372',
-            quantityUnprocessedMessages: 3,
-        },
-        {
-            organizationName: 'Beslag skytter',
-            organizationNumber: '812602552',
-            quantityUnprocessedMessages: 1,
-        },
-    ];
-
     it('should show filtered result', async () => {
         const user = userEvent.setup();
         const onChangeMultiSelect = jest.fn();
@@ -526,5 +552,35 @@ describe('SearchableDropdownMultiSelect', () => {
         const input = screen.getByRole('combobox');
         await user.click(input);
         await screen.findByText('Dette er et postListElement!');
+    });
+
+    it('should clear selected items if selectedItems is cleared', async () => {
+        const onChangeMultiSelect = jest.fn();
+        const user = userEvent.setup();
+
+        render(
+            <SearchableDropdownMultiSelectButton
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                onChange={onChangeMultiSelect}
+            />,
+        );
+
+        expect(
+            screen.getByText(companies[0].organizationName),
+        ).toBeInTheDocument();
+        await user.click(screen.getByTestId('change-multiselect-input-add'));
+        expect(
+            screen.getByText(companies[0].organizationName),
+        ).toBeInTheDocument();
+        expect(
+            screen.getByText(companies[1].organizationName),
+        ).toBeInTheDocument();
+        await user.click(screen.getByTestId('change-multiselect-input'));
+        expect(screen.queryByText(companies[0].organizationName)).toBeNull();
     });
 });
