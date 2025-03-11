@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.1.9...@sb1/ffe-searchable-dropdown-react@23.1.10) (2025-03-11)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Changes selectedItems to replace the internal state when change programmatically to support removing items programmatically ([43edeaa](https://github.com/SpareBank1/designsystem/commit/43edeaa87546fe3e52656cdeac2f8636319fc698))
+
+
+
+
+
 ## [23.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.1.8...@sb1/ffe-searchable-dropdown-react@23.1.9) (2025-03-10)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
