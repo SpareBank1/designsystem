@@ -11,6 +11,8 @@ export type BaseButtonProps<As extends ElementType = 'button'> =
         isLoading?: boolean;
         leftIcon?: ReactElement;
         rightIcon?: ReactElement;
+        /** Default md. */
+        size?: 'sm' | 'md' | 'lg';
     };
 /**
  * Internal component
@@ -29,6 +31,7 @@ function BaseButtonWithForwardRef<As extends ElementType>(
         onClick,
         leftIcon,
         rightIcon,
+        size = 'md',
         ariaLoadingMessage,
         children,
         ...rest
@@ -44,10 +47,11 @@ function BaseButtonWithForwardRef<As extends ElementType>(
             className={classNames(
                 'ffe-button',
                 `ffe-button--${buttonType}`,
+                `ffe-button--${size}`,
                 { 'ffe-button--loading': isLoading && supportsSpinner },
                 className,
             )}
-            onClick={event => {
+            onClick={(event: React.MouseEvent) => {
                 if (isLoading && supportsSpinner) {
                     event.preventDefault();
                     event.stopPropagation();

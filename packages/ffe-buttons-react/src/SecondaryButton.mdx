@@ -1,6 +1,6 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as SecondaryButtonStories from './SecondaryButton.stories.tsx';
-import { SecondaryButton } from '@sb1/ffe-buttons-react';
+import { SecondaryButton } from "@sb1/ffe-buttons-react";
 
 <Meta of={SecondaryButtonStories} />
 
@@ -13,3 +13,10 @@ SecondaryButtons kan ha ikon.
 
 <Canvas of={SecondaryButtonStories.Standard} />
 <Controls of={SecondaryButtonStories.Standard} />
+
+## Forskjellige størrelser
+
+Primary Button tilbys i tre størrelser: `sm`, `md` og `lg`. Standardstørrelsen er `md`. Du kan endre størrelsen ved å
+sette `size`-propen til en av disse verdiene, altså `size="sm"`. Hvis du ikke sender inn noe, er størrelsen md.
+
+<Canvas of={SecondaryButtonStories.DifferentSizes} />

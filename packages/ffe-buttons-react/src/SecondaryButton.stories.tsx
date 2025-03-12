@@ -22,6 +22,11 @@ const meta: Meta<typeof SecondaryButton<any>> = {
                 custom: Custom,
             },
         },
+        size: {
+            options: ['lg', 'md', 'sm'],
+            control: { type: 'radio' },
+            description: "Størrelse på knappen, 'md' default",
+        },
     },
 };
 export default meta;
@@ -34,5 +39,30 @@ export const Standard: Story = {
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
-    render: args => <SecondaryButton {...args}>Sekundærknapp</SecondaryButton>,
+    render: args => {
+        return (
+            <div className="ffe-button-display-group">
+                <SecondaryButton {...args}>Sekundærknapp</SecondaryButton>
+            </div>
+        );
+    },
+};
+
+export const DifferentSizes: Story = {
+    args: {
+        as: 'button',
+        ariaLoadingMessage: 'Vennligst vent...',
+        isLoading: false,
+    },
+    render: args => (
+        <div className="ffe-button-display-group">
+            <SecondaryButton {...args} size="lg">
+                Sekundærknapp
+            </SecondaryButton>
+            <SecondaryButton {...args}>Sekundærknapp</SecondaryButton>
+            <SecondaryButton {...args} size="sm">
+                Sekundærknapp
+            </SecondaryButton>
+        </div>
+    ),
 };
