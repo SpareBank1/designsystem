@@ -1,6 +1,6 @@
 .ffe-radio-switch {
     --outer-circle-color: var(--ffe-color-border-primary-default);
-    --inner-circle-color: var(--ffe-color-fill-primary-pressed);
+    --inner-circle-color: transparent;
     --circle-background: var(--ffe-color-surface-primary-default);
     color: var(--ffe-color-foreground-default);
 
@@ -36,6 +36,22 @@
         pointer-events: none;
     }
 
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--ffe-color-surface-primary-default-hover);
+            border-color: var(--ffe-color-border-primary-hover);
+
+            &::before {
+                background-color: var(--ffe-color-surface-primary-default);
+            }
+        }
+    }
+
+    &:focus,
+    &:active {
+        background-color: var(--ffe-color-surface-primary-default-pressed);
+    }
+
     @media (min-width: @breakpoint-sm) {
         margin-bottom: 0;
     }
@@ -64,13 +80,28 @@
         --outer-circle-color: var(--ffe-color-fill-primary-selected);
         --inner-circle-color: var(--ffe-color-fill-primary-pressed);
 
-        background-color: var(--ffe-color-fill-primary-pressed);
+        background-color: var(--ffe-color-fill-primary-selected);
         color: var(--ffe-color-foreground-on-fill-default);
+        border-color: var(--ffe-color-border-primary-emphasis);
+        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-primary-emphasis);
 
         &::before {
             border: 5px solid var(--ffe-color-surface-primary-default);
+            outline: 2px solid var(--ffe-color-border-primary-emphasis);
             background-color: var(--ffe-color-fill-primary-selected);
         }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(--ffe-color-fill-primary-selected-hover);
+            }
+        }
+
+        &:focus,
+        &:active {
+            background-color: var(--ffe-color-fill-primary-selected-pressed);
+        }
+
     }
 
     &:focus + .ffe-radio-switch {
