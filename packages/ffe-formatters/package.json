@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-formatters",
-    "version": "5.0.6",
+    "version": "5.0.7",
     "description": "JavaScript general use string formatters",
     "keywords": [
         "ffe"

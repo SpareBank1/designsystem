@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-datepicker-react",
-    "version": "10.2.2",
+    "version": "10.2.3",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,9 +25,9 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-datepicker": "^14.0.12",
-        "@sb1/ffe-form": "^32.0.8",
-        "@sb1/ffe-icons-react": "^11.0.19",
+        "@sb1/ffe-datepicker": "^14.0.13",
+        "@sb1/ffe-form": "^32.0.9",
+        "@sb1/ffe-icons-react": "^11.0.20",
         "@types/lodash.debounce": "^4.0.9",
         "classnames": "^2.3.1",
         "lodash.debounce": "^4.0.8",

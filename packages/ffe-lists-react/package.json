@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-lists-react",
-    "version": "13.0.9",
+    "version": "13.0.10",
     "description": "React implementation of ffe-lists",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,8 +26,8 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-icons-react": "^11.0.19",
-        "@sb1/ffe-lists": "^18.0.9",
+        "@sb1/ffe-icons-react": "^11.0.20",
+        "@sb1/ffe-lists": "^18.0.10",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
