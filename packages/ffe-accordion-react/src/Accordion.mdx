@@ -1,6 +1,7 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as AccordionStories from './Accordion.stories';
 import * as AccordionItemStories from './AccordionItem.stories';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={AccordionStories} />
 
@@ -10,29 +11,13 @@ Accordion brukes der du har mye informasjon som du ønsker å gjøre tilgjengeli
 
 En accordion er bygget opp av to komponenter: `Accordion` og `AccordionItem`. Accordion-komponenten legges rundt alle AccordionItem's, for å gruppere og sette samme overskriftsnivå på alle.
 
-## Installasjon
-
-```bash
-npm install @sb1/ffe-accordion @sb1/ffe-accordion-react
-```
-
-I prosjektets hovedstylingsfil importer stylingen
-
-```less
-@import '@sb1/ffe-accordion/less/ffe-accordion';
-```
-
-```tsx
-import { Accordion, AccordionItem } from '@sb1/ffe-accordion';
-
-<Accordion {...args}>
-    <AccordionItem heading="Tittel">Skjult innhold</AccordionItem>
-    <AccordionItem heading={<span>Enda en tittel</span>}>
-        Mer skjult innhold
-    </AccordionItem>
-    <AccordionItem heading="En siste tittel">Enda mer innhold</AccordionItem>
-</Accordion>;
-```
+<InstallImport
+    dependencies={['@sb1/ffe-accordion-react']}
+    stylingDependencies={[
+        '@sb1/ffe-accordion/less/ffe-accordion',
+        '@sb1/ffe-collapse-react/less/collapse',
+    ]}
+/>
 
 ## Med subtil bakgrunn
 
@@ -44,12 +29,14 @@ import { Accordion, AccordionItem } from '@sb1/ffe-accordion';
 <Controls of={AccordionStories.Standard} />
 
 
-# AccordionItem
+## AccordionItem
 
 AccordionItem er hver enkel «header»- og «panel»-seksjon. De er lukket by default, men du kan velge at den skal være åpen fra start ved å sende med property `defaultOpen`.
 Alle `<AccordionItem />`-komponenter har innebygget funksjonalitet for å styre åpning og lukking. Men om ønskelig kan du også overstyre dette. Et bruksområde kan være å lage en komponent som kun kan ha ett element åpent om gangen.
 
 Bruker man isOpen-propen vil intern-logikk som styrer åpning og lukking være skrudd av.
+
+## Forhåndsvisning
 
 <Canvas of={AccordionItemStories.Standard} />
 <Controls of={AccordionItemStories.Standard} />

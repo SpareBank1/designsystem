@@ -48,7 +48,13 @@ const preview: Preview = {
         options: {
             storySort: {
                 method: 'alphabetical',
-                order: ['Introduksjon', 'Design', 'Komponenter', 'Sider'],
+                order: [
+                    'Introduksjon',
+                    'Design',
+                    'Utils',
+                    'Komponenter',
+                    'Sider',
+                ],
             },
         },
     },
@@ -61,24 +67,28 @@ const preview: Preview = {
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'default') && (
                             <div className="ffe-docs-content-container ">
+                                <Heading3>Light mode</Heading3>
                                 <Story />
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'accent') && (
                             <div className="ffe-docs-content-container ffe-accent-mode">
+                                <Heading3>Light mode - Accent</Heading3>
                                 <Story />
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'dark') &&
                         (accent === 'both' || accent === 'default') && (
                             <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference">
+                                <Heading3>Dark mode</Heading3>
                                 <Story />
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'dark') &&
                         (accent === 'both' || accent === 'accent') && (
                             <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference ffe-accent-mode">
+                                <Heading3>Dark mode - Accent</Heading3>
                                 <Story />
                             </div>
                         )}
@@ -92,10 +102,10 @@ const preview: Preview = {
             description: 'Select light or dark theme',
             table: {
                 defaultValue: {
-                    detail: 'light',
+                    detail: 'both',
                 },
             },
-            defaultValue: 'light',
+            defaultValue: 'both',
             toolbar: {
                 items: [
                     { icon: 'sun', value: 'light', title: 'Light' },
@@ -110,10 +120,10 @@ const preview: Preview = {
             description: 'Select accent [WIP]',
             table: {
                 defaultValue: {
-                    detail: 'default',
+                    detail: 'both',
                 },
             },
-            defaultValue: 'default',
+            defaultValue: 'both',
             toolbar: {
                 items: [
                     {

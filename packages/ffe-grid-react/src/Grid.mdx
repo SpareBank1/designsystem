@@ -12,9 +12,10 @@ Det kan være mange grids per side, men man kan ikke ha grids inni andre grids. 
 
 Det finnes en rekke modifiers på alle tre komponentene som lar deg manipulere hvor innholdet skal plassere seg i en kolonne. Ta en titt på prop-types for å finne disse.
 
+## Forhåndsvisning
+
 <Canvas of={GridStories.Standard} />
 <Controls of={GridStories.Standard} />
-
 
 Merk at designet for layout skal være basert på 4 kolonner på sm skjermer, 6 på md og 12 på lg mens i APIet til GridCol sendes det
 inn tall fra 0-12 for alle størrelsene. I praksis betyr det at man selv må konvertere fra 12 kolonner til riktig antall på sm og md.
@@ -32,6 +33,7 @@ Riktig, oppgitte verdier er multiplum av 3 for sm og 2 for md:
 ```
 
 Galt:
+
 ```
 <Grid>
     <GridRow>
@@ -40,11 +42,13 @@ Galt:
 </Grid>
 
 ```
+
 Det blir varslet om dette til console.error i dev-versjonen av FFE, men det er ingen varsler om man bygger prod-versjonen av koden.
 Selvom det fungerer å bruke andre verdier er det ikke meningen at man skal gjøre, og side-layout skal heller ikke være basert
 på at man må gjøre det annerledes.
 
 ## Spacing
+
 Det er i utgangspunktet ingen luft over eller under gridet. Mellom kolonnene (og til høyre og venstre for griden) er det imidlertid et mellomrom på 16px. Disse verdiene kan overstyres med modifiere.
 
 <Canvas of={GridStories.Spacing} />
@@ -75,6 +79,7 @@ Tillatte verdier samsvarer med felles variabler for spacing i ffe. Eksempel med 
 ```
 
 ## Gap
+
 Mellomrommet mellom kolonnene internt i et grid er 16px som default. Tilsvarende luft finnes til høyre og venstre for gridet.
 Dette kan overstyres ved hjelp av gap-modifieren på `<Grid>`. Tillatte verdier samsvarer med felles variabler for spacing i ffe,
 men kan ikke være større enn 32px (`lg`). I tillegg kan spacingen fjernes helt med verdien `none`.
@@ -87,7 +92,7 @@ men kan ikke være større enn 32px (`lg`). I tillegg kan spacingen fjernes helt
 </Grid>
 ```
 
-Gap kan defineres responsivt ved ved hjelp av størrelsesmodifierne `sm`, `md` og `lg` -  se også _Responsiv spacing_.
+Gap kan defineres responsivt ved ved hjelp av størrelsesmodifierne `sm`, `md` og `lg` - se også _Responsiv spacing_.
 
 ```
 <Grid sm={{ gap: 'sm' }} md={{ gap: 'md' }} lg={{ gap: 'lg' }}>
@@ -102,8 +107,10 @@ Gap kan defineres responsivt ved ved hjelp av størrelsesmodifierne `sm`, `md` o
 Spacing kan også defineres responsivt ved hjelp av størrelsesmodifierne `sm`, `md` og `lg`. Dette gjør det mulig å ha ulik spacing på ulike skjermstørrelser.
 Props som kan endres på denne måten er gap på `<Grid>`-elementet, samt margin og padding på `<GridRow>`.
 Tillatte verdier er tilsvarende som for de ikke-responsive variantene av gap, margin og padding.
-<br/>
-Et eksempel på responsiv spacing på et grid med progressiv økning av gap og margin/padding kan se slik ut:
+
+<br />
+Et eksempel på responsiv spacing på et grid med progressiv økning av gap og
+margin/padding kan se slik ut:
 
 ```
 <Grid sm={{ gap: 'sm' }} md={{ gap: 'md' }} lg={{ gap: 'lg' }}>
@@ -123,8 +130,10 @@ som betyr at de ikke-responsive verdiene i praksis er default.
 ```
 
 ## Offset
+
 Kolonner kan gis innrykk ved hjelp av `offset`-propertyen. I praksis fungerer dette slik at gridet hopper over X antall kolonner før innholdet vises.
 Dette betyr blant annet at man kan sentrere grids med innhold som strekker seg over færre enn 12 kolonner.
+
 <br/>
 Propertyen settes på `<GridCol>` i første kolonne i gridet som skal vises med innrykk. Verdien tilsvarer antall kolonner som skal hoppes over.
 Den må defineres for hver skjermstørrelse, samtidig som man definerer kolonnens bredde. Større skjermstørrelser arver verdien fra mindre.
@@ -153,5 +162,3 @@ De to siste kolonnene i gridets totale bredde på 12 vil da være tomme, og på 
 ```
 
 <Canvas of={GridStories.Offset} />
-
-
