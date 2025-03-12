@@ -36,11 +36,11 @@
         }
 
         &--left {
-            margin-right: 6px;
+            margin-right: var(--ffe-spacing-2xs);
         }
 
         &--right {
-            margin-left: 6px;
+            margin-left: var(--ffe-spacing-2xs);
         }
     }
 }
@@ -90,7 +90,7 @@
 
     color: var(--text-color);
     background-color: var(--background-color);
-    padding: 0 var(--ffe-spacing-xs);
+    padding: 0 12px;
     margin: 0;
     align-items: center;
 
@@ -123,12 +123,12 @@
 
 .ffe-inline-button--tertiary {
     --icon-size-md: 1.5rem; // 24px
-    --border-width: 1px;
+    --border-width: 2px;
 
     align-content: center;
     color: var(--ffe-color-component-button-tertiary-foreground-default);
     flex-wrap: wrap;
-    padding: var(--ffe-spacing-xs) calc(var(--ffe-spacing-sm));
+    padding: calc(var(--ffe-spacing-xs) - var(--border-width)) var(--ffe-spacing-sm);
     border: 2px solid transparent;
     line-height: calc(var(--icon-size-md) - var(--border-width));
 

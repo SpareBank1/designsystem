@@ -1,9 +1,14 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
 
 .ffe-button {
+    --border-width: 2px;
+    --padding-sm: calc(var(--ffe-spacing-2xs) - var(--border-width));
+    --padding-md: calc(var(--ffe-spacing-xs) - var(--border-width));
+    --padding-lg: calc(12px - var(--border-width));
+
     align-items: center;
     appearance: none;
-    border: 2px solid transparent;
+    border: var(--border-width) solid transparent;
     border-radius: 6em;
     color: var(--ffe-color-component-button-primary-foreground-default);
     cursor: pointer;
@@ -12,7 +17,6 @@
     justify-content: center;
     line-height: 1.5; // 16 * 1.5 = 24(height of ffe-icons size md)
     overflow: hidden;
-    padding: var(--ffe-spacing-xs) var(--ffe-spacing-md);
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -67,125 +71,168 @@
     .ffe-icons {
         display: block;
     }
-}
 
-.ffe-button--action {
-    background-color: var(--ffe-color-component-button-action-fill-default);
-    color: var(--ffe-color-component-button-action-foreground-default);
-    border: none;
+    &--sm {
+        padding: var(--padding-sm) 12px;
+        font-size: var(--ffe-fontsize-button-sm);
+    }
 
-    :where(.ffe-button__icon) {
+    &--md {
+        padding: var(--padding-md) var(--ffe-spacing-sm);
+    }
+
+    &--lg {
+        padding: var(--padding-lg) var(--ffe-spacing-md);
+    }
+
+    &--action {
+        background-color: var(--ffe-color-component-button-action-fill-default);
         color: var(--ffe-color-component-button-action-foreground-default);
-    }
 
-    &:active {
-        transform: scale(0.97);
-        background-color: var(--ffe-color-component-button-action-fill-pressed);
-    }
+        :where(.ffe-button__icon) {
+            color: var(--ffe-color-component-button-action-foreground-default);
+        }
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover:not(:active):not(.ffe-button--pressed) {
+        &:active {
+            transform: scale(0.97);
             background-color: var(
-                --ffe-color-component-button-action-fill-hover
+                --ffe-color-component-button-action-fill-pressed
             );
         }
-    }
-}
 
-.ffe-button--primary {
-    --background-color: var(--ffe-color-component-button-primary-fill-default);
-    --text-color: var(--ffe-color-component-button-primary-foreground-default);
-
-    background-color: var(--background-color);
-    color: var(--text-color);
-
-    :where(.ffe-button__icon) {
-        color: var(--text-color);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover:not(:active):not(.ffe-button--pressed) {
+                background-color: var(
+                    --ffe-color-component-button-action-fill-hover
+                );
+            }
+        }
     }
 
-    &:active {
-        transform: scale(0.97);
-
+    &--primary {
         --background-color: var(
-            --ffe-color-component-button-primary-fill-pressed
+            --ffe-color-component-button-primary-fill-default
         );
-    }
+        --text-color: var(
+            --ffe-color-component-button-primary-foreground-default
+        );
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            --background-color: var(
-                --ffe-color-component-button-primary-fill-hover
-            );
-        }
-    }
-}
-
-.ffe-button--secondary,
-.ffe-button--expand {
-    --background-color: var(
-        --ffe-color-component-button-secondary-fill-default
-    );
-    --border-color: var(--ffe-color-component-button-secondary-border-default);
-    --text-color: var(
-        --ffe-color-component-button-secondary-foreground-default
-    );
-
-    background-color: var(--background-color);
-    border: solid 2px var(--border-color);
-    color: var(--text-color);
-
-    :where(.ffe-button__label, .ffe-button__icon) {
+        background-color: var(--background-color);
         color: var(--text-color);
-    }
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
+        :where(.ffe-button__icon) {
+            color: var(--text-color);
+        }
+
+        &:active {
+            transform: scale(0.97);
+
             --background-color: var(
-                --ffe-color-component-button-secondary-fill-hover
+                --ffe-color-component-button-primary-fill-pressed
             );
-            --border-color: var(
-                --ffe-color-component-button-secondary-border-hover
-            );
-            --text-color: var(
-                --ffe-color-component-button-secondary-foreground-hover
-            );
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                --background-color: var(
+                    --ffe-color-component-button-primary-fill-hover
+                );
+            }
         }
     }
 
-    &:focus,
-    &:visited {
-        color: var(--ffe-color-component-button-secondary-foreground-default);
-        background-color: var(
-            --ffe-color-component-button-secondary-fill-hover
+    &--secondary,
+    &--expand {
+        --background-color: var(
+            --ffe-color-component-button-secondary-fill-default
         );
-    }
-
-    &:active {
-        transform: scale(0.97);
-        background-color: var(
-            --ffe-color-component-button-secondary-fill-pressed
+        --border-color: var(
+            --ffe-color-component-button-secondary-border-default
         );
-        border-color: var(
-            --ffe-color-component-button-secondary-border-pressed
+        --text-color: var(
+            --ffe-color-component-button-secondary-foreground-default
         );
-        color: var(--ffe-color-component-button-secondary-foreground-hover);
-    }
-}
 
-.ffe-button--shortcut {
-    background-color: var(--ffe-color-component-button-secondary-fill-default);
-    border: solid 2px var(--ffe-color-component-button-secondary-border-default);
-    color: var(--ffe-color-component-button-secondary-foreground-default);
+        background-color: var(--background-color);
+        border: solid 2px var(--border-color);
+        color: var(--text-color);
 
-    .ffe-button__icon {
-        color: var(--ffe-color-component-button-secondary-foreground-default);
-        transition: transform var(--ffe-transition-duration) var(--ffe-ease);
-    }
+        :where(.ffe-button__label, .ffe-button__icon) {
+            color: var(--text-color);
+        }
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                --background-color: var(
+                    --ffe-color-component-button-secondary-fill-hover
+                );
+                --border-color: var(
+                    --ffe-color-component-button-secondary-border-hover
+                );
+                --text-color: var(
+                    --ffe-color-component-button-secondary-foreground-hover
+                );
+            }
+        }
+
+        &:focus,
+        &:visited {
+            color: var(
+                --ffe-color-component-button-secondary-foreground-default
+            );
             background-color: var(
                 --ffe-color-component-button-secondary-fill-hover
+            );
+        }
+
+        &:active {
+            transform: scale(0.97);
+            background-color: var(
+                --ffe-color-component-button-secondary-fill-pressed
+            );
+            border-color: var(
+                --ffe-color-component-button-secondary-border-pressed
+            );
+            color: var(--ffe-color-component-button-secondary-foreground-hover);
+        }
+    }
+
+    &--shortcut {
+        background-color: var(
+            --ffe-color-component-button-secondary-fill-default
+        );
+        border: solid var(--border-width)
+            var(--ffe-color-component-button-secondary-border-default);
+        color: var(--ffe-color-component-button-secondary-foreground-default);
+
+        .ffe-button__icon {
+            color: var(
+                --ffe-color-component-button-secondary-foreground-default
+            );
+            transition: transform var(--ffe-transition-duration) var(--ffe-ease);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(
+                    --ffe-color-component-button-secondary-fill-hover
+                );
+                color: var(
+                    --ffe-color-component-button-secondary-foreground-hover
+                );
+
+                .ffe-button__icon {
+                    color: var(
+                        --ffe-color-component-button-secondary-foreground-hover
+                    );
+                }
+            }
+        }
+
+        &:active {
+            transform: scale(0.97);
+            background-color: var(
+                --ffe-color-component-button-secondary-fill-pressed
             );
             color: var(--ffe-color-component-button-secondary-foreground-hover);
 
@@ -195,154 +242,151 @@
                 );
             }
         }
-    }
 
-    &:active {
-        transform: scale(0.97);
-        background-color: var(
-            --ffe-color-component-button-secondary-fill-pressed
-        );
-        color: var(--ffe-color-component-button-secondary-foreground-hover);
-
-        .ffe-button__icon {
-            color: var(--ffe-color-component-button-secondary-foreground-hover);
-        }
-    }
-
-    &:focus,
-    &:visited {
-        color: var(--ffe-color-component-button-secondary-foreground-default);
-        background-color: var(
-            --ffe-color-component-button-secondary-fill-hover
-        );
-    }
-
-    &:hover,
-    &:focus {
-        .ffe-button__icon {
-            transform: translateX(4px);
-        }
-    }
-}
-
-.ffe-button--expanded {
-    padding: var(--ffe-spacing-xs);
-    width: 45px;
-}
-
-.ffe-button--task {
-    --text-color: var(--ffe-color-foreground-emphasis);
-    background: transparent;
-    border-radius: 1.75rem;
-    border: none;
-    box-shadow: none;
-    color: var(--text-color);
-    display: inline-block;
-    padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm) var(--ffe-spacing-2xs)
-        var(--ffe-spacing-2xs);
-    text-align: left;
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
-    width: auto;
-
-    :where(.ffe-button__icon) {
-        --icon-border-color: var(--ffe-color-foreground-emphasis);
-        --icon-background-color: transparent;
-        --icon-color: var(--ffe-color-foreground-emphasis);
-
-        border: 2px solid var(--icon-border-color);
-        background-color: var(--icon-background-color);
-        border-radius: 50%;
-        height: 45px;
-        width: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
-
-        :where(.ffe-icons) {
-            color: var(--icon-color);
-        }
-    }
-
-    &:focus {
-        &::after {
-            box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
-        }
-    }
-
-    &:active {
-        transform: scale(0.97);
-        background-color: transparent;
-
-        .ffe-button__icon {
-            background-color: var(
-                --ffe-color-component-button-secondary-fill-pressed
+        &:focus,
+        &:visited {
+            color: var(
+                --ffe-color-component-button-secondary-foreground-default
             );
+            background-color: var(
+                --ffe-color-component-button-secondary-fill-hover
+            );
+        }
 
-            --icon-border-color: var(--ffe-color-foreground-emphasis);
+        &:hover,
+        &:focus {
+            .ffe-button__icon {
+                transform: translateX(4px);
+            }
         }
     }
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
+    &--expanded {
+        &.ffe-button--sm {
+            padding: var(--padding-sm);
+        }
+        &.ffe-button--md {
+            padding: var(--padding-md);
+        }
+        &.ffe-button--lg {
+            padding: var(--padding-lg);
+        }
+    }
+
+    &--task {
+        --text-color: var(--ffe-color-foreground-emphasis);
+        background: transparent;
+        border-radius: 1.75rem;
+        border: none;
+        box-shadow: none;
+        color: var(--text-color);
+        display: inline-block;
+        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm)
+            var(--ffe-spacing-2xs) var(--ffe-spacing-2xs);
+        text-align: left;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        width: auto;
+
+        :where(.ffe-button__icon) {
+            --icon-border-color: var(--ffe-color-foreground-emphasis);
+            --icon-background-color: transparent;
+            --icon-color: var(--ffe-color-foreground-emphasis);
+
+            border: 2px solid var(--icon-border-color);
+            background-color: var(--icon-background-color);
+            border-radius: 50%;
+            height: 45px;
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+            :where(.ffe-icons) {
+                color: var(--icon-color);
+            }
+        }
+
+        &:focus {
+            &::after {
+                box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
+            }
+        }
+
+        &:active {
+            transform: scale(0.97);
+            background-color: transparent;
+
             .ffe-button__icon {
-                --icon-background-color: var(
-                    --ffe-color-component-button-secondary-fill-hover
+                background-color: var(
+                    --ffe-color-component-button-secondary-fill-pressed
                 );
+
                 --icon-border-color: var(--ffe-color-foreground-emphasis);
             }
         }
-    }
-}
 
-.ffe-button--loading {
-    pointer-events: none;
-
-    .ffe-button__label {
-        transform: translateY(-32px);
-        opacity: 0;
-    }
-
-    .ffe-button__spinner {
-        opacity: 1;
-        transform: none;
-        visibility: visible;
-    }
-}
-
-.ffe-button__label {
-    align-items: center;
-    display: flex;
-    transition: transform var(--ffe-transition-duration) var(--ffe-ease);
-    gap: var(--ffe-spacing-xs);
-}
-
-.ffe-button__spinner {
-    inset: 0;
-    opacity: 0;
-    position: absolute;
-    transform: translateY(24px);
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
-    visibility: hidden;
-    display: grid;
-    place-items: center;
-
-    &::after {
-        animation: 1s linear infinite button-loading-spin;
-        border: 3px solid currentcolor;
-        border-radius: 50%;
-        border-top-color: transparent;
-        content: '';
-        display: block;
-        height: 1.375rem;
-        aspect-ratio: 1;
-
-        @keyframes button-loading-spin {
-            from {
-                transform: none;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                .ffe-button__icon {
+                    --icon-background-color: var(
+                        --ffe-color-component-button-secondary-fill-hover
+                    );
+                    --icon-border-color: var(--ffe-color-foreground-emphasis);
+                }
             }
-            to {
-                transform: rotate(360deg);
+        }
+    }
+
+    &--loading {
+        pointer-events: none;
+
+        .ffe-button__label {
+            transform: translateY(-32px);
+            opacity: 0;
+        }
+
+        .ffe-button__spinner {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+    }
+
+    &__label {
+        align-items: center;
+        display: flex;
+        transition: transform var(--ffe-transition-duration) var(--ffe-ease);
+        gap: var(--ffe-spacing-xs);
+    }
+
+    &__spinner {
+        inset: 0;
+        opacity: 0;
+        position: absolute;
+        transform: translateY(24px);
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        visibility: hidden;
+        display: grid;
+        place-items: center;
+
+        &::after {
+            animation: 1s linear infinite button-loading-spin;
+            border: 3px solid currentcolor;
+            border-radius: 50%;
+            border-top-color: transparent;
+            content: '';
+            display: block;
+            height: 1.375rem;
+            aspect-ratio: 1;
+
+            @keyframes button-loading-spin {
+                from {
+                    transform: none;
+                }
+                to {
+                    transform: rotate(360deg);
+                }
             }
         }
     }
