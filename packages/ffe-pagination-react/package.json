@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-pagination-react",
-    "version": "1.2.54",
+    "version": "1.2.55",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -27,7 +27,7 @@
     "dependencies": {
         "@sb1/ffe-buttons-react": "^24.0.47",
         "@sb1/ffe-core-react": "^9.1.24",
-        "@sb1/ffe-dropdown-react": "^8.0.47",
+        "@sb1/ffe-dropdown-react": "^8.0.48",
         "@sb1/ffe-icons-react": "^11.0.20",
         "@sb1/ffe-pagination": "^3.0.11"
     },

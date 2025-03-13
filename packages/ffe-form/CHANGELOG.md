@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.10...@sb1/ffe-form@32.0.11) (2025-03-13)
+
+
+### Bug Fixes
+
+* **ffe-form:** oppdatert styling på radioblock ([e267f21](https://github.com/SpareBank1/designsystem/commit/e267f2164b0abd12914bf40d86dc930415c25a0c))
+
+
+
+
+
 ## [32.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.9...@sb1/ffe-form@32.0.10) (2025-03-13)
 
 
