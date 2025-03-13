@@ -58,10 +58,14 @@ export const DatepickerProvider: React.FC<Props> = ({
     );
 
     useEffect(() => {
-        setDay(newDate ? newDate.date : null);
-        setMonth(newDate ? newDate.month + 1 : null);
-        setYear(newDate ? newDate.year : null);
-        setCalendarActiveDate(newDate?.toString() ?? '');
+        const newActiveDate = newDate?.toString() ?? '';
+        if (calendarActiveDate !== newActiveDate) {
+            setDay(newDate ? newDate.date : null);
+            setMonth(newDate ? newDate.month + 1 : null);
+            setYear(newDate ? newDate.year : null);
+            setCalendarActiveDate(newDate?.toString() ?? '');
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [newDate]);
 
     return (

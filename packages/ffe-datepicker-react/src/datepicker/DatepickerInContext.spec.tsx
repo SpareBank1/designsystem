@@ -37,7 +37,7 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
         expect(datepicker.getValue()).toStrictEqual('01.02.2024');
     });
 
-    it.skip('datepicker can be updated by testing functions', async () => {
+    it('datepicker can be updated by testing functions', async () => {
         renderDatePicker({ value: '01.01.2024' });
 
         const datepicker = getDatepickerByLabelText('Datovelger');
