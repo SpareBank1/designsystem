@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.1.17...@sb1/ffe-header@22.2.0) (2025-03-13)
+
+
+### Features
+
+* **ffe-header:** legge til semantiske farger ([05129d5](https://github.com/SpareBank1/designsystem/commit/05129d5dc4d1cba0d9ac703ed03493e8e5e0e01c))
+
+
+
+
+
 ## [22.1.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.1.16...@sb1/ffe-header@22.1.17) (2025-03-12)
 
 **Note:** Version bump only for package @sb1/ffe-header
