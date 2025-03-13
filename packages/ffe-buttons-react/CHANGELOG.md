@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.0.47...@sb1/ffe-buttons-react@24.1.0) (2025-03-13)
+
+
+### Features
+
+* **ffe-buttons-react:** flere knappestørrelser ([dbac04d](https://github.com/SpareBank1/designsystem/commit/dbac04d9d6c2cdc562af84005f2e698fb7a4222e))
+
+
+
+
+
 ## [24.0.47](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.0.46...@sb1/ffe-buttons-react@24.0.47) (2025-03-12)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

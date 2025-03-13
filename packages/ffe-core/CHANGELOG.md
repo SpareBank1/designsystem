@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [30.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.1.2...@sb1/ffe-core@30.1.3) (2025-03-13)
+
+
+### Bug Fixes
+
+* **ffe-core:** (liten) ny knappe-font-størrelse ([769b3c3](https://github.com/SpareBank1/designsystem/commit/769b3c36510b4ea5958a4b28ed767d227620d287))
+
+
+
+
+
 ## [30.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.1.1...@sb1/ffe-core@30.1.2) (2025-03-12)
 
 **Note:** Version bump only for package @sb1/ffe-core

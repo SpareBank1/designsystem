@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@21.0.5...@sb1/ffe-buttons@21.1.0) (2025-03-13)
+
+
+### Features
+
+* **ffe-buttons:** flere knappestørrelser ([c6349c9](https://github.com/SpareBank1/designsystem/commit/c6349c9414adfbfc7a6ff58b7e47461a6abf9020))
+
+
+
+
+
 ## [21.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@21.0.4...@sb1/ffe-buttons@21.0.5) (2025-03-12)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
