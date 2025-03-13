@@ -1,3 +1,10 @@
+.ffe-loading-spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--ffe-color-foreground-default);
+}
+
 .ffe-loading-spinner {
     display: inline-block;
     vertical-align: middle;
@@ -5,10 +12,10 @@
     &::before {
         content: ' ';
         display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 3px solid var(--ffe-color-foreground-emphasis);
-        border-top-color: transparent;
+        width: 30px;
+        height: 30px;
+        border: 3px solid var(--ffe-color-fill-primary-default);
+        border-top-color: var(--ffe-color-fill-primary-subtle);
         border-radius: 50%;
         animation: spin 1s linear infinite;
 
@@ -35,9 +42,9 @@
     }
 
     &--large::before {
-        border-width: 3px;
-        height: 40px;
-        width: 40px;
+        border-width: 5px;
+        height: 60px;
+        width: 60px;
     }
 
     &--immediate::before {
