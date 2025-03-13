@@ -22,6 +22,11 @@ const meta: Meta<typeof ActionButton<any>> = {
                 custom: Custom,
             },
         },
+        size: {
+            options: ['lg', 'md', 'sm'],
+            control: { type: 'radio' },
+            description: "Størrelse på knappen, 'md' default",
+        },
     },
 };
 export default meta;
@@ -34,5 +39,32 @@ export const Standard: Story = {
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
-    render: args => <ActionButton {...args}>Actionknapp</ActionButton>,
+    render: args => {
+        return (
+            <div className="ffe-button-display-group">
+                <ActionButton {...args}>Actionknapp</ActionButton>
+            </div>
+        );
+    },
+};
+
+export const DifferentSizes: Story = {
+    args: {
+        as: 'button',
+        ariaLoadingMessage: 'Vennligst vent...',
+        isLoading: false,
+    },
+    render: args => {
+        return (
+            <div className="ffe-button-display-group">
+                <ActionButton {...args} size="lg">
+                    Actionknapp
+                </ActionButton>
+                <ActionButton {...args}>Actionknapp</ActionButton>
+                <ActionButton {...args} size="sm">
+                    Actionknapp
+                </ActionButton>
+            </div>
+        );
+    },
 };

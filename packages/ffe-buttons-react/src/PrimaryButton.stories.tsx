@@ -22,6 +22,11 @@ const meta: Meta<typeof PrimaryButton<any>> = {
                 custom: Custom,
             },
         },
+        size: {
+            options: ['lg', 'md', 'sm'],
+            control: { type: 'radio' },
+            description: "Størrelse på knappen, 'md' default",
+        },
     },
 };
 export default meta;
@@ -34,5 +39,24 @@ export const Standard: Story = {
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
-    render: args => <PrimaryButton {...args}>Primærknapp</PrimaryButton>,
+    render: args => <PrimaryButton {...args}>Primary Button</PrimaryButton>,
+};
+
+export const DifferentSizes: Story = {
+    args: {
+        as: 'button',
+        ariaLoadingMessage: 'Vennligst vent...',
+        isLoading: false,
+    },
+    render: args => (
+        <div className="ffe-button-display-group">
+            <PrimaryButton {...args} size="lg">
+                Stor knapp
+            </PrimaryButton>
+            <PrimaryButton {...args}>Default knapp</PrimaryButton>
+            <PrimaryButton {...args} size="sm">
+                Liten knapp
+            </PrimaryButton>
+        </div>
+    ),
 };
