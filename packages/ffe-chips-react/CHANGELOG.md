@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.15...@sb1/ffe-chips-react@2.0.16) (2025-03-14)
+
+
+### Bug Fixes
+
+* **ffe-chips-react:** legger til ikon på chip selected ([884e002](https://github.com/SpareBank1/designsystem/commit/884e002e23cea91d626b53a4eef105dade9611c5))
+
+
+
+
+
 ## [2.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.14...@sb1/ffe-chips-react@2.0.15) (2025-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-chips-react

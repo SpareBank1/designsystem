@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.12...@sb1/ffe-form@32.0.13) (2025-03-14)
+
+
+### Bug Fixes
+
+* **ffe-form:** semantiske fargerg fixes på checkbox og dropdown ([027e456](https://github.com/SpareBank1/designsystem/commit/027e456e039339243543ff81cf1cb8f11f2092d2))
+
+
+
+
+
 ## [32.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.11...@sb1/ffe-form@32.0.12) (2025-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-form

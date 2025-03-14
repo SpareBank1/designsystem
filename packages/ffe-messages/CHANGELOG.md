@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.14...@sb1/ffe-messages@2.0.15) (2025-03-14)
+
+
+### Bug Fixes
+
+* **ffe-messages:** fix semantiske farger og ikon-alignment context message ([09b53d6](https://github.com/SpareBank1/designsystem/commit/09b53d6c230bcb2158684d52a3d96980db0e4540))
+
+
+
+
+
 ## [2.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.13...@sb1/ffe-messages@2.0.14) (2025-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-messages
