@@ -25,7 +25,7 @@ export const Spinner: React.FC<SpinnerProps> = ({
 }) => (
     <div
         aria-live="assertive"
-        className={className}
+        className={classNames('ffe-loading-spinner-container', className)}
         {...rest}
         data-testid="spinner-container"
     >

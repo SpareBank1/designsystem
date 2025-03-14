@@ -51,7 +51,7 @@
 
     &::before {
         background: var(--ffe-color-surface-primary-default);
-        border: 1px solid var(--ffe-color-foreground-subtle);
+        border: var(--ffe-g-border-width) solid var(--ffe-color-foreground-subtle);
         border-radius: calc(var(--ffe-g-border-radius) / 2);
         height: 20px;
         width: 20px;
@@ -100,14 +100,21 @@
 
     &:focus + .ffe-checkbox::before,
     &:focus-visible + .ffe-checkbox::before {
-        border: 1px solid var(--ffe-color-border-primary-selected); // Changed border width to 1px
-        box-shadow: 0 0 0 1px var(--ffe-color-border-primary-selected); // Changed box-shadow width to 1px
+        border: var(--ffe-g-border-width) solid var(--ffe-color-border-primary-selected);
+        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-primary-selected);
     }
 
     &:active + .ffe-checkbox {
         &::before {
             border-color: var(--ffe-color-border-primary-default);
             background: var(--ffe-color-surface-primary-default-pressed);
+        }
+    }
+
+    &:active:checked + .ffe-checkbox {
+        &::before {
+            border-color: var(--ffe-color-border-primary-selected);
+            background: var(--ffe-color-fill-primary-pressed);
         }
     }
 
