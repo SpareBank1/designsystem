@@ -22,4 +22,3 @@ export {
 } from './typography/PreformattedText';
 export { SmallText, SmallTextProps } from './typography/SmallText';
 export { StrongText, StrongTextProps } from './typography/StrongText';
-export { Wave, WaveProps } from './Wave';
