@@ -1,0 +1,1 @@
+import{R as o}from"./index-eCxJ45ll.js";import{B as e}from"./BaseButton-D2L3TWsj.js";import{f as a}from"./fixedForwardRef-Cb2PomjO.js";function i(r,t){return o.createElement(e,{...r,ref:t,buttonType:"primary"})}const m=a(i);m.__docgenInfo={description:"",methods:[],displayName:"PrimaryButton"};export{m as P};
