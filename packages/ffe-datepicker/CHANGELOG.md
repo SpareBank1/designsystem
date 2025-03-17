@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.17...@sb1/ffe-datepicker@14.0.18) (2025-03-17)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** Highlight active datefield ([364b068](https://github.com/SpareBank1/designsystem/commit/364b06809018209e75600483b4cd78caad83c1fc))
+
+
+
+
+
 ## [14.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.16...@sb1/ffe-datepicker@14.0.17) (2025-03-14)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

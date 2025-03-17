@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.7...@sb1/ffe-datepicker-react@10.2.8) (2025-03-17)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** Fix bug with reacecondition with calendar input ([e6cf5c2](https://github.com/SpareBank1/designsystem/commit/e6cf5c2cd2af4cc159591b94c7e631d736506452))
+* **ffe-datepicker-react:** Get input to work with user adding 0 ([2b284e0](https://github.com/SpareBank1/designsystem/commit/2b284e0c43e94b6f679e191404e451bb5771af2c))
+
+
+
+
+
 ## [10.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.6...@sb1/ffe-datepicker-react@10.2.7) (2025-03-14)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

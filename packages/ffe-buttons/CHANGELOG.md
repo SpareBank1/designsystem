@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@21.1.0...@sb1/ffe-buttons@21.2.0) (2025-03-17)
+
+
+### Features
+
+* **ffe-buttons:** iconbuttons ([018f455](https://github.com/SpareBank1/designsystem/commit/018f455a9da7408f72556af4a1e456bffcfd126f))
+
+
+
+
+
 # [21.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@21.0.5...@sb1/ffe-buttons@21.1.0) (2025-03-13)
 
 

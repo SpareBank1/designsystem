@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.1.0...@sb1/ffe-buttons-react@24.2.0) (2025-03-17)
+
+
+### Features
+
+* **ffe-buttons-react:** IconButtons ([32d68c4](https://github.com/SpareBank1/designsystem/commit/32d68c4702e4841905e285cbf9ddf6d2cbd916d4))
+
+
+
+
+
 # [24.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.0.47...@sb1/ffe-buttons-react@24.1.0) (2025-03-13)
 
 

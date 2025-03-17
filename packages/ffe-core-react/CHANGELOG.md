@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@9.1.25...@sb1/ffe-core-react@10.0.0) (2025-03-17)
+
+
+### Features
+
+* **ffe-core-react:** fjerner bølgen fra core ([258dd07](https://github.com/SpareBank1/designsystem/commit/258dd0745225da33851e023d489ae8d8d4f43896))
+
+
+### BREAKING CHANGES
+
+* **ffe-core-react:** bølge med nye farger flyttet til ffe-shapes
+
+
+
+
+
 ## [9.1.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@9.1.24...@sb1/ffe-core-react@9.1.25) (2025-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-core-react

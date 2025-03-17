@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [31.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@31.1.15...@sb1/ffe-account-selector-react@31.2.0) (2025-03-17)
+
+
+### Features
+
+* **ffe-account-selector-react:** oppdater react-custom-scrollbars ([72e7023](https://github.com/SpareBank1/designsystem/commit/72e70231fa23337d08c903fac18ee25d498a5bb8))
+
+
+
+
+
 ## [31.1.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@31.1.14...@sb1/ffe-account-selector-react@31.1.15) (2025-03-14)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

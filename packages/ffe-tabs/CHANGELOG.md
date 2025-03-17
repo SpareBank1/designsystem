@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@15.0.12...@sb1/ffe-tabs@15.0.13) (2025-03-17)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** fix semantiske farger pressed state tabs ([ceff4d2](https://github.com/SpareBank1/designsystem/commit/ceff4d28c3da0259acf49efb3aa63659dae698bd))
+
+
+
+
+
 ## [15.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@15.0.11...@sb1/ffe-tabs@15.0.12) (2025-03-14)
 
 

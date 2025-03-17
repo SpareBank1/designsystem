@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [31.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.1.3...@sb1/ffe-core@31.0.0) (2025-03-17)
+
+
+### Features
+
+* **ffe-core:** bølgen dratt ut i ny pakke ffe-shapes ([9b14be8](https://github.com/SpareBank1/designsystem/commit/9b14be83f1f5cad907934c2e3bb80c7e7df64707))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** nye farger og ny pakke på bølgen
+
+
+
+
+
 ## [30.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.1.2...@sb1/ffe-core@30.1.3) (2025-03-13)
 
 
