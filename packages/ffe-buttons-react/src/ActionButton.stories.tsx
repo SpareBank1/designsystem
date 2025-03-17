@@ -1,6 +1,12 @@
 import React from 'react';
 import { ActionButton } from './ActionButton';
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Icon } from '@sb1/ffe-icons-react';
+import {
+    addReactionIconLg,
+    addReactionIconMd,
+    addReactionIconSm,
+} from './assets/IconExamples';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -67,4 +73,26 @@ export const DifferentSizes: Story = {
             </div>
         );
     },
+};
+
+export const IconOnly: Story = {
+    args: {
+        as: 'button',
+        ariaLoadingMessage: 'Vennligst vent...',
+        isLoading: false,
+        iconOnly: true,
+    },
+    render: args => (
+        <div className="ffe-button-display-group">
+            <ActionButton {...args} size="lg">
+                <Icon fileUrl={addReactionIconLg} size="lg" />
+            </ActionButton>
+            <ActionButton {...args} size="md">
+                <Icon fileUrl={addReactionIconMd} size="md" />
+            </ActionButton>
+            <ActionButton {...args} size="sm">
+                <Icon fileUrl={addReactionIconSm} size="sm" />
+            </ActionButton>
+        </div>
+    ),
 };

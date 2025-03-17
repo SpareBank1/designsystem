@@ -1,6 +1,12 @@
 import React from 'react';
 import { SecondaryButton } from './SecondaryButton';
 import type { StoryObj, Meta } from '@storybook/react';
+import { Icon } from '@sb1/ffe-icons-react';
+import {
+    addReactionIconLg,
+    addReactionIconMd,
+    addReactionIconSm,
+} from './assets/IconExamples';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -62,6 +68,28 @@ export const DifferentSizes: Story = {
             <SecondaryButton {...args}>Sekundærknapp</SecondaryButton>
             <SecondaryButton {...args} size="sm">
                 Sekundærknapp
+            </SecondaryButton>
+        </div>
+    ),
+};
+
+export const IconOnly: Story = {
+    args: {
+        as: 'button',
+        ariaLoadingMessage: 'Vennligst vent...',
+        isLoading: false,
+        iconOnly: true,
+    },
+    render: args => (
+        <div className="ffe-button-display-group">
+            <SecondaryButton {...args} size="lg">
+                <Icon fileUrl={addReactionIconLg} size="lg" />
+            </SecondaryButton>
+            <SecondaryButton {...args} size="md">
+                <Icon fileUrl={addReactionIconMd} size="md" />
+            </SecondaryButton>
+            <SecondaryButton {...args} size="sm">
+                <Icon fileUrl={addReactionIconSm} size="sm" />
             </SecondaryButton>
         </div>
     ),
