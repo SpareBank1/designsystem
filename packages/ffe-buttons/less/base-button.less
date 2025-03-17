@@ -5,6 +5,7 @@
     --padding-sm: calc(var(--ffe-spacing-2xs) - var(--border-width));
     --padding-md: calc(var(--ffe-spacing-xs) - var(--border-width));
     --padding-lg: calc(12px - var(--border-width));
+    --icon-only-color: var(--ffe-color-component-button-action-foreground-default);
 
     align-items: center;
     appearance: none;
@@ -72,20 +73,46 @@
         display: block;
     }
 
+    &--icon-only {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ffe-icons {
+            background-color: var(--icon-only-color);
+        }
+    }
+
     &--sm {
         padding: var(--padding-sm) 12px;
         font-size: var(--ffe-fontsize-button-sm);
+
+        &.ffe-button--icon-only {
+            padding: var(--padding-sm);
+        }
     }
 
     &--md {
         padding: var(--padding-md) var(--ffe-spacing-sm);
+
+        &.ffe-button--icon-only {
+            padding: var(--padding-md);
+        }
     }
 
     &--lg {
         padding: var(--padding-lg) var(--ffe-spacing-md);
+
+        &.ffe-button--icon-only {
+            padding: var(--padding-md); //Md for å kompansere for hvor stort lg-ikonet er i forhold til lg-knappen
+        }
     }
 
     &--action {
+        --icon-only-color: var(
+            --ffe-color-component-button-action-foreground-default
+        );
+
         background-color: var(--ffe-color-component-button-action-fill-default);
         color: var(--ffe-color-component-button-action-foreground-default);
 
@@ -114,6 +141,9 @@
             --ffe-color-component-button-primary-fill-default
         );
         --text-color: var(
+            --ffe-color-component-button-primary-foreground-default
+        );
+        --icon-only-color: var(
             --ffe-color-component-button-primary-foreground-default
         );
 
@@ -150,6 +180,9 @@
             --ffe-color-component-button-secondary-border-default
         );
         --text-color: var(
+            --ffe-color-component-button-secondary-foreground-default
+        );
+        --icon-only-color: var(
             --ffe-color-component-button-secondary-foreground-default
         );
 
