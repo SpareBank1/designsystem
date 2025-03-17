@@ -38,6 +38,10 @@
         }
     }
 
+    &:active {
+        background-color: var(--ffe-color-fill-primary-subtle-pressed);
+    }
+
     &--selected {
         background-color: var(--ffe-color-fill-primary-selected);
         color: var(--ffe-color-foreground-on-fill-default);
@@ -46,7 +50,7 @@
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 border-color: transparent;
-                background-color: var(--ffe-color-fill-primary-hover);
+                background-color: var(--ffe-color-fill-primary-selected-hover);
                 color: var(--ffe-color-foreground-on-fill-default);
             }
         }
@@ -56,13 +60,12 @@
             position: relative;
             overflow: unset;
             border-color: var(--ffe-color-border-interactive-focus);
-            background-color: var(--ffe-color-fill-primary-hover);
+            background-color: var(--ffe-color-fill-primary-selected-hover);
         }
-    }
 
-    &:active {
-        background-color: var(--ffe-color-fill-primary-subtle-pressed);
-        z-index: 2;
+        &:active {
+            background-color: var(--ffe-color-fill-primary-selected-pressed);
+        }
     }
 
     @media (min-width: @breakpoint-sm) {
