@@ -1,0 +1,90 @@
+//DEPRECATED: Use ffe-core/less/waves.less instead
+@import (reference) 'breakpoints';
+@import 'colors';
+
+.ffe-wave {
+    position: relative;
+    width: 100%;
+
+    &__content {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+    }
+
+    &__wave {
+        mask-repeat: repeat-x;
+        min-height: 60px;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 479.9 60' style='enable-background:new 0 0 479.9 148' xml:space='preserve'%3E%3Cpath d='M0 530V0c60.7 0 91.6 13.8 121.4 27.1 30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C387.4 13.8 418.2 0 478.9 0s91.6 13.8 121.4 27.1c30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C866.3 13.8 897.1 0 957.8 0s91.6 13.8 121.4 27.1c30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C1345.2 13.8 1376 0 1436.7 0c60.7 0 91.6 13.8 121.4 27.1 30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C1824.1 13.8 1854.9 0 1915.7 0v530'/%3E%3C/svg%3E");
+        mask-size: 480px;
+
+        @media (min-width: @breakpoint-sm) {
+            min-height: 119px;
+            mask-position: 812px;
+            mask-size: 950px;
+        }
+
+        @media (min-width: @breakpoint-lg) {
+            min-height: 250px;
+            mask-position: 1931px;
+            mask-size: 2004px;
+        }
+
+        &--flip {
+            rotate: 180deg;
+        }
+    }
+
+    // Tilgjengelige farger
+    &--bg-hvit {
+        background-color: var(--ffe-farge-hvit);
+    }
+
+    &--bg-frost-30 {
+        background-color: @ffe-farge-frost-30;
+    }
+
+    &--bg-sand-30 {
+        background-color: @ffe-farge-sand-30;
+    }
+
+    &--bg-sand-70 {
+        background-color: @ffe-farge-sand-70;
+    }
+
+    &--bg-syrin-30 {
+        background-color: @ffe-farge-syrin-30;
+    }
+
+    &--bg-syrin-70 {
+        background-color: @ffe-farge-syrin-70;
+    }
+
+    &--bg-vann {
+        background-color: @ffe-farge-vann;
+    }
+
+    &--bg-vann-30 {
+        background-color: @ffe-farge-vann-30;
+    }
+
+    &--bg-fjell {
+        background-color: @ffe-farge-fjell;
+    }
+
+    &--dm-bg-svart {
+        .regard-color-scheme-preference & {
+            @media (prefers-color-scheme: dark) {
+                background-color: var(--ffe-farge-svart);
+            }
+        }
+    }
+
+    &--dm-bg-natt {
+        .regard-color-scheme-preference & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-natt;
+            }
+        }
+    }
+}
