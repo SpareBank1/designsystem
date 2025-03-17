@@ -1,0 +1,28 @@
+{
+    "name": "@sb1/ffe-shapes",
+    "license": "MIT",
+    "version": "1.0.0",
+    "author": "SpareBank 1",
+    "files": [
+        "less",
+        "css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "lint": "ffe-buildtool stylelint less/*.less",
+        "test": "npm run lint",
+        "build": "lessc less/wave.less css/shapes.css --autoprefix"
+    },
+    "dependencies": {
+        "@sb1/ffe-core": "^30.1.3"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.10.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
