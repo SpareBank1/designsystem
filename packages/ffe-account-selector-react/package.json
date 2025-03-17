@@ -35,7 +35,7 @@
         "@sb1/ffe-icons-react": "^11.0.20",
         "@sb1/ffe-searchable-dropdown-react": "^23.1.15",
         "classnames": "^2.3.1",
-        "react-custom-scrollbars-2": "^4.3.0"
+        "react-custom-scrollbars-4": "^4.5.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
