@@ -10,6 +10,7 @@ on:
         # Central European Summer Time (CEST): '0 7,10,12,14 * * 1-5'
         #
         - cron: '0 8,11,13,15 * * 1-5'
+    workflow_dispatch:
 
 jobs:
     merge:
