@@ -1,6 +1,12 @@
+import { Icon } from '@sb1/ffe-icons-react';
 import React from 'react';
 import { PrimaryButton } from './PrimaryButton';
 import type { StoryObj, Meta } from '@storybook/react';
+import {
+    addReactionIconLg,
+    addReactionIconMd,
+    addReactionIconSm,
+} from './assets/IconExamples';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -56,6 +62,28 @@ export const DifferentSizes: Story = {
             <PrimaryButton {...args}>Default knapp</PrimaryButton>
             <PrimaryButton {...args} size="sm">
                 Liten knapp
+            </PrimaryButton>
+        </div>
+    ),
+};
+
+export const IconOnly: Story = {
+    args: {
+        as: 'button',
+        ariaLoadingMessage: 'Vennligst vent...',
+        isLoading: false,
+        iconOnly: true,
+    },
+    render: args => (
+        <div className="ffe-button-display-group">
+            <PrimaryButton {...args} size="lg">
+                <Icon fileUrl={addReactionIconLg} size="lg" />
+            </PrimaryButton>
+            <PrimaryButton {...args} size="md">
+                <Icon fileUrl={addReactionIconMd} size="md" />
+            </PrimaryButton>
+            <PrimaryButton {...args} size="sm">
+                <Icon fileUrl={addReactionIconSm} size="sm" />
             </PrimaryButton>
         </div>
     ),

@@ -13,6 +13,7 @@ export type BaseButtonProps<As extends ElementType = 'button'> =
         rightIcon?: ReactElement;
         /** Default md. */
         size?: 'sm' | 'md' | 'lg';
+        iconOnly?: boolean;
     };
 /**
  * Internal component
@@ -32,6 +33,7 @@ function BaseButtonWithForwardRef<As extends ElementType>(
         leftIcon,
         rightIcon,
         size = 'md',
+        iconOnly = false,
         ariaLoadingMessage,
         children,
         ...rest
@@ -48,6 +50,7 @@ function BaseButtonWithForwardRef<As extends ElementType>(
                 'ffe-button',
                 `ffe-button--${buttonType}`,
                 `ffe-button--${size}`,
+                { 'ffe-button--icon-only': iconOnly },
                 { 'ffe-button--loading': isLoading && supportsSpinner },
                 className,
             )}

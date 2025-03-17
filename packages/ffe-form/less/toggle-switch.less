@@ -112,4 +112,8 @@
             --ffe-color-component-toggleswitch-fill-default-pressed
         );
     }
+
+    &__input:checked:active + &__label &__switch::before {
+        background: var(--ffe-color-component-toggleswitch-fill-selected-pressed)
+    }
 }
