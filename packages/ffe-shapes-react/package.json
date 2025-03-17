@@ -1,0 +1,41 @@
+{
+    "name": "@sb1/ffe-shapes-react",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool tsc",
+        "build:es": "ffe-buildtool tsc --es",
+        "lint": "eslint src --ext ts,tsx",
+        "lint:fix": "eslint src --fix --ext ts,tsx",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "@sb1/ffe-shapes": "^1.0.0"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.10.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "peerDependencies": {
+        "react": ">=18.2.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
