@@ -262,6 +262,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
             className={classNames('ffe-datepicker', {
                 'ffe-datepicker--full-width': fullWidth,
                 'ffe-input-group--message': hasMessage,
+                'ffe-datepicker--invalid': ariaInvalid(),
             })}
             data-testid="date-picker"
             onClick={e => {
