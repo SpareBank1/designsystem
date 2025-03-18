@@ -18,8 +18,8 @@
         "unused": "eslint-find-rules -u"
     },
     "devDependencies": {
-        "eslint": "^8.57.0",
-        "eslint-plugin-import": "^2.29.1"
+        "eslint": "^9.22.0",
+        "eslint-plugin-import": "^2.31.0"
     },
     "peerDependencies": {
         "eslint": ">=2",
