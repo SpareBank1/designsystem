@@ -17,8 +17,10 @@
 
     &--hide-in-dark-mode {
         @media (prefers-color-scheme: dark) {
-            .ffe-wave__wave {
-                display: none;
+            .regard-color-scheme-preference & {
+                .ffe-wave__wave {
+                    display: none;
+                }
             }
         }
     }
@@ -58,4 +60,3 @@
     }
 }
 /* stylelint-enable selector-class-pattern */
-
