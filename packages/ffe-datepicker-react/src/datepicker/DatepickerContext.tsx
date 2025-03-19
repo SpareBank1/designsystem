@@ -14,6 +14,7 @@ interface DatepickerContextInterface {
     locale: Locale;
     calendarActiveDate?: string;
     setCalendarActiveDate: (date: string) => void;
+    setLastChangedValue: (date: string) => void;
 }
 
 export const DatepickerContext = createContext<DatepickerContextInterface>({
@@ -26,6 +27,7 @@ export const DatepickerContext = createContext<DatepickerContextInterface>({
     locale: 'nb',
     calendarActiveDate: '',
     setCalendarActiveDate: () => null,
+    setLastChangedValue: () => null,
 });
 
 interface Props {
@@ -57,16 +59,19 @@ export const DatepickerProvider: React.FC<Props> = ({
         newDate?.toString() ?? '',
     );
 
+    const [lastChangedValue, setLastChangedValue] = useState<string>(
+        value ?? '',
+    );
+
     useEffect(() => {
-        const newActiveDate = newDate?.toString() ?? '';
-        if (calendarActiveDate !== newActiveDate) {
+        if (value !== lastChangedValue) {
             setDay(newDate ? newDate.date : null);
             setMonth(newDate ? newDate.month + 1 : null);
             setYear(newDate ? newDate.year : null);
             setCalendarActiveDate(newDate?.toString() ?? '');
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [newDate]);
+    }, [value]);
 
     return (
         <DatepickerContext.Provider
@@ -115,6 +120,9 @@ export const DatepickerProvider: React.FC<Props> = ({
                     setCalendarActiveDate(date);
                 },
                 locale,
+                setLastChangedValue: val => {
+                    setLastChangedValue(val);
+                },
             }}
         >
             {children}
