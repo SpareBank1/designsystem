@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.8...@sb1/ffe-datepicker-react@10.2.9) (2025-03-20)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** fix for å få semantiske farger styling til å fungere bedre ([006c8d5](https://github.com/SpareBank1/designsystem/commit/006c8d5d5f3d0b5e7a1d2a4b43b0fb1ae2a1a41f))
+
+
+
+
+
 ## [10.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.7...@sb1/ffe-datepicker-react@10.2.8) (2025-03-17)
 
 

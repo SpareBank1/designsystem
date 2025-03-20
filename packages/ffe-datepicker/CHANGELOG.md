@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.18...@sb1/ffe-datepicker@14.0.19) (2025-03-20)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** datepicker semantiske farger styling ([de7ba70](https://github.com/SpareBank1/designsystem/commit/de7ba70ad14078efc19fc4c454f5ca66b5defe2d))
+
+
+
+
+
 ## [14.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.17...@sb1/ffe-datepicker@14.0.18) (2025-03-17)
 
 
