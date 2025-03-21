@@ -7,16 +7,36 @@ import { GroupCardElement } from './GroupCardElement';
 import { GroupCardFooter } from './GroupCardFooter';
 import { GroupCardTitle } from './GroupCardTitle';
 
-const meta: Meta<typeof GroupCard> = {
+const Custom: React.FC<React.ComponentProps<'div'>> = props => (
+    <div {...props}>
+        {`Custom `}
+        {props.children}
+    </div>
+);
+
+const meta: Meta<typeof GroupCard<any>> = {
     title: 'Komponenter/Cards/GroupCard',
     component: GroupCard,
+    argTypes: {
+        as: {
+            options: ['span', 'div', 'custom'],
+            mapping: {
+                div: 'div',
+                span: 'span',
+                custom: Custom,
+            },
+        },
+    },
 };
+
 export default meta;
 
-type Story = StoryObj<typeof GroupCard>;
+type Story = StoryObj<typeof GroupCard<any>>;
 
 export const Standard: Story = {
-    args: {},
+    args: {
+        as: 'div',
+    },
     render: args => (
         <GroupCard {...args}>
             <GroupCardTitle>
@@ -55,6 +75,55 @@ export const NoSeparator: Story = {
                 Dette er et element i GroupCard en linje mellom elementene
             </GroupCardElement>
             <GroupCardFooter>Footer</GroupCardFooter>
+        </GroupCard>
+    ),
+};
+
+export const AsList: Story = {
+    args: {
+        as: 'ul',
+    },
+    render: args => (
+        <GroupCard {...args}>
+            <GroupCardElement as={'li'}>
+                {({ CardAction, CardName, Title }: CardRenderProps) => (
+                    <>
+                        <CardName>Kortnavn</CardName>
+                        <Title>
+                            <CardAction href="https://design.sparebank1.no">
+                                Lenke men hele kortet er klikkbart
+                            </CardAction>
+                        </Title>
+                    </>
+                )}
+            </GroupCardElement>
+            <GroupCardElement as={'li'}>
+                Dette er ett ikke-klikkbart liste element i GroupCard
+            </GroupCardElement>
+            <GroupCardElement as={'li'}>
+                {({ CardAction, CardName, Title }: CardRenderProps) => (
+                    <>
+                        <CardName>Kortnavn</CardName>
+                        <Title>
+                            <CardAction href="https://design.sparebank1.no">
+                                Lenke men hele kortet er klikkbart
+                            </CardAction>
+                        </Title>
+                    </>
+                )}
+            </GroupCardElement>
+            <GroupCardElement as={'li'}>
+                {({ CardAction, CardName, Title }: CardRenderProps) => (
+                    <>
+                        <CardName>Kortnavn</CardName>
+                        <Title>
+                            <CardAction href="https://design.sparebank1.no">
+                                Lenke men hele kortet er klikkbart
+                            </CardAction>
+                        </Title>
+                    </>
+                )}
+            </GroupCardElement>
         </GroupCard>
     ),
 };

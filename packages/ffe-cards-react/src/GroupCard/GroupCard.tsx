@@ -1,10 +1,12 @@
 import classNames from 'classnames';
-import React, { ForwardedRef } from 'react';
+import React, { ElementType, ForwardedRef } from 'react';
 import { fixedForwardRef } from '../fixedForwardRef';
-import { BackgroundColor } from '../types';
+import { ComponentAsPropParams, BackgroundColor } from '../types';
 
-export interface GroupCardProps
-    extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
+export type GroupCardProps<As extends ElementType = 'div'> = Omit<
+    ComponentAsPropParams<As>,
+    'children'
+> & {
     /** The children of the GroupCard component */
     children: React.ReactNode;
     /**
@@ -22,20 +24,22 @@ export interface GroupCardProps
     bgDarkmodeColor?: never;
     /** No margin on card */
     noMargin?: boolean;
-}
+};
 
-function GroupCardWithForwardRef(
-    {
+function GroupCardWithForwardRef<As extends ElementType>(
+    props: GroupCardProps<As>,
+    ref: ForwardedRef<any>,
+) {
+    const {
         className,
         children,
         bgColor = 'primary',
         noMargin,
+        as: Comp = 'div',
         ...rest
-    }: GroupCardProps,
-    ref: ForwardedRef<any>,
-) {
+    } = props;
     return (
-        <div
+        <Comp
             className={classNames(
                 'ffe-group-card',
                 {
@@ -44,12 +48,12 @@ function GroupCardWithForwardRef(
                 },
                 className,
             )}
-            role="group"
+            role={Comp === 'div' && 'group'}
             {...rest}
             ref={ref}
         >
             {children}
-        </div>
+        </Comp>
     );
 }
 export const GroupCard = fixedForwardRef(GroupCardWithForwardRef);
