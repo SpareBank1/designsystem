@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-modals",
-    "version": "2.0.12",
+    "version": "2.0.13",
     "description": "Modals in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -18,7 +18,7 @@
         "build": "lessc less/modal.less css/modal.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^31.0.0"
+        "@sb1/ffe-core": "^31.0.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0"

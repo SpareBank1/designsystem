@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [31.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@31.0.0...@sb1/ffe-core@31.0.1) (2025-03-21)
+
+
+### Bug Fixes
+
+* **ffe-core:** legger tilbake bølgen som depricated for fikse byggfeil hos andre ([1cc8bf5](https://github.com/SpareBank1/designsystem/commit/1cc8bf579c5b167199d08e65950932bc4edc2a90))
+
+
+
+
+
 # [31.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@30.1.3...@sb1/ffe-core@31.0.0) (2025-03-17)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@10.0.0...@sb1/ffe-core-react@10.0.1) (2025-03-21)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** legger tilbake bølgen som depricated for å hindre byggfeil hos andre ([a5ac20a](https://github.com/SpareBank1/designsystem/commit/a5ac20a6a4dc106e2a07149b07d0dce635be763c))
+
+
+
+
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@9.1.25...@sb1/ffe-core-react@10.0.0) (2025-03-17)
 
 

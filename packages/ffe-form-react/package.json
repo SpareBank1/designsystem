@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-form-react",
-    "version": "23.2.8",
+    "version": "23.2.9",
     "description": "React component for form elements in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,8 +26,8 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-collapse-react": "^5.1.18",
-        "@sb1/ffe-form": "^32.0.14",
+        "@sb1/ffe-collapse-react": "^5.1.19",
+        "@sb1/ffe-form": "^32.0.15",
         "@sb1/ffe-icons-react": "^11.0.20",
         "classnames": "^2.3.1"
     },
