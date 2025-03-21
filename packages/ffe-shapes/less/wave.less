@@ -15,16 +15,6 @@
         width: 100%;
     }
 
-    &--hide-in-dark-mode {
-        @media (prefers-color-scheme: dark) {
-            .regard-color-scheme-preference & {
-                .ffe-wave__wave {
-                    display: none;
-                }
-            }
-        }
-    }
-
     &__wave {
         background-color: var(--ffe-color-background-default);
         mask-repeat: repeat-x;
@@ -44,19 +34,8 @@
             mask-size: 2004px;
         }
 
-        &--flip {
-            rotate: 180deg;
+        &--bg-subtle {
+            background-color: var(--ffe-color-background-subtle);
         }
     }
 }
-
-/* stylelint-disable selector-class-pattern */
-.dark-mode {
-    //Storybook specific
-    .ffe-wave--hide-in-dark-mode {
-        .ffe-wave__wave {
-            visibility: hidden;
-        }
-    }
-}
-/* stylelint-enable selector-class-pattern */

@@ -36,13 +36,6 @@ export const Position: Story = {
     render: args => <Wave {...args} />,
 };
 
-export const HideInDarkMode: Story = {
-    args: {
-        hideInDarkMode: true,
-    },
-    render: args => <Wave {...args} />,
-};
-
 export const LayoutExample: Story = {
     render: args => <WaveExample />,
 };
