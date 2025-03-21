@@ -10,8 +10,6 @@ export interface WaveProps {
     flip?: boolean;
     /** Set the background color of the wave container. */
     bgColor?: Color;
-    //** Hide the wave in dark mode */
-    hideInDarkMode?: boolean;
     /** Adds additional class */
     className?: string;
     children?: React.ReactNode;
@@ -21,7 +19,6 @@ export function Wave({
     position,
     flip,
     bgColor = 'default',
-    hideInDarkMode = false,
     children,
     className,
     ...rest
@@ -31,10 +28,11 @@ export function Wave({
             className={classNames(
                 'ffe-wave',
                 className,
-                { 'ffe-wave--hide-in-dark-mode': hideInDarkMode },
+                { 'ffe-accent-mode': flip },
+                { 'ffe-default-mode': !flip },
                 {
                     [`ffe-wave--bg-${bgColor}`]:
-                        bgColor && bgColor !== 'default',
+                        bgColor && bgColor !== 'default' && !flip,
                 },
             )}
         >
@@ -42,9 +40,15 @@ export function Wave({
                 <div className="ffe-wave__content">{children}</div>
             ) : null}
             <div
-                className={classNames('ffe-wave__wave', 'ffe-accent-mode', {
-                    'ffe-wave__wave--flip': flip,
-                })}
+                className={classNames(
+                    'ffe-wave__wave',
+                    { 'ffe-accent-mode': !flip },
+                    { 'ffe-default-mode': flip },
+                    {
+                        [`ffe-wave__wave--bg-${bgColor}`]:
+                            bgColor && bgColor !== 'default' && flip,
+                    },
+                )}
                 aria-hidden="true"
                 style={{
                     maskPosition: position,
