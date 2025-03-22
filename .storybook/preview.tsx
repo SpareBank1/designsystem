@@ -11,8 +11,9 @@ import {
     StrongText,
 } from '@sb1/ffe-core-react';
 import { BulletList, BulletListItem } from '@sb1/ffe-lists-react';
+import { TabGroup, Tab } from '@sb1/ffe-tabs-react';
 import type { Preview } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 import './main.less';
 import './preview.less';
 
@@ -61,38 +62,58 @@ const preview: Preview = {
     decorators: [
         (Story, context) => {
             const { scheme, accent } = context.globals;
-
+            const [activeTabId, setActiveTabId] = useState('defaultLight');
             return (
-                <div className="ffe-body-text">
-                    {(scheme === 'both' || scheme === 'light') &&
-                        (accent === 'both' || accent === 'default') && (
+                <>
+                    <TabGroup>
+                        <Tab
+                            selected={activeTabId === 'defaultLight'}
+                            onClick={() => setActiveTabId('defaultLight')}
+                        >
+                            Default Light
+                        </Tab>
+                        <Tab
+                            selected={activeTabId === 'accentLight'}
+                            onClick={() => setActiveTabId('accentLight')}
+                        >
+                            Accent Light
+                        </Tab>
+                        <Tab
+                            selected={activeTabId === 'defaultDark'}
+                            onClick={() => setActiveTabId('defaultDark')}
+                        >
+                            Default Dark
+                        </Tab>
+                        <Tab
+                            selected={activeTabId === 'accentDark'}
+                            onClick={() => setActiveTabId('accentDark')}
+                        >
+                            Accent Dark
+                        </Tab>
+                    </TabGroup>
+                    <div className="ffe-body-text">
+                        {activeTabId === 'defaultLight' && (
                             <div className="ffe-docs-content-container ">
-                                <Heading3>Light mode</Heading3>
                                 <Story />
                             </div>
                         )}
-                    {(scheme === 'both' || scheme === 'light') &&
-                        (accent === 'both' || accent === 'accent') && (
+                        {activeTabId === 'accentLight' && (
                             <div className="ffe-docs-content-container ffe-accent-mode">
-                                <Heading3>Light mode - Accent</Heading3>
                                 <Story />
                             </div>
                         )}
-                    {(scheme === 'both' || scheme === 'dark') &&
-                        (accent === 'both' || accent === 'default') && (
+                        {activeTabId === 'defaultDark' && (
                             <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference">
-                                <Heading3>Dark mode</Heading3>
                                 <Story />
                             </div>
                         )}
-                    {(scheme === 'both' || scheme === 'dark') &&
-                        (accent === 'both' || accent === 'accent') && (
+                        {activeTabId === 'accentDark' && (
                             <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference ffe-accent-mode">
-                                <Heading3>Dark mode - Accent</Heading3>
                                 <Story />
                             </div>
                         )}
-                </div>
+                    </div>
+                </>
             );
         },
     ],
