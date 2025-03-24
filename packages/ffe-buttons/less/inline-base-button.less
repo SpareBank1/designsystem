@@ -124,6 +124,9 @@
 .ffe-inline-button--tertiary {
     --icon-size-md: 1.5rem; // 24px
     --border-width: 2px;
+    --padding-sm: calc(var(--ffe-spacing-2xs) - var(--border-width));
+    --padding-md: calc(var(--ffe-spacing-xs) - var(--border-width));
+    --padding-lg: calc(12px - var(--border-width));
 
     align-content: center;
     color: var(--ffe-color-component-button-tertiary-foreground-default);
@@ -131,6 +134,31 @@
     padding: calc(var(--ffe-spacing-xs) - var(--border-width)) var(--ffe-spacing-sm);
     border: 2px solid transparent;
     line-height: calc(var(--icon-size-md) - var(--border-width));
+
+    &.ffe-inline-button--sm {
+        padding: var(--padding-sm) 12px;
+        font-size: var(--ffe-fontsize-button-sm);
+
+        &.ffe-inline-button--icon-only {
+            padding: var(--padding-sm);
+        }
+    }
+
+    &.ffe-inline-button--md {
+        padding: var(--padding-md) var(--ffe-spacing-sm);
+
+        &.ffe-inline-button--icon-only {
+            padding: var(--padding-md);
+        }
+    }
+
+    &.ffe-inline-button--lg {
+        padding: var(--padding-lg) var(--ffe-spacing-md);
+
+        &.ffe-inline-button--icon-only {
+            padding: var(--padding-md); //Md for å kompansere for hvor stort lg-ikonet er i forhold til lg-knappen
+        }
+    }
 
     .ffe-inline-button__icon {
         color: var(--ffe-color-component-button-tertiary-foreground-default);
@@ -142,6 +170,18 @@
             content: ' ';
             display: block;
             width: 100%;
+        }
+    }
+
+    &.ffe-inline-button--icon-only {
+        .ffe-inline-button__label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after {
+                display: none;
+            }
         }
     }
 
