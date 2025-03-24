@@ -2,7 +2,7 @@
     "name": "@sb1/ffe-symbols",
     "version": "4.0.14",
     "description": "Styling for tilpasning av material symbols til Sb1",
-    "main": "index.js",
+    "main": "ffe-symbol.css",
     "scripts": {
         "build": "lessc ffe-symbol-font-inline.less ffe-symbol.css",
         "lint": "ffe-buildtool stylelint *.less",
@@ -32,5 +32,6 @@
     "homepage": "https://github.com/SpareBank1/designsystem#readme",
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "type": "module"
 }

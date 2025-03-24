@@ -69,7 +69,6 @@ function updateSvgSize(svgContent, size) {
         const attrRegex = /(\w+)=["']([^"']+)["']/g;
         let match;
 
-        // eslint-disable-next-line no-cond-assign
         while ((match = attrRegex.exec(originalAttrs)) !== null) {
             const [, name, value] = match;
             if (name !== 'width' && name !== 'height') {

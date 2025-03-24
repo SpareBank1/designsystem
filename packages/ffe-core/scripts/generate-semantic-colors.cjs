@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const writeToFile = require('./lib/writeToFile');
-const generateChevronColors = require('./chevron');
+const writeToFile = require('./lib/writeToFile.cjs');
+const generateChevronColors = require('./chevron.cjs');
 
 const usedPrimitive = {};
 const usedSemantic = {};
