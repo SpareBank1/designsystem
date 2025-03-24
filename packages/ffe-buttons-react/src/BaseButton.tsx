@@ -11,8 +11,9 @@ export type BaseButtonProps<As extends ElementType = 'button'> =
         isLoading?: boolean;
         leftIcon?: ReactElement;
         rightIcon?: ReactElement;
-        /** Default md. */
+        /** Size of the button, default md. */
         size?: 'sm' | 'md' | 'lg';
+        /** Using only an icon, no label */
         iconOnly?: boolean;
     };
 /**

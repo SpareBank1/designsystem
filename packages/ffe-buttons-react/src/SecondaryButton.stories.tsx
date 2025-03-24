@@ -82,13 +82,25 @@ export const IconOnly: Story = {
     },
     render: args => (
         <div className="ffe-button-display-group">
-            <SecondaryButton {...args} size="lg">
+            <SecondaryButton
+                {...args}
+                size="lg"
+                aria-label="Stor sekundærknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconLg} size="lg" />
             </SecondaryButton>
-            <SecondaryButton {...args} size="md">
+            <SecondaryButton
+                {...args}
+                size="md"
+                aria-label="Vanlig sekundærknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconMd} size="md" />
             </SecondaryButton>
-            <SecondaryButton {...args} size="sm">
+            <SecondaryButton
+                {...args}
+                size="sm"
+                aria-label="Liten sekundærknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconSm} size="sm" />
             </SecondaryButton>
         </div>
