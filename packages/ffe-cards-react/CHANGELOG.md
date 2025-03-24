@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.0.13...@sb1/ffe-cards-react@19.1.0) (2025-03-24)
+
+
+### Features
+
+* **ffe-cards-react:** legger til at man kan bestemme html element på groupcard ([f18fac5](https://github.com/SpareBank1/designsystem/commit/f18fac585d210711ab8813f7e6756637f072fbcf))
+
+
+
+
+
 ## [19.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.0.12...@sb1/ffe-cards-react@19.0.13) (2025-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

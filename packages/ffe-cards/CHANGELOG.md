@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@22.0.13...@sb1/ffe-cards@22.1.0) (2025-03-24)
+
+
+### Features
+
+* **ffe-cards:** legger til styling for å ta hensyn til at groupCard kan være liste ([3c097a2](https://github.com/SpareBank1/designsystem/commit/3c097a2a3e82c3bf5a38e898123cb089ae3c3e38))
+
+
+
+
+
 ## [22.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@22.0.12...@sb1/ffe-cards@22.0.13) (2025-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-cards
