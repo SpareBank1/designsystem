@@ -47,7 +47,10 @@ export const SpinButton = React.forwardRef<HTMLSpanElement, SpinButtonProps>(
                     return;
                 }
                 const newValue = value?.toString().slice(0, -1);
-                onSpinButtonChange(newValue ? [parseInt(newValue)] : []);
+                history.current = newValue
+                    ? newValue.split('').map(Number)
+                    : [];
+                onSpinButtonChange(history.current);
             } else if (evt.key === 'ArrowUp') {
                 evt.preventDefault();
                 let newValue = (value ?? 0) + 1;
