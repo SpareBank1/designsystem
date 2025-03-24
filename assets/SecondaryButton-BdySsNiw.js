@@ -1,0 +1,1 @@
+import{R as e}from"./index-DQDNmYQF.js";import{B as r}from"./BaseButton-BW3EE16n.js";import{f as n}from"./fixedForwardRef-DqyCgkTx.js";function a(o,t){return e.createElement(r,{...o,ref:t,buttonType:"secondary"})}const d=n(a);d.__docgenInfo={description:"",methods:[],displayName:"SecondaryButton"};export{d as S};
