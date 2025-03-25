@@ -1,0 +1,5 @@
+import{j as t,M as e,C as m,a}from"./index-BHTi5saC.js";import{useMDXComponents as s}from"./index-DmqVK_gK.js";import{T as p,S as r}from"./TextArea.stories-BsUGTy7a.js";import"./iframe-xImKdcmc.js";import"./index-DQDNmYQF.js";import"./index-C8KIgodY.js";import"./index-DrriUsT5.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./index-QCImZZ3W.js";import"./InputGroup-CMZK5Wv7.js";import"./Tooltip-B8J4kvmt.js";import"./Icon-BqsuuMcG.js";import"./Collapse-BrKhsD1f.js";import"./Label-B7lv4noR.js";import"./ErrorFieldMessage-eNbkZ9Td.js";import"./BaseFieldMessage-Bp22b08z.js";function i(o){const n={h1:"h1",h2:"h2",...s(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(e,{of:p}),`
+`,t.jsx(n.h1,{id:"textarea",children:"TextArea"}),`
+`,t.jsx(n.h2,{id:"forhåndsvisning",children:"Forhåndsvisning"}),`
+`,t.jsx(m,{of:r}),`
+`,t.jsx(a,{of:r})]})}function F(o={}){const{wrapper:n}={...s(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(i,{...o})}):i(o)}export{F as default};
