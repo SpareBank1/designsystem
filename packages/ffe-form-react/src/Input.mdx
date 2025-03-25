@@ -19,3 +19,10 @@ Skillet på Standard og inline er mest relevant for utviklere. De ser helt like 
 
 <Canvas of={InputStories.Standard} />
 <Controls of={InputStories.Standard} />
+
+## Med feilmelding
+
+Sender man inn en string eller et `<ErrorFieldMessage>`-element til `fieldMessage` på `<InputGroup>` vil input-feltet rendres med `aria-invalid` og en feilmelding.
+
+<Canvas of={InputStories.FieldMessage} />
+<Controls of={InputStories.FieldMessage} />

@@ -129,6 +129,39 @@ const RadioButtonWithGroupTooltip = (args: any) => {
     );
 };
 
+const RadioButtonAriaInvalid = (args: any) => {
+    const [selected, setSelected] = useState(args.selectedValue);
+
+    return (
+        <RadioButtonInputGroup
+            label="Velg faktureringstype"
+            name="radio-button-invalid-demo"
+            onChange={e => setSelected(e.target.value)}
+            selectedValue={selected}
+            fieldMessage="Velg årlig fakturering"
+        >
+            {inputProps => (
+                <>
+                    <RadioButton
+                        value="monthly"
+                        aria-invalid="true"
+                        {...inputProps}
+                    >
+                        Månedlig fakturering
+                    </RadioButton>
+                    <RadioButton
+                        value="quarterly"
+                        aria-invalid="true"
+                        {...inputProps}
+                    >
+                        Kvartalsvis fakturering
+                    </RadioButton>
+                </>
+            )}
+        </RadioButtonInputGroup>
+    );
+};
+
 export const Standard: Story = {
     args: {
         selectedValue: 'bankkunde',
@@ -144,6 +177,15 @@ export const Inline: Story = {
     },
     render: function Render(args) {
         return <RadioButtonInlineWithGroup {...args} />;
+    },
+};
+
+export const AriaInvalid: Story = {
+    args: {
+        selectedValue: 'monthly',
+    },
+    render: function Render(args) {
+        return <RadioButtonAriaInvalid {...args} />;
     },
 };
 
