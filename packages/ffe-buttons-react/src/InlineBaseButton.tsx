@@ -14,6 +14,10 @@ export type InlineBaseButtonProps<As extends ElementType = 'button'> =
         leftIcon?: ReactElement;
         /** Icon shown to the right of the label */
         rightIcon?: ReactElement;
+        /** Size of the button, default md. */
+        size?: 'sm' | 'md' | 'lg';
+        /** Using only an icon, no label */
+        iconOnly?: boolean;
     };
 
 /**
@@ -30,6 +34,8 @@ function InlineBaseButtonWithForwardRef<As extends ElementType>(
         className,
         leftIcon,
         rightIcon,
+        size = 'md',
+        iconOnly = false,
         children,
         ...rest
     } = props;
@@ -38,8 +44,10 @@ function InlineBaseButtonWithForwardRef<As extends ElementType>(
         <Comp
             className={classNames(
                 'ffe-inline-button',
-                `ffe-inline-button--${buttonType}`,
                 className,
+                `ffe-inline-button--${size}`,
+                `ffe-inline-button--${buttonType}`,
+                { 'ffe-inline-button--icon-only': iconOnly },
             )}
             {...rest}
             ref={ref}

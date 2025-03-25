@@ -12,3 +12,21 @@ For lavt prioriterte handlinger, eller i situasjoner der du trenger å «linke»
 
 <Canvas of={TertiaryButtonStories.Standard} />
 <Controls of={TertiaryButtonStories.Standard} />
+
+
+## Forskjellige størrelser
+
+TertiaryButton tilbys i tre størrelser: `sm`, `md` og `lg`. Standardstørrelsen er `md`. Du kan endre størrelsen ved å
+sette `size`-propen til en av disse verdiene, altså `size="sm"`. Hvis du ikke sender inn noe, er størrelsen md.
+
+<Canvas of={TertiaryButtonStories.DifferentSizes} />
+
+## Ikon i stedet for tekst
+
+Hvis du kun vil bruke ikon på knappen, og ikke tekst, kan du sende inn `iconOnly="true"`. Det gjelder for alle størrelser,
+men du må selv sørge for å ha riktig størrelse på ikonet.
+**OBS: Legg ved `aria-label` når du bruker ikon uten tekst.**
+
+<Canvas of={TertiaryButtonStories.IconOnly} />
+<Controls of={TertiaryButtonStories.IconOnly} />
+

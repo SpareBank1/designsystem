@@ -64,11 +64,11 @@ export const DifferentSizes: Story = {
         return (
             <div className="ffe-button-display-group">
                 <ActionButton {...args} size="lg">
-                    Actionknapp
+                    Stor Actionknapp
                 </ActionButton>
                 <ActionButton {...args}>Actionknapp</ActionButton>
                 <ActionButton {...args} size="sm">
-                    Actionknapp
+                    Liten Actionknapp
                 </ActionButton>
             </div>
         );
@@ -84,13 +84,25 @@ export const IconOnly: Story = {
     },
     render: args => (
         <div className="ffe-button-display-group">
-            <ActionButton {...args} size="lg">
+            <ActionButton
+                {...args}
+                size="lg"
+                aria-label="Stor actionknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconLg} size="lg" />
             </ActionButton>
-            <ActionButton {...args} size="md">
+            <ActionButton
+                {...args}
+                size="md"
+                aria-label="Vanlig actionknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconMd} size="md" />
             </ActionButton>
-            <ActionButton {...args} size="sm">
+            <ActionButton
+                {...args}
+                size="sm"
+                aria-label="Liten actionknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconSm} size="sm" />
             </ActionButton>
         </div>

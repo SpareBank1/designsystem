@@ -76,13 +76,25 @@ export const IconOnly: Story = {
     },
     render: args => (
         <div className="ffe-button-display-group">
-            <PrimaryButton {...args} size="lg">
+            <PrimaryButton
+                {...args}
+                size="lg"
+                aria-label="Stor primærknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconLg} size="lg" />
             </PrimaryButton>
-            <PrimaryButton {...args} size="md">
+            <PrimaryButton
+                {...args}
+                size="md"
+                aria-label="Vanlig primærknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconMd} size="md" />
             </PrimaryButton>
-            <PrimaryButton {...args} size="sm">
+            <PrimaryButton
+                {...args}
+                size="sm"
+                aria-label="Liten primærknapp med ikon"
+            >
                 <Icon fileUrl={addReactionIconSm} size="sm" />
             </PrimaryButton>
         </div>
