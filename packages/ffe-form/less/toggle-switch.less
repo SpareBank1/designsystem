@@ -65,7 +65,7 @@
             content: '';
             width: 24px;
             height: 24px;
-            background: var(--ffe-color-surface-primary-default);
+            background: var(--ffe-color-component-toggleswitch-handle-default);
             border-radius: 50%;
             position: absolute;
             left: 4px;
@@ -114,6 +114,8 @@
     }
 
     &__input:checked:active + &__label &__switch::before {
-        background: var(--ffe-color-component-toggleswitch-fill-selected-pressed)
+        background: var(
+            --ffe-color-component-toggleswitch-fill-selected-pressed
+        );
     }
 }
