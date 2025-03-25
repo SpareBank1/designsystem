@@ -9,10 +9,6 @@
     position: relative;
     z-index: 999;
 
-    &__user-chevron--expanded {
-        transform: rotate(180deg);
-    }
-
     &__border:first-child {
         position: relative;
     }
@@ -50,11 +46,6 @@
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 color: var(--ffe-color-foreground-interactive-link-hover);
-
-                .ffe-header__user-nav & {
-                    background: var(--ffe-color-surface-primary-default-hover);
-                    color: var(--ffe-color-foreground-default);
-                }
             }
         }
 
@@ -82,13 +73,6 @@
             border-radius: 1rem;
             box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
             outline: none;
-
-            .ffe-header__user-nav & {
-                border-radius: 0;
-                background-color: var(
-                    --ffe-color-surface-primary-default-pressed
-                );
-            }
         }
 
         &:focus:not(:focus-visible) {
@@ -196,43 +180,11 @@
     }
 
     &__user-icon,
-    &__user-chevron-icon,
     &__site-nav-icon {
+        vertical-align: middle;
         color: var(--ffe-color-foreground-emphasis);
     }
 
-    &__user-icon,
-    &__site-nav-icon {
-        vertical-align: middle;
-    }
-
-    &__user-chevron-icon {
-        vertical-align: middle;
-        margin-left: var(--ffe-spacing-xs);
-        transition: transform var(--ffe-transition-duration)
-            var(--ffe-ease-in-out-back);
-        color: var(--ffe-color-foreground-default);
-    }
-
-    &__user-chevron--expanded &__user-chevron-icon {
-        transform: rotate(180deg);
-    }
-
-    &__user-nav {
-        transition:
-            transform var(--ffe-transition-duration) var(--ffe-ease),
-            opacity 0.1s;
-        overflow: hidden;
-
-        &:not(.ffe-header__user-nav--visible) {
-            visibility: hidden;
-            height: 1px;
-            overflow: hidden;
-            transform: translateY(-25px);
-            opacity: 0;
-        }
-    }
-    &__user-nav,
     &__site-nav {
         .ffe-header__link {
             display: flex;
@@ -331,6 +283,16 @@
             display: none;
         }
 
+        &__user-name {
+            transition:
+                color var(--ffe-transition-duration) var(--ffe-ease),
+                background-color var(--ffe-transition-duration) var(--ffe-ease);
+        }
+
+        &__user-name:hover {
+            color: var(--ffe-color-foreground-emphasis);
+        }
+
         &__icon-button {
             .ffe-header__notification-bubble {
                 transform: unset;
@@ -341,7 +303,7 @@
         &__icon-button--user-nav {
             .ffe-header__notification-bubble {
                 grid-area: 1 e('/') 1 e('/') span 1 e('/') span 1;
-                margin-right: var(--ffe-spacing-sm);
+                margin-right: var(--ffe-spacing-xs);
             }
         }
 
@@ -400,29 +362,7 @@
             text-align: right;
             flex: 1;
         }
-
-        &__user-nav {
-            position: absolute;
-            right: 20px;
-            top: -16px;
-            min-width: 225px;
-            background: var(--ffe-color-background-default);
-            border-radius: 24px;
-            box-shadow: var(--ffe-shadow-md);
-            border: 2px solid var(--ffe-color-border-primary-default);
-            padding: var(--ffe-spacing-md) 0;
-        }
     }
-
-    // === Override styles for new header ===
-    .ffe-header--enable-link-to-profile {
-        .ffe-header__icon-button--user-nav {
-            .ffe-header__notification-bubble {
-                margin-right: var(--ffe-spacing-xs);
-            }
-        }
-    }
-    // === End override styles for new header ===
 }
 
 @media (max-width: (@breakpoint-md)) {
@@ -437,15 +377,28 @@
             display: none;
         }
 
-        &__user-nav {
-            margin-right: var(--ffe-spacing-sm);
-        }
-
         &__user-nav-toggle {
+            display: inline-flex;
             order: -1;
+            & .ffe-header__svg-icon {
+                display: inline-flex;
+            }
         }
 
-        &__user-nav,
+        &__user-icon--with-notification::after {
+            display: block;
+            position: absolute;
+            width: 10px;
+            aspect-ratio: 1;
+            background: var(--ffe-color-fill-feedback-critical);
+            border-radius: 50%;
+            content: '';
+        }
+
+        &__notification-bubble {
+            display: none;
+        }
+
         &__site-nav-list {
             visibility: hidden;
             height: 1px;
@@ -466,46 +419,19 @@
                 background-color: var(--ffe-color-background-default);
             }
         }
+
+        &__site-nav-toggle {
+            display: inline-flex;
+
+            & .ffe-header__svg-icon {
+                display: inline-flex;
+            }
+        }
+
         &__list-item--logout {
             display: block;
         }
     }
-
-    // === Override styles for new header ===
-    .ffe-header--enable-link-to-profile {
-        .ffe-header {
-            &__notification-bubble {
-                display: none;
-            }
-
-            &__user-icon--with-notification::after {
-                display: block;
-                position: absolute;
-                width: 10px;
-                aspect-ratio: 1;
-                background: var(--ffe-color-fill-feedback-critical);
-                border-radius: 50%;
-                content: '';
-            }
-
-            &__user-nav-toggle {
-                display: inline-flex;
-
-                & .ffe-header__svg-icon {
-                    display: inline-flex;
-                }
-            }
-
-            &__site-nav-toggle {
-                display: inline-flex;
-
-                & .ffe-header__svg-icon {
-                    display: inline-flex;
-                }
-            }
-        }
-    }
-    // === End override styles for new header ===
 }
 
 @media print {
@@ -514,9 +440,7 @@
             text-align: left;
         }
 
-        &__user-nav,
         &__user-icon,
-        &__user-chevron,
         &__site-nav,
         &__site-nav-toggle,
         &__notification-bubble {

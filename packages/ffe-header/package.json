@@ -16,7 +16,9 @@
         "build": "lessc less/ffe-header-nodeps.less css/ffe-header.css --autoprefix",
         "build:examples": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
         "lint": "ffe-buildtool stylelint less/*.less",
-        "test": "npm run lint"
+        "test": "npm run lint",
+        "prettier": "prettier --check './Header.stories.tsx' './less/*'",
+        "prettier:fix": "prettier --write './Header.stories.tsx' './less/*'"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
