@@ -84,6 +84,16 @@
         &.ffe-message--context-compact {
             --icon-size: var(--ffe-v-icons-size-md);
             --icon-padding: var(--ffe-spacing-2xs);
+
+            .ffe-message__icon-container {
+                margin-top: var(--ffe-spacing-2xs);
+            }
+        }
+    }
+
+     &--system {
+        .ffe-message__icon-container {
+            margin-top: var(--ffe-spacing-2xs);
         }
     }
 }
@@ -108,6 +118,7 @@
         grid-column: 2 e('/') 3;
         grid-row: 1 e('/') 2;
         color: var(--text-color);
+        align-self: center;
     }
 
     .ffe-message__close {
