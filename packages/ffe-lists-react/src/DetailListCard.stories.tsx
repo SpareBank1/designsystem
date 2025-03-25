@@ -28,3 +28,35 @@ export const Standard: Story = {
         </div>
     ),
 };
+
+export const SecondaryBg: Story = {
+    args: {
+        bgColor: 'secondary',
+    },
+    render: args => (
+        <div>
+            <DetailListCard {...args}>
+                <DetailListCardItem label="Kontonavn" value="Daglig konto" />
+                <DetailListCardItem label="Kontotype" value="Brukskonto" />
+                <DetailListCardItem label="Kontonummer" value="1234 45 34554" />
+                <DetailListCardItem label="Kontoeier" value="Ola Nordmann" />
+            </DetailListCard>
+        </div>
+    ),
+};
+
+export const TertiaryBg: Story = {
+    args: {
+        bgColor: 'tertiary',
+    },
+    render: args => (
+        <div>
+            <DetailListCard {...args}>
+                <DetailListCardItem label="Kontonavn" value="Daglig konto" />
+                <DetailListCardItem label="Kontotype" value="Brukskonto" />
+                <DetailListCardItem label="Kontonummer" value="1234 45 34554" />
+                <DetailListCardItem label="Kontoeier" value="Ola Nordmann" />
+            </DetailListCard>
+        </div>
+    ),
+};
