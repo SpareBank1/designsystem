@@ -72,6 +72,12 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
         }, [isClient, isOpen]);
 
         useEffect(() => {
+            if (isOpen && dialogRef.current) {
+                dialogRef.current.focus();
+            }
+        }, [isOpen]);
+
+        useEffect(() => {
             if (
                 isClient &&
                 dialogRef.current &&
