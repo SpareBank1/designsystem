@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.18...@sb1/ffe-messages@2.0.19) (2025-03-25)
+
+
+### Bug Fixes
+
+* **ffe-messages:** fikser alignment av ikonet på contextmessage ([efceb3c](https://github.com/SpareBank1/designsystem/commit/efceb3c389d1a91fe1595173a4782299f4bc37c9))
+
+
+
+
+
 ## [2.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.17...@sb1/ffe-messages@2.0.18) (2025-03-24)
 
 **Note:** Version bump only for package @sb1/ffe-messages
