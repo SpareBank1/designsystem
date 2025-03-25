@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-form",
-    "version": "32.0.16",
+    "version": "32.0.17",
     "description": "Form components for Felles Front End",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -18,7 +18,7 @@
         "build": "lessc less/form.less css/form.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-buttons": "^21.2.2",
+        "@sb1/ffe-buttons": "^21.3.0",
         "@sb1/ffe-core": "^31.0.2"
     },
     "devDependencies": {
