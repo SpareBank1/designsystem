@@ -9,6 +9,7 @@ export interface InputProps extends React.ComponentPropsWithoutRef<'input'> {
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+    // komment
     ({ className, inline, textRightAlign, ...rest }, ref) => {
         return (
             <input
