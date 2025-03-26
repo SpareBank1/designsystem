@@ -29,3 +29,6 @@ storybook-static
 
 #Figma API Variable files
 .env
+
+# Part of preventing patches from including major updates
+scripts/sb1-dependencies.json

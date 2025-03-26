@@ -1,0 +1,33 @@
+name: Verify No Major Versions Released In Patches
+
+on:
+    pull_request:
+        branches:
+            - develop
+
+jobs:
+    verify:
+        runs-on: ubuntu-latest
+
+        steps:
+            # Checkout the repository
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            # Set up Node.js 20
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+
+            # Install dependencies
+            - name: Install dependencies
+              run: npm install
+
+            # Generate dependency graph
+            - name: Generate Dependency Graph
+              run: npm run generate-dependency-graph
+
+            # Verify no major patches
+            - name: Verify No Major Patches
+              run: npm run verify-no-major-patches
