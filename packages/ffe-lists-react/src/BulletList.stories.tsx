@@ -16,8 +16,22 @@ export default meta;
 type Story = StoryObj<typeof BulletList>;
 
 export const Standard: Story = {
+    args: {},
+    render: args => (
+        <div>
+            <h3 className="ffe-h4">Våre forsikringer</h3>
+            <BulletList {...args}>
+                <BulletListItem>Bilforsikring</BulletListItem>
+                <BulletListItem>Reiseforsikring</BulletListItem>
+                <BulletListItem>Innboforsikring</BulletListItem>
+            </BulletList>
+        </div>
+    ),
+};
+
+export const Condensed: Story = {
     args: {
-        condensed: false,
+        condensed: true,
     },
     render: args => (
         <div>
