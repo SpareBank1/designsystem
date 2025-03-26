@@ -18,6 +18,14 @@ jobs:
             - name: Fetch develop branch
               run: git fetch origin develop:develop
 
+            # Fetch the branch the PR is created from
+            - name: Fetch PR branch
+              run: git fetch origin ${{ github.head_ref }}:${{ github.head_ref }}
+
+            # Checkout the branch the PR is created from
+            - name: Checkout PR branch
+              run: git checkout ${{ github.head_ref }}
+
             # Set up Node.js 20
             - name: Set up Node.js
               uses: actions/setup-node@v3
