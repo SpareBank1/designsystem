@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@1.1.30...@sb1/ffe-modals-react@1.1.31) (2025-03-26)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** tar i bruk secondarybutton i modal close btn ([f898746](https://github.com/SpareBank1/designsystem/commit/f898746301e9bf41f3db1e70895013f76971b930))
+
+
+
+
+
 ## [1.1.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@1.1.29...@sb1/ffe-modals-react@1.1.30) (2025-03-24)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react
