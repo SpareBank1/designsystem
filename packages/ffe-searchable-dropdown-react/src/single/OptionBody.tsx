@@ -1,22 +1,34 @@
 import React from 'react';
 import classnames from 'classnames';
 import { MicroText } from '@sb1/ffe-core-react';
+import { Locale } from '../types';
+import { getBalanceAriaLabel } from '../translations';
 
 interface ListItemBodyProps<Item extends Record<string, any>> {
     item: Item;
     dropdownAttributes: Array<keyof Item>;
     isHighlighted: boolean;
+    locale: Locale;
 }
 
 export function OptionBody<Item extends Record<string, any>>({
     item,
     dropdownAttributes,
     isHighlighted,
+    locale,
 }: ListItemBodyProps<Item>) {
     const [titleAttribute, ...restAttributes] = dropdownAttributes;
     const title = item[titleAttribute];
     const rest = restAttributes.map((attribute, index) => (
-        <MicroText className="ffe-searchable-dropdown__detail-text" key={index}>
+        <MicroText
+            aria-label={
+                attribute === 'balance'
+                    ? getBalanceAriaLabel(locale, item[attribute])
+                    : undefined
+            }
+            className="ffe-searchable-dropdown__detail-text"
+            key={index}
+        >
             {item[attribute]}
         </MicroText>
     ));

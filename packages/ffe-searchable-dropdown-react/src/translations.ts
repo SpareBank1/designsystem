@@ -82,3 +82,14 @@ export const getIsLoadingItemsA11yStatus = (locale: Locale) => {
             return 'Laster inn alternativer.';
     }
 };
+
+export const getBalanceAriaLabel = (locale: Locale, balance: number) => {
+    switch (locale) {
+        case 'nn':
+            return `Saldo: ${balance}`;
+        case 'en':
+            return `Balance: ${balance}`;
+        default:
+            return `Saldo: ${balance}`;
+    }
+};
