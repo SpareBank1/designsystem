@@ -102,15 +102,15 @@ const preview: Preview = {
             description: 'Select light or dark theme',
             table: {
                 defaultValue: {
-                    detail: 'both',
+                    detail: 'light',
                 },
             },
-            defaultValue: 'both',
+            defaultValue: 'light',
             toolbar: {
                 items: [
-                    { icon: 'sun', value: 'light', title: 'Light' },
-                    { icon: 'moon', value: 'dark', title: 'Dark' },
-                    { icon: 'stacked', value: 'both', title: 'Both modes' },
+                    { icon: 'sun', value: 'light', title: 'Lys' },
+                    { icon: 'moon', value: 'dark', title: 'Mørk' },
+                    { icon: 'stacked', value: 'both', title: 'Begge moduser' },
                 ],
                 dynamicTitle: true,
             },
@@ -127,12 +127,12 @@ const preview: Preview = {
             toolbar: {
                 items: [
                     {
-                        icon: 'lightningoff',
+                        icon: 'circlehollow',
                         value: 'default',
-                        title: 'Default',
+                        title: 'Vanlig',
                     },
-                    { icon: 'lightning', value: 'accent', title: 'Accent' },
-                    { icon: 'stacked', value: 'both', title: 'Both accents' },
+                    { icon: 'circle', value: 'accent', title: 'Accent' },
+                    { icon: 'mirror', value: 'both', title: 'Begge kontekster' },
                 ],
                 dynamicTitle: true,
             },
