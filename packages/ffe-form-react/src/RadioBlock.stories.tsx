@@ -58,3 +58,53 @@ export const Standard: Story = {
         );
     },
 };
+
+export const FieldMessage: Story = {
+    args: {
+        showChildren: true,
+    },
+    render: function Render(args) {
+        const [selected, setSelected] = useState('youu');
+        return (
+            <RadioButtonInputGroup
+                label="Hvem eier bilen du skal forsikre?"
+                name="ownerr"
+                onChange={e => setSelected(e.target.value)}
+                fieldMessage="Velg en eier"
+                selectedValue={selected}
+            >
+                {inputProps => (
+                    <>
+                        <RadioBlock
+                            {...args}
+                            {...inputProps}
+                            label="Ektefelle, samboer eller registrert partner"
+                            value="partnerr"
+                            aria-invalid="true"
+                        >
+                            Da må ektefelle, samboer eller registrert partner
+                            skrive inn detaljene sine under.
+                        </RadioBlock>
+                        <RadioBlock
+                            {...args}
+                            {...inputProps}
+                            label="Du"
+                            value="youu"
+                        >
+                            Da må du skrive inn detaljene dine under.
+                        </RadioBlock>
+                        <RadioBlock
+                            {...args}
+                            {...inputProps}
+                            label="Leasingselskap"
+                            value="leasing-companyy"
+                        >
+                            Da må leasingselskapet gi deg noen detaljer som du
+                            må skrive inn under.
+                        </RadioBlock>
+                    </>
+                )}
+            </RadioButtonInputGroup>
+        );
+    },
+};

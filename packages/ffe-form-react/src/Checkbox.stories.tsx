@@ -66,7 +66,6 @@ export const AriaInvalid: Story = {
     ...Standard,
     args: {
         'aria-invalid': true,
-        checked: true,
     },
     render: args => (
         <Checkbox {...args}>Ja, jeg vil gjerne motta reklame!</Checkbox>

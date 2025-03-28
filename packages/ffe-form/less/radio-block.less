@@ -25,7 +25,7 @@
         margin-right: var(--ffe-spacing-xs);
         color: var(--ffe-color-foreground-default);
         background-color: var(--block-background);
-        border: 1px solid var(--outer-circle-color);
+        border: var(--ffe-g-border-width) solid var(--outer-circle-color);
         border-radius: var(--ffe-g-border-radius);
         overflow: hidden;
 
@@ -37,7 +37,7 @@
             left: 20px;
             z-index: 1;
             background-color: transparent;
-            border: 1px solid var(--outer-circle-color);
+            border: var(--ffe-g-border-width) solid var(--outer-circle-color);
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -89,7 +89,8 @@
             }
 
             .ffe-radio-block__content {
-                box-shadow: 0 0 0 1px var(--outer-circle-color);
+                box-shadow: var(--ffe-g-border-focus-box-shadow)
+                    var(--outer-circle-color);
             }
 
             .ffe-radio-block__wrapper {
@@ -110,7 +111,8 @@
         &::before {
             background-color: var(--ffe-color-fill-primary-selected);
             border: 4px solid var(--block-background);
-            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-selected);
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-primary-selected);
         }
 
         .ffe-radio-block__header {
@@ -126,7 +128,8 @@
     &:focus + .ffe-radio-block__content {
         --outer-circle-color: var(--ffe-color-border-interactive-focus);
         outline: none;
-        box-shadow: 0 0 0 1px var(--ffe-color-border-interactive-focus);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-interactive-focus);
     }
 
     &:focus + .ffe-radio-block__content .ffe-radio-block__wrapper {
@@ -151,6 +154,12 @@
 
     &[aria-invalid='true'] + .ffe-radio-block__content {
         --outer-circle-color: var(--ffe-color-border-feedback-critical);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--outer-circle-color);
+
+        .ffe-radio-block__wrapper {
+            box-shadow: inset 0 1px 0 0 var(--outer-circle-color);
+        }
     }
 }
 

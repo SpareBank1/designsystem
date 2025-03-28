@@ -26,6 +26,23 @@ const RadioSwitchWithGroup = (args: any) => {
     );
 };
 
+const RadioSwitchAriaInvalid = (args: any) => {
+    const [selected, setSelected] = useState(args.selectedValue);
+
+    return (
+        <RadioButtonInputGroup
+            label="Velg et alternativ"
+            name="radio-switch-invalid-demo"
+            onChange={e => setSelected(e.target.value)}
+            selectedValue={selected}
+        >
+            {inputProps => (
+                <RadioSwitch {...args} {...inputProps} aria-invalid="true" />
+            )}
+        </RadioButtonInputGroup>
+    );
+};
+
 export const Standard: Story = {
     args: {
         leftLabel: 'Ja',
@@ -36,5 +53,18 @@ export const Standard: Story = {
     },
     render: function Render(args) {
         return <RadioSwitchWithGroup {...args} />;
+    },
+};
+
+export const AriaInvalid: Story = {
+    args: {
+        leftLabel: 'Ja',
+        leftValue: 'true',
+        rightLabel: 'Nei',
+        rightValue: 'false',
+        selectedValue: 'true',
+    },
+    render: function Render(args) {
+        return <RadioSwitchAriaInvalid {...args} />;
     },
 };

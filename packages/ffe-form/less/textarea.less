@@ -5,23 +5,27 @@
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     border-radius: var(--ffe-g-border-radius);
-    border: 1px solid var(--ffe-color-border-primary-default);
+    border: var(--ffe-g-border-width) solid
+        var(--ffe-color-border-primary-default);
     background-color: var(--ffe-color-surface-primary-default);
     color: var(--ffe-color-foreground-default);
-    transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     font-size: var(--ffe-fontsize-form-input);
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             border-color: var(--ffe-color-border-primary-hover);
-            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-hover);
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-primary-hover);
         }
     }
 
     &:focus,
     &:active {
-        border: 1px solid var(--ffe-color-border-interactive-focus);
-        box-shadow: 0 0 0 1px var(--ffe-color-border-interactive-focus);
+        border: var(--ffe-g-border-width) solid
+            var(--ffe-color-border-interactive-focus);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-interactive-focus);
         outline: none;
     }
 
@@ -33,9 +37,17 @@
 
 .ffe-textarea--invalid,
 :where(textarea).ffe-textarea[aria-invalid='true'] {
-    border: 1px solid var(--ffe-color-border-feedback-critical);
+    color: var(--ffe-color-foreground-feedback-critical);
+    border: var(--ffe-g-border-width) solid
+        var(--ffe-color-border-feedback-critical);
+    box-shadow: var(--ffe-g-border-focus-box-shadow)
+        var(--ffe-color-border-feedback-critical);
+    background-color: var(--ffe-color-surface-feedback-critical);
 
-    &:focus {
-        box-shadow: 0 0 0 1px var(--ffe-color-border-feedback-critical);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover,
+        &:focus {
+            background-color: var(--ffe-color-surface-primary-default);
+        }
     }
 }

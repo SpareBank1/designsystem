@@ -22,3 +22,16 @@ export const Standard: Story = {
         </Paragraph>
     ),
 };
+
+export const AriaInvalid: Story = {
+    args: {
+        ariaLabel: 'Skriv inn alder',
+        'aria-invalid': true,
+        style: { width: 47 },
+    },
+    render: args => (
+        <Paragraph>
+            Jeg er <InputTextLike {...args} /> år gammel
+        </Paragraph>
+    ),
+};

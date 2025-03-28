@@ -30,6 +30,7 @@
         top: 8px;
         background-color: var(--inner-circle-color);
         border: var(--ffe-g-border-width) solid var(--outer-circle-color);
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
         width: 24px;
         height: 24px;
         border-radius: 50%;
@@ -83,7 +84,8 @@
         background-color: var(--ffe-color-fill-primary-selected);
         color: var(--ffe-color-foreground-on-fill-default);
         border-color: var(--ffe-color-border-primary-emphasis);
-        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-primary-emphasis);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-primary-emphasis);
 
         &::before {
             border: 5px solid var(--ffe-color-surface-primary-default);
@@ -101,7 +103,6 @@
         &:active {
             background-color: var(--ffe-color-fill-primary-selected-pressed);
         }
-
     }
 
     &:focus + .ffe-radio-switch {
@@ -120,5 +121,12 @@
 
     &[aria-invalid='true'] + .ffe-radio-switch {
         --outer-circle-color: var(--ffe-color-border-feedback-critical);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--outer-circle-color);
+
+        &::before {
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--outer-circle-color);
+        }
     }
 }

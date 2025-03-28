@@ -60,13 +60,25 @@ export const FieldMessage: Story = {
             >
                 {inputProps => (
                     <>
-                        <RadioButton {...inputProps} value="grass">
+                        <RadioButton
+                            {...inputProps}
+                            aria-invalid="true"
+                            value="grass"
+                        >
                             Gress
                         </RadioButton>
-                        <RadioButton {...inputProps} value="asphalt">
+                        <RadioButton
+                            {...inputProps}
+                            aria-invalid="true"
+                            value="asphalt"
+                        >
                             Asfalt
                         </RadioButton>
-                        <RadioButton {...inputProps} value="pollen">
+                        <RadioButton
+                            {...inputProps}
+                            aria-invalid="true"
+                            value="pollen"
+                        >
                             Pollen
                         </RadioButton>
                     </>
