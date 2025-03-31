@@ -8,8 +8,10 @@ type ChildrenExtraProps = {
     id: string;
     'aria-invalid': 'true' | 'false';
     'aria-describedby': string | undefined;
-    /** Hack that changes label to a span to be wcag complient  */
-    setInputGroupLabelAsSpan?: () => void;
+};
+
+type FunctionExtraProps = {
+    setInputGroupLabelAsSpan: () => void;
 };
 
 export interface InputGroupProps
@@ -65,9 +67,10 @@ export interface InputGroupProps
 const getChildrenWithExtraProps = (
     children: InputGroupProps['children'],
     extraProps: ChildrenExtraProps,
+    functionExtraProps: FunctionExtraProps,
 ) => {
     if (typeof children === 'function') {
-        return children(extraProps);
+        return children({ ...extraProps, ...functionExtraProps });
     } else if (React.isValidElement(children)) {
         return React.cloneElement(children, extraProps);
     }
@@ -142,10 +145,19 @@ export const InputGroup: React.FC<InputGroupProps> = ({
         id,
         'aria-invalid': isInvalid ? 'true' : 'false',
         'aria-describedby': ariaDescribedBy,
-        setInputGroupLabelAsSpan: () => setLabelAsSpan(true),
     } as const;
 
-    const modifiedChildren = getChildrenWithExtraProps(children, extraProps);
+    const extraFunctionProps = {
+        setInputGroupLabelAsSpan: () => {
+            setLabelAsSpan(true);
+        },
+    } as const;
+
+    const modifiedChildren = getChildrenWithExtraProps(
+        children,
+        extraProps,
+        extraFunctionProps,
+    );
 
     return (
         <div
