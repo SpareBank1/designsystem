@@ -69,7 +69,7 @@ const RadioButtonColoredBgWithGroup = (args: any) => {
     return (
         <div
             style={{
-                background: 'var(--ffe-color-surface-highlight)',
+                background: 'var(--ffe-color-background-subtle)',
                 padding: '2rem',
             }}
         >
