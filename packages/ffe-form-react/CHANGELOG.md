@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.11...@sb1/ffe-form-react@23.2.12) (2025-03-31)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** Split inputgroup  function and element children types avoid warning ([34b6a23](https://github.com/SpareBank1/designsystem/commit/34b6a238be90b5a3aff1e1de91518fb68e8fbc77))
+
+
+
+
+
 ## [23.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.10...@sb1/ffe-form-react@23.2.11) (2025-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

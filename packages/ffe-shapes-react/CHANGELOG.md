@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes-react@1.1.3...@sb1/ffe-shapes-react@1.1.4) (2025-03-31)
+
+
+### Bug Fixes
+
+* **ffe-shapes-react:** Add missing dependency classnames ([971d61d](https://github.com/SpareBank1/designsystem/commit/971d61d61d189350600161df54f138bfefcf0e95))
+
+
+
+
+
 ## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes-react@1.1.2...@sb1/ffe-shapes-react@1.1.3) (2025-03-24)
 
 **Note:** Version bump only for package @sb1/ffe-shapes-react

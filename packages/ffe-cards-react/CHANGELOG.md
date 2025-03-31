@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.1.1...@sb1/ffe-cards-react@19.1.2) (2025-03-31)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** Add missing dependency classnames ([936111e](https://github.com/SpareBank1/designsystem/commit/936111ebe8b6a5681e622b23ac69317203e79c62))
+
+
+
+
+
 ## [19.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.1.0...@sb1/ffe-cards-react@19.1.1) (2025-03-24)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
