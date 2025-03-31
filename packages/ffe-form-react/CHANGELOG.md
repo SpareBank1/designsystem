@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.12...@sb1/ffe-form-react@23.2.13) (2025-03-31)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** radiobutton tillot ikke lengre labels ([f6265a9](https://github.com/SpareBank1/designsystem/commit/f6265a98dc40cc7416277dbb49e4a6451bfe45ce))
+
+
+
+
+
 ## [23.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.11...@sb1/ffe-form-react@23.2.12) (2025-03-31)
 
 

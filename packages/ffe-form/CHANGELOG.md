@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.18...@sb1/ffe-form@32.0.19) (2025-03-31)
+
+
+### Bug Fixes
+
+* **ffe-form:** fix styling lengre labels radiobutton ([2db5a56](https://github.com/SpareBank1/designsystem/commit/2db5a566b7818522bbba9f1e28a8067269e0321f))
+
+
+
+
+
 ## [32.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.17...@sb1/ffe-form@32.0.18) (2025-03-31)
 
 
