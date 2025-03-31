@@ -2,6 +2,7 @@ import React from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { TextArea } from './TextArea';
 import { InputGroup } from './InputGroup';
+import { ErrorFieldMessage } from './message';
 
 const meta: Meta<typeof TextArea> = {
     title: 'Komponenter/Form/TextArea',
@@ -20,4 +21,17 @@ export const Standard: Story = {
             </InputGroup>
         );
     },
+};
+
+export const FieldMessage: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: args => (
+        <InputGroup
+            fieldMessage={<ErrorFieldMessage>Feilmelding</ErrorFieldMessage>}
+        >
+            <TextArea {...args} />
+        </InputGroup>
+    ),
 };

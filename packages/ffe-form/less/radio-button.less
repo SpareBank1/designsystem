@@ -122,11 +122,12 @@
     }
 
     &[aria-invalid='true'] + .ffe-radio-button {
-        --outer-circle-color: var(--ffe-color-border-error);
+        --outer-circle-color: var(--ffe-color-border-feedback-critical);
+        --circle-background: var(--ffe-color-surface-feedback-critical);
     }
 
     &:checked[aria-invalid='true'] + .ffe-radio-button {
-        --inner-circle-color: var(--ffe-color-fill-error);
+        --inner-circle-color: var(--ffe-color-border-feedback-critical);
     }
 }
 
