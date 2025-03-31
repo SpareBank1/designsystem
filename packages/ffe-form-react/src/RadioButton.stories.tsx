@@ -63,40 +63,6 @@ const RadioButtonInlineWithGroup = (args: any) => {
     );
 };
 
-const RadioButtonColoredBgWithGroup = (args: any) => {
-    const [selected, setSelected] = useState(args.selectedValue);
-
-    return (
-        <div
-            style={{
-                background: 'var(--ffe-color-background-subtle)',
-                padding: '2rem',
-            }}
-        >
-            <RadioButtonInputGroup
-                label="Velg forsikringstype"
-                name="radio-button-colored-demo"
-                onChange={e => setSelected(e.target.value)}
-                selectedValue={selected}
-            >
-                {inputProps => (
-                    <>
-                        <RadioButton value="full" {...inputProps}>
-                            Fullkasko
-                        </RadioButton>
-                        <RadioButton value="partial" {...inputProps}>
-                            Delkasko
-                        </RadioButton>
-                        <RadioButton value="liability" {...inputProps}>
-                            Ansvar
-                        </RadioButton>
-                    </>
-                )}
-            </RadioButtonInputGroup>
-        </div>
-    );
-};
-
 const RadioButtonWithGroupTooltip = (args: any) => {
     const [selected, setSelected] = useState(args.selectedValue);
 
@@ -186,15 +152,6 @@ export const AriaInvalid: Story = {
     },
     render: function Render(args) {
         return <RadioButtonAriaInvalid {...args} />;
-    },
-};
-
-export const ColoredBackground: Story = {
-    args: {
-        selectedValue: 'full',
-    },
-    render: function Render(args) {
-        return <RadioButtonColoredBgWithGroup {...args} />;
     },
 };
 
