@@ -26,7 +26,6 @@
     &--inline,
     &--with-tooltip {
         display: inline-grid;
-        margin-right: var(--ffe-spacing-md);
     }
 
     &--with-tooltip {
@@ -132,6 +131,6 @@
 }
 
 .ffe-radio-input__content {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 2 e('/') 3;
+    grid-row: 1 e('/') -1;
 }
