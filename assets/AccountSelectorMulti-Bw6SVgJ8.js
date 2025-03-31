@@ -1,0 +1,6 @@
+import{j as t,M as m,C as s,a as p}from"./index-CBDAAkBv.js";import{useMDXComponents as e}from"./index-DmqVK_gK.js";import{A as c,S as r}from"./AccountSelectorMulti.stories-DTKYs0q1.js";import"./iframe-BtGAFTgq.js";import"./index-DQDNmYQF.js";import"./index-C8KIgodY.js";import"./index-DrriUsT5.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./texts-CYEb0IU6.js";import"./index-DlnE8UeV.js";import"./index-QCImZZ3W.js";import"./index-D9tCDUwu.js";import"./Paragraph-DEYlXMQQ.js";import"./Icon-BqsuuMcG.js";import"./formatNumber-DejPEPKF.js";import"./ChipRemovable-B78FY7Qj.js";import"./InputGroup-BrTymUGq.js";import"./Collapse-BrKhsD1f.js";import"./TertiaryButton-BEMXYxRk.js";import"./fixedForwardRef-Dm1tRvsG.js";function i(o){const n={h1:"h1",h2:"h2",p:"p",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{of:c}),`
+`,t.jsx(n.h1,{id:"accountselectormulti",children:"AccountSelectorMulti"}),`
+`,t.jsx(n.p,{children:"Kontovelger med støtte for å velge flere kontoer på én gang."}),`
+`,t.jsx(n.h2,{id:"forhåndsvisning",children:"Forhåndsvisning"}),`
+`,t.jsx(s,{of:r}),`
+`,t.jsx(p,{of:r})]})}function E(o={}){const{wrapper:n}={...e(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(i,{...o})}):i(o)}export{E as default};
