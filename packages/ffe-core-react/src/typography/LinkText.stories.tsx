@@ -14,6 +14,7 @@ export const Standard: Story = {
     args: {
         underline: true,
         children: 'Some text',
+        href: 'https://design.sparebank1.no/',
     },
     render: args => <LinkText {...args} />,
 };

@@ -172,23 +172,16 @@
         }
     }
 
-    &:visited {
-        border-bottom-color: var(--ffe-color-foreground-interactive-link-pressed);
-        color: var(--ffe-color-foreground-interactive-link-pressed);
-        text-decoration: none;
-    }
-
     &--no-underline {
         border-bottom: none;
     }
 
     &:focus {
-        border-color: var(--ffe-color-foreground-interactive-link-pressed);
         color: var(--ffe-color-foreground-interactive-link-pressed);
         border-radius: 1px;
-        background-color: var(--ffe-color-foreground-interactive-link);
-        box-shadow: 0 0 0 2px var(--ffe-color-foreground-interactive-link);
+        box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
         outline: none;
+        border-bottom-color: transparent;
     }
 }
 
