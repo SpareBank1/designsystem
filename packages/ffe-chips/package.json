@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-chips",
-    "version": "2.0.18",
+    "version": "2.0.19",
     "description": "Chips are compact elements that represent an input, attribute, or action.",
     "keywords": [
         "ffe"
@@ -21,7 +21,7 @@
         "build": "lessc less/chip.less css/chip.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^31.0.2"
+        "@sb1/ffe-core": "^31.0.3"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0"

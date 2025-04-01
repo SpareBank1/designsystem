@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tabs",
-    "version": "15.0.15",
+    "version": "15.0.16",
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
@@ -17,7 +17,7 @@
         "build": "lessc less/tabs.less css/tabs.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^31.0.2"
+        "@sb1/ffe-core": "^31.0.3"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0"
