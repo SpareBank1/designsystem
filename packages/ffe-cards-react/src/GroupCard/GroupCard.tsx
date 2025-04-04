@@ -48,7 +48,7 @@ function GroupCardWithForwardRef<As extends ElementType>(
                 },
                 className,
             )}
-            role={Comp === 'div' && 'group'}
+            role={Comp === 'div' ? 'group' : undefined}
             {...rest}
             ref={ref}
         >
