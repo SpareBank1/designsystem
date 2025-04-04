@@ -149,6 +149,10 @@ function transformColorName(colorName) {
         .join('');
 }
 
+function transformColorNameTW(colorName) {
+    return colorName.replace('--ffe-color-', '');
+}
+
 function generateSemanticColorModule(_semanticColorNames) {
     let moduleContent = `"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -160,6 +164,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
         const transformedName = transformColorName(colorName);
         moduleVars += `exports.${transformedName} = 'var(${colorName})';\n`;
         moduleContent += `exports.${transformedName} = `;
+    });
+
+    moduleContent += 'void 0\n';
+    moduleContent += moduleVars;
+
+    return moduleContent;
+}
+
+function generateSemanticColorTWModule(_semanticColorNames) {
+    let moduleContent = `"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+`;
+    let moduleVars = '';
+
+    _semanticColorNames.forEach(colorName => {
+        const transformedName = transformColorNameTW(colorName);
+        moduleVars += `exports['${transformedName}'] = 'var(${colorName})';\n`;
+        moduleContent += `exports['${transformedName}'] = `;
     });
 
     moduleContent += 'void 0\n';
@@ -193,6 +216,9 @@ function generateSemanticColors() {
     const semanticColorModuleContent =
         generateSemanticColorModule(semanticColorNames);
     writeToFile('lib/semanticColors.js')(semanticColorModuleContent);
+    const semanticColorTWModuleContent =
+        generateSemanticColorTWModule(semanticColorNames);
+    writeToFile('lib/semanticColorsTailwind.js')(semanticColorTWModuleContent);
 
     generateChevronColors();
 }

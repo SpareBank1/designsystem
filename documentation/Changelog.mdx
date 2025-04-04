@@ -32,10 +32,10 @@ Farger i `ffe-core/less/colors-deprecated.less` fjernes også. Dette er gamle Le
 
 #### Tailwind
 
-For de som bruker Tailwind kan en oppdatere importen fra `@sb1/ffe-core/lib/colors` til `@sb1/ffe-core/lib/senamticColors`.
+For de som bruker Tailwind kan en oppdatere importen fra `@sb1/ffe-core/lib/colors` til `@sb1/ffe-core/lib/semanticColorsTailwind`.
 
 ```tsx
-import * as colors from '@sb1/ffe-core/lib/senamticColors';
+import * as colors from '@sb1/ffe-core/lib/semanticColorsTailwind';
 module.exports = {
     theme: {
         colors: {
@@ -45,4 +45,4 @@ module.exports = {
 };
 ```
 
-Da blir fargene tilgjengelige i camelCase uten `--ffe-color`. Feks `--ffe-color-background-default` -> `backgroundDefault`
+Da blir fargene tilgjengelige i kebab-case uten `--ffe-color`. Feks `--ffe-color-background-default` -> `background-default`

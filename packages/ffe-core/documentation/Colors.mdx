@@ -20,10 +20,10 @@ containeren til elementet. Se mer om accent mode på [siden om accent mode](./?p
 
 ## Tailwind
 
-For å bruke semantiske farger i Tailwind importerer en `@sb1/ffe-core/lib/senamticColors`.
+For å bruke semantiske farger i Tailwind importerer en `@sb1/ffe-core/lib/semanticColorsTailwind`.
 
 ```tsx
-import * as colors from '@sb1/ffe-core/lib/senamticColors';
+import * as colors from '@sb1/ffe-core/lib/semanticColorsTailwind';
 module.exports = {
     theme: {
         colors: {
@@ -33,7 +33,7 @@ module.exports = {
 };
 ```
 
-Da blir fargene tilgjengelige i camelCase uten `--ffe-color`. Feks `--ffe-color-background-default` -> `backgroundDefault`
+Da blir fargene tilgjengelige i kebab-case uten `--ffe-color`. Feks `--ffe-color-background-default` -> `background-default`
 
 ## Liste over de semantiske fargene
 
