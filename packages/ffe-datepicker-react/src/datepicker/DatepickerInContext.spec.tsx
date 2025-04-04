@@ -9,6 +9,7 @@ const defaultProps = {
     onChange: () => {},
     locale: 'nb' as const,
     labelId: 'datepicker-label',
+    maxDate: '31.12.2128',
 };
 
 const renderDatePicker = (props?: Partial<DatepickerProps>) =>
@@ -44,5 +45,43 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
         await datepicker.setValue('6.5.2024');
 
         expect(datepicker.getValue()).toStrictEqual('06.05.2024');
+    });
+
+    it('datepicker can be cleared by testing function', async () => {
+        renderDatePicker({ value: '01.01.2024' });
+
+        const datepicker = getDatepickerByLabelText('Datovelger');
+        await datepicker.setValue('');
+
+        expect(datepicker.getValue()).toBeNull();
+    });
+
+    it('2 number year date is updated to correct 4 number year', async () => {
+        renderDatePicker({ value: '01.01.2024' });
+
+        const datepicker = getDatepickerByLabelText('Datovelger');
+        await datepicker.setValue('02.02.28');
+
+        expect(datepicker.getValue()).toStrictEqual('02.02.2028');
+    });
+
+    it('3 number year date is updated to correct 4 number year', async () => {
+        renderDatePicker({ value: '01.01.2024' });
+
+        const datepicker = getDatepickerByLabelText('Datovelger');
+        await datepicker.setValue('02.02.128');
+
+        expect(datepicker.getValue()).toStrictEqual('02.02.2128');
+    });
+
+    it('no year is updated to correct 4 number year', async () => {
+        renderDatePicker({ value: '01.01.2023' });
+
+        const datepicker = getDatepickerByLabelText('Datovelger');
+        await datepicker.setValue('02.02.');
+        const date = new Date();
+        expect(datepicker.getValue()).toStrictEqual(
+            `02.02.${date.getFullYear()}`,
+        );
     });
 });
