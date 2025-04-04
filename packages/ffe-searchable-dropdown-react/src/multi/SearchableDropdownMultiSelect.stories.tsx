@@ -49,6 +49,27 @@ const fruits: Fruit[] = [
     },
 ] as const;
 
+const companies = [
+    {
+        organizationName: 'Bedriften',
+        organizationNumber: '912602370',
+        quantityUnprocessedMessages: 5,
+        balance: '12 345 678,00 kr',
+    },
+    {
+        organizationName: 'Sønn & co',
+        organizationNumber: '812602372',
+        quantityUnprocessedMessages: 3,
+        balance: '12 345,00 kr',
+    },
+    {
+        organizationName: 'Beslag skytter',
+        organizationNumber: '812602552',
+        quantityUnprocessedMessages: 1,
+        balance: '34 234 343,00 kr',
+    },
+];
+
 const CustomOptionBody = ({
     item,
     isHighlighted,
@@ -141,6 +162,25 @@ export const MultipleDataResults: Story = {
     render: function Render({ id, labelledById, ...args }) {
         return (
             <InputGroup label="Velg frukt" labelId={labelledById} inputId={id}>
+                <SearchableDropdownMultiSelect
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const DropdownAttributes: Story = {
+    args: {
+        ...Standard.args,
+        dropdownList: companies,
+        dropdownAttributes: ['organizationName', 'balance'],
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup label="Velg" labelId={labelledById} inputId={id}>
                 <SearchableDropdownMultiSelect
                     id={id}
                     labelledById={labelledById}

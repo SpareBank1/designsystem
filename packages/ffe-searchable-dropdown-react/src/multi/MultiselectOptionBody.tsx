@@ -2,11 +2,14 @@ import React from 'react';
 import classnames from 'classnames';
 import { SmallText } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
+import { getBalanceAriaLabel } from '../translations';
+import { Locale } from '../types';
 
 interface MultiselectOptionBodyProps<Item extends Record<string, any>> {
     item: Item;
     dropdownAttributes: (keyof Item)[];
     isHighlighted: boolean;
+    locale: Locale;
 }
 
 const checkIcon =
@@ -16,11 +19,20 @@ export function MultiselectOptionBody<Item extends Record<string, any>>({
     item,
     dropdownAttributes,
     isHighlighted,
+    locale,
 }: MultiselectOptionBodyProps<Item>) {
     const [titleAttribute, ...restAttributes] = dropdownAttributes;
     const title = item[titleAttribute];
     const rest = restAttributes.map((attribute, index) => (
-        <SmallText className="ffe-searchable-dropdown__detail-text" key={index}>
+        <SmallText
+            aria-label={
+                attribute === 'balance'
+                    ? getBalanceAriaLabel(locale, item[attribute])
+                    : undefined
+            }
+            className="ffe-searchable-dropdown__detail-text"
+            key={index}
+        >
             {item[attribute]}
         </SmallText>
     ));
