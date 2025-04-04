@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.1.3...@sb1/ffe-cards-react@19.1.4) (2025-04-04)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** fjern advarsel i konsoll på at role er satt feil dersom groupcard ikke er div ([25e9dbb](https://github.com/SpareBank1/designsystem/commit/25e9dbb53f3805e520cbbb36e0e06bb99f0cb8bc))
+
+
+
+
+
 ## [19.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.1.2...@sb1/ffe-cards-react@19.1.3) (2025-04-01)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
