@@ -163,7 +163,7 @@ export const getSimpleDateFromString = (
     let month = match[3];
     let year = match[4];
 
-    if (year.length === 1 || year.length === 2) {
+    if ((year.length === 1 && year !== '0') || year.length === 2) {
         // @ts-ignore
         year = deriveOneOrTwoDigitYear(year);
     }
@@ -178,7 +178,7 @@ export const getSimpleDateFromString = (
         // @ts-ignore
         month = today.getMonth() + 1;
     }
-    if (!year) {
+    if (!year || year === '0') {
         // @ts-ignore
         year = today.getFullYear();
     }
