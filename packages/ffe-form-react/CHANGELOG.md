@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.14...@sb1/ffe-form-react@23.2.15) (2025-04-04)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** fjerner oncoloredbg story ([88471d5](https://github.com/SpareBank1/designsystem/commit/88471d5069e38251f07ed9146f404a8f306ad995))
+
+
+
+
+
 ## [23.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.13...@sb1/ffe-form-react@23.2.14) (2025-04-01)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
