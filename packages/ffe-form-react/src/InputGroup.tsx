@@ -1,17 +1,13 @@
-import React, { useId } from 'react';
-import { Tooltip, TooltipProps } from './Tooltip';
-import { Label } from './Label';
 import classNames from 'classnames';
+import React, { useId } from 'react';
+import { Label } from './Label';
 import { ErrorFieldMessage } from './message';
+import { Tooltip, TooltipProps } from './Tooltip';
 
 type ChildrenExtraProps = {
     id: string;
     'aria-invalid': 'true' | 'false';
     'aria-describedby': string | undefined;
-};
-
-type FunctionExtraProps = {
-    setInputGroupLabelAsSpan: () => void;
 };
 
 export interface InputGroupProps
@@ -67,10 +63,9 @@ export interface InputGroupProps
 const getChildrenWithExtraProps = (
     children: InputGroupProps['children'],
     extraProps: ChildrenExtraProps,
-    functionExtraProps: FunctionExtraProps,
 ) => {
     if (typeof children === 'function') {
-        return children({ ...extraProps, ...functionExtraProps });
+        return children(extraProps);
     } else if (React.isValidElement(children)) {
         return React.cloneElement(children, extraProps);
     }
@@ -90,7 +85,6 @@ export const InputGroup: React.FC<InputGroupProps> = ({
     labelId,
     ...rest
 }) => {
-    const [labelAsSpan, setLabelAsSpan] = React.useState(false);
     const generatedInputId = useId();
     const id = inputId ?? generatedInputId;
     const descriptionId = description ? `${id}-description` : undefined;
@@ -147,17 +141,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
         'aria-describedby': ariaDescribedBy,
     } as const;
 
-    const extraFunctionProps = {
-        setInputGroupLabelAsSpan: () => {
-            setLabelAsSpan(true);
-        },
-    } as const;
-
-    const modifiedChildren = getChildrenWithExtraProps(
-        children,
-        extraProps,
-        extraFunctionProps,
-    );
+    const modifiedChildren = getChildrenWithExtraProps(children, extraProps);
 
     return (
         <div
@@ -172,11 +156,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
             {...rest}
         >
             {typeof label === 'string' ? (
-                <Label
-                    as={labelAsSpan ? 'span' : 'label'}
-                    htmlFor={id}
-                    id={labelId}
-                >
+                <Label htmlFor={id} id={labelId}>
                     {label}
                 </Label>
             ) : (

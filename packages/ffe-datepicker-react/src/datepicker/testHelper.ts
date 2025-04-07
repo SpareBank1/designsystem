@@ -1,12 +1,16 @@
 import { act, screen } from '@testing-library/react';
 
-async function simulateTyping(element: Element, text: string, delay = 100) {
+async function simulateTyping(element: HTMLElement, text: string, delay = 100) {
+    let _text = text;
+    if (text.length === 0) {
+        _text = '0';
+    }
     return new Promise<void>(resolve => {
         let index = 0;
 
         function typeCharacter() {
-            if (index < text.length) {
-                const char = text[index];
+            if (index < _text.length) {
+                const char = _text[index];
                 const eventOptions = {
                     key: char,
                     keyCode: char.charCodeAt(0),
@@ -42,7 +46,7 @@ export type DatepickerTestHelper = {
     /**
      * The datepicker element
      */
-    element: Element;
+    element: HTMLElement;
     /**
      * Function to get the value of the datepicker
      *
@@ -72,7 +76,9 @@ export function getDatepickerByLabelText(
     const elements = screen
         .getAllByText(label)
         .map(element => element.parentElement?.querySelector('.ffe-datepicker'))
-        .filter(element => element !== null && element !== undefined);
+        .filter(
+            element => element !== null && element !== undefined,
+        ) as HTMLElement[];
 
     function getValue(element: Element): string | null {
         const [dayElement, monthElement, yearElement] = Array.from(
@@ -82,23 +88,31 @@ export function getDatepickerByLabelText(
         const day = dayElement.getAttribute('aria-valuenow') || '';
         const month = monthElement.getAttribute('aria-valuenow') || '';
         const year = yearElement.getAttribute('aria-valuenow') || '';
-        return year !== '' && month !== '' && day !== ''
+        return year !== '' &&
+            year !== '0' &&
+            month !== '' &&
+            month !== '0' &&
+            day !== '' &&
+            day !== '0'
             ? `${leftPad(day)}.${leftPad(month)}.${year}`
             : null;
     }
 
-    async function setValue(element: Element, value: string) {
+    async function setValue(element: HTMLElement, value: string) {
         const [dayElement, monthElement, yearElement] = Array.from(
             element.querySelectorAll('[role="spinbutton"]'),
-        );
+        ) as HTMLElement[];
         // eslint-disable-next-line prefer-const
-        let [dayValue, monthValue, yearValue] = value.split('.');
+        let [dayValue, monthValue, yearValue] = value
+            ? value.split('.')
+            : ['0', '0', '0'];
         dayValue = dayValue.length === 1 ? `0${dayValue}` : dayValue;
         monthValue = monthValue.length === 1 ? `0${monthValue}` : monthValue;
 
         await simulateTyping(dayElement, dayValue);
         await simulateTyping(monthElement, monthValue);
         await simulateTyping(yearElement, yearValue);
+        act(() => yearElement.blur());
     }
 
     return {
