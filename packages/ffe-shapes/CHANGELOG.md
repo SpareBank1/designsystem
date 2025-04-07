@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes@1.1.5...@sb1/ffe-shapes@1.1.6) (2025-04-07)
+
+
+### Bug Fixes
+
+* **ffe-shapes:** Add shapes file for more general import ([84ce15b](https://github.com/SpareBank1/designsystem/commit/84ce15b14181d88ad4e0bb9d28ec937317c4f4e2))
+
+
+
+
+
 ## [1.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes@1.1.4...@sb1/ffe-shapes@1.1.5) (2025-04-07)
 
 **Note:** Version bump only for package @sb1/ffe-shapes
