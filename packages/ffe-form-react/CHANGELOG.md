@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.15...@sb1/ffe-form-react@23.2.16) (2025-04-07)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** Remove setInputGroupLabelAsSpan ([3e5e55b](https://github.com/SpareBank1/designsystem/commit/3e5e55b362285c426dd9061003ec5739a95aa7ea))
+
+
+
+
+
 ## [23.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.14...@sb1/ffe-form-react@23.2.15) (2025-04-04)
 
 
