@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [31.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@31.0.3...@sb1/ffe-core@31.1.0) (2025-04-07)
+
+
+### Features
+
+* **ffe-core:** Add new tailwind specific js variable file with semantic colors ([09392ce](https://github.com/SpareBank1/designsystem/commit/09392ce33fb7ea6f539df68448e78cdb1b9c9517))
+
+
+
+
+
 ## [31.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@31.0.2...@sb1/ffe-core@31.0.3) (2025-04-01)
 
 
