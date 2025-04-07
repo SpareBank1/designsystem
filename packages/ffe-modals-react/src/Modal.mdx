@@ -1,11 +1,26 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as ModalStories from './Modal.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={ModalStories} />
 
 # Modal
 
 Modalvindu brukes for å vise informasjon, bruksspesifikke funksjoner, meldinger eller bekreftelser som brukeren må respondere på før de kan fortsette å bruke nettsiden.
+
+<InstallImport
+    packageName="@sb1/ffe-modals-react"
+    dependencies={[
+        '@sb1/ffe-icons-react',
+        '@sb1/ffe-modals',
+        '@sb1/ffe-icons',
+        '@sb1/ffe-core',
+    ]}
+    stylingDependencies={[
+        '@sb1/ffe-icons/less/ffe-icons',
+        '@sb1/ffe-modals/less/modal',
+    ]}
+/>
 
 ## Når skal komponenten brukes?
 

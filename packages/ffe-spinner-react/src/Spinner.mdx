@@ -1,5 +1,6 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as SpinnerStories from './Spinner.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={SpinnerStories} />
 
@@ -11,6 +12,12 @@ varer lengre enn tre sekunder. Dersom siden bruker mer enn 10 sekunder på å la
 notifikasjon med forklarende tekst.
 
 Spinneren finnes i liten og stor versjon.
+
+<InstallImport
+    packageName="@sb1/ffe-spinner-react"
+    dependencies={['@sb1/ffe-spinner', '@sb1/ffe-core']}
+    stylingDependencies={['@sb1/ffe-spinner/less/spinner']}
+/>
 
 ## Forhåndsvisning
 

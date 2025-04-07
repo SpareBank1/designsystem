@@ -1,5 +1,6 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as ChipStories from './Chip.stories';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={ChipStories} />
 
@@ -9,6 +10,20 @@ Bruk Chips for elementer der brukeren trenger å filtrere eller organisere innho
 
 Skriv klare og tydelige labels slik at brukeren forstår formålet med ulike chips.
 Om brukeren kan velge chips må de også kunne avvelge chips. Dette er spesielt viktig for multiselect eller filtreringsløsninger.
+
+<InstallImport
+    packageName="@sb1/ffe-chips-react"
+    dependencies={[
+        '@sb1/ffe-chips',
+        '@sb1/ffe-core',
+        '@sb1/ffe-icons-react',
+        '@sb1/ffe-icons',
+    ]}
+    stylingDependencies={[
+        '@sb1/ffe-icons/less/ffe-icons',
+        '@sb1/ffe-chips/less/chips',
+    ]}
+/>
 
 ## Forhåndsvisning
 

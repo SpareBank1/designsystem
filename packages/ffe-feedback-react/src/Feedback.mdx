@@ -1,11 +1,35 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as FeedbackStories from './Feedback.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={FeedbackStories} />
 
 # Feedback
 
 Komponenten består av en tekst og tommel opp/ned-knapper som ved klikk viser et tilbakemeldingsskjema.
+
+<InstallImport
+    packageName="@sb1/ffe-feedback-react"
+    dependencies={[
+        '@sb1/ffe-buttons-react',
+        '@sb1/ffe-core-react',
+        '@sb1/ffe-feedback',
+        '@sb1/ffe-form-react',
+        '@sb1/ffe-buttons',
+        '@sb1/ffe-icons-react',
+        '@sb1/ffe-core',
+        '@sb1/ffe-icons',
+        '@sb1/ffe-form',
+        '@sb1/ffe-collapse-react',
+    ]}
+    stylingDependencies={[
+        '@sb1/ffe-collapse-react/less/collapse',
+        '@sb1/ffe-icons/less/ffe-icons',
+        '@sb1/ffe-form/less/form',
+        '@sb1/ffe-buttons/less/buttons',
+        '@sb1/ffe-feedback/less/feedback',
+    ]}
+/>
 
 ## Farger og layout
 
