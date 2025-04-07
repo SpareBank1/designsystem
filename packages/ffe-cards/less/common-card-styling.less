@@ -48,10 +48,12 @@
             }
         }
     }
-    &:focus-within {
-        border-color: transparent;
+    &:focus,
+    &:active,
+    &:focus-within{
+        border-color: var(--ffe-color-border-interactive-focus);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-border-primary-pressed);
+            var(--ffe-color-border-interactive-focus);
 
         &
             :where(
