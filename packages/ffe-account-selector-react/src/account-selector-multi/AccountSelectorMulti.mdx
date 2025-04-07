@@ -1,11 +1,40 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as AccountSelectorMultiStories from './AccountSelectorMulti.stories.tsx';
+import { InstallImport } from '../../../../documentation/components/InstallImport';
 
 <Meta of={AccountSelectorMultiStories} />
 
 # AccountSelectorMulti
 
 Kontovelger med støtte for å velge flere kontoer på én gang.
+
+<InstallImport
+    packageName="@sb1/ffe-account-selector-react"
+    dependencies={[
+        '@sb1/ffe-formatters',
+        '@sb1/ffe-icons-react',
+        '@sb1/ffe-searchable-dropdown-react',
+        '@sb1/ffe-icons',
+        '@sb1/ffe-chips-react',
+        '@sb1/ffe-core-react',
+        '@sb1/ffe-form',
+        '@sb1/ffe-spinner-react',
+        '@sb1/ffe-chips',
+        '@sb1/ffe-core',
+        '@sb1/ffe-buttons',
+        '@sb1/ffe-spinner',
+    ]}
+    stylingDependencies={[
+        '@sb1/ffe-accordion/less/ffe-accordion',
+        '@sb1/ffe-collapse-react/less/collapse',
+        '@sb1/ffe-icons/less/ffe-icons',
+        '@sb1/ffe-searchable-dropdown-react/less/searchable-dropdown',
+        '@sb1/ffe-form/less/form',
+        '@sb1/ffe-chips/less/chips',
+        '@sb1/ffe-buttons/less/buttons',
+        '@sb1/ffe-spinner/less/spinner',
+    ]}
+/>
 
 ## Forhåndsvisning
 

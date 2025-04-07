@@ -1,5 +1,6 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as GridStories from './Grid.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={GridStories} />
 
@@ -12,6 +13,12 @@ Det kan være mange grids per side, men man kan ikke ha grids inni andre grids. 
 
 Det finnes en rekke modifiers på alle tre komponentene som lar deg manipulere hvor innholdet skal plassere seg i en kolonne. Ta en titt på prop-types for å finne disse.
 
+<InstallImport
+    packageName="@sb1/ffe-grid-react"
+    dependencies={['@sb1/ffe-grid', '@sb1/ffe-core']}
+    stylingDependencies={['@sb1/ffe-grid/less/ffe-grid']}
+/>
+
 ## Forhåndsvisning
 
 <Canvas of={GridStories.Standard} />
@@ -23,24 +30,22 @@ For sm innebærer det at hver kolonne har bredde 3, slik at man må bruke multip
 
 Riktig, oppgitte verdier er multiplum av 3 for sm og 2 for md:
 
-```
+```tsx
 <Grid>
     <GridRow>
         <GridCol sm={{ cols: 6, offset: 3 }} md={{ cols: 4, offset: 4 }} />
     </GridRow>
 </Grid>
-
 ```
 
 Galt:
 
-```
+```tsx
 <Grid>
     <GridRow>
         <GridCol sm={{ cols: 2, offset: 3 }} md={{ cols: 5, offset: 4 }} />
     </GridRow>
 </Grid>
-
 ```
 
 Det blir varslet om dette til console.error i dev-versjonen av FFE, men det er ingen varsler om man bygger prod-versjonen av koden.
@@ -58,7 +63,7 @@ Det er i utgangspunktet ingen luft over eller under gridet. Mellom kolonnene (og
 Margin og padding kan legges til i topp og bunn av en `<GridRow>` med modifierne `margin` og `padding`.
 Tillatte verdier samsvarer med felles variabler for spacing i ffe. Eksempel med 64px margin og 8px padding:
 
-```
+```tsx
 <Grid>
     <GridRow margin="3xl" padding="sm">
         <GridCol />
@@ -68,7 +73,7 @@ Tillatte verdier samsvarer med felles variabler for spacing i ffe. Eksempel med 
 
 ## Sentrering
 
-```
+```tsx
 <Grid>
     <GridRow>
         <GridCol centerText={true} center={true}>
@@ -84,7 +89,7 @@ Mellomrommet mellom kolonnene internt i et grid er 16px som default. Tilsvarende
 Dette kan overstyres ved hjelp av gap-modifieren på `<Grid>`. Tillatte verdier samsvarer med felles variabler for spacing i ffe,
 men kan ikke være større enn 32px (`lg`). I tillegg kan spacingen fjernes helt med verdien `none`.
 
-```
+```tsx
 <Grid gap="md">
     <GridRow>
         <GridCol />
@@ -94,10 +99,10 @@ men kan ikke være større enn 32px (`lg`). I tillegg kan spacingen fjernes helt
 
 Gap kan defineres responsivt ved ved hjelp av størrelsesmodifierne `sm`, `md` og `lg` - se også _Responsiv spacing_.
 
-```
+```tsx
 <Grid sm={{ gap: 'sm' }} md={{ gap: 'md' }} lg={{ gap: 'lg' }}>
     <GridRow>
-        <GridCol/>
+        <GridCol />
     </GridRow>
 </Grid>
 ```
@@ -112,12 +117,14 @@ Tillatte verdier er tilsvarende som for de ikke-responsive variantene av gap, ma
 Et eksempel på responsiv spacing på et grid med progressiv økning av gap og
 margin/padding kan se slik ut:
 
-```
+```tsx
 <Grid sm={{ gap: 'sm' }} md={{ gap: 'md' }} lg={{ gap: 'lg' }}>
-    <GridRow sm={{ margin: 'sm', padding: 'sm' }} md={{ margin: 'md', padding: 'md' }} lg={{ margin: 'lg', padding: 'lg' }}>
-        <GridCol>
-            ...
-        </GridCol>
+    <GridRow
+        sm={{ margin: 'sm', padding: 'sm' }}
+        md={{ margin: 'md', padding: 'md' }}
+        lg={{ margin: 'lg', padding: 'lg' }}
+    >
+        <GridCol>...</GridCol>
     </GridRow>
 </Grid>
 ```
@@ -125,8 +132,13 @@ margin/padding kan se slik ut:
 De responsive og ikke-responsive spacing-verdiene kan også kombineres. Responsive verdier overstyrer de ikke-responsive,
 som betyr at de ikke-responsive verdiene i praksis er default.
 
-```
-<GridRow margin="xs" sm={{ margin: 'sm' }} md={{ margin: 'md' }} lg={{ margin: 'lg' }} />
+```tsx
+<GridRow
+    margin="xs"
+    sm={{ margin: 'sm' }}
+    md={{ margin: 'md' }}
+    lg={{ margin: 'lg' }}
+/>
 ```
 
 ## Offset
@@ -139,7 +151,7 @@ Propertyen settes på `<GridCol>` i første kolonne i gridet som skal vises med 
 Den må defineres for hver skjermstørrelse, samtidig som man definerer kolonnens bredde. Større skjermstørrelser arver verdien fra mindre.
 For eksempel vil offset som defineres i skjermstørrelse `sm` også gjelde for `md` og `lg`:
 
-```
+```tsx
 <Grid>
     <GridRow>
         <GridCol sm={{ cols: 6, offset: 2 }}>innhold</GridCol>
@@ -149,13 +161,13 @@ For eksempel vil offset som defineres i skjermstørrelse `sm` også gjelde for `
 
 For å sentrere gridets innhold må man passe på at totalen av (offset x 2) og cols går opp i 12. For eksempel kan innhold over 8 kolonner løses slik:
 
-```
+```tsx
 <GridCol sm={{ cols: 8, offset: 2 }}>innhold</GridCol>
 ```
 
 De to siste kolonnene i gridets totale bredde på 12 vil da være tomme, og på den måten skape lik spacing på begge sider.
 
-```
+```tsx
 |----|----|----|----|----|----|----|----|----|----|----|----|
 |    |    |xxxx|xxxx|xxxx|xxxx|xxxx|xxxx|xxxx|xxxx|    |    |
 |----|----|----|----|----|----|----|----|----|----|----|----|

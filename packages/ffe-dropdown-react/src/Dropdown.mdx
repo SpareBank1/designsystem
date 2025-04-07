@@ -1,11 +1,21 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as DropdownStories from './Dropdown.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={DropdownStories} />
 
 # Dropdown
 
 Dropdown er en vanlig nedtrekksliste som kan brukes man når man har 5-10 valg å velge mellom. Har du mindre enn 5 valg, bruk radio buttons istedenfor.
+
+<InstallImport
+    packageName="@sb1/ffe-dropdown-react"
+    dependencies={['@sb1/ffe-form', '@sb1/ffe-buttons', '@sb1/ffe-core']}
+    stylingDependencies={[
+        '@sb1/ffe-form/less/form',
+        '@sb1/ffe-buttons/less/buttons',
+    ]}
+/>
 
 ## Forhåndsvisning
 

@@ -1,5 +1,6 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as CollapseStories from './Collapse.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={CollapseStories} />
 
@@ -7,6 +8,12 @@ import * as CollapseStories from './Collapse.stories.tsx';
 
 Komponent for å enkelt lage ekspanderbart område. Hvorvidt området er ekspandert eller ikke styres av konsumenten via property `isOpen`.
 Et callback kan gis via property `onRest` som kjøres når transisjonen er ferdig.
+
+<InstallImport
+    packageName="@sb1/ffe-collapse-react"
+    dependencies={['@sb1/ffe-core']}
+    stylingDependencies={['@sb1/ffe-collapse-react/less/collapse']}
+/>
 
 ## Forhåndsvisning
 

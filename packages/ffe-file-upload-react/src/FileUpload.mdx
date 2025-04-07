@@ -1,11 +1,33 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as FileUploadStories from './FileUpload.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={FileUploadStories} />
 
 # FileUpload
 
 En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokumentasjon.
+
+<InstallImport
+    packageName="@sb1/ffe-file-upload-react"
+    dependencies={[
+        '@sb1/ffe-buttons-react',
+        '@sb1/ffe-file-upload',
+        '@sb1/ffe-form',
+        '@sb1/ffe-icons-react',
+        '@sb1/ffe-buttons',
+        '@sb1/ffe-core',
+        '@sb1/ffe-icons',
+    ]}
+    stylingDependencies={[
+        '@sb1/ffe-file-upload/less/file-upload',
+        '@sb1/ffe-icons/less/ffe-icons',
+        '@sb1/ffe-form/less/form',
+        '@sb1/ffe-buttons/less/buttons',
+    ]}
+/>
+
+## Hvordan bruke komponenten
 
 1. Brukeren velger filer i native filopplastingsview eller via 'drag and drop'
 2. Browseren mottar event-callback, med info om filene, om at brukeren har valg filer for opplasting, men disse er enda ikke lastet opp
@@ -15,7 +37,7 @@ En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokument
 6. `files` objektet er indeksert på navn med selve `name` påkrevet, mens `error` og `document` er optional.
 7. Et eksempel på `files` som inkluderer de 3 mulighetene:
 
-```
+```ts
 const files = {
     fileBeingUploaded: {
         name: 'fileBeingUploaded',
@@ -32,5 +54,6 @@ const files = {
     },
 };
 ```
+
 <Canvas of={FileUploadStories.Standard} />
 <Controls of={FileUploadStories.Standard} />

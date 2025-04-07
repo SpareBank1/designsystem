@@ -1,5 +1,6 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as PaginationStories from './Pagination.stories.tsx';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={PaginationStories} />
 
@@ -8,6 +9,27 @@ import * as PaginationStories from './Pagination.stories.tsx';
 Paginering benyttes til søkeresultater og lignende presentasjon av store mengder informasjon som ikke får plass på en enkelt side.
 
 For de fleste scenarioer anbefales det å bruke infinite scroll, men paginering kan benyttes hvis det vurderes som bedre basert på brukerfeedback.
+
+<InstallImport
+    packageName="@sb1/ffe-pagination-react"
+    dependencies={[
+        '@sb1/ffe-buttons-react',
+        '@sb1/ffe-core-react',
+        '@sb1/ffe-dropdown-react',
+        '@sb1/ffe-icons-react',
+        '@sb1/ffe-pagination',
+        '@sb1/ffe-buttons',
+        '@sb1/ffe-core',
+        '@sb1/ffe-icons',
+        '@sb1/ffe-form',
+    ]}
+    stylingDependencies={[
+        '@sb1/ffe-icons/less/ffe-icons',
+        '@sb1/ffe-form/less/form',
+        '@sb1/ffe-buttons/less/buttons',
+        '@sb1/ffe-pagination/less/pagination',
+    ]}
+/>
 
 ## Forhåndsvisning
 

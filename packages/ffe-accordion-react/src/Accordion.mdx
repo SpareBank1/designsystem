@@ -12,10 +12,18 @@ Accordion brukes der du har mye informasjon som du ønsker å gjøre tilgjengeli
 En accordion er bygget opp av to komponenter: `Accordion` og `AccordionItem`. Accordion-komponenten legges rundt alle AccordionItem's, for å gruppere og sette samme overskriftsnivå på alle.
 
 <InstallImport
-    dependencies={['@sb1/ffe-accordion-react']}
+    packageName="@sb1/ffe-accordion-react"
+    dependencies={[
+        '@sb1/ffe-accordion',
+        '@sb1/ffe-collapse-react',
+        '@sb1/ffe-icons-react',
+        '@sb1/ffe-core',
+        '@sb1/ffe-icons',
+    ]}
     stylingDependencies={[
         '@sb1/ffe-accordion/less/ffe-accordion',
         '@sb1/ffe-collapse-react/less/collapse',
+        '@sb1/ffe-icons/less/ffe-icons',
     ]}
 />
 
@@ -27,7 +35,6 @@ En accordion er bygget opp av to komponenter: `Accordion` og `AccordionItem`. Ac
 
 <Canvas of={AccordionStories.Standard} />
 <Controls of={AccordionStories.Standard} />
-
 
 ## AccordionItem
 
