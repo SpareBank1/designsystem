@@ -8,7 +8,7 @@
     font-variant-numeric: tabular-nums;
     margin-top: var(--ffe-spacing-md);
     width: 100%;
-    transition: width var(--ffe-transition-duration) var(--ffe-ease-in-out-back);
+    transition: width var(--ffe-transition-duration) var(--ffe-ease);
     overflow-wrap: anywhere;
 
     &__content,
@@ -34,7 +34,7 @@
             grid-column: 1 e('/') 2;
             grid-row: 1 e('/') 2;
             content: '';
-            left: 20px;
+            left: var(--ffe-spacing-sm);
             z-index: 1;
             background-color: transparent;
             border: var(--ffe-g-border-width) solid var(--outer-circle-color);
@@ -50,7 +50,7 @@
         grid-column: 2 e('/') 3;
         grid-row: 1 e('/') 2;
         display: block;
-        padding: var(--ffe-spacing-xs) var(--ffe-spacing-3xl)
+        padding: var(--ffe-spacing-xs) var(--ffe-spacing-2xl)
             var(--ffe-spacing-xs);
         color: var(--ffe-color-foreground-default);
         background-color: transparent;
@@ -59,11 +59,12 @@
     &__wrapper {
         grid-column: 2 e('/') 3;
         grid-row: 2 e('/') 3;
-        padding: var(--ffe-spacing-sm) var(--ffe-spacing-sm)
-            var(--ffe-spacing-lg);
-        border-top: 1px solid var(--outer-circle-color);
+        padding: 12px var(--ffe-spacing-sm);
+        border-top: var(--ffe-g-border-width) solid var(--outer-circle-color);
         cursor: auto;
         color: var(--ffe-color-foreground-default);
+        transition: all var(--ffe-transition-duration)
+            var(--ffe-ease);
 
         &--empty {
             padding: 0;
@@ -71,10 +72,6 @@
 
         &[aria-hidden='true'] {
             display: none;
-        }
-
-        @media (min-width: @breakpoint-sm) {
-            padding-left: var(--ffe-spacing-3xl);
         }
     }
 
