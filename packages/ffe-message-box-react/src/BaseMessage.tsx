@@ -18,6 +18,7 @@ export interface BaseMessageProps
     role?: 'alert' | 'group';
 }
 
+//bedre kommentar
 export const BaseMessage: React.FC<BaseMessageProps> = ({
     type,
     title,
