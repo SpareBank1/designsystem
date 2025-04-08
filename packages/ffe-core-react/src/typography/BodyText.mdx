@@ -1,0 +1,13 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as BodyTextStories from './BodyText.stories';
+
+<Meta of={BodyTextStories} />
+
+# BodyText
+
+BodyText er vår default tekststyling for brødtekst. Komponenten gir deg SpareBank1-fonten og setter den opp med riktig fontstørrelse, linjehøyde og farge.
+
+Merk: For å sikre at SpareBank1-fonten settes som default på tekst også utenom disse komponentene må du passe på å ha klassen `.ffe-body` på eller nær `body`-elementet.
+
+<Canvas of={BodyTextStories.Standard} />
+<Controls of={BodyTextStories.Standard} />

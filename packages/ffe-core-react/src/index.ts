@@ -1,3 +1,4 @@
+export { BodyText, BodyTextProps } from './typography/BodyText';
 export { DividerLine, DividerLineProps } from './typography/DividerLine';
 export {
     EmphasizedText,
