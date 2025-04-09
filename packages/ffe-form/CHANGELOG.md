@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.21...@sb1/ffe-form@32.0.22) (2025-04-09)
+
+
+### Bug Fixes
+
+* **ffe-form:** opprydding radioblock ([c4cae91](https://github.com/SpareBank1/designsystem/commit/c4cae91d981e309747892cc55ce0e7587efb8643))
+
+
+
+
+
 ## [32.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.20...@sb1/ffe-form@32.0.21) (2025-04-07)
 
 **Note:** Version bump only for package @sb1/ffe-form
