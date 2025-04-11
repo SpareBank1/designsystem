@@ -12,6 +12,7 @@ import {
     TableHeaderCell,
     TableRow,
 } from '@sb1/ffe-tables-react';
+import { Input, InputGroup } from '@sb1/ffe-form-react';
 
 const meta: Meta<typeof Pagination> = {
     title: 'Komponenter/Pagination/Pagination',
@@ -39,6 +40,8 @@ export const WithTable: Story = {
         navigationButtonText: false,
     },
     render: function Render(args) {
+        const [search, setSearch] = React.useState('');
+
         const data = [
             { name: 'Anders', age: 32 },
             { name: 'Erik', age: 25 },
@@ -54,10 +57,19 @@ export const WithTable: Story = {
             { name: 'Niklas', age: 35 },
             { name: 'Unn', age: 98 },
         ];
-        const paginationControls = usePagination(data.length, 2);
+        const filteredData = React.useMemo(() => {
+            return data.filter(it =>
+                it.name.toLowerCase().includes(search.toLowerCase()),
+            );
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [search]);
+        const paginationControls = usePagination(filteredData.length, 4);
 
         return (
             <>
+                <InputGroup label={'Søk'}>
+                    <Input onChange={e => setSearch(e.target.value)} />
+                </InputGroup>
                 <Table>
                     <TableCaption>Utviklere</TableCaption>
                     <TableHead>
@@ -67,7 +79,7 @@ export const WithTable: Story = {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {data
+                        {filteredData
                             .slice(
                                 paginationControls.pageStart,
                                 paginationControls.pageStart +
@@ -90,8 +102,10 @@ export const WithTable: Story = {
                                 Gjenomsnitts alder
                             </TableHeaderCell>
                             <TableDataCell columnHeader="Gjenomsnitts alder">
-                                {data.reduce((sum, curr) => sum + curr.age, 0) /
-                                    data.length}
+                                {filteredData.reduce(
+                                    (sum, curr) => sum + curr.age,
+                                    0,
+                                ) / filteredData.length}
                             </TableDataCell>
                         </TableRow>
                     </TableFoot>

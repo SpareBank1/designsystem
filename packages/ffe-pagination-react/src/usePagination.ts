@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { PaginationControls } from './types';
 
 export function usePagination(
@@ -12,6 +12,10 @@ export function usePagination(
     const pageStart = (currentPage - 1) * currentPageSize;
     const pageEnd = hasNextPage ? currentPage * currentPageSize : totalElements;
     const numberOfPages = Math.ceil(totalElements / currentPageSize);
+
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [totalElements]);
 
     const setPageSize = (pageSize: number) => {
         setCurrentPageSize(pageSize);
