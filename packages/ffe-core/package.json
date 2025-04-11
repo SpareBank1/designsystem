@@ -23,8 +23,8 @@
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint",
         "clean": "rm -rf css/ gen-src/ lib/",
-        "generate-semantic-colors": "./scripts/generate-semantic-colors.js",
-        "build": "npm run generate-semantic-colors && ./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix"
+        "generate-semantic-colors": "./scripts/generate-semantic-colors.cjs",
+        "build": "npm run generate-semantic-colors && ./scripts/build.cjs tokens.config.cjs && ./scripts/build-custom-mq.cjs less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
@@ -34,5 +34,6 @@
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "type": "module"
 }

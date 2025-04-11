@@ -23,8 +23,8 @@
     "scripts": {
         "build": "ffe-buildtool tsc && lessc less/ffe-chart-donut.less css/ffe-chart-donut.css --autoprefix",
         "build:es": "ffe-buildtool tsc --es",
-        "lint": "eslint src --ext ts,tsx",
-        "lint:fix": "eslint src --fix --ext ts,tsx",
+        "lint": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\"",
+        "lint:fix": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest",
         "test:watch": "ffe-buildtool jest --watch"
     },
@@ -38,5 +38,6 @@
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "type": "module"
 }

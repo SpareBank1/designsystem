@@ -19,6 +19,8 @@
         "ghpages": "lerna run ghpages",
         "lint": "lerna run lint --stream",
         "lint:fix": "lerna run lint:fix --stream",
+        "eslint": "eslint --config ./eslint.config.js",
+        "eslint:fix": "eslint --config ./eslint.config.js --fix",
         "start": "npm run build && npm run storybook",
         "watch:component-overview": "lerna run watch --scope='@sb1/ffe-component-index'",
         "start:component-overview": "lerna run start --scope='@sb1/ffe-component-index'",
@@ -69,11 +71,11 @@
         "@types/jest": "^29.5.12",
         "@types/react": "^18.3.3",
         "@types/react-dom": "18.3.0",
-        "@typescript-eslint/eslint-plugin": "^7.8.0",
-        "@typescript-eslint/parser": "^7.8.0",
+        "@typescript-eslint/eslint-plugin": "^8.26.1",
+        "@typescript-eslint/parser": "^8.26.1",
         "case": "^1.5.5",
         "eslint": "^8.57.0",
-        "eslint-config-prettier": "^9.1.0",
+        "eslint-config-prettier": "^10.1.1",
         "eslint-plugin-prettier": "^5.1.3",
         "eslint-plugin-storybook": "^0.11.3",
         "husky": "^9.0.11",
@@ -95,5 +97,6 @@
             "plugin:storybook/recommended"
         ]
     },
-    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "type": "module"
 }

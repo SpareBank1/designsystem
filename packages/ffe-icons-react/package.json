@@ -22,8 +22,8 @@
         "build": "ffe-buildtool tsc",
         "build:es": "ffe-buildtool tsc --es",
         "clean": "rimraf gen-src lib es types",
-        "lint": "eslint src --ext ts,tsx",
-        "lint:fix": "eslint src --fix --ext ts,tsx",
+        "lint": "eslint \"src/**/*.{ts,tsx}\"",
+        "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest"
     },
     "dependencies": {
@@ -31,7 +31,7 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
-        "eslint": "^8.57.0",
+        "eslint": "^9.22.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
@@ -40,5 +40,6 @@
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "type": "module"
 }

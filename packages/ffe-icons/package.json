@@ -5,7 +5,7 @@
     "license": "MIT",
     "author": "SpareBank 1",
     "bin": {
-        "ffe-icons": "bin/build.js"
+        "ffe-icons": "bin/build.cjs"
     },
     "files": [
         "icons",
@@ -18,8 +18,8 @@
     },
     "scripts": {
         "build": "lessc less/ffe-icons.less css/ffe-icons.css --autoprefix",
-        "build:icons": "node bin/build.js",
-        "lint": "eslint bin",
+        "build:icons": "node bin/build.cjs",
+        "lint": "eslint --config ./eslint.config.js bin",
         "test": "npm run lint"
     },
     "dependencies": {
@@ -29,9 +29,10 @@
         "yargs": "^17.7.2"
     },
     "devDependencies": {
-        "eslint": "^8.57.0"
+        "eslint": "^9.22.0"
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "type": "module"
 }

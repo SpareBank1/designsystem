@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const writeToFile = require('./lib/writeToFile');
+const writeToFile = require('./lib/writeToFile.cjs');
 
 const chevron = {
     default: {

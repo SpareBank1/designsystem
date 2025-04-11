@@ -22,16 +22,17 @@
     },
     "scripts": {
         "build": "ffe-buildtool tsc",
-        "lint": "eslint src --ext ts,tsx",
-        "lint:fix": "eslint src --fix --ext ts,tsx",
+        "lint": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\"",
+        "lint:fix": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\" --fix",
         "test": "jest",
         "test:watch": "jest --watch"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
-        "eslint": "^8.57.0"
+        "eslint": "^9.22.0"
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "type": "module"
 }

@@ -2,8 +2,8 @@
 const path = require('path');
 const postcss = require('postcss');
 
-const renderLessVarsToCSSProps = require('./lib/renderLessVarsToCSSProps');
-const writeToFile = require('./lib/writeToFile');
+const renderLessVarsToCSSProps = require('./lib/renderLessVarsToCSSProps.cjs');
+const writeToFile = require('./lib/writeToFile.cjs');
 
 const lessFile = process.argv[2];
 const customMqFile = process.argv[3];

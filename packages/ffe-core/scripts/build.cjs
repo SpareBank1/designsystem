@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 const path = require('path');
 
-const writeToFile = require('./lib/writeToFile');
-const renderLessVarsToCSSProps = require('./lib/renderLessVarsToCSSProps');
-const extractCustomProps = require('./lib/extractCustomProps');
-const { genTSSource, genTSModIndex } = require('./lib/genTypeScript');
+const writeToFile = require('./lib/writeToFile.cjs');
+const renderLessVarsToCSSProps = require('./lib/renderLessVarsToCSSProps.cjs');
+const extractCustomProps = require('./lib/extractCustomProps.cjs');
+const { genTSSource, genTSModIndex } = require('./lib/genTypeScript.cjs');
 
 const configFilePath = process.argv[2];
 

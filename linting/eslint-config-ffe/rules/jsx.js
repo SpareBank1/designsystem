@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     rules: {
         // Enforce boolean attributes notation in JSX
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md

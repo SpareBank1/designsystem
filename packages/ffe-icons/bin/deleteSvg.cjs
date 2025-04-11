@@ -40,7 +40,6 @@ const deleteSvgFile = async fileName => {
    and call the delete function.
 */
 const deleteRemovedIconsFiles = async (listOfRemovedIcons, directory) => {
-    // eslint-disable-next-line no-unused-vars
     for (const fileName of listOfRemovedIcons) {
         const filePath = path.join(directory, fileName);
         await deleteSvgFile(filePath);
