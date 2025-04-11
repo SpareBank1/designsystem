@@ -65,6 +65,7 @@ export default {
                 'ffe-tables-react',
                 'ffe-tabs',
                 'ffe-tabs-react',
+                'ffe-vite-less',
                 'ffe-webfonts',
             ],
         ],
