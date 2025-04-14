@@ -11,7 +11,11 @@ import { SpinButton } from './SpinButton';
 import { padZero } from './padZero';
 import { Button } from '../button';
 import { Calendar } from '../calendar';
-import { isDateInputWithTwoDigitYear, validateDate } from '../util/dateUtil';
+import {
+    getPaddedDateString,
+    isDateInputWithTwoDigitYear,
+    validateDate,
+} from '../util/dateUtil';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
 import { getSimpleDateFromString } from '../datelogic/simpledate';
@@ -79,7 +83,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     const yearRef = useRef<HTMLSpanElement>(null);
 
     const formatDate = useCallback(() => {
-        return `${padZero(day ?? 0)}.${padZero(month ?? 0)}.${year}`;
+        return getPaddedDateString(day, month, year);
     }, [day, month, year]);
 
     const getFieldMessageId = () => {
@@ -307,7 +311,11 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     onPaste={handlePaste}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
                         _onChange(
-                            `${padZero(toNumber(newValue))}.${month}.${year}`,
+                            getPaddedDateString(
+                                toNumber(newValue),
+                                month,
+                                year,
+                            ),
                         );
 
                         return allowFocusNext
@@ -338,7 +346,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     onPaste={handlePaste}
                     onSpinButtonChange={(newValue, allowFocusNext = true) => {
                         _onChange(
-                            `${day}.${padZero(toNumber(newValue))}.${year}`,
+                            getPaddedDateString(day, toNumber(newValue), year),
                         );
                         return allowFocusNext
                             ? setMonth(newValue, () =>
@@ -375,7 +383,9 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     max={9999}
                     onPaste={handlePaste}
                     onSpinButtonChange={newValue => {
-                        _onChange(`${day}.${month}.${toNumber(newValue)}`);
+                        _onChange(
+                            getPaddedDateString(day, month, toNumber(newValue)),
+                        );
                         setYear(newValue);
                     }}
                     prevSpinButton={monthRef}
