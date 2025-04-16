@@ -19,7 +19,7 @@ export const InstallImport: React.FC<Props> = ({
     const installCodeAll = `npm install ${packageName} ${dependencies ? dependencies?.join(' ') : ''}`;
     const innstallStyling =
         stylingDependencies &&
-        `@import '@sb1/ffe-core/less/ffe-core';\n${stylingDependencies.map(dep => `@import '${dep}';`).join('\n')}`;
+        `@import '@sb1/ffe-core/less/ffe';\n${stylingDependencies.map(dep => `@import '${dep}';`).join('\n')}`;
     return (
         <>
             <Heading2>Installasjon</Heading2>
