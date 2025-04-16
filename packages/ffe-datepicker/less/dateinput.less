@@ -26,13 +26,13 @@
     }
 
     &__button {
-        background-color: var(--ffe-color-background-default);
+        background: transparent;
         border: none;
         grid-column: 2 e('/') 3;
         grid-row: 1 e('/') -1;
         outline: none;
         border-radius: 0 var(--ffe-g-border-radius) var(--ffe-g-border-radius) 0;
-        transition: border-color var(--ffe-transition-duration) var(--ffe-ease);
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
         width: 56px;
         cursor: pointer;
         isolation: isolate;
@@ -67,7 +67,6 @@
         grid-row: 1 e('/') -1;
         min-width: 210px;
         color: var(--ffe-color-foreground-default);
-        background-color: var(--ffe-color-background-default);
 
         &--full-width {
             display: block;
@@ -77,23 +76,6 @@
             display: flex;
             align-items: center;
             border: none;
-
-            &:focus-within {
-                border: none;
-                box-shadow: none;
-                outline: none;
-            }
-
-            @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    border: none;
-                    box-shadow: none;
-                }
-            }
-
-            &--invalid {
-                border: none;
-            }
         }
 
         &__field {
@@ -123,12 +105,17 @@
     &--invalid {
         border: var(--ffe-g-border-width) solid
             var(--ffe-color-border-feedback-critical);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-feedback-critical);
+        background-color: var(--ffe-color-surface-feedback-critical);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                border-color: var(--ffe-color-border-feedback-critical);
+                border: var(--ffe-g-border-width) solid
+                    var(--ffe-color-border-feedback-critical);
                 box-shadow: var(--ffe-g-border-focus-box-shadow)
                     var(--ffe-color-border-feedback-critical);
+                background-color: var(--ffe-color-surface-primary-default);
             }
             &:focus-within:hover {
                 border-color: var(--ffe-color-border-feedback-critical);
@@ -136,27 +123,27 @@
         }
 
         &:focus-within {
-            border-color: var(--ffe-color-border-feedback-critical);
             outline: none;
             box-shadow: var(--ffe-g-border-focus-box-shadow)
                 var(--ffe-color-border-feedback-critical);
         }
 
         .ffe-input-field {
-            &:focus {
-                border: none;
-                box-shadow: none;
+            &:focus-within {
+                border-color: var(--ffe-color-border-feedback-critical);
+                box-shadow: var(--ffe-g-border-focus-box-shadow)
+                    var(--ffe-color-border-feedback-critical);
+                background-color: var(--ffe-color-surface-primary-default);
             }
+        }
 
-            @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    border: none;
-                    box-shadow: none;;
-                }
-                &:focus-within:hover {
-                    border: none;
-                }
-            }
+        .ffe-dateinput,
+        .ffe-dateinput__field {
+            color: var(--ffe-color-foreground-feedback-critical);
+        }
+
+        .ffe-input-field:has(~ .ffe-datepicker__button:hover) {
+            background-color: var(--ffe-color-surface-primary-default);
         }
     }
 }
