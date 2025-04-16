@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.27...@sb1/ffe-datepicker@14.0.28) (2025-04-16)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** retter farger på datepicker-input ([9a8f706](https://github.com/SpareBank1/designsystem/commit/9a8f7068f2265e72df0a6642025f45e04aee7fa9))
+
+
+
+
+
 ## [14.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.26...@sb1/ffe-datepicker@14.0.27) (2025-04-09)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

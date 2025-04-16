@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@4.0.17...@sb1/ffe-feedback@4.1.0) (2025-04-16)
+
+
+### Features
+
+* **ffe-feedback:** ny styling til ffe-feedback, nye knapper og litt annet oppsett ([ecf9138](https://github.com/SpareBank1/designsystem/commit/ecf9138abd4bc5978c8d783b25ae3e34b28aec8d))
+
+
+
+
+
 ## [4.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@4.0.16...@sb1/ffe-feedback@4.0.17) (2025-04-07)
 
 **Note:** Version bump only for package @sb1/ffe-feedback

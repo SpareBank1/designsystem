@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-chips-react",
-    "version": "2.0.22",
+    "version": "2.0.23",
     "description": "React implementation of ffe-chips component",
     "keywords": [
         "ffe"
@@ -29,9 +29,9 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-chips": "^2.0.20",
-        "@sb1/ffe-core": "^31.1.0",
-        "@sb1/ffe-icons-react": "^11.0.21"
+        "@sb1/ffe-chips": "^2.0.21",
+        "@sb1/ffe-core": "^31.1.1",
+        "@sb1/ffe-icons-react": "^11.0.22"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",

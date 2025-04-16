@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@22.1.4...@sb1/ffe-cards@23.0.0) (2025-04-16)
+
+
+### Bug Fixes
+
+* **ffe-cards:** responsiv styling i illustration card ([9748d9d](https://github.com/SpareBank1/designsystem/commit/9748d9da2ae53a2db39759b923109015cd3d48e4))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** default layout er nå vertikal på mobil
+
+
+
+
+
 ## [22.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@22.1.3...@sb1/ffe-cards@22.1.4) (2025-04-07)
 
 

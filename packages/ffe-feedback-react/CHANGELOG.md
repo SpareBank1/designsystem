@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.0.31...@sb1/ffe-feedback-react@6.1.0) (2025-04-16)
+
+
+### Features
+
+* **ffe-feedback-react:** forbedring i stegene. Nye knapper, forbedret ([e06e2ae](https://github.com/SpareBank1/designsystem/commit/e06e2ae012a37f698fef84b2576131f22ebb3bc4))
+
+
+
+
+
 ## [6.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.0.30...@sb1/ffe-feedback-react@6.0.31) (2025-04-09)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-symbols",
-    "version": "4.0.14",
+    "version": "4.0.15",
     "description": "Styling for tilpasning av material symbols til Sb1",
     "main": "ffe-symbol.css",
     "scripts": {

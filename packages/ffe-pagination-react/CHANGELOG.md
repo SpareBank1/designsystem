@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.70](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.69...@sb1/ffe-pagination-react@1.2.70) (2025-04-16)
+
+
+### Bug Fixes
+
+* **ffe-pagination-react:** Reset current page when updating totalElements ([6a5c730](https://github.com/SpareBank1/designsystem/commit/6a5c73089b983a1953e64fe7aec0516c092aadc2))
+
+
+
+
+
 ## [1.2.69](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.68...@sb1/ffe-pagination-react@1.2.69) (2025-04-09)
 
 **Note:** Version bump only for package @sb1/ffe-pagination-react
