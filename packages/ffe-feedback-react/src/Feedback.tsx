@@ -14,17 +14,19 @@ export interface FeedbackProps {
     headingLevel?: HeadingLevel;
     locale?: Locale;
     onThumbClick: (thumb: Thumb) => void;
-    onFeedbackSend: (feedbackText: string) => void;
+    onFeedbackSend: (feedbackText: string, consent?: boolean) => void;
     bgColor?: BgColor;
     contactLink?: FeedbackExpandedProps['contactLink'];
     texts?: {
         feedbackNotSentHeading?: string;
+        consentText?: string;
     };
     className?: string;
+    includeConsent?: boolean;
 }
 
 export const Feedback = ({
-    headingLevel = 5,
+    headingLevel = 4,
     locale = 'nb',
     onThumbClick,
     onFeedbackSend,
@@ -32,12 +34,10 @@ export const Feedback = ({
     contactLink,
     texts,
     className,
+    includeConsent = false,
 }: FeedbackProps) => {
     const feedbackSentRef = useRef<HTMLHeadingElement>(null);
     const expandedRef = useRef<HTMLHeadingElement>(null);
-    const [feedbackThumbClicked, setFeedbackThumbClicked] = useState<
-        Thumb | undefined
-    >();
     const [expanded, setExpanded] = useState(false);
     const [feedbackSent, setFeedbackSent] = useState(false);
     const headingId = useId();
@@ -51,7 +51,6 @@ export const Feedback = ({
     );
 
     const handleThumbClicked = (thumb: Thumb) => {
-        setFeedbackThumbClicked(thumb);
         flushSync(() => {
             setExpanded(true);
         });
@@ -59,12 +58,17 @@ export const Feedback = ({
         onThumbClick(thumb);
     };
 
-    const handleFeedbackSent = (feedbackText: string) => {
+    const handleFeedbackSent = (
+        feedbackText?: string,
+        consentGiven?: boolean,
+    ) => {
         flushSync(() => {
             setFeedbackSent(true);
         });
         feedbackSentRef.current?.focus();
-        onFeedbackSend(feedbackText);
+        if (feedbackText && feedbackText.length > 0) {
+            onFeedbackSend(feedbackText, consentGiven);
+        }
     };
 
     const renderHeading = (
@@ -115,19 +119,17 @@ export const Feedback = ({
     if (expanded) {
         return (
             <div className={feedbackClassnames}>
-                <div className="ffe-feedback__content">
+                <div className="ffe-feedback__expanded">
                     {renderHeading(
                         headingLevel,
-                        feedbackThumbClicked === 'THUMB_UP'
-                            ? txt[locale].FEEDBACK_GOOD
-                            : txt[locale].FEEDBACK_IMPROVE,
+                        txt[locale].FEEDBACK_SENT_HEADING,
                         { ref: expandedRef, tabIndex: -1 },
                     )}
                     <FeedbackExpanded
                         locale={locale}
-                        onSend={handleFeedbackSent}
-                        onCancel={() => setExpanded(false)}
+                        handleFeedback={handleFeedbackSent}
                         contactLink={contactLink}
+                        includeConsent={includeConsent}
                     />
                 </div>
             </div>

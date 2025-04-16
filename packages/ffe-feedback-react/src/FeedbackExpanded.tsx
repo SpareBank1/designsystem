@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Paragraph } from '@sb1/ffe-core-react';
+import { LinkText, Paragraph } from '@sb1/ffe-core-react';
 import { txt } from './i18n/texts';
-import { InputGroup, TextArea } from '@sb1/ffe-form-react';
+import { InputGroup, TextArea, Checkbox } from '@sb1/ffe-form-react';
 import {
     ActionButton,
     ButtonGroup,
@@ -10,42 +10,32 @@ import {
 
 export interface FeedbackExpandedProps {
     locale: 'nb' | 'nn' | 'en';
-    onSend: (feedbackText: string) => void;
-    onCancel: () => void;
+    handleFeedback: (feedbackText?: string, consentGiven?: boolean) => void;
     contactLink?: {
         url: string;
         onClick?: React.MouseEventHandler<HTMLAnchorElement>;
         linkText?: string;
     };
+    includeConsent?: boolean;
 }
 
 export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
     locale,
-    onSend,
-    onCancel,
+    handleFeedback,
     contactLink,
+    includeConsent = false,
 }) => {
     const [feedbackText, setFeedbackText] = useState<string>();
-    const [fieldMessage, setFieldMessage] = useState<string>();
-
-    const validateMessage = () => {
-        if (feedbackText && feedbackText?.length >= 3) {
-            setFieldMessage(undefined);
-            return true;
-        }
-        setFieldMessage(txt[locale].FEEDBACK_SHORT);
-        return false;
-    };
+    const [consentGiven, setConsentGiven] = useState<boolean>(false);
 
     const contactLinkElement = contactLink ? (
-        <TertiaryButton
-            as="a"
+        <LinkText
             href={contactLink.url}
             className="ffe-feedback__link-button"
             onClick={contactLink?.onClick}
         >
             {contactLink.linkText ?? txt[locale].FEEDBACK_LINK_TEXT}
-        </TertiaryButton>
+        </LinkText>
     ) : null;
 
     return (
@@ -55,17 +45,10 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                 {contactLinkElement && txt[locale].QUESTIONS}
                 {contactLinkElement}
             </Paragraph>
-            <Paragraph>{txt[locale].FEEDBACK_SENSITIVE}</Paragraph>
             <InputGroup
                 className="ffe-feedback__textarea-container"
-                fieldMessage={fieldMessage}
-                label={
-                    // htmlFor kommer fra InputGroup
-                    // eslint-disable-next-line jsx-a11y/label-has-for
-                    <label className="ffe-screenreader-only">
-                        {txt[locale].FEEDBACK_IMPROVE}
-                    </label>
-                }
+                label={txt[locale].FEEDBACK_IMPROVE}
+                description={txt[locale].FEEDBACK_SENSITIVE}
             >
                 <TextArea
                     data-testid="feedbackTextArea"
@@ -73,23 +56,40 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                     value={feedbackText}
                     rows={6}
                     maxLength={1000}
-                    onBlur={validateMessage}
+                    className="ffe-feedback__textarea"
                 />
             </InputGroup>
+            {includeConsent && (
+                <div className="ffe-feedback__consent">
+                    <Checkbox
+                        checked={consentGiven}
+                        onChange={event =>
+                            setConsentGiven(event.target.checked)
+                        }
+                    >
+                        {txt[locale].FEEDBACK_CONSENT}
+                    </Checkbox>
+                </div>
+            )}
+
             <ButtonGroup
                 className="ffe-feedback__button-group"
                 ariaLabel={txt[locale].FEEDBACK_BUTTON_GROUP}
+                thin={true}
             >
                 <ActionButton
                     onClick={() => {
-                        if (validateMessage() && feedbackText) {
-                            onSend(feedbackText);
+                        if (feedbackText) {
+                            handleFeedback(
+                                feedbackText,
+                                includeConsent ? consentGiven : undefined,
+                            );
                         }
                     }}
                 >
                     {txt[locale].FEEDBACK_BUTTON_SEND}
                 </ActionButton>
-                <TertiaryButton onClick={onCancel}>
+                <TertiaryButton onClick={() => handleFeedback()}>
                     {txt[locale].FEEDBACK_BUTTON_CANCEL}
                 </TertiaryButton>
             </ButtonGroup>

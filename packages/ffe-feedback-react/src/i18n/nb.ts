@@ -4,16 +4,15 @@ export const nb = {
     FEEDBACK_NOT_SENT_HEADING: 'Hva synes du om denne siden? ',
     FEEDBACK_SENT_HEADING: 'Takk for tilbakemeldingen!',
     FEEDBACK_BUTTON_SEND: 'Send tilbakemelding',
-    FEEDBACK_BUTTON_CANCEL: 'Avbryt',
+    FEEDBACK_BUTTON_CANCEL: 'Avslutt',
     FEEDBACK_BUTTON_GROUP: 'Knappegruppe',
-    FEEDBACK_GOOD: 'Hva var bra?',
-    FEEDBACK_IMPROVE: 'Hva kan vi gjøre bedre?',
+    FEEDBACK_IMPROVE: 'Har du noe mer på hjertet? (valgfritt)',
     FEEDBACK_ANSWER:
         'Svaret ditt blir brukt til å forbedre denne siden og blir ikke besvart.',
+    FEEDBACK_CONSENT:
+        'Jeg samtykker til at jeg kan bli kontaktet angående tilbakemeldingen min.',
     QUESTIONS: ' Har du spørsmål, ',
     FEEDBACK_LINK_TEXT: 'kontakt kundeservice.',
     FEEDBACK_SENSITIVE:
-        'Unngå å oppgi sensitiv eller personlig informasjon, for eksempel helseopplysninger, politisk tilhørighet, personnummer, navn, e-post eller telefonnummer.',
-    FEEDBACK_SHORT: 'Tilbakemeldingen må være på minst tre tegn.',
-    NATIVE_VIEW_HEADING: 'Kundeservice',
+        'Unngå å oppgi sensitiv eller personlig informasjon, for eksempel helseopplysninger, personnummer, navn eller kontaktinfo.',
 } as const;
