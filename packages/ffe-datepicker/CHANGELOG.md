@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.28...@sb1/ffe-datepicker@14.0.29) (2025-04-22)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** riktig border på hover når knapp har fokus ([f5b719b](https://github.com/SpareBank1/designsystem/commit/f5b719bd9675fcd381cbdf6568383a4ab54a1ac3))
+
+
+
+
+
 ## [14.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.27...@sb1/ffe-datepicker@14.0.28) (2025-04-16)
 
 
