@@ -42,7 +42,8 @@
         border: none;
     }
 
-    &:focus-within {
+    &:focus-within,
+    &:has(&__button:focus) .ffe-input-field:hover {
         outline: none;
         box-shadow: var(--ffe-g-border-focus-box-shadow)
             var(--ffe-color-border-interactive-focus);
