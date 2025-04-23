@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.53](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@11.0.52...@sb1/ffe-system-message-react@11.0.53) (2025-04-23)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
+
+
+
+
 ## [11.0.52](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@11.0.51...@sb1/ffe-system-message-react@11.0.52) (2025-04-16)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

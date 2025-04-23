@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-context-message-react",
-    "version": "12.0.48",
+    "version": "12.0.49",
     "description": "React implementation of ffe-context-message component",
     "keywords": [
         "ffe"
@@ -31,7 +31,7 @@
     "dependencies": {
         "@sb1/ffe-collapse-react": "^5.1.24",
         "@sb1/ffe-context-message": "^10.0.29",
-        "@sb1/ffe-icons-react": "^11.0.22",
+        "@sb1/ffe-icons-react": "^12.0.0",
         "classnames": "^2.3.1"
     },
     "devDependencies": {

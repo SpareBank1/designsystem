@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@11.0.22...@sb1/ffe-icons-react@12.0.0) (2025-04-23)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** fjern ubrukt weight-prop ([4db6b8a](https://github.com/SpareBank1/designsystem/commit/4db6b8aa7c97bcae7e304bb03c45e3600bf38575))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons-react:** fjerner ubrukt weight-prop
+
+
+
+
+
 ## [11.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@11.0.21...@sb1/ffe-icons-react@11.0.22) (2025-04-16)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.36](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@1.1.35...@sb1/ffe-modals-react@1.1.36) (2025-04-23)
+
+**Note:** Version bump only for package @sb1/ffe-modals-react
+
+
+
+
+
 ## [1.1.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals-react@1.1.34...@sb1/ffe-modals-react@1.1.35) (2025-04-16)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react
