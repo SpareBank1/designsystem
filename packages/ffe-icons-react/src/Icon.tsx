@@ -6,8 +6,6 @@ export interface IconProps extends React.ComponentPropsWithoutRef<'span'> {
     fileUrl: string;
     /** Size of the icon, default is the closest defined font-size */
     size?: 'sm' | 'md' | 'lg' | 'xl';
-    /** Symbols stroke weight. This can affect overall size of symbol, 400 is default */
-    weight?: 300 | 500;
     /** Aria label text. If null/undefined, aria-hidden is automatically set to true */
     ariaLabel?: React.ComponentProps<'span'>['aria-label'];
 }

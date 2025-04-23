@@ -80,7 +80,6 @@ export const ContextMessage: React.FC<ContextMessageProps> = ({
                                     'ffe-context-message-content__icon-span',
                                     icon.props.className,
                                 ),
-                                weight: 300,
                             })}
                         </div>
                     )}
@@ -106,7 +105,7 @@ export const ContextMessage: React.FC<ContextMessageProps> = ({
                         onClick={() => setIsOpen(false)}
                         type="button"
                     >
-                        <Icon fileUrl={closeIcon} weight={300} size="sm" />
+                        <Icon fileUrl={closeIcon} size="sm" />
                     </button>
                 )}
             </div>
