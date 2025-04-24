@@ -5,7 +5,9 @@
     --padding-sm: calc(var(--ffe-spacing-2xs) - var(--border-width));
     --padding-md: calc(var(--ffe-spacing-xs) - var(--border-width));
     --padding-lg: calc(12px - var(--border-width));
-    --icon-only-color: var(--ffe-color-component-button-action-foreground-default);
+    --icon-only-color: var(
+        --ffe-color-component-button-action-foreground-default
+    );
 
     align-items: center;
     appearance: none;
@@ -104,7 +106,9 @@
         padding: var(--padding-lg) var(--ffe-spacing-md);
 
         &.ffe-button--icon-only {
-            padding: var(--padding-md); //Md for å kompansere for hvor stort lg-ikonet er i forhold til lg-knappen
+            padding: var(
+                --padding-md
+            ); //Md for å kompansere for hvor stort lg-ikonet er i forhold til lg-knappen
         }
     }
 
@@ -210,9 +214,7 @@
 
         &:focus,
         &:visited {
-            color: var(
-                --ffe-color-component-button-secondary-foreground-default
-            );
+            color: var(--ffe-color-component-button-secondary-foreground-hover);
             background-color: var(
                 --ffe-color-component-button-secondary-fill-hover
             );
