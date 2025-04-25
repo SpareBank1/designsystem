@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@21.3.3...@sb1/ffe-buttons@21.3.4) (2025-04-25)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** fiks farge ved fokus ved å endre klassenavn ([40a5399](https://github.com/SpareBank1/designsystem/commit/40a53993e3122ca98bca0f3f62dfe6f7fbe25b2a))
+
+
+
+
+
 ## [21.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@21.3.2...@sb1/ffe-buttons@21.3.3) (2025-04-16)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
