@@ -33,8 +33,8 @@
         "storybook:build": "storybook build",
         "storybook": "node count-stories.js && echo \"💡[INFO] If Storybook fails, try building the design system first with: npm run build\" && storybook dev -p 6006",
         "build-storybook": "run-s build storybook:build",
-        "sync-tokens-to-figma": "ts-node packages/ffe-core/scripts/figma-api/sync_tokens_to_figma.ts",
-        "sync-figma-to-tokens": "ts-node packages/ffe-core/scripts/figma-api/sync_figma_to_tokens.ts",
+        "sync-tokens-to-figma": "tsx packages/ffe-core/scripts/figma-api/sync_tokens_to_figma.ts",
+        "sync-figma-to-tokens": "tsx packages/ffe-core/scripts/figma-api/sync_figma_to_tokens.ts",
         "count": "node count-stories.js"
     },
     "lint-staged": {
@@ -90,6 +90,7 @@
         "rimraf": "^6.0.1",
         "storybook": "^8.6.0",
         "ts-node": "^10.9.2",
+        "tsx": "^4.19.3",
         "typescript": "^5.7.2"
     },
     "eslintConfig": {
