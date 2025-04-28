@@ -1,0 +1,19 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "types",
+        "rootDir": "gen-src",
+        "baseUrl": ".",
+        "allowJs": true
+    },
+    "include": ["gen-src/**/*", "lib/semanticColors.js"],
+    "exclude": [
+        "node_modules",
+        "lib",
+        "dist",
+        "types",
+        "less",
+        "css",
+        "scripts"
+    ]
+}
