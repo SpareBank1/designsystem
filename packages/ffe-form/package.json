@@ -15,7 +15,7 @@
     "scripts": {
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint",
-        "build": "lessc less/form.less css/form.css --autoprefix"
+        "build": "lessc --include-path=../../node_modules less/form.less css/form.css --autoprefix"
     },
     "dependencies": {
         "@sb1/ffe-buttons": "^21.3.5",

@@ -14,7 +14,7 @@
     "scripts": {
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint",
-        "build": "lessc less/tabs.less css/tabs.css --autoprefix"
+        "build": "lessc --include-path=../../node_modules less/tabs.less css/tabs.css --autoprefix"
     },
     "dependencies": {
         "@sb1/ffe-core": "^31.1.2"

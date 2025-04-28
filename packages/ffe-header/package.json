@@ -13,8 +13,8 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "lessc less/ffe-header-nodeps.less css/ffe-header.css --autoprefix",
-        "build:examples": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
+        "build": "lessc --include-path=../../node_modules less/ffe-header-nodeps.less css/ffe-header.css --autoprefix",
+        "build:examples": "lessc --include-path=../../node_modules less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc --include-path=../../node_modules examples/examples.less examples/examples.css",
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint"
     },

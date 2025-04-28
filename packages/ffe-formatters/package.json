@@ -9,19 +9,24 @@
     "author": "SpareBank 1",
     "files": [
         "lib",
-        "es",
         "types"
     ],
-    "main": "lib/index.js",
-    "module": "es/index.js",
+    "main": "./lib/index.cjs",
+    "module": "./lib/index.js",
     "types": "types/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./lib/index.js",
+            "require": "./lib/index.cjs"
+        }
+    },
     "sideEffects": false,
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool tsc",
+        "build": "tsup src/index.ts --format esm,cjs --clean && tsc --emitDeclarationOnly",
         "lint": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\"",
         "lint:fix": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\" --fix",
         "test": "jest",
@@ -29,7 +34,8 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
-        "eslint": "^9.22.0"
+        "eslint": "^9.22.0",
+        "tsup": "^8.0.0"
     },
     "publishConfig": {
         "access": "public"

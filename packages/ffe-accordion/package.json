@@ -15,7 +15,7 @@
     "scripts": {
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint",
-        "build": "lessc less/ffe-accordion.less css/ffe-accordion.css --autoprefix"
+        "build": "lessc --include-path=../../node_modules less/ffe-accordion.less css/ffe-accordion.css --autoprefix"
     },
     "dependencies": {
         "@sb1/ffe-core": "^31.1.2"

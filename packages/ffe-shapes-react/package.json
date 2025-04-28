@@ -5,20 +5,24 @@
     "author": "SpareBank 1",
     "files": [
         "lib",
-        "es",
         "types"
     ],
-    "main": "lib/index.js",
-    "module": "es/index.js",
+    "main": "./lib/index.cjs",
+    "module": "./lib/index.js",
     "types": "types/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./lib/index.js",
+            "require": "./lib/index.cjs"
+        }
+    },
     "sideEffects": false,
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool tsc",
-        "build:es": "ffe-buildtool tsc --es",
+        "build": "tsup src/index.tsx --format esm,cjs --clean && tsc --emitDeclarationOnly",
         "lint": "eslint \"src/**/*.{ts,tsx}\"",
         "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest",
@@ -31,7 +35,8 @@
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "tsup": "^8.0.0"
     },
     "peerDependencies": {
         "react": ">=18.2.0"
