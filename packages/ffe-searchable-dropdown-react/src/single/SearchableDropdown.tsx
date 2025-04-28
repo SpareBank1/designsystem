@@ -300,7 +300,11 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <div
             onKeyDown={handleKeyDown}
-            className={classNames(className, 'ffe-searchable-dropdown')}
+            className={classNames(
+                className,
+                'ffe-searchable-dropdown',
+                'ffe-default-mode',
+            )}
             ref={containerRef}
             onMouseDown={addFlagOnEventHandler(id)}
             onFocus={addFlagOnEventHandler(id)}

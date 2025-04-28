@@ -357,6 +357,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                 className,
                 'ffe-searchable-dropdown',
                 'ffe-searchable-dropdown--multi',
+                'ffe-default-mode',
             )}
         >
             {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
