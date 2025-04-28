@@ -27,6 +27,8 @@ export type CardBaseProps<As extends ElementType = 'div'> = Omit<
      * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
     bgDarkmodeColor?: never;
     noPadding?: boolean;
+    /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
+    appearance?: 'default' | 'accent';
     children: WithCardActionProps['children'] | React.ReactNode;
 };
 
@@ -40,6 +42,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
         textCenter,
         bgColor = 'primary',
         noPadding,
+        appearance = 'default',
         children,
         ...rest
     } = props;
@@ -52,6 +55,7 @@ function CardBaseWithForwardRef<As extends ElementType>(
                 'ffe-card-base--no-margin': noMargin,
                 'ffe-card-base--text-center': textCenter,
                 'ffe-card-base--no-padding': noPadding,
+                'ffe-default-mode': appearance === 'default',
             })}
             {...(rest as Record<string, unknown>)}
             ref={ref}
