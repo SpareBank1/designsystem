@@ -272,7 +272,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     return (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions
         <div
-            className={classNames('ffe-datepicker', {
+            className={classNames('ffe-datepicker', 'ffe-default-mode', {
                 'ffe-datepicker--full-width': fullWidth,
                 'ffe-input-group--message': hasMessage,
                 'ffe-datepicker--invalid': ariaInvalid(),
