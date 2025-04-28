@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.24...@sb1/ffe-datepicker-react@10.2.25) (2025-04-28)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** Use dynamic imports in test helper to avoid making react testing library a dependency ([fea4b07](https://github.com/SpareBank1/designsystem/commit/fea4b07bea50a3d1a4b432c1cdc5ab2cfacff33e))
+
+
+
+
+
 ## [10.2.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.23...@sb1/ffe-datepicker-react@10.2.24) (2025-04-25)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

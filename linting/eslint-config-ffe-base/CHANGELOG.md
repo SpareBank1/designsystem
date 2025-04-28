@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe-base@3.0.7...@sb1/eslint-config-ffe-base@3.0.8) (2025-04-28)
+
+
+### Bug Fixes
+
+* **eslint-config-ffe-base:** fikse peerDependencies ([0b1010e](https://github.com/SpareBank1/designsystem/commit/0b1010e86ebc14fe4f2154988516263ce128aa57))
+
+
+
+
+
 ## [3.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe-base@3.0.6...@sb1/eslint-config-ffe-base@3.0.7) (2025-04-16)
 
 **Note:** Version bump only for package @sb1/eslint-config-ffe-base
