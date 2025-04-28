@@ -99,14 +99,17 @@ const convertSemanticJsonToCss = (
                     .replace(/ø/g, 'oe')
                     .replace(/æ/g, 'ae')
                     .replace(/å/g, 'aa');
+                const newValue = value.$value
+                    .slice(1, -1)
+                    .replace(/\./g, '-')
+                    .replace(/ø/g, 'oe')
+                    .replace(/æ/g, 'ae')
+                    .replace(/å/g, 'aa');
+                const colorValue = newValue.includes('color') ? '' : 'color-';
                 const cssVarValue = value.$value.startsWith('{')
-                    ? `var(--ffe-${value.$value
-                          .slice(1, -1)
-                          .replace(/\./g, '-')
-                          .replace(/ø/g, 'oe')
-                          .replace(/æ/g, 'ae')
-                          .replace(/å/g, 'aa')})`
+                    ? `var(--ffe-${colorValue}${newValue})`
                     : value.$value;
+
                 if (usedSemantic[`var(${cssVarName})`]) {
                     cssLines.push(`${cssVarName}: ${cssVarValue};`);
                     usedPrimitive[cssVarValue] = true;
