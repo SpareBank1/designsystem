@@ -41,7 +41,7 @@ npm i --save-dev @testing-library/react
 ```
 
 ```tsx
-function getDatepickerByLabelText(
+async function getDatepickerByLabelText(
     label: string,
     index = 0,
 ): {
@@ -63,7 +63,7 @@ describe('Datepicker test', () => {
     it('datepicker provides methods to simplify testing', async () => {
         // Code for rendering your page / component
 
-        const datepicker = getDatepickerByLabelText('Dato velger');
+        const datepicker = await getDatepickerByLabelText('Dato velger');
 
         expect(datepicker.getValue()).toStrictEqual('01.02.2024');
 

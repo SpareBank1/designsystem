@@ -1,6 +1,5 @@
-import { act, screen } from '@testing-library/react';
-
 async function simulateTyping(element: HTMLElement, text: string, delay = 100) {
+    const { act } = await import('@testing-library/react');
     let _text = text;
     if (text.length === 0) {
         _text = '0';
@@ -69,10 +68,11 @@ export type DatepickerTestHelper = {
  * @param index if there are multiple datepicker elements with the same label, you can specify which one you want to get
  * @returns DatepickerTestHelper
  */
-export function getDatepickerByLabelText(
+export async function getDatepickerByLabelText(
     label: string,
     index = 0,
-): DatepickerTestHelper {
+): Promise<DatepickerTestHelper> {
+    const { screen } = await import('@testing-library/react');
     const elements = screen
         .getAllByText(label)
         .map(element => element.parentElement?.querySelector('.ffe-datepicker'))
@@ -99,6 +99,7 @@ export function getDatepickerByLabelText(
     }
 
     async function setValue(element: HTMLElement, value: string) {
+        const { act } = await import('@testing-library/react');
         const [dayElement, monthElement, yearElement] = Array.from(
             element.querySelectorAll('[role="spinbutton"]'),
         ) as HTMLElement[];
