@@ -15,7 +15,11 @@ export const Accordion: React.FC<AccordionProps> = ({
     return (
         <AccordionProvider headingLevel={headingLevel}>
             <div
-                className={classNames(className, 'ffe-accordion')}
+                className={classNames(
+                    className,
+                    'ffe-accordion',
+                    'ffe-default-mode',
+                )}
                 role="group"
                 aria-label="Trekkspillmeny"
                 {...rest}
