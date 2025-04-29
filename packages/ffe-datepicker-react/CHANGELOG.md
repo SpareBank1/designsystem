@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.25...@sb1/ffe-datepicker-react@10.2.26) (2025-04-29)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+
+
+
+
+
 ## [10.2.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.24...@sb1/ffe-datepicker-react@10.2.25) (2025-04-28)
 
 

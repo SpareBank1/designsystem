@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes@1.1.7...@sb1/ffe-shapes@1.1.8) (2025-04-29)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+
+
+
+
+
 ## [1.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes@1.1.6...@sb1/ffe-shapes@1.1.7) (2025-04-16)
 
 **Note:** Version bump only for package @sb1/ffe-shapes

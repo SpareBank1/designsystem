@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@17.0.1...@sb1/ffe-icons@17.0.2) (2025-04-29)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+
+
+
+
+
 ## [17.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@17.0.0...@sb1/ffe-icons@17.0.1) (2025-04-16)
 
 **Note:** Version bump only for package @sb1/ffe-icons

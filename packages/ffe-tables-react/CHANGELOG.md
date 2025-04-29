@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.48](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.47...@sb1/ffe-tables-react@11.0.48) (2025-04-29)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+
+
+
+
+
 ## [11.0.47](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.46...@sb1/ffe-tables-react@11.0.47) (2025-04-23)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-core-react",
-    "version": "10.1.1",
+    "version": "10.1.2",
     "description": "React components for ffe-core components",
     "keywords": [
         "ffe"
@@ -29,7 +29,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^31.1.1",
+        "@sb1/ffe-core": "^31.1.2",
         "classnames": "^2.3.1"
     },
     "devDependencies": {

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@12.0.27...@sb1/ffe-file-upload@12.0.28) (2025-04-29)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+
+
+
+
+
 ## [12.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@12.0.26...@sb1/ffe-file-upload@12.0.27) (2025-04-25)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
