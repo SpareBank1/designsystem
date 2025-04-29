@@ -194,7 +194,49 @@ Object.defineProperty(exports, "__esModule", { value: true });
     return moduleContent;
 }
 
+function addSemanticToSemanticReferences(jsonFile) {
+    const jsonContent = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
+    const processColorTokens = (obj, prefix = '') => {
+        for (const [key, value] of Object.entries(obj)) {
+            if (value.$type === 'color') {
+                const cssVarName = `--ffe-color-${prefix}${key}`
+                    .replace(/\s./g, '-')
+                    .replace(/ø/g, 'oe')
+                    .replace(/æ/g, 'ae')
+                    .replace(/å/g, 'aa');
+                const newValue = value.$value
+                    .slice(1, -1)
+                    .replace(/\./g, '-')
+                    .replace(/ø/g, 'oe')
+                    .replace(/æ/g, 'ae')
+                    .replace(/å/g, 'aa');
+                const colorValue = newValue.includes('color') ? '' : 'color-';
+                const cssVarValue = value.$value.startsWith('{')
+                    ? `var(--ffe-${colorValue}${newValue})`
+                    : value.$value;
+
+                if (usedSemantic[`var(${cssVarName})`]) {
+                    const isSemanticColorReferencingSemanticColor =
+                        !newValue.includes('color');
+                    if (isSemanticColorReferencingSemanticColor) {
+                        usedSemantic[`var(${cssVarValue})`];
+                    }
+                }
+            } else if (typeof value === 'object') {
+                processColorTokens(value, `${prefix}${key}-`);
+            }
+        }
+    };
+
+    processColorTokens(jsonContent);
+}
+
+function preProcessSemanticColors(jsonFile) {
+    addSemanticToSemanticReferences(jsonFile);
+}
+
 function generateSemanticColors() {
+    preProcessSemanticColors(filePath(files.semanticLight));
     let cssContent = '// Generated from Figma tokens';
     cssContent += `\n\n// Context accent \n.ffe-accent-mode {\n${convertContextJsonToCss(filePath(files.contextAccent)).join('\n')}}\n`;
     cssContent += `\n\n// Context \n:root,\n:host,\n.ffe-default-mode {\n${convertContextJsonToCss(filePath(files.context)).join('\n')}}\n`;
