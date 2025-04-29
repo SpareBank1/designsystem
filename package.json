@@ -1,14 +1,14 @@
 {
-    "name": "@sb1/ffe",
-    "version": "1.0.0",
-    "description": "Felles Front End",
-    "author": "SpareBank 1",
-    "license": "SEE LICENSE IN README.md",
-    "private": true,
-    "browserslist": [
-        "last 3 versions",
-        "not ie >= 0"
-    ],
+  "name": "@sb1/ffe",
+  "version": "1.0.0",
+  "description": "Felles Front End",
+  "author": "SpareBank 1",
+  "license": "SEE LICENSE IN README.md",
+  "private": true,
+  "browserslist": [
+    "last 3 versions",
+    "not ie >= 0"
+  ],
     "scripts": {
         "clean": "run-s clean:lib clean:lerna:clean clean:lerna",
         "clean:lib": "rimraf packages/*/lib packages/*/es packages/*/types",
@@ -97,6 +97,5 @@
             "plugin:storybook/recommended"
         ]
     },
-    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "type": "module"
 }

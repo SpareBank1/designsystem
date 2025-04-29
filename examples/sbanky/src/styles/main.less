@@ -1,0 +1,19 @@
+// Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// FFE styles will be automatically injected here by the ffe-vite-less plugin
+// Custom styles
+:root {
+  --ffe-transition-duration: 0.2s;
+  --ffe-ease: ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ffe-font-family);
+  color: var(--ffe-farge-svart);
+  background-color: var(--ffe-farge-hvit);
+}
