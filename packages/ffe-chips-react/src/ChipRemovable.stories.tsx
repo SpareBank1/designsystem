@@ -13,8 +13,12 @@ type Story = StoryObj<typeof ChipRemovable<any>>;
 export const Standard: Story = {
     args: {
         as: 'button',
-        children: 'Label',
         size: 'sm',
     },
-    render: args => <ChipRemovable {...args} />,
+    render: args => (
+        <div className="ffe-button-display-group">
+            <ChipRemovable {...args}>Chip 1</ChipRemovable>
+            <ChipRemovable {...args}>Chip 2</ChipRemovable>
+        </div>
+    ),
 };

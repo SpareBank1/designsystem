@@ -13,8 +13,12 @@ type Story = StoryObj<typeof Chip<any>>;
 export const Standard: Story = {
     args: {
         as: 'button',
-        children: 'Label',
         size: 'sm',
     },
-    render: args => <Chip {...args} />,
+    render: args => (
+        <div className="ffe-button-display-group">
+            <Chip {...args}>Chip 1</Chip>
+            <Chip {...args}>Chip 2</Chip>
+        </div>
+    ),
 };

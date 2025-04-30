@@ -1,10 +1,12 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as ChipStories from './Chip.stories';
+import * as ChipRemovableStories from './ChipRemovable.stories';
+import * as ChipSelectableStories from './ChipSelectable.stories';
 import { InstallImport } from '../../../documentation/components/InstallImport';
 
-<Meta of={ChipStories} />
+<Meta title="Komponenter/Chips" />
 
-# Chip
+# Chips
 
 Bruk Chips for elementer der brukeren trenger å filtrere eller organisere innhold.
 
@@ -25,7 +27,16 @@ Om brukeren kan velge chips må de også kunne avvelge chips. Dette er spesielt 
     ]}
 />
 
-## Forhåndsvisning
+## Chip
 
 <Canvas of={ChipStories.Standard} />
 <Controls of={ChipStories.Standard} />
+
+## ChipRemovable
+
+<Canvas of={ChipRemovableStories.Standard} />
+<Controls of={ChipRemovableStories.Standard} />
+
+## ChipSelectable
+<Canvas of={ChipSelectableStories.Standard} />
+<Controls of={ChipSelectableStories.Standard} />
