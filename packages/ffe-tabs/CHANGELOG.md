@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@15.0.19...@sb1/ffe-tabs@15.0.20) (2025-04-30)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** oppdatert fargevariabel ([26fbacb](https://github.com/SpareBank1/designsystem/commit/26fbacb829bf66f08175616803d003a984e20102))
+
+
+
+
+
 ## [15.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@15.0.18...@sb1/ffe-tabs@15.0.19) (2025-04-29)
 
 

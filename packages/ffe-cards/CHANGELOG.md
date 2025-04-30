@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@23.0.1...@sb1/ffe-cards@23.1.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-cards:** nye darkmodefarger fra core, oppdatert fargevariabel og hvit bakgrunn på accent context ([2f0b4e6](https://github.com/SpareBank1/designsystem/commit/2f0b4e641697a24eaed840af1555150043345693))
+
+
+
+
+
 ## [23.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@23.0.0...@sb1/ffe-cards@23.0.1) (2025-04-29)
 
 

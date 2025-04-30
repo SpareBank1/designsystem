@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [32.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.25...@sb1/ffe-form@32.1.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-cards-react:** nye darkmodefarger fra core, oppdatert fargevariabler og hvit bakgrunn på accent context ([b4d5564](https://github.com/SpareBank1/designsystem/commit/b4d5564e190cb4a50c7ba7e5ef0a79cf6edaf5ca))
+
+
+
+
+
 ## [32.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.24...@sb1/ffe-form@32.0.25) (2025-04-29)
 
 

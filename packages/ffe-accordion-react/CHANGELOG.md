@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.0.55...@sb1/ffe-accordion-react@13.1.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-accordion-react:** hvit bakgrunn på accent context ([242c38f](https://github.com/SpareBank1/designsystem/commit/242c38f4367566df16435fa386d33920610b3999))
+
+
+
+
+
 ## [13.0.55](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.0.54...@sb1/ffe-accordion-react@13.0.55) (2025-04-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@8.0.63...@sb1/ffe-dropdown-react@8.1.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-dropdown-react:** hvit bakgrunn på accent context ([dc65bf3](https://github.com/SpareBank1/designsystem/commit/dc65bf301ee175cccff8bf6b6f797b8969530f98))
+
+
+
+
+
 ## [8.0.63](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@8.0.62...@sb1/ffe-dropdown-react@8.0.63) (2025-04-29)
 
 

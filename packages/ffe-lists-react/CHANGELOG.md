@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@13.0.21...@sb1/ffe-lists-react@13.1.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-datepicker:** hvit bakgrunn på accent context og ny prop appearance ([7b23dc5](https://github.com/SpareBank1/designsystem/commit/7b23dc57270a473986ce342c058d24829d536df2))
+
+
+
+
+
 ## [13.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@13.0.20...@sb1/ffe-lists-react@13.0.21) (2025-04-29)
 
 

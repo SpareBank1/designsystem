@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [32.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@31.1.2...@sb1/ffe-core@32.0.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-core:** ny darkmode og små oppdateringer i fargevariabler. ([74660a3](https://github.com/SpareBank1/designsystem/commit/74660a369f2097c09e79dab14edffbeca01a322d))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** Noen variabler har oppdatert verdi. Noen justerte
+farger
+--ffe-color-border-primary-hover erstattes av --ffe-color-border-primary-default-hover
+--ffe-color-border-primary-pressed erstattes av --ffe-color-border-primary-default-pressed
+--ffe-color-fill-primary-selected erstattes av --ffe-color-fill-primary-selected-default
+--ffe-color-border-primary-selected erstattes av --ffe-color-border-interactive-selected
+
+
+
+
+
 ## [31.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@31.1.1...@sb1/ffe-core@31.1.2) (2025-04-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@12.0.23...@sb1/ffe-accordion@12.1.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-accordion:** nye darkmodefarger fra core, oppdatert fargevariabel og hvit bakgrunn på accent context ([fe5f0ad](https://github.com/SpareBank1/designsystem/commit/fe5f0ad515b92a5c198b1946e1c7b7798ea8c5b1))
+
+
+
+
+
 ## [12.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@12.0.22...@sb1/ffe-accordion@12.0.23) (2025-04-29)
 
 

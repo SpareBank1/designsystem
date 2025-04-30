@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@2.0.22...@sb1/ffe-chips@2.0.23) (2025-04-30)
+
+
+### Bug Fixes
+
+* **ffe-chips:** oppdatert fargevariabel ([9b17e96](https://github.com/SpareBank1/designsystem/commit/9b17e96d8a5df32c34da99d09bdd8fe47c0b8a0a))
+
+
+
+
+
 ## [2.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@2.0.21...@sb1/ffe-chips@2.0.22) (2025-04-29)
 
 

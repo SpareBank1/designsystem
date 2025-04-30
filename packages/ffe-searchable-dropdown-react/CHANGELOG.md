@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.1.31...@sb1/ffe-searchable-dropdown-react@23.2.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-datepicker:** nye darkmodefarger fra core, nye fargevariabler og hvit bakgrunn på accent context ([f62d7d0](https://github.com/SpareBank1/designsystem/commit/f62d7d0b62b7c601cf059feb147ce08e715af4b2))
+
+
+
+
+
 ## [23.1.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.1.30...@sb1/ffe-searchable-dropdown-react@23.1.31) (2025-04-29)
 
 

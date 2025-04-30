@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.23...@sb1/ffe-form-react@23.3.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-form-react:** nye darkmodefarger fra core og hvit bakgrunn på accent context ([ff40801](https://github.com/SpareBank1/designsystem/commit/ff40801c27f74205091e5999b52ae0ac67628909))
+
+
+
+
+
 ## [23.2.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.2.22...@sb1/ffe-form-react@23.2.23) (2025-04-29)
 
 

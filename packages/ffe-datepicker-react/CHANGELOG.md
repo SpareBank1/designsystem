@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.26...@sb1/ffe-datepicker-react@10.3.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-datepicker:** nye darkmodefarger fra core og hvit bakgrunn på accent context. ([be0ce29](https://github.com/SpareBank1/designsystem/commit/be0ce293d2cef9ecb5a8ed0f63598f8c9a1a7575))
+
+
+
+
+
 ## [10.2.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.2.25...@sb1/ffe-datepicker-react@10.2.26) (2025-04-29)
 
 

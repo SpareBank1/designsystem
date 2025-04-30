@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.31...@sb1/ffe-datepicker@14.1.0) (2025-04-30)
+
+
+### Features
+
+* **ffe-datepicker:** nye darkmodefarger fra core, nye fargevariabler og hvit bakgrunn på accent context. Oppdatert styling. ([f40c680](https://github.com/SpareBank1/designsystem/commit/f40c6805bad3dcf6b813e735d79b0dbed4ef94ee))
+
+
+
+
+
 ## [14.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.0.30...@sb1/ffe-datepicker@14.0.31) (2025-04-29)
 
 
