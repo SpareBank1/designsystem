@@ -12,6 +12,7 @@ export const Dropdown = React.forwardRef<HTMLSelectElement, DropdownProps>(
             <select
                 className={classNames(
                     'ffe-dropdown',
+                    'ffe-default-mode',
                     { 'ffe-dropdown--inline': inline },
                     className,
                 )}

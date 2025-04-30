@@ -20,6 +20,8 @@ export type IllustrationCardProps<As extends ElementType = 'div'> = Omit<
     illustrationPosition?: 'right' | 'left';
     /** No margin on card */
     noMargin?: boolean;
+    /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
+    appearance?: 'default' | 'accent';
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -35,6 +37,7 @@ function IllustrationCardWithForwardRef<As extends ElementType>(
         img,
         illustrationPosition,
         noMargin,
+        appearance = 'default',
         children,
         ...rest
     } = props;
@@ -49,6 +52,7 @@ function IllustrationCardWithForwardRef<As extends ElementType>(
                     'ffe-illustration-card--right':
                         illustrationPosition === 'right',
                 },
+                { ' ffe-default-mode': appearance === 'default' },
                 className,
             )}
             {...(rest as Record<string, unknown>)}

@@ -18,6 +18,8 @@ export type ImageCardProps<As extends ElementType = 'div'> = Omit<
     imageAltText: string;
     /** No margin on card */
     noMargin?: boolean;
+    /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
+    appearance?: 'default' | 'accent';
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -27,15 +29,25 @@ function ImageCardWithForwardRef<As extends ElementType>(
     props: ImageCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, imageSrc, imageAltText, noMargin, children, ...rest } =
-        props;
+    const {
+        className,
+        imageSrc,
+        imageAltText,
+        noMargin,
+        appearance = 'default',
+        children,
+        ...rest
+    } = props;
 
     return (
         <WithCardAction
             baseClassName="ffe-image-card"
             className={classNames(
                 'ffe-image-card',
-                { 'ffe-image-card--no-margin': noMargin },
+                {
+                    'ffe-image-card--no-margin': noMargin,
+                    'ffe-default-mode': appearance === 'default',
+                },
                 className,
             )}
             {...(rest as Record<string, unknown>)}

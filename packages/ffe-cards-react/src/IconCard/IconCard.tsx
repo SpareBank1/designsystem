@@ -19,6 +19,8 @@ export type IconCardProps<As extends ElementType = 'div'> = Omit<
     condensed?: boolean;
     /** No margin on card */
     noMargin?: boolean;
+    /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
+    appearance?: 'default' | 'accent';
     children:
         | React.ReactNode
         | ((cardRenderProps: CardRenderProps) => React.ReactNode);
@@ -34,6 +36,7 @@ function IconCardWithForwardRef<As extends ElementType>(
         icon,
         rightIcon,
         noMargin,
+        appearance = 'default',
         children,
         ...rest
     } = props;
@@ -45,6 +48,7 @@ function IconCardWithForwardRef<As extends ElementType>(
                 'ffe-icon-card',
                 { 'ffe-icon-card--condensed': condensed },
                 { 'ffe-icon-card--no-margin': noMargin },
+                { 'ffe-default-mode': appearance === 'default' },
                 className,
             )}
             {...(rest as Record<string, unknown>)}

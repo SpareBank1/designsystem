@@ -8,7 +8,11 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
     ({ className, ...rest }, ref) => {
         return (
             <textarea
-                className={classNames('ffe-textarea', className)}
+                className={classNames(
+                    'ffe-textarea',
+                    'ffe-default-mode',
+                    className,
+                )}
                 ref={ref}
                 {...rest}
             />

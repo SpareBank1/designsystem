@@ -14,6 +14,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <input
                 className={classNames(
                     'ffe-input-field',
+                    'ffe-default-mode',
                     { 'ffe-input-field--inline': inline },
                     { 'ffe-input-field--text-right-align': textRightAlign },
                     className,

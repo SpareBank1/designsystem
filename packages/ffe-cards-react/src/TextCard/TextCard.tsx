@@ -16,6 +16,8 @@ export type TextCardProps<As extends ElementType = 'div'> = Omit<
     leftAlign?: boolean;
     /** No margin on card */
     noMargin?: boolean;
+    /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
+    appearance?: 'default' | 'accent';
     /** Function that's passed available subcomponents as arguments, or regular children */
     children:
         | React.ReactNode
@@ -26,15 +28,25 @@ function TextCardWithForwardRef<As extends ElementType>(
     props: TextCardProps<As>,
     ref: ForwardedRef<any>,
 ) {
-    const { className, leftAlign, noMargin, children, ...rest } = props;
+    const {
+        className,
+        leftAlign,
+        noMargin,
+        appearance = 'default',
+        children,
+        ...rest
+    } = props;
 
     return (
         <WithCardAction
             baseClassName="ffe-text-card"
             className={classNames(
                 'ffe-text-card',
-                { 'ffe-text-card--left-align': leftAlign },
-                { 'ffe-text-card--no-margin': noMargin },
+                {
+                    'ffe-text-card--left-align': leftAlign,
+                    'ffe-text-card--no-margin': noMargin,
+                    'ffe-default-mode': appearance === 'default',
+                },
                 className,
             )}
             {...(rest as Record<string, unknown>)}

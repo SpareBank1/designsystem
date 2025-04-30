@@ -99,14 +99,22 @@ const convertSemanticJsonToCss = (
                     .replace(/ø/g, 'oe')
                     .replace(/æ/g, 'ae')
                     .replace(/å/g, 'aa');
+                const newValue = value.$value
+                    .slice(1, -1)
+                    .replace(/\./g, '-')
+                    .replace(/ø/g, 'oe')
+                    .replace(/æ/g, 'ae')
+                    .replace(/å/g, 'aa');
+
+                if (!newValue.includes('color')) {
+                    throw new Error(
+                        'Fargevariabelen finnes ikke i primitive. Dobbeltsjekk Figma, kanskje en farge er referert til inad i det semantiske laget?',
+                    );
+                }
                 const cssVarValue = value.$value.startsWith('{')
-                    ? `var(--ffe-${value.$value
-                          .slice(1, -1)
-                          .replace(/\./g, '-')
-                          .replace(/ø/g, 'oe')
-                          .replace(/æ/g, 'ae')
-                          .replace(/å/g, 'aa')})`
+                    ? `var(--ffe-${newValue})`
                     : value.$value;
+
                 if (usedSemantic[`var(${cssVarName})`]) {
                     cssLines.push(`${cssVarName}: ${cssVarValue};`);
                     usedPrimitive[cssVarValue] = true;

@@ -54,7 +54,7 @@ export const ManyChildren: Story = {
             {props => (
                 <>
                     <Input {...props} />
-                    <div>Annet innehold</div>
+                    <div>Annet innhold</div>
                 </>
             )}
         </InputGroup>

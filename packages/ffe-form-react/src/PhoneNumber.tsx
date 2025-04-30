@@ -120,7 +120,14 @@ export const PhoneNumber = React.forwardRef<
                             {text.COUNTRY_CODE}
                         </label>
                         <div className="ffe-phone-number__input-group">
-                            <span className="ffe-phone-number__plus">+</span>
+                            <span
+                                className={classNames(
+                                    'ffe-phone-number__plus',
+                                    'ffe-default-mode',
+                                )}
+                            >
+                                +
+                            </span>
                             <input
                                 ref={countryRef}
                                 id={countryCodeId}
@@ -128,6 +135,7 @@ export const PhoneNumber = React.forwardRef<
                                 className={classNames(
                                     'ffe-input-field',
                                     'ffe-phone-number__country-code-input',
+                                    'ffe-default-mode',
                                 )}
                                 type="tel"
                                 aria-invalid={
@@ -161,6 +169,7 @@ export const PhoneNumber = React.forwardRef<
                             className={classNames(
                                 'ffe-input-field',
                                 'ffe-phone-number__phone-input',
+                                'ffe-default-mode',
                             )}
                             aria-invalid={
                                 !!(

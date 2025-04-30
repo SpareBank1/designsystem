@@ -24,6 +24,8 @@ export type GroupCardProps<As extends ElementType = 'div'> = Omit<
     bgDarkmodeColor?: never;
     /** No margin on card */
     noMargin?: boolean;
+    /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
+    appearance?: 'default' | 'accent';
 };
 
 function GroupCardWithForwardRef<As extends ElementType>(
@@ -35,6 +37,7 @@ function GroupCardWithForwardRef<As extends ElementType>(
         children,
         bgColor = 'primary',
         noMargin,
+        appearance = 'default',
         as: Comp = 'div',
         ...rest
     } = props;
@@ -45,6 +48,7 @@ function GroupCardWithForwardRef<As extends ElementType>(
                 {
                     'ffe-group-card--no-margin': noMargin,
                     [`ffe-group-card--bg-${bgColor}`]: bgColor,
+                    'ffe-default-mode': appearance === 'default',
                 },
                 className,
             )}

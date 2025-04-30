@@ -265,6 +265,7 @@ export class Calendar extends Component<CalendarProps, State> {
                 role="dialog"
                 aria-modal={true}
                 aria-labelledby={`${this.datepickerId}-title`}
+                className="ffe-default-mode"
             >
                 <div
                     className={this.props.calendarClassName || 'ffe-calendar'}

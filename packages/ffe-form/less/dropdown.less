@@ -40,6 +40,10 @@
     font-size: var(--ffe-fontsize-form-dropdown);
     .chevron(@ffe-color-chevron-light-default);
 
+    &.ffe-default-mode {
+        .chevron(@ffe-color-chevron-light-default);
+    }
+
     @media (prefers-color-scheme: dark) {
         :where(.regard-color-scheme-preference) & {
             .chevron(@ffe-color-chevron-dark-default);
@@ -48,9 +52,9 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            border-color: var(--ffe-color-border-primary-hover);
+            border-color: var(--ffe-color-border-primary-default-hover);
             box-shadow: var(--ffe-g-border-focus-box-shadow)
-                var(--ffe-color-border-primary-hover);
+                var(--ffe-color-border-primary-default-hover);
         }
     }
 

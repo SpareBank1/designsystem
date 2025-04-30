@@ -5,7 +5,7 @@
     --detail-text-color: var(
         --ffe-color-component-form-input-foreground-on-fill-subtle
     );
-    --selected-icon-color: var(--ffe-color-fill-primary-selected);
+    --selected-icon-color: var(--ffe-color-fill-primary-selected-default);
     --text-color: var(var(--ffe-color-foreground-default));
 
     min-height: 2.8125rem;
@@ -25,14 +25,14 @@
     }
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            --border-color: var(--ffe-color-border-primary-hover);
-            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-hover);
+            --border-color: var(--ffe-color-border-primary-default-hover);
+            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-default-hover);
         }
     }
 
     &:focus-within {
-        --border-color: var(--ffe-color-border-primary-selected);
-        box-shadow: 0 0 0 1px var(--ffe-color-border-primary-selected);
+        --border-color: var(--ffe-color-border-interactive-selected);
+        box-shadow: 0 0 0 1px var(--ffe-color-border-interactive-selected);
     }
 
     &__input {
@@ -42,7 +42,7 @@
         border-right: none;
         @media (hover: hover) and (pointer: fine) {
             &:hover + .ffe-searchable-dropdown__button {
-                --border-color: var(--ffe-color-border-primary-hover);
+                --border-color: var(--ffe-color-border-primary-default-hover);
             }
         }
     }

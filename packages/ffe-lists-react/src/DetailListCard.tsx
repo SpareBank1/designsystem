@@ -5,6 +5,8 @@ export type BackgroundColor = 'primary' | 'secondary' | 'tertiary';
 
 export interface DetailListCardProps
     extends React.ComponentPropsWithoutRef<'dl'> {
+    /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
+    appearance?: 'default' | 'accent';
     /**
      * Property has new values that work with dark and accent mode as part of the Semantic Color update
      * Possible values: `primary` `secondary` `tertiary`
@@ -20,6 +22,7 @@ export interface DetailListCardProps
 
 export const DetailListCard: React.FC<DetailListCardProps> = ({
     className,
+    appearance = 'default',
     bgColor,
     children,
     ...rest
@@ -28,6 +31,7 @@ export const DetailListCard: React.FC<DetailListCardProps> = ({
         <dl
             className={classNames('ffe-detail-list-card', className, {
                 [`ffe-detail-list-card--bg-${bgColor}`]: bgColor,
+                'ffe-default-mode': appearance === 'default',
             })}
             {...rest}
         >

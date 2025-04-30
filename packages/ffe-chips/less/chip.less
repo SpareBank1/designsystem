@@ -40,7 +40,7 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             --background-color: var(--ffe-color-fill-primary-subtle-hover);
-            --border-color: var(--ffe-color-border-primary-hover);
+            --border-color: var(--ffe-color-border-primary-default-hover);
         }
     }
 
@@ -51,14 +51,14 @@
 
     &:active {
         --background-color: var(--ffe-color-fill-primary-subtle-pressed);
-        --border-color: var(--ffe-color-border-primary-pressed);
+        --border-color: var(--ffe-color-border-primary-default-pressed);
 
         transform: scale(0.97);
     }
 
     &--selected {
-        --background-color: var(--ffe-color-fill-primary-selected);
-        --border-color: var(--ffe-color-border-primary-selected);
+        --background-color: var(--ffe-color-fill-primary-selected-default);
+        --border-color: var(--ffe-color-border-interactive-selected);
         --text-color: var(--ffe-color-foreground-inverse);
 
         @media (hover: hover) and (pointer: fine) {

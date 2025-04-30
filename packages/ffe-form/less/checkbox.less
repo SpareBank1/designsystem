@@ -93,7 +93,7 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover + .ffe-checkbox {
             &::before {
-                border-color: var(--ffe-color-border-primary-hover);
+                border-color: var(--ffe-color-border-primary-default-hover);
                 background: var(--ffe-color-surface-primary-default-hover);
             }
         }
@@ -102,9 +102,9 @@
     &:focus + .ffe-checkbox::before,
     &:focus-visible + .ffe-checkbox::before {
         border: var(--ffe-g-border-width) solid
-            var(--ffe-color-border-primary-selected);
+            var(--ffe-color-border-interactive-selected);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-border-primary-selected);
+            var(--ffe-color-border-interactive-selected);
     }
 
     &:active + .ffe-checkbox {
@@ -116,14 +116,14 @@
 
     &:active:checked + .ffe-checkbox {
         &::before {
-            border-color: var(--ffe-color-border-primary-selected);
+            border-color: var(--ffe-color-border-interactive-selected);
             background: var(--ffe-color-fill-primary-pressed);
         }
     }
 
     &:checked + .ffe-checkbox {
         &::before {
-            border-color: var(--ffe-color-border-primary-selected);
+            border-color: var(--ffe-color-border-interactive-selected);
             background: var(--ffe-color-fill-primary-selected, #002776);
         }
         &::after {
