@@ -4,7 +4,7 @@
     "description": "Styling for tilpasning av material symbols til Sb1",
     "main": "ffe-symbol.css",
     "scripts": {
-        "build": "lessc ffe-symbol-font-inline.less ffe-symbol.css",
+        "build": "lessc --include-path=../../node_modules ffe-symbol-font-inline.less ffe-symbol.css",
         "lint": "ffe-buildtool stylelint *.less",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

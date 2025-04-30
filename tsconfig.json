@@ -1,11 +1,6 @@
 {
-    "compilerOptions": {
-        "types": ["jest", "node", "@testing-library/jest-dom"],
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "moduleResolution": "node",
-        "strict": true,
-        "jsx": "react",
-        "lib": ["dom", "es2019"]
-    }
-}
+  "compilerOptions": {
+    // Kan legge til innstillinger spesifikt for editor/root her senere
+  },
+  "references": [] // Kan legge til package references her senere
+} 

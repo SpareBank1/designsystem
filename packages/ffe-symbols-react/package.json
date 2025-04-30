@@ -2,12 +2,21 @@
     "name": "@sb1/ffe-symbols-react",
     "version": "7.0.11",
     "description": "React-komponenter for Material Symbols tilpasset Sb1 sine behov",
-    "main": "lib/index.js",
-    "module": "es/index.js",
+    "main": "./lib/index.cjs",
+    "module": "./lib/index.js",
     "types": "types/index.d.ts",
+    "files": [
+        "lib",
+        "types"
+    ],
+    "exports": {
+        ".": {
+            "import": "./lib/index.js",
+            "require": "./lib/index.cjs"
+        }
+    },
     "scripts": {
-        "build": "ffe-buildtool tsc && cp src/symbolNames.ts types/symbolNames.ts",
-        "build:es": "ffe-buildtool tsc --es",
+        "build": "tsup src/index.ts --format esm,cjs --clean && tsc --emitDeclarationOnly && cp src/symbolNames.ts types/symbolNames.ts",
         "lint": "eslint \"src/**/*.{ts,tsx}\"",
         "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest",
@@ -30,7 +39,8 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",
-        "eslint": "^9.22.0"
+        "eslint": "^9.22.0",
+        "tsup": "^8.0.0"
     },
     "publishConfig": {
         "access": "public"
