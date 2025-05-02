@@ -1,7 +1,8 @@
 import React, { useRef, useImperativeHandle, useId } from 'react';
 import classNames from 'classnames';
-import i18n from './i18n/i18n';
-import { ErrorFieldMessage } from './message';
+import i18n from './i18n/i18n.js';
+import { ErrorFieldMessage } from './message/index.js';
+import type { TooltipProps } from './Tooltip.js';
 
 export interface PhoneNumberProps {
     numberInputProps?: React.ComponentPropsWithoutRef<'input'>;

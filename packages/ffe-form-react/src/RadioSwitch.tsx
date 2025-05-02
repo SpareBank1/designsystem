@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { BaseRadioButton } from './BaseRadioButton';
-import { SelectedRadioValue } from './types';
+import { BaseRadioButton } from './BaseRadioButton.js';
+import { SelectedRadioValue } from './types.js';
 
 export interface RadioSwitchProps
     extends Omit<React.ComponentPropsWithoutRef<'input'>, 'value'> {

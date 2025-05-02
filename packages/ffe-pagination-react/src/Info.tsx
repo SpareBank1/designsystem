@@ -1,6 +1,6 @@
 import React from 'react';
-import { txt } from './texts';
-import { Locale } from './types';
+import { txt } from './texts.js';
+import { Locale } from './types.js';
 import { Paragraph } from '@sb1/ffe-core-react';
 import classNames from 'classnames';
 

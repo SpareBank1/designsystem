@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { RadioButtonInputGroup } from '../RadioButtonInputGroup';
-import { RadioSwitch } from '../RadioSwitch';
+import { RadioButtonInputGroup } from '../RadioButtonInputGroup.js';
+import { RadioSwitch } from '../RadioSwitch.js';
 
 export default () => {
     const [selected, setSelected] = useState<string>('yes'); // Initialize with a default value

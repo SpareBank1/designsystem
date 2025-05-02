@@ -2,8 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import { SmallText } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { Account, Locale } from '../types';
-import { accountFormatter, balanceWithCurrency } from '../format';
+import { Account, Locale } from '../types.js';
+import { accountFormatter, balanceWithCurrency } from '../format.js';
 
 interface MultiselectOptionBodyProps<Item extends Account> {
     item: Item;

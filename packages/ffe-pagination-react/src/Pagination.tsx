@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 import { flushSync } from 'react-dom';
 import classnames from 'classnames';
-import { Locale } from './types';
-import type { PaginationControls } from './types';
-import { DOTS, usePaginationRange } from './usePaginationRange';
-import { Info } from './Info';
-import { PerPageDropdown } from './PerPageDropdown';
-import { NavigationBlock } from './NavigationBlock';
-import { Dots } from './Dots';
-import { PageButton } from './PageButton';
+import { Locale } from './types.js';
+import type { PaginationControls } from './types.js';
+import { DOTS, usePaginationRange } from './usePaginationRange.js';
+import { Info } from './Info.js';
+import { PerPageDropdown } from './PerPageDropdown.js';
+import { NavigationBlock } from './NavigationBlock.js';
+import { Dots } from './Dots.js';
+import { PageButton } from './PageButton.js';
 
 export interface PaginationProps {
     className?: string;

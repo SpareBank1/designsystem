@@ -8,18 +8,19 @@
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
-        "lib",
+        "dist",
         "less",
         "css",
         "types"
     ],
-    "main": "./lib/index.cjs",
-    "module": "./lib/index.js",
-    "types": "types/index.d.ts",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "type": "module",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./lib/index.js",
-            "require": "./lib/index.cjs"
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
         }
     },
     "sideEffects": false,
@@ -28,7 +29,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "tsup src/index.ts --format esm,cjs --clean && tsc --emitDeclarationOnly && lessc --include-path=../../node_modules less/collapse.less css/collapse.css --autoprefix",
+        "build": "tsup src/index.ts --format esm,cjs --dts --clean && lessc --include-path=../../node_modules less/collapse.less css/collapse.css --autoprefix",
         "lint": "eslint \"src/**/*.{ts,tsx}\"",
         "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest",

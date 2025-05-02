@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { validateDate } from '../util/dateUtil';
-import i18n from '../i18n/i18n';
+import { validateDate } from '../util/dateUtil.js';
+import i18n from '../i18n/i18n.js';
 
 export interface ButtonProps {
     value: string;

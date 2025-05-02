@@ -1,6 +1,6 @@
-import { formatNumber } from './formatNumber';
-import { parseNumber } from './internal/parseNumber';
-import { NON_BREAKING_SPACE } from './internal/unicode';
+import { formatNumber } from './formatNumber.js';
+import { parseNumber } from './internal/parseNumber.js';
+import { NON_BREAKING_SPACE } from './internal/unicode.js';
 
 interface Opts {
     unit?: string;

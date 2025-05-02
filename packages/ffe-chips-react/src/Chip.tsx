@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { ElementType, ForwardedRef } from 'react';
-import { fixedForwardRef } from './fixedForwardRef';
-import { ComponentAsPropParams } from './types';
+import { fixedForwardRef } from './fixedForwardRef.js';
+import { ComponentAsPropParams } from './types.js';
 
 type LeftIcon = {
     /**  Icon on left side */

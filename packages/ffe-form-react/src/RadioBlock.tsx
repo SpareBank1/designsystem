@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
 import classNames from 'classnames';
-import { SelectedRadioValue } from './types';
+import { SelectedRadioValue } from './types.js';
 
 export interface RadioBlockProps
     extends React.ComponentPropsWithoutRef<'input'> {

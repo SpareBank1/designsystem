@@ -1,4 +1,4 @@
-import { Account } from '../types';
+import { Account } from '../types.js';
 
 export const getAccountsWithCustomAccounts = <T extends Account>({
     accounts,

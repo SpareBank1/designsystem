@@ -1,2 +1,2 @@
-export { Feedback, FeedbackProps } from './Feedback';
-export { Thumb } from './FeedbackThumbs';
+export { Feedback, FeedbackProps } from './Feedback.js';
+export { Thumb } from './FeedbackThumbs.js';

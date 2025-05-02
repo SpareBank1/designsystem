@@ -1,16 +1,16 @@
 export {
     ContextInfoMessage,
     ContextInfoMessageProps,
-} from './ContextInfoMessage';
+} from './ContextInfoMessage.js';
 export {
     ContextTipsMessage,
     ContextTipsMessageProps,
-} from './ContextTipsMessage';
+} from './ContextTipsMessage.js';
 export {
     ContextSuccessMessage,
     ContextSuccessMessageProps,
-} from './ContextSuccessMessage';
+} from './ContextSuccessMessage.js';
 export {
     ContextErrorMessage,
     ContextErrorMessageProps,
-} from './ContextErrorMessage';
+} from './ContextErrorMessage.js';

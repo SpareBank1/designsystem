@@ -1,10 +1,10 @@
 import React, { useState, useRef, useId } from 'react';
 import { flushSync } from 'react-dom';
-import { txt } from './i18n/texts';
-import { FeedbackThumbs, Thumb } from './FeedbackThumbs';
+import { txt } from './i18n/texts.js';
+import { FeedbackThumbs, Thumb } from './FeedbackThumbs.js';
 import classNames from 'classnames';
-import { FeedbackExpanded, FeedbackExpandedProps } from './FeedbackExpanded';
-import { HighFive } from './HighFive';
+import { FeedbackExpanded, FeedbackExpandedProps } from './FeedbackExpanded.js';
+import { HighFive } from './HighFive.js';
 
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 type Locale = 'nb' | 'nn' | 'en';

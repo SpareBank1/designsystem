@@ -1,4 +1,4 @@
-import { NON_BREAKING_SPACE } from './internal/unicode';
+import { NON_BREAKING_SPACE } from './internal/unicode.js';
 
 interface Opts {
     minDecimals?: number;

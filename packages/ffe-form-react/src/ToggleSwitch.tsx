@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
 import classNames from 'classnames';
-import i18n from './i18n/i18n';
+import i18n from './i18n/i18n.js';
 
 export interface ToggleSwitchProps
     extends React.ComponentPropsWithoutRef<'input'> {

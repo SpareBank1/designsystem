@@ -1,5 +1,5 @@
-import { SearchMatcher, State } from './types';
-import { getListToRender } from './getListToRender';
+import { SearchMatcher, State } from './types.js';
+import { getListToRender } from './getListToRender.js';
 
 export const moveFocusOutside = <Item extends Record<string, any>>({
     state,

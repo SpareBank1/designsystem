@@ -1,8 +1,8 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import { Option } from './Option';
-import { NoMatch } from './NoMatch';
-import { Locale } from './types';
+import { Option } from './Option.js';
+import { NoMatch } from './NoMatch.js';
+import { Locale } from './types.js';
 
 const isItemSelected = <Item extends Record<string, any>>(
     isEqual: (itemA: Item, itemB: Item) => boolean,

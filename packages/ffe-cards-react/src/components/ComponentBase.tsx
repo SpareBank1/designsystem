@@ -1,5 +1,5 @@
 import React, { ComponentPropsWithRef, ElementType } from 'react';
-import { DistributiveOmit } from '../types';
+import { DistributiveOmit } from '../types.js';
 
 export type ComponentBaseProps<As extends ElementType = 'p'> = {
     as?: As;

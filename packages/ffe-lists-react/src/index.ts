@@ -1,32 +1,32 @@
-export { BulletList, BulletListProps } from './BulletList';
-export { BulletListItem, BulletListItemProps } from './BulletListItem';
-export { CheckList, CheckListProps } from './CheckList';
-export { CheckListItem, CheckListItemProps } from './CheckListItem';
-export { NumberedList, NumberedListProps } from './NumberedList';
-export { NumberedListItem, NumberedListItemProps } from './NumberedListItem';
+export { BulletList, BulletListProps } from './BulletList.js';
+export { BulletListItem, BulletListItemProps } from './BulletListItem.js';
+export { CheckList, CheckListProps } from './CheckList.js';
+export { CheckListItem, CheckListItemProps } from './CheckListItem.js';
+export { NumberedList, NumberedListProps } from './NumberedList.js';
+export { NumberedListItem, NumberedListItemProps } from './NumberedListItem.js';
 export {
     StylizedNumberedList,
     StylizedNumberedListProps,
-} from './StylizedNumberedList';
+} from './StylizedNumberedList.js';
 export {
     StylizedNumberedListItem,
     StylizedNumberedListItemProps,
-} from './StylizedNumberedListItem';
-export { DescriptionList, DescriptionListProps } from './DescriptionList';
+} from './StylizedNumberedListItem.js';
+export { DescriptionList, DescriptionListProps } from './DescriptionList.js';
 export {
     DescriptionListMultiCol,
     DescriptionListMultiColProps,
-} from './DescriptionListMultiCol';
+} from './DescriptionListMultiCol.js';
 export {
     DescriptionListTerm,
     DescriptionListTermProps,
-} from './DescriptionListTerm';
+} from './DescriptionListTerm.js';
 export {
     DescriptionListDescription,
     DescriptionListDescriptionProps,
-} from './DescriptionListDescription';
-export { DetailListCard, DetailListCardProps } from './DetailListCard';
+} from './DescriptionListDescription.js';
+export { DetailListCard, DetailListCardProps } from './DetailListCard.js';
 export {
     DetailListCardItem,
     DetailListCardItemProps,
-} from './DetailListCardItem';
+} from './DetailListCardItem.js';

@@ -4,8 +4,8 @@ import {
     TableProvider,
     TableContext,
     TableContextInterFace,
-} from './TableContext';
-import { InitialSort } from './types';
+} from './TableContext.js';
+import { InitialSort } from './types.js';
 
 export interface TableProps
     extends Omit<React.ComponentPropsWithoutRef<'table'>, 'children'> {

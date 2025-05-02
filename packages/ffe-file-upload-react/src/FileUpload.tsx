@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { FileItem, FileItemProps } from './FileItem';
+import { FileItem, FileItemProps } from './FileItem.js';
 import classNames from 'classnames';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';

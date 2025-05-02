@@ -5,9 +5,9 @@ import {
     getItemSelectedA11yStatus,
     getNoResultA11yStatus,
     getResultCountChangedA11yStatus,
-} from './translations';
+} from './translations.js';
 import debounce from 'lodash.debounce';
-import { Locale } from './types';
+import { Locale } from './types.js';
 
 const getStatusDiv = () => {
     const id = 'a11y-status-message';

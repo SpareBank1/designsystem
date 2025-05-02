@@ -10,25 +10,25 @@ import React, {
     useCallback,
 } from 'react';
 import classNames from 'classnames';
-import { OptionBody } from './OptionBody';
-import { createReducer } from './reducer';
-import { getListToRender } from '../getListToRender';
-import { scrollIntoView } from '../scrollIntoView';
+import { OptionBody } from './OptionBody.js';
+import { createReducer } from './reducer.js';
+import { getListToRender } from '../getListToRender.js';
+import { scrollIntoView } from '../scrollIntoView.js';
 import {
     getNewHighlightedIndexUp,
     getNewHighlightedIndexDown,
-} from '../getNewHighlightedIndex';
-import { setArrowAllyMessage, useSetAllyMessageItemSelection } from '../a11y';
-import { Results } from '../Results';
-import { Locale, SearchMatcher } from '../types';
-import { mergeRefs } from '../mergeRefs';
-import { fixedForwardRef } from '../fixedForwardRef';
-import { addFlagOnEventHandler } from '../addFlagOnEventHandler';
-import { useHandleContainerFocus } from '../useHandleContainerFocus';
-import { useIsExpandedCallbacks } from '../useIsExpandedCallbacks';
-import { useRefs } from '../useRefs';
-import { ToggleButton } from '../ToggleButton';
-import { ListBox } from '../ListBox';
+} from '../getNewHighlightedIndex.js';
+import { setArrowAllyMessage, useSetAllyMessageItemSelection } from '../a11y.js';
+import { Results } from '../Results.js';
+import { Locale, SearchMatcher } from '../types.js';
+import { mergeRefs } from '../mergeRefs.js';
+import { fixedForwardRef } from '../fixedForwardRef.js';
+import { addFlagOnEventHandler } from '../addFlagOnEventHandler.js';
+import { useHandleContainerFocus } from '../useHandleContainerFocus.js';
+import { useIsExpandedCallbacks } from '../useIsExpandedCallbacks.js';
+import { useRefs } from '../useRefs.js';
+import { ToggleButton } from '../ToggleButton.js';
+import { ListBox } from '../ListBox.js';
 import isDeepEqual from 'lodash.isequal';
 
 const ARROW_UP = 'ArrowUp';

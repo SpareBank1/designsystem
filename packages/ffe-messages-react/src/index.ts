@@ -1,5 +1,5 @@
-export { SystemMessage, SystemMessageProps } from './SystemMessage';
-export { ContextMessage, ContextMessageProps } from './ContextMessage';
-export { MessageBox, MessageBoxProps } from './MessageBox';
-export { MessageHeader, MessageHeaderProps } from './MessageHeader';
-export { MessageList, MessageListItem } from './MessageList';
+export { SystemMessage, SystemMessageProps } from './SystemMessage.js';
+export { ContextMessage, ContextMessageProps } from './ContextMessage.js';
+export { MessageBox, MessageBoxProps } from './MessageBox.js';
+export { MessageHeader, MessageHeaderProps } from './MessageHeader.js';
+export { MessageList, MessageListItem } from './MessageList.js';

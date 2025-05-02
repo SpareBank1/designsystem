@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import { CalendarButtonState } from '../datelogic/types';
+import { CalendarButtonState } from '../datelogic/types.js';
 
 interface ClickableDateProps {
     calendarButtonState: CalendarButtonState;

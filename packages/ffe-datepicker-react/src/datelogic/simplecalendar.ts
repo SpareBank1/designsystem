@@ -1,11 +1,11 @@
-import i18n from '../i18n/i18n';
+import i18n from '../i18n/i18n.js';
 import {
     getSimpleDateFromString,
     getSimpleDateFromTimestamp,
     getSimpleDateToday,
     SimpleDate,
-} from './simpledate';
-import { CalendarButtonState } from './types';
+} from './simpledate.js';
+import { CalendarButtonState } from './types.js';
 
 const msInADay = 86400000;
 const supportedLocales = ['nb', 'nn', 'en'] as const;

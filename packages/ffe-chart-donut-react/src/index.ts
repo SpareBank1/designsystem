@@ -1,1 +1,1 @@
-export { ChartDonut, ChartDonutProps } from './ChartDonut';
+export { ChartDonut, ChartDonutProps } from './ChartDonut.js';

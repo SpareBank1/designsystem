@@ -1,6 +1,6 @@
-export { ErrorFieldMessage } from './ErrorFieldMessage';
-export type { ErrorFieldMessageProps } from './ErrorFieldMessage';
-export { InfoFieldMessage } from './InfoFieldMessage';
-export type { InfoFieldMessageProps } from './InfoFieldMessage';
-export { SuccessFieldMessage } from './SuccessFieldMessage';
-export type { SuccessFieldMessageProps } from './SuccessFieldMessage';
+export { ErrorFieldMessage } from './ErrorFieldMessage.js';
+export type { ErrorFieldMessageProps } from './ErrorFieldMessage.js';
+export { InfoFieldMessage } from './InfoFieldMessage.js';
+export type { InfoFieldMessageProps } from './InfoFieldMessage.js';
+export { SuccessFieldMessage } from './SuccessFieldMessage.js';
+export type { SuccessFieldMessageProps } from './SuccessFieldMessage.js';

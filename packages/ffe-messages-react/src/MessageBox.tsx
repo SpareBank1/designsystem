@@ -1,10 +1,10 @@
 import React from 'react';
-import { MessageHeader, MessageHeaderProps } from './MessageHeader';
-import { Locale, MessageType } from './types';
-import { MessageIcon } from './MessageIcon';
+import { MessageHeader, MessageHeaderProps } from './MessageHeader.js';
+import { Locale, MessageType } from './types.js';
+import { MessageIcon } from './MessageIcon.js';
 import classNames from 'classnames';
-import { Content } from './Content';
-import { txt } from './texts';
+import { Content } from './Content.js';
+import { txt } from './texts.js';
 
 export interface MessageBoxProps extends React.ComponentPropsWithoutRef<'div'> {
     /** url to svg icon to override default*/

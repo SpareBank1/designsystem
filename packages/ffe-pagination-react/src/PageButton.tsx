@@ -1,8 +1,8 @@
 import React from 'react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import { txt } from './texts';
+import { txt } from './texts.js';
 import classnames from 'classnames';
-import { Locale } from './types';
+import { Locale } from './types.js';
 
 interface PageButtonProps {
     isActive: boolean;

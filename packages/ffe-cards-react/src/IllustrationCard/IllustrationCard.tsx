@@ -3,10 +3,11 @@ import {
     CardRenderProps,
     ComponentAsPropParams,
     CardActionRenderProps,
-} from '../types';
+} from '../types.js';
 import classNames from 'classnames';
-import { WithCardAction, Text, Subtext, Title, CardName } from '../components';
-import { fixedForwardRef } from '../fixedForwardRef';
+import { WithCardAction, Text, Subtext, Title, CardName } from '../components/index.js';
+import { fixedForwardRef } from '../fixedForwardRef.js';
+import { Icon } from '@sb1/ffe-icons-react';
 
 export type IllustrationCardProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,

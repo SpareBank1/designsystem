@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SortOrder, ariaSortOrders, InitialSort } from './types';
+import { SortOrder, ariaSortOrders, InitialSort } from './types.js';
 
 export interface TableContextInterFace {
     activeSortOrder?: SortOrder;

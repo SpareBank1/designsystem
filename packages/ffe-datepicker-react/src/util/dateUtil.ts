@@ -1,4 +1,4 @@
-import { padZero } from '../datepicker/padZero';
+import { padZero } from '../datepicker/padZero.js';
 
 const dateRegex = /^(\d{1,2})(\.| |-|\/)?(\d{0,2})\2?(\d{0,2}(\d{2})?)$/;
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LinkText, Paragraph } from '@sb1/ffe-core-react';
-import { txt } from './i18n/texts';
+import { txt } from './i18n/texts.js';
 import { InputGroup, TextArea, Checkbox } from '@sb1/ffe-form-react';
 import {
     ActionButton,

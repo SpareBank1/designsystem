@@ -1,8 +1,8 @@
 import React, { useContext, useRef } from 'react';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
-import { TableContext } from './TableContext';
-import { CellContent } from './CellContent';
+import { TableContext } from './TableContext.js';
+import { CellContent } from './CellContent.js';
 
 export interface TableHeaderCellProps
     extends React.ComponentPropsWithoutRef<'th'> {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { texts } from './texts';
-import { SystemMessage, SystemMessageProps } from './SystemMessage';
+import { texts } from './texts.js';
+import { SystemMessage, SystemMessageProps } from './SystemMessage.js';
 
 export interface SystemErrorMessageProps
     extends Omit<SystemMessageProps, 'modifier'> {

@@ -1,7 +1,7 @@
 import React, { ElementType } from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
-import { ComponentWithoutRefAsPropParams } from '../types';
+import { ComponentWithoutRefAsPropParams } from '../types.js';
 
 export type BaseFieldMessageProps<As extends ElementType = any> =
     ComponentWithoutRefAsPropParams<As> & {

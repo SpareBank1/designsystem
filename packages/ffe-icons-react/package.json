@@ -5,17 +5,18 @@
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
-        "lib",
+        "dist",
         "types",
         "src"
     ],
-    "main": "./lib/index.cjs",
-    "types": "types/index.d.ts",
-    "module": "./lib/index.js",
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "module": "./dist/index.js",
+    "type": "module",
     "exports": {
         ".": {
-            "import": "./lib/index.js",
-            "require": "./lib/index.cjs"
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
         }
     },
     "sideEffects": false,
@@ -24,10 +25,10 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "tsup src/index.tsx --format esm,cjs --clean && tsc --emitDeclarationOnly",
-        "clean": "rimraf gen-src lib es types",
-        "lint": "eslint \"src/**/*.{ts,tsx}\"",
-        "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+        "build": "tsup src/index.tsx --format esm,cjs --dts --clean",
+        "clean": "rimraf gen-src dist es types",
+        "lint": "eslint \"src/**/*.tsx\"",
+        "lint:fix": "eslint \"src/**/*.tsx\" --fix",
         "test": "ffe-buildtool jest"
     },
     "dependencies": {

@@ -1,10 +1,10 @@
 export {
     SystemErrorMessage,
     SystemErrorMessageProps,
-} from './SystemErrorMessage';
-export { SystemInfoMessage, SystemInfoMessageProps } from './SystemInfoMessage';
-export { SystemNewsMessage, SystemNewsMessageProps } from './SystemNewsMessage';
+} from './SystemErrorMessage.js';
+export { SystemInfoMessage, SystemInfoMessageProps } from './SystemInfoMessage.js';
+export { SystemNewsMessage, SystemNewsMessageProps } from './SystemNewsMessage.js';
 export {
     SystemSuccessMessage,
     SystemSuccessMessageProps,
-} from './SystemSuccessMessage';
+} from './SystemSuccessMessage.js';

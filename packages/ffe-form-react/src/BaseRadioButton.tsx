@@ -1,7 +1,7 @@
 import React, { useId } from 'react';
 import classNames from 'classnames';
-import { Tooltip, TooltipProps } from './Tooltip';
-import { SelectedRadioValue } from './types';
+import { Tooltip, TooltipProps } from './Tooltip.js';
+import { SelectedRadioValue } from './types.js';
 
 export interface BaseRadioButtonProps
     extends Omit<React.ComponentPropsWithoutRef<'input'>, 'value'> {

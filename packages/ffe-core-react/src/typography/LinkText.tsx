@@ -1,6 +1,6 @@
 import React, { ComponentProps, ElementType } from 'react';
 import classNames from 'classnames';
-import { DistributiveOmit } from './types';
+import { DistributiveOmit } from './types.js';
 
 export type LinkTextProp<As extends ElementType = 'a'> = {
     as?: As;

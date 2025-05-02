@@ -1,8 +1,8 @@
 import React, { useId } from 'react';
 import classNames from 'classnames';
-import { ErrorFieldMessage } from './message';
-import { Tooltip } from './Tooltip';
-import { SelectedRadioValue } from './types';
+import { ErrorFieldMessage } from './message/index.js';
+import { Tooltip } from './Tooltip.js';
+import { SelectedRadioValue } from './types.js';
 
 export interface RadioButtonInputGroupProps
     extends Omit<

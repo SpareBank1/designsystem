@@ -1,13 +1,13 @@
 import React, { AriaAttributes, useState } from 'react';
 import classNames from 'classnames';
-import { AccountDetails } from './AccountDetails';
-import { Account, Locale } from '../types';
-import { formatIncompleteAccountNumber } from '../format';
+import { AccountDetails } from './AccountDetails.js';
+import { Account, Locale } from '../types.js';
+import { formatIncompleteAccountNumber } from '../format.js';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
-import { getAccountsWithCustomAccounts } from './getAccountsWithCustomAccounts';
-import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting';
-import { texts } from '../texts';
-import { AccountActionBody } from './AccountOptionBody';
+import { getAccountsWithCustomAccounts } from './getAccountsWithCustomAccounts.js';
+import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting.js';
+import { texts } from '../texts.js';
+import { AccountActionBody } from './AccountOptionBody.js';
 
 export interface AccountSelectorProps<T extends Account = Account> {
     /**

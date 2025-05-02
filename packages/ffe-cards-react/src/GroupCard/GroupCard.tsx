@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { ElementType, ForwardedRef } from 'react';
-import { fixedForwardRef } from '../fixedForwardRef';
-import { ComponentAsPropParams, BackgroundColor } from '../types';
+import { fixedForwardRef } from '../fixedForwardRef.js';
+import { ComponentAsPropParams, BackgroundColor } from '../types.js';
 
 export type GroupCardProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,

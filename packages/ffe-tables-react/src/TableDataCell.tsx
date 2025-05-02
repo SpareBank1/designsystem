@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { CellContent } from './CellContent';
+import { CellContent } from './CellContent.js';
 import { StrongText } from '@sb1/ffe-core-react';
 
 export interface TableDataCellProps

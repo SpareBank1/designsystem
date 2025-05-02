@@ -1,6 +1,6 @@
 import React, { ElementType, ForwardedRef, ReactElement } from 'react';
-import { fixedForwardRef } from './fixedForwardRef';
-import { ComponentAsPropParams } from './types';
+import { fixedForwardRef } from './fixedForwardRef.js';
+import { ComponentAsPropParams } from './types.js';
 import classNames from 'classnames';
 
 export type InlineBaseButtonProps<As extends ElementType = 'button'> =

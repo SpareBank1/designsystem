@@ -1,5 +1,5 @@
 import { formatNumber } from '@sb1/ffe-formatters';
-import { Locale } from './types';
+import { Locale } from './types.js';
 
 export const currencyAffixNOK = {
     nb: 'kr',

@@ -1,4 +1,4 @@
-import { Locale } from '../types';
+import { Locale } from '../types.js';
 // https://observablehq.com/@mbostock/localized-number-parsing
 class NumberParser {
     private readonly _group: RegExp;

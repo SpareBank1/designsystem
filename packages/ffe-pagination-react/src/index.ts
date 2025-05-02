@@ -1,2 +1,2 @@
-export { Pagination, PaginationProps } from './Pagination';
-export { usePagination } from './usePagination';
+export { Pagination, PaginationProps } from './Pagination.js';
+export { usePagination } from './usePagination.js';

@@ -4,7 +4,7 @@ import {
     BackgroundColor,
     ComponentWithoutRefAsPropParams,
     SizeModifier,
-} from './types';
+} from './types.js';
 
 export type GridColProps<As extends ElementType = any> =
     ComponentWithoutRefAsPropParams<As> & {

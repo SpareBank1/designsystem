@@ -1,5 +1,5 @@
 import React, { useId, ForwardedRef } from 'react';
-import { fixedForwardRef } from './fixedForwardRef';
+import { fixedForwardRef } from './fixedForwardRef.js';
 
 interface OptionProps<Item extends Record<string, any>>
     extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {

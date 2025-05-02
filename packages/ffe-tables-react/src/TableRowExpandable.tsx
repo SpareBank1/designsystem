@@ -2,8 +2,8 @@ import React, { useRef, useState, useId } from 'react';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
-import { txt } from './texts';
-import { CellContent } from './CellContent';
+import { txt } from './texts.js';
+import { CellContent } from './CellContent.js';
 
 export interface TableRowExpandableProps
     extends Omit<React.ComponentPropsWithoutRef<'tr'>, 'onClick'> {

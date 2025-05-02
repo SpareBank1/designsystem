@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { BaseMessage, BaseMessageProps } from './BaseMessage';
-import { texts } from './texts';
+import { BaseMessage, BaseMessageProps } from './BaseMessage.js';
+import { texts } from './texts.js';
 
 export interface SuccessMessageProps extends Omit<BaseMessageProps, 'type'> {
     locale?: 'nb' | 'nn' | 'en';

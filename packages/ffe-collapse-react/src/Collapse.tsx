@@ -5,8 +5,8 @@ import React, {
     ComponentPropsWithRef,
 } from 'react';
 import classNames from 'classnames';
-import { mergeRefs } from './mergeRefs';
-import { usePreviousIsOpen } from './usePreviousIsOpen';
+import { mergeRefs } from './mergeRefs.js';
+import { usePreviousIsOpen } from './usePreviousIsOpen.js';
 
 export interface CollapseProps extends ComponentPropsWithRef<'div'> {
     isOpen: boolean;

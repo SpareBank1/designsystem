@@ -1,6 +1,6 @@
 import React, { ElementType, ForwardedRef } from 'react';
-import { BaseButton, BaseButtonProps } from './BaseButton';
-import { fixedForwardRef } from './fixedForwardRef';
+import { BaseButton, BaseButtonProps } from './BaseButton.js';
+import { fixedForwardRef } from './fixedForwardRef.js';
 
 export type ActionButtonProps<As extends ElementType = 'button'> = Omit<
     BaseButtonProps<As>,

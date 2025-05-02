@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { AccordionProvider } from './AccordionContext';
+import { AccordionProvider } from './AccordionContext.js';
 
 export interface AccordionProps extends React.ComponentPropsWithoutRef<'div'> {
     headingLevel: 1 | 2 | 3 | 4 | 5 | 6;

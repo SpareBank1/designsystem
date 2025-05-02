@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { v4 as uuid } from 'uuid';
-import { ClickableDate } from './ClickableDate';
-import { NonClickableDate } from './NonClickableDate';
-import { Header } from './Header';
+import { ClickableDate } from './ClickableDate.js';
+import { NonClickableDate } from './NonClickableDate.js';
+import { Header } from './Header.js';
 import {
     getSimpleDateFromString,
     getSimpleDateFromTimestamp,
-} from '../datelogic/simpledate';
-import { SimpleCalendar } from '../datelogic/simplecalendar';
-import { CalendarButtonState } from '../datelogic/types';
+} from '../datelogic/simpledate.js';
+import { SimpleCalendar } from '../datelogic/simplecalendar.js';
+import { CalendarButtonState } from '../datelogic/types.js';
 
 export interface CalendarProps {
     calendarClassName?: string;

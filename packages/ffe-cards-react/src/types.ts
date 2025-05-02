@@ -1,5 +1,5 @@
 import { ComponentPropsWithRef, ElementType, ForwardedRef } from 'react';
-import { CardName, Subtext, Text, Title, CardAction } from './components';
+import { CardName, Subtext, Text, Title, CardAction } from './components/index.js';
 
 export type DistributiveOmit<T, Omitted extends PropertyKey> = T extends any
     ? Omit<T, Omitted>

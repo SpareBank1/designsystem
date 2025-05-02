@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 import { MicroText } from '@sb1/ffe-core-react';
-import { Locale } from '../types';
-import { getBalanceAriaLabel } from '../translations';
+import { Locale } from '../types.js';
+import { getBalanceAriaLabel } from '../translations.js';
 
 interface ListItemBodyProps<Item extends Record<string, any>> {
     item: Item;

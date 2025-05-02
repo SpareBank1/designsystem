@@ -1,6 +1,6 @@
-import { getListToRender } from '../getListToRender';
-import { StateChange, SearchMatcher } from '../types';
-import { getNewList } from './getNewList';
+import { getListToRender } from '../getListToRender.js';
+import { StateChange, SearchMatcher } from '../types.js';
+import { getNewList } from './getNewList.js';
 
 type Action<Item extends Record<string, any>> = {
     type: StateChange;

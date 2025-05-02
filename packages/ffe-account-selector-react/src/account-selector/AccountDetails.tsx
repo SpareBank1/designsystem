@@ -1,7 +1,7 @@
 import React from 'react';
-import { Account, Locale } from '../types';
+import { Account, Locale } from '../types.js';
 import classnames from 'classnames';
-import { balanceWithCurrency, accountFormatter } from '../format';
+import { balanceWithCurrency, accountFormatter } from '../format.js';
 
 interface AccountDetailsProps {
     account?: Account;

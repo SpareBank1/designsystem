@@ -1,9 +1,9 @@
-export { BodyText, BodyTextProps } from './typography/BodyText';
-export { DividerLine, DividerLineProps } from './typography/DividerLine';
+export { BodyText, BodyTextProps } from './typography/BodyText.js';
+export { DividerLine, DividerLineProps } from './typography/DividerLine.js';
 export {
     EmphasizedText,
     EmphasizedTextProps,
-} from './typography/EmphasizedText';
+} from './typography/EmphasizedText.js';
 export {
     Heading1,
     Heading2,
@@ -12,15 +12,15 @@ export {
     Heading5,
     Heading6,
     HeadingProps,
-} from './typography/Heading';
-export { LinkText, LinkTextProp } from './typography/LinkText';
-export { LinkIcon, LinkIconProp } from './typography/LinkIcon';
-export { MicroText, MicroTextProps } from './typography/MicroText';
-export { Paragraph, ParagraphProps } from './typography/Paragraph';
+} from './typography/Heading.js';
+export { LinkText, LinkTextProp } from './typography/LinkText.js';
+export { LinkIcon, LinkIconProp } from './typography/LinkIcon.js';
+export { MicroText, MicroTextProps } from './typography/MicroText.js';
+export { Paragraph, ParagraphProps } from './typography/Paragraph.js';
 export {
     PreformattedText,
     PreformattedTextProps,
-} from './typography/PreformattedText';
-export { SmallText, SmallTextProps } from './typography/SmallText';
-export { StrongText, StrongTextProps } from './typography/StrongText';
-export { Wave, WaveProps } from './Wave';
+} from './typography/PreformattedText.js';
+export { SmallText, SmallTextProps } from './typography/SmallText.js';
+export { StrongText, StrongTextProps } from './typography/StrongText.js';
+export { Wave, WaveProps } from './Wave.js';

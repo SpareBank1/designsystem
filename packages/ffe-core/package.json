@@ -12,6 +12,7 @@
     ],
     "main": "./lib/index.cjs",
     "module": "./lib/index.js",
+    "type": "module",
     "types": "types/index.d.ts",
     "exports": {
         ".": {
@@ -27,9 +28,10 @@
     "scripts": {
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint",
-        "clean": "rm -rf css/ gen-src/ lib/",
+        "clean": "rimraf css lib gen-src",
         "generate-semantic-colors": "./scripts/generate-semantic-colors.cjs",
-        "build": "npm run generate-semantic-colors && ./scripts/build.cjs tokens.config.cjs && ./scripts/build-custom-mq.cjs less/breakpoints.less css/custom-media-queries.css && tsc --emitDeclarationOnly && lessc --include-path=../node_modules less/ffe.less css/ffe.css --autoprefix"
+        "build": "npm run generate-semantic-colors && ./scripts/build.cjs tokens.config.cjs && ./scripts/build-custom-mq.cjs less/breakpoints.less css/custom-media-queries.css && lessc --include-path=../node_modules less/ffe.less css/ffe.css --autoprefix",
+        "prepublishOnly": "npm run build"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0",

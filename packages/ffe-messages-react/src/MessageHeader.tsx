@@ -1,5 +1,5 @@
 import React, { ElementType } from 'react';
-import { ComponentWithoutRefAsPropParams } from './types';
+import { ComponentWithoutRefAsPropParams } from './types.js';
 import classNames from 'classnames';
 
 export type MessageHeaderProps<As extends ElementType = any> =

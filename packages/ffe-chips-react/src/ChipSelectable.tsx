@@ -1,7 +1,7 @@
 import { Icon } from '@sb1/ffe-icons-react';
 import React, { ElementType, ForwardedRef } from 'react';
-import { Chip, type ChipProps } from './Chip';
-import { fixedForwardRef } from './fixedForwardRef';
+import { Chip, type ChipProps } from './Chip.js';
+import { fixedForwardRef } from './fixedForwardRef.js';
 import classNames from 'classnames';
 
 const checkOpen400Sm =

@@ -1,8 +1,8 @@
 import React from 'react';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { txt } from './texts';
-import { Locale } from './types';
+import { txt } from './texts.js';
+import { Locale } from './types.js';
 import classNames from 'classnames';
 
 interface NavigationBlockProps {

@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
-import { Locale } from './types';
-import { txt } from './texts';
+import { Locale } from './types.js';
+import { txt } from './texts.js';
 import { Dropdown } from '@sb1/ffe-dropdown-react';
 import classNames from 'classnames';
 

@@ -1,8 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { getSimpleDateFromString } from '../datelogic/simpledate';
-import { Locale } from '../datelogic/types';
-import { validateDate } from '../util/dateUtil';
-import { toNumber } from './toNumber';
+import { getSimpleDateFromString } from '../datelogic/simpledate.js';
+import { Locale } from '../datelogic/types.js';
+import { validateDate } from '../util/dateUtil.js';
+import { toNumber } from './toNumber.js';
 
 interface DatepickerContextInterface {
     day?: number | null;

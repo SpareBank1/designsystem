@@ -1,1 +1,1 @@
-export { Wave, WaveProps } from './Wave';
+export { Wave, WaveProps } from './Wave.js';

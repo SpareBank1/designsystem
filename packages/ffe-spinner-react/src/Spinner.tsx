@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from 'react';
 import classNames from 'classnames';
-import texts from './texts';
+import texts from './texts.js';
 
 export interface SpinnerProps extends ComponentPropsWithoutRef<'div'> {
     immediate?: boolean;

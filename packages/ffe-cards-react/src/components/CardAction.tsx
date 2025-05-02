@@ -1,6 +1,6 @@
 import React, { ElementType, ForwardedRef } from 'react';
-import { fixedForwardRef } from '../fixedForwardRef';
-import { ComponentAsPropParams } from '../types';
+import { fixedForwardRef } from '../fixedForwardRef.js';
+import { ComponentAsPropParams } from '../types.js';
 
 export type CardActionProps<As extends ElementType = 'a'> =
     ComponentAsPropParams<As>;

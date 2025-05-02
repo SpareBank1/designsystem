@@ -1,2 +1,2 @@
-export { Tab, TabProps } from './Tab';
-export { TabGroup, TabGroupProps } from './TabGroup';
+export { Tab, TabProps } from './Tab.js';
+export { TabGroup, TabGroupProps } from './TabGroup.js';

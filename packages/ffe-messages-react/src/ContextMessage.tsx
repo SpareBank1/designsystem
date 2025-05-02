@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { MessageHeader, MessageHeaderProps } from './MessageHeader';
-import { MessageType, Locale } from './types';
+import { MessageHeader, MessageHeaderProps } from './MessageHeader.js';
+import { MessageType, Locale } from './types.js';
 import classNames from 'classnames';
-import { CloseButton } from './CloseButton';
-import { MessageIcon } from './MessageIcon';
-import { MessageCollapse } from './MessageCollapse';
-import { Content } from './Content';
-import { txt } from './texts';
+import { CloseButton } from './CloseButton.js';
+import { MessageIcon } from './MessageIcon.js';
+import { MessageCollapse } from './MessageCollapse.js';
+import { Content } from './Content.js';
+import { txt } from './texts.js';
 
 export interface ContextMessageProps
     extends React.ComponentPropsWithoutRef<'div'> {

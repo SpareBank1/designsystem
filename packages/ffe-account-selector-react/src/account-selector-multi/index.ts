@@ -1,4 +1,4 @@
 export {
     AccountSelectorMulti,
     AccountSelectorMultiProps,
-} from './AccountSelectorMulti';
+} from './AccountSelectorMulti.js';

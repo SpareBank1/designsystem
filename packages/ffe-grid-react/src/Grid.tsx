@@ -1,6 +1,6 @@
 import React, { ElementType } from 'react';
 import classNames from 'classnames';
-import { ComponentWithoutRefAsPropParams, Gap } from './types';
+import { ComponentWithoutRefAsPropParams, Gap } from './types.js';
 
 type SizeModifier = GridGapSize | Gap;
 

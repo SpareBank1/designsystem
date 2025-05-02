@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Paragraph } from '@sb1/ffe-core-react';
-import { getNotMatchText } from './translations';
-import { Locale } from './types';
+import { getNotMatchText } from './translations.js';
+import { Locale } from './types.js';
 
 interface NoMatchProps<Item extends Record<string, any>> {
     noMatch: {

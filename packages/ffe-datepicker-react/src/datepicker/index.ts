@@ -1,6 +1,6 @@
-export { Datepicker, DatepickerProps } from './Datepicker';
-export type { DatepickerCompProps } from './DatepickerComp';
+export { Datepicker, DatepickerProps } from './Datepicker.js';
+export type { DatepickerCompProps } from './DatepickerComp.js';
 export {
     getDatepickerByLabelText,
     type DatepickerTestHelper,
-} from './testHelper';
+} from './testHelper.js';

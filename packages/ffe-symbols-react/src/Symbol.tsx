@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SymbolName } from './symbolNames';
+import { SymbolName } from './symbolNames.js';
 
 export interface SymbolProps extends React.ComponentPropsWithoutRef<'span'> {
     /**  Fills the icon with color */

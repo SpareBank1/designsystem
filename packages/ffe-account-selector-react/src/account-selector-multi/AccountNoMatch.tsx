@@ -1,7 +1,7 @@
 /*
 import React from 'react';
-import { Locale } from '../types';
-import { texts } from '../i18n/texts';
+import { Locale } from '../types.js';
+import { texts } from '../i18n/texts.js';
 
 interface AccountNoMatchProps {
     value?: string;

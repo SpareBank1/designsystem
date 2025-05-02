@@ -1,10 +1,10 @@
-export { SuccessMessage, SuccessMessageProps } from './SuccessMessage';
-export { ErrorMessage, ErrorMessageProps } from './ErrorMessage';
-export { InfoMessage, InfoMessageProps } from './InfoMessage';
-export { TipsMessage, TipsMessageProps } from './TipsMessage';
+export { SuccessMessage, SuccessMessageProps } from './SuccessMessage.js';
+export { ErrorMessage, ErrorMessageProps } from './ErrorMessage.js';
+export { InfoMessage, InfoMessageProps } from './InfoMessage.js';
+export { TipsMessage, TipsMessageProps } from './TipsMessage.js';
 export {
     InfoMessageList,
     InfoMessageListProps,
     InfoMessageListItem,
     InfoMessageListItemProps,
-} from './InfoMessageList';
+} from './InfoMessageList.js';

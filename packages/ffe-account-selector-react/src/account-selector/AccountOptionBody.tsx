@@ -1,8 +1,8 @@
 import React from 'react';
 import { MicroText } from '@sb1/ffe-core-react';
 import classnames from 'classnames';
-import { balanceWithCurrency, accountFormatter } from '../format';
-import { Account, Locale } from '../types';
+import { balanceWithCurrency, accountFormatter } from '../format.js';
+import { Account, Locale } from '../types.js';
 
 interface Props<Item extends Account> {
     item: Item;

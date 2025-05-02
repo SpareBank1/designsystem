@@ -1,7 +1,7 @@
 import React, { RefObject, useState } from 'react';
 import classNames from 'classnames';
-import { mergeRefs } from './mergeRefs';
-import { TabProps } from './Tab';
+import { mergeRefs } from './mergeRefs.js';
+import { TabProps } from './Tab.js';
 
 export interface TabGroupProps
     extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {

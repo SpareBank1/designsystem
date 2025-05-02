@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { RadioButton } from '../RadioButton';
-import { RadioButtonInputGroup } from '../RadioButtonInputGroup';
+import { RadioButton } from '../RadioButton.js';
+import { RadioButtonInputGroup } from '../RadioButtonInputGroup.js';
 
 export default () => {
     const [accountType, setAccountType] = useState<string>('savings');

@@ -1,2 +1,2 @@
-export { DateInput } from './DateInput';
-export type { DateInputProps } from './DateInput';
+export { DateInput } from './DateInput.js';
+export type { DateInputProps } from './DateInput.js';

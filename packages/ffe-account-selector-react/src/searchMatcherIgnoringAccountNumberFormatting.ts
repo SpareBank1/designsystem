@@ -1,4 +1,4 @@
-import { Account } from './types';
+import { Account } from './types.js';
 
 /**
  * This matcher function closely resembles the default one of SearchableDropdown,

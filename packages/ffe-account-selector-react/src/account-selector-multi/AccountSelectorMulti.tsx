@@ -1,10 +1,10 @@
 import React, { AriaAttributes } from 'react';
-import { Account, Locale } from '../types';
+import { Account, Locale } from '../types.js';
 import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
-import { formatIncompleteAccountNumber } from '../format';
-import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting';
-import { texts } from '../texts';
-import { AccountMultiselectOptionBody } from './AccountMultiselectOptionBody';
+import { formatIncompleteAccountNumber } from '../format.js';
+import { searchMatcherIgnoringAccountNumberFormatting } from '../searchMatcherIgnoringAccountNumberFormatting.js';
+import { texts } from '../texts.js';
+import { AccountMultiselectOptionBody } from './AccountMultiselectOptionBody.js';
 
 export interface AccountSelectorMultiProps<T extends Account = Account> {
     /**

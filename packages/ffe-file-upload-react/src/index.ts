@@ -1,2 +1,2 @@
-export { FileUpload, FileUploadProps } from './FileUpload';
-export { getFileContent } from './getFileContent';
+export { FileUpload, FileUploadProps } from './FileUpload.js';
+export { getFileContent } from './getFileContent.js';

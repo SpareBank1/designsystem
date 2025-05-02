@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wave } from './Wave';
+import { Wave } from './Wave.js';
 import { Heading1, Paragraph } from '@sb1/ffe-core-react';
 import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
 import { PrimaryButton } from '@sb1/ffe-buttons-react';

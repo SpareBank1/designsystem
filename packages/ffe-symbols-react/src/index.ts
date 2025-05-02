@@ -1,1 +1,1 @@
-export { Symbol, SymbolProps } from './Symbol';
+export { Symbol, SymbolProps } from './Symbol.js';

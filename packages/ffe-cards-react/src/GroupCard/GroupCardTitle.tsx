@@ -1,12 +1,12 @@
 import React, { ElementType, ForwardedRef } from 'react';
 import classNames from 'classnames';
-import { CardName, Subtext, Text, Title, WithCardAction } from '../components';
+import { CardName, Subtext, Text, Title, WithCardAction } from '../components/index.js';
 import {
     CardRenderProps,
     ComponentAsPropParams,
     CardActionRenderProps,
-} from '../types';
-import { fixedForwardRef } from '../fixedForwardRef';
+} from '../types.js';
+import { fixedForwardRef } from '../fixedForwardRef.js';
 
 export type GroupCardTitleProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,

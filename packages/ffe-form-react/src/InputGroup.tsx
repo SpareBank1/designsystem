@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React, { useId } from 'react';
-import { Label } from './Label';
-import { ErrorFieldMessage } from './message';
-import { Tooltip, TooltipProps } from './Tooltip';
+import { Label } from './Label.js';
+import { ErrorFieldMessage } from './message/index.js';
+import { Tooltip, TooltipProps } from './Tooltip.js';
 
 type ChildrenExtraProps = {
     id: string;

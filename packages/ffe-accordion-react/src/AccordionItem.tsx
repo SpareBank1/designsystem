@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext, useId } from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
-import { AccordionContext } from './AccordionContext';
+import { AccordionContext } from './AccordionContext.js';
 
 export interface AccordionItemProps
     extends React.ComponentPropsWithoutRef<'div'> {

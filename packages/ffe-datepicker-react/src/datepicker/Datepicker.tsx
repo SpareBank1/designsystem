@@ -1,7 +1,7 @@
 import React from 'react';
-import { Locale } from '../datelogic/types';
-import { DatepickerComp, DatepickerCompProps } from './DatepickerComp';
-import { DatepickerProvider } from './DatepickerContext';
+import { Locale } from '../datelogic/types.js';
+import { DatepickerComp, DatepickerCompProps } from './DatepickerComp.js';
+import { DatepickerProvider } from './DatepickerContext.js';
 
 export interface DatepickerProps extends DatepickerCompProps {
     value: string;

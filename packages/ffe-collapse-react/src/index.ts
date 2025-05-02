@@ -1,1 +1,1 @@
-export { Collapse, CollapseProps } from './Collapse';
+export { Collapse, CollapseProps } from './Collapse.js';

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { MessageType, Locale } from './types';
+import { MessageType, Locale } from './types.js';
 import classNames from 'classnames';
-import { MessageIcon } from './MessageIcon';
-import { CloseButton } from './CloseButton';
-import { MessageCollapse } from './MessageCollapse';
-import { Content } from './Content';
-import { txt } from './texts';
+import { MessageIcon } from './MessageIcon.js';
+import { CloseButton } from './CloseButton.js';
+import { MessageCollapse } from './MessageCollapse.js';
+import { Content } from './Content.js';
+import { txt } from './texts.js';
 
 /*Remove me*/
 export interface SystemMessageProps

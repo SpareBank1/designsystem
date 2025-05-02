@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { PaginationControls } from './types';
+import type { PaginationControls } from './types.js';
 
 export function usePagination(
     totalElements: number,

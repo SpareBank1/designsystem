@@ -6,23 +6,23 @@ import React, {
     useRef,
     useState,
 } from 'react';
-import { DatepickerContext } from './DatepickerContext';
-import { SpinButton } from './SpinButton';
-import { padZero } from './padZero';
-import { Button } from '../button';
-import { Calendar } from '../calendar';
+import { DatepickerContext } from './DatepickerContext.js';
+import { SpinButton } from './SpinButton.js';
+import { padZero } from './padZero.js';
+import { Button } from '../button/index.js';
+import { Calendar } from '../calendar/index.js';
 import {
     getPaddedDateString,
     isDateInputWithTwoDigitYear,
     validateDate,
-} from '../util/dateUtil';
+} from '../util/dateUtil.js';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
-import { getSimpleDateFromString } from '../datelogic/simpledate';
+import { getSimpleDateFromString } from '../datelogic/simpledate.js';
 import { ErrorFieldMessage } from '@sb1/ffe-form-react';
-import i18n from '../i18n/i18n';
-import { isMonth } from '../types';
-import { toNumber } from './toNumber';
+import i18n from '../i18n/i18n.js';
+import { isMonth } from '../types.js';
+import { toNumber } from './toNumber.js';
 
 export interface DatepickerCompProps {
     'aria-invalid'?: React.ComponentProps<'input'>['aria-invalid'];

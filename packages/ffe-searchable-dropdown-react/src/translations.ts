@@ -1,4 +1,4 @@
-import { Locale } from './types';
+import { Locale } from './types.js';
 
 export const getSelectedLabel = (locale: Locale, amountSelected: number) => {
     switch (locale) {

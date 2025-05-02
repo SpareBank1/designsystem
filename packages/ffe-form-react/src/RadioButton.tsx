@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseRadioButton, BaseRadioButtonProps } from './BaseRadioButton';
+import { BaseRadioButton, BaseRadioButtonProps } from './BaseRadioButton.js';
 
 export interface RadioButtonProps extends BaseRadioButtonProps {
     /** Indicates whether the radio button is rendered inline or as a block */

@@ -1,7 +1,7 @@
-import { formatNumber } from './formatNumber';
-import { parseNumber } from './internal/parseNumber';
-import { NON_BREAKING_SPACE } from './internal/unicode';
-import { Locale } from './types';
+import { formatNumber } from './formatNumber.js';
+import { parseNumber } from './internal/parseNumber.js';
+import { NON_BREAKING_SPACE } from './internal/unicode.js';
+import { Locale } from './types.js';
 
 interface Opts {
     prefix?: string;

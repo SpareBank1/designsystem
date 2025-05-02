@@ -1,7 +1,7 @@
 import React from 'react';
-import { texts } from './texts';
-import { ContextMessage, ContextMessageProps } from './ContextMessage';
-import { ContextMessageIcon } from './ContextMessageIcon';
+import { texts } from './texts.js';
+import { ContextMessage, ContextMessageProps } from './ContextMessage.js';
+import { ContextMessageIcon } from './ContextMessageIcon.js';
 
 export interface ContextSuccessMessageProps
     extends Omit<

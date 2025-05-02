@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { Locale } from './types';
-import { txt } from './texts';
+import { Locale } from './types.js';
+import { txt } from './texts.js';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
 import classNames from 'classnames';
 

@@ -1,4 +1,4 @@
-import { Account } from './types';
+import { Account } from './types.js';
 
 const COMMON_SEPARATORS = new RegExp(/[\s.]/g);
 

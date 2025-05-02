@@ -1,4 +1,4 @@
-import { NON_BREAKING_SPACE } from './internal/unicode';
+import { NON_BREAKING_SPACE } from './internal/unicode.js';
 
 export const formatFodselsnummer = (ssn: string) => {
     if (!ssn || ssn.length !== 11) {

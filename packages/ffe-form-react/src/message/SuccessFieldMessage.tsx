@@ -1,5 +1,5 @@
 import React, { ElementType } from 'react';
-import { BaseFieldMessage, BaseFieldMessageProps } from './BaseFieldMessage';
+import { BaseFieldMessage, BaseFieldMessageProps } from './BaseFieldMessage.js';
 
 export type SuccessFieldMessageProps<As extends ElementType = any> = Omit<
     BaseFieldMessageProps<As>,

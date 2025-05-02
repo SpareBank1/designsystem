@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { BaseMessage, BaseMessageProps } from './BaseMessage';
-import { texts } from './texts';
+import { BaseMessage, BaseMessageProps } from './BaseMessage.js';
+import { texts } from './texts.js';
 
 export interface ErrorMessageProps extends Omit<BaseMessageProps, 'type'> {
     /** When false, role is not set to alert, avoids message from being read up immediately after page load. Default value is true. */

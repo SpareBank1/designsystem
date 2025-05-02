@@ -1,4 +1,4 @@
-import { SearchMatcher } from './types';
+import { SearchMatcher } from './types.js';
 const toLowerCase = (value: string) => `${value}`.toLowerCase();
 
 const filterDropdownList = <Item extends Record<string, any>>(

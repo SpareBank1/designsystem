@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import React, { ElementType, ForwardedRef } from 'react';
-import { WithCardAction, WithCardActionProps } from './components';
-import { fixedForwardRef } from './fixedForwardRef';
+import { WithCardAction, WithCardActionProps } from './components/index.js';
+import { fixedForwardRef } from './fixedForwardRef.js';
 import {
     BackgroundColor,
     CardActionRenderProps,
     ComponentAsPropParams,
-} from './types';
+} from './types.js';
 
 export type CardBaseProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,

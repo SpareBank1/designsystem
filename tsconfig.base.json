@@ -4,7 +4,8 @@
         "types": ["jest", "node", "@testing-library/jest-dom"],
         "skipLibCheck": true,
         "esModuleInterop": true,
-        "moduleResolution": "node",
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
         "strict": true,
         "jsx": "react",
         "lib": ["dom", "es2019"]

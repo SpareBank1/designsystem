@@ -1,5 +1,5 @@
 import React from 'react';
-import { txt } from './i18n/texts';
+import { txt } from './i18n/texts.js';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';
 

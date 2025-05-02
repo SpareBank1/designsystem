@@ -1,8 +1,8 @@
 import React, { ElementType, ForwardedRef } from 'react';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
-import { ComponentAsPropParams } from './types';
-import { fixedForwardRef } from './fixedForwardRef';
+import { ComponentAsPropParams } from './types.js';
+import { fixedForwardRef } from './fixedForwardRef.js';
 
 export type ExpandButtonProps<As extends ElementType = 'button'> =
     ComponentAsPropParams<As> & {

@@ -1,4 +1,4 @@
-import { validateDate } from '../util/dateUtil';
+import { validateDate } from '../util/dateUtil.js';
 
 function isDate(value: unknown): value is Date {
     return (

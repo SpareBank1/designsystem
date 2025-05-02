@@ -15,6 +15,7 @@
     ],
     "main": "./lib/index.cjs",
     "module": "./lib/index.js",
+    "type": "module",
     "types": "types/index.d.ts",
     "exports": {
         ".": {
@@ -28,7 +29,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "tsup src/index.tsx --format esm,cjs --clean && tsc --emitDeclarationOnly && lessc --include-path=../../node_modules less/ffe-account-selector.less css/ffe-account-selector.css --autoprefix",
+        "build": "tsup src/index.ts --format esm,cjs --dts --clean && lessc --include-path=../../node_modules less/ffe-account-selector.less css/ffe-account-selector.css --autoprefix",
         "lint": "eslint \"src/**/*.{ts,tsx}\"",
         "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest",

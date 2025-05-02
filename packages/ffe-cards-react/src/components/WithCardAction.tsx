@@ -7,10 +7,10 @@ import React, {
     useEffect,
 } from 'react';
 import classNames from 'classnames';
-import { mergeRefs } from '../mergeRefs';
-import { CardAction, CardActionProps } from './CardAction';
-import { fixedForwardRef } from '../fixedForwardRef';
-import { ComponentAsPropParams } from '../types';
+import { mergeRefs } from '../mergeRefs.js';
+import { CardAction, CardActionProps } from './CardAction.js';
+import { fixedForwardRef } from '../fixedForwardRef.js';
+import { ComponentAsPropParams } from '../types.js';
 
 export type WithCardActionProps<As extends ElementType = 'div'> = Omit<
     ComponentAsPropParams<As>,

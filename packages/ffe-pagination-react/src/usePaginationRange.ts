@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { breakpointSm } from '@sb1/ffe-core';
-import { useResize } from './useResize';
+import { useResize } from './useResize.js';
 
 // See https://www.freecodecamp.org/news/build-a-custom-pagination-component-in-react/
 export const DOTS = '...' as const;

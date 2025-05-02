@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
-import { texts } from './texts';
+import { texts } from './texts.js';
 import { Collapse } from '@sb1/ffe-collapse-react';
 
 export interface SystemMessageProps

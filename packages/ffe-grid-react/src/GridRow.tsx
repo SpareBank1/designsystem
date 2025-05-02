@@ -5,7 +5,7 @@ import {
     BackgroundColor,
     Margin,
     Padding,
-} from './types';
+} from './types.js';
 
 interface GridRowSize {
     margin?: Margin;

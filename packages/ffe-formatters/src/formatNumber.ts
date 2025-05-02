@@ -1,5 +1,5 @@
-import { parseNumber } from './internal/parseNumber';
-import { Locale } from './types';
+import { parseNumber } from './internal/parseNumber.js';
+import { Locale } from './types.js';
 
 export const formatNumber = (
     number: number | string | null | undefined,

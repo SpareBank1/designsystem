@@ -1,7 +1,7 @@
-export { formatAccountNumber } from './formatAccountNumber';
-export { formatCurrency } from './formatCurrency';
-export { formatDate } from './formatDate';
-export { formatDistance } from './formatDistance';
-export { formatNumber } from './formatNumber';
-export { formatPercentage } from './formatPercentage';
-export { formatFodselsnummer } from './formatFodselsnummer';
+export { formatAccountNumber } from './formatAccountNumber.js';
+export { formatCurrency } from './formatCurrency.js';
+export { formatDate } from './formatDate.js';
+export { formatDistance } from './formatDistance.js';
+export { formatNumber } from './formatNumber.js';
+export { formatPercentage } from './formatPercentage.js';
+export { formatFodselsnummer } from './formatFodselsnummer.js';
