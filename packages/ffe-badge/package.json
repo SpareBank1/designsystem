@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-badge",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "En badge er en liten visuell indikator som viser antall uleste varsler, meldinger eller oppgaver.",
     "keywords": [
         "ffe",
