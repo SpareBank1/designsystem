@@ -1,0 +1,36 @@
+{
+    "name": "@sb1/ffe-tags",
+    "version": "1.0.0",
+    "description": "En tag er en liten, fleksibel komponent som brukes til å kategorisere, merke eller gi ekstra kontekst til innhold",
+    "keywords": [
+        "ffe",
+        "tag",
+        "tags",
+        "badge",
+        "chip"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "less",
+        "css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "lint": "ffe-buildtool stylelint less/*.less",
+        "test": "npm run lint",
+        "build": "lessc less/tag.less css/tag.css --autoprefix"
+    },
+    "dependencies": {
+        "@sb1/ffe-core": "^32.0.0"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.10.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
