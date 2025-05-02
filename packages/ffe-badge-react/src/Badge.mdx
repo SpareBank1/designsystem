@@ -1,0 +1,36 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as BadgeStories from './Badge.stories';
+import { InstallImport } from '../../../documentation/components/InstallImport';
+
+<Meta of={BadgeStories} />
+
+# Badge
+En Badge er en liten visuell indikator som viser antall uleste varsler, meldinger eller oppgaver.
+Den plasseres vanligvis over et ikon, ved brukerens navn eller i en meny for å tiltrekke brukerens oppmerksomhet.
+
+<InstallImport
+    packageName="@sb1/ffe-badge-react"
+    dependencies={[
+        '@sb1/ffe-badge',
+        '@sb1/ffe-core'
+    ]}
+    stylingDependencies={[
+        '@sb1/ffe-badge/less/badge.less',
+    ]}
+/>
+
+## Forhåndsvisning
+
+<Canvas of={BadgeStories.Standard} />
+<Controls of={BadgeStories.Standard} />
+
+### Med kontekst
+En badge står gjerne til høyre for det det gjelder.
+
+<Canvas of={BadgeStories.InContext} />
+
+### Indikator uten tall
+Badgen kan også brukes uten tall for å indikere at det finnes ny aktivitet. Den skal sitte på et ikon eller lignende,
+og plasseres i øverste venstre hjørne av ikonet.
+
+<Canvas of={BadgeStories.Indicator} />

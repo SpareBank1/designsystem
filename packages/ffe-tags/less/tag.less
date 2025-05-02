@@ -1,0 +1,84 @@
+.ffe-tag {
+    --background-color: var(--ffe-color-fill-neutral-default);
+    --text-color: var(--ffe-color-foreground-default);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--ffe-spacing-2xs);
+    padding: var(--ffe-spacing-2xs) var(--ffe-spacing-xs);
+    border-radius: var(--ffe-g-border-radius);
+    min-width: fit-content;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    .ffe-icons {
+        color: var(--text-color);
+    }
+
+    &--info {
+        &-emphasis {
+            --background-color: var(--ffe-color-fill-feedback-info);
+            --text-color: var(--ffe-color-foreground-inverse);
+        }
+        &-subtle {
+            --background-color: var(--ffe-color-fill-feedback-info-subtle);
+            --text-color: var(--ffe-color-foreground-default);
+        }
+    }
+
+    &--success {
+        &-emphasis {
+            --background-color: var(--ffe-color-fill-feedback-success);
+            --text-color: var(--ffe-color-foreground-inverse);
+        }
+        &-subtle {
+            --background-color: var(--ffe-color-fill-feedback-success-subtle);
+            --text-color: var(--ffe-color-foreground-default);
+        }
+    }
+
+    &--warning {
+        &-emphasis {
+            --background-color: var(--ffe-color-fill-feedback-warning);
+            --text-color: var(--ffe-color-foreground-inverse);
+        }
+        &-subtle {
+            --background-color: var(--ffe-color-fill-feedback-warning-subtle);
+            --text-color: var(--ffe-color-foreground-default);
+        }
+    }
+
+    &--critical {
+        &-emphasis {
+            --background-color: var(--ffe-color-fill-feedback-critical);
+            --text-color: var(--ffe-color-foreground-inverse);
+        }
+        &-subtle {
+            --background-color: var(--ffe-color-fill-feedback-critical-subtle);
+            --text-color: var(--ffe-color-foreground-default);
+        }
+    }
+
+    &--tip {
+        &-emphasis {
+            --background-color: var(--ffe-color-fill-feedback-tip);
+            --text-color: var(--ffe-color-foreground-inverse);
+        }
+        &-subtle {
+            --background-color: var(--ffe-color-fill-feedback-tip-subtle);
+            --text-color: var(--ffe-color-foreground-default);
+        }
+    }
+
+    &--neutral {
+        &-emphasis {
+            --background-color: var(--ffe-color-fill-neutral-default);
+            --text-color: var(--ffe-color-foreground-default);
+        }
+        &-subtle {
+            --background-color: var(--ffe-color-fill-neutral-subtle);
+            --text-color: var(--ffe-color-foreground-default);
+        }
+    }
+}
