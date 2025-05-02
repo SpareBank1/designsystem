@@ -1,0 +1,36 @@
+{
+    "name": "@sb1/ffe-badge",
+    "version": "1.0.0",
+    "description": "En badge er en liten visuell indikator som viser antall uleste varsler, meldinger eller oppgaver.",
+    "keywords": [
+        "ffe",
+        "tag",
+        "tags",
+        "badge",
+        "chip"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "less",
+        "css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "lint": "ffe-buildtool stylelint less/*.less",
+        "test": "npm run lint",
+        "build": "lessc less/badge.less css/badge.css --autoprefix"
+    },
+    "dependencies": {
+        "@sb1/ffe-core": "^32.0.0"
+    },
+    "devDependencies": {
+        "lerna": "^8.1.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
