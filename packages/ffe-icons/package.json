@@ -19,7 +19,7 @@
     "scripts": {
         "build": "lessc less/ffe-icons.less css/ffe-icons.css --autoprefix",
         "build:icons": "node bin/build.cjs",
-        "lint": "eslint --config ./eslint.config.js bin",
+        "lint": "oxlint bin",
         "test": "npm run lint"
     },
     "dependencies": {

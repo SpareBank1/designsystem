@@ -22,8 +22,8 @@
         "build": "ffe-buildtool tsc",
         "build:es": "ffe-buildtool tsc --es",
         "clean": "rimraf gen-src lib es types",
-        "lint": "eslint \"src/**/*.{ts,tsx}\"",
-        "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+        "lint": "oxlint \"src/**/*.{ts,tsx}\"",
+        "lint:fix": "oxlint \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest"
     },
     "dependencies": {
