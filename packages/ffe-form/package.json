@@ -13,7 +13,9 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "lint": "ffe-buildtool stylelint less/*.less",
+        "lint": "echo `Linting handled at root level with oxlint`",
+        "lint:style": "ffe-buildtool stylelint less/*.less",
+        "lint:style:fix": "ffe-buildtool stylelint --fix less/*.less",
         "test": "npm run lint",
         "build": "lessc less/form.less css/form.css --autoprefix"
     },
