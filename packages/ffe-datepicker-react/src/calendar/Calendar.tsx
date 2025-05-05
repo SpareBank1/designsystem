@@ -58,7 +58,6 @@ export class Calendar extends Component<CalendarProps, State> {
     prevMonthButtonElementRef = React.createRef<HTMLButtonElement>();
     nextMonthButtonElementRef = React.createRef<HTMLButtonElement>();
 
-    /* eslint-disable react/no-did-update-set-state */
     componentDidUpdate(prevProps: CalendarProps) {
         if (prevProps.selectedDate !== this.props.selectedDate) {
             this.setState(

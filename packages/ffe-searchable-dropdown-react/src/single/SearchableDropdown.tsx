@@ -18,7 +18,10 @@ import {
     getNewHighlightedIndexUp,
     getNewHighlightedIndexDown,
 } from '../getNewHighlightedIndex.js';
-import { setArrowAllyMessage, useSetAllyMessageItemSelection } from '../a11y.js';
+import {
+    setArrowAllyMessage,
+    useSetAllyMessageItemSelection,
+} from '../a11y.js';
 import { Results } from '../Results.js';
 import { Locale, SearchMatcher } from '../types.js';
 import { mergeRefs } from '../mergeRefs.js';

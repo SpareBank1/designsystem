@@ -82,18 +82,17 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                 isClient &&
                 dialogRef.current &&
                 typeof dialogRef.current.showModal !== 'function'
-            )
-            {
-                import('dialog-polyfill').then(
-                    (polyfillModule) => {
-                        if (dialogRef.current && polyfillModule.default) {
-                            // Using as any to bypass TS type checking for registerDialog
-                            // TODO: Investigate why DTS build fails here with NodeNext
-                            // (polyfillModule.default as any).registerDialog(dialogRef.current);
-                            console.warn('Dialog polyfill registered (registerDialog call commented out due to build issue)');
-                        }
-                    },
-                );
+            ) {
+                import('dialog-polyfill').then(polyfillModule => {
+                    if (dialogRef.current && polyfillModule.default) {
+                        // Using as any to bypass TS type checking for registerDialog
+                        // TODO: Investigate why DTS build fails here with NodeNext
+                        // (polyfillModule.default as any).registerDialog(dialogRef.current);
+                        console.warn(
+                            'Dialog polyfill registered (registerDialog call commented out due to build issue)',
+                        );
+                    }
+                });
             }
         }, [isClient]);
 

@@ -270,7 +270,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     };
 
     return (
-        // eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
         <div
             className={classNames('ffe-datepicker', {
                 'ffe-datepicker--full-width': fullWidth,
@@ -285,7 +285,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
             role={'group'}
             id={id}
         >
-            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions */}
+            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
             <div
                 className={classNames('ffe-input-field', 'ffe-dateinput', {
                     'ffe-input-field--invalid': ariaInvalid(),

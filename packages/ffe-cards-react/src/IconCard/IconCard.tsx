@@ -1,6 +1,12 @@
 import classNames from 'classnames';
 import React, { ElementType, ForwardedRef, ReactElement } from 'react';
-import { CardName, Subtext, Text, Title, WithCardAction } from '../components/index.js';
+import {
+    CardName,
+    Subtext,
+    Text,
+    Title,
+    WithCardAction,
+} from '../components/index.js';
 import { fixedForwardRef } from '../fixedForwardRef.js';
 import {
     CardActionRenderProps,

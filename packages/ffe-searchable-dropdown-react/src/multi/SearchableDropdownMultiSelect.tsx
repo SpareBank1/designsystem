@@ -24,7 +24,10 @@ import { mergeRefs } from '../mergeRefs.js';
 import { fixedForwardRef } from '../fixedForwardRef.js';
 import { Chip, ChipRemovable } from '@sb1/ffe-chips-react';
 import { getActionType } from './getNewList.js';
-import { setArrowAllyMessage, useSetAllyMessageItemSelection } from '../a11y.js';
+import {
+    setArrowAllyMessage,
+    useSetAllyMessageItemSelection,
+} from '../a11y.js';
 import { addFlagOnEventHandler } from '../addFlagOnEventHandler.js';
 import { useHandleContainerFocus } from '../useHandleContainerFocus.js';
 import { useIsExpandedCallbacks } from '../useIsExpandedCallbacks.js';

@@ -5,7 +5,13 @@ import {
     CardActionRenderProps,
 } from '../types.js';
 import classNames from 'classnames';
-import { WithCardAction, Text, Subtext, Title, CardName } from '../components/index.js';
+import {
+    WithCardAction,
+    Text,
+    Subtext,
+    Title,
+    CardName,
+} from '../components/index.js';
 import { fixedForwardRef } from '../fixedForwardRef.js';
 import { Icon } from '@sb1/ffe-icons-react';
 

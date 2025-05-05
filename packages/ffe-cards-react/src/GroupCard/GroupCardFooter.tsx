@@ -1,6 +1,12 @@
 import React, { ElementType, ForwardedRef } from 'react';
 import classNames from 'classnames';
-import { CardName, Subtext, Text, Title, WithCardAction } from '../components/index.js';
+import {
+    CardName,
+    Subtext,
+    Text,
+    Title,
+    WithCardAction,
+} from '../components/index.js';
 import {
     CardRenderProps,
     ComponentAsPropParams,

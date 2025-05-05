@@ -5,7 +5,13 @@ import {
     CardActionRenderProps,
 } from '../types.js';
 import classNames from 'classnames';
-import { CardName, Subtext, Text, Title, WithCardAction } from '../components/index.js';
+import {
+    CardName,
+    Subtext,
+    Text,
+    Title,
+    WithCardAction,
+} from '../components/index.js';
 import { fixedForwardRef } from '../fixedForwardRef.js';
 
 export type TextCardProps<As extends ElementType = 'div'> = Omit<
