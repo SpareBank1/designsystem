@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.0...@sb1/ffe-form@32.1.1) (2025-05-05)
+
+
+### Bug Fixes
+
+* **ffe-form:** mindre luft under label ([7f40b03](https://github.com/SpareBank1/designsystem/commit/7f40b033daa1d758fa106cef0666587c38844cae))
+
+
+
+
+
 # [32.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.0.25...@sb1/ffe-form@32.1.0) (2025-04-30)
 
 
