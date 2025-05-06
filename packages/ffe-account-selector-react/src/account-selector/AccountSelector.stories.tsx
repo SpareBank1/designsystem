@@ -54,8 +54,6 @@ const accounts: Account[] = [
 export const Standard: Story = {
     args: {
         accounts,
-        id: 'input-id',
-        labelledById: 'label-id',
         locale: 'nb',
         formatAccountNumber: true,
         allowCustomAccount: false,
@@ -64,15 +62,12 @@ export const Standard: Story = {
         const [selectedAccount, setSelectedAccount] = useState<Account>();
 
         return (
-            <InputGroup
-                label="Velg konto"
-                inputId={args.id}
-                labelId={args.labelledById}
-            >
+            <InputGroup label="Velg konto">
                 <AccountSelector
                     {...args}
                     selectedAccount={selectedAccount}
                     onAccountSelected={setSelectedAccount}
+                    onReset={() => setSelectedAccount(undefined)}
                 />
             </InputGroup>
         );

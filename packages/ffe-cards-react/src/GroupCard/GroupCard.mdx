@@ -1,4 +1,4 @@
-import { Canvas, Controls, Meta } from '@storybook/blocks';
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks';
 import * as GroupCardStories from './GroupCard.stories.tsx';
 
 <Meta of={GroupCardStories} />
@@ -6,6 +6,28 @@ import * as GroupCardStories from './GroupCard.stories.tsx';
 # GroupCard
 
 GroupCard er et kort med en liste av elementer inni. Det kan bestå av `GroupCardTitle`, `GroupCardElement` og `GroupCardFooter`, men trenger ikke alle.
+
+## Kode
+
+<Source
+    code={`
+<GroupCard>
+    <GroupCardTitle>
+        <Heading2 lookLike={5}>Tittel på gruppe</Heading2>
+    </GroupCardTitle>
+    <GroupCardElement>Dette er et element i GroupCard</GroupCardElement>
+    <GroupCardElement>Dette er et element i GroupCard</GroupCardElement>
+    <GroupCardElement>Dette er et element i GroupCard</GroupCardElement>
+    <GroupCardFooter>
+        {({ CardAction }: CardRenderProps) => (
+            <CardAction href="https://design.sparebank1.no">
+                Vis mer
+            </CardAction>
+        )}
+    </GroupCardFooter>
+</GroupCard>
+`}
+/>
 
 ## Forhåndsvisning
 

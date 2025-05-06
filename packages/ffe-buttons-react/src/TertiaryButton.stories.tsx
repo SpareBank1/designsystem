@@ -35,19 +35,15 @@ export default meta;
 type Story = StoryObj<typeof TertiaryButton<any>>;
 
 export const Standard: Story = {
-    args: {
-        as: 'button',
-    },
+    args: {},
     render: args => <TertiaryButton {...args}>Tertiærknapp</TertiaryButton>,
 };
 
 export const DifferentSizes: Story = {
-    args: {
-        as: 'button',
-    },
+    args: {},
     render: args => {
         return (
-            <div className="ffe-button-display-group">
+            <div className="storybook-button-display-group">
                 <TertiaryButton {...args} size="lg">
                     Stor tertiærknapp
                 </TertiaryButton>
@@ -62,11 +58,10 @@ export const DifferentSizes: Story = {
 
 export const IconOnly: Story = {
     args: {
-        as: 'button',
         iconOnly: true,
     },
     render: args => (
-        <div className="ffe-button-display-group">
+        <div className="storybook-button-display-group">
             <TertiaryButton
                 {...args}
                 size="lg"

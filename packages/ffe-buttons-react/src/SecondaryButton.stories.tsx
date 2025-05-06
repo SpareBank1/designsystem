@@ -41,27 +41,21 @@ type Story = StoryObj<typeof SecondaryButton<any>>;
 
 export const Standard: Story = {
     args: {
-        as: 'button',
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
     render: args => {
-        return (
-            <div className="ffe-button-display-group">
-                <SecondaryButton {...args}>Sekundærknapp</SecondaryButton>
-            </div>
-        );
+        return <SecondaryButton {...args}>Sekundærknapp</SecondaryButton>;
     },
 };
 
 export const DifferentSizes: Story = {
     args: {
-        as: 'button',
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
     render: args => (
-        <div className="ffe-button-display-group">
+        <div className="storybook-button-display-group">
             <SecondaryButton {...args} size="lg">
                 Sekundærknapp
             </SecondaryButton>
@@ -75,13 +69,12 @@ export const DifferentSizes: Story = {
 
 export const IconOnly: Story = {
     args: {
-        as: 'button',
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
         iconOnly: true,
     },
     render: args => (
-        <div className="ffe-button-display-group">
+        <div className="storybook-button-display-group">
             <SecondaryButton
                 {...args}
                 size="lg"

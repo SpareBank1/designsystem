@@ -19,7 +19,7 @@ export const Standard: Story = {
 
         return (
             <>
-                <div className="ffe-button-display-group ffe-button-display-group--center">
+                <div className="storybook-button-display-group storybook-button-display-group--center">
                     <ExpandButton
                         isExpanded={isOpen}
                         onClick={() => setOpen(!isOpen)}

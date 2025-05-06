@@ -24,14 +24,11 @@ export const Standard: Story = {
 
         return (
             <InputGroup label="Dato" labelId={Standard?.args?.labelId}>
-                {inputProps => (
-                    <Datepicker
-                        value={value ?? date}
-                        onChange={setDate}
-                        {...inputProps}
-                        {...args}
-                    />
-                )}
+                <Datepicker
+                    value={value ?? date}
+                    onChange={setDate}
+                    {...args}
+                />
             </InputGroup>
         );
     },
@@ -51,14 +48,11 @@ export const FieldMessageString: Story = {
                 fieldMessage={'Ugyldig dato'}
                 labelId={Standard?.args?.labelId}
             >
-                {inputProps => (
-                    <Datepicker
-                        value={value ?? date}
-                        onChange={setDate}
-                        {...inputProps}
-                        {...args}
-                    />
-                )}
+                <Datepicker
+                    value={value ?? date}
+                    onChange={setDate}
+                    {...args}
+                />
             </InputGroup>
         );
     },

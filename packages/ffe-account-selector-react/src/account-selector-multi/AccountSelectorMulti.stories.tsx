@@ -43,17 +43,12 @@ const accounts: Account[] = [
 export const Standard: Story = {
     args: {
         accounts,
-        id: 'input-id',
         locale: 'nb',
         formatAccountNumber: true,
     },
     render: function Render(args) {
         return (
-            <InputGroup
-                label="Velg konto"
-                inputId={args.id}
-                labelId={args.labelledById}
-            >
+            <InputGroup label="Velg konto">
                 <AccountSelectorMulti {...args} />
             </InputGroup>
         );
@@ -67,11 +62,7 @@ export const ControlledState: Story = {
 
         return (
             <div>
-                <InputGroup
-                    label="Velg konto"
-                    inputId={args.id}
-                    labelId={args.labelledById}
-                >
+                <InputGroup label="Velg konto">
                     {inputProps => (
                         <>
                             <AccountSelectorMulti
