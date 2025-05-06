@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { Grid, GridCol, GridRow } from '@sb1/ffe-grid-react';
 import { Heading1, Heading4, Paragraph } from '@sb1/ffe-core-react';
 import { Link } from 'react-router-dom';
@@ -16,7 +16,6 @@ import { AccountOverview } from './pages/AccountOverview';
 import { InvestmentDashboard } from './pages/InvestmentDashboard';
 import { PaymentForm } from './pages/PaymentForm';
 import { SidebarMenu } from './components/sidebar-menu/SidebarMenu';
-import './App.css';
 
 const menuItems = [
     { id: 'home', label: 'Oversikt', path: '/oversikt', icon: <Home size={20} /> },
@@ -31,65 +30,55 @@ function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
-        <Router>
-            <Grid className="min-h-screen bg-gray-100">
-                <GridRow>
-                    {/* Sidebar */}
-                    <GridCol md={3} lg={2} className="hidden md:block">
-                        <div className="p-4 h-full">
-                            <SidebarMenu menuItems={menuItems} />
-                        </div>
-                    </GridCol>
+        <Grid className="min-h-screen bg-gray-100">
+            <GridRow>
+                {/* Sidebar */}
+                <GridCol md={3} lg={2} className="hidden md:block">
+                    <div className="p-4 h-full">
+                        <SidebarMenu menuItems={menuItems} />
+                    </div>
+                </GridCol>
 
-                    {/* Main content */}
-                    <GridCol sm={12} md={9} lg={10} className="p-4 md:p-8">
-                        <div className="flex justify-between items-center mb-8">
-                            <Heading1>Sbanky</Heading1>
-                            <Paragraph>Ditt personlige dashbord</Paragraph>
-                        </div>
+                {/* Main content */}
+                <GridCol sm={12} md={9} lg={10} className="p-4 md:p-8">
+                    <div className="flex justify-between items-center mb-8">
+                        <Heading1>Sbanky</Heading1>
+                        <Paragraph>Ditt personlige dashbord</Paragraph>
+                    </div>
 
-                        <Routes>
-                            <Route path="/oversikt" element={<AccountOverview />} />
-                            <Route path="/kontoer" element={<AccountOverview />} />
-                            <Route path="/betaling" element={<PaymentForm />} />
-                            <Route path="/sparing" element={<div>Spareinnhold</div>} />
-                            <Route path="/investering" element={<InvestmentDashboard />} />
-                            <Route path="/innstillinger" element={<div>Innstillinger</div>} />
-                            <Route path="*" element={<Navigate to="/oversikt" replace />} />
-                        </Routes>
-                    </GridCol>
-                </GridRow>
+                    <Outlet />
+                </GridCol>
+            </GridRow>
 
-                {/* Mobile Sidebar - Conditional rendering based on state */}
-                {isSidebarOpen && (
-                    <GridCol sm={12} className="md:hidden fixed inset-0 z-50">
-                        <div className="relative h-full">
-                            <SidebarMenu 
-                                menuItems={menuItems} 
-                                isOpen={isSidebarOpen} 
-                                onClose={() => setIsSidebarOpen(false)} 
-                                onMenuItemClick={() => setIsSidebarOpen(false)} 
-                            />
-                        </div>
-                    </GridCol>
-                )}
+            {/* Mobile Sidebar - Conditional rendering based on state */}
+            {isSidebarOpen && (
+                <GridCol sm={12} className="md:hidden fixed inset-0 z-50">
+                    <div className="relative h-full">
+                        <SidebarMenu 
+                            menuItems={menuItems} 
+                            isOpen={isSidebarOpen} 
+                            onClose={() => setIsSidebarOpen(false)} 
+                            onMenuItemClick={() => setIsSidebarOpen(false)} 
+                        />
+                    </div>
+                </GridCol>
+            )}
 
-                {/* Mobile Header */}
-                <header className="md:hidden fixed top-0 left-0 right-0 bg-white p-4 border-b z-40 flex justify-between items-center">
-                    <button 
-                        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                        className="p-2"
-                        aria-label="Åpne meny"
-                    >
-                        <Home size={24} />
-                    </button>
-                    <Heading4 className="m-0">Sbanky</Heading4>
-                    <Link to="/innstillinger" className="p-2">
-                        <Settings size={24} />
-                    </Link>
-                </header>
-            </Grid>
-        </Router>
+            {/* Mobile Header */}
+            <header className="md:hidden fixed top-0 left-0 right-0 bg-white p-4 border-b z-40 flex justify-between items-center">
+                <button 
+                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                    className="p-2"
+                    aria-label="Åpne meny"
+                >
+                    <Home size={24} />
+                </button>
+                <Heading4 className="m-0">Sbanky</Heading4>
+                <Link to="/innstillinger" className="p-2">
+                    <Settings size={24} />
+                </Link>
+            </header>
+        </Grid>
     );
 }
 
