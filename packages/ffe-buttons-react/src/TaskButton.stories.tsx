@@ -30,9 +30,7 @@ export default meta;
 type Story = StoryObj<typeof TaskButton<any>>;
 
 export const Standard: Story = {
-    args: {
-        as: 'button',
-    },
+    args: {},
     render: function Render(args) {
         return (
             <TaskButton

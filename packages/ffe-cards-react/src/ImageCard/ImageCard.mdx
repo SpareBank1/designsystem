@@ -1,4 +1,4 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { Canvas, Meta, Controls, Source } from '@storybook/blocks';
 import * as ImageCardStories from './ImageCard.stories.tsx';
 
 <Meta of={ImageCardStories} />
@@ -8,6 +8,32 @@ import * as ImageCardStories from './ImageCard.stories.tsx';
 Bildekort er kort med en gitt maksbredde, minimumshøyde, og et topplasert bilde. Den tilbyr alle underkomponenter
 (CardName, Title, Subtext, Text og CardAction) og plasserer dem i gitt rekkefølge nedover i kortet, med teksten midtstilt,
 nedenfor bildet.
+
+## Kode
+
+<Source
+    code={`
+<ImageCard 
+    imageSrc="https://design.sparebank1.no/assets/images/illustrations/illustration-1.svg"
+    imageAltText="To jenter som går å snakker sammen"
+>
+    {({ CardName, Title, Subtext, Text }) => (
+        <>
+            <CardName>Kortnavn</CardName>
+            <Title>Tittel</Title>
+            <Subtext>En liten undertekst</Subtext>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+            </Text>
+        </>
+    )}
+</ImageCard>
+`}
+/>
 
 ## Forhåndsvisning
 

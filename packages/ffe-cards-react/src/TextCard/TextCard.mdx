@@ -1,4 +1,4 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { Canvas, Meta, Controls, Source } from '@storybook/blocks';
 import * as TextCardStories from './TextCard.stories.tsx';
 
 <Meta of={TextCardStories} parameters={{ viewMode: 'docs' }} />
@@ -6,6 +6,29 @@ import * as TextCardStories from './TextCard.stories.tsx';
 # TextCard
 
 Tekstkort er den enkleste korttypen. Den tilbyr alle underkomponenter (CardName, Title, Subtext, Text og CardAction) og plasserer dem i gitt rekkefølge nedover i kortet, med teksten midtstilt.
+
+## Kode
+
+<Source
+    code={`
+<TextCard>
+    {({ CardName, Title, Subtext, Text }) => (
+        <>
+            <CardName>Kortnavn</CardName>
+            <Title>Tittel</Title>
+            <Subtext as="span">Subtext er grå</Subtext>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+            </Text>
+        </>
+    )}
+</TextCard>
+`}
+/>
 
 ## Forhåndsvisning
 

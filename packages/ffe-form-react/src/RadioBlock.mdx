@@ -1,4 +1,4 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
 import * as RadioBlockStories from './RadioBlock.stories.tsx';
 
 <Meta of={RadioBlockStories} />
@@ -7,7 +7,49 @@ import * as RadioBlockStories from './RadioBlock.stories.tsx';
 
 Radioblokker brukes når vi ber brukeren om å ta valg som krever en del.
 
+## Kode
+
+<Source
+    code={`
+<RadioButtonInputGroup
+    label="Hvem eier bilen du skal forsikre?"
+    name="owner"
+    onChange={e => setSelected(e.target.value)}
+    selectedValue={selected}
+>
+    {inputProps => (
+        <>
+            <RadioBlock
+                {...inputProps}
+                label="Ektefelle, samboer eller registrert partner"
+                value="partner"
+            >
+                Da må ektefelle, samboer eller registrert partner
+                skrive inn detaljene sine under.
+            </RadioBlock>
+            <RadioBlock
+                {...inputProps}
+                label="Du"
+                value="you"
+            >
+                Da må du skrive inn detaljene dine under.
+            </RadioBlock>
+            <RadioBlock
+                {...inputProps}
+                label="Leasingselskap"
+                value="leasing-company"
+            >
+                Da må leasingselskapet gi deg noen detaljer som du
+                må skrive inn under.
+            </RadioBlock>
+        </>
+    )}
+</RadioButtonInputGroup>
+`}
+/>
+
 ## Forhåndsvisning
 
 <Canvas of={RadioBlockStories.Standard} />
 <Controls of={RadioBlockStories.Standard} />
+```

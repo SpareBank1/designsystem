@@ -1,9 +1,28 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { Canvas, Meta, Controls, Source } from '@storybook/blocks';
 import * as CardActionStories from './CardAction.stories.tsx';
 
 <Meta of={CardActionStories} />
 
 # CardAction (Klikkbare kort)
+
+## Kode
+
+<Source
+    code={`
+<CardBase>
+    {({ CardAction }: CardActionRenderProps) => (
+        <>
+            <Heading4>
+                <CardAction href="https://design.sparebank1.no">
+                    Lenke
+                </CardAction>
+            </Heading4>
+            <Paragraph>Hele kortet er klikkbart</Paragraph>
+        </>
+    )}
+</CardBase>
+`}
+/>
 
 ## Forhåndsvisning
 

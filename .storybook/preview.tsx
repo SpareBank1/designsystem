@@ -48,13 +48,7 @@ const preview: Preview = {
         options: {
             storySort: {
                 method: 'alphabetical',
-                order: [
-                    'Introduksjon',
-                    'Design',
-                    'Utils',
-                    'Komponenter',
-                    'Sider',
-                ],
+                order: ['Introduksjon', 'Design', 'Utils', 'Komponenter'],
             },
         },
     },
@@ -66,28 +60,28 @@ const preview: Preview = {
                 <div className="ffe-body-text">
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'default') && (
-                            <div className="ffe-docs-content-container ">
+                            <div className="storybook-docs-content-container ">
                                 <Heading3>Light mode</Heading3>
                                 <Story />
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'accent') && (
-                            <div className="ffe-docs-content-container ffe-accent-mode">
+                            <div className="storybook-docs-content-container ffe-accent-mode">
                                 <Heading3>Light mode - Accent</Heading3>
                                 <Story />
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'dark') &&
                         (accent === 'both' || accent === 'default') && (
-                            <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference">
+                            <div className="storybook-docs-content-container dark-mode regard-color-scheme-preference">
                                 <Heading3>Dark mode</Heading3>
                                 <Story />
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'dark') &&
                         (accent === 'both' || accent === 'accent') && (
-                            <div className="ffe-docs-content-container dark-mode regard-color-scheme-preference ffe-accent-mode">
+                            <div className="storybook-docs-content-container dark-mode regard-color-scheme-preference ffe-accent-mode">
                                 <Heading3>Dark mode - Accent</Heading3>
                                 <Story />
                             </div>
@@ -132,7 +126,11 @@ const preview: Preview = {
                         title: 'Vanlig',
                     },
                     { icon: 'circle', value: 'accent', title: 'Accent' },
-                    { icon: 'mirror', value: 'both', title: 'Begge kontekster' },
+                    {
+                        icon: 'mirror',
+                        value: 'both',
+                        title: 'Begge kontekster',
+                    },
                 ],
                 dynamicTitle: true,
             },

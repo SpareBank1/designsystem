@@ -34,9 +34,7 @@ export default meta;
 type Story = StoryObj<typeof GroupCard<any>>;
 
 export const Standard: Story = {
-    args: {
-        as: 'div',
-    },
+    args: {},
     render: args => (
         <GroupCard {...args}>
             <GroupCardTitle>

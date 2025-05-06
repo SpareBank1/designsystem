@@ -1,4 +1,4 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
 import * as RadioSwitchStories from './RadioSwitch.stories.tsx';
 
 <Meta of={RadioSwitchStories} />
@@ -7,7 +7,20 @@ import * as RadioSwitchStories from './RadioSwitch.stories.tsx';
 
 Brukes når kunden skal ta stilling til enkle valg - typisk i formen "ja/nei", eller "av/på" og hvor du i tillegg har behov for en lagreknapp. Har du behov for mer enn 3 radio-switcher i en liste, skal du bruke radioknapper.
 
-Radio-switcher uten defaultvalg.
+## Kode
+
+<Source
+    code={`
+<RadioButtonInputGroup
+    label="Velg et alternativ"
+    name="radio-switch-demo"
+    onChange={e => setSelected(e.target.value)}
+    selectedValue={selected}
+>
+    {inputProps => <RadioSwitch {...inputProps} />}
+</RadioButtonInputGroup>
+`}
+/>
 
 ## Forhåndsvisning
 

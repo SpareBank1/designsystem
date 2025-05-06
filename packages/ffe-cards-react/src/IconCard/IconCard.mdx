@@ -1,4 +1,4 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { Canvas, Meta, Controls, Source } from '@storybook/blocks';
 import * as IconCardStories from './IconCard.stories.tsx';
 
 <Meta of={IconCardStories} />
@@ -8,6 +8,25 @@ import * as IconCardStories from './IconCard.stories.tsx';
 Ikonkort er kort med en gitt maksbredde og et venstrestilt ikon. Den tilbyr alle underkomponenter
 (CardName, Title, Subtext, Text og CardAction) og plasserer dem i gitt rekkefølge nedover i kortet,
 med teksten venstrestilt, til høyre for ikonet.
+
+## Kode
+
+<Source
+    code={`
+<IconCard
+    icon={<Icon fileUrl="./icons/open/300/xl/savings.svg" size="xl" />}
+>
+    {({ CardName, Title, Subtext, Text }) => (
+        <>
+            <CardName>Kortnavn</CardName>
+            <Title>Tittel</Title>
+            <Subtext>En liten undertekst</Subtext>
+            <Text>Her kan man ha tekst</Text>
+        </>
+    )}
+</IconCard>
+`}
+/>
 
 ## Forhåndsvisning
 
