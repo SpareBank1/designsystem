@@ -33,14 +33,14 @@ function App() {
         <Grid className="min-h-screen bg-gray-100">
             <GridRow>
                 {/* Sidebar */}
-                <GridCol md={3} lg={2} className="hidden md:block">
+                <GridCol md={4} lg={3} className="hidden md:block">
                     <div className="p-4 h-full">
                         <SidebarMenu menuItems={menuItems} />
                     </div>
                 </GridCol>
 
                 {/* Main content */}
-                <GridCol sm={12} md={9} lg={10} className="p-4 md:p-8">
+                <GridCol sm={12} md={8} lg={9} className="p-4 md:p-8">
                     <div className="flex justify-between items-center mb-8">
                         <Heading1>Sbanky</Heading1>
                         <Paragraph>Ditt personlige dashbord</Paragraph>

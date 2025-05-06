@@ -48,6 +48,7 @@
     "@sb1/ffe-vite-less": "file:../../packages/ffe-vite-less",
     "@sb1/ffe-webfonts": "^5.0.16",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "eslint": "^9.18.0",
     "lucide-react": "^0.471.1",
     "postcss-preset-env": "^10.1.3",
