@@ -25,7 +25,7 @@
     "@sb1/ffe-chips-react": "^1.2.10",
     "@sb1/ffe-collapse-react": "^5.1.6",
     "@sb1/ffe-context-message-react": "^12.0.29",
-    "@sb1/ffe-core": "^29.5.2",
+    "@sb1/ffe-core": "^32.0.0",
     "@sb1/ffe-core-react": "^9.1.14",
     "@sb1/ffe-datepicker-react": "^10.1.10",
     "@sb1/ffe-dropdown-react": "^8.0.32",
