@@ -16,7 +16,6 @@ type Story = StoryObj<typeof RadioButtonInputGroup>;
 export const Standard: Story = {
     args: {
         inline: false,
-        onColoredBg: false,
         name: 'favorittlukt',
         label: 'Hva er din favorittlukt?',
     },

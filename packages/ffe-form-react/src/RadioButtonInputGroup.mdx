@@ -1,4 +1,4 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
 import * as RadioButtonInputGroup from './RadioButtonInputGroup.stories.tsx';
 
 <Meta of={RadioButtonInputGroup} />
@@ -9,6 +9,32 @@ Brukes når kunden kan velge ett av få valg. Hvis valgene er korte og konsise, 
 Har valgene litt mer tekst, så bør valgene komme under hverandre.
 Default oppførsel er at det holdes av plass under inputfeltene for å vise en feilmelding uten at innholdet lengre ned endres.
 Dersom man ikke ønsker dette kan det skrus av med å sette extraMargin prop til false.
+
+## Kode
+
+<Source
+    code={`
+<RadioButtonInputGroup
+    {...args}
+    selectedValue={selectedValue}
+    onChange={e => setSelectedValue(e.target.value as Value)}
+>
+    {inputProps => (
+        <>
+            <RadioButton {...inputProps} value="grass">
+                Gress
+            </RadioButton>
+            <RadioButton {...inputProps} value="asphalt">
+                Asfalt
+            </RadioButton>
+            <RadioButton {...inputProps} value="pollen">
+                Pollen
+            </RadioButton>
+        </>
+    )}
+</RadioButtonInputGroup>
+`}
+/>
 
 ## Forhåndsvisning
 

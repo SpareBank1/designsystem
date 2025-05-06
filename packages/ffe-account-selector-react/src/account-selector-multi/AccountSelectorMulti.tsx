@@ -18,6 +18,7 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
      */
     accounts: T[];
     className?: string;
+    /** Id blir satt automatisk hvis AccountSelector brukes i en InputGroup. Brukes for å koble label og input */
     id: string;
     locale?: Locale;
     /** Overrides default string for all locales. */
