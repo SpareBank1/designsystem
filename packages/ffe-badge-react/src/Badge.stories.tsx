@@ -3,7 +3,7 @@ import React from 'react';
 import { Badge } from './Badge';
 
 const meta: Meta<typeof Badge> = {
-    title: 'Komponenter/Badge',
+    title: 'Komponenter/Badge/Badge',
     component: Badge,
 };
 export default meta;

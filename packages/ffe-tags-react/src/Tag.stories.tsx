@@ -4,7 +4,7 @@ import { Tag } from './Tag';
 import { Icon } from '@sb1/ffe-icons-react';
 
 const meta: Meta<typeof Tag> = {
-    title: 'Komponenter/Tags',
+    title: 'Komponenter/Tags/Tag',
     component: Tag,
 };
 export default meta;
