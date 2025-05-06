@@ -26,7 +26,7 @@ export const Standard: Story = {
         const [isExpanded, setExpanded] = useState(args.isExpanded);
 
         return (
-            <div className="ffe-button-display-group">
+            <div className="ffe-button-display-group ffe-button-display-group--center">
                 <ExpandButton
                     {...args}
                     isExpanded={isExpanded}
@@ -50,30 +50,36 @@ export const DifferentSizes: Story = {
         const [isExpandedSm, setExpandedSm] = useState(args.isExpanded);
 
         return (
-            <div className="ffe-button-display-group">
-                <ExpandButton
-                    {...args}
-                    isExpanded={isExpandedLg}
-                    onClick={() => setExpandedLg(!isExpandedLg)}
-                    size={'lg'}
-                >
-                    Vis mer
-                </ExpandButton>
-                <ExpandButton
-                    {...args}
-                    isExpanded={isExpandedMd}
-                    onClick={() => setExpandedMd(!isExpandedMd)}
-                >
-                    Vis mer
-                </ExpandButton>
-                <ExpandButton
-                    {...args}
-                    isExpanded={isExpandedSm}
-                    onClick={() => setExpandedSm(!isExpandedSm)}
-                    size={'sm'}
-                >
-                    Vis mer
-                </ExpandButton>
+            <div className="ffe-button-display-group ffe-button-display-group--center">
+                <div>
+                    <ExpandButton
+                        {...args}
+                        isExpanded={isExpandedLg}
+                        onClick={() => setExpandedLg(!isExpandedLg)}
+                        size={'lg'}
+                    >
+                        Vis mer
+                    </ExpandButton>
+                </div>
+                <div>
+                    <ExpandButton
+                        {...args}
+                        isExpanded={isExpandedMd}
+                        onClick={() => setExpandedMd(!isExpandedMd)}
+                    >
+                        Vis mer
+                    </ExpandButton>
+                </div>
+                <div>
+                    <ExpandButton
+                        {...args}
+                        isExpanded={isExpandedSm}
+                        onClick={() => setExpandedSm(!isExpandedSm)}
+                        size={'sm'}
+                    >
+                        Vis mer
+                    </ExpandButton>
+                </div>
             </div>
         );
     },

@@ -13,8 +13,14 @@ type Story = StoryObj<typeof ChipSelectable<any>>;
 export const Standard: Story = {
     args: {
         as: 'button',
-        children: 'Label',
         size: 'sm',
     },
-    render: args => <ChipSelectable {...args} />,
+    render: args => (
+        <div className="ffe-button-display-group">
+            <ChipSelectable {...args}>Chip</ChipSelectable>
+            <ChipSelectable {...args} isSelected={true}>
+                Selected Chip
+            </ChipSelectable>
+        </div>
+    ),
 };

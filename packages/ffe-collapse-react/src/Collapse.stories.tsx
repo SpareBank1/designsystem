@@ -19,12 +19,14 @@ export const Standard: Story = {
 
         return (
             <>
-                <ExpandButton
-                    isExpanded={isOpen}
-                    onClick={() => setOpen(!isOpen)}
-                >
-                    {isOpen ? 'Collapse' : 'Expand'}
-                </ExpandButton>
+                <div className="ffe-button-display-group ffe-button-display-group--center">
+                    <ExpandButton
+                        isExpanded={isOpen}
+                        onClick={() => setOpen(!isOpen)}
+                    >
+                        {isOpen ? 'Collapse' : 'Expand'}
+                    </ExpandButton>
+                </div>
                 <Collapse isOpen={isOpen}>
                     <div>
                         <p>Hello world</p>

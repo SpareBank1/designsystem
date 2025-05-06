@@ -27,12 +27,3 @@ export const Standard: Story = {
     },
     render: args => <Spinner {...args} />,
 };
-
-export const Large: Story = {
-    args: {
-        ...Standard.args,
-        large: true,
-        loadingText: 'Større loading',
-    },
-    render: args => <Spinner {...args} />,
-};
