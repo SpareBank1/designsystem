@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { PaymentForm } from './PaymentForm';
 
@@ -29,7 +29,9 @@ describe('PaymentForm', () => {
     expect(screen.getByLabelText('Mottakers kontonummer')).toBeInTheDocument();
     expect(screen.getByLabelText('Mottakers navn')).toBeInTheDocument();
     expect(screen.getByLabelText('Beløp')).toBeInTheDocument();
-    expect(screen.getByLabelText('Betalingsdato')).toBeInTheDocument();
+    // Sjekker at label-teksten finnes, og at Datepicker-komponenten rendres via data-testid
+    expect(screen.getByText('Betalingsdato')).toBeInTheDocument(); 
+    expect(screen.getByTestId('date-picker')).toBeInTheDocument();
     expect(screen.getByLabelText('Melding til mottaker (valgfritt)')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /send betaling/i })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /avbryt/i })).toBeInTheDocument();
@@ -59,7 +61,7 @@ describe('PaymentForm', () => {
     expect(fromAccountSelect).toHaveValue('1234.56.78910');
     expect(accountInput).toHaveValue('12345678910');
     expect(nameInput).toHaveValue('Ola Nordmann');
-    expect(amountInput).toHaveValue(500);
+    expect(amountInput).toHaveValue('500,00'); // Forventer formatert verdi etter implisitt blur
     expect(messageInput).toHaveValue('Testmelding');
     // Sjekk radiobutton default
     expect(screen.getByRole('radio', { name: 'Vanlig betaling' })).toBeChecked();
@@ -101,10 +103,11 @@ describe('PaymentForm', () => {
     await user.type(screen.getByLabelText('Mottakers kontonummer'), '123');
     await user.type(screen.getByLabelText('Mottakers navn'), 'Test');
     await user.type(screen.getByLabelText('Beløp'), '-10'); // Negativt beløp
+    fireEvent.blur(screen.getByLabelText('Beløp')); // Trigger blur for formatering/validering
     
     await user.click(screen.getByRole('button', { name: /send betaling/i }));
     
-    expect(await screen.findByText('Beløp må være et positivt tall')).toBeInTheDocument();
+    expect(await screen.findByText('Beløp må være et gyldig positivt tall')).toBeInTheDocument();
     expect(screen.getByLabelText('Beløp')).toHaveAttribute('aria-invalid', 'true');
     // Andre felt skal være gyldige
     expect(screen.getByLabelText('Fra konto')).not.toHaveAttribute('aria-invalid', 'true');
@@ -153,7 +156,7 @@ describe('PaymentForm', () => {
     expect(screen.getByLabelText('Fra konto')).toHaveValue('');
     expect(screen.getByLabelText('Mottakers kontonummer')).toHaveValue('');
     expect(screen.getByLabelText('Mottakers navn')).toHaveValue('');
-    expect(screen.getByLabelText('Beløp')).toHaveValue(null); // number input blir null
+    expect(screen.getByLabelText('Beløp')).toHaveValue(''); // Er nå text input, så tomt, ikke null
     expect(screen.getByLabelText('Melding til mottaker (valgfritt)')).toHaveValue('');
   });
 
@@ -179,7 +182,7 @@ describe('PaymentForm', () => {
     expect(screen.getByLabelText('Fra konto')).toHaveValue('');
     expect(screen.getByLabelText('Mottakers kontonummer')).toHaveValue('');
     expect(screen.getByLabelText('Mottakers navn')).toHaveValue('');
-    expect(screen.getByLabelText('Beløp')).toHaveValue(null);
+    expect(screen.getByLabelText('Beløp')).toHaveValue(''); // Er nå text input
     expect(screen.getByLabelText('Melding til mottaker (valgfritt)')).toHaveValue('');
     // Sjekk at radiobutton er resatt til default
     expect(screen.getByRole('radio', { name: 'Vanlig betaling' })).toBeChecked();
@@ -206,5 +209,78 @@ describe('PaymentForm', () => {
     await user.click(vanligRadio);
     expect(vanligRadio).toBeChecked();
     expect(straksRadio).not.toBeChecked();
+  });
+
+  it('formats amount on blur and submits correct numeric value', async () => {
+    const user = userEvent.setup();
+    const consoleSpy = vi.spyOn(console, 'log');
+    render(<PaymentForm />);
+
+    const amountInput = screen.getByLabelText('Beløp');
+
+    // Test 1: Gyldig tall med punktum
+    await user.clear(amountInput);
+    await user.type(amountInput, '1234.56');
+    fireEvent.blur(amountInput);
+    await waitFor(() => expect(amountInput).toHaveValue('1\u00A0234,56'));
+
+    // Fyll ut resten av skjemaet for en gyldig submit
+    await user.selectOptions(screen.getByLabelText('Fra konto'), '1234.56.78910');
+    await user.type(screen.getByLabelText('Mottakers kontonummer'), '98765432100');
+    await user.type(screen.getByLabelText('Mottakers navn'), 'Blur Test');
+    await user.click(screen.getByRole('button', { name: /send betaling/i }));
+    
+    expect(await screen.findByText('Betaling sendt!')).toBeInTheDocument();
+    expect(consoleSpy).toHaveBeenCalledWith(
+      'Betaling sendt:',
+      expect.objectContaining({ amount: 1234.56 })
+    );
+    await user.click(screen.getByText('Betaling sendt!')); // For å fjerne suksessmelding for neste del
+
+    // Test 2: Gyldig tall med komma (uten tusenskilletegn, formatNumber legger ikke til for < 1000)
+    await user.clear(amountInput);
+    await user.type(amountInput, '567,89');
+    fireEvent.blur(amountInput);
+    await waitFor(() => expect(amountInput).toHaveValue('567,89')); // Forblir uendret uten tusenskilletegn
+    // Fyll ut resten på nytt
+    await user.selectOptions(screen.getByLabelText('Fra konto'), '1234.56.78910');
+    await user.type(screen.getByLabelText('Mottakers kontonummer'), '98765432101'); // Unikt kontonr
+    await user.type(screen.getByLabelText('Mottakers navn'), 'Blur Test 2');
+    await user.click(screen.getByRole('button', { name: /send betaling/i }));
+
+    expect(await screen.findByText('Betaling sendt!')).toBeInTheDocument();
+    expect(consoleSpy).toHaveBeenCalledWith(
+        'Betaling sendt:',
+        expect.objectContaining({ amount: 567.89 })
+      );
+    await user.click(screen.getByText('Betaling sendt!'));
+
+    // Test 3: Tall som trenger tusenskilletegn
+    await user.clear(amountInput);
+    await user.type(amountInput, '5678,90');
+    fireEvent.blur(amountInput);
+    await waitFor(() => expect(amountInput).toHaveValue('5\u00A0678,90')); // Bruk non-breaking space
+    // Fyll ut resten av skjemaet for en gyldig submit
+    await user.selectOptions(screen.getByLabelText('Fra konto'), '1234.56.78910');
+    await user.type(screen.getByLabelText('Mottakers kontonummer'), '98765432102'); // Unikt kontonr
+    await user.type(screen.getByLabelText('Mottakers navn'), 'Blur Test 3');
+    await user.click(screen.getByRole('button', { name: /send betaling/i }));
+
+    expect(await screen.findByText('Betaling sendt!')).toBeInTheDocument();
+    expect(consoleSpy).toHaveBeenCalledWith(
+        'Betaling sendt:',
+        expect.objectContaining({ amount: 5678.90 })
+      );
+    await user.click(screen.getByText('Betaling sendt!'));
+
+    // Test 4: Ugyldig input (skal ikke formateres, men validering skal feile)
+    await user.clear(amountInput);
+    await user.type(amountInput, 'abc');
+    fireEvent.blur(amountInput);
+    expect(amountInput).toHaveValue('abc'); // Beholder ugyldig input
+    await user.click(screen.getByRole('button', { name: /send betaling/i }));
+    expect(await screen.findByText('Beløp må være et gyldig positivt tall')).toBeInTheDocument();
+
+    consoleSpy.mockRestore();
   });
 }); 

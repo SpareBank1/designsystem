@@ -3,7 +3,14 @@ import { GridRow, GridCol } from '@sb1/ffe-grid-react';
 import { Heading1, Heading2 } from '@sb1/ffe-core-react';
 import { ChartDonut } from '@sb1/ffe-chart-donut-react';
 import { CardBase } from '@sb1/ffe-cards-react';
-import { Table } from '@sb1/ffe-tables-react';
+import {
+    Table,
+    TableHead,
+    TableBody,
+    TableRow,
+    TableHeaderCell,
+    TableDataCell,
+} from '@sb1/ffe-tables-react';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
 
 const portfolioData = {
@@ -61,22 +68,22 @@ export const InvestmentDashboard = () => {
                              <TertiaryButton>Se alle beholdninger</TertiaryButton>
                          </div>
                         <Table>
-                            <thead>
-                                <tr>
-                                    <th>Investering</th>
-                                    <th className="text-right">Verdi (NOK)</th>
-                                    <th className="text-right">Andel (%)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                            <TableHead>
+                                <TableRow>
+                                    <TableHeaderCell scope="col">Investering</TableHeaderCell>
+                                    <TableHeaderCell scope="col" className="text-right">Verdi (NOK)</TableHeaderCell>
+                                    <TableHeaderCell scope="col" className="text-right">Andel (%)</TableHeaderCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
                                 {portfolioData.allocation.map((item, index) => (
-                                    <tr key={index}>
-                                        <td>{item.name}</td>
-                                        <td className="text-right">{item.value.toLocaleString('nb-NO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                                        <td className="text-right">{item.percentage.toFixed(2)}</td>
-                                    </tr>
+                                    <TableRow key={index}>
+                                        <TableDataCell columnHeader="Investering">{item.name}</TableDataCell>
+                                        <TableDataCell columnHeader="Verdi (NOK)" className="text-right">{item.value.toLocaleString('nb-NO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</TableDataCell>
+                                        <TableDataCell columnHeader="Andel (%)" className="text-right">{item.percentage.toFixed(2)}</TableDataCell>
+                                    </TableRow>
                                 ))}
-                            </tbody>
+                            </TableBody>
                         </Table>
                     </CardBase>
                 </GridCol>
@@ -90,25 +97,25 @@ export const InvestmentDashboard = () => {
                              <TertiaryButton>Se all historikk</TertiaryButton>
                          </div>
                          <Table>
-                             <thead>
-                                 <tr>
-                                     <th>Dato</th>
-                                     <th>Type</th>
-                                     <th>Fond</th>
-                                     <th className="text-right">Beløp (NOK)</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
-                                 {portfolioData.recentTrades.map((trade, index) => (
-                                     <tr key={index}>
-                                         <td>{trade.date}</td>
-                                         <td>{trade.type}</td>
-                                         <td>{trade.fund}</td>
-                                         <td className="text-right">{trade.amount.toLocaleString('nb-NO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                                     </tr>
-                                 ))}
-                             </tbody>
-                         </Table>
+                            <TableHead>
+                                <TableRow>
+                                    <TableHeaderCell scope="col">Dato</TableHeaderCell>
+                                    <TableHeaderCell scope="col">Type</TableHeaderCell>
+                                    <TableHeaderCell scope="col">Fond</TableHeaderCell>
+                                    <TableHeaderCell scope="col" className="text-right">Beløp (NOK)</TableHeaderCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {portfolioData.recentTrades.map((trade, index) => (
+                                    <TableRow key={index}>
+                                        <TableDataCell columnHeader="Dato">{trade.date}</TableDataCell>
+                                        <TableDataCell columnHeader="Type">{trade.type}</TableDataCell>
+                                        <TableDataCell columnHeader="Fond">{trade.fund}</TableDataCell>
+                                        <TableDataCell columnHeader="Beløp (NOK)" className="text-right">{trade.amount.toLocaleString('nb-NO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</TableDataCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
                      </CardBase>
                  </GridCol>
              </GridRow>

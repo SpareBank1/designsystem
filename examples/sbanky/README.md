@@ -213,4 +213,29 @@ export default defineConfig(async () => ({
 ### Start development server
 ```bash
 npm run dev
+```
+
+## Lokal Utvikling med FFE-pakker fra Kildekode
+
+For å fasilitere raskere utvikling og testing av endringer i FFE-pakkene direkte i denne eksempelapplikasjonen (`sbanky`), er Vite-konfigurasjonen satt opp med aliaser. Disse aliasene peker import av `@sb1/ffe-*`-pakker direkte til deres respektive kildekodemapper (`src`) i `../../packages/`-strukturen.
+
+**Hvordan det fungerer:**
+
+*   **Vite-aliaser:** I `vite.config.ts` og `vitest.config.ts` er det definert `resolve.alias` som mapper pakkenavn (f.eks. `@sb1/ffe-cards-react`) til den lokale stien til pakkens `src/index.ts` (eller tilsvarende inngangspunkt).
+*   **Kompilering på direkten:** Vite vil automatisk kompilere TypeScript-kildekoden fra disse lokale FFE-pakkene "on-the-fly" både for utviklingsserveren (`npm run dev`) og for tester (`npm run test`). Det er vanligvis ikke nødvendig å kjøre en separat build-prosess inne i hver FFE-pakke.
+*   **React-instans:** Aliaser er også satt opp for `react` og `react-dom` for å sikre at både `sbanky`-appen og de lokalt koblede FFE-pakkene bruker samme React-instans, noe som forhindrer vanlige feil knyttet til "invalid hook call" eller flere React-kopier.
+
+**Forutsetninger for at dette skal fungere:**
+
+1.  **Kildekode må eksistere:** Kildekodemappene for FFE-pakkene (f.eks. `../../packages/ffe-cards-react/src`) må eksistere og inneholde gyldig kode.
+2.  **Avhengigheter for FFE-pakker:** Hvis FFE-pakkene har egne, unike avhengigheter (utover det som løses av `sbanky`s `node_modules`), må disse være installert. I et typisk monorepo-oppsett med f.eks. `pnpm workspaces` eller `yarn workspaces`, vil en installasjon i rotmappen av designsystem-repoet håndtere dette. Hvis ikke, kan det være nødvendig å kjøre `npm install` i de individuelle `packages/ffe-*-react`-mappene hvis de har egne `package.json` med unike avhengigheter.
+3.  **Ingen spesielle "src"-populerende build-steg:** Oppsettet antar at `src`-mappen i FFE-pakkene inneholder den faktiske kildekoden, og ikke er avhengig av filer som genereres *inn i `src`* av et separat build-steg for den pakken. Standard FFE-pakker følger dette mønsteret.
+
+**Fjerning av `npm link`:**
+Med dette alias-baserte oppsettet er det vanligvis ikke lenger nødvendig (og kan til og med være problematisk) å bruke `npm link` for FFE-pakkene. Hvis du tidligere har linket pakker, anbefales det å fjerne disse linkene (`npm unlink <pakke>`) og deretter slette `node_modules` og `package-lock.json` i `sbanky` og kjøre `npm install` på nytt.
+
+**Feilsøking:**
+*   Hvis du får "module not found"-feil relatert til en FFE-pakke, sjekk at aliaset er korrekt i `vite.config.ts` / `vitest.config.ts` og at den angitte kildekodestien er gyldig.
+*   Hvis du opplever feil relatert til React (f.eks. `useRef is null` eller "invalid hook call"), dobbeltsjekk at React-aliasene er korrekte og at det ikke er flere versjoner av React som lastes.
+
 ```bash
