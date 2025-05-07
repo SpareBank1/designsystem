@@ -15,6 +15,7 @@ import { PrimaryButton, SecondaryButton, ButtonGroup } from '@sb1/ffe-buttons-re
 import { Datepicker } from '@sb1/ffe-datepicker-react';
 import { SuccessMessage } from '@sb1/ffe-message-box-react';
 import { format } from 'date-fns';
+import { formatNumber } from '@sb1/ffe-formatters';
 
 // Eksempelkontodata
 const accounts = [
@@ -38,6 +39,13 @@ export const PaymentForm = () => {
     const [amountError, setAmountError] = useState<string | undefined>(undefined);
     const [submitted, setSubmitted] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
+
+    const parseAmount = (value: string): number | null => {
+        if (!value) return null;
+        const cleanedValue = value.replace(/\s/g, '').replace(',', '.');
+        const number = parseFloat(cleanedValue);
+        return isNaN(number) ? null : number;
+    };
 
     const validateForm = (): boolean => {
         let isValid = true;
@@ -64,14 +72,24 @@ export const PaymentForm = () => {
             setNameError(undefined);
         }
 
-        if (!amount || parseFloat(amount) <= 0) {
-            setAmountError('Beløp må være et positivt tall');
+        const numericAmount = parseAmount(amount);
+        if (numericAmount === null || numericAmount <= 0) {
+            setAmountError('Beløp må være et gyldig positivt tall');
             isValid = false;
         } else {
             setAmountError(undefined);
         }
         return isValid;
     }
+
+    const handleAmountBlur = () => {
+        const numericValue = parseAmount(amount);
+        if (numericValue !== null) {
+            setAmount(String(formatNumber(numericValue, { locale: 'nb', decimals: 2 })));
+        } else if (amount.trim() !== '' && amount.trim() !== '-') {
+            // Beholder ugyldig input for validering, eller kan tømmes: setAmount('');
+        }
+    };
 
     const resetForm = () => {
         setFromAccount('');
@@ -94,7 +112,8 @@ export const PaymentForm = () => {
         setShowSuccess(false);
 
         if (validateForm()) {
-            console.log('Betaling sendt:', { fromAccount, account, name, amount, paymentDate, message, paymentType });
+            const numericAmount = parseAmount(amount);
+            console.log('Betaling sendt:', { fromAccount, account, name, amount: numericAmount, paymentDate, message, paymentType });
             setShowSuccess(true);
             resetForm();
         }
@@ -181,12 +200,14 @@ export const PaymentForm = () => {
                             fieldMessage={submitted && amountError ? <ErrorFieldMessage>{amountError}</ErrorFieldMessage> : undefined}
                         >
                             <Input 
-                                type="number" 
+                                type="text"
+                                inputMode="decimal"
                                 value={amount} 
                                 onChange={e => {
                                     setAmount(e.target.value);
                                     if (submitted) validateForm();
-                                }}
+                                }} 
+                                onBlur={handleAmountBlur}
                                 aria-invalid={!!(submitted && amountError)}
                             />
                         </InputGroup>
