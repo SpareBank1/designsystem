@@ -91,7 +91,7 @@
         }
     }
 
-     &--system {
+    &--system {
         .ffe-message__icon-container {
             margin-top: var(--ffe-spacing-2xs);
         }
@@ -205,12 +205,15 @@
 .ffe-message__icon {
     color: var(--icon-color);
     mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
     mask-position: center;
+    -webkit-mask-position: center;
     background-color: currentcolor;
     mask-image: var(--mask-image);
     -webkit-mask-image: var(--mask-image);
     height: var(--icon-size);
     aspect-ratio: 1;
+    -webkit-mask-size: contain;
     mask-size: contain;
 }
 
