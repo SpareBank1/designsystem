@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tables",
-    "version": "18.0.20",
+    "version": "18.0.21",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -17,7 +17,7 @@
         "build": "lessc less/tables.less css/tables.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^32.0.0"
+        "@sb1/ffe-core": "^32.0.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0"

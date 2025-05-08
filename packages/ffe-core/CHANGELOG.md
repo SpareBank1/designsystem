@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@32.0.0...@sb1/ffe-core@32.0.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* **ffe-core:** fikser bug i no-margin-modifieren ([c865dd9](https://github.com/SpareBank1/designsystem/commit/c865dd91bbc484e58ffa5dd670ec5237f47064d6))
+
+
+
+
+
 # [32.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@31.1.2...@sb1/ffe-core@32.0.0) (2025-04-30)
 
 

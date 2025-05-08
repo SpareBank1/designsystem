@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@14.0.31...@sb1/ffe-message-box@14.0.32) (2025-05-08)
+
+**Note:** Version bump only for package @sb1/ffe-message-box
+
+
+
+
+
 ## [14.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@14.0.30...@sb1/ffe-message-box@14.0.31) (2025-04-30)
 
 **Note:** Version bump only for package @sb1/ffe-message-box

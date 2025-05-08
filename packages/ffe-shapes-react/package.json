@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-shapes-react",
-    "version": "1.1.10",
+    "version": "1.1.11",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,7 +25,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-shapes": "^1.1.9",
+        "@sb1/ffe-shapes": "^1.1.10",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
