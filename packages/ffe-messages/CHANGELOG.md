@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.25...@sb1/ffe-messages@2.0.26) (2025-05-08)
+
+
+### Bug Fixes
+
+* **ffe-messages:** add webkit prefixes to fix android HMR bug ([f406b4a](https://github.com/SpareBank1/designsystem/commit/f406b4a368887cb5d542e0229320b853c3c99e7e))
+
+
+
+
+
 ## [2.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.24...@sb1/ffe-messages@2.0.25) (2025-05-08)
 
 **Note:** Version bump only for package @sb1/ffe-messages
