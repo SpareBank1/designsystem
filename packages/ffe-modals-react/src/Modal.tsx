@@ -18,6 +18,8 @@ export interface ModalProps extends React.ComponentPropsWithoutRef<'dialog'> {
 export type ModalHandle = {
     readonly open: () => void;
     readonly close: () => void;
+    readonly isOpen: boolean;
+    readonly dialogRef: React.RefObject<HTMLDialogElement>;
 };
 
 export const Modal = React.forwardRef<ModalHandle, ModalProps>(
@@ -44,12 +46,24 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
 
         useImperativeHandle(ref, () => ({
             open: () => {
-                setIsOpen(true);
-                dialogRef.current?.showModal();
+                // Prevent opening an already open modal
+                if (!isOpen && dialogRef.current) {
+                    setIsOpen(true);
+                    dialogRef.current.showModal();
+                }
             },
             close: () => {
-                dialogRef.current?.close();
+                // Prevent closing an already closed modal
+                if (isOpen && dialogRef.current) {
+                    dialogRef.current.close();
+                }
             },
+            // Expose isOpen state
+            get isOpen() {
+                return isOpen;
+            },
+            // Expose dialogRef directly
+            dialogRef,
         }));
 
         useEffect(() => {
