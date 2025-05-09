@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.2...@sb1/ffe-form@32.1.3) (2025-05-09)
+
+
+### Bug Fixes
+
+* **ffe-form:** riktig bakgrunnsfarge på checkbox ([784db43](https://github.com/SpareBank1/designsystem/commit/784db43bb9f81db5dc34df27a9ea16ff4a57192e))
+
+
+
+
+
 ## [32.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.1...@sb1/ffe-form@32.1.2) (2025-05-08)
 
 **Note:** Version bump only for package @sb1/ffe-form
