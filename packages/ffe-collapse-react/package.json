@@ -25,8 +25,8 @@
     "scripts": {
         "build": "ffe-buildtool tsc && lessc less/collapse.less css/collapse.css --autoprefix",
         "build:es": "ffe-buildtool tsc --es",
-        "lint": "eslint \"src/**/*.{ts,tsx}\"",
-        "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+        "lint": "oxlint \"src/**/*.{ts,tsx}\"",
+        "lint:fix": "oxlint \"src/**/*.{ts,tsx}\" --fix",
         "test": "ffe-buildtool jest",
         "test:watch": "ffe-buildtool jest --watch"
     },

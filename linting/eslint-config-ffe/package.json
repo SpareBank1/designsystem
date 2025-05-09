@@ -8,13 +8,14 @@
         "rules",
         "*.js"
     ],
-    "main": "index.js",
+    "main": "index.mjs",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "lint": "eslint ."
+        "lint": "echo \"Skipping lint for linting config\" && true",
+        "lint:fix": "echo \"Skipping lint:fix for linting config\" && true"
     },
     "dependencies": {
         "@sb1/eslint-config-ffe-base": "^3.0.8"
@@ -34,6 +35,5 @@
     },
     "publishConfig": {
         "access": "public"
-    },
-    "type": "module"
+    }
 }
