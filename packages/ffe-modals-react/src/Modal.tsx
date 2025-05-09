@@ -19,6 +19,7 @@ export type ModalHandle = {
     readonly open: () => void;
     readonly close: () => void;
     readonly isOpen: boolean;
+    readonly dialogRef: React.RefObject<HTMLDialogElement>;
 };
 
 export const Modal = React.forwardRef<ModalHandle, ModalProps>(
@@ -61,6 +62,8 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
             get isOpen() {
                 return isOpen;
             },
+            // Expose dialogRef directly
+            dialogRef,
         }));
 
         useEffect(() => {
