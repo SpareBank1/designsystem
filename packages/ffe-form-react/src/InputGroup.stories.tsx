@@ -3,6 +3,7 @@ import { Input } from './Input';
 import { InputGroup } from './InputGroup';
 import type { StoryObj, Meta } from '@storybook/react';
 import { ErrorFieldMessage } from './message';
+import { Tooltip } from '../types';
 
 const meta: Meta<typeof InputGroup> = {
     title: 'Komponenter/Form/InputGroup',
@@ -81,6 +82,18 @@ export const FieldMessageComponent: Story = {
                 Jeg er en ErrorFieldMessage-fieldMessage som gir feilmelding
             </ErrorFieldMessage>
         ),
+    },
+    render: args => (
+        <InputGroup {...args}>
+            <Input />
+        </InputGroup>
+    ),
+};
+
+export const WithTooltip: Story = {
+    args: {
+        ...Standard.args,
+        tooltip: 'Jeg er en tooltip',
     },
     render: args => (
         <InputGroup {...args}>
