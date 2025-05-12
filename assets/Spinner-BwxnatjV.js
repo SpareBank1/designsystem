@@ -1,8 +1,0 @@
-import{j as e,M as o,C as a,a as d}from"./index-CaO-amtf.js";import{useMDXComponents as i}from"./index-DmqVK_gK.js";import{S as m,a as s}from"./Spinner.stories-DZG3rhlX.js";import{I as p}from"./InstallImport-4FXVVgZ7.js";import"./iframe-D_Juf1mT.js";import"./index-DQDNmYQF.js";import"./index-C8KIgodY.js";import"./index-DrriUsT5.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./index-QCImZZ3W.js";import"./Paragraph-DEYlXMQQ.js";import"./Heading-afd3onnD.js";function t(r){const n={code:"code",h1:"h1",h2:"h2",p:"p",...i(),...r.components};return e.jsxs(e.Fragment,{children:[e.jsx(o,{of:m}),`
-`,e.jsx(n.h1,{id:"spinner",children:"Spinner"}),`
-`,e.jsx(n.p,{children:"Det er mye som skjer i bakgrunnen i et system når innholdet lastes inn. Med spinnere kan vi kommunisere tydelig til brukeren at innholdet er i ferd med å vises snart. Det er best practice å benytte seg av spinnere dersom ventetiden varer lengre enn tre sekunder. Dersom siden bruker mer enn 10 sekunder på å laste inn innholdet, vurder å bruke en notifikasjon med forklarende tekst."}),`
-`,e.jsxs(n.p,{children:["Spinneren finnes i liten og stor versjon. Liten størrelse er default og brukes i de fleste tilfeller. Stor størrelse kan aktiveres ved å sende inn ",e.jsx(n.code,{children:'size="large"'}),"."]}),`
-`,e.jsx(p,{packageName:"@sb1/ffe-spinner-react",dependencies:["@sb1/ffe-spinner","@sb1/ffe-core"],stylingDependencies:["@sb1/ffe-spinner/less/spinner"]}),`
-`,e.jsx(n.h2,{id:"forhåndsvisning",children:"Forhåndsvisning"}),`
-`,e.jsx(a,{of:s}),`
-`,e.jsx(d,{of:s})]})}function S(r={}){const{wrapper:n}={...i(),...r.components};return n?e.jsx(n,{...r,children:e.jsx(t,{...r})}):t(r)}export{S as default};
