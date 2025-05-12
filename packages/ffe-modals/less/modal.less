@@ -60,4 +60,16 @@
             clear: both;
         }
     }
+
+    /* Add a more specific selector to target only the close button in modals 
+    /* This ensures the styling works regardless of CSS import order */
+    &[open] &__close {
+        width: auto;
+        display: block;
+
+        @media (width >= 480px) {
+            width: auto;
+            display: block;
+        }
+    }
 }
