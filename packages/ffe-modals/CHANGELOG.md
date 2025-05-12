@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@2.0.22...@sb1/ffe-modals@2.1.0) (2025-05-12)
+
+
+### Bug Fixes
+
+* **ffe-modals-react:** eksponerer isOpen tilstand og forebygger duplikate kall til showModal/close ([805b7c0](https://github.com/SpareBank1/designsystem/commit/805b7c0511d4e5f6c858be6b12ca08bb7661c5a4))
+
+
+### Features
+
+* **ffe-modals-react:** eksponerer dialogRef fra modal komponenten ([fc2da4c](https://github.com/SpareBank1/designsystem/commit/fc2da4ca843abb8a22b653db946aa684c4ad702a))
+
+
+
+
+
 ## [2.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@2.0.21...@sb1/ffe-modals@2.0.22) (2025-05-08)
 
 **Note:** Version bump only for package @sb1/ffe-modals
