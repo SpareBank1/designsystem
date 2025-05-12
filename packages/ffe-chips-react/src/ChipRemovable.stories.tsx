@@ -16,7 +16,7 @@ export const Standard: Story = {
         size: 'sm',
     },
     render: args => (
-        <div className="ffe-button-display-group">
+        <div className="storybook-button-display-group">
             <ChipRemovable {...args}>Chip 1</ChipRemovable>
             <ChipRemovable {...args}>Chip 2</ChipRemovable>
         </div>

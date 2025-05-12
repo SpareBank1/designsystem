@@ -28,9 +28,7 @@ export default meta;
 type Story = StoryObj<typeof CardBase<any>>;
 
 export const Standard: Story = {
-    args: {
-        as: 'div',
-    },
+    args: {},
     render: args => (
         <CardBase {...args}>Dette er basisen for alle kort</CardBase>
     ),

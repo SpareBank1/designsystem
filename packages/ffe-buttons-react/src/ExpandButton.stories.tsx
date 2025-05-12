@@ -20,13 +20,12 @@ type Story = StoryObj<typeof ExpandButton>;
 export const Standard: Story = {
     args: {
         isExpanded: false,
-        as: 'button',
     },
     render: function Render(args) {
         const [isExpanded, setExpanded] = useState(args.isExpanded);
 
         return (
-            <div className="ffe-button-display-group ffe-button-display-group--center">
+            <div className="storybook-button-display-group storybook-button-display-group--center">
                 <ExpandButton
                     {...args}
                     isExpanded={isExpanded}
@@ -42,7 +41,6 @@ export const Standard: Story = {
 export const DifferentSizes: Story = {
     args: {
         isExpanded: false,
-        as: 'button',
     },
     render: function Render(args) {
         const [isExpandedLg, setExpandedLg] = useState(args.isExpanded);
@@ -50,7 +48,7 @@ export const DifferentSizes: Story = {
         const [isExpandedSm, setExpandedSm] = useState(args.isExpanded);
 
         return (
-            <div className="ffe-button-display-group ffe-button-display-group--center">
+            <div className="storybook-button-display-group storybook-button-display-group--center">
                 <div>
                     <ExpandButton
                         {...args}

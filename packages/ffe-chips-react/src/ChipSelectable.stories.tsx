@@ -16,7 +16,7 @@ export const Standard: Story = {
         size: 'sm',
     },
     render: args => (
-        <div className="ffe-button-display-group">
+        <div className="storybook-button-display-group">
             <ChipSelectable {...args}>Chip</ChipSelectable>
             <ChipSelectable {...args} isSelected={true}>
                 Selected Chip

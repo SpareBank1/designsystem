@@ -1,4 +1,4 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
+import { Canvas, Meta, Controls, Source } from '@storybook/blocks';
 import * as PaginationStories from './Pagination.stories.tsx';
 import { InstallImport } from '../../../documentation/components/InstallImport';
 
@@ -29,6 +29,19 @@ For de fleste scenarioer anbefales det å bruke infinite scroll, men paginering 
         '@sb1/ffe-buttons/less/buttons',
         '@sb1/ffe-pagination/less/pagination',
     ]}
+/>
+
+## Kode
+
+<Source
+    code={`
+const paginationControls = usePagination(134, 10);
+
+return (<Pagination
+ariaLabel= {'Paginering'}
+rowsPerPageOptions={[10, 20, 50, 100]}
+paginationControls={paginationControls} />)
+`}
 />
 
 ## Forhåndsvisning

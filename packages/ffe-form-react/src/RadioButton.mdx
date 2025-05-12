@@ -1,4 +1,4 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
 import * as RadioButtonStories from './RadioButton.stories.tsx';
 
 <Meta of={RadioButtonStories} />
@@ -7,6 +7,30 @@ import * as RadioButtonStories from './RadioButton.stories.tsx';
 
 Brukes når kunden kan velge ett av få valg. Hvis valgene er korte og konsise, kan man ha dem ved siden av hverandre.
 Har valgene litt mer tekst, så bør valgene komme under hverandre.
+
+## Kode
+
+<Source
+    code={`
+<RadioButtonInputGroup
+    label="Velg kundetype"
+    name="radio-button-demo"
+    onChange={e => setSelected(e.target.value)}
+    selectedValue={selected}
+>
+    {inputProps => (
+        <>
+            <RadioButton value="bankkunde" {...inputProps}>
+                Bankkunde
+            </RadioButton>
+            <RadioButton value="bedriftskunde" {...inputProps}>
+                Bedriftskunde
+            </RadioButton>
+        </>
+    )}
+</RadioButtonInputGroup>
+`}
+/>
 
 ## Forhåndsvisning
 

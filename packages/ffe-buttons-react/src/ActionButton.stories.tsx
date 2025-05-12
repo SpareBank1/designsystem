@@ -41,28 +41,26 @@ type Story = StoryObj<typeof ActionButton<any>>;
 
 export const Standard: Story = {
     args: {
-        as: 'button',
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
     render: args => {
         return (
-            <div className="ffe-button-display-group">
-                <ActionButton {...args}>Actionknapp</ActionButton>
-            </div>
+            <ActionButton {...args} onClick={() => {}}>
+                Actionknapp
+            </ActionButton>
         );
     },
 };
 
 export const DifferentSizes: Story = {
     args: {
-        as: 'button',
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
     },
     render: args => {
         return (
-            <div className="ffe-button-display-group">
+            <div className="storybook-button-display-group">
                 <ActionButton {...args} size="lg">
                     Stor Actionknapp
                 </ActionButton>
@@ -77,13 +75,12 @@ export const DifferentSizes: Story = {
 
 export const IconOnly: Story = {
     args: {
-        as: 'button',
         ariaLoadingMessage: 'Vennligst vent...',
         isLoading: false,
         iconOnly: true,
     },
     render: args => (
-        <div className="ffe-button-display-group">
+        <div className="storybook-button-display-group">
             <ActionButton
                 {...args}
                 size="lg"
