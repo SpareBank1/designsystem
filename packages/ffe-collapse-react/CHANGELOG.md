@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@5.1.29...@sb1/ffe-collapse-react@5.1.30) (2025-05-12)
+
+**Note:** Version bump only for package @sb1/ffe-collapse-react
+
+
+
+
+
 ## [5.1.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@5.1.28...@sb1/ffe-collapse-react@5.1.29) (2025-05-12)
 
 **Note:** Version bump only for package @sb1/ffe-collapse-react
