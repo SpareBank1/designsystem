@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tags",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "description": "En tag er en liten, fleksibel komponent som brukes til å kategorisere, merke eller gi ekstra kontekst til innhold",
     "keywords": [
         "ffe",
@@ -25,7 +25,7 @@
         "build": "lessc less/tag.less css/tag.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^32.0.3"
+        "@sb1/ffe-core": "^32.0.4"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.0"

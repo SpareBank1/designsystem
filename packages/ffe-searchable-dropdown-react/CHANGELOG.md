@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.2.6...@sb1/ffe-searchable-dropdown-react@23.2.7) (2025-05-13)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Update custom scroll dependency to support React 19 ([b958591](https://github.com/SpareBank1/designsystem/commit/b9585913ef8a0529b17dd9ec92a04bdaa6d9253c))
+
+
+
+
+
 ## [23.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.2.5...@sb1/ffe-searchable-dropdown-react@23.2.6) (2025-05-12)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

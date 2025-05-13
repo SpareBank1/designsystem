@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.56](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@12.0.55...@sb1/ffe-context-message-react@12.0.56) (2025-05-13)
+
+**Note:** Version bump only for package @sb1/ffe-context-message-react
+
+
+
+
+
 ## [12.0.55](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@12.0.54...@sb1/ffe-context-message-react@12.0.55) (2025-05-12)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
