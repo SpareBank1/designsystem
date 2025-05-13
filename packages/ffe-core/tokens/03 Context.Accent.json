@@ -72,7 +72,7 @@
             "secondary": {
                 "default": {
                     "$type": "color",
-                    "$value": "#005aa4",
+                    "$value": "{speciality.background.surface.accent.accent}",
                     "$description": "",
                     "$extensions": {
                         "com.figma": {
