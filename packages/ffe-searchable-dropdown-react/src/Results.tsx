@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scrollbars } from 'react-custom-scrollbars-2';
+import { Scrollbars } from 'react-custom-scrollbars-4';
 import { Option } from './Option';
 import { NoMatch } from './NoMatch';
 import { Locale } from './types';
