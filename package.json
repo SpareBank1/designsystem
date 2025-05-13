@@ -33,7 +33,7 @@
         "storybook:build": "storybook build",
         "storybook": "node count-stories.js && echo \"💡[INFO] If Storybook fails, try building the design system first with: npm run build\" && storybook dev -p 6006",
         "build-storybook": "run-s build storybook:build",
-        "sync-tokens-to-figma": "tsx packages/ffe-core/scripts/figma-api/sync_tokens_to_figma.ts",
+        "dont-use-sync-tokens-to-figma": "tsx packages/ffe-core/scripts/figma-api/sync_tokens_to_figma.ts",
         "sync-figma-to-tokens": "tsx packages/ffe-core/scripts/figma-api/sync_figma_to_tokens.ts",
         "count": "node count-stories.js"
     },
