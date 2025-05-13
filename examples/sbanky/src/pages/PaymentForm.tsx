@@ -1,12 +1,11 @@
 import React, { useState, useId } from 'react';
 import { GridRow, GridCol } from '@sb1/ffe-grid-react';
 import { Heading1, Paragraph } from '@sb1/ffe-core-react';
-import { 
-    Input, 
-    InputGroup, 
-    Label, 
-    ErrorFieldMessage, 
-    TextArea, 
+import {
+    Input,
+    InputGroup,
+    ErrorFieldMessage,
+    TextArea,
     RadioButtonInputGroup,
     RadioButton,
 } from '@sb1/ffe-form-react';
@@ -50,14 +49,14 @@ export const PaymentForm = () => {
     const validateForm = (): boolean => {
         let isValid = true;
         setShowSuccess(false);
-        
+
         if (!fromAccount) {
             setFromAccountError('Du må velge en konto å betale fra');
             isValid = false;
         } else {
             setFromAccountError(undefined);
         }
-        
+
         if (!account) {
             setAccountError('Kontonummer må fylles ut');
             isValid = false;
@@ -137,7 +136,7 @@ export const PaymentForm = () => {
             <form onSubmit={handleSubmit} noValidate>
                  <GridRow>
                     <GridCol sm={12} md={8} lg={6}>
-                        <InputGroup 
+                        <InputGroup
                             label="Fra konto"
                             fieldMessage={submitted && fromAccountError ? <ErrorFieldMessage>{fromAccountError}</ErrorFieldMessage> : undefined}
                         >
@@ -160,29 +159,29 @@ export const PaymentForm = () => {
 
                 <GridRow>
                     <GridCol sm={12} md={8} lg={6}>
-                        <InputGroup 
+                        <InputGroup
                             label="Mottakers kontonummer"
                             fieldMessage={submitted && accountError ? <ErrorFieldMessage>{accountError}</ErrorFieldMessage> : undefined}
                         >
-                            <Input 
-                                type="text" 
-                                value={account} 
+                            <Input
+                                type="text"
+                                value={account}
                                 onChange={e => {
                                     setAccount(e.target.value);
                                     if (submitted) validateForm();
-                                }} 
+                                }}
                                 aria-invalid={!!(submitted && accountError)}
                             />
                         </InputGroup>
                     </GridCol>
                      <GridCol sm={12} md={8} lg={6}>
-                        <InputGroup 
+                        <InputGroup
                             label="Mottakers navn"
                             fieldMessage={submitted && nameError ? <ErrorFieldMessage>{nameError}</ErrorFieldMessage> : undefined}
                         >
-                            <Input 
-                                type="text" 
-                                value={name} 
+                            <Input
+                                type="text"
+                                value={name}
                                 onChange={e => {
                                     setName(e.target.value);
                                     if (submitted) validateForm();
@@ -195,18 +194,18 @@ export const PaymentForm = () => {
 
                 <GridRow>
                     <GridCol sm={12} md={4} lg={3}>
-                         <InputGroup 
+                         <InputGroup
                             label="Beløp"
                             fieldMessage={submitted && amountError ? <ErrorFieldMessage>{amountError}</ErrorFieldMessage> : undefined}
                         >
-                            <Input 
+                            <Input
                                 type="text"
                                 inputMode="decimal"
-                                value={amount} 
+                                value={amount}
                                 onChange={e => {
                                     setAmount(e.target.value);
                                     if (submitted) validateForm();
-                                }} 
+                                }}
                                 onBlur={handleAmountBlur}
                                 aria-invalid={!!(submitted && amountError)}
                             />
@@ -227,9 +226,9 @@ export const PaymentForm = () => {
                 <GridRow>
                     <GridCol sm={12} md={8} lg={6}>
                         <InputGroup label="Melding til mottaker (valgfritt)">
-                            <TextArea 
-                                value={message} 
-                                onChange={e => setMessage(e.target.value)} 
+                            <TextArea
+                                value={message}
+                                onChange={e => setMessage(e.target.value)}
                             />
                         </InputGroup>
                     </GridCol>

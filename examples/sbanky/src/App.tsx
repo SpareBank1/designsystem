@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
-import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { Grid, GridCol, GridRow } from '@sb1/ffe-grid-react';
 import { Heading1, Heading4, Paragraph } from '@sb1/ffe-core-react';
 import { Link } from 'react-router-dom';
-import { 
-    Home, 
-    CreditCard, 
-    PiggyBank, 
-    LineChart, 
-    ArrowLeftRight, 
-    Settings 
+import {
+    Home,
+    CreditCard,
+    PiggyBank,
+    LineChart,
+    ArrowLeftRight,
+    Settings
 } from 'lucide-react';
 
-import { AccountOverview } from './pages/AccountOverview';
-import { InvestmentDashboard } from './pages/InvestmentDashboard';
-import { PaymentForm } from './pages/PaymentForm';
 import { SidebarMenu } from './components/sidebar-menu/SidebarMenu';
 
 const menuItems = [
@@ -54,11 +51,11 @@ function App() {
             {isSidebarOpen && (
                 <GridCol sm={12} className="md:hidden fixed inset-0 z-50">
                     <div className="relative h-full">
-                        <SidebarMenu 
-                            menuItems={menuItems} 
-                            isOpen={isSidebarOpen} 
-                            onClose={() => setIsSidebarOpen(false)} 
-                            onMenuItemClick={() => setIsSidebarOpen(false)} 
+                        <SidebarMenu
+                            menuItems={menuItems}
+                            isOpen={isSidebarOpen}
+                            onClose={() => setIsSidebarOpen(false)}
+                            onMenuItemClick={() => setIsSidebarOpen(false)}
                         />
                     </div>
                 </GridCol>
@@ -66,7 +63,7 @@ function App() {
 
             {/* Mobile Header */}
             <header className="md:hidden fixed top-0 left-0 right-0 bg-white p-4 border-b z-40 flex justify-between items-center">
-                <button 
+                <button
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                     className="p-2"
                     aria-label="Åpne meny"

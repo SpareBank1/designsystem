@@ -1,4 +1,4 @@
-import React, { useState, useRef, useId } from 'react';
+import { useState, useRef, useId } from 'react';
 import { clsx } from 'clsx';
 import { GridRow, GridCol } from '@sb1/ffe-grid-react';
 import { Heading1, Heading2, Paragraph } from '@sb1/ffe-core-react';
@@ -32,7 +32,7 @@ const transactions: Transaction[] = [
 ];
 
 export const AccountOverview = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [_, setIsModalOpen] = useState(false);
     const [selectedTransaction, setSelectedTransaction] = useState<Transaction | null>(null);
     const modalRef = useRef<ModalHandle>(null);
     const modalTitleId = useId();
@@ -65,12 +65,12 @@ export const AccountOverview = () => {
                 </GridCol>
                 <GridCol sm={12} md={4}>
                     <IconCard icon={<ArrowUpRight size={24} />} title="Utgående i dag">
-                        <Heading2 className="text-ffe-red-700 mt-0">344,50 kr</Heading2>
+                        <Heading2 className="mt-0">344,50 kr</Heading2>
                     </IconCard>
                 </GridCol>
                 <GridCol sm={12} md={4}>
                     <IconCard icon={<ArrowDownLeft size={24} />} title="Innkommende i dag">
-                        <Heading2 className="text-ffe-green-700 mt-0">32 000,00 kr</Heading2>
+                        <Heading2 className="mt-0">32 000,00 kr</Heading2>
                     </IconCard>
                 </GridCol>
             </GridRow>
@@ -92,8 +92,8 @@ export const AccountOverview = () => {
                             </TableHead>
                             <TableBody>
                                 {transactions.map((tx, i) => (
-                                    <TableRow 
-                                        key={i} 
+                                    <TableRow
+                                        key={i}
                                         onClick={() => handleTransactionClick(tx)}
                                         className="cursor-pointer hover:bg-ffe-blue-azure-light"
                                     >

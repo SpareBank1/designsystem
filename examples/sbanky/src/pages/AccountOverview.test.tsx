@@ -1,6 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen, waitFor, within, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, screen, within } from '@testing-library/react';
 import { AccountOverview } from './AccountOverview';
 import { toHaveNoViolations } from 'jest-axe';
 
@@ -80,4 +79,4 @@ describe('AccountOverview', () => {
     render(<AccountOverview />);
     expect(screen.getByRole('button', { name: 'Se alle transaksjoner' })).toBeInTheDocument();
   });
-}); 
+});
