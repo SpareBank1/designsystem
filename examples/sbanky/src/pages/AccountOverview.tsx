@@ -52,7 +52,7 @@ export const AccountOverview = () => {
         <>
             <GridRow>
                 <GridCol sm={12}>
-                    <Heading1>Brukskonto</Heading1>
+                    <Heading2>Brukskonto</Heading2>
                     <Paragraph>Kontonummer: 1234 56 78910</Paragraph>
                 </GridCol>
             </GridRow>
@@ -60,17 +60,17 @@ export const AccountOverview = () => {
             <GridRow>
                 <GridCol sm={12} md={4}>
                     <IconCard icon={<Wallet size={24} />} title="Disponibel saldo">
-                        <Heading2 className="mt-0">45 678,90 kr</Heading2>
+                        <Heading3 className="mt-0">45 678,90 kr</Heading3>
                     </IconCard>
                 </GridCol>
                 <GridCol sm={12} md={4}>
                     <IconCard icon={<ArrowUpRight size={24} />} title="Utgående i dag">
-                        <Heading2 className="mt-0">344,50 kr</Heading2>
+                        <Heading3 className="mt-0">344,50 kr</Heading3>
                     </IconCard>
                 </GridCol>
                 <GridCol sm={12} md={4}>
                     <IconCard icon={<ArrowDownLeft size={24} />} title="Innkommende i dag">
-                        <Heading2 className="mt-0">32 000,00 kr</Heading2>
+                        <Heading3 className="mt-0">32 000,00 kr</Heading3>
                     </IconCard>
                 </GridCol>
             </GridRow>
