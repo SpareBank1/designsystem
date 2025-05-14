@@ -69,7 +69,7 @@ describe('<Datepicker />', () => {
             renderDatePicker({ onChange });
             const [dayInput] = screen.getAllByRole('spinbutton');
             await userEvent.type(dayInput, '{arrowup}');
-            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(onChange).toHaveBeenCalledWith('');
         });
 
         it('reponds to arrow left and right', async () => {
@@ -106,7 +106,7 @@ describe('<Datepicker />', () => {
                 renderDatePicker({ onChange });
                 const [dayInput] = screen.getAllByRole('spinbutton');
                 await user.type(dayInput, '4');
-                expect(onChange).toHaveBeenCalledTimes(1);
+                expect(onChange).toHaveBeenCalledWith('');
             });
         });
 

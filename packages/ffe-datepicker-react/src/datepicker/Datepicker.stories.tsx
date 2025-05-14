@@ -26,7 +26,9 @@ export const Standard: Story = {
             <InputGroup label="Dato" labelId={Standard?.args?.labelId}>
                 <Datepicker
                     value={value ?? date}
-                    onChange={setDate}
+                    onChange={date => {
+                        setDate(date);
+                    }}
                     {...args}
                 />
             </InputGroup>
