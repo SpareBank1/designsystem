@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-cards",
-    "version": "23.1.4",
+    "version": "23.1.5",
     "description": "Kort for bruk i oversikter",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -20,10 +20,10 @@
         "build": "lessc less/cards.less css/cards.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^32.0.4"
+        "@sb1/ffe-core": "^32.0.5"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.10.0"
+        "@sb1/ffe-buildtool": "^0.10.1"
     },
     "publishConfig": {
         "access": "public"

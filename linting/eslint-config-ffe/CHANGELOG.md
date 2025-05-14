@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe@8.1.7...@sb1/eslint-config-ffe@9.0.0) (2025-05-14)
+
+
+### Features
+
+* **eslint-config-ffe:** oppgrader til eslint 9 med flat konfigurasjonssystem ([8f63b32](https://github.com/SpareBank1/designsystem/commit/8f63b3232290f2bf755db64ab7ab3deec78bdc0f))
+
+
+### BREAKING CHANGES
+
+* **eslint-config-ffe:** Oppgraderer til ESLint 9 som krever Node.js 18+.
+
+
+
+
+
 ## [8.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe@8.1.6...@sb1/eslint-config-ffe@8.1.7) (2025-04-28)
 
 
