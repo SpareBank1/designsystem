@@ -22,8 +22,7 @@
     },
     "scripts": {
         "build": "ffe-buildtool tsc",
-        "lint": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\"",
-        "lint:fix": "eslint --config ./eslint.config.js \"src/**/*.{ts,tsx}\" --fix",
+        "lint": "oxlint \"src/**/*.{ts,tsx}\"",
         "test": "jest",
         "test:watch": "jest --watch"
     },

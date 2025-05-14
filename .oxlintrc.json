@@ -1,0 +1,36 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["react", "unicorn", "oxc", "typescript", "import", "jsx-a11y", "promise"],
+    "categories": {
+        "correctness": "deny"
+    },
+    "env": { "browser": true },
+    "settings": {},
+    "rules": {
+        "@typescript-eslint/consistent-type-imports": [
+            "off",
+            { "disallowTypeAnnotations": false }
+        ],
+        "eqeqeq": "error",
+        "import/no-cycle": "error",
+        "import/no-duplicates": ["error", { "prefer-inline": true }],
+
+        "react/jsx-boolean-value": ["error", "always"],
+        "react/react-in-jsx-scope": "off",
+        "react/rules-of-hooks": "error",
+        "react/require-render-return": "error",
+        "react/jsx-key": "error",
+        "react/jsx-no-duplicate-props": "error",
+        "react/jsx-no-undef": "error",
+        "react/no-danger": "error",
+        "react/no-direct-mutation-state": "error",
+        "react/no-is-mounted": "error",
+        "react/no-unknown-property": "error",
+        "react/self-closing-comp": ["error"],
+        "react-hooks/exhaustive-deps": ["warn"],
+
+        "promise/no-callback-in-promise": "off",
+
+        "jsx-a11y/prefer-tag-over-role": "off"
+    }
+} 

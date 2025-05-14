@@ -8,8 +8,7 @@
     "scripts": {
         "build": "ffe-buildtool tsc && cp src/symbolNames.ts types/symbolNames.ts",
         "build:es": "ffe-buildtool tsc --es",
-        "lint": "eslint \"src/**/*.{ts,tsx}\"",
-        "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+        "lint": "echo \"Linting handled at root level with oxlint\"",
         "test": "ffe-buildtool jest",
         "test:watch": "ffe-buildtool jest --watch"
     },
