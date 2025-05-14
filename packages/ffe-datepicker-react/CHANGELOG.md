@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.3.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.3.8...@sb1/ffe-datepicker-react@10.3.9) (2025-05-14)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** oppdaterer testhelper iht endret markup-nivå ([90a829a](https://github.com/SpareBank1/designsystem/commit/90a829a9ea17bc28f686dcb1b87bfa6234310842))
+
+
+
+
+
 ## [10.3.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.3.7...@sb1/ffe-datepicker-react@10.3.8) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

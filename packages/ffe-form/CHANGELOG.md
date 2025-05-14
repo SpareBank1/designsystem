@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.7...@sb1/ffe-form@32.1.8) (2025-05-14)
+
+
+### Bug Fixes
+
+* **ffe-form:** endrer størrelse og alignment i tooltip ([f1ed5d2](https://github.com/SpareBank1/designsystem/commit/f1ed5d2f3a007a545363de6f6c8fe0b7674b8b2c))
+
+
+
+
+
 ## [32.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.6...@sb1/ffe-form@32.1.7) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-form

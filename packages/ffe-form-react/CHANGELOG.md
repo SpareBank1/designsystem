@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.3.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.3.8...@sb1/ffe-form-react@23.3.9) (2025-05-14)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** endrer størrelse og alignment i tooltip ([0c9f597](https://github.com/SpareBank1/designsystem/commit/0c9f597da28efdeaaf9d8af3d4742d0dbbd25f49))
+
+
+
+
+
 ## [23.3.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.3.7...@sb1/ffe-form-react@23.3.8) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
