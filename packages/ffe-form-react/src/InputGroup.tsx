@@ -155,25 +155,27 @@ export const InputGroup: React.FC<InputGroupProps> = ({
             )}
             {...rest}
         >
-            {typeof label === 'string' ? (
-                <Label htmlFor={id} id={labelId}>
-                    {label}
-                </Label>
-            ) : (
-                React.isValidElement(label) &&
-                React.cloneElement(label, {
-                    htmlFor: id,
-                    id: labelId,
-                })
-            )}
+            <div className="ffe-input-group__header">
+                {typeof label === 'string' ? (
+                    <Label htmlFor={id} id={labelId}>
+                        {label}
+                    </Label>
+                ) : (
+                    React.isValidElement(label) &&
+                    React.cloneElement(label, {
+                        htmlFor: id,
+                        id: labelId,
+                    })
+                )}
 
-            {typeof tooltip === 'string' && (
-                <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
-            )}
+                {typeof tooltip === 'string' && (
+                    <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
+                )}
 
-            {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
+                {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
 
-            {React.isValidElement(tooltip) && tooltip}
+                {React.isValidElement(tooltip) && tooltip}
+            </div>
 
             {description && (
                 <div

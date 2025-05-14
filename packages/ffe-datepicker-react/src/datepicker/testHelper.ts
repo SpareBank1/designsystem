@@ -75,7 +75,11 @@ export async function getDatepickerByLabelText(
     const { screen } = await import('@testing-library/react');
     const elements = screen
         .getAllByText(label)
-        .map(element => element.parentElement?.querySelector('.ffe-datepicker'))
+        .map(element =>
+            element.parentElement?.parentElement?.querySelector(
+                '.ffe-datepicker',
+            ),
+        )
         .filter(
             element => element !== null && element !== undefined,
         ) as HTMLElement[];
