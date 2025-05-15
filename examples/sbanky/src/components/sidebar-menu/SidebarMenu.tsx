@@ -1,7 +1,10 @@
 import React from 'react';
-import { Heading4 } from '@sb1/ffe-core-react';
+import { Heading3, StrongText } from '@sb1/ffe-core-react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { List } from '../list';
+// Fjerner listekomponent-import midlertidig pga. feil
+// import { UnorderedList, ListItem } from '@sb1/ffe-lists-react';
 
 interface MenuItem {
     id: string;
@@ -28,10 +31,10 @@ export const SidebarMenu: React.FC<SidebarMenuProps> = ({
     return (
         <>
             {/* Mobile menu button */}
-            <div className="fixed top-0 left-0 p-4 md:hidden z-20">
+            <div className="fixed top-0 left-0 md:hidden z-20">
                 <button
                     onClick={onClose}
-                    className="p-2 rounded-lg hover:bg-gray-100"
+                    className="p-2 rounded-lg hover:bg-surface-primary-default-hover"
                 >
                     <Menu size={24} />
                 </button>
@@ -49,37 +52,58 @@ export const SidebarMenu: React.FC<SidebarMenuProps> = ({
             <div
                 className={`fixed inset-y-0 left-0 transform ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
-                } md:relative md:translate-x-0 z-30 transition-transform duration-300 ease-in-out`}
+                } md:relative md:translate-x-0 z-30 transition-transform duration-300 ease-in-out bg-ffe-frost-30`}
             >
-                <div className="h-full w-64 bg-white border-r border-gray-200 shadow-lg md:shadow-none">
-                    <div className="flex items-center justify-between p-4 border-b border-gray-200 md:hidden">
-                        <Heading4>Meny</Heading4>
+                <div className="h-full w-64 border-r ffe-border-grey-light shadow-lg md:shadow-none">
+                    {/* Tittel for desktop sidebar */}
+                    <div className="border-b ffe-border-grey-light hidden md:block">
+                        <Heading3>Sbanky Meny</Heading3>
+                    </div>
+                    {/* Tittel og lukkeknapp for mobil sidebar */}
+                    <div className="flex items-center justify-between border-b ffe-border-grey-light md:hidden">
+                        <Heading3>Meny</Heading3>
                         <button
                             onClick={onClose}
-                            className="p-2 rounded-lg hover:bg-gray-100"
+                            className="p-2 rounded-lg hover:bg-surface-primary-default-hover"
                         >
                             <X size={24} />
                         </button>
                     </div>
 
-                    <div className="p-4">
+                    <div className="">
                         <nav>
-                            <ul className="list-none space-y-2">
-                                {menuItems.map((item) => (
-                                    <li key={item.id}>
-                                        <Link
-                                            to={item.path}
-                                            onClick={() => onMenuItemClick?.(item.path)}
-                                            className={`w-full flex items-center gap-2 px-4 py-2 rounded no-underline cursor-pointer hover:bg-gray-100 ${
-                                                location.pathname === item.path ? 'bg-gray-100' : ''
-                                            }`}
-                                        >
-                                            {item.icon}
-                                            <span>{item.label}</span>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
+                            {/* Bruker den nye List-komponenten */}
+                            <List itemSpacing="1">
+                                {menuItems.map((item) => {
+                                    const isActive = location.pathname === item.path;
+                                    return (
+                                        <List.Item key={item.id}>
+                                            <Link
+                                                to={item.path}
+                                                onClick={() => {
+                                                    onMenuItemClick?.(item.path);
+                                                    if (isOpen && onClose) {
+                                                        onClose();
+                                                    }
+                                                }}
+                                                className={`w-full flex items-center gap-x-2 px-3 py-2 rounded no-underline cursor-pointer 
+                                                            text-foreground-interactive-link hover:bg-surface-primary-default-hover
+                                                            ${isActive 
+                                                                ? 'bg-ffe-vann' // Beholder bg-ffe-vann for aktiv tilstand
+                                                                : ''
+                                                            }`}
+                                            >
+                                                {item.icon}
+                                                {isActive ? (
+                                                    <StrongText>{item.label}</StrongText>
+                                                ) : (
+                                                    <span className="text-sm">{item.label}</span>
+                                                )}
+                                            </Link>
+                                        </List.Item>
+                                    );
+                                })}
+                            </List>
                         </nav>
                     </div>
                 </div>
