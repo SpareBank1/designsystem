@@ -1,6 +1,6 @@
-import {Canvas, Controls, Meta} from '@storybook/blocks';
+import { Canvas, Controls, Meta } from '@storybook/blocks';
 import * as TagStories from './Tag.stories';
-import {InstallImport} from '../../../documentation/components/InstallImport';
+import { InstallImport } from '../../../documentation/components/InstallImport';
 
 <Meta of={TagStories} />
 
@@ -12,23 +12,21 @@ to varianter; `emphasis` og `subtle`.
 
 <InstallImport
     packageName="@sb1/ffe-tags-react"
-    dependencies={[
-        '@sb1/ffe-tags',
-        '@sb1/ffe-core',
-    ]}
-    stylingDependencies={[
-        '@sb1/ffe-tags/less/tag',
-    ]}
+    dependencies={['@sb1/ffe-tags', '@sb1/ffe-core']}
 />
 
 ## Forhåndsvisning
+
 ### Emphasis
+
 <Canvas of={TagStories.Emphasis} />
 
 ### Subtle
+
 <Canvas of={TagStories.Subtle} />
 
 ## Med Ikon
+
 En Tag kan brukes med eller uten ikon. Ikonet sendes inn som en child til Tag komponenten ved bruk av `@sb1/ffe-icons-react` pakken.
 Du må installere pakken og importere stylingen og ikonet separat.
 
