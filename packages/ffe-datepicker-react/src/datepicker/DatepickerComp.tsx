@@ -278,7 +278,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
             return;
         }
         _onChange('');
-    }, [day, month, year, _onChange]);
+    }, [lastValidDate]);
 
     return (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions
