@@ -41,6 +41,8 @@ export interface DatepickerCompProps {
     fieldMessage?: string | null;
     /** Id of the label describing the datepicker. Required for UU-compatibility */
     labelId: string;
+    /** Whether to show dropdown selectors for month and year in the calendar */
+    dropdownCaption?: boolean;
 }
 
 export const DatepickerComp: React.FC<DatepickerCompProps> = ({
@@ -57,6 +59,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     fullWidth,
     fieldMessage,
     labelId,
+    dropdownCaption,
 }) => {
     const {
         day,
@@ -417,6 +420,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     onDatePicked={datePickedHandler}
                     selectedDate={calendarActiveDate}
                     focusOnMount={true}
+                    dropdownCaption={dropdownCaption}
                 />
             )}
 

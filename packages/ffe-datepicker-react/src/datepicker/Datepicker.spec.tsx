@@ -50,6 +50,37 @@ describe('<Datepicker />', () => {
             expect(screen.getByRole('group')).toBeInTheDocument();
         });
 
+        describe('with dropdown caption', () => {
+            it('shows dropdown selects for month and year when calendar is opened', async () => {
+                const user = userEvent.setup();
+                renderDatePicker({
+                    dropdownCaption: true,
+                });
+                
+                // Click the calendar button to open the calendar
+                const calendarButton = screen.getByTestId('datepicker-open');
+                await user.click(calendarButton);
+                
+                // Verify that the dropdown selects are rendered
+                // Look for select elements inside the calendar
+                const selects = screen.getAllByRole('combobox');
+                
+                // Expect to have at least 2 selects (month and year)
+                expect(selects.length).toBeGreaterThanOrEqual(2);
+                
+                // Check that the selects have the correct class names
+                const monthSelect = selects.find(select => 
+                    select.classList.contains('ffe-calendar__month-select')
+                );
+                const yearSelect = selects.find(select => 
+                    select.classList.contains('ffe-calendar__year-select')
+                );
+                
+                expect(monthSelect).toBeInTheDocument();
+                expect(yearSelect).toBeInTheDocument();
+            });
+        });
+
         it('does not contain a Calendar component', () => {
             renderDatePicker();
             expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
