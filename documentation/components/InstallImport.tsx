@@ -92,12 +92,19 @@ export const InstallImport: React.FC<Props> = ({
     const [activeStyling, setActiveStyling] = useState('less');
     const installCodeDirect = `npm install ${packageName}`;
     const installCodeAll = `npm install ${packageName} ${dependencies ? dependencies?.join(' ') : ''}`;
+    dependencies?.push(packageName);
     const innstallStyling = dependencies
         ? dependencies
               //@ts-expect-error kan vurdere å type denne opp riktig på sikt, men ikke verdt det nå
               .map(dep => styleDependencies[dep])
               .filter(Boolean)
-              .sort((a, b) => a.less.localeCompare(b.less))
+              .sort((a, b) =>
+                  a.less === '@sb1/ffe-core/less/ffe'
+                      ? -1
+                      : b.less === '@sb1/ffe-core/less/ffe'
+                        ? 1
+                        : a.less.localeCompare(b.less),
+              )
               .map(dep =>
                   activeStyling === 'less'
                       ? `@import '${dep.less}';`

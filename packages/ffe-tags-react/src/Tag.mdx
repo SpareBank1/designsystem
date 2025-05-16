@@ -1,6 +1,7 @@
 import { Canvas, Controls, Meta } from '@storybook/blocks';
 import * as TagStories from './Tag.stories';
 import { InstallImport } from '../../../documentation/components/InstallImport';
+import dependencies from '../ffe-dependencies';
 
 <Meta of={TagStories} />
 
@@ -10,10 +11,7 @@ En Tag er en liten, fleksibel komponent som brukes til å kategorisere, merke el
 Den finnes i 6 fargevarianter; `neutral`, `info`, `success`, `warning`, `critical` og `tip`. Hver farge kommer i
 to varianter; `emphasis` og `subtle`.
 
-<InstallImport
-    packageName="@sb1/ffe-tags-react"
-    dependencies={['@sb1/ffe-tags', '@sb1/ffe-core']}
-/>
+<InstallImport packageName="@sb1/ffe-tags-react" dependencies={dependencies} />
 
 ## Forhåndsvisning
 

@@ -1,6 +1,7 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as BadgeStories from './Badge.stories';
 import { InstallImport } from '../../../documentation/components/InstallImport';
+import dependencies from '../ffe-dependencies';
 
 <Meta of={BadgeStories} />
 
@@ -9,10 +10,7 @@ import { InstallImport } from '../../../documentation/components/InstallImport';
 En Badge er en liten visuell indikator som viser antall uleste varsler, meldinger eller oppgaver.
 Den plasseres vanligvis over et ikon, ved brukerens navn eller i en meny for å tiltrekke brukerens oppmerksomhet.
 
-<InstallImport
-    packageName="@sb1/ffe-badge-react"
-    dependencies={['@sb1/ffe-badge', '@sb1/ffe-core']}
-/>
+<InstallImport packageName="@sb1/ffe-badge-react" dependencies={dependencies} />
 
 ## Forhåndsvisning
 
