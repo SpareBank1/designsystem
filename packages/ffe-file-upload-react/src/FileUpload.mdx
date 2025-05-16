@@ -1,6 +1,7 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as FileUploadStories from './FileUpload.stories.tsx';
 import { InstallImport } from '../../../documentation/components/InstallImport';
+import dependencies from '../ffe-dependencies';
 
 <Meta of={FileUploadStories} />
 
@@ -10,21 +11,7 @@ En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokument
 
 <InstallImport
     packageName="@sb1/ffe-file-upload-react"
-    dependencies={[
-        '@sb1/ffe-buttons-react',
-        '@sb1/ffe-file-upload',
-        '@sb1/ffe-form',
-        '@sb1/ffe-icons-react',
-        '@sb1/ffe-buttons',
-        '@sb1/ffe-core',
-        '@sb1/ffe-icons',
-    ]}
-    stylingDependencies={[
-        '@sb1/ffe-file-upload/less/file-upload',
-        '@sb1/ffe-icons/less/ffe-icons',
-        '@sb1/ffe-form/less/form',
-        '@sb1/ffe-buttons/less/buttons',
-    ]}
+    dependencies={dependencies}
 />
 
 ## Hvordan bruke komponenten

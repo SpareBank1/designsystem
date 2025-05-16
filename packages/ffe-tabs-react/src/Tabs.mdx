@@ -2,6 +2,7 @@ import { InstallImport } from '../../../documentation/components/InstallImport';
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as TabGroupStories from './TabGroup.stories.tsx';
 import { CheckList, CheckListItem } from '@sb1/ffe-lists-react';
+import dependencies from '../ffe-dependencies';
 
 # Tabs
 
@@ -30,11 +31,7 @@ Faner kan være nyttige for å dele opp innholdet på siden i logiske «blokker�
     </CheckListItem>
 </CheckList>
 
-<InstallImport
-    packageName="@sb1/ffe-tabs-react"
-    dependencies={['@sb1/ffe-tabs', '@sb1/ffe-core']}
-    stylingDependencies={['@sb1/ffe-tabs/less/tabs']}
-/>
+<InstallImport packageName="@sb1/ffe-tabs-react" dependencies={dependencies} />
 
 ## Tab og TabGroup
 
