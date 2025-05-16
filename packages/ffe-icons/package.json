@@ -5,7 +5,7 @@
     "license": "MIT",
     "author": "SpareBank 1",
     "bin": {
-        "ffe-icons": "bin/build.cjs"
+        "ffe-icons": "bin/build.js"
     },
     "files": [
         "icons",
@@ -18,7 +18,7 @@
     },
     "scripts": {
         "build": "lessc less/ffe-icons.less css/ffe-icons.css --autoprefix",
-        "build:icons": "node bin/build.cjs",
+        "build:icons": "node bin/build.js",
         "lint": "oxlint bin",
         "test": "npm run lint"
     },
