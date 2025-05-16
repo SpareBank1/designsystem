@@ -14,11 +14,15 @@ export interface CalendarProps {
     calendarClassName?: string;
     escKeyHandler?: React.KeyboardEventHandler<HTMLDivElement>;
     locale: 'nb' | 'nn' | 'en';
-    maxDate?: string | null;
-    minDate?: string | null;
     onDatePicked: (date: string) => void;
     selectedDate?: string | null;
     focusOnMount?: boolean;
+    /** Om måned- og år-dropdown skal vises i kalenderen */
+    dropdownCaption?: boolean;
+    /** Tidligste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown */
+    minDate?: string | null;
+    /** Seneste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown */
+    maxDate?: string | null;
 }
 
 interface State {
@@ -35,8 +39,6 @@ export class Calendar extends Component<CalendarProps, State> {
         this.state = {
             calendar: new SimpleCalendar(
                 getSimpleDateFromString(props?.selectedDate),
-                props.minDate,
-                props.maxDate,
                 props.locale,
             ),
             isFocusingHeader: false,
@@ -48,6 +50,7 @@ export class Calendar extends Component<CalendarProps, State> {
         this.mouseClick = this.mouseClick.bind(this);
         this.nextMonth = this.nextMonth.bind(this);
         this.previousMonth = this.previousMonth.bind(this);
+        this.navigateToMonthYear = this.navigateToMonthYear.bind(this);
 
         this.renderDate = this.renderDate.bind(this);
         this.renderWeek = this.renderWeek.bind(this);
@@ -65,8 +68,6 @@ export class Calendar extends Component<CalendarProps, State> {
                 {
                     calendar: new SimpleCalendar(
                         getSimpleDateFromString(this.props.selectedDate),
-                        this.props.minDate,
-                        this.props.maxDate,
                         this.props.locale,
                     ),
                 },
@@ -256,6 +257,32 @@ export class Calendar extends Component<CalendarProps, State> {
         }
     };
 
+    /**
+     * Navigate to a specific month and year
+     */
+    navigateToMonthYear(month: number, year: number) {
+        const { calendar } = this.state;
+        let currentMonth = calendar.focusedDate.month + 1; // 1-indexed month
+        let currentYear = calendar.focusedYear;
+        
+        // Calculate how many months to move based on current and target date
+        const monthsDiff = (year - currentYear) * 12 + (month - currentMonth);
+        
+        if (monthsDiff < 0) {
+            // Go backward
+            for (let i = 0; i > monthsDiff; i--) {
+                calendar.previousMonth();
+            }
+        } else if (monthsDiff > 0) {
+            // Go forward
+            for (let i = 0; i < monthsDiff; i++) {
+                calendar.nextMonth();
+            }
+        }
+        
+        this.forceUpdate();
+    }
+
     render() {
         const { calendar } = this.state;
 
@@ -282,6 +309,12 @@ export class Calendar extends Component<CalendarProps, State> {
                         year={calendar.focusedYear}
                         prevMonthButtonElement={this.prevMonthButtonElementRef}
                         nextMonthButtonElement={this.nextMonthButtonElementRef}
+                        monthNumber={calendar.focusedDate.month + 1} // Convert to 1-indexed month
+                        locale={this.props.locale}
+                        dropdownCaption={this.props.dropdownCaption}
+                        onMonthYearChange={(month, year) => this.navigateToMonthYear(month, year)}
+                        minDate={this.props.minDate}
+                        maxDate={this.props.maxDate}
                     />
                     <table
                         className="ffe-calendar__grid"
