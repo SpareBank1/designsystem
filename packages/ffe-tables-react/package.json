@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tables-react",
-    "version": "11.0.55",
+    "version": "11.0.56",
     "description": "React implementation of ffe-tables",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,7 +26,7 @@
     },
     "dependencies": {
         "@sb1/ffe-collapse-react": "^5.1.32",
-        "@sb1/ffe-icons-react": "^12.0.2",
+        "@sb1/ffe-icons-react": "^12.0.3",
         "@sb1/ffe-tables": "^18.0.25",
         "classnames": "^2.3.1"
     },
