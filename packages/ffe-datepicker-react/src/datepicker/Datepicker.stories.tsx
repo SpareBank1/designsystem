@@ -28,6 +28,7 @@ export const Standard: Story = {
                     value={value ?? date}
                     onChange={date => {
                         setDate(date);
+                        console.log('Datepicker value:', date);
                     }}
                     {...args}
                 />

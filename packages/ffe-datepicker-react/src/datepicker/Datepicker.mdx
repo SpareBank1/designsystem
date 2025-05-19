@@ -48,8 +48,8 @@ async function getDatepickerByLabelText(
     /** The datepicker element */
     element: Element;
     /** Function to get the value of the datepicker
-     * @returns string in the format 'dd.mm.yyyy' or null if the datepicker is empty */
-    getValue: () => string | null;
+     * @returns string in the format 'dd.mm.yyyy' or <empty string> if the datepicker is empty */
+    getValue: () => string ;
     /**Function to set the value of the datepicker
      * @param value string in the format 'dd.mm.yyyy'
      * @returns void

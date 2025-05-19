@@ -20,14 +20,14 @@ const renderDatePicker = (props?: Partial<DatepickerProps>) =>
     );
 
 describe('<InputGroup><Datepicker /></InputGroup>', () => {
-    it('empty datepicker returns null from testing functions', async () => {
+    it('empty datepicker returns <empty string> from testing functions', async () => {
         renderDatePicker();
 
         const datepicker = await getDatepickerByLabelText('Datovelger');
         expect(
             datepicker.element.classList.contains('ffe-datepicker'),
         ).toBeTruthy();
-        expect(datepicker.getValue()).toBe(null);
+        expect(datepicker.getValue()).toBe('');
     });
 
     it('datepicker returns value from testing functions', async () => {
@@ -53,7 +53,7 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
         const datepicker = await getDatepickerByLabelText('Datovelger');
         await datepicker.setValue('');
 
-        expect(datepicker.getValue()).toBeNull();
+        expect(datepicker.getValue()).toBe('');
     });
 
     it('2 number year date is updated to correct 4 number year', async () => {

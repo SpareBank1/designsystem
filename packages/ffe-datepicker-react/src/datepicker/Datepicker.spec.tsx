@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Datepicker, DatepickerProps } from './Datepicker';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 const defaultProps = {
@@ -69,7 +69,7 @@ describe('<Datepicker />', () => {
             renderDatePicker({ onChange });
             const [dayInput] = screen.getAllByRole('spinbutton');
             await userEvent.type(dayInput, '{arrowup}');
-            expect(onChange).toHaveBeenCalledWith('');
+            () => expect(onChange).toHaveBeenCalledTimes(0);
         });
 
         it('reponds to arrow left and right', async () => {
@@ -106,7 +106,7 @@ describe('<Datepicker />', () => {
                 renderDatePicker({ onChange });
                 const [dayInput] = screen.getAllByRole('spinbutton');
                 await user.type(dayInput, '4');
-                expect(onChange).toHaveBeenCalledWith('');
+                expect(onChange).toHaveBeenCalledTimes(0);
             });
         });
 
@@ -136,6 +136,17 @@ describe('<Datepicker />', () => {
                     expect(date.getAttribute('aria-invalid')).toBe('true');
                     expect(month.getAttribute('aria-invalid')).toBe('true');
                     expect(year.getAttribute('aria-invalid')).toBe('true');
+                });
+
+                describe('when input field is emptied', () => {
+                    const user = userEvent.setup();
+                    it('calls onChange method', async () => {
+                        const onChange = jest.fn();
+                        renderDatePicker({ onChange, value: '01.01.2021' });
+                        const [dayInput] = screen.getAllByRole('spinbutton');
+                        await user.type(dayInput, '00');
+                        await waitFor(() => expect(onChange).toHaveBeenCalledWith(''));
+                    });
                 });
 
                 it('has correct aria-describedby if aria-describedby given as input prop', () => {
