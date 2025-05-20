@@ -49,9 +49,9 @@ export type DatepickerTestHelper = {
     /**
      * Function to get the value of the datepicker
      *
-     * @returns string in the format 'dd.mm.yyyy' or null if the datepicker is empty
+     * @returns string in the format 'dd.mm.yyyy' or empty string if the datepicker is empty
      */
-    getValue: () => string | null;
+    getValue: () => string;
     /**
      * Function to set the value of the datepicker
      *
@@ -84,7 +84,7 @@ export async function getDatepickerByLabelText(
             element => element !== null && element !== undefined,
         ) as HTMLElement[];
 
-    function getValue(element: Element): string | null {
+    function getValue(element: Element): string {
         const [dayElement, monthElement, yearElement] = Array.from(
             element.querySelectorAll('[role="spinbutton"]'),
         );
@@ -99,7 +99,7 @@ export async function getDatepickerByLabelText(
             day !== '' &&
             day !== '0'
             ? `${leftPad(day)}.${leftPad(month)}.${year}`
-            : null;
+            : '';
     }
 
     async function setValue(element: HTMLElement, value: string) {

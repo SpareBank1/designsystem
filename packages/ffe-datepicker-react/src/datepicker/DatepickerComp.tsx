@@ -71,29 +71,31 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
         setLastChangedValue,
     } = useContext(DatepickerContext);
 
+    const formatDate = useCallback(() => {
+        return getPaddedDateString(day, month, year);
+    }, [day, month, year]);
+
     const [displayDatePicker, setDisplayDatePicker] = useState(false);
     const [minDate, setMinDate] = useState(minDateProp);
     const [maxDate, setMaxDate] = useState(maxDateProp);
-    const [lastValidDate, setLastValidDate] = useState('');
+    const [lastValidDate, setLastValidDate] = useState(formatDate());
     const datepickerId = useId();
     const buttonRef = useRef<HTMLButtonElement>(null);
     const dayRef = useRef<HTMLSpanElement>(null);
     const monthRef = useRef<HTMLSpanElement>(null);
     const yearRef = useRef<HTMLSpanElement>(null);
 
-    const formatDate = useCallback(() => {
-        return getPaddedDateString(day, month, year);
-    }, [day, month, year]);
+  
 
     const getFieldMessageId = () => {
         return fieldMessage ? `${datepickerId}-fieldmessage` : undefined;
     };
 
-    const _onChange = useCallback(
+    const _onChange = useCallback(debounce(
         (date: string) => {
             setLastChangedValue(date);
             onChange(date);
-        },
+        },250),
         [onChange, setLastChangedValue],
     );
 
@@ -278,7 +280,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
             return;
         }
         _onChange('');
-    }, [day, month, year, _onChange]);
+    }, [lastValidDate]);
 
     return (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions
