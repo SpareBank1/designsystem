@@ -1,6 +1,7 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as SpinnerStories from './Spinner.stories.tsx';
 import { InstallImport } from '../../../documentation/components/InstallImport';
+import dependencies from '../ffe-dependencies';
 
 <Meta of={SpinnerStories} />
 
@@ -12,8 +13,7 @@ Spinneren finnes i liten og stor versjon. Liten størrelse er default og brukes 
 
 <InstallImport
     packageName="@sb1/ffe-spinner-react"
-    dependencies={['@sb1/ffe-spinner', '@sb1/ffe-core']}
-    stylingDependencies={['@sb1/ffe-spinner/less/spinner']}
+    dependencies={dependencies}
 />
 
 ## Forhåndsvisning

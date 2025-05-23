@@ -37,3 +37,6 @@ coverage
 
 #Figma API Variable files
 .env
+
+scripts/*.json
+**/ffe-dependencies.json
