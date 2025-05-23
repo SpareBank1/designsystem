@@ -24,6 +24,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@babel/standalone": "^7.27.2",
         "@sb1/ffe-accordion": "^12.1.5",
         "@sb1/ffe-collapse-react": "^5.1.33",
         "@sb1/ffe-icons-react": "^12.0.4",
