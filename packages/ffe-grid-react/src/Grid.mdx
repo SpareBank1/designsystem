@@ -1,6 +1,7 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as GridStories from './Grid.stories.tsx';
 import { InstallImport } from '../../../documentation/components/InstallImport';
+import dependencies from '../ffe-dependencies';
 
 <Meta of={GridStories} />
 
@@ -13,11 +14,7 @@ Det kan være mange grids per side, men man kan ikke ha grids inni andre grids. 
 
 Det finnes en rekke modifiers på alle tre komponentene som lar deg manipulere hvor innholdet skal plassere seg i en kolonne. Ta en titt på prop-types for å finne disse.
 
-<InstallImport
-    packageName="@sb1/ffe-grid-react"
-    dependencies={['@sb1/ffe-grid', '@sb1/ffe-core']}
-    stylingDependencies={['@sb1/ffe-grid/less/ffe-grid']}
-/>
+<InstallImport packageName="@sb1/ffe-grid-react" dependencies={dependencies} />
 
 ## Forhåndsvisning
 

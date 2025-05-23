@@ -1,6 +1,7 @@
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as DatepickerStories from './Datepicker.stories.tsx';
 import { InstallImport } from '../../../../documentation/components/InstallImport';
+import dependencies from '../../ffe-dependencies';
 
 <Meta of={DatepickerStories} />
 
@@ -8,20 +9,7 @@ import { InstallImport } from '../../../../documentation/components/InstallImpor
 
 <InstallImport
     packageName="@sb1/ffe-datepicker-react"
-    dependencies={[
-        '@sb1/ffe-datepicker',
-        '@sb1/ffe-form',
-        '@sb1/ffe-icons-react',
-        '@sb1/ffe-core',
-        '@sb1/ffe-buttons',
-        '@sb1/ffe-icons',
-    ]}
-    stylingDependencies={[
-        '@sb1/ffe-icons/less/ffe-icons',
-        '@sb1/ffe-form/less/form',
-        '@sb1/ffe-buttons/less/buttons',
-        '@sb1/ffe-datepicker/less/datepicker',
-    ]}
+    dependencies={dependencies}
 />
 
 ## Forhåndsvisning
