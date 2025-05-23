@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@9.0.6...@sb1/ffe-chart-donut-react@9.0.7) (2025-05-23)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** add missing dependency ([e5de858](https://github.com/SpareBank1/designsystem/commit/e5de8585badc8e25360604bc5d6b8e65eae05039))
+
+
+
+
+
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@9.0.5...@sb1/ffe-chart-donut-react@9.0.6) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
