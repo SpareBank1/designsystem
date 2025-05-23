@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import App from './App';
 import { AccountOverview } from './pages/AccountOverview';
 import { PaymentForm } from './pages/PaymentForm';
@@ -13,21 +13,37 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/',
+        index: true,
+        element: <Navigate to="/oversikt" replace />
+      },
+      {
+        path: '/oversikt',
         element: <AccountOverview />,
       },
       {
-        path: '/accounts',
+        path: '/kontoer',
         element: <AccountOverview />,
       },
       {
-        path: '/payments',
+        path: '/betaling',
         element: <PaymentForm />,
       },
       {
-        path: '/investments',
+        path: '/sparing',
+        element: <div>Spareinnhold</div>,
+      },
+      {
+        path: '/investering',
         element: <InvestmentDashboard />,
       },
+      {
+        path: '/innstillinger',
+        element: <div>Innstillinger</div>,
+      },
+      {
+        path: '*',
+        element: <Navigate to="/oversikt" replace />
+      }
     ],
   },
 ]);
