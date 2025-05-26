@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, within } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Calendar } from './Calendar';
 
@@ -15,6 +15,10 @@ describe('Calendar', () => {
         selectedDate: '15.05.2025',
         focusOnMount: false,
     };
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
 
     it('renders standard calendar with correct header and days', () => {
         render(<Calendar {...defaultProps} />);
@@ -38,44 +42,42 @@ describe('Calendar', () => {
         const selects = screen.getAllByRole('combobox');
         expect(selects.length).toBe(2);
         
-        // One select should be for months
-        const monthSelect = selects.find(select => 
-            select.classList.contains('ffe-calendar__month-select')
+        // Check for SearchableDropdown elements
+        const monthDropdown = selects.find(input => 
+            input.closest('.ffe-calendar__month-select')
         );
-        expect(monthSelect).toBeInTheDocument();
-        
-        // One select should be for years
-        const yearSelect = selects.find(select => 
-            select.classList.contains('ffe-calendar__year-select')
+        const yearDropdown = selects.find(input => 
+            input.closest('.ffe-calendar__year-select')
         );
-        expect(yearSelect).toBeInTheDocument();
         
-        // Verify month options
-        const monthOptions = within(monthSelect!).getAllByRole('option');
-        expect(monthOptions.length).toBe(12); // 12 months
+        expect(monthDropdown).toBeInTheDocument();
+        expect(yearDropdown).toBeInTheDocument();
         
-        // Verify some year options are present (depends on min/max dates)
-        const yearOptions = within(yearSelect!).getAllByRole('option');
-        expect(yearOptions.length).toBeGreaterThanOrEqual(4); // At least 2023-2026
+        // Verify the month dropdown shows current month
+        expect(monthDropdown?.getAttribute('value')).toBe('Mai');
+        
+        // Verify the year dropdown shows current year
+        expect(yearDropdown?.getAttribute('value')).toBe('2025');
     });
     
     it('navigates to a specific month and year when using dropdowns', async () => {
         const user = userEvent.setup();
         render(<Calendar {...defaultProps} dropdownCaption={true} />);
         
-        // Get the month select
-        const monthSelect = screen.getByRole('combobox', { 
-            name: (name) => name.toLowerCase().includes('mai')
-        });
+        // Get the month dropdown by finding input in month-select container
+        const monthDropdown = screen.getAllByRole('combobox').find(input => 
+            input.closest('.ffe-calendar__month-select')
+        );
+        expect(monthDropdown).toBeInTheDocument();
         
-        // Change to December
-        await user.selectOptions(monthSelect, '12');
+        // Click to open the dropdown
+        await user.click(monthDropdown!);
         
-        // Check if December is selected in the dropdown
-        expect(monthSelect).toHaveValue('12');
+        // Wait for and click on December option
+        const decemberOption = await screen.findByText('Desember');
+        await user.click(decemberOption);
         
         // Verify days have updated to December
-        // Wait a bit for the state to update and re-render
         const decemberDays = await screen.findAllByRole('button', { name: /\d+\. desember 2025/ });
         expect(decemberDays.length).toBeGreaterThan(0);
     });
@@ -84,11 +86,18 @@ describe('Calendar', () => {
         const user = userEvent.setup();
         render(<Calendar {...defaultProps} dropdownCaption={true} />);
         
-        // Change to June (month 6)
-        const monthSelect = screen.getByRole('combobox', { 
-            name: (name) => name.toLowerCase().includes('mai')
-        });
-        await user.selectOptions(monthSelect, '6');
+        // Get the month dropdown
+        const monthDropdown = screen.getAllByRole('combobox').find(input => 
+            input.closest('.ffe-calendar__month-select')
+        );
+        expect(monthDropdown).toBeInTheDocument();
+        
+        // Click to open the dropdown
+        await user.click(monthDropdown!);
+        
+        // Wait for and click on June option
+        const juniOption = await screen.findByText('Juni');
+        await user.click(juniOption);
         
         // Wait for the June days to appear
         const juneDays = await screen.findAllByRole('button', { name: /\d+\. juni 2025/ });
@@ -116,15 +125,18 @@ describe('Calendar', () => {
         
         render(<Calendar {...limitedProps} />);
         
-        // Get the month select
-        const selects = screen.getAllByRole('combobox');
-        const monthSelect = selects.find(select => 
-            select.classList.contains('ffe-calendar__month-select')
+        // Get the month dropdown
+        const monthDropdown = screen.getAllByRole('combobox').find(input => 
+            input.closest('.ffe-calendar__month-select')
         );
-        expect(monthSelect).toBeInTheDocument();
+        expect(monthDropdown).toBeInTheDocument();
         
-        // We should be able to select June (month 6)
-        await user.selectOptions(monthSelect!, '6');
+        // Click to open the dropdown
+        await user.click(monthDropdown!);
+        
+        // Wait for and click on June option
+        const juniOption = await screen.findByText('Juni');
+        await user.click(juniOption);
         
         // Verify June days are displayed
         const juneDays = await screen.findAllByRole('button', { name: /\d+\. juni 2025/ });
