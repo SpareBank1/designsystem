@@ -1,4 +1,4 @@
-import { getYearOptions, isMonthInRange } from './dateRangeUtils';
+import { getYearOptions } from './dateRangeUtils';
 
 describe('dateRangeUtils', () => {
     describe('getYearOptions', () => {
@@ -69,35 +69,6 @@ describe('dateRangeUtils', () => {
             
             expect(minYear).toBe(currentYear - 10);
             expect(maxYear).toBe(currentYear + 10);
-        });
-    });
-
-    describe('isMonthInRange', () => {
-        it('should return true when month is within range', () => {
-            const year = 2025;
-            const month = 6; // June
-            const minDate = '01.01.2024';
-            const maxDate = '31.12.2026';
-            
-            expect(isMonthInRange(year, month, minDate, maxDate)).toBe(true);
-        });
-        
-        it('should return false when month is before min date', () => {
-            const year = 2023;
-            const month = 6; // June
-            const minDate = '01.01.2024';
-            const maxDate = '31.12.2026';
-            
-            expect(isMonthInRange(year, month, minDate, maxDate)).toBe(false);
-        });
-        
-        it('should return false when month is after max date', () => {
-            const year = 2027;
-            const month = 1; // January
-            const minDate = '01.01.2024';
-            const maxDate = '31.12.2026';
-            
-            expect(isMonthInRange(year, month, minDate, maxDate)).toBe(false);
         });
     });
 });

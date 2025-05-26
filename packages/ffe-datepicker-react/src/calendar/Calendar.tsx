@@ -14,12 +14,26 @@ export interface CalendarProps {
     calendarClassName?: string;
     escKeyHandler?: React.KeyboardEventHandler<HTMLDivElement>;
     locale: 'nb' | 'nn' | 'en';
+    /** 
+     * Seneste tillatte dato. Format: 'dd.mm.yyyy'
+     * 
+     * Merk: For å holde år-dropdownen håndterbar, begrenses årsintervallet automatisk til
+     * maksimalt 10 år bakover eller fremover fra inneværende år, selv om minDate/maxDate
+     * tillater et bredere intervall.
+     */
     maxDate?: string | null;
+    /** 
+     * Tidligste tillatte dato. Format: 'dd.mm.yyyy'
+     * 
+     * Merk: For å holde år-dropdownen håndterbar, begrenses årsintervallet automatisk til
+     * maksimalt 10 år bakover eller fremover fra inneværende år, selv om minDate/maxDate
+     * tillater et bredere intervall.
+     */
     minDate?: string | null;
     onDatePicked: (date: string) => void;
     selectedDate?: string | null;
     focusOnMount?: boolean;
-    /** Whether to show dropdown selectors for month and year */
+    /** Om måned- og år-dropdown skal vises i kalenderen */
     dropdownCaption?: boolean;
 }
 

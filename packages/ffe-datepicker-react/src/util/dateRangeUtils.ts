@@ -67,36 +67,4 @@ export const getYearOptions = (minDate: string | null | undefined, maxDate: stri
     return years;
 };
 
-/**
- * Check if a given year/month combination is within the min/max date range
- */
-export const isMonthInRange = (
-    year: number, 
-    month: number, 
-    minDate: string | null | undefined, 
-    maxDate: string | null | undefined
-) => {
-    if (!minDate && !maxDate) return true;
-
-    const current = new Date(year, month - 1, 1);
-    
-    if (minDate) {
-        const minDateObj = getSimpleDateFromString(minDate);
-        if (minDateObj) {
-            const minDateTime = new Date(minDateObj.year, minDateObj.month, 1).getTime();
-            if (current.getTime() < minDateTime) return false;
-        }
-    }
-
-    if (maxDate) {
-        const maxDateObj = getSimpleDateFromString(maxDate);
-        if (maxDateObj) {
-            const maxDateTime = new Date(maxDateObj.year, maxDateObj.month, 1).getTime();
-            if (current.getTime() > maxDateTime) return false;
-        }
-    }
-
-    return true;
-};
-
 

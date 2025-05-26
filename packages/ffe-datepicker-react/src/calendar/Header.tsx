@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { getMonthOptions, getYearOptions, isMonthInRange } from '../util/dateRangeUtils';
+import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
+import { getMonthOptions, getYearOptions } from '../util/dateRangeUtils';
 import { Locale } from '../datelogic/types';
 
 interface HeaderProps {
@@ -13,17 +14,17 @@ interface HeaderProps {
     year: number;
     prevMonthButtonElement: React.RefObject<HTMLButtonElement>;
     nextMonthButtonElement: React.RefObject<HTMLButtonElement>;
-    /** Current month number (1-12) */
+    /** Nåværende månedsnummer (1-12) */
     monthNumber: number;
-    /** Whether to show dropdown selectors for month and year */
+    /** Om måned- og år-dropdown skal vises i kalenderen */
     dropdownCaption?: boolean;
-    /** Current locale */
+    /** Nåværende språkkode */
     locale: Locale;
-    /** Navigation handler when month/year is changed directly */
+    /** Navigasjons-handler når måned/år endres direkte */
     onMonthYearChange?: (month: number, year: number) => void;
-    /** Min date boundary (format: 'dd.mm.yyyy') */
+    /** Tidligste tillatte dato (format: 'dd.mm.yyyy') */
     minDate?: string | null;
-    /** Max date boundary (format: 'dd.mm.yyyy') */
+    /** Seneste tillatte dato (format: 'dd.mm.yyyy') */
     maxDate?: string | null;
 }
 
@@ -50,14 +51,19 @@ export const Header: React.FC<HeaderProps> = ({
     const monthOptions = getMonthOptions(locale);
     const yearOptions = getYearOptions(minDate, maxDate);
 
-    const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const newMonth = Number(e.target.value);
-        onMonthYearChange?.(newMonth, year);
+    const selectedMonthOption = monthOptions.find(option => option.value === monthNumber);
+    const selectedYearOption = yearOptions.find(option => option.value === year);
+
+    const handleMonthChange = (selectedItem: typeof monthOptions[0] | null) => {
+        if (selectedItem) {
+            onMonthYearChange?.(selectedItem.value, year);
+        }
     };
 
-    const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const newYear = Number(e.target.value);
-        onMonthYearChange?.(monthNumber, newYear);
+    const handleYearChange = (selectedItem: typeof yearOptions[0] | null) => {
+        if (selectedItem) {
+            onMonthYearChange?.(monthNumber, selectedItem.value);
+        }
     };
     
     // Prevent event propagation when interacting with dropdowns to avoid
@@ -96,39 +102,41 @@ export const Header: React.FC<HeaderProps> = ({
                 >
                     {dropdownCaption ? (
                         <div className="ffe-calendar__dropdown-container">
-                            <div className="ffe-calendar__dropdown">
-                                <select
+                            <div className="ffe-calendar__dropdown ffe-calendar__month-dropdown">
+                                <SearchableDropdown
                                     id={`${datepickerId}__month-select`}
-                                    className="ffe-calendar__dropdown-select ffe-calendar__month-select"
-                                    aria-label={`${month} ${year}`}
-                                    value={monthNumber}
+                                    className="ffe-calendar__month-select"
+                                    dropdownList={monthOptions}
+                                    dropdownAttributes={['label']}
+                                    searchAttributes={['label']}
+                                    displayAttribute="label"
+                                    selectedItem={selectedMonthOption}
                                     onChange={handleMonthChange}
-                                    onClick={handleDropdownClick}
-                                    onFocus={handleDropdownFocus}
-                                >
-                                    {getMonthOptions(locale).map((option) => (
-                                        <option key={option.value} value={option.value}>
-                                            {option.label}
-                                        </option>
-                                    ))}
-                                </select>
+                                    locale={locale}
+                                    inputProps={{
+                                        'aria-label': `${month} ${year}`,
+                                        onClick: handleDropdownClick,
+                                        onFocus: handleDropdownFocus,
+                                    }}
+                                />
                             </div>
-                            <div className="ffe-calendar__dropdown">
-                                <select
+                            <div className="ffe-calendar__dropdown ffe-calendar__year-dropdown">
+                                <SearchableDropdown
                                     id={`${datepickerId}__year-select`}
-                                    className="ffe-calendar__dropdown-select ffe-calendar__year-select"
-                                    aria-label={`${year}`}
-                                    value={year}
+                                    className="ffe-calendar__year-select"
+                                    dropdownList={yearOptions}
+                                    dropdownAttributes={['label']}
+                                    searchAttributes={['label']}
+                                    displayAttribute="label"
+                                    selectedItem={selectedYearOption}
                                     onChange={handleYearChange}
-                                    onClick={handleDropdownClick}
-                                    onFocus={handleDropdownFocus}
-                                >
-                                    {yearOptions.map((option) => (
-                                        <option key={option.value} value={option.value}>
-                                            {option.label}
-                                        </option>
-                                    ))}
-                                </select>
+                                    locale={locale}
+                                    inputProps={{
+                                        'aria-label': `${year}`,
+                                        onClick: handleDropdownClick,
+                                        onFocus: handleDropdownFocus,
+                                    }}
+                                />
                             </div>
                         </div>
                     ) : (

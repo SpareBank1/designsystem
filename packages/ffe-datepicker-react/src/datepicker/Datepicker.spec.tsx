@@ -62,22 +62,22 @@ describe('<Datepicker />', () => {
                 await user.click(calendarButton);
                 
                 // Verify that the dropdown selects are rendered
-                // Look for select elements inside the calendar
+                // Look for combobox elements inside the calendar
                 const selects = screen.getAllByRole('combobox');
                 
                 // Expect to have at least 2 selects (month and year)
                 expect(selects.length).toBeGreaterThanOrEqual(2);
                 
-                // Check that the selects have the correct class names
-                const monthSelect = selects.find(select => 
-                    select.classList.contains('ffe-calendar__month-select')
+                // Check that the selects are inside the correct containers
+                const monthDropdown = selects.find(input => 
+                    input.closest('.ffe-calendar__month-select')
                 );
-                const yearSelect = selects.find(select => 
-                    select.classList.contains('ffe-calendar__year-select')
+                const yearDropdown = selects.find(input => 
+                    input.closest('.ffe-calendar__year-select')
                 );
                 
-                expect(monthSelect).toBeInTheDocument();
-                expect(yearSelect).toBeInTheDocument();
+                expect(monthDropdown).toBeInTheDocument();
+                expect(yearDropdown).toBeInTheDocument();
             });
         });
 
