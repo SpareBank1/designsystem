@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.3.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.3.12...@sb1/ffe-datepicker-react@10.3.13) (2025-05-26)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** add RTL dependency for test helper ([60dc40c](https://github.com/SpareBank1/designsystem/commit/60dc40ca7b22fa89e4d20908e1b0cb4dc3ab4728))
+
+
+
+
+
 ## [10.3.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.3.11...@sb1/ffe-datepicker-react@10.3.12) (2025-05-23)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
