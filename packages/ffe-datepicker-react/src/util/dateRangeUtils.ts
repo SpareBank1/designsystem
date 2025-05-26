@@ -22,40 +22,14 @@ export const getMonthOptions = (locale: Locale) => {
 };
 
 /**
- * Generates year options based on min and max dates
+ * Generates year options for dropdown selection
  */
-export const getYearOptions = (minDate: string | null | undefined, maxDate: string | null | undefined) => {
+export const getYearOptions = () => {
     const currentYear = new Date().getFullYear();
     
-    // Default ranges when no min/max dates are specified
-    let minYear = currentYear - 6; // Default is 6 years backward
-    let maxYear = currentYear + 2; // Default is 2 years forward
-    
-    // Handle min date logic
-    if (minDate) {
-        const minDateObj = getSimpleDateFromString(minDate);
-        if (minDateObj) {
-            // If min date is more than 10 years back, limit to 10 years back
-            if (currentYear - minDateObj.year > 10) {
-                minYear = currentYear - 10;
-            } else {
-                minYear = minDateObj.year;
-            }
-        }
-    }
-
-    // Handle max date logic
-    if (maxDate) {
-        const maxDateObj = getSimpleDateFromString(maxDate);
-        if (maxDateObj) {
-            // If max date is more than 10 years forward, limit to 10 years forward
-            if (maxDateObj.year - currentYear > 10) {
-                maxYear = currentYear + 10;
-            } else {
-                maxYear = maxDateObj.year;
-            }
-        }
-    }
+    // Standard range: 6 years backward and 2 years forward
+    const minYear = currentYear - 6;
+    const maxYear = currentYear + 2;
 
     const years = [];
     for (let i = minYear; i <= maxYear; i++) {
@@ -65,38 +39,6 @@ export const getYearOptions = (minDate: string | null | undefined, maxDate: stri
         });
     }
     return years;
-};
-
-/**
- * Check if a given year/month combination is within the min/max date range
- */
-export const isMonthInRange = (
-    year: number, 
-    month: number, 
-    minDate: string | null | undefined, 
-    maxDate: string | null | undefined
-) => {
-    if (!minDate && !maxDate) return true;
-
-    const current = new Date(year, month - 1, 1);
-    
-    if (minDate) {
-        const minDateObj = getSimpleDateFromString(minDate);
-        if (minDateObj) {
-            const minDateTime = new Date(minDateObj.year, minDateObj.month, 1).getTime();
-            if (current.getTime() < minDateTime) return false;
-        }
-    }
-
-    if (maxDate) {
-        const maxDateObj = getSimpleDateFromString(maxDate);
-        if (maxDateObj) {
-            const maxDateTime = new Date(maxDateObj.year, maxDateObj.month, 1).getTime();
-            if (current.getTime() > maxDateTime) return false;
-        }
-    }
-
-    return true;
 };
 
 

@@ -21,6 +21,10 @@ describe('Header', () => {
         locale: 'nb' as const,
     };
 
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
+
     it('renders standard header with navigation buttons', () => {
         render(<Header {...defaultProps} />);
         
@@ -44,7 +48,7 @@ describe('Header', () => {
         expect(mockNextMonthHandler).toHaveBeenCalledTimes(1);
     });
 
-    it('renders dropdown selects when dropdownCaption is true', () => {
+    it('renders dropdowns when dropdownCaption is true', () => {
         render(
             <Header 
                 {...defaultProps} 
@@ -57,20 +61,23 @@ describe('Header', () => {
         const headerTitle = screen.queryByTestId('test-calendar__month-label');
         expect(headerTitle).not.toBeInTheDocument();
         
-        // Check for select elements with correct classes
-        const selects = screen.getAllByRole('combobox');
-        const monthSelect = selects.find(select => 
-            select.classList.contains('ffe-calendar__month-select')
-        );
-        const yearSelect = selects.find(select => 
-            select.classList.contains('ffe-calendar__year-select')
-        );
+        // Check for Dropdown elements with correct IDs
+        const monthDropdown = document.getElementById('test-calendar__month-select') as HTMLSelectElement;
+        const yearDropdown = document.getElementById('test-calendar__year-select') as HTMLSelectElement;
         
-        expect(monthSelect).toBeInTheDocument();
-        expect(yearSelect).toBeInTheDocument();
+        expect(monthDropdown).toBeInTheDocument();
+        expect(yearDropdown).toBeInTheDocument();
+        
+        // Verify they have the correct CSS classes
+        expect(monthDropdown?.closest('.ffe-calendar__month-select')).toBeInTheDocument();
+        expect(yearDropdown?.closest('.ffe-calendar__year-select')).toBeInTheDocument();
+        
+        // Verify current values
+        expect(monthDropdown.value).toBe('5');
+        expect(yearDropdown.value).toBe('2025');
     });
 
-    it('calls onMonthYearChange when month select is changed', async () => {
+    it('calls onMonthYearChange when month dropdown option is selected', async () => {
         const user = userEvent.setup();
         render(
             <Header 
@@ -80,20 +87,17 @@ describe('Header', () => {
             />
         );
         
-        // Find all comboboxes and get the month select by class
-        const selects = screen.getAllByRole('combobox');
-        const monthSelect = selects.find(select => 
-            select.classList.contains('ffe-calendar__month-select')
-        );
-        expect(monthSelect).toBeInTheDocument();
+        // Find the month dropdown by ID
+        const monthDropdown = document.getElementById('test-calendar__month-select') as HTMLSelectElement;
+        expect(monthDropdown).toBeInTheDocument();
         
-        // Change to June (value 6)
-        await user.selectOptions(monthSelect!, '6');
+        // Select June (month 6)
+        await user.selectOptions(monthDropdown, '6');
         
         expect(mockMonthYearChange).toHaveBeenCalledWith(6, 2025);
     });
     
-    it('calls onMonthYearChange when year select is changed', async () => {
+    it('calls onMonthYearChange when year dropdown option is selected', async () => {
         const user = userEvent.setup();
         render(
             <Header 
@@ -103,15 +107,12 @@ describe('Header', () => {
             />
         );
         
-        // Find all comboboxes and get the year select by class
-        const selects = screen.getAllByRole('combobox');
-        const yearSelect = selects.find(select => 
-            select.classList.contains('ffe-calendar__year-select')
-        );
-        expect(yearSelect).toBeInTheDocument();
+        // Find the year dropdown by ID
+        const yearDropdown = document.getElementById('test-calendar__year-select') as HTMLSelectElement;
+        expect(yearDropdown).toBeInTheDocument();
         
-        // Change to 2026
-        await user.selectOptions(yearSelect!, '2026');
+        // Select 2026
+        await user.selectOptions(yearDropdown, '2026');
         
         expect(mockMonthYearChange).toHaveBeenCalledWith(5, 2026);
     });

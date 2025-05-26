@@ -15,8 +15,6 @@ type Story = StoryObj<typeof Datepicker>;
 export const Standard: Story = {
     args: {
         locale: 'nb',
-        maxDate: '31.12.2025',
-        minDate: '01.01.2024',
         labelId: 'datepicker-label',
     },
     render: function Render({ value, onChange, ...args }: DatepickerProps) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
-import { getMonthOptions, getYearOptions, isMonthInRange } from '../util/dateRangeUtils';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
+import { getMonthOptions, getYearOptions } from '../util/dateRangeUtils';
 import { Locale } from '../datelogic/types';
 
 interface HeaderProps {
@@ -13,18 +14,14 @@ interface HeaderProps {
     year: number;
     prevMonthButtonElement: React.RefObject<HTMLButtonElement>;
     nextMonthButtonElement: React.RefObject<HTMLButtonElement>;
-    /** Current month number (1-12) */
+    /** Nåværende månedsnummer (1-12) */
     monthNumber: number;
-    /** Whether to show dropdown selectors for month and year */
+    /** Om måned- og år-dropdown skal vises i kalenderen */
     dropdownCaption?: boolean;
-    /** Current locale */
+    /** Nåværende språkkode */
     locale: Locale;
-    /** Navigation handler when month/year is changed directly */
+    /** Navigasjons-handler når måned/år endres direkte */
     onMonthYearChange?: (month: number, year: number) => void;
-    /** Min date boundary (format: 'dd.mm.yyyy') */
-    minDate?: string | null;
-    /** Max date boundary (format: 'dd.mm.yyyy') */
-    maxDate?: string | null;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -41,23 +38,21 @@ export const Header: React.FC<HeaderProps> = ({
     dropdownCaption = false,
     locale,
     onMonthYearChange,
-    minDate,
-    maxDate,
 }) => {
     const arrowBackIosIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0zNjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzZxLTExLjkyMiAxMS45MjMtMjguMDc2IDExLjkyM3QtMjguMDc2LTExLjkyM0wzMDUuMDc4LTQyOC43N3EtMTAuODQ3LTEwLjg0Ni0xNi4wNzctMjQuMzA3LTUuMjMxLTEzLjQ2Mi01LjIzMS0yNi45MjMgMC0xMy40NjEgNS4yMzEtMjYuOTIzIDUuMjMtMTMuNDYxIDE2LjA3Ny0yNC4zMDdsMzA2Ljg0Ni0zMDYuODQ2cTExLjkyMi0xMS45MjMgMjguMzg0LTExLjYxNiAxNi40NjEuMzA4IDI4LjM4NCAxMi4yMzEgMTEuOTIzIDExLjkyMyAxMS45MjMgMjguMDc2IDAgMTYuMTU0LTExLjkyMyAyOC4wNzdMMzY3LjM4NC00ODBaIi8+PC9zdmc+';
 
     const monthOptions = getMonthOptions(locale);
-    const yearOptions = getYearOptions(minDate, maxDate);
+    const yearOptions = getYearOptions();
 
     const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const newMonth = Number(e.target.value);
-        onMonthYearChange?.(newMonth, year);
+        const selectedMonth = parseInt(e.target.value, 10);
+        onMonthYearChange?.(selectedMonth, year);
     };
 
     const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const newYear = Number(e.target.value);
-        onMonthYearChange?.(monthNumber, newYear);
+        const selectedYear = parseInt(e.target.value, 10);
+        onMonthYearChange?.(monthNumber, selectedYear);
     };
     
     // Prevent event propagation when interacting with dropdowns to avoid
@@ -96,39 +91,39 @@ export const Header: React.FC<HeaderProps> = ({
                 >
                     {dropdownCaption ? (
                         <div className="ffe-calendar__dropdown-container">
-                            <div className="ffe-calendar__dropdown">
-                                <select
+                            <div className="ffe-calendar__dropdown ffe-calendar__month-dropdown">
+                                <Dropdown
                                     id={`${datepickerId}__month-select`}
-                                    className="ffe-calendar__dropdown-select ffe-calendar__month-select"
-                                    aria-label={`${month} ${year}`}
+                                    className="ffe-calendar__month-select"
                                     value={monthNumber}
                                     onChange={handleMonthChange}
+                                    aria-label={`${month} ${year}`}
                                     onClick={handleDropdownClick}
                                     onFocus={handleDropdownFocus}
                                 >
-                                    {getMonthOptions(locale).map((option) => (
+                                    {monthOptions.map(option => (
                                         <option key={option.value} value={option.value}>
                                             {option.label}
                                         </option>
                                     ))}
-                                </select>
+                                </Dropdown>
                             </div>
-                            <div className="ffe-calendar__dropdown">
-                                <select
+                            <div className="ffe-calendar__dropdown ffe-calendar__year-dropdown">
+                                <Dropdown
                                     id={`${datepickerId}__year-select`}
-                                    className="ffe-calendar__dropdown-select ffe-calendar__year-select"
-                                    aria-label={`${year}`}
+                                    className="ffe-calendar__year-select"
                                     value={year}
                                     onChange={handleYearChange}
+                                    aria-label={`${year}`}
                                     onClick={handleDropdownClick}
                                     onFocus={handleDropdownFocus}
                                 >
-                                    {yearOptions.map((option) => (
+                                    {yearOptions.map(option => (
                                         <option key={option.value} value={option.value}>
                                             {option.label}
                                         </option>
                                     ))}
-                                </select>
+                                </Dropdown>
                             </div>
                         </div>
                     ) : (

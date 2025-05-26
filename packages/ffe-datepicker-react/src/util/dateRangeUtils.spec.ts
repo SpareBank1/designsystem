@@ -1,11 +1,11 @@
-import { getYearOptions, isMonthInRange } from './dateRangeUtils';
+import { getYearOptions } from './dateRangeUtils';
 
 describe('dateRangeUtils', () => {
     describe('getYearOptions', () => {
         const currentYear = new Date().getFullYear();
 
-        it('should return default range (6 back, 2 forward) when no min/max dates provided', () => {
-            const yearOptions = getYearOptions(null, null);
+        it('should return default range (6 back, 2 forward)', () => {
+            const yearOptions = getYearOptions();
             
             // Get min and max years from options
             const minYear = Math.min(...yearOptions.map(opt => opt.value));
@@ -14,90 +14,30 @@ describe('dateRangeUtils', () => {
             expect(minYear).toBe(currentYear - 6);
             expect(maxYear).toBe(currentYear + 2);
         });
-        
-        it('should respect minimum date when within 10 years', () => {
-            const minDate = `01.01.${currentYear - 8}`;
-            const yearOptions = getYearOptions(minDate, null);
-            
-            const minYear = Math.min(...yearOptions.map(opt => opt.value));
-            expect(minYear).toBe(currentYear - 8);
-        });
-        
-        it('should limit to 10 years back when min date is earlier', () => {
-            const minDate = `01.01.${currentYear - 15}`; // 15 years back
-            const yearOptions = getYearOptions(minDate, null);
-            
-            const minYear = Math.min(...yearOptions.map(opt => opt.value));
-            expect(minYear).toBe(currentYear - 10); // Should be limited to 10 years back
-        });
-        
-        it('should respect maximum date when within 10 years', () => {
-            const maxDate = `01.01.${currentYear + 5}`;
-            const yearOptions = getYearOptions(null, maxDate);
-            
-            const maxYear = Math.max(...yearOptions.map(opt => opt.value));
-            expect(maxYear).toBe(currentYear + 5);
-        });
-        
-        it('should limit to 10 years forward when max date is later', () => {
-            const maxDate = `01.01.${currentYear + 15}`; // 15 years forward
-            const yearOptions = getYearOptions(null, maxDate);
-            
-            const maxYear = Math.max(...yearOptions.map(opt => opt.value));
-            expect(maxYear).toBe(currentYear + 10); // Should be limited to 10 years forward
-        });
-        
-        it('should handle both min and max dates within limits', () => {
-            const minDate = `01.01.${currentYear - 4}`;
-            const maxDate = `01.01.${currentYear + 3}`;
-            const yearOptions = getYearOptions(minDate, maxDate);
-            
-            const minYear = Math.min(...yearOptions.map(opt => opt.value));
-            const maxYear = Math.max(...yearOptions.map(opt => opt.value));
-            
-            expect(minYear).toBe(currentYear - 4);
-            expect(maxYear).toBe(currentYear + 3);
-        });
-        
-        it('should handle both min and max dates beyond limits', () => {
-            const minDate = `01.01.${currentYear - 20}`;
-            const maxDate = `01.01.${currentYear + 20}`;
-            const yearOptions = getYearOptions(minDate, maxDate);
-            
-            const minYear = Math.min(...yearOptions.map(opt => opt.value));
-            const maxYear = Math.max(...yearOptions.map(opt => opt.value));
-            
-            expect(minYear).toBe(currentYear - 10);
-            expect(maxYear).toBe(currentYear + 10);
-        });
-    });
 
-    describe('isMonthInRange', () => {
-        it('should return true when month is within range', () => {
-            const year = 2025;
-            const month = 6; // June
-            const minDate = '01.01.2024';
-            const maxDate = '31.12.2026';
+        it('should return options with correct structure', () => {
+            const yearOptions = getYearOptions();
             
-            expect(isMonthInRange(year, month, minDate, maxDate)).toBe(true);
+            // Verify structure
+            expect(yearOptions.length).toBe(9); // 6 + 2 + 1 (current year)
+            
+            // Each option should have value and label
+            yearOptions.forEach(option => {
+                expect(option).toHaveProperty('value');
+                expect(option).toHaveProperty('label');
+                expect(typeof option.value).toBe('number');
+                expect(typeof option.label).toBe('string');
+                expect(option.label).toBe(String(option.value));
+            });
         });
-        
-        it('should return false when month is before min date', () => {
-            const year = 2023;
-            const month = 6; // June
-            const minDate = '01.01.2024';
-            const maxDate = '31.12.2026';
+
+        it('should return years in ascending order', () => {
+            const yearOptions = getYearOptions();
             
-            expect(isMonthInRange(year, month, minDate, maxDate)).toBe(false);
-        });
-        
-        it('should return false when month is after max date', () => {
-            const year = 2027;
-            const month = 1; // January
-            const minDate = '01.01.2024';
-            const maxDate = '31.12.2026';
+            const years = yearOptions.map(opt => opt.value);
+            const sortedYears = [...years].sort((a, b) => a - b);
             
-            expect(isMonthInRange(year, month, minDate, maxDate)).toBe(false);
+            expect(years).toEqual(sortedYears);
         });
     });
 });

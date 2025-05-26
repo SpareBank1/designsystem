@@ -15,8 +15,6 @@ export const Standard: Story = {
         calendarClassName: undefined,
         escKeyHandler: () => null,
         locale: 'nb',
-        maxDate: null,
-        minDate: null,
         onDatePicked: (date: string) => null,
         selectedDate: '17.12.2024',
         focusOnMount: false,
@@ -39,8 +37,6 @@ export const WithDropdownCaption: Story = {
     args: {
         ...Standard.args,
         dropdownCaption: true,
-        minDate: '01.01.2023',
-        maxDate: '31.12.2026',
         selectedDate: '15.05.2025',
     },
     render: function Render(args) {

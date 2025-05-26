@@ -7,61 +7,38 @@
     padding: 2px 0;
 }
 
-.ffe-calendar__dropdown {
-    position: relative;
-}
+.ffe-calendar__month-dropdown,
+.ffe-calendar__year-dropdown {
+    .ffe-searchable-dropdown {
+        // Override default height for compact calendar display
+        min-height: auto;
 
-.ffe-calendar__dropdown-select {
-    --border-width: var(--ffe-g-border-width, 1px);
-    --border-color: var(--ffe-color-border-primary-default, #c3c3c5);
-    --text-color: var(--ffe-color-foreground-subtle, #676767);
+        .ffe-searchable-dropdown__input {
+            // Compact padding for calendar context
+            padding: 8px 12px;
 
-    appearance: none;
-    background-color: var(--ffe-color-surface-primary-default, #fff);
-    border: var(--border-width) solid var(--border-color);
-    border-radius: var(--ffe-g-border-radius, 4px);
-    color: var(--text-color);
-    font-family: var(
-        --ffe-g-font,
-        'SpareBank1-regular',
-        'Arial',
-        'Helvetica',
-        sans-serif
-    );
-    font-size: var(--ffe-fontsize-form-input, 1rem);
-    font-variant-numeric: tabular-nums;
-    padding: 8px 32px 8px 12px;
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" fill="%23676767"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 6px center;
-    background-size: 20px;
-    transition: all var(--ffe-transition-duration, 0.2s) var(--ffe-ease, ease);
+            input {
+                // Center text for month/year display
+                text-align: center;
+                cursor: pointer;
+            }
+        }
 
-    &:hover {
-        --border-color: var(--ffe-color-border-primary-default-hover, #96a6b2);
+        .ffe-searchable-dropdown__list {
+            // Limit height to prevent calendar overflow
+            max-height: 200px;
+            overflow-y: auto;
+        }
 
-        box-shadow: 0 0 0 1px
-            var(--ffe-color-border-primary-default-hover, #96a6b2);
-    }
-
-    &:focus {
-        outline: none;
-
-        --border-color: var(--ffe-color-border-interactive-selected, #0071cd);
-
-        box-shadow: 0 0 0 1px
-            var(--ffe-color-border-interactive-selected, #0071cd);
-    }
-
-    option {
-        color: var(--ffe-color-foreground-default, #262626);
-        padding: 4px;
+        .ffe-searchable-dropdown__list-item-body {
+            // Compact padding and center text
+            padding: var(--ffe-spacing-2xs);
+            text-align: center;
+        }
     }
 }
 
+// Minimum widths for consistent dropdown sizes
 .ffe-calendar__month-select {
     min-width: 140px;
 }

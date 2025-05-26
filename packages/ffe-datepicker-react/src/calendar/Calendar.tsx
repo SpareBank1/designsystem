@@ -14,12 +14,10 @@ export interface CalendarProps {
     calendarClassName?: string;
     escKeyHandler?: React.KeyboardEventHandler<HTMLDivElement>;
     locale: 'nb' | 'nn' | 'en';
-    maxDate?: string | null;
-    minDate?: string | null;
     onDatePicked: (date: string) => void;
     selectedDate?: string | null;
     focusOnMount?: boolean;
-    /** Whether to show dropdown selectors for month and year */
+    /** Om måned- og år-dropdown skal vises i kalenderen */
     dropdownCaption?: boolean;
 }
 
@@ -37,8 +35,6 @@ export class Calendar extends Component<CalendarProps, State> {
         this.state = {
             calendar: new SimpleCalendar(
                 getSimpleDateFromString(props?.selectedDate),
-                props.minDate,
-                props.maxDate,
                 props.locale,
             ),
             isFocusingHeader: false,
@@ -68,8 +64,6 @@ export class Calendar extends Component<CalendarProps, State> {
                 {
                     calendar: new SimpleCalendar(
                         getSimpleDateFromString(this.props.selectedDate),
-                        this.props.minDate,
-                        this.props.maxDate,
                         this.props.locale,
                     ),
                 },
@@ -315,8 +309,6 @@ export class Calendar extends Component<CalendarProps, State> {
                         locale={this.props.locale}
                         dropdownCaption={this.props.dropdownCaption}
                         onMonthYearChange={(month, year) => this.navigateToMonthYear(month, year)}
-                        minDate={this.props.minDate}
-                        maxDate={this.props.maxDate}
                     />
                     <table
                         className="ffe-calendar__grid"
