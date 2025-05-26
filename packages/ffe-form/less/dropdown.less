@@ -10,16 +10,6 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :where(.regard-color-scheme-preference) {
-        &.ffe-accent-mode, .ffe-accent-mode {
-            .ffe-dropdown {
-                .chevron(@ffe-color-chevron-dark-accent);
-            }
-        }
-    }
-}
-
 .ffe-dropdown {
     appearance: none;
     background-color: var(--ffe-color-surface-primary-default);
@@ -87,5 +77,19 @@
     &::placeholder {
         color: var(--ffe-color-foreground-subtle);
         opacity: 1;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .regard-color-scheme-preference {
+        .ffe-dropdown {
+            .chevron(@ffe-color-chevron-dark-default);
+        }
+
+        .ffe-accent-mode:not(.ffe-default-mode) {
+            .ffe-dropdown {
+                .chevron(@ffe-color-chevron-dark-accent);
+            }
+        }
     }
 }
