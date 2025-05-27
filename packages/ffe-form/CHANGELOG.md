@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.8...@sb1/ffe-form@32.1.9) (2025-05-27)
+
+
+### Bug Fixes
+
+* **ffe-form:** fikser chevron farge i dark mode på dropdown ([35788f1](https://github.com/SpareBank1/designsystem/commit/35788f110a215b8b8bec16956365c0f5fd32103c))
+
+
+
+
+
 ## [32.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.7...@sb1/ffe-form@32.1.8) (2025-05-14)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@12.0.37...@sb1/ffe-file-upload@12.0.38) (2025-05-27)
+
+**Note:** Version bump only for package @sb1/ffe-file-upload
+
+
+
+
+
 ## [12.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@12.0.36...@sb1/ffe-file-upload@12.0.37) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
