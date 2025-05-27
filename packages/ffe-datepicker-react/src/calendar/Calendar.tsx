@@ -35,6 +35,8 @@ export interface CalendarProps {
     focusOnMount?: boolean;
     /** Om måned- og år-dropdown skal vises i kalenderen */
     dropdownCaption?: boolean;
+    /** ID for datepicker-instansen (for å knytte hendelser til riktig instans) */
+    datepickerId?: string;
 }
 
 interface State {
@@ -58,7 +60,7 @@ export class Calendar extends Component<CalendarProps, State> {
             isFocusingHeader: false,
         };
 
-        this.datepickerId = `ffe-calendar-${uuid()}`;
+        this.datepickerId = props.datepickerId || `ffe-calendar-${uuid()}`;
 
         this.keyDown = this.keyDown.bind(this);
         this.mouseClick = this.mouseClick.bind(this);

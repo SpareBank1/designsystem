@@ -189,7 +189,9 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     };
 
     const globalClickHandler = (evt: MouseEvent) => {
-        if (displayDatePicker && (evt as any).__datepickerID !== datepickerId) {
+        const eventFlag = (evt as any).__datepickerID;
+        
+        if (displayDatePicker && eventFlag !== datepickerId) {
             closeCalendarSetInputFocus();
         }
     };
@@ -433,6 +435,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     selectedDate={calendarActiveDate}
                     focusOnMount={true}
                     dropdownCaption={dropdownCaption}
+                    datepickerId={datepickerId}
                 />
             )}
 

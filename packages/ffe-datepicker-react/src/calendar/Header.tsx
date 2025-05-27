@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 import { getMonthOptions, getYearOptions } from '../util/dateRangeUtils';
@@ -48,6 +48,9 @@ export const Header: React.FC<HeaderProps> = ({
     const arrowBackIosIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0zNjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzZxLTExLjkyMiAxMS45MjMtMjguMDc2IDExLjkyM3QtMjguMDc2LTExLjkyM0wzMDUuMDc4LTQyOC43N3EtMTAuODQ3LTEwLjg0Ni0xNi4wNzctMjQuMzA3LTUuMjMxLTEzLjQ2Mi01LjIzMS0yNi45MjMgMC0xMy40NjEgNS4yMzEtMjYuOTIzIDUuMjMtMTMuNDYxIDE2LjA3Ny0yNC4zMDdsMzA2Ljg0Ni0zMDYuODQ2cTExLjkyMi0xMS45MjMgMjguMzg0LTExLjYxNiAxNi40NjEuMzA4IDI4LjM4NCAxMi4yMzEgMTEuOTIzIDExLjkyMyAxMS45MjMgMjguMDc2IDAgMTYuMTU0LTExLjkyMyAyOC4wNzdMMzY3LjM4NC00ODBaIi8+PC9zdmc+';
 
+    const monthDropdownRef = useRef<HTMLDivElement>(null);
+    const yearDropdownRef = useRef<HTMLDivElement>(null);
+
     const monthOptions = getMonthOptions(locale);
     const yearOptions = getYearOptions(minDate, maxDate);
 
@@ -71,11 +74,72 @@ export const Header: React.FC<HeaderProps> = ({
     const handleDropdownClick = (e: React.MouseEvent) => {
         // Add datepickerId flag to prevent calendar from closing
         (e.nativeEvent as any).__datepickerID = datepickerId;
-        e.stopPropagation();
+        
+        // Only stop propagation for input clicks, not option selections
+        if ((e.target as HTMLElement).tagName === 'INPUT') {
+            e.stopPropagation();
+        }
     };
     
     const handleDropdownFocus = (e: React.FocusEvent) => {
-        e.stopPropagation();
+        // Don't stop propagation to allow normal focus behavior
+        (e.nativeEvent as any).__datepickerID = datepickerId;
+    };
+
+    // Handler for dropdown container to catch all clicks within dropdown area
+    const handleDropdownContainerClick = (e: React.MouseEvent) => {
+        // Add datepickerId flag to prevent calendar from closing on any click in dropdown area
+        (e.nativeEvent as any).__datepickerID = datepickerId;
+    };
+
+    // Use useEffect to add event listeners to dropdown containers for robust event handling
+    useEffect(() => {
+        const addEventListeners = (ref: React.RefObject<HTMLDivElement>) => {
+            const element = ref.current;
+            if (element) {
+                const handleClick = (e: Event) => {
+                    // Only add flag, don't stop propagation for option clicks
+                    (e as any).__datepickerID = datepickerId;
+                };
+                
+                element.addEventListener('click', handleClick, true); // Use capture phase
+                return () => {
+                    element.removeEventListener('click', handleClick, true);
+                };
+            }
+            return () => {};
+        };
+
+        const cleanupMonth = addEventListeners(monthDropdownRef);
+        const cleanupYear = addEventListeners(yearDropdownRef);
+
+        return () => {
+            cleanupMonth();
+            cleanupYear();
+        };
+    }, [datepickerId]);
+
+    const handleDropdownOpen = () => {
+        // Add a small delay to ensure the dropdown list is rendered before adding event listeners
+        setTimeout(() => {
+            const addClickHandler = (container: HTMLDivElement) => {
+                const dropdownList = container.querySelector('.ffe-searchable-dropdown__list');
+                if (dropdownList) {
+                    const handleListClick = (e: Event) => {
+                        (e as any).__datepickerID = datepickerId;
+                        // Don't stop propagation to allow option selection
+                    };
+                    dropdownList.addEventListener('click', handleListClick, true);
+                }
+            };
+
+            if (monthDropdownRef.current) {
+                addClickHandler(monthDropdownRef.current);
+            }
+            if (yearDropdownRef.current) {
+                addClickHandler(yearDropdownRef.current);
+            }
+        }, 0);
     };
 
     return (
@@ -102,7 +166,7 @@ export const Header: React.FC<HeaderProps> = ({
                 >
                     {dropdownCaption ? (
                         <div className="ffe-calendar__dropdown-container">
-                            <div className="ffe-calendar__dropdown ffe-calendar__month-dropdown">
+                            <div ref={monthDropdownRef} className="ffe-calendar__dropdown ffe-calendar__month-dropdown" onClick={handleDropdownContainerClick}>
                                 <SearchableDropdown
                                     id={`${datepickerId}__month-select`}
                                     className="ffe-calendar__month-select"
@@ -113,14 +177,15 @@ export const Header: React.FC<HeaderProps> = ({
                                     selectedItem={selectedMonthOption}
                                     onChange={handleMonthChange}
                                     locale={locale}
+                                    onOpen={handleDropdownOpen}
                                     inputProps={{
                                         'aria-label': `${month} ${year}`,
-                                        onClick: handleDropdownClick,
                                         onFocus: handleDropdownFocus,
+                                        onClick: handleDropdownClick,
                                     }}
                                 />
                             </div>
-                            <div className="ffe-calendar__dropdown ffe-calendar__year-dropdown">
+                            <div ref={yearDropdownRef} className="ffe-calendar__dropdown ffe-calendar__year-dropdown" onClick={handleDropdownContainerClick}>
                                 <SearchableDropdown
                                     id={`${datepickerId}__year-select`}
                                     className="ffe-calendar__year-select"
@@ -131,10 +196,11 @@ export const Header: React.FC<HeaderProps> = ({
                                     selectedItem={selectedYearOption}
                                     onChange={handleYearChange}
                                     locale={locale}
+                                    onOpen={handleDropdownOpen}
                                     inputProps={{
                                         'aria-label': `${year}`,
-                                        onClick: handleDropdownClick,
                                         onFocus: handleDropdownFocus,
+                                        onClick: handleDropdownClick,
                                     }}
                                 />
                             </div>
