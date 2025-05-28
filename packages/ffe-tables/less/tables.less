@@ -116,8 +116,10 @@
         transition: background var(--ffe-transition-duration) var(--ffe-ease);
         border-radius: var(--border-radius) var(--border-radius) 0 0;
 
-        &:hover {
-            background: var(--ffe-color-surface-primary-default-hover);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--ffe-color-surface-primary-default-hover);
+            }
         }
 
         &:active {
