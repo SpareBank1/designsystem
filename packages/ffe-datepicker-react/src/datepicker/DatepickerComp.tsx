@@ -85,17 +85,15 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     const monthRef = useRef<HTMLSpanElement>(null);
     const yearRef = useRef<HTMLSpanElement>(null);
 
-  
-
     const getFieldMessageId = () => {
         return fieldMessage ? `${datepickerId}-fieldmessage` : undefined;
     };
 
-    const _onChange = useCallback(debounce(
+    const _onChange = useCallback(
         (date: string) => {
             setLastChangedValue(date);
             onChange(date);
-        },250),
+        },
         [onChange, setLastChangedValue],
     );
 
