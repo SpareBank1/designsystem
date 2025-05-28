@@ -26,7 +26,8 @@
         "test": "ffe-buildtool jest"
     },
     "dependencies": {
-        "@sb1/ffe-icons": "^17.0.4"
+        "@sb1/ffe-icons": "^17.0.4",
+        "classnames": "^2.5.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1",
