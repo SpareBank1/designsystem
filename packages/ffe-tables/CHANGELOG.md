@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@18.0.25...@sb1/ffe-tables@18.0.26) (2025-05-28)
+
+
+### Bug Fixes
+
+* **ffe-tables:** fix header hover bug on mobile ([f1ff989](https://github.com/SpareBank1/designsystem/commit/f1ff989572849edfc39a258325140e687522fba8))
+
+
+
+
+
 ## [18.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@18.0.24...@sb1/ffe-tables@18.0.25) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-tables
