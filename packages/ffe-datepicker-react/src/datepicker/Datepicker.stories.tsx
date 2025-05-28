@@ -101,9 +101,32 @@ export const CalendarAbove: Story = {
     },
 };
 
+export const WithDropdownCaption: Story = {
+    args: {
+        ...Standard.args,
+        dropdownCaption: true,
+    },
+    render: function Render({ value, onChange, ...args }: DatepickerProps) {
+        const [date, setDate] = useState('01.12.2024');
+
+        return (
+            <InputGroup label="Dato med dropdowns for måned og år" labelId={Standard?.args?.labelId}>
+                <Datepicker
+                    value={value ?? date}
+                    onChange={date => {
+                        setDate(date);
+                    }}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
 export const TwoWayControlledComponent: Story = {
     args: {
         ...Standard.args,
+        locale: 'nb',
     },
     render: function Render({ ...args }: DatepickerProps) {
         const [date, setDate] = useState('01.12.2024');
