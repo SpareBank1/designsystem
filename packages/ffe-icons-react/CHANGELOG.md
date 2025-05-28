@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@12.0.4...@sb1/ffe-icons-react@12.0.5) (2025-05-28)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** add missing dep classnames ([0da7c66](https://github.com/SpareBank1/designsystem/commit/0da7c6625c88b2f13825e4c3edefd3798f660bc7))
+
+
+
+
+
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@12.0.3...@sb1/ffe-icons-react@12.0.4) (2025-05-23)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

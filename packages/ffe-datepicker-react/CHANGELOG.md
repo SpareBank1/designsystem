@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.3.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.3.14...@sb1/ffe-datepicker-react@10.3.15) (2025-05-28)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** remove onchange debounce to fix testing problem ([ba44c4b](https://github.com/SpareBank1/designsystem/commit/ba44c4bba8f0989b25b2db15deae8690b2a18df1))
+
+
+
+
+
 ## [10.3.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.3.13...@sb1/ffe-datepicker-react@10.3.14) (2025-05-27)
 
 
