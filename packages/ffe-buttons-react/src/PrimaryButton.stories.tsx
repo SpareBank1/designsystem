@@ -7,6 +7,7 @@ import {
     addReactionIconMd,
     addReactionIconSm,
 } from './assets/IconExamples';
+import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -97,3 +98,57 @@ export const IconOnly: Story = {
         </div>
     ),
 };
+
+export const LiveCodeEditor: Story = createLiveCodeStory(PrimaryButton, {
+    templates: {
+        simple: {
+            name: 'Enkelt',
+            icon: '📝',
+            code: `<PrimaryButton size="md">
+    Klikk meg
+</PrimaryButton>`
+        },
+        sizes: {
+            name: 'Størrelser',
+            icon: '📏',
+            code: `<div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+    <PrimaryButton size="sm">Liten</PrimaryButton>
+    <PrimaryButton size="md">Medium (default)</PrimaryButton>
+    <PrimaryButton size="lg">Stor</PrimaryButton>
+</div>`
+        },
+        states: {
+            name: 'Tilstander',
+            icon: '⚡',
+            code: `<div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+    <PrimaryButton>Normal</PrimaryButton>
+    <PrimaryButton isDisabled>Deaktivert</PrimaryButton>
+    <PrimaryButton isLoading ariaLoadingMessage="Laster...">Laster...</PrimaryButton>
+</div>`
+        },
+        interactive: {
+            name: 'Interaktiv',
+            icon: '🖱️',
+            code: `function InteractiveButton() {
+    const [count, setCount] = useState(0);
+    
+    return (
+        <div style={{ display: 'flex', gap: '12px', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <p>Antall klikk: {count}</p>
+            <PrimaryButton onClick={() => setCount(prev => prev + 1)}>
+                Klikk meg (+1)
+            </PrimaryButton>
+        </div>
+    );
+}
+
+<InteractiveButton />`
+        }
+    },
+    additionalComponents: {
+        PrimaryButton
+    },
+    defaultTemplate: 'simple',
+    title: 'PrimaryButton Live Code Editor',
+    description: 'Test PrimaryButton komponenten interaktivt med live kode!'
+});

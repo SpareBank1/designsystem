@@ -109,8 +109,14 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
 - **Real-time preview** med feilhåndtering
 - **React hooks** (useState, useEffect)
 - **FFE design tokens** (var(--ffe-color-*))
-- **Auto-save** til localStorage
+- **Smart auto-save** med template-gjenoppretting
 - **Templates** for rask start
+
+**Tips:**
+- Velg en template fra dropdown-menyen for å starte
+- Din kode lagres automatisk mens du skriver
+- Bruk "Tilbakestill til template" for å gå tilbake til originalversjon
+- "Rens lagret kode" sletter kun din lagrede versjon
 
 **Eksempel-kode:**
 \`\`\`jsx
@@ -130,24 +136,62 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
         const [isFullscreen, setIsFullscreen] = React.useState(false);
         const [autoSave, setAutoSave] = React.useState(true);
         const [selectedTemplate, setSelectedTemplate] = React.useState('simple');
+        const [hasUnsavedChanges, setHasUnsavedChanges] = React.useState(false);
+        const [originalTemplateCode, setOriginalTemplateCode] = React.useState(templates.simple);
 
-        // Auto-save functionality
+        // Check if current code matches any template
+        const getCurrentTemplate = () => {
+            for (const [key, templateCode] of Object.entries(templates)) {
+                if (code.trim() === templateCode.trim()) {
+                    return key;
+                }
+            }
+            return null;
+        };
+
+        // Auto-save functionality with debounce
         React.useEffect(() => {
-            if (autoSave) {
+            if (autoSave && hasUnsavedChanges) {
                 const timeoutId = setTimeout(() => {
                     localStorage.setItem('accordion-livecode', code);
+                    localStorage.setItem('accordion-livecode-template', selectedTemplate);
                 }, 500);
                 return () => clearTimeout(timeoutId);
             }
-        }, [code, autoSave]);
+        }, [code, autoSave, hasUnsavedChanges, selectedTemplate]);
 
         // Load saved code on mount
         React.useEffect(() => {
             const saved = localStorage.getItem('accordion-livecode');
+            const savedTemplate = localStorage.getItem('accordion-livecode-template') || 'simple';
+            
             if (saved && autoSave) {
                 setCode(saved);
+                setSelectedTemplate(savedTemplate);
+                setOriginalTemplateCode(templates[savedTemplate as keyof typeof templates]);
+                
+                // Check if saved code is different from the template
+                const isModified = saved.trim() !== templates[savedTemplate as keyof typeof templates].trim();
+                setHasUnsavedChanges(isModified);
             }
         }, []);
+
+        // Track code changes
+        const handleCodeChange = (newCode: string) => {
+            setCode(newCode);
+            
+            // Check if code has been modified from original template
+            const isModified = newCode.trim() !== originalTemplateCode.trim();
+            setHasUnsavedChanges(isModified);
+            
+            // Update selected template if code matches a template exactly
+            const matchingTemplate = getCurrentTemplate();
+            if (matchingTemplate && matchingTemplate !== selectedTemplate) {
+                setSelectedTemplate(matchingTemplate);
+                setOriginalTemplateCode(templates[matchingTemplate as keyof typeof templates]);
+                setHasUnsavedChanges(false);
+            }
+        };
 
         const downloadCode = () => {
             const blob = new Blob([code], { type: 'text/plain' });
@@ -159,16 +203,56 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
             URL.revokeObjectURL(url);
         };
 
-        const resetCode = () => {
-            if (confirm('Er du sikker på at du vil tilbakestille koden?')) {
-                setCode(templates[selectedTemplate as keyof typeof templates]);
+        const resetToTemplate = () => {
+            const templateCode = templates[selectedTemplate as keyof typeof templates];
+            if (confirm(`Er du sikker på at du vil tilbakestille til "${getTemplateName(selectedTemplate)}" template?`)) {
+                setCode(templateCode);
+                setOriginalTemplateCode(templateCode);
+                setHasUnsavedChanges(false);
                 localStorage.removeItem('accordion-livecode');
+                localStorage.removeItem('accordion-livecode-template');
+            }
+        };
+
+        const clearSavedCode = () => {
+            if (confirm('Er du sikker på at du vil slette lagret kode? Dette vil gå tilbake til standard template.')) {
+                const templateCode = templates[selectedTemplate as keyof typeof templates];
+                setCode(templateCode);
+                setOriginalTemplateCode(templateCode);
+                setHasUnsavedChanges(false);
+                localStorage.removeItem('accordion-livecode');
+                localStorage.removeItem('accordion-livecode-template');
             }
         };
 
         const loadTemplate = (templateKey: string) => {
+            const newTemplateCode = templates[templateKey as keyof typeof templates];
+            
+            // If user has unsaved changes, ask for confirmation
+            if (hasUnsavedChanges) {
+                if (!confirm('Du har ulagrede endringer. Er du sikker på at du vil bytte template?')) {
+                    return;
+                }
+            }
+            
             setSelectedTemplate(templateKey);
-            setCode(templates[templateKey as keyof typeof templates]);
+            setCode(newTemplateCode);
+            setOriginalTemplateCode(newTemplateCode);
+            setHasUnsavedChanges(false);
+            
+            // Clear saved code when switching templates
+            localStorage.removeItem('accordion-livecode');
+            localStorage.setItem('accordion-livecode-template', templateKey);
+        };
+
+        const getTemplateName = (templateKey: string) => {
+            const names: Record<string, string> = {
+                simple: 'Enkelt',
+                multiple: 'Flere elementer',
+                interactive: 'Interaktiv',
+                styled: 'Stylet'
+            };
+            return names[templateKey] || templateKey;
         };
 
         // Scope object for react-live
@@ -182,7 +266,22 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
 
         return (
             <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-                <h3 className="ffe-h3">{theme === 'light' ? 'Light' : 'Dark'} mode</h3>
+                <h3 className="ffe-h3">Live Code Editor - {theme === 'light' ? 'Light' : 'Dark'} mode</h3>
+                
+                {/* Status indicator */}
+                {hasUnsavedChanges && (
+                    <div style={{
+                        marginBottom: '12px',
+                        padding: '8px 12px',
+                        backgroundColor: '#fff3cd',
+                        border: '1px solid #ffeaa7',
+                        borderRadius: '4px',
+                        color: '#856404',
+                        fontSize: '14px'
+                    }}>
+                        💾 Du har ulagrede endringer - koden lagres automatisk
+                    </div>
+                )}
                 
                 {/* Controls */}
                 <div style={{ 
@@ -272,7 +371,21 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
                         </button>
                         
                         <button
-                            onClick={resetCode}
+                            onClick={resetToTemplate}
+                            style={{
+                                padding: '6px 12px',
+                                backgroundColor: '#ffc107',
+                                color: 'black',
+                                border: 'none',
+                                borderRadius: '4px',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            🔄 Tilbakestill til template
+                        </button>
+                        
+                        <button
+                            onClick={clearSavedCode}
                             style={{
                                 padding: '6px 12px',
                                 backgroundColor: '#dc3545',
@@ -282,7 +395,7 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
                                 cursor: 'pointer'
                             }}
                         >
-                            🔄 Reset
+                            🗑️ Rens lagret kode
                         </button>
                     </div>
                 </div>
@@ -320,9 +433,23 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
                                 borderBottom: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
                                 fontWeight: '600',
                                 fontSize: '14px',
-                                color: theme === 'light' ? 'black' : 'white'
+                                color: theme === 'light' ? 'black' : 'white',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
                             }}>
-                                📝 Live Code Editor
+                                <span>📝 Live Code Editor</span>
+                                {hasUnsavedChanges && (
+                                    <span style={{ 
+                                        fontSize: '12px', 
+                                        color: '#ffc107',
+                                        backgroundColor: theme === 'light' ? '#fff3cd' : '#2d3748',
+                                        padding: '2px 6px',
+                                        borderRadius: '3px'
+                                    }}>
+                                        ● Endret
+                                    </span>
+                                )}
                             </div>
                             <div style={{ flex: 1 }}>
                                 <Editor
@@ -330,7 +457,7 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
                                     defaultLanguage="typescript"
                                     theme={theme === 'light' ? 'light' : 'vs-dark'}
                                     value={code}
-                                    onChange={(value) => setCode(value || '')}
+                                    onChange={(value) => handleCodeChange(value || '')}
                                     options={{
                                         minimap: { enabled: false },
                                         fontSize: 14,

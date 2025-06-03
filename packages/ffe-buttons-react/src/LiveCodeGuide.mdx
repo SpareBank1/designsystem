@@ -1,0 +1,315 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Komponenter/Buttons/Live Code Guide" />
+
+# 🔥 Live Code Guide for Buttons
+
+Velkommen til den interaktive live code editoren for FFE Button komponenter! Her kan du eksperimentere med alle button-typer i sanntid.
+
+## 🚀 Hvordan bruke Live Code Editor
+
+### Grunnleggende funksjonalitet
+- **Editor**: Skriv JSX-kode i venstre panel
+- **Preview**: Se resultatet umiddelbart i høyre panel  
+- **Templates**: Velg forhåndsdefinerte eksempler fra dropdown-menyen
+- **Auto-save**: Koden din lagres automatisk mens du skriver
+
+### Tilgjengelige komponenter
+I live code editoren har du nå tilgang til **hele FFE designsystemet**! Her er en oversikt over de viktigste komponentene:
+
+```jsx
+// ✨ Buttons (alle typer)
+<PrimaryButton>Primary Action</PrimaryButton>
+<SecondaryButton>Secondary Action</SecondaryButton>
+<ActionButton>Quick Action</ActionButton>
+<TertiaryButton>Link Style</TertiaryButton>
+<BackButton>Tilbake</BackButton>
+<ExpandButton>Expand</ExpandButton>
+<InlineExpandButton>Vis mer</InlineExpandButton>
+<TaskButton>Task</TaskButton>
+<ShortcutButton>Shortcut</ShortcutButton>
+<ButtonGroup>...</ButtonGroup>
+
+// 📝 Typography & Core
+<Heading1>Hovedtittel</Heading1>
+<Heading2>Undertittel</Heading2>
+<Paragraph>Brødtekst</Paragraph>
+<BodyText>Body tekst</BodyText>
+<SmallText>Liten tekst</SmallText>
+<MicroText>Mikro tekst</MicroText>
+<EmphasizedText>Uthevet tekst</EmphasizedText>
+<StrongText>Sterk tekst</StrongText>
+<LinkText href="#" onClick={...}>Lenke</LinkText>
+<PreformattedText>Forhåndsformatert</PreformattedText>
+<DividerLine />
+<Wave />
+
+// 🎴 Cards
+<CardBase>Innhold</CardBase>
+
+// 📋 Lists
+<BulletList>
+    <BulletListItem>Punkt 1</BulletListItem>
+    <BulletListItem>Punkt 2</BulletListItem>
+</BulletList>
+<NumberedList>
+    <NumberedListItem>1. Første</NumberedListItem>
+    <NumberedListItem>2. Andre</NumberedListItem>
+</NumberedList>
+<CheckList>
+    <CheckListItem>Sjekkliste punkt</CheckListItem>
+</CheckList>
+<DescriptionList>
+    <DescriptionListTerm>Term</DescriptionListTerm>
+    <DescriptionListDescription>Beskrivelse</DescriptionListDescription>
+</DescriptionList>
+
+// 🏷️ Chips & Badges
+<Badge>Badge</Badge>
+<Chip>Chip</Chip>
+<ChipRemovable onRemove={...}>Removable</ChipRemovable>
+<ChipSelectable selected={true}>Selectable</ChipSelectable>
+
+// 🎵 Accordion & Collapse
+<Accordion>
+    <AccordionItem heading="Tittel">Innhold</AccordionItem>
+</Accordion>
+<Collapse isOpen={true}>Kollapsert innhold</Collapse>
+
+// 🎨 Icons
+<Icon fileUrl="path/to/icon.svg" size="md" />
+
+// + React hooks
+useState, useEffect, useId
+```
+
+## 📝 Eksempler
+
+### Button størrelser
+```jsx
+<div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+    <PrimaryButton size="sm">Liten</PrimaryButton>
+    <PrimaryButton size="md">Medium</PrimaryButton>
+    <PrimaryButton size="lg">Stor</PrimaryButton>
+</div>
+```
+
+### Button tilstander
+```jsx
+<div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+    <PrimaryButton>Normal</PrimaryButton>
+    <PrimaryButton isDisabled>Deaktivert</PrimaryButton>
+    <PrimaryButton isLoading ariaLoadingMessage="Laster...">
+        Laster...
+    </PrimaryButton>
+</div>
+```
+
+### Interaktive eksempler
+```jsx
+function ButtonDemo() {
+    const [count, setCount] = useState(0);
+    const [loading, setLoading] = useState(false);
+    
+    const handleAsyncAction = async () => {
+        setLoading(true);
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        setLoading(false);
+        setCount(prev => prev + 1);
+    };
+    
+    return (
+        <div style={{ display: 'flex', gap: '12px', flexDirection: 'column' }}>
+            <p>Antall klikk: {count}</p>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                <PrimaryButton onClick={() => setCount(prev => prev + 1)}>
+                    Klikk meg (+1)
+                </PrimaryButton>
+                <SecondaryButton 
+                    onClick={handleAsyncAction}
+                    isLoading={loading}
+                >
+                    Asynkron handling
+                </SecondaryButton>
+                <ActionButton onClick={() => setCount(0)}>
+                    Reset
+                </ActionButton>
+            </div>
+        </div>
+    );
+}
+
+<ButtonDemo />
+```
+
+### Layout eksempler
+```jsx
+<div style={{ 
+    display: 'grid', 
+    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', 
+    gap: '16px',
+    padding: '24px',
+    backgroundColor: 'var(--ffe-color-background-subtle)',
+    borderRadius: '8px'
+}}>
+    <PrimaryButton>Hovedhandling</PrimaryButton>
+    <SecondaryButton>Sekundær</SecondaryButton>
+    <ActionButton>Handling</ActionButton>
+    <TertiaryButton>Lenke</TertiaryButton>
+</div>
+```
+
+## 🎨 Styling Tips
+
+### Bruke FFE design tokens
+```jsx
+<div style={{
+    padding: '24px',
+    backgroundColor: 'var(--ffe-color-background-subtle)',
+    borderRadius: '8px',
+    border: '1px solid var(--ffe-color-border-primary-subtle)'
+}}>
+    <PrimaryButton 
+        style={{ 
+            marginBottom: '12px',
+            display: 'block',
+            width: '100%'
+        }}
+    >
+        Full bredde knapp
+    </PrimaryButton>
+</div>
+```
+
+### Responsiv layout
+```jsx
+<div style={{
+    display: 'flex',
+    gap: '12px',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
+}}>
+    <PrimaryButton style={{ flex: '1', minWidth: '120px' }}>
+        Fleksibel
+    </PrimaryButton>
+    <SecondaryButton style={{ flex: '1', minWidth: '120px' }}>
+        Knapper
+    </SecondaryButton>
+</div>
+```
+
+## 🔧 Avanserte eksempler
+
+### Button med ikoner
+```jsx
+// Merk: For å bruke ikoner, må du importere dem i din app
+<div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+    <PrimaryButton>🚀 Med emoji</PrimaryButton>
+    <SecondaryButton>✨ Sparkle</SecondaryButton>
+    <ActionButton>⚡ Quick</ActionButton>
+</div>
+```
+
+### Formulær eksempel
+```jsx
+function FormExample() {
+    const [email, setEmail] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 2000);
+    };
+    
+    return (
+        <form onSubmit={handleSubmit} style={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            gap: '16px',
+            maxWidth: '300px'
+        }}>
+            <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Din e-post"
+                style={{
+                    padding: '12px',
+                    border: '1px solid var(--ffe-color-border-primary-subtle)',
+                    borderRadius: '4px'
+                }}
+            />
+            <div style={{ display: 'flex', gap: '8px' }}>
+                <PrimaryButton 
+                    type="submit"
+                    isDisabled={!email || submitted}
+                >
+                    {submitted ? 'Sendt!' : 'Send'}
+                </PrimaryButton>
+                <SecondaryButton 
+                    type="button"
+                    onClick={() => setEmail('')}
+                >
+                    Tøm
+                </SecondaryButton>
+            </div>
+        </form>
+    );
+}
+
+<FormExample />
+```
+
+## 📚 Hvor finne Live Code Editorers
+
+### Individuelle komponenter
+- **PrimaryButton**: `Komponenter/Buttons/PrimaryButton` → "LiveCodeEditor" story
+- **SecondaryButton**: Kan lages ved å følge PrimaryButton mønsteret
+- **ActionButton**: Kan lages ved å følge PrimaryButton mønsteret
+- **TertiaryButton**: Kan lages ved å følge PrimaryButton mønsteret
+
+### Omfattende editor
+- **Alle buttons**: `Komponenter/Buttons/Live Code Editor` → Inkluderer alle button-typer
+
+## 🛠️ Lage egne Live Code Editorers
+
+For å lage en ny live code editor for en button, bruk generator-scriptet:
+
+```bash
+npm run generate:livecode ButtonName packages/ffe-buttons-react/src
+```
+
+Eller lag manuelt ved å følge dette mønsteret:
+
+```typescript
+import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
+import { YourButton } from './YourButton';
+
+export const LiveCodeEditor = createLiveCodeStory(YourButton, {
+    templates: {
+        simple: {
+            name: 'Enkelt',
+            icon: '📝',
+            code: `<YourButton size="md">
+    Klikk meg
+</YourButton>`
+        }
+    },
+    additionalComponents: {
+        YourButton
+    },
+    defaultTemplate: 'simple',
+    title: 'YourButton Live Code Editor'
+});
+```
+
+## 💡 Tips og triks
+
+1. **Bruk useState**: For interaktive eksempler
+2. **Bruk FFE design tokens**: For konsistent styling
+3. **Test responsivitet**: Bruk flexbox og grid
+4. **Kombiner komponenter**: Lag komplekse UI-patterns
+5. **Eksperimenter**: Live editoren er perfekt for utforsking!
+
+Happy coding! 🎉 

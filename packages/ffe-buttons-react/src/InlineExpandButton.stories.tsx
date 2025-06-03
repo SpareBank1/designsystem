@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { InlineExpandButton } from './InlineExpandButton';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import { Paragraph } from '@sb1/ffe-core-react';
+import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 
 const Custom: React.FC<React.ComponentProps<'a'>> = props => (
     <a {...props}>
@@ -88,3 +89,126 @@ export const Standard: Story = {
         );
     },
 };
+
+export const LiveCodeEditor: Story = createLiveCodeStory(InlineExpandButton, {
+    templates: {
+        simple: {
+            name: 'Enkelt',
+            icon: '📝',
+            code: `() => {
+    const [expanded, setExpanded] = useState(false);
+    
+    return (
+        <Paragraph>
+            Dette er en tekst med utvidet innhold.
+            <InlineExpandButton 
+                isExpanded={expanded}
+                onClick={() => setExpanded(!expanded)}
+            >
+                {expanded ? 'Vis mindre' : 'Vis mer'}
+            </InlineExpandButton>
+        </Paragraph>
+    );
+}`
+        },
+        withCollapse: {
+            name: 'Med Collapse',
+            icon: '📋',
+            code: `() => {
+    const [expanded, setExpanded] = useState(false);
+    const collapseId = useId();
+    
+    return (
+        <div>
+            <Paragraph>
+                Jeg samtykker til at selskapene i SpareBank 1 deler og
+                benytter opplysningene om meg, slik at jeg kan få bedre og
+                relevante tilbud.
+                <InlineExpandButton
+                    aria-controls={collapseId}
+                    aria-expanded={expanded}
+                    isExpanded={expanded}
+                    onClick={() => setExpanded(!expanded)}
+                >
+                    {expanded ? 'Vis mindre' : 'Vis mer'}
+                </InlineExpandButton>
+            </Paragraph>
+
+            <Collapse id={collapseId} isOpen={expanded} role="region">
+                <div style={{ 
+                    padding: '16px', 
+                    backgroundColor: 'var(--ffe-color-background-subtle)',
+                    borderRadius: '4px',
+                    marginTop: '8px'
+                }}>
+                    <Paragraph>
+                        Dette er det utvidede innholdet som vises når brukeren 
+                        klikker "Vis mer". Her kan du legge inn mer detaljert 
+                        informasjon som ikke er nødvendig å vise som standard.
+                    </Paragraph>
+                </div>
+            </Collapse>
+        </div>
+    );
+}`
+        },
+        multiple: {
+            name: 'Flere seksjoner',
+            icon: '📑',
+            code: `() => {
+    const [section1, setSection1] = useState(false);
+    const [section2, setSection2] = useState(false);
+    
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div>
+                <Heading4>Seksjon 1</Heading4>
+                <Paragraph>
+                    Dette er første seksjon med kort innhold.
+                    <InlineExpandButton 
+                        isExpanded={section1}
+                        onClick={() => setSection1(!section1)}
+                    >
+                        {section1 ? 'Vis mindre' : 'Les mer'}
+                    </InlineExpandButton>
+                </Paragraph>
+                <Collapse isOpen={section1}>
+                    <BodyText style={{ marginTop: '8px', fontStyle: 'italic' }}>
+                        Utvidet innhold for første seksjon...
+                    </BodyText>
+                </Collapse>
+            </div>
+            
+            <div>
+                <Heading4>Seksjon 2</Heading4>
+                <Paragraph>
+                    Dette er andre seksjon med annet innhold.
+                    <InlineExpandButton 
+                        isExpanded={section2}
+                        onClick={() => setSection2(!section2)}
+                    >
+                        {section2 ? 'Lukk' : 'Utvid'}
+                    </InlineExpandButton>
+                </Paragraph>
+                <Collapse isOpen={section2}>
+                    <BulletList style={{ marginTop: '8px' }}>
+                        <BulletListItem>Punkt 1 i utvidet innhold</BulletListItem>
+                        <BulletListItem>Punkt 2 med mer informasjon</BulletListItem>
+                        <BulletListItem>Punkt 3 for fullstendighet</BulletListItem>
+                    </BulletList>
+                </Collapse>
+            </div>
+        </div>
+    );
+}`
+        }
+    },
+    additionalComponents: {
+        InlineExpandButton,
+        Collapse,
+        Paragraph
+    },
+    defaultTemplate: 'simple',
+    title: 'InlineExpandButton Live Code Editor',
+    description: 'Test InlineExpandButton komponenten interaktivt! Perfekt for utvidbar tekst og seksjoner.'
+}); 
