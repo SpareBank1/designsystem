@@ -4,7 +4,6 @@ import { render, screen } from '@testing-library/react';
 
 const defaultProps = {
     thin: false,
-    ariaLabel: 'A group of buttons',
 };
 
 const renderButtonGroup = (props?: Partial<ButtonGroupProps>) =>
@@ -53,13 +52,19 @@ describe('<ButtonGroup />', () => {
         expect(buttonGroup.classList.contains('my-class')).toBe(true);
     });
 
-    it('should use aria-label', () => {
+    it('should set aria-label when included as prop', () => {
         renderButtonGroup({
-            ariaLabel: 'My amazing buttons',
+            ariaLabel: 'Skjemakontroller',
         });
         const buttonGroup = screen.getByRole('group');
         expect(buttonGroup.getAttribute('aria-label')).toBe(
-            'My amazing buttons',
+            'Skjemakontroller',
         );
+    });
+
+    it('should not set aria-label when not included as prop', () => {
+        renderButtonGroup();
+        const buttonGroup = screen.getByRole('group');
+        expect(buttonGroup.getAttribute('aria-label')).toBeNull();
     });
 });

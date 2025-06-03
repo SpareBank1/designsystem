@@ -12,3 +12,16 @@ ButtonGroup hjelper deg med å samle alle knappene og få de på en rad. På min
 
 <Canvas of={ButtonGroupStories.Standard} />
 <Controls of={ButtonGroupStories.Standard} />
+
+### Mindre margin
+`thin` fjerner marginen rundt knappegruppen.
+<Canvas of={ButtonGroupStories.Condensed} />
+<Controls of={ButtonGroupStories.Condensed} />
+
+### Med Aria-label
+`ariaLabel` (eller `aria-label`) er ikke påkrevd, men det anbefales å ha med der det gir mening. For eksempel kan det være nyttig å inkludere
+"Skjemakontroller" eller "Skjemaknapper" der knappene er en del av et skjema, så det blir lettere å finne for en bruker med skjermleser. Noen ganger er det nok
+at det ligger i en gruppe, og man trenger ikke `aria-label`.
+
+<Canvas of={ButtonGroupStories.WithAriaLabel} />
+<Controls of={ButtonGroupStories.WithAriaLabel} />

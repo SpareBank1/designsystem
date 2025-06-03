@@ -14,8 +14,33 @@ export default meta;
 type Story = StoryObj<typeof ButtonGroup>;
 
 export const Standard: Story = {
+    args: {},
+    render: args => (
+        <ButtonGroup {...args}>
+            <SecondaryButton>Forrige</SecondaryButton>
+            <PrimaryButton>Neste</PrimaryButton>
+            <TertiaryButton>Avbryt</TertiaryButton>
+        </ButtonGroup>
+    ),
+};
+
+export const WithAriaLabel: Story = {
     args: {
         ariaLabel: 'Knappegruppe',
+    },
+    render: args => (
+        <ButtonGroup {...args}>
+            <SecondaryButton>Forrige</SecondaryButton>
+            <PrimaryButton>Neste</PrimaryButton>
+            <TertiaryButton>Avbryt</TertiaryButton>
+        </ButtonGroup>
+    ),
+};
+
+export const Condensed: Story = {
+    args: {
+        thin: true,
+        ariaLabel: 'Eksempel knappegruppe',
     },
     render: args => (
         <ButtonGroup {...args}>
