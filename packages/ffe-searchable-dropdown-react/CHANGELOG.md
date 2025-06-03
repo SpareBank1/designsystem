@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.2.13...@sb1/ffe-searchable-dropdown-react@23.2.14) (2025-06-03)
+
+
+### Bug Fixes
+
+* **ffe-searchable-downdown-react:** remove double var ([398a133](https://github.com/SpareBank1/designsystem/commit/398a133d48baadb7a0d21af7ec94d671a6cecbb1))
+
+
+
+
+
 ## [23.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.2.12...@sb1/ffe-searchable-dropdown-react@23.2.13) (2025-05-28)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

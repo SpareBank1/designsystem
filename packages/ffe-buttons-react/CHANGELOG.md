@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.3.17...@sb1/ffe-buttons-react@24.4.0) (2025-06-03)
+
+
+### Features
+
+* **ffe-buttons-react:** ariaLabel er ikke lenger en påkrevd prop ([499c305](https://github.com/SpareBank1/designsystem/commit/499c3054fc6db94d7d9b671931cb9fbd104e90b9))
+
+
+
+
+
 ## [24.3.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.3.16...@sb1/ffe-buttons-react@24.3.17) (2025-05-28)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
