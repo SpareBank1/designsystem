@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [32.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.9...@sb1/ffe-form@32.1.10) (2025-06-03)
+
+
+### Bug Fixes
+
+* **ffe-form:** holder av plass til tooltip i label ([6ec86f9](https://github.com/SpareBank1/designsystem/commit/6ec86f9e216ac9274b696bc82d66e2c7e8ac4f49))
+
+
+
+
+
 ## [32.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.8...@sb1/ffe-form@32.1.9) (2025-05-27)
 
 
