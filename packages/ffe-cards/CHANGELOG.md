@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@23.1.5...@sb1/ffe-cards@23.1.6) (2025-06-04)
+
+
+### Bug Fixes
+
+* **ffe-cards:** var(inherit) is invalid css ([f222fc6](https://github.com/SpareBank1/designsystem/commit/f222fc6bcc40604e23cb9c0ddb55b544f7476dcc))
+
+
+
+
+
 ## [23.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@23.1.4...@sb1/ffe-cards@23.1.5) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-cards
