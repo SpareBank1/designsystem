@@ -99,15 +99,31 @@ export const LiveCodeEditor: Story = createLiveCodeStory(InlineExpandButton, {
     const [expanded, setExpanded] = useState(false);
     
     return (
-        <Paragraph>
-            Dette er en tekst med utvidet innhold.
-            <InlineExpandButton 
-                isExpanded={expanded}
-                onClick={() => setExpanded(!expanded)}
-            >
-                {expanded ? 'Vis mindre' : 'Vis mer'}
-            </InlineExpandButton>
-        </Paragraph>
+        <div>
+            <Paragraph>
+                Dette er en tekst med utvidet innhold.
+                <InlineExpandButton 
+                    isExpanded={expanded}
+                    onClick={() => setExpanded(!expanded)}
+                >
+                    {expanded ? 'Vis mindre' : 'Vis mer'}
+                </InlineExpandButton>
+            </Paragraph>
+            
+            <Collapse isOpen={expanded}>
+                <div style={{ 
+                    padding: '12px', 
+                    backgroundColor: 'var(--ffe-color-background-subtle)',
+                    borderRadius: '4px',
+                    marginTop: '8px'
+                }}>
+                    <BodyText>
+                        Her er det utvidede innholdet som vises når du klikker "Vis mer". 
+                        Dette kan inneholde ekstra informasjon, detaljer eller annen relevant tekst.
+                    </BodyText>
+                </div>
+            </Collapse>
+        </div>
     );
 }`
         },
@@ -146,6 +162,11 @@ export const LiveCodeEditor: Story = createLiveCodeStory(InlineExpandButton, {
                         klikker "Vis mer". Her kan du legge inn mer detaljert 
                         informasjon som ikke er nødvendig å vise som standard.
                     </Paragraph>
+                    <Paragraph>
+                        Du kan ha flere avsnitt og annet innhold her. Informasjonen
+                        kan være juridiske detaljer, tekniske spesifikasjoner, eller
+                        andre utdypende forklaringer.
+                    </Paragraph>
                 </div>
             </Collapse>
         </div>
@@ -162,9 +183,9 @@ export const LiveCodeEditor: Story = createLiveCodeStory(InlineExpandButton, {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div>
-                <Heading4>Seksjon 1</Heading4>
+                <Heading4>Seksjon 1: Produktinformasjon</Heading4>
                 <Paragraph>
-                    Dette er første seksjon med kort innhold.
+                    Dette er første seksjon med kort innhold om produktet.
                     <InlineExpandButton 
                         isExpanded={section1}
                         onClick={() => setSection1(!section1)}
@@ -173,16 +194,25 @@ export const LiveCodeEditor: Story = createLiveCodeStory(InlineExpandButton, {
                     </InlineExpandButton>
                 </Paragraph>
                 <Collapse isOpen={section1}>
-                    <BodyText style={{ marginTop: '8px', fontStyle: 'italic' }}>
-                        Utvidet innhold for første seksjon...
-                    </BodyText>
+                    <div style={{ 
+                        padding: '12px', 
+                        backgroundColor: 'var(--ffe-color-background-subtle)',
+                        borderRadius: '4px',
+                        marginTop: '8px'
+                    }}>
+                        <BodyText style={{ fontStyle: 'italic' }}>
+                            Utvidet innhold for første seksjon med detaljert produktinformasjon,
+                            spesifikasjoner og bruksområder. Her kan du lese om alle funksjonene
+                            og hvordan produktet kan hjelpe deg.
+                        </BodyText>
+                    </div>
                 </Collapse>
             </div>
             
             <div>
-                <Heading4>Seksjon 2</Heading4>
+                <Heading4>Seksjon 2: Priser og vilkår</Heading4>
                 <Paragraph>
-                    Dette er andre seksjon med annet innhold.
+                    Dette er andre seksjon med informasjon om priser.
                     <InlineExpandButton 
                         isExpanded={section2}
                         onClick={() => setSection2(!section2)}
@@ -191,11 +221,19 @@ export const LiveCodeEditor: Story = createLiveCodeStory(InlineExpandButton, {
                     </InlineExpandButton>
                 </Paragraph>
                 <Collapse isOpen={section2}>
-                    <BulletList style={{ marginTop: '8px' }}>
-                        <BulletListItem>Punkt 1 i utvidet innhold</BulletListItem>
-                        <BulletListItem>Punkt 2 med mer informasjon</BulletListItem>
-                        <BulletListItem>Punkt 3 for fullstendighet</BulletListItem>
-                    </BulletList>
+                    <div style={{ 
+                        padding: '12px', 
+                        backgroundColor: 'var(--ffe-color-background-subtle)',
+                        borderRadius: '4px',
+                        marginTop: '8px'
+                    }}>
+                        <BulletList>
+                            <BulletListItem>Startpris: Fra 299 kr/måned</BulletListItem>
+                            <BulletListItem>Ingen bindingstid eller oppstartsavgift</BulletListItem>
+                            <BulletListItem>Kan sies opp når som helst</BulletListItem>
+                            <BulletListItem>Tilgang til alle premium-funksjoner</BulletListItem>
+                        </BulletList>
+                    </div>
                 </Collapse>
             </div>
         </div>
