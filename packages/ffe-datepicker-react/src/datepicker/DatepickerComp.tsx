@@ -431,6 +431,8 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     selectedDate={calendarActiveDate}
                     focusOnMount={true}
                     dropdownCaption={dropdownCaption}
+                    minDate={minDate}
+                    maxDate={maxDate}
                 />
             )}
 

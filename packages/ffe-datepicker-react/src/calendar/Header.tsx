@@ -22,6 +22,10 @@ interface HeaderProps {
     locale: Locale;
     /** Navigasjons-handler når måned/år endres direkte */
     onMonthYearChange?: (month: number, year: number) => void;
+    /** Tidligste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown */
+    minDate?: string | null;
+    /** Seneste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown */
+    maxDate?: string | null;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -38,12 +42,14 @@ export const Header: React.FC<HeaderProps> = ({
     dropdownCaption = false,
     locale,
     onMonthYearChange,
+    minDate,
+    maxDate,
 }) => {
     const arrowBackIosIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0zNjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzZxLTExLjkyMiAxMS45MjMtMjguMDc2IDExLjkyM3QtMjguMDc2LTExLjkyM0wzMDUuMDc4LTQyOC43N3EtMTAuODQ3LTEwLjg0Ni0xNi4wNzctMjQuMzA3LTUuMjMxLTEzLjQ2Mi01LjIzMS0yNi45MjMgMC0xMy40NjEgNS4yMzEtMjYuOTIzIDUuMjMtMTMuNDYxIDE2LjA3Ny0yNC4zMDdsMzA2Ljg0Ni0zMDYuODQ2cTExLjkyMi0xMS45MjMgMjguMzg0LTExLjYxNiAxNi40NjEuMzA4IDI4LjM4NCAxMi4yMzEgMTEuOTIzIDExLjkyMyAxMS45MjMgMjguMDc2IDAgMTYuMTU0LTExLjkyMyAyOC4wNzdMMzY3LjM4NC00ODBaIi8+PC9zdmc+';
 
     const monthOptions = getMonthOptions(locale);
-    const yearOptions = getYearOptions();
+    const yearOptions = getYearOptions(minDate, maxDate);
 
     const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedMonth = parseInt(e.target.value, 10);

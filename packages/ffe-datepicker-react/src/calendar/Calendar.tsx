@@ -19,6 +19,10 @@ export interface CalendarProps {
     focusOnMount?: boolean;
     /** Om måned- og år-dropdown skal vises i kalenderen */
     dropdownCaption?: boolean;
+    /** Tidligste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown */
+    minDate?: string | null;
+    /** Seneste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown */
+    maxDate?: string | null;
 }
 
 interface State {
@@ -309,6 +313,8 @@ export class Calendar extends Component<CalendarProps, State> {
                         locale={this.props.locale}
                         dropdownCaption={this.props.dropdownCaption}
                         onMonthYearChange={(month, year) => this.navigateToMonthYear(month, year)}
+                        minDate={this.props.minDate}
+                        maxDate={this.props.maxDate}
                     />
                     <table
                         className="ffe-calendar__grid"

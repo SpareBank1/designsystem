@@ -22,14 +22,30 @@ export const getMonthOptions = (locale: Locale) => {
 };
 
 /**
- * Generates year options for dropdown selection
+ * Generates year options based on min and max dates, or defaults to standard range
  */
-export const getYearOptions = () => {
+export const getYearOptions = (minDate?: string | null, maxDate?: string | null) => {
     const currentYear = new Date().getFullYear();
     
-    // Standard range: 6 years backward and 2 years forward
-    const minYear = currentYear - 6;
-    const maxYear = currentYear + 2;
+    // Default range: 6 years backward and 2 years forward
+    let minYear = currentYear - 6;
+    let maxYear = currentYear + 2;
+    
+    // Use minDate year if provided
+    if (minDate) {
+        const minDateObj = getSimpleDateFromString(minDate);
+        if (minDateObj) {
+            minYear = minDateObj.year;
+        }
+    }
+
+    // Use maxDate year if provided  
+    if (maxDate) {
+        const maxDateObj = getSimpleDateFromString(maxDate);
+        if (maxDateObj) {
+            maxYear = maxDateObj.year;
+        }
+    }
 
     const years = [];
     for (let i = minYear; i <= maxYear; i++) {

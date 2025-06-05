@@ -16,6 +16,8 @@ export const Standard: Story = {
     args: {
         locale: 'nb',
         labelId: 'datepicker-label',
+        minDate: '01.01.2020',
+        maxDate: '31.12.2030',
     },
     render: function Render({ value, onChange, ...args }: DatepickerProps) {
         const [date, setDate] = useState('01.12.2024');

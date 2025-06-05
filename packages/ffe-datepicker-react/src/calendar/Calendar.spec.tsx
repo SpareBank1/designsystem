@@ -12,6 +12,8 @@ describe('Calendar', () => {
         onDatePicked: mockDatePicked,
         selectedDate: '15.05.2025',
         focusOnMount: false,
+        minDate: '01.01.2020' as string | null,
+        maxDate: '31.12.2030' as string | null,
     };
 
     beforeEach(() => {
