@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.2.9...@sb1/ffe-cards-react@19.2.10) (2025-06-05)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** clean up dep to fix documentation ([8ac3f54](https://github.com/SpareBank1/designsystem/commit/8ac3f540364fc87a5e973abaab58dd6fb26c5927))
+
+
+
+
+
 ## [19.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@19.2.8...@sb1/ffe-cards-react@19.2.9) (2025-06-04)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
