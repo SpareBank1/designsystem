@@ -7,37 +7,6 @@
     padding: 2px 0;
 }
 
-.ffe-calendar__month-dropdown,
-.ffe-calendar__year-dropdown {
-    .ffe-searchable-dropdown {
-        // Override default height for compact calendar display
-        min-height: auto;
-
-        .ffe-searchable-dropdown__input {
-            // Compact padding for calendar context
-            padding: 8px 12px;
-
-            input {
-                // Center text for month/year display
-                text-align: center;
-                cursor: pointer;
-            }
-        }
-
-        .ffe-searchable-dropdown__list {
-            // Limit height to prevent calendar overflow
-            max-height: 200px;
-            overflow-y: auto;
-        }
-
-        .ffe-searchable-dropdown__list-item-body {
-            // Compact padding and center text
-            padding: var(--ffe-spacing-2xs);
-            text-align: center;
-        }
-    }
-}
-
 // Minimum widths for consistent dropdown sizes
 .ffe-calendar__month-select {
     min-width: 140px;
