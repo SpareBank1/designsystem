@@ -9,6 +9,7 @@ import purgecss from '@fullhuman/postcss-purgecss';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig(async () => {
+    const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL;
     const config: UserConfig = {
         plugins: [
             react(),
@@ -44,7 +45,14 @@ export default defineConfig(async () => {
             },
         },
         resolve: {
-            alias: {
+            alias: isProduction ? {
+                // Kun grunnleggende aliaser for produksjon
+                '@': resolve(__dirname, 'src'),
+                '@src': resolve(__dirname, 'src'),
+                '@components': resolve(__dirname, 'src/components'),
+                '@styles': resolve(__dirname, 'src/styles'),
+            } : {
+                // Full alias-oppsett for utvikling
                 '@': resolve(__dirname, 'src'),
                 '@src': resolve(__dirname, 'src'),
                 '@components': resolve(__dirname, 'src/components'),

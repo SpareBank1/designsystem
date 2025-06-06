@@ -11,6 +11,8 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "react-jsx",
+        "noImplicitAny": false,
+        "allowJs": true,
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -23,6 +25,6 @@
             "@styles/*": ["./src/styles/*"]
         }
     },
-    "include": ["src"],
+    "include": ["src", "src/types/**/*"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
