@@ -109,7 +109,7 @@ cat > index.html << EOF
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SBanky</title>
   </head>
-  <body>
+  <body class="ffe-body-text">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
@@ -124,93 +124,32 @@ npm pkg set scripts.build="tsc && vite build"
 npm pkg set scripts.preview="vite preview"
 ```
 
-### Vite config file with .less imports automated
-
-```ts
-// vite.config.ts
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
-import { glob } from 'glob';
-
-// Function to collect all FFE LESS imports
-async function collectFfeImports() {
-    try {
-        const nodeModulesPath = resolve(__dirname, 'node_modules/@sb1');
-        console.log('Searching for LESS files in:', nodeModulesPath);
-
-        const lessFiles = await glob('**/less/*.less', {
-            cwd: nodeModulesPath,
-            ignore: ['**/node_modules/**'],
-            absolute: false,
-        });
-
-        console.log('Found LESS files:', lessFiles);
-
-        // Start with core colors as it's a dependency for other components
-        const imports = ['@import "@sb1/ffe-core/less/colors";'];
-
-        // Add all other FFE imports, excluding core colors
-        for (const file of lessFiles) {
-            // Skip if it's colors.less since we already imported it
-            if (!file.includes('ffe-core/less/colors.less')) {
-                // Remove the .less extension for the import
-                const importPath = file.replace('.less', '');
-                imports.push(`@import "@sb1/${importPath}";`);
-            }
-        }
-
-        const finalImports = imports.join('\n');
-        console.log('Generated imports:', finalImports);
-
-        return finalImports;
-    } catch (error) {
-        console.error('Error collecting FFE imports:', error);
-        // Return just the core colors import as fallback
-        return '@import "@sb1/ffe-core/less/colors";';
-    }
-}
-
-export default defineConfig(async () => ({
-    plugins: [react()],
-    server: {
-        port: 3000,
-        open: true,
-    },
-    css: {
-        preprocessorOptions: {
-            less: {
-                javascriptEnabled: true,
-                math: 'always',
-                additionalData: await collectFfeImports(),
-            },
-        },
-    },
-    resolve: {
-        alias: {
-            '@': resolve(__dirname, './src'),
-            '@components': resolve(__dirname, './src/components'),
-            '@styles': resolve(__dirname, './src/styles'),
-        },
-    },
-    build: {
-        outDir: 'dist',
-        sourcemap: true,
-        rollupOptions: {
-            output: {
-                manualChunks: {
-                    'react-vendor': ['react', 'react-dom'],
-                    'sb1-core': ['@sb1/ffe-core', '@sb1/ffe-core-react'],
-                },
-            },
-        },
-    },
-}));
-
-```
-
-
 ### Start development server
 ```bash
 npm run dev
+```
+
+## Lokal Utvikling med FFE-pakker fra Kildekode
+
+For å fasilitere raskere utvikling og testing av endringer i FFE-pakkene direkte i denne eksempelapplikasjonen (`sbanky`), er Vite-konfigurasjonen satt opp med aliaser. Disse aliasene peker import av `@sb1/ffe-*`-pakker direkte til deres respektive kildekodemapper (`src`) i `../../packages/`-strukturen.
+
+**Hvordan det fungerer:**
+
+*   **Vite-aliaser:** I `vite.config.ts` og `vitest.config.ts` er det definert `resolve.alias` som mapper pakkenavn (f.eks. `@sb1/ffe-cards-react`) til den lokale stien til pakkens `src/index.ts` (eller tilsvarende inngangspunkt).
+*   **Kompilering på direkten:** Vite vil automatisk kompilere TypeScript-kildekoden fra disse lokale FFE-pakkene "on-the-fly" både for utviklingsserveren (`npm run dev`) og for tester (`npm run test`). Det er vanligvis ikke nødvendig å kjøre en separat build-prosess inne i hver FFE-pakke.
+*   **React-instans:** Aliaser er også satt opp for `react` og `react-dom` for å sikre at både `sbanky`-appen og de lokalt koblede FFE-pakkene bruker samme React-instans, noe som forhindrer vanlige feil knyttet til "invalid hook call" eller flere React-kopier.
+
+**Forutsetninger for at dette skal fungere:**
+
+1.  **Kildekode må eksistere:** Kildekodemappene for FFE-pakkene (f.eks. `../../packages/ffe-cards-react/src`) må eksistere og inneholde gyldig kode.
+2.  **Avhengigheter for FFE-pakker:** Hvis FFE-pakkene har egne, unike avhengigheter (utover det som løses av `sbanky`s `node_modules`), må disse være installert. I et typisk monorepo-oppsett med f.eks. `pnpm workspaces` eller `yarn workspaces`, vil en installasjon i rotmappen av designsystem-repoet håndtere dette. Hvis ikke, kan det være nødvendig å kjøre `npm install` i de individuelle `packages/ffe-*-react`-mappene hvis de har egne `package.json` med unike avhengigheter.
+3.  **Ingen spesielle "src"-populerende build-steg:** Oppsettet antar at `src`-mappen i FFE-pakkene inneholder den faktiske kildekoden, og ikke er avhengig av filer som genereres *inn i `src`* av et separat build-steg for den pakken. Standard FFE-pakker følger dette mønsteret.
+
+**Fjerning av `npm link`:**
+Med dette alias-baserte oppsettet er det vanligvis ikke lenger nødvendig (og kan til og med være problematisk) å bruke `npm link` for FFE-pakkene. Hvis du tidligere har linket pakker, anbefales det å fjerne disse linkene (`npm unlink <pakke>`) og deretter slette `node_modules` og `package-lock.json` i `sbanky` og kjøre `npm install` på nytt.
+
+**Feilsøking:**
+*   Hvis du får "module not found"-feil relatert til en FFE-pakke, sjekk at aliaset er korrekt i `vite.config.ts` / `vitest.config.ts` og at den angitte kildekodestien er gyldig.
+*   Hvis du opplever feil relatert til React (f.eks. `useRef is null` eller "invalid hook call"), dobbeltsjekk at React-aliasene er korrekte og at det ikke er flere versjoner av React som lastes.
+
 ```bash

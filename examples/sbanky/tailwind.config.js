@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import colors from '@sb1/ffe-core/lib/colors.js';
-import { greyCharcoalDarkmode } from '@sb1/ffe-core/lib/colors-deprecated.js';
+import ffeSemanticColors from '@sb1/ffe-core/lib/semanticColorsTailwind.js';
 
 export default {
   content: [
@@ -11,9 +11,9 @@ export default {
   theme: {
     colors: {
       ...colors,
+      ...ffeSemanticColors,
       inherit: 'inherit',
       transparent: 'transparent',
-      fargeBeksvart: greyCharcoalDarkmode
     },
     screens: {
       sm: '480px',
