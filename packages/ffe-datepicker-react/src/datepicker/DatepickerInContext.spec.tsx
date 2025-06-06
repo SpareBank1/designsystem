@@ -9,7 +9,7 @@ const defaultProps = {
     onChange: () => {},
     locale: 'nb' as const,
     labelId: 'datepicker-label',
-    maxDate: '31.12.2128',
+    maxDate: '31.12.2030',
 };
 
 const renderDatePicker = (props?: Partial<DatepickerProps>) =>

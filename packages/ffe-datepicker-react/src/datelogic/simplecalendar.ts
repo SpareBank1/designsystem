@@ -37,29 +37,14 @@ function firstDayOfMonth(simpledate: SimpleDate) {
     return clone.day;
 }
 
-function isDateWithinMinMax(
-    date: SimpleDate,
-    minDate: SimpleDate | null,
-    maxDate: SimpleDate | null,
-) {
-    if (minDate && date.isBefore(minDate)) {
-        return false;
-    }
-    return !(maxDate && date.isAfter(maxDate));
-}
-
 export class SimpleCalendar {
     locale: Locale;
     focusedDate: SimpleDate;
     selectedDate?: SimpleDate | null;
-    minDate: SimpleDate | null;
-    maxDate: SimpleDate | null;
     firstDay: number;
 
     constructor(
         initialDate?: SimpleDate | null,
-        minDate?: string | null,
-        maxDate?: string | null,
         locale: Locale = 'nb',
     ) {
         this.locale = locale;
@@ -67,8 +52,6 @@ export class SimpleCalendar {
             ? initialDate.clone()
             : getSimpleDateToday();
         this.selectedDate = initialDate ? initialDate.clone() : initialDate;
-        this.minDate = minDate ? getSimpleDateFromString(minDate) : null;
-        this.maxDate = maxDate ? getSimpleDateFromString(maxDate) : null;
 
         // Settings
         this.firstDay = i18n[locale].FIRST_DAY_OF_WEEK;
@@ -149,7 +132,7 @@ export class SimpleCalendar {
     }
 
     public isDateWithinDateRange(date: SimpleDate) {
-        return isDateWithinMinMax(date, this.minDate, this.maxDate);
+        return true; // Always allow all dates
     }
 
     public selectTimestamp(timestamp: number) {
@@ -206,11 +189,7 @@ export class SimpleCalendar {
                     isSelected:
                         !!this.selectedDate &&
                         currentDate.equal(this.selectedDate),
-                    isEnabled: isDateWithinMinMax(
-                        currentDate,
-                        this.minDate,
-                        this.maxDate,
-                    ),
+                    isEnabled: true, // Always enable all dates
                 };
                 week.dates.push(date);
                 currentDate.adjust({ period: 'D', offset: 1 });
