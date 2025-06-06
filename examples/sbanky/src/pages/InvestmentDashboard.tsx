@@ -1,4 +1,3 @@
-import React from 'react';
 import { GridRow, GridCol } from '@sb1/ffe-grid-react';
 import { Heading1, Heading2 } from '@sb1/ffe-core-react';
 import { ChartDonut } from '@sb1/ffe-chart-donut-react';

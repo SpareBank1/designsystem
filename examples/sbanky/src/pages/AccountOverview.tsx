@@ -1,7 +1,7 @@
 import { useState, useRef, useId } from 'react';
 import { clsx } from 'clsx';
 import { GridRow, GridCol } from '@sb1/ffe-grid-react';
-import { Heading1, Heading2, Paragraph } from '@sb1/ffe-core-react';
+import { Heading2, Paragraph } from '@sb1/ffe-core-react';
 import {
     Table,
     TableHead,
