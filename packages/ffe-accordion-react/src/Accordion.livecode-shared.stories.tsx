@@ -4,12 +4,12 @@ import { AccordionItem } from './AccordionItem';
 import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 
 const meta: Meta<typeof Accordion> = {
-    title: 'Komponenter/Accordion/Live Code Editor (Shared)',
+    title: 'Komponenter/Accordion/Live Code Editor',
     component: Accordion,
     parameters: {
         docs: {
             description: {
-                component: 'Eksempel på bruk av den delte live code editor komponenten.',
+                component: 'Interaktiv live code editor for Accordion komponenten med syntax highlighting og real-time preview.',
             },
         },
     },
