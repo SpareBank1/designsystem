@@ -28,19 +28,33 @@ export interface DatepickerCompProps {
     ariaInvalid?: React.ComponentProps<'input'>['aria-invalid'];
     'aria-describedby'?: React.ComponentProps<'input'>['aria-describedby'];
     ariaDescribedby?: React.ComponentProps<'input'>['aria-describedby'];
-    /** Triggered when focus leaves one of the fields (dd, mm, yyyy), and the next focused element is not one of these fields.*/
+    /** Trigges når fokus forlater et av feltene (dd, mm, yyyy), og neste fokuserte element ikke er et av disse feltene. */
     onBlur?: (evt: React.FocusEvent<HTMLElement>) => void;
     calendarAbove?: boolean;
     id?: string;
-    /* Latest allowed date. With format 'dd.mm.yyyy'*/
+    /** 
+     * Seneste tillatte dato. Format: 'dd.mm.yyyy'
+     * 
+     * Merk: For å holde år-dropdownen håndterbar, begrenses årsintervallet automatisk til
+     * maksimalt 10 år bakover eller fremover fra inneværende år, selv om minDate/maxDate
+     * tillater et bredere intervall.
+     */
     maxDate?: string | null;
-    /* Earliest allowed date. With format 'dd.mm.yyyy'*/
+    /** 
+     * Tidligste tillatte dato. Format: 'dd.mm.yyyy'
+     * 
+     * Merk: For å holde år-dropdownen håndterbar, begrenses årsintervallet automatisk til
+     * maksimalt 10 år bakover eller fremover fra inneværende år, selv om minDate/maxDate
+     * tillater et bredere intervall.
+     */
     minDate?: string | null;
     onChange: (date: string) => void;
     fullWidth?: boolean;
     fieldMessage?: string | null;
-    /** Id of the label describing the datepicker. Required for UU-compatibility */
+    /** Id til labelen som beskriver datepicker. Påkrevd for UU-kompatibilitet */
     labelId: string;
+    /** Om måned- og år-dropdown skal vises i kalenderen */
+    dropdownCaption?: boolean;
 }
 
 export const DatepickerComp: React.FC<DatepickerCompProps> = ({
@@ -57,6 +71,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     fullWidth,
     fieldMessage,
     labelId,
+    dropdownCaption,
 }) => {
     const {
         day,
@@ -410,11 +425,12 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                         { 'ffe-calendar--datepicker--above': calendarAbove },
                     )}
                     locale={locale}
-                    maxDate={maxDate}
-                    minDate={minDate}
                     onDatePicked={datePickedHandler}
                     selectedDate={calendarActiveDate}
                     focusOnMount={true}
+                    dropdownCaption={dropdownCaption}
+                    minDate={minDate}
+                    maxDate={maxDate}
                 />
             )}
 
