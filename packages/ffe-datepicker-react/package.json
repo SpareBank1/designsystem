@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-datepicker-react",
-    "version": "10.3.16",
+    "version": "10.4.0",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -24,7 +24,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-datepicker": "^14.1.10",
+        "@sb1/ffe-datepicker": "^14.2.0",
         "@sb1/ffe-form": "^32.1.10",
         "@sb1/ffe-form-react": "^23.3.14",
         "@sb1/ffe-icons-react": "^12.0.5",

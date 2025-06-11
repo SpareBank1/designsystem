@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.1.10...@sb1/ffe-datepicker@14.2.0) (2025-06-11)
+
+
+### Features
+
+* **ffe-datepicker-react:** add dropdown for year and month in calendar ([8a5f826](https://github.com/SpareBank1/designsystem/commit/8a5f8262faa0587e1cb7972ce48bad69e4fd5b32))
+
+
+
+
+
 ## [14.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.1.9...@sb1/ffe-datepicker@14.1.10) (2025-06-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
