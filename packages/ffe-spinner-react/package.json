@@ -24,7 +24,8 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-spinner": "^6.0.25"
+        "@sb1/ffe-spinner": "^6.0.25",
+        "classnames": "^2.5.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1",

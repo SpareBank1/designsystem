@@ -29,6 +29,7 @@
         "@sb1/ffe-core-react": "^10.1.8",
         "@sb1/ffe-feedback": "^4.1.7",
         "@sb1/ffe-form-react": "^23.3.14",
+        "@sb1/ffe-icons-react": "^12.0.5",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
