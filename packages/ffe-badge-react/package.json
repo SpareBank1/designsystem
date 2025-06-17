@@ -33,7 +33,8 @@
     },
     "dependencies": {
         "@sb1/ffe-badge": "^1.1.5",
-        "@sb1/ffe-core": "^32.0.5"
+        "@sb1/ffe-core": "^32.0.5",
+        "classnames": "^2.5.1"
     },
     "peerDependencies": {
         "react": ">=18.2.0"
