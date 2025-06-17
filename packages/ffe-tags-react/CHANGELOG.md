@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags-react@1.1.8...@sb1/ffe-tags-react@1.1.9) (2025-06-17)
+
+
+### Bug Fixes
+
+* **ffe-tags-react:** legger til manglende dep classnames ([de954e0](https://github.com/SpareBank1/designsystem/commit/de954e0bc6745f58bf7d5eadafbfc54ab9211884))
+
+
+
+
+
 ## [1.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags-react@1.1.7...@sb1/ffe-tags-react@1.1.8) (2025-06-05)
 
 

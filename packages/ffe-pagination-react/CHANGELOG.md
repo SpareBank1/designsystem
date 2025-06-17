@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.90](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.89...@sb1/ffe-pagination-react@1.2.90) (2025-06-17)
+
+
+### Bug Fixes
+
+* **ffe-pagination-react:** legger til manglende deps classnames og ffe-core ([4fdc62d](https://github.com/SpareBank1/designsystem/commit/4fdc62db9e57c5522ee5da3b632d354ea11f83aa))
+
+
+
+
+
 ## [1.2.89](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.88...@sb1/ffe-pagination-react@1.2.89) (2025-06-03)
 
 **Note:** Version bump only for package @sb1/ffe-pagination-react

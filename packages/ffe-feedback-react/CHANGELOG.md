@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.19...@sb1/ffe-feedback-react@6.1.20) (2025-06-17)
+
+
+### Bug Fixes
+
+* **ffe-feedback-react:** legger til manglende dep ffe-icons-react ([8727ab3](https://github.com/SpareBank1/designsystem/commit/8727ab32ea37b0ffa947e79865ba0c3f96aca648))
+
+
+
+
+
 ## [6.1.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.18...@sb1/ffe-feedback-react@6.1.19) (2025-06-03)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

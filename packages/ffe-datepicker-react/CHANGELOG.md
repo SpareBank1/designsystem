@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.4.0...@sb1/ffe-datepicker-react@10.4.1) (2025-06-17)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** legger til manglende dependency til ffe-dropdown-react ([e559d5e](https://github.com/SpareBank1/designsystem/commit/e559d5e44f545e873110c452ebe7617d372ed2b9))
+
+
+
+
+
 # [10.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.3.16...@sb1/ffe-datepicker-react@10.4.0) (2025-06-11)
 
 

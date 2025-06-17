@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.60](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.59...@sb1/ffe-tables-react@11.0.60) (2025-06-17)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** legger til manglende dep ffe-core-react ([a3bad62](https://github.com/SpareBank1/designsystem/commit/a3bad62936bfb190d6c35ba734eda8285bdedc7a))
+
+
+
+
+
 ## [11.0.59](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.58...@sb1/ffe-tables-react@11.0.59) (2025-05-28)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

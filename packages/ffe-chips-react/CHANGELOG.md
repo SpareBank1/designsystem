@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.36...@sb1/ffe-chips-react@2.0.37) (2025-06-17)
+
+
+### Bug Fixes
+
+* **ffe-chips-react:** legger til manglende dep classnames ([afcbe5f](https://github.com/SpareBank1/designsystem/commit/afcbe5f0a4928904475f2d05706aa20d4670cc21))
+
+
+
+
+
 ## [2.0.36](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.35...@sb1/ffe-chips-react@2.0.36) (2025-05-28)
 
 **Note:** Version bump only for package @sb1/ffe-chips-react
