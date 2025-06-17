@@ -25,10 +25,12 @@
     },
     "dependencies": {
         "@sb1/ffe-buttons-react": "^24.4.0",
+        "@sb1/ffe-core": "^32.0.5",
         "@sb1/ffe-core-react": "^10.1.8",
         "@sb1/ffe-dropdown-react": "^8.1.11",
         "@sb1/ffe-icons-react": "^12.0.5",
-        "@sb1/ffe-pagination": "^3.0.26"
+        "@sb1/ffe-pagination": "^3.0.26",
+        "classnames": "^2.5.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1",
