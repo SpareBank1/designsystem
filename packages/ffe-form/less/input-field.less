@@ -1,18 +1,16 @@
 .ffe-input-field {
     display: block;
+    position: relative;
+    z-index: 1;
     height: 2.8125rem;
     padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm); /* Increased horizontal padding */
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
-    background-color: var(--ffe-color-surface-primary-default);
+    background: transparent;
+    border: none;
     color: var(--ffe-color-foreground-default);
-    border-radius: var(--ffe-g-border-radius);
-    border: var(--ffe-g-border-width) solid
-        var(--ffe-color-border-primary-default);
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-input);
-
     &[type='date'] {
         display: flex;
         padding-left: var(--ffe-spacing-xs);
@@ -28,6 +26,35 @@
             box-shadow: var(--ffe-g-border-focus-box-shadow)
                 var(--ffe-color-border-primary-default-hover);
         }
+    }
+
+    &__backdrop {
+        position: absolute;
+        z-index: 0;
+        inset: 0;
+        background-color: var(--ffe-color-surface-primary-default);
+        border-radius: var(--ffe-g-border-radius);
+        border: var(--ffe-g-border-width) solid
+            var(--ffe-color-border-primary-default);
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__suffix,
+    &__prefix {
+        color: var(--ffe-color-foreground-subtle);
+        display: inline-flex;
+        align-items: center;
+        z-index: 1;
+        white-space: nowrap;
     }
 
     &:focus,
