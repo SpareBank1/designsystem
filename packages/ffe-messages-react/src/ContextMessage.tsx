@@ -44,6 +44,7 @@ export const ContextMessage: React.FC<ContextMessageProps> = ({
         <MessageCollapse isClosed={isClosed}>
             <div
                 className={classNames(
+                    'ffe-default-mode',
                     `ffe-message`,
                     `ffe-message--context`,
                     `ffe-message--${type}`,

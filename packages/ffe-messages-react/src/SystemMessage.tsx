@@ -40,6 +40,7 @@ export const SystemMessage: React.FC<SystemMessageProps> = ({
         <MessageCollapse isClosed={isClosed}>
             <div
                 className={classNames(
+                    'ffe-default-mode',
                     `ffe-message`,
                     `ffe-message--system`,
                     `ffe-message--${type}`,
