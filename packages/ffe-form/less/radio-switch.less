@@ -1,15 +1,15 @@
 .ffe-radio-switch {
-    --outer-circle-color: var(--ffe-color-border-primary-default);
-    --inner-circle-color: transparent;
-    --circle-background: var(--ffe-color-surface-primary-default);
-    color: var(--ffe-color-foreground-default);
+    --radio-switch-border-color: var(--ffe-color-border-primary-default);
+    --inner-circle-color: var(--ffe-color-surface-primary-default);
+    --radio-switch-background: var(--ffe-color-surface-primary-default);
 
+    color: var(--ffe-color-foreground-default);
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-md) var(--ffe-spacing-xs)
         var(--ffe-spacing-xs);
     grid-template-columns: auto 1fr;
     grid-column-gap: var(--ffe-spacing-xs);
     position: relative;
-    border: var(--ffe-g-border-width) solid var(--outer-circle-color);
+    border: var(--ffe-g-border-width) solid var(--radio-switch-border-color);
     border-radius: 48px;
     display: inline-grid;
     place-items: center;
@@ -18,19 +18,23 @@
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     cursor: pointer;
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    transition:
+        color var(--ffe-transition-duration) var(--ffe-ease),
+        border var(--ffe-transition-duration) var(--ffe-ease),
+        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+        background-color var(--ffe-transition-duration) var(--ffe-ease);
     margin-bottom: var(--ffe-spacing-2xs);
     margin-top: var(--ffe-spacing-sm);
     line-height: 1.5;
     overflow-wrap: anywhere;
-    background-color: var(--circle-background);
+    background-color: var(--radio-switch-background);
 
     &::before {
         content: '';
         left: 12px;
         top: 8px;
         background-color: var(--inner-circle-color);
-        border: var(--ffe-g-border-width) solid var(--outer-circle-color);
+        border: var(--ffe-g-border-width) solid var(--radio-switch-border-color);
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
         width: 24px;
         height: 24px;
@@ -40,18 +44,20 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
+            --inner-circle-color: var(--ffe-color-surface-primary-default);
+
             background-color: var(--ffe-color-surface-primary-default-hover);
             border-color: var(--ffe-color-border-primary-default-hover);
-
-            &::before {
-                background-color: var(--ffe-color-surface-primary-default);
-            }
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-primary-default-hover);
         }
     }
 
-    &:focus,
     &:active {
         background-color: var(--ffe-color-surface-primary-default-pressed);
+        border-color: var(--ffe-color-border-primary-default-pressed);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-primary-default-pressed);
     }
 
     @media (min-width: @breakpoint-sm) {
@@ -74,19 +80,21 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover + .ffe-radio-switch {
-            --circle-background: var(--ffe-color-surface-primary-default-hover);
+            --radio-switch-background: var(
+                --ffe-color-surface-primary-default-hover
+            );
         }
     }
 
     &:checked + .ffe-radio-switch {
-        --outer-circle-color: var(--ffe-color-fill-primary-selected-default);
-        --inner-circle-color: var(--ffe-color-fill-primary-pressed);
-        --circle-background: var(--ffe-color-fill-primary-selected-default);
+        --inner-circle-color: var(--ffe-color-fill-primary-default-pressed);
+        --radio-switch-background: var(--ffe-color-surface-primary-default);
+        --radio-switch-border-color: var(
+            --ffe-color-border-interactive-selected
+        );
 
-        color: var(--ffe-color-foreground-inverse);
-        border-color: var(--ffe-color-border-primary-emphasis);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-border-primary-emphasis);
+            var(--radio-switch-border-color);
 
         &::before {
             border: 5px solid var(--ffe-color-surface-primary-default);
@@ -96,38 +104,49 @@
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                background-color: var(--ffe-color-fill-primary-selected-hover);
+                background-color: var(
+                    --ffe-color-surface-primary-default-hover
+                );
             }
         }
 
-        &:focus,
         &:active {
-            background-color: var(--ffe-color-fill-primary-selected-pressed);
+            background-color: var(--ffe-color-surface-primary-default-pressed);
         }
     }
 
-    &:focus + .ffe-radio-switch {
-        --outer-circle-color: var(--ffe-color-border-interactive-focus);
-        outline: none;
-        box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
+    &:focus-visible + .ffe-radio-switch {
+        outline: var(--ffe-g-outline-width) solid
+            var(--ffe-color-border-interactive-focus);
+        outline-offset: var(--ffe-g-outline-offset);
     }
 
     &:disabled + .ffe-radio-switch {
-        --outer-circle-color: var(--ffe-color-border-primary-subtle);
-        --circle-background: var(--ffe-color-surface-primary-default);
+        --radio-switch-border-color: var(--ffe-color-border-primary-subtle);
+        --radio-switch-background: var(--ffe-color-surface-primary-default);
 
         cursor: not-allowed;
         color: var(--ffe-color-foreground-subtle);
     }
 
     &[aria-invalid='true'] + .ffe-radio-switch {
-        --outer-circle-color: var(--ffe-color-border-feedback-critical);
+        --radio-switch-border-color: var(--ffe-color-border-feedback-critical);
+        --radio-switch-background: var(--ffe-color-surface-feedback-critical);
+        --inner-circle-color: var(--ffe-color-surface-primary-default);
+
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--outer-circle-color);
+            var(--ffe-color-border-feedback-critical);
 
         &::before {
             box-shadow: var(--ffe-g-border-focus-box-shadow)
-                var(--outer-circle-color);
+                var(--ffe-color-border-feedback-critical);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-color: var(--ffe-color-border-feedback-critical);
+                background-color: var(--ffe-color-surface-feedback-critical);
+            }
         }
     }
 }

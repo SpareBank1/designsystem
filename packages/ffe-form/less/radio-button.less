@@ -1,7 +1,7 @@
 .ffe-radio-button {
     --line-height: 1.5rem;
     --outer-circle-color: var(--ffe-color-border-primary-default);
-    --inner-circle-color: var(--ffe-color-fill-primary-pressed);
+    --inner-circle-color: var(--ffe-color-fill-primary-selected-default);
     --circle-background: var(--ffe-color-surface-primary-default);
 
     color: var(--ffe-color-foreground-default);
@@ -19,16 +19,18 @@
     padding-left: 0;
     padding-top: 1px;
     -webkit-tap-highlight-color: var(--ffe-color-fill-primary-subtle);
-    grid-template-columns: auto 1fr auto;
     grid-template-rows: var(--line-height) 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-column-gap: var(--ffe-spacing-xs);
+    border-radius: var(--ffe-g-outline-border-radius);
 
-    &--inline,
-    &--with-tooltip {
+    &--inline {
         display: inline-grid;
+        margin-right: var(--ffe-spacing-sm);
     }
 
     &--with-tooltip {
+        display: inline-grid;
         margin-bottom: 0;
     }
 
@@ -48,6 +50,7 @@
 
     &__tooltip-text.ffe-tooltip__text {
         &:extend(.ffe-small-text);
+
         grid-column: 1 / span 3;
         grid-row: 2;
         margin-left: calc(24px + var(--ffe-spacing-xs));
@@ -84,8 +87,7 @@
 }
 
 .ffe-radio-input + .ffe-radio-button {
-    padding: var(--ffe-spacing-xs) 0;
-    margin-bottom: 0;
+    margin-block: 10px;
 }
 
 .ffe-radio-input {
@@ -101,15 +103,22 @@
 
     &:checked + .ffe-radio-button {
         --outer-circle-color: var(--ffe-color-fill-primary-selected-default);
-        --inner-circle-color: var(--ffe-color-fill-primary-pressed);
+        --inner-circle-color: var(--ffe-color-fill-primary-selected-default);
 
         &::before {
             transform: scale(1);
         }
     }
 
-    &:focus + .ffe-radio-button {
-        --outer-circle-color: var(--ffe-color-border-interactive-focus);
+    &:focus + .ffe-radio-button,
+    &:active + .ffe-radio-button {
+        --circle-background: var(--ffe-color-surface-primary-default-pressed);
+    }
+
+    &:focus-visible + .ffe-radio-button {
+        outline: var(--ffe-g-outline-width) solid
+            var(--ffe-color-border-interactive-focus);
+        outline-offset: var(--ffe-g-outline-offset);
     }
 
     &:disabled + .ffe-radio-button {
@@ -123,6 +132,10 @@
     &[aria-invalid='true'] + .ffe-radio-button {
         --outer-circle-color: var(--ffe-color-border-feedback-critical);
         --circle-background: var(--ffe-color-surface-feedback-critical);
+        &::after {
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-feedback-critical);
+        }
     }
 
     &:checked[aria-invalid='true'] + .ffe-radio-button {

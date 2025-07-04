@@ -51,7 +51,9 @@
             content: '';
             width: 56px;
             height: 30px;
-            background: var(--ffe-color-component-toggleswitch-fill-default);
+            background: var(
+                --ffe-color-component-form-toggleswitch-fill-default
+            );
             border-radius: 52px;
             left: auto;
             right: 0;
@@ -65,7 +67,9 @@
             content: '';
             width: 24px;
             height: 24px;
-            background: var(--ffe-color-component-toggleswitch-handle-default);
+            background: var(
+                --ffe-color-component-form-toggleswitch-handle-default
+            );
             border-radius: 50%;
             position: absolute;
             left: 4px;
@@ -75,7 +79,7 @@
         @media (hover: hover) and (pointer: fine) {
             .ffe-toggle-switch__label:hover &::before {
                 background: var(
-                    --ffe-color-component-toggleswitch-fill-default-hover
+                    --ffe-color-component-form-toggleswitch-fill-default-hover
                 );
             }
         }
@@ -86,13 +90,13 @@
     }
 
     &__input:checked + &__label &__switch::before {
-        background: var(--ffe-color-component-toggleswitch-fill-selected);
+        background: var(--ffe-color-component-form-toggleswitch-fill-selected);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &__input:checked + &__label:hover &__switch::before {
             background: var(
-                --ffe-color-component-toggleswitch-fill-selected-hover
+                --ffe-color-component-form-toggleswitch-fill-selected-hover
             );
         }
     }
@@ -109,13 +113,13 @@
 
     :active + &__label &__switch::before {
         background: var(
-            --ffe-color-component-toggleswitch-fill-default-pressed
+            --ffe-color-component-form-toggleswitch-fill-default-pressed
         );
     }
 
     &__input:checked:active + &__label &__switch::before {
         background: var(
-            --ffe-color-component-toggleswitch-fill-selected-pressed
+            --ffe-color-component-form-toggleswitch-fill-selected-pressed
         );
     }
 }

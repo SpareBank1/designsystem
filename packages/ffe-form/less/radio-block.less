@@ -1,7 +1,7 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
 
 .ffe-radio-block {
-    --outer-circle-color: var(--ffe-color-border-primary-default);
+    --outer-border-color: var(--ffe-color-border-primary-default);
     --block-background: var(--ffe-color-surface-primary-default);
 
     font-family: var(--ffe-g-font);
@@ -14,7 +14,11 @@
     &__content,
     &__header {
         cursor: pointer;
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        transition:
+            color var(--ffe-transition-duration) var(--ffe-ease),
+            border var(--ffe-transition-duration) var(--ffe-ease),
+            box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+            background-color var(--ffe-transition-duration) var(--ffe-ease);
     }
 
     &__content {
@@ -25,7 +29,7 @@
         margin-right: var(--ffe-spacing-xs);
         color: var(--ffe-color-foreground-default);
         background-color: var(--block-background);
-        border: var(--ffe-g-border-width) solid var(--outer-circle-color);
+        border: var(--ffe-g-border-width) solid var(--outer-border-color);
         border-radius: var(--ffe-g-border-radius);
         overflow: hidden;
 
@@ -36,8 +40,8 @@
             content: '';
             left: var(--ffe-spacing-sm);
             z-index: 1;
-            background-color: transparent;
-            border: var(--ffe-g-border-width) solid var(--outer-circle-color);
+            background-color: var(--ffe-color-surface-primary-default);
+            border: var(--ffe-g-border-width) solid var(--outer-border-color);
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -60,15 +64,10 @@
         grid-column: 2 e('/') 3;
         grid-row: 2 e('/') 3;
         padding: 12px var(--ffe-spacing-sm);
-        border-top: var(--ffe-g-border-width) solid var(--outer-circle-color);
+        border-top: var(--ffe-g-border-width) solid var(--outer-border-color);
         cursor: auto;
         color: var(--ffe-color-foreground-default);
-        transition: all var(--ffe-transition-duration)
-            var(--ffe-ease);
-
-        &--empty {
-            padding: 0;
-        }
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
         &[aria-hidden='true'] {
             display: none;
@@ -77,7 +76,7 @@
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            --outer-circle-color: var(--ffe-color-border-primary-default-hover);
+            --outer-border-color: var(--ffe-color-border-primary-default-hover);
 
             .ffe-radio-block__header {
                 background-color: var(
@@ -87,23 +86,32 @@
 
             .ffe-radio-block__content {
                 box-shadow: var(--ffe-g-border-focus-box-shadow)
-                    var(--outer-circle-color);
+                    var(--outer-border-color);
             }
 
             .ffe-radio-block__wrapper {
-                box-shadow: inset 0 1px 0 0 var(--outer-circle-color);
+                box-shadow: inset 0 1px 0 0 var(--outer-border-color);
             }
         }
     }
 
+    &:active {
+        .ffe-radio-block__header {
+            background-color: var(--ffe-color-surface-primary-default-pressed);
+        }
+    }
+
     &:active .ffe-radio-block__content {
-        --outer-circle-color: var(--ffe-color-border-primary-default-pressed);
+        --outer-border-color: var(--ffe-color-border-primary-default-pressed);
     }
 }
 
 .ffe-radio-input {
     &:checked + .ffe-radio-block__content {
-        --outer-circle-color: var(--ffe-color-border-interactive-selected);
+        --outer-border-color: var(--ffe-color-border-interactive-selected);
+
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--outer-border-color);
 
         &::before {
             background-color: var(--ffe-color-fill-primary-selected-default);
@@ -112,29 +120,31 @@
                 var(--ffe-color-border-interactive-selected);
         }
 
-        .ffe-radio-block__header {
-            background-color: var(--ffe-color-fill-primary-selected-default);
-            color: var(--ffe-color-foreground-on-fill-default);
-        }
-
         .ffe-radio-block__wrapper {
-            box-shadow: inset 0 1px 0 0 var(--outer-circle-color);
+            box-shadow: inset 0 1px 0 0 var(--outer-border-color);
         }
     }
 
     &:focus + .ffe-radio-block__content {
-        --outer-circle-color: var(--ffe-color-border-interactive-focus);
+        --outer-border-color: var(--ffe-color-border-interactive-selected);
+
         outline: none;
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-border-interactive-focus);
+            var(--ffe-color-border-interactive-selected);
     }
 
     &:focus + .ffe-radio-block__content .ffe-radio-block__wrapper {
-        box-shadow: inset 0 1px 0 0 var(--outer-circle-color);
+        box-shadow: inset 0 1px 0 0 var(--outer-border-color);
+    }
+
+    &:focus-visible + .ffe-radio-block__content {
+        outline: var(--ffe-g-outline-width) solid
+            var(--ffe-color-border-interactive-focus);
+        outline-offset: var(--ffe-g-outline-offset);
     }
 
     &:disabled + .ffe-radio-block__content {
-        --outer-circle-color: var(--ffe-color-border-primary-subtle);
+        --outer-border-color: var(--ffe-color-border-primary-subtle);
         --block-background: var(--ffe-color-surface-primary-default);
 
         cursor: not-allowed;
@@ -150,28 +160,36 @@
     }
 
     &[aria-invalid='true'] + .ffe-radio-block__content {
-        --outer-circle-color: var(--ffe-color-border-feedback-critical);
+        --outer-border-color: var(--ffe-color-border-feedback-critical);
+
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--outer-circle-color);
+            var(--outer-border-color);
 
         .ffe-radio-block__wrapper {
-            box-shadow: inset 0 1px 0 0 var(--outer-circle-color);
+            box-shadow: inset 0 1px 0 0 var(--outer-border-color);
+        }
+
+        .ffe-radio-block__header {
+            background-color: var(--ffe-color-component-form-input-fill-error);
+            color: var(--ffe-color-component-form-input-foreground-error);
         }
     }
 }
 
 .ffe-radio-block:has(.ffe-radio-input:checked) {
     &:hover {
-        --outer-circle-color: var(--ffe-color-border-primary-selected-hover);
         .ffe-radio-block__content .ffe-radio-block__header {
-            background-color: var(--ffe-color-fill-primary-selected-hover);
+            background-color: var(--ffe-color-surface-primary-default-hover);
+        }
+        &:has(.ffe-radio-input[aria-invalid='true']) .ffe-radio-block__header {
+            background-color: var(--ffe-color-component-form-input-fill-error);
         }
     }
 
     &:active {
-        --outer-circle-color: var(--ffe-color-border-primary-selected-pressed);
+        --outer-border-color: var(--ffe-color-border-interactive-selected);
         .ffe-radio-block__content .ffe-radio-block__header {
-            background-color: var(--ffe-color-fill-primary-selected-pressed);
+            background-color: var(--ffe-color-surface-primary-default-pressed);
         }
     }
 }
