@@ -5,7 +5,11 @@
     margin: 0 0 var(--ffe-spacing-xs);
     border: 1px solid var(--ffe-color-border-primary-default);
     border-radius: var(--ffe-v-cards-common-card-border-radius);
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    transition:
+        color var(--ffe-transition-duration) var(--ffe-ease),
+        border var(--ffe-transition-duration) var(--ffe-ease),
+        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+        background-color var(--ffe-transition-duration) var(--ffe-ease);
     outline: none;
     width: 100%;
     text-decoration: none;
@@ -51,9 +55,9 @@
     &:focus,
     &:active,
     &:focus-within {
-        border-color: var(--ffe-color-border-interactive-focus);
+        border-color: var(--ffe-color-border-primary-default-pressed);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-border-interactive-focus);
+            var(--ffe-color-border-primary-default-pressed);
 
         &
             :where(
@@ -63,6 +67,14 @@
                 .ffe-card-body__text
             ):has(.ffe-card__action) {
             text-decoration: underline;
+        }
+    }
+
+    @media (pointer: fine) {
+        &:focus-within {
+            outline: var(--ffe-g-outline-width) solid
+                var(--ffe-color-border-interactive-focus);
+            outline-offset: var(--ffe-g-outline-offset);
         }
     }
 
@@ -80,7 +92,7 @@
     a.ffe-card__action--raw {
         color: inherit;
         text-decoration: inherit;
-        outline: inherit;
+        outline: none;
     }
 
     .ffe-card__action--raw:visited {
