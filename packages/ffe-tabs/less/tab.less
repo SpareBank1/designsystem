@@ -4,7 +4,7 @@
     display: flex;
 
     background-color: var(--ffe-color-surface-primary-default);
-    color: var(--ffe-color-foreground-on-fill-inverse);
+    color: var(--ffe-color-foreground-default);
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-md);
     border-radius: 40px;
     border: 2px solid transparent;
@@ -13,7 +13,11 @@
     align-self: stretch;
     justify-content: center;
     align-items: center;
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    transition:
+        color var(--ffe-transition-duration) var(--ffe-ease),
+        border var(--ffe-transition-duration) var(--ffe-ease),
+        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+        background-color var(--ffe-transition-duration) var(--ffe-ease);
     cursor: pointer;
     width: auto;
     position: relative;
@@ -26,15 +30,20 @@
         outline: none;
         position: relative;
         overflow: unset;
-        border-color: var(--ffe-color-border-interactive-focus);
         background-color: var(--ffe-color-fill-primary-subtle-hover);
+    }
+
+    &:focus-visible {
+        outline: var(--ffe-g-outline-width) solid
+            var(--ffe-color-border-interactive-focus);
+        outline-offset: var(--ffe-g-outline-offset);
     }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             border-color: transparent;
             background-color: var(--ffe-color-fill-primary-subtle-hover);
-            color: var(--ffe-color-foreground-on-fill-inverse);
+            color: var(--ffe-color-foreground-default);
         }
     }
 
@@ -44,14 +53,14 @@
 
     &--selected {
         background-color: var(--ffe-color-fill-primary-selected-default);
-        color: var(--ffe-color-foreground-on-fill-default);
+        color: var(--ffe-color-foreground-inverse);
         z-index: 2;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 border-color: transparent;
                 background-color: var(--ffe-color-fill-primary-selected-hover);
-                color: var(--ffe-color-foreground-on-fill-default);
+                color: var(--ffe-color-foreground-inverse);
             }
         }
 
@@ -59,8 +68,13 @@
             outline: none;
             position: relative;
             overflow: unset;
-            border-color: var(--ffe-color-border-interactive-focus);
             background-color: var(--ffe-color-fill-primary-selected-hover);
+        }
+
+        &:focus-visible {
+            outline: var(--ffe-g-outline-width) solid
+                var(--ffe-color-border-interactive-focus);
+            outline-offset: var(--ffe-g-outline-offset);
         }
 
         &:active {
