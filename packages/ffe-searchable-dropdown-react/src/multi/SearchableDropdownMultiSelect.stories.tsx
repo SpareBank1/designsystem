@@ -332,3 +332,29 @@ export const ControlledState: Story = {
         );
     },
 };
+
+export const AriaInvalid: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <>
+                <InputGroup
+                    label="Velg frukt"
+                    labelId={labelledById}
+                    inputId={id}
+                >
+                    {inputProps => (
+                        <SearchableDropdownMultiSelect
+                            labelledById={labelledById}
+                            {...args}
+                            {...inputProps}
+                            aria-invalid="true"
+                        />
+                    )}
+                </InputGroup>
+            </>
+        );
+    },
+};
