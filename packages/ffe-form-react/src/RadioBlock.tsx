@@ -41,7 +41,13 @@ export const RadioBlock = React.forwardRef<HTMLInputElement, RadioBlockProps>(
         const isSelected = checked || selectedValue === value;
 
         return (
-            <div className={classNames('ffe-radio-block', className)}>
+            <div
+                className={classNames(
+                    'ffe-radio-block',
+                    'ffe-default-mode',
+                    className,
+                )}
+            >
                 <input
                     checked={isSelected}
                     className="ffe-radio-input"
@@ -67,11 +73,9 @@ export const RadioBlock = React.forwardRef<HTMLInputElement, RadioBlockProps>(
                     >
                         {label}
                     </label>
-                    {(isSelected || showChildren) && (
+                    {(isSelected || showChildren) && children && (
                         <div
-                            className={classNames('ffe-radio-block__wrapper', {
-                                'ffe-radio-block__wrapper--empty': !children,
-                            })}
+                            className={classNames('ffe-radio-block__wrapper')}
                             id={`${id}-described`}
                         >
                             {children}

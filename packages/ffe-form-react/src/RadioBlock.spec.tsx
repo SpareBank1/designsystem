@@ -42,14 +42,13 @@ describe('<RadioBlock />', () => {
                 container.querySelector('.ffe-radio-block__wrapper--empty'),
             ).toBeFalsy();
         });
-        it('adds a class if not present', () => {
+        it('removes wrapper if no children passed in', () => {
             const { container } = renderRadioBlock({
                 children: undefined,
-                checked: true,
             });
             expect(
-                container.querySelector('.ffe-radio-block__wrapper--empty'),
-            ).toBeTruthy();
+                container.querySelector('.ffe-radio-block__wrapper'),
+            ).toBeFalsy();
         });
         it('does not render if not selected', () => {
             const { container } = renderRadioBlock({
