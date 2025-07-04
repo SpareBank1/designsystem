@@ -180,7 +180,11 @@
         border-bottom: none;
     }
 
-    &:focus {
+    &:active {
+        color: var(--ffe-color-foreground-interactive-link-pressed);
+    }
+
+    &:focus-visible {
         color: var(--ffe-color-foreground-interactive-link-pressed);
         border-radius: 1px;
         box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
