@@ -4,7 +4,7 @@
     border: var(--ffe-g-border-width) solid
         var(--ffe-color-border-primary-default);
     border-radius: var(--ffe-g-border-radius);
-    background: var(--ffe-color-background-default);
+    background: var(--ffe-color-component-form-input-fill-default);
     color: var(--ffe-color-foreground-default);
     overflow-y: auto;
 
@@ -58,8 +58,9 @@
         padding: 4px;
 
         &:focus-visible {
-            box-shadow: var(--ffe-g-border-focus-box-shadow)
-                var(--ffe-color-border-primary-emphasis);
+            outline: var(--ffe-g-outline-width) solid
+                var(--ffe-color-border-interactive-focus);
+            outline-offset: var(--ffe-g-outline-offset);
         }
     }
 
@@ -89,6 +90,7 @@
 
     &__weekday {
         .ffe-small-text();
+
         color: var(--ffe-color-foreground-subtle);
     }
 
@@ -119,6 +121,7 @@
         padding: var(--ffe-spacing-2xs);
         text-align: center;
         outline: none;
+        border-radius: var(--ffe-g-border-radius-sm);
     }
 
     &__date {
@@ -141,30 +144,31 @@
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                background: var(--ffe-color-fill-neutral-subtle-hover);
+                background: var(
+                    --ffe-color-component-form-input-fill-default-hover
+                );
                 color: var(--ffe-color-foreground-default);
             }
         }
 
         &:active {
-            background: var(--ffe-color-fill-neutral-subtle-pressed);
-            color: var(--ffe-color-foreground-default);
+            background: var(--ffe-color-component-form-input-fill-default-pressed);
+            color: var(--ffe-color-component-form-input-foreground-default);
         }
 
         &:focus-visible,
         &--focus {
-            border: var(--ffe-g-border-width) solid
+            outline: var(--ffe-g-outline-width) solid
                 var(--ffe-color-border-interactive-focus);
-            outline: none;
+            outline-offset: var(--ffe-g-outline-offset);
+            background-color: var(
+                --ffe-color-component-form-input-fill-default-hover
+            );
         }
 
         &--selected {
             background: var(--ffe-color-fill-primary-selected-default);
             color: var(--ffe-color-foreground-inverse);
-
-            &.ffe-calendar__date--focus {
-                border-color: var(--ffe-color-border-primary-emphasis);
-            }
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
@@ -175,7 +179,7 @@
         }
 
         &--disabled {
-            color: var(--ffe-color-foreground-subtle);
+            color: var(--ffe-color-component-form-input-foreground-disabled);
 
             &.ffe-calendar__date--selected {
                 background: var(--ffe-color-fill-tertiary-subtle);

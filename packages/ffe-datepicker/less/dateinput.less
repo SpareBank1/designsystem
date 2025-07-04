@@ -11,8 +11,11 @@
     border: var(--ffe-g-border-width) solid
         var(--ffe-color-border-primary-default);
     border-radius: var(--ffe-g-border-radius);
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
-
+    transition:
+        color var(--ffe-transition-duration) var(--ffe-ease),
+        border var(--ffe-transition-duration) var(--ffe-ease),
+        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+        background-color var(--ffe-transition-duration) var(--ffe-ease);
     &--full-width {
         width: 100%;
     }
@@ -46,8 +49,16 @@
     &:has(&__button:focus) .ffe-input-field:hover {
         outline: none;
         box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-border-interactive-focus);
-        border-color: var(--ffe-color-border-interactive-focus);
+            var(--ffe-color-component-form-input-border-active);
+        border-color: var(--ffe-color-component-form-input-border-active);
+    }
+
+    @media (pointer: fine) {
+        &:focus-within {
+            outline: var(--ffe-g-outline-width) solid
+                var(--ffe-color-border-interactive-focus);
+            outline-offset: var(--ffe-g-outline-offset);
+        }
     }
 
     &__icon.ffe-icons {
@@ -89,7 +100,7 @@
             }
 
             &:focus {
-                background-color: var(--ffe-color-surface-secondary-default);
+                background-color: var(--ffe-color-fill-primary-subtle);
                 outline: none;
             }
 
