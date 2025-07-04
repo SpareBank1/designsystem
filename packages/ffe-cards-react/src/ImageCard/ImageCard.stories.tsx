@@ -53,3 +53,32 @@ export const Standard: Story = {
         </ImageCard>
     ),
 };
+
+export const WithAction: Story = {
+    args: {
+        as: 'div',
+        imageSrc:
+            'https://www.sparebank1.no/content/dam/SB1/foto/profilbilder-liggende/ung-i-sofa.jpg.thumb.1280.1280.jpg',
+        imageAltText: 'To jenter som går å snakker sammen',
+    },
+    render: args => (
+        <ImageCard {...args}>
+            {({ CardName, Title, Subtext, Text, CardAction }) => (
+                <>
+                    <CardName>Kortnavn</CardName>
+                    <Title>
+                        <CardAction>Tittel</CardAction>
+                    </Title>
+                    <Subtext>En liten undertekst</Subtext>
+                    <Text>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                    </Text>
+                </>
+            )}
+        </ImageCard>
+    ),
+};

@@ -20,6 +20,7 @@ export const Standard: Story = {
 };
 
 export const WrongSize: Story = {
+    tags: ['!dev'],
     args: { ...Standard.args, size: 'lg' },
     render: args => <Icon {...args} />,
 };

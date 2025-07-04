@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { RadioButton } from './RadioButton';
 import { RadioButtonInputGroup } from './RadioButtonInputGroup';
@@ -13,11 +13,12 @@ type Story = StoryObj<typeof RadioButton>;
 
 const RadioButtonWithGroup = (args: any) => {
     const [selected, setSelected] = useState(args.selectedValue);
+    const id = useId();
 
     return (
         <RadioButtonInputGroup
             label="Velg kundetype"
-            name="radio-button-demo"
+            name={`radio-button-with-group-demo-${id}`}
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
         >
@@ -37,11 +38,12 @@ const RadioButtonWithGroup = (args: any) => {
 
 const RadioButtonInlineWithGroup = (args: any) => {
     const [selected, setSelected] = useState(args.selectedValue);
+    const id = useId();
 
     return (
         <RadioButtonInputGroup
             label="Velg betalingsfrekvens"
-            name="radio-button-inline-demo"
+            name={`radio-button-inline-demo-${id}`}
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
             inline={true}
@@ -65,11 +67,12 @@ const RadioButtonInlineWithGroup = (args: any) => {
 
 const RadioButtonWithGroupTooltip = (args: any) => {
     const [selected, setSelected] = useState(args.selectedValue);
+    const id = useId();
 
     return (
         <RadioButtonInputGroup
             label="Velg faktureringstype"
-            name="radio-button-tooltip-demo"
+            name={`radio-button-group-demo-${id}`}
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
         >
@@ -97,11 +100,12 @@ const RadioButtonWithGroupTooltip = (args: any) => {
 
 const RadioButtonAriaInvalid = (args: any) => {
     const [selected, setSelected] = useState(args.selectedValue);
+    const id = useId();
 
     return (
         <RadioButtonInputGroup
             label="Velg faktureringstype"
-            name="radio-button-invalid-demo"
+            name={`radio-button-invalid-demo-${id}`}
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
             fieldMessage="Velg årlig fakturering"

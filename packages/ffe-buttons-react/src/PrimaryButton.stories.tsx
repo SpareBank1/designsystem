@@ -47,6 +47,21 @@ export const Standard: Story = {
     render: args => <PrimaryButton {...args}>Primary Button</PrimaryButton>,
 };
 
+export const WithIcon: Story = {
+    args: {
+        ariaLoadingMessage: 'Vennligst vent...',
+        isLoading: false,
+    },
+    render: args => (
+        <PrimaryButton
+            {...args}
+            leftIcon={<Icon fileUrl={addReactionIconMd} size="md" />}
+        >
+            Primary Button
+        </PrimaryButton>
+    ),
+};
+
 export const DifferentSizes: Story = {
     args: {
         ariaLoadingMessage: 'Vennligst vent...',

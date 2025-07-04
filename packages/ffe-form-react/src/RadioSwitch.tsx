@@ -46,9 +46,14 @@ export const RadioSwitch: React.FC<RadioSwitchProps> = ({
     return (
         <>
             <BaseRadioButton
-                className={classNames('ffe-radio-switch', className, {
-                    'ffe-radio-switch--condensed': condensed,
-                })}
+                className={classNames(
+                    'ffe-radio-switch',
+                    'ffe-default-mode',
+                    className,
+                    {
+                        'ffe-radio-switch--condensed': condensed,
+                    },
+                )}
                 value={leftValue}
                 ref={leftInnerRef}
                 aria-invalid={
@@ -61,9 +66,14 @@ export const RadioSwitch: React.FC<RadioSwitchProps> = ({
                 {leftLabel}
             </BaseRadioButton>
             <BaseRadioButton
-                className={classNames('ffe-radio-switch', className, {
-                    'ffe-radio-switch--condensed': condensed,
-                })}
+                className={classNames(
+                    'ffe-radio-switch',
+                    'ffe-default-mode',
+                    className,
+                    {
+                        'ffe-radio-switch--condensed': condensed,
+                    },
+                )}
                 value={rightValue}
                 ref={rightInnerRef}
                 aria-invalid={

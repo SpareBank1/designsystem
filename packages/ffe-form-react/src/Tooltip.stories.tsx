@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { Tooltip } from './Tooltip';
+import { Paragraph } from '@sb1/ffe-core-react';
 
 const meta: Meta<typeof Tooltip> = {
     title: 'Komponenter/Form/Tooltip',
@@ -35,8 +36,10 @@ export const AriaControls: Story = {
                     onClick={() => setOpen(!open)}
                 />
                 <div hidden={!open} id={contentId}>
-                    Husk at Tooltip alltid skal være skjult ved default, men du
-                    kan styre visningen gjennom en onClick om du vil!
+                    <Paragraph>
+                        Husk at Tooltip alltid skal være skjult ved default, men
+                        du kan styre visningen gjennom en onClick om du vil!
+                    </Paragraph>
                 </div>
             </>
         );
