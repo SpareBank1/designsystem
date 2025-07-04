@@ -12,14 +12,14 @@ function generateCssColorFileContent(colors) {
 /* Default context */
 :root,
 :host,
-:where(.ffe-default-mode) {
+.ffe-default-mode {
   ${Object.entries(colors.light)
       .map(([name, value]) => transformToCssProperty(name, value))
       .join('\n')}
 }
 
 /* Accent context */
-:where(.ffe-accent-mode) {
+.ffe-accent-mode {
   ${Object.entries(colors.lightAccent)
       .map(([name, value]) => transformToCssProperty(name, value))
       .join('\n')}
@@ -27,8 +27,8 @@ function generateCssColorFileContent(colors) {
 
 /* dark mode default context */
 @media (prefers-color-scheme: dark) {
-    :where(.regard-color-scheme-preference),
-    :where(.regard-color-scheme-preference .ffe-default-mode) {
+    .regard-color-scheme-preference,
+    .regard-color-scheme-preference .ffe-default-mode {
     ${Object.entries(colors.dark)
         .map(([name, value]) => transformToCssProperty(name, value))
         .join('\n')}
@@ -37,7 +37,7 @@ function generateCssColorFileContent(colors) {
 
 /* dark mode accent context */
 @media (prefers-color-scheme: dark) {
-    :where(.regard-color-scheme-preference .ffe-accent-mode){
+    .regard-color-scheme-preference .ffe-accent-mode {
     ${Object.entries(colors.darkAccent)
         .map(([name, value]) => transformToCssProperty(name, value))
         .join('\n')}
