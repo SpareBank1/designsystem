@@ -102,6 +102,7 @@ export default defineConfig(async () => {
                 },
             },
             cssCodeSplit: true,
+            assetsInlineLimit: 0,
         }
     };
 

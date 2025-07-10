@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import App from './App';
 import { AccountOverview } from './pages/AccountOverview';
-import { PaymentForm } from './pages/PaymentForm';
 import { InvestmentDashboard } from './pages/InvestmentDashboard';
+import { PaymentForm } from './pages/PaymentForm';
+import SavingDashboard from './pages/SavingDashboard';
+import SettingsDashboard from './pages/SettingsDashboard';
 import './styles/main.less';
 
 const router = createBrowserRouter([
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/sparing',
-        element: <div>Spareinnhold</div>,
+        element: <SavingDashboard/>
       },
       {
         path: '/investering',
@@ -38,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/innstillinger',
-        element: <div>Innstillinger</div>,
+        element: <SettingsDashboard />,
       },
       {
         path: '*',

@@ -11,6 +11,7 @@ import {
     TableDataCell,
 } from '@sb1/ffe-tables-react';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
+import { Feedback } from '@sb1/ffe-feedback-react';
 
 const portfolioData = {
     totalValue: 125678.50,
@@ -117,6 +118,12 @@ export const InvestmentDashboard = () => {
                         </Table>
                      </CardBase>
                  </GridCol>
+             </GridRow>
+
+             <GridRow>
+                <GridCol>
+                    <Feedback onFeedbackSend={() => console.log("Sent")} onThumbClick={() => console.log("thumb hurra")}/>
+                </GridCol>
              </GridRow>
         </>
     );
