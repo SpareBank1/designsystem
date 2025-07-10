@@ -29,3 +29,29 @@ export const Standard: Story = {
         );
     },
 };
+
+export const AriaInvalid: Story = {
+    args: {
+        inline: false,
+    },
+    render: args => {
+        return (
+            <InputGroup label="Måned">
+                {inputProps => (
+                    <Dropdown
+                        {...args}
+                        {...inputProps}
+                        aria-invalid="true"
+                        test-id={'test'}
+                    >
+                        <option value="jan">Januar</option>
+                        <option value="feb">Februar</option>
+                        <option value="mar">Mars</option>
+                        <option value="apr">April</option>
+                        <option value="mai">Mai</option>
+                    </Dropdown>
+                )}
+            </InputGroup>
+        );
+    },
+};
