@@ -20,13 +20,13 @@
         text-align: left;
     }
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            border-color: var(--ffe-color-border-primary-default-hover);
-            box-shadow: var(--ffe-g-border-focus-box-shadow)
-                var(--ffe-color-border-primary-default-hover);
-        }
-    }
+    // @media (hover: hover) and (pointer: fine) {
+    //     &:hover {
+    //         border-color: var(--ffe-color-border-primary-default-hover);
+    //         box-shadow: var(--ffe-g-border-focus-box-shadow)
+    //             var(--ffe-color-border-primary-default-hover);
+    //     }
+    // }
 
     &__backdrop {
         position: absolute;
@@ -37,6 +37,12 @@
         border: var(--ffe-g-border-width) solid
             var(--ffe-color-border-primary-default);
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+        .ffe-input-field__wrapper:hover & {
+            border-color: var(--ffe-color-border-primary-default-hover);
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-primary-default-hover);
+        }
     }
 
     &__wrapper {
@@ -55,14 +61,29 @@
         align-items: center;
         z-index: 1;
         white-space: nowrap;
+        padding: 0;
     }
 
-    &:focus,
-    &:focus-within {
+    &__suffix {
+        margin: 0 var(--ffe-spacing-xs) 0 0;
+    }
+
+    &__prefix {
+        margin: 0 0 0 var(--ffe-spacing-xs);
+    }
+
+    &:focus ~ &__backdrop,
+    &:focus-within ~ &__backdrop {
         border: var(--ffe-g-border-width) solid
             var(--ffe-color-border-interactive-focus);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
             var(--ffe-color-border-interactive-focus);
+        outline: none;
+    }
+
+    &:focus,
+    &:focus-within {
+        border: none;
         outline: none;
     }
 
