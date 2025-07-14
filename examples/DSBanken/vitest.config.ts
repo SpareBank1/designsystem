@@ -19,7 +19,6 @@ export default defineConfig({
       '@sb1/ffe-tables-react',
       '@sb1/ffe-form-react',
       '@sb1/ffe-buttons-react',
-      '@sb1/ffe-icons-react',
       '@sb1/ffe-cards-react',
       '@sb1/ffe-core-react',
       '@sb1/ffe-grid-react',

@@ -1,8 +1,8 @@
-import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { CreditCard, Home, PiggyBank, Settings } from 'lucide-react';
+import { describe, expect, it, vi } from 'vitest';
 import { SidebarMenu } from './SidebarMenu';
-import { Home, CreditCard, PiggyBank, Settings } from 'lucide-react';
 
 // Mock react-router-dom
 vi.mock('react-router-dom', () => ({
