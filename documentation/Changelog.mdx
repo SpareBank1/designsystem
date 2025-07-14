@@ -8,6 +8,176 @@ Denne siden lister breaking changes og større endringer i designsystemet. For a
 
 F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
 
+## 2025 - Juni - Oppdatering av semantiske farger
+
+### ! Fargene i det semantiske og primitive laget er ikke lenger tilgjengelige
+
+For å støtte flere platformer har vi endret måten vi bygger farger fra tokens på og i denne endringen har vi gått over fra å ha 3 lag med farger i CSS til kun 1 lag, context laget. Designmessig er det ikke endringer, men teknisk
+er altså det semantiske og primitive laget ikke lenger tilgjengelig.
+
+Fargene i det semantiske og primitive laget var aldri ment å brukes direkte men vi ser det er blitt gjort. Så se over om dere har brukt farger som starter på:
+
+- `--ffe-color-default-`
+- `--ffe-color-accent-`
+- `--ffe-color-speciality-`
+- `--ffe-color-vann-`
+- `--ffe-color-frost-`
+- `--ffe-color-sand-`
+- `--ffe-color-syrin-`
+- `--ffe-color-baer-`
+- `--ffe-color-skog-`
+- `--ffe-color-sol-`
+- `--ffe-color-gray-`
+- `--ffe-color-alpha-`
+
+Disse må skiftes ut med farger fra context laget som dere finner på [siden om farger](https://sparebank1.github.io/designsystem/?path=/docs/design-farger-introduksjon--docs)
+
+### ! Variabler som er fjernet
+
+#### Foreground
+
+`--ffe-color-foreground-on-fill-default` erstattes med `--ffe-color-foreground-inverse` <br/>
+`--ffe-color-foreground-on-fill-inverse` erstattes med `--ffe-color-foreground-default`
+
+#### Fill
+
+`--ffe-color-fill-primary-hover` erstattes med `--ffe-color-fill-primary-default-hover` <br/>
+`--ffe-color-fill-primary-pressed` erstattes med `--ffe-color-fill-primary-default-pressed`
+
+#### Border
+
+Fjernet: <br/>
+`--ffe-color-border-secondary-*` <br/>
+`--ffe-color-border-tertiary-*`
+
+bruk <br/>
+`--ffe-color-border-primary-default` <br/>
+`--ffe-color-border-primary-subtle` <br/>
+`--ffe-color-border-primary-emphasis`
+i stedet
+
+### ! Skjemaelementer - Gul border
+
+Alle skjemaelementer har nå fått en gul focus-border. Komponentene blir nå lettere å se for brukere med nedsatt synsevne, og fokus-stilen fungerer på både hvit og blå bakgrunn (accent context).
+
+Alle skjemaelementer bruker også nå egne input-farger <br />
+`--ffe-color-component-form-input-fill-default` <br />
+`--ffe-color-component-form-input-foreground-default` <br />
+`--ffe-color-component-form-input-foreground-subtle` <br />
+`--ffe-color-component-form-input-border-active`
+
+Checkbox (Ved keyboard focus)
+
+<img
+    width="207"
+    height="81"
+    alt="image"
+    src="https://github.com/user-attachments/assets/5c8315c7-8712-4648-b49e-3c10a4952223"
+/>
+
+Input
+
+<img
+    width="457"
+    height="107"
+    alt="image"
+    src="https://github.com/user-attachments/assets/08cd9675-e285-431a-88a0-b5721d924b91"
+/>
+
+InputTextLike
+
+<img
+    width="212"
+    height="60"
+    alt="image"
+    src="https://github.com/user-attachments/assets/512fca5c-e2bf-4f16-9ff0-73d83f4e5084"
+/>
+
+Phonenumber
+
+<img
+    width="445"
+    height="96"
+    alt="image"
+    src="https://github.com/user-attachments/assets/e9d69563-a1ee-4cc9-9bc5-5c4fd83f72ce"
+/>
+
+RadioBlock (nytt design)
+
+<img
+    width="619"
+    height="365"
+    alt="image"
+    src="https://github.com/user-attachments/assets/8b651b7f-e30a-4573-b18f-875327497c92"
+/>
+
+RadioButton (ved keyboard focus)
+
+<img
+    width="442"
+    height="128"
+    alt="image"
+    src="https://github.com/user-attachments/assets/de6c2b5c-b556-4027-814c-a243a21ca5ab"
+/>
+
+RadioSwitch -(nytt design)
+Nytt design
+
+<img
+    width="229"
+    height="86"
+    alt="image"
+    src="https://github.com/user-attachments/assets/2675343f-e77e-44f2-b373-092a726564ab"
+/>
+
+Textarea
+
+<img
+    width="454"
+    height="119"
+    alt="image"
+    src="https://github.com/user-attachments/assets/153b7402-b575-4265-982d-3a92aeeeeb83"
+/>
+
+Tooltip (ny farge)
+<img
+    width="40"
+    height="41"
+    alt="image"
+    src="https://github.com/user-attachments/assets/06fd0637-0f3d-4e31-abd1-a717641cee7e"
+/>
+
+
+Obs: `--ffe-color-border-interactive-focus` får ny farge, og kan ikke brukes til active-states lenger.  <br/>
+`component-input-border-active` kan brukes til det.
+
+
+### Label og button label - tykkere font
+
+<img
+    width="144"
+    height="37"
+    alt="image"
+    src="https://github.com/user-attachments/assets/fe05eb9d-7926-45a3-a54e-10cf63c22410"
+/>
+<img
+    width="177"
+    height="60"
+    alt="image"
+    src="https://github.com/user-attachments/assets/c1b8ef7e-da7e-440a-b87f-b8509a4dfb2e"
+/>
+<br/>
+<br/>
+
+### Nye fargevariabler
+Vi har også lagt til flere farger. Det har blitt flere neutral-varianter:  <br/>
+`--ffe-color-surface-neutral-*` <br/>
+`--ffe-color-fill-neutral-default-*`  <br/>
+`--ffe-color-fill-neutral-subtle-*`  <br/>
+`--ffe-color-fill-neutral-extra-subtle-*`  <br/>
+i tillegg til input-variabler som nevnt over. 
+ <br/>
+
 ## 2025 - februar - Semantiske Farger
 
 Vi har nå implementert semantiske farger i designsystemet. Vi oppsummerer derfor endringene på tvers av komponentene.
