@@ -28,6 +28,7 @@ export const Custom: Story = {
                 style={{
                     marginTop: 10,
                     textAlign: 'center',
+                    color: 'var(--ffe-color-foreground-emphasis)',
                 }}
             >
                 Du har selv ansvar
