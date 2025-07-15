@@ -1,29 +1,30 @@
-import React, { useState, useId } from 'react';
-import { GridRow, GridCol } from '@sb1/ffe-grid-react';
-import { Heading1, Paragraph } from '@sb1/ffe-core-react';
-import {
-    Input,
-    InputGroup,
-    ErrorFieldMessage,
-    TextArea,
-    RadioButtonInputGroup,
-    RadioButton,
-    RadioBlock,
-    RadioSwitch,
-    PhoneNumber,
-    Checkbox,
-    InputTextLike,
-    ToggleSwitch,
-} from '@sb1/ffe-form-react';
-import { Dropdown } from '@sb1/ffe-dropdown-react';
-import { PrimaryButton, SecondaryButton, ButtonGroup, TertiaryButton } from '@sb1/ffe-buttons-react';
-import { Datepicker } from '@sb1/ffe-datepicker-react';
-import { SuccessMessage } from '@sb1/ffe-message-box-react';
-import { format } from 'date-fns';
-import { formatNumber } from '@sb1/ffe-formatters';
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
 import { Account } from '@sb1/ffe-account-selector-react/types/types';
+import { ButtonGroup, PrimaryButton, SecondaryButton, TertiaryButton } from '@sb1/ffe-buttons-react';
+import { Heading1, Paragraph } from '@sb1/ffe-core-react';
+import { Datepicker } from '@sb1/ffe-datepicker-react';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
+import { FileUpload } from '@sb1/ffe-file-upload-react';
+import {
+    Checkbox,
+    ErrorFieldMessage,
+    Input,
+    InputGroup,
+    InputTextLike,
+    PhoneNumber,
+    RadioBlock,
+    RadioButton,
+    RadioButtonInputGroup,
+    RadioSwitch,
+    TextArea,
+    ToggleSwitch,
+} from '@sb1/ffe-form-react';
+import { formatNumber } from '@sb1/ffe-formatters';
+import { GridCol, GridRow } from '@sb1/ffe-grid-react';
+import { SuccessMessage } from '@sb1/ffe-message-box-react';
 import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
+import { format } from 'date-fns';
+import React, { useId, useState } from 'react';
 
 // Eksempelkontodata
 const accounts: Account[] = [
@@ -127,7 +128,7 @@ export const PaymentForm = () => {
 
 
             <div className={accentContext ? 'ffe-accent-mode' : ''}
-                    style={{ backgroundColor: 'var(--ffe-color-background-default)' }}>
+                style={{ backgroundColor: 'var(--ffe-color-background-default)' }}>
                 <form onSubmit={handleSubmit} noValidate>
                     <GridRow>
                         <GridCol sm={12} md={8} lg={6}>
@@ -414,6 +415,24 @@ export const PaymentForm = () => {
                                 />
                                 {' '}år gammel
                             </Paragraph>
+                        </GridCol>
+                        <GridCol lg={12}>
+                            <FileUpload
+                                id="file-upload"
+                                cancelText="Avbryt"
+                                deleteText="Slett"
+                                files={{}}
+                                infoText="Det kan være vanskelig å estimere fremtiden, derfor kan du laste opp eventuelle filer som viser til fremtidig budsjett eller inntjening."
+                                label="Velg filer"
+                                multiple
+                                title="Dokumentasjon"
+                                uploadMicroText="Eller"
+                                uploadSubText="PDF-filer, maks 50 MB"
+                                uploadTitle="Dra filene hit"
+                                onFileDeleted={() => { }}
+                                onFilesDropped={() => { }}
+                                onFilesSelected={() => { }}
+                            />
                         </GridCol>
                     </GridRow>
 
