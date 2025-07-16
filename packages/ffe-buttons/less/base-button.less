@@ -16,7 +16,7 @@
     color: var(--ffe-color-component-button-primary-foreground-default);
     cursor: pointer;
     display: flex;
-    font-family: var(--ffe-g-font);
+    font-family: var(--ffe-g-font-strong);
     justify-content: center;
     line-height: 1.5; // 16 * 1.5 = 24(height of ffe-icons size md)
     overflow: hidden;
@@ -132,7 +132,7 @@
         }
 
         @media (hover: hover) and (pointer: fine) {
-            &:hover:not(:active):not(.ffe-button--pressed) {
+            &:hover:not(:active, .ffe-button--pressed) {
                 background-color: var(
                     --ffe-color-component-button-action-fill-hover
                 );
@@ -310,14 +310,15 @@
 
     &--task {
         --text-color: var(--ffe-color-foreground-emphasis);
+
         background: transparent;
         border-radius: 1.75rem;
         border: none;
         box-shadow: none;
         color: var(--text-color);
         display: inline-block;
-        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm)
-            var(--ffe-spacing-2xs) var(--ffe-spacing-2xs);
+        padding: 0;
+        margin: var(--ffe-spacing-2xs);
         text-align: left;
         transition: all var(--ffe-transition-duration) var(--ffe-ease);
         width: auto;
@@ -330,8 +331,8 @@
             border: 2px solid var(--icon-border-color);
             background-color: var(--icon-background-color);
             border-radius: 50%;
-            height: 45px;
-            width: 45px;
+            height: 48px;
+            width: 48px;
             display: flex;
             align-items: center;
             justify-content: center;

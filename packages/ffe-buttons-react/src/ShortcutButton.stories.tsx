@@ -31,6 +31,7 @@ type Story = StoryObj<typeof ShortcutButton<any>>;
 export const Standard: Story = {
     args: {
         as: 'a',
+        href: 'https://www.sparebank1.no/nb/bank/privat.html',
     },
     render: args => <ShortcutButton {...args}>Snarvei</ShortcutButton>,
 };

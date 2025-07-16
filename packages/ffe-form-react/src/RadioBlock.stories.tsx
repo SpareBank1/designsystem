@@ -17,10 +17,11 @@ export const Standard: Story = {
     },
     render: function Render(args) {
         const [selected, setSelected] = useState('you');
+        const id = Math.random().toString(36).substring(2, 15);
         return (
             <RadioButtonInputGroup
                 label="Hvem eier bilen du skal forsikre?"
-                name="owner"
+                name={`owner-${id}`}
                 onChange={e => setSelected(e.target.value)}
                 selectedValue={selected}
             >
@@ -59,16 +60,59 @@ export const Standard: Story = {
     },
 };
 
+export const WithoutDescriptions: Story = {
+    args: {
+        showChildren: true,
+    },
+    render: function Render(args) {
+        const [selected, setSelected] = useState('you');
+        const id = Math.random().toString(36).substring(2, 15);
+        return (
+            <RadioButtonInputGroup
+                label="Hvem eier bilen du skal forsikre?"
+                name={`owner-${id}`}
+                onChange={e => setSelected(e.target.value)}
+                selectedValue={selected}
+            >
+                {inputProps => (
+                    <>
+                        <RadioBlock
+                            {...args}
+                            {...inputProps}
+                            label="Ektefelle, samboer eller registrert partner"
+                            value="partner"
+                        />
+
+                        <RadioBlock
+                            {...args}
+                            {...inputProps}
+                            label="Du"
+                            value="you"
+                        />
+                        <RadioBlock
+                            {...args}
+                            {...inputProps}
+                            label="Leasingselskap"
+                            value="leasing-company"
+                        />
+                    </>
+                )}
+            </RadioButtonInputGroup>
+        );
+    },
+};
+
 export const FieldMessage: Story = {
     args: {
         showChildren: true,
     },
     render: function Render(args) {
         const [selected, setSelected] = useState('youu');
+        const id = Math.random().toString(36).substring(2, 15);
         return (
             <RadioButtonInputGroup
                 label="Hvem eier bilen du skal forsikre?"
-                name="ownerr"
+                name={`owner-${id}`}
                 onChange={e => setSelected(e.target.value)}
                 fieldMessage="Velg en eier"
                 selectedValue={selected}

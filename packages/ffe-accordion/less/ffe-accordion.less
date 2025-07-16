@@ -3,10 +3,6 @@
         --ffe-color-surface-primary-default-hover
     );
     --ffe-v-accordion-border-color: var(--ffe-color-border-primary-subtle);
-    --ffe-v-accordion-border-hover-color: var(--ffe-color-border-primary-default-hover);
-    --ffe-v-accordion-border-focus-color: var(
-        --ffe-color-border-interactive-focus
-    );
     --ffe-v-accordion-header-text-color: var(--ffe-color-foreground-emphasis);
     --ffe-v-accordion-body-text-color: var(--ffe-color-foreground-default);
 
@@ -22,14 +18,30 @@
         background-color: var(--ffe-color-surface-primary-default);
         color: var(--ffe-v-accordion-body-text-color);
         margin-bottom: var(--ffe-spacing-xs);
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
-        border-radius: 16px;
+        transition:
+            color var(--ffe-transition-duration) var(--ffe-ease),
+            border var(--ffe-transition-duration) var(--ffe-ease),
+            box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+            background-color var(--ffe-transition-duration) var(--ffe-ease);
+        border-radius: var(--ffe-g-border-radius-lg);
         border: var(--ffe-g-border-width) solid
             var(--ffe-v-accordion-border-color);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                border-color: var(--ffe-v-accordion-border-hover-color);
+                border-color: var(--ffe-color-border-primary-default-hover);
+            }
+        }
+
+        &:focus-within {
+            box-shadow: 0 0 0 1px var(--ffe-color-border-primary-default-hover);
+        }
+
+        @media (pointer: fine) {
+            &:focus-within {
+                outline: var(--ffe-g-outline-width) solid
+                    var(--ffe-color-border-interactive-focus);
+                outline-offset: var(--ffe-g-outline-offset);
             }
         }
 
@@ -93,19 +105,12 @@
         }
 
         &--open {
-            &:not(:last-of-type) {
-                margin-bottom: var(--ffe-spacing-md);
-            }
-
             .ffe-accordion-item__heading-icon {
                 transform: rotateZ(180deg);
             }
         }
 
         &--focus {
-            box-shadow: 0 0 0 2px
-                var(--ffe-v-accordion-border-focus-color);
-
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
                     border-color: var(--ffe-v-accordion-border-color);

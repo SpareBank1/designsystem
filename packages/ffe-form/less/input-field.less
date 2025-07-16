@@ -9,7 +9,11 @@
     border-radius: var(--ffe-g-border-radius);
     border: var(--ffe-g-border-width) solid
         var(--ffe-color-border-primary-default);
-    transition: all var(--ffe-transition-duration) var(--ffe-ease);
+    transition:
+        color var(--ffe-transition-duration) var(--ffe-ease),
+        border var(--ffe-transition-duration) var(--ffe-ease),
+        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+        background-color var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-input);
 
@@ -30,13 +34,14 @@
         }
     }
 
-    &:focus,
-    &:focus-within {
+    &:focus {
         border: var(--ffe-g-border-width) solid
-            var(--ffe-color-border-interactive-focus);
+            var(--ffe-color-fill-primary-selected-default);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-fill-primary-selected-default);
+        outline: var(--ffe-g-outline-width) solid
             var(--ffe-color-border-interactive-focus);
-        outline: none;
+        outline-offset: var(--ffe-g-outline-offset);
     }
 
     &--inline {
@@ -55,26 +60,28 @@
     &--text-like.ffe-input-field {
         border: none;
         border-bottom: 2px solid var(--ffe-color-border-primary-default);
-        border-radius: 0;
         box-shadow: none;
         text-align: center;
         padding: 0;
         display: inline-block;
         height: 2em;
-        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+        transition:
+            color var(--ffe-transition-duration) var(--ffe-ease),
+            border var(--ffe-transition-duration) var(--ffe-ease),
+            box-shadow var(--ffe-transition-duration) var(--ffe-ease),
+            background-color var(--ffe-transition-duration) var(--ffe-ease);
         background-color: transparent;
+        border-radius: 2px;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 border-color: var(--ffe-color-border-primary-default-hover);
-                background-color: var(
-                    --ffe-color-component-form-input-fill-default-hover
-                );
+                background-color: var(--ffe-color-surface-primary-default);
             }
         }
 
-        &:focus {
-            border-color: var(--ffe-color-border-interactive-focus);
+        &:focus-visible {
+            border-color: var(--ffe-color-border-interactive-selected);
         }
 
         &[aria-invalid='true'] {

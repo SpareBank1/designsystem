@@ -15,12 +15,27 @@ export const Standard: Story = {
         as: 'button',
         size: 'sm',
     },
-    render: args => (
-        <div className="storybook-button-display-group">
-            <ChipSelectable {...args}>Chip</ChipSelectable>
-            <ChipSelectable {...args} isSelected={true}>
-                Selected Chip
-            </ChipSelectable>
-        </div>
-    ),
+    render: args => {
+        const [chip1Selected, setChip1Selected] = React.useState(false);
+        const [chip2Selected, setChip2Selected] = React.useState(true);
+
+        return (
+            <div className="storybook-button-display-group">
+                <ChipSelectable
+                    {...args}
+                    isSelected={chip1Selected}
+                    onClick={() => setChip1Selected(!chip1Selected)}
+                >
+                    Chip
+                </ChipSelectable>
+                <ChipSelectable
+                    {...args}
+                    isSelected={chip2Selected}
+                    onClick={() => setChip2Selected(!chip2Selected)}
+                >
+                    Selected Chip
+                </ChipSelectable>
+            </div>
+        );
+    },
 };

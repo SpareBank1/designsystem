@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { RadioSwitch } from './RadioSwitch';
 import { RadioButtonInputGroup } from './RadioButtonInputGroup';
@@ -13,11 +13,12 @@ type Story = StoryObj<typeof RadioSwitch>;
 
 const RadioSwitchWithGroup = (args: any) => {
     const [selected, setSelected] = useState(args.selectedValue);
+    const id = useId();
 
     return (
         <RadioButtonInputGroup
             label="Velg et alternativ"
-            name="radio-switch-demo"
+            name={`radio-switch-demo${id}`}
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
         >
@@ -28,11 +29,12 @@ const RadioSwitchWithGroup = (args: any) => {
 
 const RadioSwitchAriaInvalid = (args: any) => {
     const [selected, setSelected] = useState(args.selectedValue);
+    const id = useId();
 
     return (
         <RadioButtonInputGroup
             label="Velg et alternativ"
-            name="radio-switch-invalid-demo"
+            name={`radio-switch-invalid-demo${id}`}
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
         >
@@ -62,7 +64,6 @@ export const AriaInvalid: Story = {
         leftValue: 'true',
         rightLabel: 'Nei',
         rightValue: 'false',
-        selectedValue: 'true',
     },
     render: function Render(args) {
         return <RadioSwitchAriaInvalid {...args} />;

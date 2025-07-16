@@ -258,3 +258,27 @@ export const CustomDisplayAttribute: Story = {
         );
     },
 };
+
+export const AriaInvalid: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+            >
+                {inputProps => (
+                    <SearchableDropdown
+                        labelledById={labelledById}
+                        {...args}
+                        {...inputProps}
+                        aria-invalid="true"
+                    />
+                )}
+            </InputGroup>
+        );
+    },
+};

@@ -25,8 +25,11 @@
         "lint:style:fix": "ffe-buildtool stylelint --fix less/*.less",
         "test": "npm run lint",
         "clean": "rm -rf css/ gen-src/ lib/",
-        "generate-semantic-colors": "./scripts/generate-semantic-colors.cjs",
-        "build": "npm run generate-semantic-colors && ./scripts/build.cjs tokens.config.cjs && ./scripts/build-custom-mq.cjs less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix"
+        "build-semantic-colors": "node ./scripts/build-colors.cjs platform=web webPaths=./",
+        "build": "npm run build-semantic-colors && ./scripts/build.cjs tokens.config.cjs && ./scripts/build-custom-mq.cjs less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix",
+       "build:colors:android": "node ./scripts/build-colors.cjs platform=android androidPaths=./test/android/colors",
+       "build:colors:ios": "node ./scripts/build-colors.cjs platform=ios iosPaths=./test/ios/colors",
+       "build:colors:json": "node ./scripts/build-colors.cjs platform=json jsonPaths=./test/json/colors"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1",

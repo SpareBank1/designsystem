@@ -34,6 +34,7 @@ export const MessageBox: React.FC<MessageBoxProps> = ({
     return (
         <div
             className={classNames(
+                'ffe-default-mode',
                 `ffe-message`,
                 `ffe-message--box`,
                 `ffe-message--${type}`,

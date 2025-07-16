@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { RadioButtonInputGroup } from './RadioButtonInputGroup';
 import { RadioButton } from './RadioButton';
@@ -22,9 +22,12 @@ export const Standard: Story = {
     render: function Render(args) {
         type Value = 'grass' | 'asphalt' | 'pollen';
         const [selectedValue, setSelectedValue] = useState<Value>('asphalt');
+        const id = useId();
+
         return (
             <RadioButtonInputGroup
                 {...args}
+                name={args.name + id}
                 selectedValue={selectedValue}
                 onChange={e => setSelectedValue(e.target.value as Value)}
             >
@@ -51,9 +54,12 @@ export const FieldMessage: Story = {
     render: function Render(args) {
         type Value = 'grass' | 'asphalt' | 'pollen';
         const [selectedValue, setSelectedValue] = useState<Value>('pollen');
+        const id = useId();
+
         return (
             <RadioButtonInputGroup
                 {...args}
+                name={args.name + id}
                 selectedValue={selectedValue}
                 onChange={e => setSelectedValue(e.target.value as Value)}
             >
@@ -92,9 +98,12 @@ export const WithRadioSwitch: Story = {
     render: function Render(args) {
         type Value = 'yes' | 'no';
         const [selectedValue, setSelectedValue] = useState<Value>('yes');
+        const id = useId();
+
         return (
             <RadioButtonInputGroup
                 {...args}
+                name={args.name + id}
                 selectedValue={selectedValue}
                 onChange={e => setSelectedValue(e.target.value as Value)}
             >
@@ -117,10 +126,12 @@ export const WithRadioBlock: Story = {
     render: function Render(args) {
         type Value = 'yes' | 'no';
         const [selectedValue, setSelectedValue] = useState<Value>('yes');
+        const id = useId();
 
         return (
             <RadioButtonInputGroup
                 {...args}
+                name={args.name + id}
                 selectedValue={selectedValue}
                 onChange={e => setSelectedValue(e.target.value as Value)}
             >
