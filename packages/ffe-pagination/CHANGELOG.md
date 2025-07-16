@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@3.0.26...@sb1/ffe-pagination@4.0.0) (2025-07-16)
+
+
+* fix(ffe-pagination)!: Endrer selected-fargene på knappene så det blir ([6a9363e](https://github.com/SpareBank1/designsystem/commit/6a9363e1903c4c271ff6c28ebb9cf0b9901b64d2))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [3.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@3.0.25...@sb1/ffe-pagination@3.0.26) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-pagination

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@2.0.28...@sb1/ffe-chips@3.0.0) (2025-07-16)
+
+
+* feat(ffe-chips)!: oppdartert fokusstate ([8f502e4](https://github.com/SpareBank1/designsystem/commit/8f502e4ef01dfb64e81cc961132f11cb4e43a021))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [2.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@2.0.27...@sb1/ffe-chips@2.0.28) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-chips

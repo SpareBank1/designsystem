@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@6.0.25...@sb1/ffe-spinner@7.0.0) (2025-07-16)
+
+
+* feat(ffe-spinner)!: endrer hovedfargen på spinneren. ([2eeb4be](https://github.com/SpareBank1/designsystem/commit/2eeb4bee713fc27ba63cfa3e3e936038e8dac8d6))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [6.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@6.0.24...@sb1/ffe-spinner@6.0.25) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-spinner

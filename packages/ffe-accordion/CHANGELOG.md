@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@12.1.5...@sb1/ffe-accordion@13.0.0) (2025-07-16)
+
+
+* feat(ffe-accordion)!: nye fargevariabler og fokusstil ([eaa72a7](https://github.com/SpareBank1/designsystem/commit/eaa72a76f3acfad6574b48d15617f1ac6fa9d74d))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [12.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@12.1.4...@sb1/ffe-accordion@12.1.5) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

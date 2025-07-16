@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@18.0.26...@sb1/ffe-tables@19.0.0) (2025-07-16)
+
+
+* feat(ffe-tables)!: nye fargevariabler ([8d1c390](https://github.com/SpareBank1/designsystem/commit/8d1c39084804d1f32b403a6d1b72cdc504a36cde))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [18.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@18.0.25...@sb1/ffe-tables@18.0.26) (2025-05-28)
 
 

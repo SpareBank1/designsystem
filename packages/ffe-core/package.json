@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-core",
-    "version": "32.0.5",
+    "version": "33.0.0",
     "description": "Rammeverk for Felles Front End",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -27,9 +27,9 @@
         "clean": "rm -rf css/ gen-src/ lib/",
         "build-semantic-colors": "node ./scripts/build-colors.cjs platform=web webPaths=./",
         "build": "npm run build-semantic-colors && ./scripts/build.cjs tokens.config.cjs && ./scripts/build-custom-mq.cjs less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix",
-       "build:colors:android": "node ./scripts/build-colors.cjs platform=android androidPaths=./test/android/colors",
-       "build:colors:ios": "node ./scripts/build-colors.cjs platform=ios iosPaths=./test/ios/colors",
-       "build:colors:json": "node ./scripts/build-colors.cjs platform=json jsonPaths=./test/json/colors"
+        "build:colors:android": "node ./scripts/build-colors.cjs platform=android androidPaths=./test/android/colors",
+        "build:colors:ios": "node ./scripts/build-colors.cjs platform=ios iosPaths=./test/ios/colors",
+        "build:colors:json": "node ./scripts/build-colors.cjs platform=json jsonPaths=./test/json/colors"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1",

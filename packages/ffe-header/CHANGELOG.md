@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.2.14...@sb1/ffe-header@23.0.0) (2025-07-16)
+
+
+* feat(ffe-header)!: nye fargevariabler ([9e0f8d8](https://github.com/SpareBank1/designsystem/commit/9e0f8d83b9f724d48c9eb02dc8851c1ae9f4d371))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [22.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@22.2.13...@sb1/ffe-header@22.2.14) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-header

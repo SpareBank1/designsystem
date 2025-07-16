@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-pagination",
-    "version": "3.0.26",
+    "version": "4.0.0",
     "description": "Pagination in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -20,7 +20,7 @@
         "build": "lessc less/pagination.less css/pagination.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^32.0.5"
+        "@sb1/ffe-core": "^33.0.0"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1"

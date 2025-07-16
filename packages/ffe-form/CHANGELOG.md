@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [33.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.10...@sb1/ffe-form@33.0.0) (2025-07-16)
+
+
+* feat(ffe-form)!: tar i bruk nye fargevariabler og ny fokusstate ([9465acc](https://github.com/SpareBank1/designsystem/commit/9465acc1b2b1b811a03c8e2b63d07fe99369c41f))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [32.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.9...@sb1/ffe-form@32.1.10) (2025-06-03)
 
 

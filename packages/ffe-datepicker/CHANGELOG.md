@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.2.0...@sb1/ffe-datepicker@15.0.0) (2025-07-16)
+
+
+* feat(ffe-datepicker)!: nye fargevariabler ([28d62b7](https://github.com/SpareBank1/designsystem/commit/28d62b706aa34e5d96f1837caf3437db78e7ede9))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 # [14.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@14.1.10...@sb1/ffe-datepicker@14.2.0) (2025-06-11)
 
 

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@9.0.7...@sb1/ffe-chart-donut-react@10.0.0) (2025-07-16)
+
+
+* feat(ffe-chart-donut-react)!: nye fargevariabler ([bd8de92](https://github.com/SpareBank1/designsystem/commit/bd8de92580463375e43c9ea9e4fed535a5db357e))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@9.0.6...@sb1/ffe-chart-donut-react@9.0.7) (2025-05-23)
 
 

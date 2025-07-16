@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@8.1.11...@sb1/ffe-dropdown-react@9.0.0) (2025-07-16)
+
+
+* feat(ffe-dropdown-react)!: nye fargevariabler, fokusstate og aria-invalid state ([f165c4e](https://github.com/SpareBank1/designsystem/commit/f165c4e39338bc41c2695287ccd5441173144f9c))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [8.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@8.1.10...@sb1/ffe-dropdown-react@8.1.11) (2025-06-03)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

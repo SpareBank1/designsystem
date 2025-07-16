@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [33.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@32.0.5...@sb1/ffe-core@33.0.0) (2025-07-16)
+
+
+* feat(ffe-core)!: Oppdaterer fargevariabler og farge scripts ([52928e2](https://github.com/SpareBank1/designsystem/commit/52928e2ec7e7fb0345e2b7176c5e2560a40b5bb7))
+
+
+### BREAKING CHANGES
+
+* Fjerner noen fargevariabler og legger til nye fargevariabler. Se change log.
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [32.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@32.0.4...@sb1/ffe-core@32.0.5) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-core

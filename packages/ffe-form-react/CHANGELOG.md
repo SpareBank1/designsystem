@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.3.14...@sb1/ffe-form-react@24.0.0) (2025-07-16)
+
+
+* feat(ffe-form-react)!: oppdatert design på radioblock ([4334c47](https://github.com/SpareBank1/designsystem/commit/4334c47c21505275d2a7adc3935d701a66276382))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [23.3.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@23.3.13...@sb1/ffe-form-react@23.3.14) (2025-06-03)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

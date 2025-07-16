@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@2.0.37...@sb1/ffe-messages-react@3.0.0) (2025-07-16)
+
+
+* feat(ffe-messages-react)!: endrer til default mode i accent context ([2b56246](https://github.com/SpareBank1/designsystem/commit/2b56246587de93ba5755570404caa56b77d8613e))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [2.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@2.0.36...@sb1/ffe-messages-react@2.0.37) (2025-05-28)
 
 **Note:** Version bump only for package @sb1/ffe-messages-react

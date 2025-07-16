@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.2.16...@sb1/ffe-searchable-dropdown-react@24.0.0) (2025-07-16)
+
+
+* feat(ffe-searchable-dropdown-react)!: nye fargevariaber, fokusstate og aria-invalid state ([898168c](https://github.com/SpareBank1/designsystem/commit/898168cf01717fe74fddaad775eb956dfb9e8047))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+
+
+
+
+
 ## [23.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@23.2.15...@sb1/ffe-searchable-dropdown-react@23.2.16) (2025-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
