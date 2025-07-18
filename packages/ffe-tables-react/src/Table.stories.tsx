@@ -15,6 +15,19 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
 const meta: Meta<typeof Table> = {
     title: 'Komponenter/Table/Table',
     component: Table,
+    argTypes: {
+        breakPoint: {
+            control: { type: 'radio' },
+            options: ['none', 'sm', 'md'],
+            mapping: {
+                none: 'none',
+                sm: 'sm',
+                md: 'md',
+            },
+            description: 'Breakpoint for en responsiv tabell',
+            defaultValue: 'sm',
+        },
+    },
 };
 export default meta;
 
@@ -22,7 +35,7 @@ type Story = StoryObj<typeof Table>;
 
 export const Standard: Story = {
     args: {},
-    render: () => {
+    render: (args) => {
         const data = [
             { name: 'Anders', age: 32 },
             { name: 'Erik', age: 25 },
@@ -37,7 +50,7 @@ export const Standard: Story = {
 
         return (
             <div style={{ overflowX: 'auto' }}>
-                <Table>
+                <Table {...args}>
                     <TableCaption>Utviklere</TableCaption>
                     <TableHead>
                         <TableRow>
@@ -82,7 +95,7 @@ export const Standard: Story = {
 
 export const Expandable: Story = {
     args: {},
-    render: () => {
+    render: (args) => {
         const data = [
             {
                 name: 'Ola Normann',
@@ -104,7 +117,7 @@ export const Expandable: Story = {
         const epostHeader = 'E-post';
         return (
             <div style={{ overflowX: 'auto' }}>
-                <Table>
+                <Table {...args}>
                     <TableCaption>Tabel utvidbare rader</TableCaption>
                     <TableHead>
                         <TableRow>
@@ -140,7 +153,7 @@ export const Expandable: Story = {
 
 export const Sortable: Story = {
     args: {},
-    render: () => {
+    render: (args) => {
         type Data = {
             name: string;
             email: string;
@@ -269,14 +282,15 @@ export const Sortable: Story = {
         return (
             <div style={{ overflowX: 'auto' }}>
                 <Table
+                    {...args}
                     initialSort={{ sortKey: 'email', sortOrder: 'descending' }}
                 >
                     {({ activeSortKey, activeSortOrder }) => {
                         const sortFunc =
                             activeSortKey && activeSortOrder
                                 ? sortFunctions[
-                                      activeSortKey as keyof typeof sortFunctions
-                                  ][activeSortOrder]
+                                activeSortKey as keyof typeof sortFunctions
+                                ][activeSortOrder]
                                 : null;
 
                         const sortedData = sortFunc
@@ -348,6 +362,7 @@ export const Sortable: Story = {
                                                     columnHeader={formueHeader}
                                                 >
                                                     {formatNumber(it.fortune, {
+                                                        locale: 'nb',
                                                         decimals: 2,
                                                     })}
                                                 </TableDataCell>
@@ -376,6 +391,66 @@ export const Sortable: Story = {
                             </>
                         );
                     }}
+                </Table>
+            </div>
+        );
+    },
+};
+
+export const DifferentBreakPoint: Story = {
+    args: { breakPoint: 'md' },
+    render: (args) => {
+        const data = [
+            { name: 'Anders', age: 32 },
+            { name: 'Erik', age: 25 },
+            { name: 'Gunn', age: 29 },
+            { name: 'Safi', age: 42 },
+            { name: 'Sandra', age: 42 },
+        ];
+
+        const navnHeader = 'Navn';
+        const alderHeader = 'Alder';
+        const gjenomsnittsalderHeader = ' Gjenomsnittsalder';
+
+        return (
+            <div style={{ overflowX: 'auto' }}>
+                <Table {...args}>
+                    <TableCaption>Utviklere</TableCaption>
+                    <TableHead>
+                        <TableRow>
+                            <TableHeaderCell scope="col">
+                                {navnHeader}
+                            </TableHeaderCell>
+                            <TableHeaderCell scope="col">
+                                {alderHeader}
+                            </TableHeaderCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {data.map(it => (
+                            <TableRow key={it.name}>
+                                <TableDataCell columnHeader={navnHeader}>
+                                    {it.name}
+                                </TableDataCell>
+                                <TableDataCell columnHeader={alderHeader}>
+                                    {it.age}
+                                </TableDataCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                    <TableFoot>
+                        <TableRow>
+                            <TableHeaderCell scope="row">
+                                {gjenomsnittsalderHeader}
+                            </TableHeaderCell>
+                            <TableDataCell
+                                columnHeader={gjenomsnittsalderHeader}
+                            >
+                                {data.reduce((sum, curr) => sum + curr.age, 0) /
+                                    data.length}
+                            </TableDataCell>
+                        </TableRow>
+                    </TableFoot>
                 </Table>
             </div>
         );
