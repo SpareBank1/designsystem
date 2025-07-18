@@ -1,0 +1,36 @@
+import { InstallImport } from '../../../documentation/components/InstallImport';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as ProgressBarStories from './Progressbar.stories';
+import dependencies from '../ffe-dependencies';
+
+<Meta title="Komponenter/Progressbar" />
+
+# Progressbar
+Progressbar brukes for å vise fremgangen i en prosess.
+Eksempler kan være: opplasting av filer, nedbetaling av lån, gjenværende dager til en gitt dato etc.
+
+## Universell utforming
+For å gjøre progressbaren tilgjengelig for skjermlesere, bør man enten legge til ett `aria-label`-attributt som beskriver hva progressbaren viser.
+Den vil da lese opp `aria-label - value omregnet til prosent - Progressbar`. F.eks i eksempelet "WithAria", så leser den `nedbetaling av lån 50% prosessindikator`.
+
+
+<InstallImport
+    packageName="@sb1/ffe-progressbar-react"
+    dependencies={dependencies}
+/>
+
+
+## Forhåndsvisning
+
+### Standard
+
+<Canvas of={ProgressBarStories.Standard} />
+
+### Green
+
+<Canvas of={ProgressBarStories.Green} />
+
+## With Aria-label
+
+<Canvas of={ProgressBarStories.WithAria} />
+<Controls of={ProgressBarStories.WithAria} />

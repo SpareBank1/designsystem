@@ -1,0 +1,43 @@
+{
+    "name": "@sb1/ffe-progressbar-react",
+    "version": "1.0.0",
+    "description": "React implementation of ffe-progressbar component",
+    "keywords": [
+        "ffe",
+        "progressbar",
+        "progress"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool tsc",
+        "build:es": "ffe-buildtool tsc --es",
+        "lint": "echo \"Linting handled at root level with oxlint\"",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "@sb1/ffe-core": "^32.0.5",
+        "@sb1/ffe-progressbar": "^1.0.0",
+        "classnames": "^2.5.1"
+    },
+    "peerDependencies": {
+        "react": ">=18.2.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
