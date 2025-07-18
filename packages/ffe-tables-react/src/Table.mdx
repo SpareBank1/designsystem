@@ -36,3 +36,11 @@ Tabeller kan også lages sorterbare. Før å sortera brukes en funksjon som `chi
 Det er også mulig å lage ekspanderbare rader der det er hensiktsmessig.
 
 <Canvas of={TableStories.Expandable} />
+
+## Mobiltilpasning - forskjellige breakpoints
+Tabellen tilpasser seg mindre skjermstørrelser ved å sette header og tekst sammen. 
+Du kan justere når dette skjer ved å sende inn `breakPoint?: 'none' | 'sm' | 'md'` (merk stor P). 
+`sm` er default. 
+
+<Canvas of={TableStories.DifferentBreakPoint} />
+<Controls of={TableStories.DifferentBreakPoint} /> 
