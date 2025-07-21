@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [33.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@33.0.0...@sb1/ffe-form@33.0.1) (2025-07-21)
+
+
+### Bug Fixes
+
+* **ffe-form:** fikser at radioswitch får margin-left i group ([c6c8e40](https://github.com/SpareBank1/designsystem/commit/c6c8e40400a117b89121017c4ef054d99010ab75))
+
+
+
+
+
 # [33.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@32.1.10...@sb1/ffe-form@33.0.0) (2025-07-16)
 
 
