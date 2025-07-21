@@ -55,6 +55,8 @@ module.exports = {
                 'ffe-modals-react',
                 'ffe-pagination',
                 'ffe-pagination-react',
+                'ffe-progressbar',
+                'ffe-progressbar-react',
                 'ffe-sb1-logos',
                 'ffe-searchable-dropdown-react',
                 'ffe-spinner',
