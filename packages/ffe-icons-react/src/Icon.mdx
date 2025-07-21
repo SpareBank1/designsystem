@@ -16,6 +16,31 @@ Ikonene vi bruker kommer fra ikonbiblioteket Material Symbols. [Les mer om ikone
 
 <InstallImport packageName="@sb1/ffe-icons-react" dependencies={dependencies} />
 
+## Kode
+For å bruke et ikon i kode må du gjøre 3 ting: 
+1. Importere styling `@import '@sb1/ffe-icons/less/ffe-icons';`
+2. Importere ikonet `import closeIcon from '@sb1/ffe-icons/icons/open/300/md/close.svg';`
+3. Importere React-komponenten som skal holde ikonet `import { Icon } from '@sb1/ffe-icons-react';`
+
+Sammen ser det slik ut:
+```
+import { Icon } from '@sb1/ffe-icons-react';
+import closeIcon from '@sb1/ffe-icons/icons/open/300/md/close.svg'; //{open eller filled} / {vekt} / {størrelse} / {navn}
+//@import '@sb1/ffe-icons/less/ffe-icons'; //I en css-fil 
+.....
+<Icon fileUrl={closeIcon} size="md" ariaLabel="lukk" />
+```
+Det er viktig at du setter en `size`-prop som stemmer overens med SVG-størrelsen, slik at ikonet vises riktig.
+
+For å finne navnet på ikonet ("close" fra eksempelet) kan du enten finne ikonet via [Google Symbols](https://fonts.google.com/icons) eller se på navnet som er brukt på 
+ikonet i Figma, hvis du jobber ut i fra Figma-skisser.<br/>
+
+I `ffe-icons` finner du alle varianter av ikonene som SVG-filer. 
+`Icon`-komponenten tar inn en filbane eller [data-URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), og setter SVG-ikonet som en mask. 
+Det gjør at ikonet kan arve color-verdien fra et parent-element. Dersom du ønsker å legge inn ikoner som data-URL må man selv konvertere 
+ikonene til et passende format, for eksempel [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
+
+
 ## Figma
 
 Når du bruker komponenter fra designsystem-biblioteket i Figma ligger ikonene tilgjengelig som en del av komponentene.
@@ -29,43 +54,11 @@ Når du trenger et ikon utenfor komponentene lager du et nytt tekstelement, skri
 
 <img src={velgerTextStilSrc} alt="Hvordan man velger tekststil for ikoner" />
 
-Bruk Color Styles for å bytte farge på ikonet.
-
-<img src={velgerColorSrc} alt="Hvordan man velger color style for ikonet" />
-
-## SVG-implementasjon
-
-Bruk pakkene `ffe-icons` og `ffe-icons-react`. I `ffe-icons` finner du alle varianter av ikonene som SVG-filer, i tillegg til styling-filene som brukes i React-komponenten.
-SVG-filene er sortert på `weight`, om de er fylt eller ikke, samt størrelse. Hvilken størrelse du skal bruke kan variere fra komponent til komponent.
-
-`Icon`-komponenten tar inn en filbane eller [data-URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), og setter SVG-ikonet som en mask. Det gjør at ikonet kan arve color-verdien fra et parent-element.
-
-Filbane er anbefalt metode for å importere ikoner. På denne måten kan man i tillegg til selve ikonet spesifisere variant, vekt og størrelse i URL-en ikonet hentes fra.
-For eksempel vil et åpent hjem-ikon med vekt 300 og størrelse md kunne tas i bruk slik:
-
-```
-import homeIcon from '@sb1/ffe-icons/icons/open/300/md/home.svg';
-
-return <Icon fileUrl={homeIcon} size="md" ariaLabel="hjem" />;
-```
-
-Dersom man ønsker å legge inn ikoner som data-URL må man selv konvertere ikonene til et passende format, for eksempel [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
-
 ## Forhåndsvisning
+`aria-hidden` settes automatisk til true, dersom du ikke sender med en verdi i `ariaLabel`.
 
 <Canvas of={IconStories.Standard} />
 <Controls of={IconStories.Standard} />
-
-`mask` fungerer på samme måte som bakgrunn. Det er derfor viktig at du setter en `size`-prop som stemmer overens med SVG-størrelsen, slik at ikonet vises riktig.
-Setter du en verdi i `size` som ikke stemmer overens med SVG-en, vil resultatet se slik ut:
-
-<Canvas of={IconStories.WrongSize} />
-
-Dette er gjort med vilje for at man skal bli klar over at man bruker feil SVG, da linjetykkelsen varierer fra størrelse til størrelse.
-
-`aria-hidden` settes automatisk til true, dersom du ikke sender med en verdi i `ariaLabel`:
-
-<Canvas of={IconStories.NoAriaLabel} />
 
 ## Stil
 
@@ -73,11 +66,13 @@ Vi bruker stilen «rounded». Den harmonerer godt med resten av den visuelle ide
 
 ## Størrelser
 
-Velg mellom tykkelsene 300, 400 og 500.
+Velg mellom størrelsene `sm`, `md`, `lg` og `xl`.
 
 <Canvas of={IconStories.Sizes} />
 
 ## Tykkelser
+
+Velg mellom tykkelsene 300, 400 og 500. 300 er mest vanlig. 
 
 <Canvas of={IconStories.Weights} />
 
