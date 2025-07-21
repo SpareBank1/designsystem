@@ -8,7 +8,7 @@ Denne siden lister breaking changes og større endringer i designsystemet. For a
 
 F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
 
-## 2025 - Juni - Oppdatering av semantiske farger
+## 2025 - Juli - Oppdatering av semantiske farger
 
 ### ! Fargene i det semantiske og primitive laget er ikke lenger tilgjengelige
 
@@ -177,6 +177,30 @@ Vi har også lagt til flere farger. Det har blitt flere neutral-varianter:  <br/
 `--ffe-color-fill-neutral-extra-subtle-*`  <br/>
 i tillegg til input-variabler som nevnt over. 
  <br/>
+
+ ## 2025 - Mars - Bølgen trukket ut i egen pakke
+ Bølgen, `Wave`, som tidligere har ligget i `ffe-core-react` er nå deprecated fra core 
+ og flyttet ut i egne pakker - `ffe-shapes-react` og `ffe-shapes`.
+ Dette gjør det lettere å vedlikeholde og oppdatere komponenten. 
+ Den har også fått noen nye endringer i forbindelse med oppdatering av de semantiske fargene: 
+ <br/>
+ Ikke lenger tilgjengelig: 
+- `color`
+- `darkModeColor`
+- `bgDarkmodeColor`
+
+`bgColor` tilbyr nå kun `default` og `subtle`. 
+
+Bølgen tilbys nå kun med blå bakgrunn og kun i `default` kontekst, altså ikke i `accent` kontekst.
+
+<img width="902" height="259" alt="image" src="https://github.com/user-attachments/assets/e229cc4c-8179-44cb-bc84-690d500e8f20" />
+
+`flip` kan fortsatt brukes til å snu bølgen opp ned, hvis du skal bruke den i toppen av siden. 
+<img width="906" height="231" alt="image" src="https://github.com/user-attachments/assets/392c606f-ec51-440d-8e2b-9cb18704ef78" />
+
+Høyden kan justeres ved å sende inn en CSS-klasse som justerer paddingen.
+`<Wave className="pt-5"/>`
+<img width="907" height="321" alt="image" src="https://github.com/user-attachments/assets/634dcb23-50c7-471f-88a0-3e472774e626" />
 
 ## 2025 - februar - Semantiske Farger
 
