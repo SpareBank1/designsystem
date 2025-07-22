@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [24.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@24.0.0...@sb1/ffe-cards@24.0.1) (2025-07-22)
+
+
+### Bug Fixes
+
+* **ffe-cards:** fjerner z-index fra group card ([8e4dda0](https://github.com/SpareBank1/designsystem/commit/8e4dda0cb0666c351b65681999b7ba167c3dd122))
+
+
+
+
+
 # [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@23.1.7...@sb1/ffe-cards@24.0.0) (2025-07-16)
 
 
