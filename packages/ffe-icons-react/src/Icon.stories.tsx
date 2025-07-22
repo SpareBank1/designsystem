@@ -19,12 +19,6 @@ export const Standard: Story = {
     render: args => <Icon {...args} />,
 };
 
-export const WrongSize: Story = {
-    tags: ['!dev'],
-    args: { ...Standard.args, size: 'lg' },
-    render: args => <Icon {...args} />,
-};
-
 export const NoAriaLabel: Story = {
     args: { ...Standard.args, ariaLabel: undefined },
     render: args => <Icon {...args} />,
