@@ -1,10 +1,11 @@
+import FileUploader from '@/components/FileUploader';
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
 import { Account } from '@sb1/ffe-account-selector-react/types/types';
 import { ButtonGroup, PrimaryButton, SecondaryButton, TertiaryButton } from '@sb1/ffe-buttons-react';
 import { Heading1, Paragraph } from '@sb1/ffe-core-react';
 import { Datepicker } from '@sb1/ffe-datepicker-react';
 import { Dropdown } from '@sb1/ffe-dropdown-react';
-import { FileUpload } from '@sb1/ffe-file-upload-react';
+
 import {
     Checkbox,
     ErrorFieldMessage,
@@ -417,22 +418,7 @@ export const PaymentForm = () => {
                             </Paragraph>
                         </GridCol>
                         <GridCol lg={12}>
-                            <FileUpload
-                                id="file-upload"
-                                cancelText="Avbryt"
-                                deleteText="Slett"
-                                files={{}}
-                                infoText="Det kan være vanskelig å estimere fremtiden, derfor kan du laste opp eventuelle filer som viser til fremtidig budsjett eller inntjening."
-                                label="Velg filer"
-                                multiple
-                                title="Dokumentasjon"
-                                uploadMicroText="Eller"
-                                uploadSubText="PDF-filer, maks 50 MB"
-                                uploadTitle="Dra filene hit"
-                                onFileDeleted={() => { }}
-                                onFilesDropped={() => { }}
-                                onFilesSelected={() => { }}
-                            />
+                            <FileUploader />
                         </GridCol>
                     </GridRow>
 
