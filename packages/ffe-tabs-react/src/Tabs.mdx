@@ -57,3 +57,45 @@ Dette kan være nyttig i tilfeller der man har plass til alt på en linje, selv 
 <Canvas of={TabGroupStories.NoBreak} />
 
 <Meta title="Komponenter/Tabs" />
+
+## Kodeeksempel 
+```
+import { TabGroup } from './TabGroup';
+import { Tab } from './Tab';
+//...
+
+const loan = { house: 'house', car: 'car' };
+const [activeTabId, setActiveTabId] = useState(loan.house);
+
+return (
+    <>
+        <TabGroup>
+            <Tab
+                selected={activeTabId === loan.house}
+                onClick={() => setActiveTabId(loan.house)}
+                aria-controls={loan.house}
+            >
+                Huslån
+            </Tab>
+
+            <Tab
+                selected={activeTabId === loan.car}
+                onClick={() => setActiveTabId(loan.car)}
+                aria-controls={loan.car}
+            >
+                Billån
+            </Tab>
+        </TabGroup>
+        {activeTabId === loan.house && (
+            <div>
+                Huslån
+            </div>
+        )}
+        {activeTabId === loan.car && (
+            <div>
+                Billån
+            </div>
+        )}
+    </>
+);
+```

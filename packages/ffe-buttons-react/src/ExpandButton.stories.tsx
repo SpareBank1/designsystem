@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import { ExpandButton } from './ExpandButton';
+import { Collapse } from '@sb1/ffe-collapse-react';
+import { Paragraph } from '@sb1/ffe-core-react';
 
 const meta: Meta<typeof ExpandButton> = {
     title: 'Komponenter/Buttons/ExpandButton',
@@ -23,17 +25,26 @@ export const Standard: Story = {
     },
     render: function Render(args) {
         const [isExpanded, setExpanded] = useState(args.isExpanded);
+        const collapseId = 'expand-button-collapse';
 
         return (
-            <div className="storybook-button-display-group storybook-button-display-group--center">
-                <ExpandButton
-                    {...args}
-                    isExpanded={isExpanded}
-                    onClick={() => setExpanded(!isExpanded)}
-                >
-                    Vis mer
-                </ExpandButton>
-            </div>
+            <>
+                <div className="storybook-button-display-group storybook-button-display-group--center">
+                    <ExpandButton
+                        {...args}
+                        isExpanded={isExpanded}
+                        onClick={() => setExpanded(!isExpanded)}
+                        aria-controls={collapseId}
+                    >
+                        Vis mer
+                    </ExpandButton>
+                </div>
+                <Collapse id={collapseId} isOpen={isExpanded} role="region">
+                    <Paragraph>
+                        Tekst
+                    </Paragraph>
+                </Collapse>
+            </>
         );
     },
 };
