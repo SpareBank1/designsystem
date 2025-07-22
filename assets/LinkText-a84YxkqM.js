@@ -1,7 +1,0 @@
-import{j as e,M as o,C as i,a as k}from"./index-BSwe_shE.js";import{useMDXComponents as a}from"./index-DmqVK_gK.js";import{L as l,S as r}from"./LinkText.stories-B6o04p3p.js";import"./iframe-CZSnEi23.js";import"./index-DQDNmYQF.js";import"./index-CGBZXJ9a.js";import"./index-DrriUsT5.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./index-QCImZZ3W.js";function s(n){const t={h1:"h1",p:"p",...a(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(o,{of:l}),`
-`,e.jsx(t.h1,{id:"linktext",children:"LinkText"}),`
-`,e.jsx(t.p,{children:"Lenker vises vanligvis med en understrek, siden dette er en standard i nettlesere, og gjør det ekstra tydelig for brukerne at teksten er klikkbar."}),`
-`,e.jsx(t.p,{children:`Dersom det er tydelig ut fra sammenhengen at en tekst er en lenke eller lenken består av et ikon uten synlig tekst kan man vurdere å skru av understreken.
-Husk at farge alene ikke er nok til å indikere at en tekst er klikkbar. Ikke alle våre brukere kan skille mellom fargen på lenkene og fargen på brødteksten.`}),`
-`,e.jsx(i,{of:r}),`
-`,e.jsx(k,{of:r})]})}function v(n={}){const{wrapper:t}={...a(),...n.components};return t?e.jsx(t,{...n,children:e.jsx(s,{...n})}):s(n)}export{v as default};
