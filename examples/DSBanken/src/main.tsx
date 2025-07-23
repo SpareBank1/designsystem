@@ -7,6 +7,7 @@ import { InvestmentDashboard } from './pages/InvestmentDashboard';
 import { PaymentForm } from './pages/PaymentForm';
 import SavingDashboard from './pages/SavingDashboard';
 import SettingsDashboard from './pages/SettingsDashboard';
+import WaveDemo from './pages/WaveDemo';
 import './styles/tailwind.css';
 import './styles/main.less';
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: '/innstillinger',
         element: <SettingsDashboard />,
+      },
+      {
+        path: '/wave-demo',
+        element: <WaveDemo />,
       },
       {
         path: '*',
