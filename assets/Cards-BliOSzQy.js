@@ -1,5 +1,0 @@
-import{j as e,M as s}from"./index-D8Iwegvh.js";import{useMDXComponents as o}from"./index-DmqVK_gK.js";import{I as i}from"./InstallImport-DdS34lTz.js";import"./iframe-Bq0-55nQ.js";import"./index-DQDNmYQF.js";import"./index-CGBZXJ9a.js";import"./index-DrriUsT5.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";import"./Heading-D_Y6r1eI.js";import"./index-QCImZZ3W.js";import"./Paragraph-DEYlXMQQ.js";const a=["@sb1/ffe-cards","@sb1/ffe-icons-react","@sb1/ffe-core","@sb1/ffe-icons"];function t(n){const r={h1:"h1",h2:"h2",p:"p",...o(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(s,{title:"Komponenter/Cards/Cards"}),`
-`,e.jsx(r.h1,{id:"kort",children:"Kort"}),`
-`,e.jsx(i,{packageName:["@sb1/ffe-cards-react"],dependencies:a}),`
-`,e.jsx(r.h2,{id:"bruk-av-kort",children:"Bruk av kort"}),`
-`,e.jsx(r.p,{children:"Kortene skal hjelpe brukerne med å navigere seg til riktig side. De skal gi en kort og tydelig oppsummering av hva slags informasjon som finnes på undersiden."})]})}function b(n={}){const{wrapper:r}={...o(),...n.components};return r?e.jsx(r,{...n,children:e.jsx(t,{...n})}):t(n)}export{b as default};
