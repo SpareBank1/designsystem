@@ -9,26 +9,25 @@ import { AnimatedWave } from '@sb1/ffe-shapes-react';
  * any content.
  */
 const WaveDemo: React.FC = () => {
-    const waveHeight = 220;
+    const waveHeight = 550;
 
     return (
-        <section
-            style={{
-                position: 'relative',
-                minHeight: `calc(100vh - 4rem)`,
-                color: 'white',
-            }}
-        >
+        <div style={{
+            position: 'relative',
+            minHeight: `1500px`,
+            width: '100%',
+            overflow: 'hidden'
+        }}>
             <AnimatedWave
                 height={waveHeight}
-                amplitude={25}
+                amplitude={45}
                 speed={1}
                 points={3}
                 align="top"
                 sharpness={0.8}
-                fill="#002776"
+                fill="#005AA4"
             />
-        </section>
+        </div>
     );
 };
 
