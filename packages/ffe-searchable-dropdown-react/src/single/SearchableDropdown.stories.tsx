@@ -282,3 +282,27 @@ export const AriaInvalid: Story = {
         );
     },
 };
+
+export const WithDescription: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup
+                label="Velg bedrift"
+                labelId={labelledById}
+                inputId={id}
+                description='Velg en bedrift for å fortsette'
+            >
+                {inputProps => (
+                    <SearchableDropdown
+                        labelledById={labelledById}
+                        {...args}
+                        {...inputProps}
+                    />
+                )}
+            </InputGroup>
+        );
+    },
+};

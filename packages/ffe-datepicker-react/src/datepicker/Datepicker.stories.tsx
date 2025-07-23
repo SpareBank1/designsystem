@@ -218,3 +218,27 @@ export const TwoWayControlledComponent: Story = {
         );
     },
 };
+
+export const WithDescription: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: function Render({ value, onChange, ...args }: DatepickerProps) {
+        const [date, setDate] = useState('01.12.2024');
+
+        return (
+            <InputGroup label="Dato"
+                labelId={Standard?.args?.labelId}
+                description="Dette er en beskrivelse av Datepicker-komponenten. Den gir ekstra informasjon om hvordan den skal brukes.">
+                <Datepicker
+                    value={value ?? date}
+                    onChange={date => {
+                        setDate(date);
+                        console.log('Datepicker value:', date);
+                    }}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};

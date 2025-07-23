@@ -21,44 +21,43 @@ I mobilbanken så er foretrukken løsning `openAccountPicker` i stedet for denne
 <Canvas of={AccountSelectorStories.Standard} />
 <Controls of={AccountSelectorStories.Standard} />
 
+## Saldo
 Kontovelger som også viser saldo/beløp
-
-## Forhåndsvisning
 
 <Canvas of={AccountSelectorStories.ShowBalance} />
 
+## Tillate å skrive eget
 Trenger du å tillate at brukere kan skrive inn sitt eget kontonummer kan du aktivere dette ved å sende med `allowCustomAccount={true}`.
-
-## Forhåndsvisning
 
 <Canvas of={AccountSelectorStories.AllowCustomAccount} />
 
+## Ingen formattering
 Hvis du ikke ønsker at kontonummeret en bruker skriver inn skal formatteres, kan du skru det av med `formatAccountNumber={false}`.
-
-## Forhåndsvisning
 
 <Canvas of={AccountSelectorStories.NoFormatAccount} />
 
+## Egendefinert listElement 
 Dersom du ønsker å gjøre endringer på selve listevisningen, kan du gjøre det med `listElementBody`.
-
-## Forhåndsvisning
 
 <Canvas of={AccountSelectorStories.ListElementBody} />
 
+## Skjule kontodetlajer
 Dersom du ønsker å skjule kontodetaljer, kan du bruke `hideAccountDetails`.
-
-## Forhåndsvisning
 
 <Canvas of={AccountSelectorStories.HideAccountDetails} />
 
+## Ekstra tekst nederst 
 Dersom du ønsker å ha ekstra tekst på bunnen av lista, kan du bruke `postListElement`.
-
-## Forhåndsvisning
 
 <Canvas of={AccountSelectorStories.PostListElement} />
 
+## Tilpass visningen av valgt konto
 Dersom du ønsker å vise en annen informasjon enn kontonavn i inputen, så kan du velge hvilken attribute som brukes med `displayAttribute`.
 
-## Forhåndsvisning
-
 <Canvas of={AccountSelectorStories.CustomDisplayAttribute} />
+
+## Med beskrivelse
+
+Du kan bruke `description='tekst her'` på `InputGroup` for å legge til en beskrivelse mellom label og AccountSelector.
+
+<Canvas of={AccountSelectorStories.WithDescription} />
