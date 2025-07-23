@@ -20,3 +20,31 @@ sette `size`-propen til en av disse verdiene, altså `size="sm"`. Hvis du ikke s
 
 <Canvas of={ExpandButtonStories.DifferentSizes} />
 
+## Kodeeksempel 
+Du kan bruke `<Collapse />` for å få animert utvidelse og skjuling av innhold. Husk å importere stilene til collapse-komponenten for at animasjonen skal vises riktig.
+```
+import { ExpandButton } from './ExpandButton';
+import { Collapse } from '@sb1/ffe-collapse-react';
+//...
+
+const [isExpanded, setExpanded] = useState(false);
+const collapseId = 'expand-button-collapse';
+
+return (
+    <>
+        <ExpandButton
+            isExpanded={isExpanded}
+            onClick={() => setExpanded(!isExpanded)}
+            aria-controls={collapseId}
+        >
+            Vis mer
+        </ExpandButton>
+        <Collapse id={collapseId} isOpen={isExpanded} role="region">
+            <Paragraph>
+                Tekst
+            </Paragraph>
+        </Collapse>
+    </>
+);
+```
+

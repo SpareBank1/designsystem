@@ -47,22 +47,16 @@ export const WithContent: Story = {
                         Billån
                     </Tab>
                 </TabGroup>
-                <div
-                    id={loan.house}
-                    style={{
-                        display: activeTabId === loan.house ? 'block' : 'none',
-                    }}
-                >
-                    Huslån
-                </div>
-                <div
-                    id={loan.car}
-                    style={{
-                        display: activeTabId === loan.car ? 'block' : 'none',
-                    }}
-                >
-                    Billån
-                </div>
+                {activeTabId === loan.house && (
+                    <div>
+                        Huslån
+                    </div>
+                )}
+                {activeTabId === loan.car && (
+                    <div>
+                        Billån
+                    </div>
+                )}
             </>
         );
     },

@@ -12,3 +12,38 @@ Samme som ExpandButton, bortsett fra at denne brukes når du vil ekspandere/koll
 
 <Canvas of={InlineExpandButtonStories.Standard} />
 <Controls of={InlineExpandButtonStories.Standard} />
+
+## Kodeeksempel 
+Du kan bruke `<Collapse />` for å få animert utvidelse og skjuling av innhold. Husk å importere stilene til collapse-komponenten for at animasjonen skal vises riktig.
+```
+import { InlineExpandButton } from './InlineExpandButton';
+import { Collapse } from '@sb1/ffe-collapse-react';
+//...
+
+const collapseId = useId();
+const [isExpanded, setExpanded] = useState(false);
+
+return (
+    <>
+        <Paragraph>
+            Jeg samtykker til å ha det gøy
+            <InlineExpandButton
+                aria-controls={collapseId}
+                aria-expanded={isExpanded}
+                isExpanded={isExpanded}
+                onClick={() => setExpanded(!isExpanded)}
+            >
+                {isExpanded ? 'Vis mindre' : 'Vis mer'}
+            </InlineExpandButton>
+        </Paragraph>
+
+        <Collapse id={collapseId} isOpen={isExpanded} role="region">
+            <div>
+                <Paragraph>
+                    Tekst
+                </Paragraph>
+            </div>
+        </Collapse>
+    </>
+);
+```
