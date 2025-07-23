@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-pagination-react",
-    "version": "1.2.93",
+    "version": "1.2.94",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -24,7 +24,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-buttons-react": "^24.4.2",
+        "@sb1/ffe-buttons-react": "^24.4.3",
         "@sb1/ffe-core": "^33.0.0",
         "@sb1/ffe-core-react": "^10.1.9",
         "@sb1/ffe-dropdown-react": "^9.0.1",
