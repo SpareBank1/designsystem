@@ -35,3 +35,16 @@ export const FieldMessage: Story = {
         </InputGroup>
     ),
 };
+
+export const WithDescription: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: args => (
+        <InputGroup
+            label={'Beskriv skaden'}
+            description='Prøv å være så konkret som mulig'>
+            <TextArea {...args} />
+        </InputGroup>
+    ),
+};

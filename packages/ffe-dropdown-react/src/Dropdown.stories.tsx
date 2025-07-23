@@ -55,3 +55,24 @@ export const AriaInvalid: Story = {
         );
     },
 };
+
+export const WithDescription: Story = {
+    args: {
+        inline: false,
+    },
+    render: args => {
+        return (
+            <InputGroup 
+                label="Måned"
+                description='Velg en måned for fakturering'>
+                <Dropdown {...args}>
+                    <option value="jan">Januar</option>
+                    <option value="feb">Februar</option>
+                    <option value="mar">Mars</option>
+                    <option value="apr">April</option>
+                    <option value="mai">Mai</option>
+                </Dropdown>
+            </InputGroup>
+        );
+    },
+};

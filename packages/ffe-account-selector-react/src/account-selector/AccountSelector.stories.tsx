@@ -288,3 +288,26 @@ export const CustomDisplayAttribute: StoryObj<
         );
     },
 };
+
+export const WithDescription: Story = {
+    args: {
+        accounts,
+        locale: 'nb',
+        formatAccountNumber: true,
+        allowCustomAccount: false,
+    },
+    render: function Render(args) {
+        const [selectedAccount, setSelectedAccount] = useState<Account>();
+
+        return (
+            <InputGroup label="Velg konto" description="Velg den kontoen du har mest lyst på">
+                <AccountSelector
+                    {...args}
+                    selectedAccount={selectedAccount}
+                    onAccountSelected={setSelectedAccount}
+                    onReset={() => setSelectedAccount(undefined)}
+                />
+            </InputGroup>
+        );
+    },
+};

@@ -12,7 +12,14 @@ import * as TextAreaStories from './TextArea.stories.tsx';
 
 ## Med feilmelding
 
-Sender man inn en string eller et `<ErrorFieldMessage>`-element til `fieldMessage` på `<InputGroup>` vil TextArea-feltet rendres med `aria-invalid` og en feilmelding.
+Hvis du sender inn en tekststreng eller et `<ErrorFieldMessage>`-element til 
+`fieldMessage`-prop'en på `<InputGroup>`, vil TextArea-feltet rendres med `aria-invalid` og en feilmelding.
 
 <Canvas of={TextAreaStories.FieldMessage} />
 <Controls of={TextAreaStories.FieldMessage} />
+
+## Med beskrivelse
+
+Du kan bruke `InputGroup` til å legge til en beskrivelse for TextArea-feltet.
+
+<Canvas of={TextAreaStories.WithDescription} />

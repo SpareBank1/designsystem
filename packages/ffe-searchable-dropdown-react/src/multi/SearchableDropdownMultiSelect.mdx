@@ -3,7 +3,7 @@ import * as SearchableDropdownMultiSelect from './SearchableDropdownMultiSelect.
 
 <Meta of={SearchableDropdownMultiSelect} />
 
-# SearchableDropdownMulti
+# SearchableDropdownMultiSelect
 
 For nedtrekkslister der du kan velge å vise flere resultater samtidig (som for eksempel sparekontoer eller aksjefond).
 
@@ -13,3 +13,9 @@ Dropdown multiselect skal kun brukes i situasjoner det gir mening å gi brukeren
 
 <Canvas of={SearchableDropdownMultiSelect.Standard} />
 <Controls of={SearchableDropdownMultiSelect.Standard} />
+
+## Med beskrivelse
+
+Du kan bruke `description='tekst her'` på `InputGroup` for å legge til en beskrivelse mellom label og SearchableDropdownMultiSelect.
+
+<Canvas of={SearchableDropdownMultiSelect.WithDescription} />

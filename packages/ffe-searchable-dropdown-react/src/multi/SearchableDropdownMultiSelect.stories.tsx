@@ -358,3 +358,29 @@ export const AriaInvalid: Story = {
         );
     },
 };
+
+export const WithDescription: Story = {
+    args: {
+        ...Standard.args,
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <>
+                <InputGroup
+                    label="Velg frukt"
+                    labelId={labelledById}
+                    inputId={id}
+                    description='Velg de du liker aller best'
+                >
+                    {inputProps => (
+                        <SearchableDropdownMultiSelect
+                            labelledById={labelledById}
+                            {...args}
+                            {...inputProps}
+                        />
+                    )}
+                </InputGroup>
+            </>
+        );
+    },
+};

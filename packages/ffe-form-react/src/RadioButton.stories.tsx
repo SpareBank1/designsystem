@@ -167,3 +167,40 @@ export const WithTooltip: Story = {
         return <RadioButtonWithGroupTooltip {...args} />;
     },
 };
+
+export const WithDescription: Story = {
+    args: {
+        selectedValue: 'bankkunde',
+    },
+    render: function Render(args) {
+        const [selected, setSelected] = useState(args.selectedValue);
+    const id = useId();
+
+    return (
+        <RadioButtonInputGroup
+            label="Velg faktureringstype"
+            name={`radio-button-description-demo-${id}`}
+            onChange={e => setSelected(e.target.value)}
+            selectedValue={selected}
+            description="Velg faktureringstype for abonnementet ditt. Dette påvirker hvor ofte du vil motta faktura."
+        >
+            {inputProps => (
+                <>
+                    <RadioButton
+                        value="monthly"
+                        {...inputProps}
+                    >
+                        Månedlig fakturering
+                    </RadioButton>
+                    <RadioButton
+                        value="quarterly"
+                        {...inputProps}
+                    >
+                        Kvartalsvis fakturering
+                    </RadioButton>
+                </>
+            )}
+        </RadioButtonInputGroup>
+    );
+    },
+};

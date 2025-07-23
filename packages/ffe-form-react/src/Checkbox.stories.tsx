@@ -1,6 +1,7 @@
 import React from 'react';
 import { Checkbox } from './Checkbox';
 import type { StoryObj, Meta } from '@storybook/react';
+import { InputGroup } from './InputGroup';
 
 const meta: Meta<typeof Checkbox> = {
     title: 'Komponenter/Form/Checkbox',
@@ -88,5 +89,29 @@ export const RenderProps: Story = {
                 </label>
             )}
         </Checkbox>
+    ),
+};
+
+export const Description: Story = {
+    args: {
+        ...Standard.args,
+        inline: false,
+    },
+    render: args => (
+        <InputGroup label="Hva pleier du å lese?" description="Velg en eller flere aviser">
+            {() => (
+                <>
+                    <Checkbox {...args} name="newspapers" value="vg">
+                        VG
+                    </Checkbox>
+                    <Checkbox {...args} name="newspapers" value="dagbladet">
+                        Dagbladet
+                    </Checkbox>
+                    <Checkbox {...args} name="newspapers" value="nrk">
+                        NRK
+                    </Checkbox>
+                </>
+            )}
+        </InputGroup>
     ),
 };

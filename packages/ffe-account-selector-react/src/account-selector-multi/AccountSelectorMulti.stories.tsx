@@ -100,3 +100,18 @@ export const ControlledState: Story = {
         );
     },
 };
+
+export const WithDescription: Story = {
+    args: {
+        accounts,
+        locale: 'nb',
+        formatAccountNumber: true,
+    },
+    render: function Render(args) {
+        return (
+            <InputGroup label="Velg konto" description="Velg de kontoene du ønsker å bruke">
+                <AccountSelectorMulti {...args} />
+            </InputGroup>
+        );
+    },
+};

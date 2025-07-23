@@ -7,7 +7,8 @@ import dependencies from '../ffe-dependencies';
 
 # Dropdown
 
-Dropdown er en vanlig nedtrekksliste som kan brukes man n책r man har 5-10 valg 책 velge mellom. Har du mindre enn 5 valg, bruk radio buttons istedenfor.
+Dropdown er en vanlig nedtrekksliste som kan brukes man n책r man har 5-10 valg 책 velge mellom. Har du mindre enn 5 valg, bruk `RadioButtons` istedenfor.
+Har du flere burde du bruke `SearchableDropdown`.
 
 <InstallImport
     packageName="@sb1/ffe-dropdown-react"
@@ -18,3 +19,9 @@ Dropdown er en vanlig nedtrekksliste som kan brukes man n책r man har 5-10 valg �
 
 <Canvas of={DropdownStories.Standard} />
 <Controls of={DropdownStories.Standard} />
+
+## Med beskrivelse
+
+Du kan bruke `description='tekst her'` p책 `InputGroup` for 책 legge til en beskrivelse mellom label og Dropdown.
+
+<Canvas of={DropdownStories.WithDescription} />
