@@ -93,7 +93,7 @@ export class Calendar extends Component<CalendarProps, State> {
             'ArrowRight',
             'ArrowDown',
         ] as const;
-        if (!scrollableEvents.includes(event.key)) {
+        if (scrollableEvents.includes(event.key)) {
             event.preventDefault();
         }
 
