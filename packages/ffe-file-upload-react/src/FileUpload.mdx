@@ -18,9 +18,9 @@ En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokument
 
 1. Brukeren velger filer i native filopplastingsview eller via 'drag and drop'
 2. Browseren mottar event-callback, med info om filene, om at brukeren har valg filer for opplasting, men disse er enda ikke lastet opp
-3. Konsumenter av `FileUpload` må selv starte nedlasting av valgte filer fra klientens filsystem (ved å bruke `file-content.js`)
-4. Konsumenter oppretter et objekt med info om filene og sender disse inn til `FileUpload` som `files`.
-5. Det er opp til konsumenten selv å avvise filer med feil størrelse eller type (se eksempel over).
+3. Du må selv starte nedlasting av valgte filer fra klientens filsystem (ved å bruke `getFileContent.ts`)
+4. Oppretter et objekt med info om filene og send disse inn til `FileUpload` som `files`.
+5. Du må selv å avvise filer med feil størrelse eller type.
 6. `files` objektet er indeksert på navn med selve `name` påkrevet, mens `error` og `document` er optional.
 7. Et eksempel på `files` som inkluderer de 3 mulighetene:
 
@@ -44,3 +44,131 @@ const files = {
 
 <Canvas of={FileUploadStories.Standard} />
 <Controls of={FileUploadStories.Standard} />
+
+## Eksempel 
+Her har vi lagt ved et eksempel på kode som kan brukes for å få en fungerende FileUpload.<br/>
+
+**Obs:** Hvis du tillater opplasting av flere filer (`multiple={true}`), må du håndtere at 
+filnavnene blir unike. På iOS kan det oppstå en feil der bilder tatt med kamera får samme filnavn, noe som hindrer opplasting av flere 
+filer med identiske navn. Du kan bruke `getUniqueFileName`.
+```
+import { getFileContent } from './getFileContent';
+import { getUniqueFileName } from './getUniqueFileName';
+//...
+
+const [uploadDuration, setUploadDuration] = useState(1);
+const [uploadShouldFail, setUploadShouldFail] = useState(false);
+
+const sendPostRequest = (url: string, file: any) =>
+    new Promise((resolve, reject) => {
+        console.log('POST', url, file);
+        setTimeout(
+            uploadShouldFail ? reject : resolve,
+            uploadDuration * 1000,
+        );
+    });
+
+const sendDeleteRequest = (url: string, file: any) => console.log('DELETE', url, file);
+
+/**
+    * State og event handler som knytter sammen API og FileUpload.
+*/
+const [attachments, setAttachments] = useState<Record<string, { name: string; document?: unknown; error?: string | undefined; }>>({});
+
+const updateAttachment = (file: { name: string; document?: unknown; error?: string | undefined; }) =>
+    setAttachments(prevState => ({
+        ...prevState,
+        [file.name]: file,
+    }));
+
+const uploadAttachments = (fileList: FileList | null) => {
+    const files = Array.from(fileList || []) as File[];
+
+    // Bygg en oversikt over unike filnavn for denne opplastingen
+    const prevState = attachments;
+    const uniqueNames: Record<string, string> = {};
+    files.forEach(file => {
+        uniqueNames[file.name] = getUniqueFileName(file.name, { ...prevState, ...uniqueNames });
+    });
+
+    // Add files to attachments with unique names
+    setAttachments(prevState =>
+        files.reduce<{ [key: string]: { name: string; document?: unknown; error?: string } }>(
+            (acc, file) => {
+                const newName = uniqueNames[file.name];
+                return {
+                    ...acc,
+                    [newName]: { name: newName }
+                };
+            },
+            prevState || {},
+        ),
+    );
+
+    // Les filinnhold og last opp til backend med unikt navn
+    for (const file of files) {
+        const newName = uniqueNames[file.name];
+        getFileContent(file)
+            .then(content => {
+                const attachment = { name: newName, document: { content } };
+                return sendPostRequest('/upload', attachment).then(() => attachment);
+            })
+            .then(attachment => {
+                updateAttachment(attachment);
+            })
+            .catch(() => {
+                const attachment = { name: newName, error: 'It did not work' };
+                updateAttachment(attachment);
+            });
+    }
+};
+
+const deleteAttachment = (file: { name: string; document?: unknown; error?: string | undefined; }) => {
+    sendDeleteRequest('/delete', file);
+    setAttachments(prevState => {
+        const { ...nextState } = prevState;
+        delete nextState[file.name];
+        return nextState;
+    });
+};
+
+const id = useId();
+
+return (
+    <>
+        <InputGroup>
+            <FileUpload
+                {...args}
+                id={id}
+                files={attachments}
+                onFilesSelected={fileList => uploadAttachments(fileList)}
+                onFilesDropped={files => {
+                    if (files) {
+                        uploadAttachments(files);
+                    }
+                }}
+                onFileDeleted={file => deleteAttachment(file)}
+            />
+        </InputGroup>
+        <InputGroup label="Opplastningstid (sekunder)">
+            <Input
+                name="uploadDuration"
+                value={uploadDuration}
+                type="number"
+                min={0}
+                step={1}
+                onChange={evt => setUploadDuration(Number(evt.target.value) || 0)}
+            />
+        </InputGroup>
+        <InputGroup>
+            <Checkbox
+                name="uploadShouldFail"
+                checked={uploadShouldFail}
+                onChange={evt => setUploadShouldFail(evt.target.checked)}
+            >
+                Opplastning skal feile
+            </Checkbox>
+        </InputGroup>
+    </>
+);
+```
