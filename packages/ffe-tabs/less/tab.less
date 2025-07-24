@@ -2,7 +2,6 @@
 
 .ffe-tab {
     display: flex;
-
     background-color: var(--ffe-color-surface-primary-default);
     color: var(--ffe-color-foreground-default);
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-md);
@@ -20,7 +19,6 @@
         background-color var(--ffe-transition-duration) var(--ffe-ease);
     cursor: pointer;
     width: auto;
-    position: relative;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -54,7 +52,6 @@
     &--selected {
         background-color: var(--ffe-color-fill-primary-selected-default);
         color: var(--ffe-color-foreground-inverse);
-        z-index: 2;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
