@@ -29,7 +29,7 @@ const Wave: React.FC<WaveProps> = ({
     const pts: { x: number; y: number }[] = [];
     // Calculate baseline based on alignment with padding to prevent edge collisions
     // For top alignment, add extra padding to keep wave from hitting the top edge
-    const edgePadding = amplitude * 0.5;
+    const edgePadding = amplitude * 2;
     const baseline = align === 'top' ? amplitude + edgePadding : height - amplitude;
     
     for (let i = 0; i <= points; i++) {
@@ -99,7 +99,7 @@ const Wave: React.FC<WaveProps> = ({
       preserveAspectRatio="none"
     >
       {/* initial empty path; d updated by RAF */}
-      <path style={{ minHeight: '550px' }} ref={pathRef} d="" fill={fill} />
+      <path ref={pathRef} d="" fill={fill} />
     </svg>
   );
 };

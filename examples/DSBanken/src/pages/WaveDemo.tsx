@@ -21,9 +21,9 @@ const WaveDemo: React.FC = () => {
         }}>
             <AnimatedWave
                 height={waveHeight}
-                amplitude={25}
-                speed={0.7}
-                points={2}
+                amplitude={75}
+                speed={0.5}
+                points={3}
                 align="top"
                 sharpness={0.8}
                 fill="#005AA4"
