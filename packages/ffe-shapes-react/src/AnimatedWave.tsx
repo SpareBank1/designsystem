@@ -1,29 +1,45 @@
 import React, { useEffect, useRef } from 'react';
 
-
-
-interface WaveProps {
-  height?: number;
-  amplitude?: number; // waveDelta
-  speed?: number;     // factor multiplier
-  points?: number;    // wavePoints
-  fill?: string;
+interface AnimatedWaveProps {
+  /** Height of the SVG element */
+  height: number;
+  /** Amplitude of the wave (wave height) */
+  amplitude?: number;
+  /** Animation speed */
+  speed?: number;
+  /** Sets height of wave proper according to content height */
+  dynamicHeight: boolean;
+  /** Number of points to use for the wave */
+  points?: number;
+  /** Wave alignment - top or bottom */
   align?: 'top' | 'bottom';
+  /** How sharp/smooth the curve is (0-1) */
+  sharpness?: number;
+  /** Fill color for the wave */
+  fill?: string;
+  /** Child elements to render inside the wave */
+  children?: React.ReactNode;
+  /** Whether the animation is paused */
   paused?: boolean;
 }
 
-const Wave: React.FC<WaveProps> = ({
-  height = 200,
+const AnimatedWave: React.FC<AnimatedWaveProps> = ({
+  height = 550,
+    dynamicHeight = false,
   amplitude = 30,
   speed = 1,
   points = 6,
   fill = '#005AA4',
   align = 'bottom',
+  sharpness = 0.5,
+  children,
   paused = false,
 }) => {
   const pathRef = useRef<SVGPathElement | null>(null);
   const width = 1440; // virtual width for path math, svg scales via preserveAspectRatio="none"
 
+    //
+    // const height = dynamicHeight ? calculation based on children content height : height
   // Calculate wave points using sine
   const calculatePoints = (factor: number) => {
     const pts: { x: number; y: number }[] = [];
@@ -31,7 +47,7 @@ const Wave: React.FC<WaveProps> = ({
     // For top alignment, add extra padding to keep wave from hitting the top edge
     const edgePadding = amplitude * 2;
     const baseline = align === 'top' ? amplitude + edgePadding : height - amplitude;
-    
+
     for (let i = 0; i <= points; i++) {
       const x = (i / points) * width;
       const sinSeed = (factor + (i + (i % points))) * speed * 100;
@@ -92,17 +108,30 @@ const Wave: React.FC<WaveProps> = ({
     frameId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frameId);
   }, [paused, points, amplitude, speed, height]);
+
   return (
-    <svg
-      style={{ padding: '150px', position: 'absolute', top: 0, left: 0, width: '100%', height: `${height}px`, display: 'block', pointerEvents: 'none' }}
-      viewBox={`0 0 ${width} ${height}`}
-      preserveAspectRatio="none"
-    >
-      {/* initial empty path; d updated by RAF */}
-      <path ref={pathRef} d="" fill={fill} />
-    </svg>
+      <div className="absolute">
+      <div style={{position: 'absolute', top: amplitude < 35 ? -70 : amplitude * 2, left: 0, width: '100%', height: '100%', zIndex: 1}} >
+          {children && (
+              <div>
+                  <div className="max-w-3xl mx-auto">
+                      {children}
+                  </div>
+              </div>
+          )}
+      </div>
+      <div className="relative w-full">
+          <svg
+              viewBox={`0 0 ${width} ${height}`}
+              preserveAspectRatio="none"
+              className="w-full h-auto"
+          >
+              <path ref={pathRef} d="" fill={fill} />
+          </svg>
+      </div>
+      </div>
   );
 };
 
-export const AnimatedWave = Wave;
+export { AnimatedWave };
 export default AnimatedWave;
