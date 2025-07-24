@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@16.0.0...@sb1/ffe-tabs@16.0.1) (2025-07-24)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** fjerner z-index fra tabs ([7c8665f](https://github.com/SpareBank1/designsystem/commit/7c8665fe24642515cd099ca5cc9b6b5940d994d3))
+
+
+
+
+
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@15.0.25...@sb1/ffe-tabs@16.0.0) (2025-07-16)
 
 
