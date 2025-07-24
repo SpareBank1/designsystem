@@ -16,13 +16,14 @@ const WaveDemo: React.FC = () => {
             position: 'relative',
             minHeight: `1500px`,
             width: '100%',
+            padding: '100px',
             overflow: 'hidden'
         }}>
             <AnimatedWave
                 height={waveHeight}
-                amplitude={45}
-                speed={1}
-                points={3}
+                amplitude={25}
+                speed={0.7}
+                points={2}
                 align="top"
                 sharpness={0.8}
                 fill="#005AA4"
