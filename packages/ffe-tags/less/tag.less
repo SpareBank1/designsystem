@@ -9,11 +9,23 @@
     padding: var(--ffe-spacing-2xs) var(--ffe-spacing-xs);
     border-radius: var(--ffe-g-border-radius);
     min-width: fit-content;
+    height: fit-content;
     background-color: var(--background-color);
     color: var(--text-color);
+    font-size: var(--ffe-fontsize-small-text);
+    line-height: 1.4;
 
     .ffe-icons {
         color: var(--text-color);
+    }
+
+    &--sm {
+        padding: 2px var(--ffe-spacing-2xs);
+        border-radius: var(--ffe-g-border-radius-sm);
+    }
+
+    &--lg {
+        font-size: var(--ffe-fontsize-body-text);
     }
 
     &--info {
@@ -21,6 +33,7 @@
             --background-color: var(--ffe-color-fill-feedback-info);
             --text-color: var(--ffe-color-foreground-inverse);
         }
+
         &-subtle {
             --background-color: var(--ffe-color-fill-feedback-info-subtle);
             --text-color: var(--ffe-color-foreground-default);
@@ -32,6 +45,7 @@
             --background-color: var(--ffe-color-fill-feedback-success);
             --text-color: var(--ffe-color-foreground-inverse);
         }
+
         &-subtle {
             --background-color: var(--ffe-color-fill-feedback-success-subtle);
             --text-color: var(--ffe-color-foreground-default);
@@ -43,6 +57,7 @@
             --background-color: var(--ffe-color-fill-feedback-warning);
             --text-color: var(--ffe-color-foreground-inverse);
         }
+
         &-subtle {
             --background-color: var(--ffe-color-fill-feedback-warning-subtle);
             --text-color: var(--ffe-color-foreground-default);
@@ -54,6 +69,7 @@
             --background-color: var(--ffe-color-fill-feedback-critical);
             --text-color: var(--ffe-color-foreground-inverse);
         }
+
         &-subtle {
             --background-color: var(--ffe-color-fill-feedback-critical-subtle);
             --text-color: var(--ffe-color-foreground-default);
@@ -65,6 +81,7 @@
             --background-color: var(--ffe-color-fill-feedback-tip);
             --text-color: var(--ffe-color-foreground-inverse);
         }
+
         &-subtle {
             --background-color: var(--ffe-color-fill-feedback-tip-subtle);
             --text-color: var(--ffe-color-foreground-default);
@@ -76,6 +93,7 @@
             --background-color: var(--ffe-color-fill-neutral-default);
             --text-color: var(--ffe-color-foreground-default);
         }
+
         &-subtle {
             --background-color: var(--ffe-color-fill-neutral-subtle);
             --text-color: var(--ffe-color-foreground-default);
