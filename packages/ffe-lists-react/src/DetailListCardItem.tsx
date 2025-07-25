@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 export interface DetailListCardItemProps
-    extends React.ComponentPropsWithoutRef<'div'> {
+    extends React.HTMLAttributes<HTMLLIElement> {
     /** Content of the label / left column */
     label: React.ReactNode;
     /** Content of the value / right column */
@@ -16,20 +16,24 @@ export const DetailListCardItem: React.FC<DetailListCardItemProps> = ({
     ...rest
 }) => {
     return (
-        <div
+        <li
             className={classNames('ffe-detail-list-card__item', className)}
             {...rest}
         >
-            <dt className="ffe-detail-list-card__item-label">
+            <div
+                role="term"
+                className="ffe-detail-list-card__item-label">
                 {React.isValidElement(label)
                     ? React.cloneElement(label, { ...label.props })
                     : label}
-            </dt>
-            <dd className="ffe-detail-list-card__item-value">
+            </div>
+            <div
+                role="definition"
+                className="ffe-detail-list-card__item-value">
                 {React.isValidElement(value)
                     ? React.cloneElement(value, { ...value.props })
                     : value}
-            </dd>
-        </div>
+            </div>
+        </li>
     );
 };

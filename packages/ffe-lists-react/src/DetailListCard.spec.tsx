@@ -25,8 +25,8 @@ const renderDetailListCardItem = (props?: Partial<DetailListCardItemProps>) =>
 describe('<DetailListCard />', () => {
     it('add classNames correctly', () => {
         const { container } = renderDetailListCard({ className: 'test-class' });
-        expect(container.querySelector('dl')).toBeTruthy();
-        const dl = container.querySelector('dl');
+        expect(screen.getByRole('list')).toBeTruthy();
+        const dl = screen.getByRole('list');
 
         expect(dl?.classList.contains('ffe-detail-list-card')).toBe(true);
         expect(dl?.classList.contains('test-class')).toBe(true);
@@ -55,12 +55,13 @@ describe('<DetailListCard />', () => {
                 ?.getAttribute('id'),
         ).toEqual('test-id');
     });
+
     it('renders correct label content', () => {
         const { container } = renderDetailListCardItem({
             label: <span>Test Label</span>,
             value: 'value',
         });
-        const dt = container.querySelector('dt');
+        const dt = screen.getByRole('term');
         expect(
             dt?.classList.contains('ffe-detail-list-card__item-label'),
         ).toBeTruthy();
