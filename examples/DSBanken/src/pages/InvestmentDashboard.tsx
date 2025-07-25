@@ -67,7 +67,7 @@ export const InvestmentDashboard = () => {
 
             <GridRow>
                 <GridCol>
-                    <DetailListCard>
+                    <DetailListCard className='mb-4'>
                         <DetailListCardItem label="Kontonavn" value="Daglig konto" />
                         <DetailListCardItem label="Kontotype" value="Brukskonto" />
                         <DetailListCardItem label="Kontonummer" value="1234 45 34554" />

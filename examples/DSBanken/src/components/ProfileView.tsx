@@ -1,4 +1,5 @@
 import { InputGroup } from '@sb1/ffe-form-react';
+import { DescriptionList, DescriptionListDescription, DescriptionListTerm } from '@sb1/ffe-lists-react';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 import {
     Tag
@@ -16,6 +17,23 @@ const tags: { variant: 'success' | 'warning' | 'critical' | 'neutral' | 'tip' | 
 
 const ProfileView: React.FC = () => (
     <div>
+        <div>
+            <h3 className="ffe-h4">Personalia</h3>
+            <DescriptionList>
+                <DescriptionListTerm>Navn</DescriptionListTerm>
+                <DescriptionListDescription>
+                    Navn Navnesen
+                </DescriptionListDescription>
+                <DescriptionListTerm>Adresse</DescriptionListTerm>
+                <DescriptionListDescription>
+                    Husgata 14
+                </DescriptionListDescription>
+                <DescriptionListTerm>Postnummer og sted</DescriptionListTerm>
+                <DescriptionListDescription>
+                    1337 Sandvika
+                </DescriptionListDescription>
+            </DescriptionList>
+        </div>
         <div className='flex flex-wrap gap-1 mb-2'>
             {tags.map(({ variant, label }) => (
                 <Tag variant={variant}>{label}</Tag>
