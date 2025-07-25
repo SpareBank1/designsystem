@@ -17,19 +17,24 @@ export const DetailListCardItem: React.FC<DetailListCardItemProps> = ({
 }) => {
     return (
         <div
+            role="listitem"
             className={classNames('ffe-detail-list-card__item', className)}
             {...rest}
         >
-            <dt className="ffe-detail-list-card__item-label">
+            <div
+                role="term"
+                className="ffe-detail-list-card__item-label">
                 {React.isValidElement(label)
                     ? React.cloneElement(label, { ...label.props })
                     : label}
-            </dt>
-            <dd className="ffe-detail-list-card__item-value">
+            </div>
+            <div
+                role="definition"
+                className="ffe-detail-list-card__item-value">
                 {React.isValidElement(value)
                     ? React.cloneElement(value, { ...value.props })
                     : value}
-            </dd>
+            </div>
         </div>
     );
 };

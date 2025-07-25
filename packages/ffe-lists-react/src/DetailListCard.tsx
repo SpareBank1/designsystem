@@ -4,7 +4,7 @@ import classNames from 'classnames';
 export type BackgroundColor = 'primary' | 'secondary' | 'tertiary';
 
 export interface DetailListCardProps
-    extends React.ComponentPropsWithoutRef<'dl'> {
+    extends React.ComponentPropsWithoutRef<'div'> {
     /** Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' */
     appearance?: 'default' | 'accent';
     /**
@@ -28,7 +28,8 @@ export const DetailListCard: React.FC<DetailListCardProps> = ({
     ...rest
 }) => {
     return (
-        <dl
+        <div
+            role="list"
             className={classNames('ffe-detail-list-card', className, {
                 [`ffe-detail-list-card--bg-${bgColor}`]: bgColor,
                 'ffe-default-mode': appearance === 'default',
@@ -36,6 +37,6 @@ export const DetailListCard: React.FC<DetailListCardProps> = ({
             {...rest}
         >
             {children}
-        </dl>
+        </div>
     );
 };
