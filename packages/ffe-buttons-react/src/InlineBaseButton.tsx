@@ -44,10 +44,10 @@ function InlineBaseButtonWithForwardRef<As extends ElementType>(
         <Comp
             className={classNames(
                 'ffe-inline-button',
-                className,
                 `ffe-inline-button--${size}`,
                 `ffe-inline-button--${buttonType}`,
                 { 'ffe-inline-button--icon-only': iconOnly },
+                className,
             )}
             {...rest}
             ref={ref}
