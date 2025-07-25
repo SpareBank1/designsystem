@@ -6,14 +6,26 @@
     align-items: center;
     justify-content: center;
     gap: var(--ffe-spacing-2xs);
-    padding: var(--ffe-spacing-2xs) var(--ffe-spacing-xs);
+    padding: var(--ffe-spacing-2xs) 12px;
     border-radius: var(--ffe-g-border-radius);
     min-width: fit-content;
+    height: fit-content;
     background-color: var(--background-color);
     color: var(--text-color);
 
     .ffe-icons {
         color: var(--text-color);
+    }
+
+    &--sm {
+        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-xs);
+        font-size: var(--ffe-fontsize-small-text);
+        line-height: 1.4;
+    }
+
+    &--lg {
+        padding: var(--ffe-spacing-xs) 12px;
+        line-height: 1.4;
     }
 
     &--info {
