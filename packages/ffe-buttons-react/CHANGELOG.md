@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [24.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.4.3...@sb1/ffe-buttons-react@24.4.4) (2025-07-25)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** tillater classname på slutten av inlinebasebutton ([49c7b41](https://github.com/SpareBank1/designsystem/commit/49c7b41f7268fc6bcf541b589ba3c937a6a4e538))
+
+
+
+
+
 ## [24.4.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.4.2...@sb1/ffe-buttons-react@24.4.3) (2025-07-23)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
