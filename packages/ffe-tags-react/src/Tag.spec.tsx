@@ -102,4 +102,18 @@ describe('<Tag/>', () => {
             expect(iconColor).toBe(tagColor);
         });
     });
+
+    describe('Sizes', () => {
+        it('should render a tag with size sm', () => {
+            render(<Tag size="sm">En tag</Tag>);
+            const tag = screen.getByText('En tag');
+            expect(tag.classList.contains('ffe-tag--sm')).toBeTruthy();
+        });
+
+        it('should render a tag with size lg', () => {
+            render(<Tag size="lg">En tag</Tag>);
+            const tag = screen.getByText('En tag');
+            expect(tag.classList.contains('ffe-tag--lg')).toBeTruthy();
+        });
+    });
 });
