@@ -40,6 +40,12 @@ I `ffe-icons` finner du alle varianter av ikonene som SVG-filer.
 Det gjør at ikonet kan arve color-verdien fra et parent-element. Dersom du ønsker å legge inn ikoner som data-URL må man selv konvertere 
 ikonene til et passende format, for eksempel [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
 
+### Ikonet vises ikke?
+
+Hvis ikonet ikke vises, men i stedet blir en firkantet boks etter deploy, kan det skyldes at SVG-filen ikke blir 
+riktig håndtert av byggeverktøyet. Prøv å legge til `build.assetsInlineLimit: 0` i `vite.config.ts` 
+for å sikre at SVG-ikonene ikke blir inlinet som data-URL-er.
+
 
 ## Figma
 
