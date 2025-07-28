@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@22.0.0...@sb1/ffe-buttons@22.0.1) (2025-07-28)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** forhindrer tekstmarkering i inlinebuttons ([85b33f4](https://github.com/SpareBank1/designsystem/commit/85b33f43ec7080a702e18e0e57c97b8f5dfe4098))
+
+
+
+
+
 # [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@21.3.11...@sb1/ffe-buttons@22.0.0) (2025-07-16)
 
 
