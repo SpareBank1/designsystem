@@ -18,6 +18,8 @@ export interface AccordionItemProps
     onToggleOpen?: (isOpen: boolean) => void;
     /** aria-label for the button */
     ariaLabel?: string;
+    /** Ingen padding i body-elementet hvis man ønsker egen styling */
+    noPadding?: boolean;
 }
 
 export const AccordionItem: React.FC<AccordionItemProps> = ({
@@ -28,6 +30,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
     className,
     onToggleOpen = Function.prototype,
     ariaLabel,
+    noPadding = false,
     ...rest
 }) => {
     const [isExpanded, setIsExpanded] = useState(defaultOpen);
@@ -105,7 +108,11 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
                 role="region"
             >
                 {!collapseHidden && (
-                    <div className="ffe-accordion-item__body">{children}</div>
+                    <div className={
+                        classNames("ffe-accordion-item__body", {
+                            "ffe-accordion-item__body--no-padding": noPadding,
+                        })
+                    }>{children}</div>
                 )}
             </Collapse>
         </div>
