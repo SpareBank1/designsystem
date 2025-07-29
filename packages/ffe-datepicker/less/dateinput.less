@@ -3,29 +3,21 @@
         color: var(--ffe-color-foreground-default) !important;
     }
 }
+
 .ffe-datepicker {
     position: relative;
     display: grid;
     grid-template-columns: 1fr auto;
     width: fit-content;
-    border: var(--ffe-g-border-width) solid
-        var(--ffe-color-border-primary-default);
     border-radius: var(--ffe-g-border-radius);
     transition:
         color var(--ffe-transition-duration) var(--ffe-ease),
         border var(--ffe-transition-duration) var(--ffe-ease),
-        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
-        background-color var(--ffe-transition-duration) var(--ffe-ease);
+        background-color var(--ffe-transition-duration) var(--ffe-ease),
+        outline var(--ffe-transition-duration) var(--ffe-ease);
+
     &--full-width {
         width: 100%;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            border-color: var(--ffe-color-border-primary-default-hover);
-            box-shadow: var(--ffe-g-border-focus-box-shadow)
-                var(--ffe-color-border-primary-default-hover);
-        }
     }
 
     &__button {
@@ -39,25 +31,35 @@
         width: 56px;
         cursor: pointer;
         isolation: isolate;
+        z-index: 2;
     }
 
-    .ffe-input-field:focus {
-        border: none;
-    }
-
-    &:focus-within,
-    &:has(&__button:focus) .ffe-input-field:hover {
-        outline: none;
-        box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-component-form-input-border-active);
-        border-color: var(--ffe-color-component-form-input-border-active);
-    }
-
-    @media (pointer: fine) {
-        &:focus-within {
+    &:focus-within {
+        .ffe-input-field__backdrop {
+            border: var(--ffe-g-border-width) solid
+                var(--ffe-color-fill-primary-selected-default);
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-fill-primary-selected-default);
             outline: var(--ffe-g-outline-width) solid
                 var(--ffe-color-border-interactive-focus);
             outline-offset: var(--ffe-g-outline-offset);
+        }
+    }
+
+    &--invalid {
+        &:focus-within {
+            .ffe-input-field__backdrop {
+                border: var(--ffe-g-border-width) solid
+                    var(--ffe-color-border-feedback-critical);
+                box-shadow: var(--ffe-g-border-focus-box-shadow)
+                    var(--ffe-color-border-feedback-critical);
+                background-color: var(
+                    --ffe-color-component-form-input-fill-default
+                );
+                outline: var(--ffe-g-outline-width) solid
+                    var(--ffe-color-border-interactive-focus);
+                outline-offset: var(--ffe-g-outline-offset);
+            }
         }
     }
 
@@ -79,6 +81,7 @@
         grid-row: 1 e('/') -1;
         min-width: 210px;
         color: var(--ffe-color-foreground-default);
+        z-index: 1;
 
         &--full-width {
             display: block;
@@ -111,51 +114,6 @@
 
         &--message {
             padding-bottom: 0;
-        }
-    }
-
-    &--invalid {
-        border: var(--ffe-g-border-width) solid
-            var(--ffe-color-border-feedback-critical);
-        box-shadow: var(--ffe-g-border-focus-box-shadow)
-            var(--ffe-color-border-feedback-critical);
-        background-color: var(--ffe-color-surface-feedback-critical);
-
-        @media (hover: hover) and (pointer: fine) {
-            &:hover {
-                border: var(--ffe-g-border-width) solid
-                    var(--ffe-color-border-feedback-critical);
-                box-shadow: var(--ffe-g-border-focus-box-shadow)
-                    var(--ffe-color-border-feedback-critical);
-                background-color: var(--ffe-color-surface-primary-default);
-            }
-            &:focus-within:hover {
-                border-color: var(--ffe-color-border-feedback-critical);
-            }
-        }
-
-        &:focus-within {
-            outline: none;
-            box-shadow: var(--ffe-g-border-focus-box-shadow)
-                var(--ffe-color-border-feedback-critical);
-        }
-
-        .ffe-input-field {
-            &:focus-within {
-                border-color: var(--ffe-color-border-feedback-critical);
-                box-shadow: var(--ffe-g-border-focus-box-shadow)
-                    var(--ffe-color-border-feedback-critical);
-                background-color: var(--ffe-color-surface-primary-default);
-            }
-        }
-
-        .ffe-dateinput,
-        .ffe-dateinput__field {
-            color: var(--ffe-color-foreground-feedback-critical);
-        }
-
-        .ffe-input-field:has(~ .ffe-datepicker__button:hover) {
-            background-color: var(--ffe-color-surface-primary-default);
         }
     }
 }
