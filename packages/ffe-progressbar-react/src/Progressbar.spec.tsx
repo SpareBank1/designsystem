@@ -23,8 +23,8 @@ describe('<Progressbar />', () => {
         expect(progressbar.classList.contains('test-class'));
     });
     it('set theme correctly', () => {
-        renderProgressbar({ green: true });
+        renderProgressbar({ success: true });
         const progressbar = screen.getByRole('progressbar');
-        expect(progressbar.classList.contains('ffe-progressbar--theme-green'));
+        expect(progressbar.classList.contains('ffe-progressbar--theme-success'));
     });
 });

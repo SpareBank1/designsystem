@@ -3,11 +3,11 @@ import classNames from 'classnames';
 
 export interface ProgressbarProps
     extends React.ProgressHTMLAttributes<HTMLProgressElement> {
-    green?: boolean;
+    success?: boolean;
 }
 
 export const Progressbar: React.FC<ProgressbarProps> = ({
-    green = false,
+    success = false,
     className,
     ...props
 }) => {
@@ -16,7 +16,7 @@ export const Progressbar: React.FC<ProgressbarProps> = ({
             className={classNames(
                 'ffe-progressbar',
                 {
-                    'ffe-progressbar--theme-green': green,
+                    'ffe-progressbar--theme-success': success,
                 },
                 className,
             )}
