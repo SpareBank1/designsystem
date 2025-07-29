@@ -22,7 +22,8 @@
             "@/*": ["./src/*"],
             "@src/*": ["./src/*"],
             "@components/*": ["./src/components/*"],
-            "@styles/*": ["./src/styles/*"]
+            "@styles/*": ["./src/styles/*"],
+            "@sb1/ffe-icons/*": ["../../packages/ffe-icons/*"]
         }
     },
     "include": ["src", "src/types/**/*"],

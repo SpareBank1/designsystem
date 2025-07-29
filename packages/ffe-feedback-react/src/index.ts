@@ -1,2 +1,3 @@
-export { Feedback, FeedbackProps } from './Feedback';
-export { Thumb } from './FeedbackThumbs';
+export { Feedback } from './Feedback';
+export type { FeedbackProps } from './Feedback';
+export type { Thumb } from './FeedbackThumbs';

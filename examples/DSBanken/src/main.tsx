@@ -7,6 +7,7 @@ import { InvestmentDashboard } from './pages/InvestmentDashboard';
 import { PaymentForm } from './pages/PaymentForm';
 import SavingDashboard from './pages/SavingDashboard';
 import SettingsDashboard from './pages/SettingsDashboard';
+import './styles/tailwind.css';
 import './styles/main.less';
 
 const router = createBrowserRouter([
