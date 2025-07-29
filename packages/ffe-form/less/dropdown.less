@@ -10,7 +10,8 @@
     background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: calc(100% - 6px) 50%;
-    border: var(--ffe-g-border-width) solid var(--ffe-color-border-primary-default);
+    border: var(--ffe-g-border-width) solid
+        var(--ffe-color-border-primary-default);
     border-radius: var(--ffe-g-border-radius);
     color: var(--ffe-color-component-form-input-foreground-default);
     display: block;
@@ -22,7 +23,8 @@
         color var(--ffe-transition-duration) var(--ffe-ease),
         border var(--ffe-transition-duration) var(--ffe-ease),
         box-shadow var(--ffe-transition-duration) var(--ffe-ease),
-        background-color var(--ffe-transition-duration) var(--ffe-ease);
+        background-color var(--ffe-transition-duration) var(--ffe-ease),
+        outline var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-dropdown);
     .chevron(@ffe-color-chevron-light-default);
@@ -40,23 +42,27 @@
     @media (hover: hover) and (pointer: fine) {
         &:hover {
             border-color: var(--ffe-color-border-primary-default-hover);
-            box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-primary-default-hover);
+            box-shadow: var(--ffe-g-border-focus-box-shadow)
+                var(--ffe-color-border-primary-default-hover);
         }
     }
 
     &:focus-within {
-        outline: var(--ffe-g-outline-width) solid var(--ffe-color-border-interactive-focus);
+        outline: var(--ffe-g-outline-width) solid
+            var(--ffe-color-border-interactive-focus);
         outline-offset: var(--ffe-g-outline-offset);
     }
 
     &:focus {
         border-color: var(--ffe-color-component-form-input-border-active);
-        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-component-form-input-border-active);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-component-form-input-border-active);
     }
 
     &:active {
         border-color: var(--ffe-color-component-form-input-border-active);
-        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-component-form-input-border-active);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-component-form-input-border-active);
     }
 
     &--inline {
@@ -71,16 +77,19 @@
 
     &[aria-invalid='true'] {
         color: var(--ffe-color-foreground-feedback-critical);
-        border: var(--ffe-g-border-width) solid var(--ffe-color-border-feedback-critical);
-        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-feedback-critical);
+        border: var(--ffe-g-border-width) solid
+            var(--ffe-color-border-feedback-critical);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-feedback-critical);
         background-color: var(--ffe-color-surface-feedback-critical);
 
         @media (hover: hover) and (pointer: fine) {
-
             &:hover,
             &:focus {
-                border: var(--ffe-g-border-width) solid var(--ffe-color-border-feedback-critical);
-                box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-feedback-critical);
+                border: var(--ffe-g-border-width) solid
+                    var(--ffe-color-border-feedback-critical);
+                box-shadow: var(--ffe-g-border-focus-box-shadow)
+                    var(--ffe-color-border-feedback-critical);
                 background-color: var(--ffe-color-surface-primary-default);
             }
         }
