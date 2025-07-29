@@ -64,3 +64,36 @@ export const Standard: Story = {
         </Accordion>
     ),
 };
+
+
+export const noBodyPadding: Story = {
+    args: {
+        headingLevel: 2,
+    },
+    render: args => (
+        <Accordion {...args}>
+            <AccordionItem heading="Mer informasjon" noPadding>
+                <div>
+                    <div style={{
+                        borderTop: '1px solid var(--ffe-color-border-primary-subtle)',
+                        padding: 'var(--ffe-spacing-xs) var(--ffe-spacing-sm)'
+                    }}>
+                        Her er en liste med noe greier
+                    </div>
+                    <div style={{
+                        borderTop: '1px solid var(--ffe-color-border-primary-subtle)',
+                        padding: 'var(--ffe-spacing-xs) var(--ffe-spacing-sm)'
+                    }}>
+                        Dette er elementer som skal visuelt skille seg fra hverandre
+                    </div>
+                    <div style={{
+                        borderTop: '1px solid var(--ffe-color-border-primary-subtle)',
+                        padding: 'var(--ffe-spacing-xs) var(--ffe-spacing-sm)'
+                    }}>
+                        Dette er et eksempel
+                    </div>
+                </div>
+            </AccordionItem>
+        </Accordion >
+    ),
+};

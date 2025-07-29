@@ -17,14 +17,15 @@ En accordion er bygget opp av to komponenter: `Accordion` og `AccordionItem`. Ac
     dependencies={dependencies}
 />
 
-## Med subtil bakgrunn
-
-<Canvas of={AccordionStories.WithSubtleBackground} />
-
-## Med ingen bakgrunn
+## Forhåndsvisning
 
 <Canvas of={AccordionStories.Standard} />
 <Controls of={AccordionStories.Standard} />
+
+## Med subtil bakgrunn
+Legg til `backgroundColor: 'var(--ffe-color-background-subtle)'` til elementet rundt accordion hvis du ønsker subtil bakgrunn.
+
+<Canvas of={AccordionStories.WithSubtleBackground} />
 
 ## AccordionItem
 

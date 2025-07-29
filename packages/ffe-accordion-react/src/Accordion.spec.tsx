@@ -82,4 +82,18 @@ describe('<Accordion />', () => {
         expect(screen.queryByTestId('content1')).toBeInTheDocument();
         expect(screen.queryByTestId('content2')).toBeInTheDocument();
     });
+
+    it('should set noPadding class when noPadding prop is true', () => {
+        render(
+            <Accordion headingLevel={3}>
+                <AccordionItem heading="heading1" isOpen noPadding>
+                    <span data-testid="content1">content1</span>
+                </AccordionItem>
+            </Accordion>,
+        );
+
+        const content = screen.getByTestId('content1');
+        const accordionBody = content.closest('.ffe-accordion-item__body');
+        expect(accordionBody).toHaveClass('ffe-accordion-item__body--no-padding');
+    });
 });
