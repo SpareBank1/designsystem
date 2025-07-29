@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 export interface DescriptionListMultiColProps
-    extends React.ComponentPropsWithoutRef<'dl'> {}
+    extends React.ComponentPropsWithoutRef<'div'> {}
 
 export const DescriptionListMultiCol: React.FC<
     DescriptionListMultiColProps
@@ -18,7 +18,8 @@ export const DescriptionListMultiCol: React.FC<
     });
 
     return (
-        <dl
+        <div
+            role="list"
             className={classNames('ffe-description-list-multicol', className)}
             {...rest}
         >
@@ -31,6 +32,6 @@ export const DescriptionListMultiCol: React.FC<
                     {pair[1]}
                 </div>
             ))}
-        </dl>
+        </div>
     );
 };
