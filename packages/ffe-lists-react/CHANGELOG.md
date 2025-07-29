@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@13.1.11...@sb1/ffe-lists-react@14.0.0) (2025-07-29)
+
+
+* feat(ffe-lists-react)!: fjerner bruk av dårlig støttet dl og bruker div i ([e7a0173](https://github.com/SpareBank1/designsystem/commit/e7a017307f052a4384c9c1e11d50bfc057808e00))
+
+
+### BREAKING CHANGES
+
+* dl kom med litt browser-styling (top og bunn-margin i
+noen browsere), det må nå legges på manuelt.
+
+
+
+
+
 ## [13.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@13.1.10...@sb1/ffe-lists-react@13.1.11) (2025-07-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react

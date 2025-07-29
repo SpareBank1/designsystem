@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.1.12...@sb1/ffe-accordion-react@13.2.0) (2025-07-29)
+
+
+### Features
+
+* **ffe-accordion-react:** legger til noPadding på body til accordionItem ([6b1ed15](https://github.com/SpareBank1/designsystem/commit/6b1ed1500936be2e146f6ab80568d8fe16261e65))
+
+
+
+
+
 ## [13.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.1.11...@sb1/ffe-accordion-react@13.1.12) (2025-07-28)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

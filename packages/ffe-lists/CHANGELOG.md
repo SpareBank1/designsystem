@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@18.0.25...@sb1/ffe-lists@18.1.0) (2025-07-29)
+
+
+### Features
+
+* **ffe-lists:** endrer semantisk struktur på detaillist, legger til ([0ac6860](https://github.com/SpareBank1/designsystem/commit/0ac68602fb3b3814f5ac8a1c1414755b28d3839e))
+
+
+
+
+
 ## [18.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@18.0.24...@sb1/ffe-lists@18.0.25) (2025-07-16)
 
 **Note:** Version bump only for package @sb1/ffe-lists

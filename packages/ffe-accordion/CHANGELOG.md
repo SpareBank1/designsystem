@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@13.0.0...@sb1/ffe-accordion@13.1.0) (2025-07-29)
+
+
+### Features
+
+* **ffe-accordion:** legger til noPadding på body til accordion ([8a73443](https://github.com/SpareBank1/designsystem/commit/8a73443ea54bf6679482ae435fe493192dc78f0c))
+
+
+
+
+
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@12.1.5...@sb1/ffe-accordion@13.0.0) (2025-07-16)
 
 
