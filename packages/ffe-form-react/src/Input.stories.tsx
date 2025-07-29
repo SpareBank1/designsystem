@@ -24,6 +24,20 @@ export const Standard: Story = {
     ),
 };
 
+export const WithAffixes: Story = {
+    args: {
+        inline: false,
+        textRightAlign: false,
+        prefix: 'Prefix',
+        suffix: 'Suffix',
+    },
+    render: args => (
+        <InputGroup label="Navn">
+            <Input {...args} />
+        </InputGroup>
+    ),
+};
+
 export const FieldMessage: Story = {
     args: {
         ...Standard.args,

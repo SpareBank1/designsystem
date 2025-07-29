@@ -2,6 +2,7 @@ import React from 'react';
 import { Input, InputProps } from './Input';
 import { render, screen } from '@testing-library/react';
 
+const TEST_ID = 'input-test-id';
 const renderInput = (props?: Partial<InputProps>) =>
     render(<Input {...props} />);
 
@@ -24,13 +25,12 @@ describe('<Input />', () => {
     });
 
     it('sets the correct class for inline-modifer', () => {
-        const { rerender } = render(<Input />);
-        const input = screen.getByRole('textbox');
-        expect(input.classList.contains('ffe-input-field--inline')).toBeFalsy();
+        const { rerender } = render(<Input data-testid={TEST_ID} />);
+        const input = screen.getByTestId(TEST_ID);
+        const wrapper = input.parentElement;
+        expect(wrapper && wrapper.classList.contains('ffe-input-field__wrapper--inline')).toBeFalsy();
         rerender(<Input inline={true} />);
-        expect(
-            input.classList.contains('ffe-input-field--inline'),
-        ).toBeTruthy();
+        expect(wrapper && wrapper.classList.contains('ffe-input-field__wrapper--inline')).toBeTruthy();
     });
 
     it('sets the correct class for textRightAlign', () => {

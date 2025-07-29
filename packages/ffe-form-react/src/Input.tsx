@@ -6,22 +6,40 @@ export interface InputProps extends React.ComponentPropsWithoutRef<'input'> {
     inline?: boolean;
     /** Make the text right aligned */
     textRightAlign?: boolean;
+    prefix?: string;
+    suffix?: string;
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-    ({ className, inline, textRightAlign, ...rest }, ref) => {
+    ({ className, inline, textRightAlign, prefix, suffix, ...rest }, ref) => {
         return (
-            <input
-                className={classNames(
-                    'ffe-input-field',
-                    'ffe-default-mode',
-                    { 'ffe-input-field--inline': inline },
-                    { 'ffe-input-field--text-right-align': textRightAlign },
-                    className,
+            <div className={classNames(
+                'ffe-input-field__wrapper',
+                'ffe-default-mode',
+                { 'ffe-input-field__wrapper--inline': inline },
+            )}>
+                {prefix && (
+                    <div className="ffe-input-field__prefix">
+                        {prefix}
+                    </div>
                 )}
-                ref={ref}
-                {...rest}
-            />
+                <input
+                    className={classNames(
+                        'ffe-input-field',
+                        'ffe-default-mode',
+                        { 'ffe-input-field--text-right-align': textRightAlign },
+                        className,
+                    )}
+                    ref={ref}
+                    {...rest}
+                />
+                {suffix && (
+                    <div className="ffe-input-field__suffix">
+                        {suffix}
+                    </div>
+                )}
+                <div className="ffe-input-field__backdrop" />
+            </div>
         );
     },
 );
