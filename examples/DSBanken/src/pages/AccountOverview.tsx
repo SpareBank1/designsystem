@@ -21,6 +21,7 @@ import {
 import { clsx } from 'clsx';
 import { useId, useRef, useState } from 'react';
 import utvalgte from './utvalgte.svg';
+import { Tag } from '@sb1/ffe-tags-react';
 
 
 interface Transaction {
@@ -148,6 +149,9 @@ export const AccountOverview = () => {
                         {({ Title, Subtext, Text }) => (
                             <>
                                 <Title>Du er på god vei</Title>
+                                <div className='mb-2 mt-2'>
+                                    <Tag type='subtle' variant='success'>Utmerket</Tag>
+                                </div>
                                 <Subtext as="span">Status så langt i år</Subtext>
                                 <Text>
                                     Vi har vurdert at du har en god økonomi og
