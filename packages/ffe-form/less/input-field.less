@@ -1,19 +1,14 @@
 .ffe-input-field {
     display: block;
+    position: relative;
+    z-index: 1;
     height: 2.8125rem;
-    padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm); /* Increased horizontal padding */
+    padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
-    background-color: var(--ffe-color-surface-primary-default);
+    background: transparent;
+    border: none;
     color: var(--ffe-color-foreground-default);
-    border-radius: var(--ffe-g-border-radius);
-    border: var(--ffe-g-border-width) solid
-        var(--ffe-color-border-primary-default);
-    transition:
-        color var(--ffe-transition-duration) var(--ffe-ease),
-        border var(--ffe-transition-duration) var(--ffe-ease),
-        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
-        background-color var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-input);
 
@@ -26,15 +21,58 @@
         text-align: left;
     }
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
+    &__backdrop {
+        position: absolute;
+        z-index: 0;
+        inset: 0;
+        background-color: var(--ffe-color-surface-primary-default);
+        border-radius: var(--ffe-g-border-radius);
+        border: var(--ffe-g-border-width) solid
+            var(--ffe-color-border-primary-default);
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
+
+        .ffe-input-field__wrapper:hover & {
             border-color: var(--ffe-color-border-primary-default-hover);
             box-shadow: var(--ffe-g-border-focus-box-shadow)
                 var(--ffe-color-border-primary-default-hover);
         }
     }
 
-    &:focus {
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+
+        &--inline {
+            display: inline-flex;
+            width: auto;
+        }
+    }
+
+    &__suffix,
+    &__prefix {
+        color: var(--ffe-color-foreground-subtle);
+        display: inline-flex;
+        align-items: center;
+        z-index: 1;
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    &__suffix {
+        margin: 0 var(--ffe-spacing-xs) 0 0;
+    }
+
+    &__prefix {
+        margin: 0 0 0 var(--ffe-spacing-xs);
+    }
+
+    &:focus ~ &__backdrop,
+    &:focus-within ~ &__backdrop {
         border: var(--ffe-g-border-width) solid
             var(--ffe-color-fill-primary-selected-default);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
@@ -44,9 +82,10 @@
         outline-offset: var(--ffe-g-outline-offset);
     }
 
-    &--inline {
-        display: inline-block;
-        width: auto;
+    &:focus,
+    &:focus-within {
+        border: none;
+        outline: none;
     }
 
     &--text-right-align {
@@ -69,7 +108,8 @@
             color var(--ffe-transition-duration) var(--ffe-ease),
             border var(--ffe-transition-duration) var(--ffe-ease),
             box-shadow var(--ffe-transition-duration) var(--ffe-ease),
-            background-color var(--ffe-transition-duration) var(--ffe-ease);
+            background-color var(--ffe-transition-duration) var(--ffe-ease),
+            outline var(--ffe-transition-duration) var(--ffe-ease);
         background-color: transparent;
         border-radius: 2px;
 
@@ -82,6 +122,9 @@
 
         &:focus-visible {
             border-color: var(--ffe-color-border-interactive-selected);
+            outline: var(--ffe-g-outline-width) solid
+                var(--ffe-color-border-interactive-focus);
+            outline-offset: var(--ffe-g-outline-offset);
         }
 
         &[aria-invalid='true'] {
@@ -110,31 +153,24 @@
 }
 
 .ffe-input-field--invalid,
-:where(input).ffe-input-field:not(
-        .ffe-input-field--text-like
-    )[aria-invalid='true'] {
-    color: var(--ffe-color-foreground-feedback-critical);
-    border: var(--ffe-g-border-width) solid
-        var(--ffe-color-border-feedback-critical);
-    box-shadow: var(--ffe-g-border-focus-box-shadow)
-        var(--ffe-color-border-feedback-critical);
-    background-color: var(--ffe-color-surface-feedback-critical);
-
-    &:focus {
+.ffe-input-field[aria-invalid='true'],
+.ffe-input-field:not(.ffe-input-field--text-like)[aria-invalid='true'] {
+    ~ .ffe-input-field__backdrop {
+        color: var(--ffe-color-foreground-feedback-critical);
         border: var(--ffe-g-border-width) solid
             var(--ffe-color-border-feedback-critical);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
             var(--ffe-color-border-feedback-critical);
+        background-color: var(--ffe-color-surface-feedback-critical);
     }
 
-    @media (hover: hover) and (pointer: fine) {
-        &:hover,
-        &:focus {
-            border: var(--ffe-g-border-width) solid
-                var(--ffe-color-border-feedback-critical);
-            box-shadow: var(--ffe-g-border-focus-box-shadow)
-                var(--ffe-color-border-feedback-critical);
-            background-color: var(--ffe-color-surface-primary-default);
-        }
+    &:focus ~ .ffe-input-field__backdrop,
+    &:focus-within ~ .ffe-input-field__backdrop,
+    &:hover ~ .ffe-input-field__backdrop {
+        border: var(--ffe-g-border-width) solid
+            var(--ffe-color-border-feedback-critical);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-feedback-critical);
+        background-color: var(--ffe-color-component-form-input-fill-default);
     }
 }
