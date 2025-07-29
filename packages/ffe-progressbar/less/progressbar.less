@@ -5,13 +5,12 @@ Bar: What's left of the bar, when you take the max-attribute value minus the val
 
 */
 .ffe-progressbar {
-    --progress-value-color-green: var(--ffe-color-fill-feedback-success);
-    --progress-bar-color-green: var(--ffe-color-surface-feedback-success);
+    --progress-value-color-success: var(--ffe-color-foreground-feedback-success);
+    --progress-bar-color-success: var(--ffe-color-fill-feedback-success-subtle);
 
     /* Default is blue */
-    --value-color: var(--ffe-color-border-primary-emphasis);
-    --bar-color: var(--ffe-color-fill-primary-default);
-    --border-radius: var(--ffe-g-border-radius);
+    --value-color: var(--ffe-color-foreground-emphasis);
+    --bar-color: var(--ffe-color-fill-primary-subtle);
 
     /* Reset browser defaults */
     border: none;
@@ -22,26 +21,26 @@ Bar: What's left of the bar, when you take the max-attribute value minus the val
 
     /* For styling the "bar" part in Mozilla */
     background-color: var(--bar-color);
-    border-radius: var(--border-radius);
+    border-radius: var(--ffe-g-border-radius);
 
     /* For Chrome, Opera and Safari */
     &::-webkit-progress-bar {
         background-color: var(--bar-color);
-        border-radius: var(--border-radius);
+        border-radius: var(--ffe-g-border-radius);
     }
     &::-webkit-progress-value {
         background-color: var(--value-color);
-        border-radius: var(--border-radius);
+        border-radius: var(--ffe-g-border-radius);
     }
 
     /* Mozilla Firefox - Only styles the value part of the progress bar */
     &::-moz-progress-bar {
         background-color: var(--value-color);
-        border-radius: var(--border-radius);
+        border-radius: var(--ffe-g-border-radius);
     }
 
-    &--theme-green {
-        --value-color: var(--progress-value-color-green);
-        --bar-color: var(--progress-bar-color-green);
+    &--theme-success {
+        --value-color: var(--progress-value-color-success);
+        --bar-color: var(--progress-bar-color-success);
     }
 }
