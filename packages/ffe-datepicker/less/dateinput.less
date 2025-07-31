@@ -34,15 +34,18 @@
         z-index: 2;
     }
 
+    .ffe-input-field__backdrop {
+        outline: var(--ffe-g-outline-width) solid transparent;
+        outline-offset: var(--ffe-g-outline-offset);
+    }
+
     &:focus-within {
         .ffe-input-field__backdrop {
             border: var(--ffe-g-border-width) solid
                 var(--ffe-color-fill-primary-selected-default);
             box-shadow: var(--ffe-g-border-focus-box-shadow)
                 var(--ffe-color-fill-primary-selected-default);
-            outline: var(--ffe-g-outline-width) solid
-                var(--ffe-color-border-interactive-focus);
-            outline-offset: var(--ffe-g-outline-offset);
+            outline-color: var(--ffe-color-border-interactive-focus);
         }
     }
 
@@ -56,9 +59,6 @@
                 background-color: var(
                     --ffe-color-component-form-input-fill-default
                 );
-                outline: var(--ffe-g-outline-width) solid
-                    var(--ffe-color-border-interactive-focus);
-                outline-offset: var(--ffe-g-outline-offset);
             }
         }
     }
