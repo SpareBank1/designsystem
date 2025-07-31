@@ -27,6 +27,8 @@
         outline var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-dropdown);
+    outline: var(--ffe-g-outline-width) solid transparent;
+    outline-offset: var(--ffe-g-outline-offset);
     .chevron(@ffe-color-chevron-light-default);
 
     &.ffe-default-mode {
@@ -48,9 +50,7 @@
     }
 
     &:focus-within {
-        outline: var(--ffe-g-outline-width) solid
-            var(--ffe-color-border-interactive-focus);
-        outline-offset: var(--ffe-g-outline-offset);
+        outline-color: var(--ffe-color-border-interactive-focus);
     }
 
     &:focus {

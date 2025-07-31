@@ -14,6 +14,8 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+    outline: var(--ffe-g-outline-width) solid transparent;
+    outline-offset: var(--ffe-g-outline-offset);
     transition:
         width var(--ffe-transition-duration) var(--ffe-ease-in-out-back),
         outline var(--ffe-transition-duration) var(--ffe-ease);
@@ -118,9 +120,7 @@
     }
 
     &:focus-visible + .ffe-radio-button {
-        outline: var(--ffe-g-outline-width) solid
-            var(--ffe-color-border-interactive-focus);
-        outline-offset: var(--ffe-g-outline-offset);
+        outline-color: var(--ffe-color-border-interactive-focus);
     }
 
     &:disabled + .ffe-radio-button {

@@ -88,11 +88,14 @@
         outline: none;
     }
 
-    &:focus-visible + .ffe-checkbox {
-        outline: var(--ffe-g-outline-width) solid
-            var(--ffe-color-border-interactive-focus);
+    + .ffe-checkbox {
+        outline: var(--ffe-g-outline-width) solid transparent;
         outline-offset: var(--ffe-g-outline-offset);
         border-radius: var(--ffe-g-outline-border-radius);
+    }
+
+    &:focus-visible + .ffe-checkbox {
+        outline-color: var(--ffe-color-border-interactive-focus);
     }
 
     @media (hover: hover) and (pointer: fine) {
