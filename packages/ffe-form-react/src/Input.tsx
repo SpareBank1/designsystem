@@ -17,6 +17,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 'ffe-input-field__wrapper',
                 'ffe-default-mode',
                 { 'ffe-input-field__wrapper--inline': inline },
+                className,
             )}>
                 {prefix && (
                     <div className="ffe-input-field__prefix">
@@ -28,7 +29,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
                         'ffe-input-field',
                         'ffe-default-mode',
                         { 'ffe-input-field--text-right-align': textRightAlign },
-                        className,
                     )}
                     ref={ref}
                     {...rest}

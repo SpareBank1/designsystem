@@ -19,8 +19,9 @@ describe('<Input />', () => {
             className: 'app-input',
         });
         const input = screen.getByRole('textbox');
+        const wrapper = input.parentElement;
         expect(input.getAttribute('autoComplete')).toBe('off');
-        expect(input.classList.contains('app-input')).toBeTruthy();
+        expect(wrapper && wrapper.classList.contains('app-input')).toBeTruthy();
         expect(input.classList.contains('ffe-input-field')).toBeTruthy();
     });
 
