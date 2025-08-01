@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const packagesDir = path.resolve(__dirname, '../packages');
+const packagesDir = path.resolve(__dirname, 'packages');
 
 try {
     const folders = fs.readdirSync(packagesDir).filter(folder => {

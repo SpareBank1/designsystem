@@ -1,4 +1,4 @@
-import { ActionButton, BackButton, ButtonGroup, ExpandButton, InlineExpandButton, TaskButton, TertiaryButton } from '@sb1/ffe-buttons-react';
+import { ActionButton, BackButton, ButtonGroup, ExpandButton, InlineExpandButton, SecondaryButton, TaskButton, TertiaryButton } from '@sb1/ffe-buttons-react';
 import { ChartDonut } from '@sb1/ffe-chart-donut-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import { Heading2, Heading3, Paragraph, SmallText } from '@sb1/ffe-core-react';
@@ -8,6 +8,7 @@ import React, { useId, useState } from 'react';
 import plusIcon from '@sb1/ffe-icons/icons/open/300/md/add.svg';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Chip, ChipRemovable, ChipSelectable } from '@sb1/ffe-chips-react';
+import LoanCard from '@/components/LoanCard';
 
 const categoriesList = ['Feriebolig', 'Hytte', 'Yatch', 'Bil', 'Motor', 'Fjordcruise'];
 
@@ -36,12 +37,23 @@ const SavingDashboard: React.FC = () => {
                     <ActionButton onClick={() => setPercentage(Math.random() * 100)}>
                         Endre spareverdi
                     </ActionButton>
+                    <SecondaryButton onClick={() => setPercentage(100)}>
+                        Sett til 100%
+                    </SecondaryButton>
                     <TertiaryButton onClick={() => setPercentage(0)}>
                         Nullstill
                     </TertiaryButton>
                 </ButtonGroup>
             </GridCol>
             <GridCol md={6}>
+                <LoanCard
+                    amount={
+                        (percentage / 100) * 3000000 // This gives you the actual amount based on percentage
+                    }
+                    maxAmount={3000000}
+                />
+            </GridCol>
+            <GridCol>
                 <Heading2 noMargin={true}>Sparingsmål</Heading2>
                 <BulletList>
                     <BulletListItem>Feriebolig</BulletListItem>

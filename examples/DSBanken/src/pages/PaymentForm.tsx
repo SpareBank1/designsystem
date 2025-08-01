@@ -2,7 +2,7 @@ import FileUploader from '@/components/FileUploader';
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
 import { Account } from '@sb1/ffe-account-selector-react/types/types';
 import { ButtonGroup, PrimaryButton, SecondaryButton, TertiaryButton } from '@sb1/ffe-buttons-react';
-import { Heading1, Paragraph } from '@sb1/ffe-core-react';
+import { Heading1, Paragraph, SmallText } from '@sb1/ffe-core-react';
 import { Datepicker } from '@sb1/ffe-datepicker-react';
 import { Dropdown } from '@sb1/ffe-dropdown-react';
 
@@ -23,6 +23,7 @@ import {
 import { formatNumber } from '@sb1/ffe-formatters';
 import { GridCol, GridRow } from '@sb1/ffe-grid-react';
 import { SuccessMessage } from '@sb1/ffe-message-box-react';
+import { Progressbar } from '@sb1/ffe-progressbar-react';
 import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
 import { format } from 'date-fns';
 import React, { useId, useState } from 'react';
@@ -423,6 +424,10 @@ export const PaymentForm = () => {
                     </GridRow>
 
                     <GridRow>
+                        <GridCol>
+                            <SmallText>Fremgang</SmallText>
+                            <Progressbar value="50" max={100} success={true} aria-label='Fremgang'/>
+                        </GridCol>
                         <GridCol>
                             <ButtonGroup className="mt-4" ariaLabel="Betalingshandlinger">
                                 <PrimaryButton type="submit">

@@ -3,7 +3,7 @@ import { Meta, Canvas, Controls } from '@storybook/blocks';
 import * as ProgressBarStories from './Progressbar.stories';
 import dependencies from '../ffe-dependencies';
 
-<Meta title="Komponenter/Progressbar" />
+<Meta title="Komponenter/Progressbar/Progressbar" />
 
 # Progressbar
 Progressbar brukes for å vise fremgangen i en prosess.
@@ -21,16 +21,19 @@ Den vil da lese opp `aria-label - value omregnet til prosent - Progressbar`. F.e
 
 
 ## Forhåndsvisning
-
-### Standard
+En standard progressbar viser fremdriften i en prosess ved å fylle opp en linje i takt med at prosenten øker. 
 
 <Canvas of={ProgressBarStories.Standard} />
+<Controls of={ProgressBarStories.Standard} />
 
-### Green
+### Success
+Noen ganger kan det passe bedre med en grønn progressbar. Da kan du bruke `success`. 
 
-<Canvas of={ProgressBarStories.Green} />
+<Canvas of={ProgressBarStories.Success} />
+<Controls of={ProgressBarStories.Success} />
 
-## With Aria-label
+## Med Aria-label
+For å gjøre progressbaren mer tilgjengelig, kan du legge til et `aria-label`-attributt som beskriver hva fremgangen gjelder. Dette gjør at skjermlesere kan formidle informasjonen til brukere med nedsatt syn. I eksempelet under er det lagt til et `aria-label` for å forklare hva progressbaren viser.
 
 <Canvas of={ProgressBarStories.WithAria} />
 <Controls of={ProgressBarStories.WithAria} />

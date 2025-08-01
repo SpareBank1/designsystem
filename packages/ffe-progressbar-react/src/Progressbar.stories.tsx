@@ -18,11 +18,11 @@ export const Standard: Story = {
     render: args => <Progressbar {...args}></Progressbar>,
 };
 
-export const Green: Story = {
+export const Success: Story = {
     args: {
         value: 40,
         max: 100,
-        green: true,
+        success: true,
     },
     render: args => <Progressbar {...args}></Progressbar>,
 };
