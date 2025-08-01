@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-progressbar@1.1.0...@sb1/ffe-progressbar@1.2.0) (2025-08-01)
+
+
+### Features
+
+* **ffe-progressbar:** endrer fra green til success. BREAKING CHANGE i ffe-progressbar-react ([7d7de03](https://github.com/SpareBank1/designsystem/commit/7d7de033d7dd2a3fe8914201149f1e78e05534b7))
+
+
+
+
+
 # 1.1.0 (2025-07-21)
 
 
