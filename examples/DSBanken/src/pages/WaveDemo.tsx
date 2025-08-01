@@ -11,13 +11,13 @@ import { AnimatedWave } from '@sb1/ffe-shapes-react';
 const WaveDemo: React.FC = () => {
 
     return (
-        <div className="relative overflow-hidden" style={{ minHeight: "1500px" }}>
+        <div className="relative" style={{ minHeight: "1500px" }}>
             {/* Wave component with content rendered inside */}
             <AnimatedWave
                 height={800}
-                amplitude={20}
-                speed={0.5}
-                points={3}
+                amplitude={10}
+                speed={0.2}
+                points={2}
                 align="top"
                 sharpness={0.8}
                 fill="#005AA4"

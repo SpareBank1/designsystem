@@ -111,7 +111,7 @@ const AnimatedWave: React.FC<AnimatedWaveProps> = ({
 
   return (
       <div className="absolute">
-      <div style={{position: 'absolute', top: amplitude < 35 ? -70 : amplitude * 2, left: 0, width: '100%', height: '100%', zIndex: 1}} >
+      <div style={{position: 'absolute', top: amplitude < 35 ? -50 : amplitude * 2, left: 0, width: '100%', height: '100%', zIndex: 1}} >
           {children && (
               <div>
                   <div className="max-w-3xl mx-auto">
