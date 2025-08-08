@@ -33,15 +33,21 @@
             }
         }
 
-        &:focus-within {
+        &--focus {
             box-shadow: 0 0 0 1px var(--ffe-color-border-primary-default-hover);
         }
 
         @media (pointer: fine) {
-            &:focus-within {
+            &--focus {
                 outline: var(--ffe-g-outline-width) solid
                     var(--ffe-color-border-interactive-focus);
                 outline-offset: var(--ffe-g-outline-offset);
+
+                @media (hover: hover) {
+                    &:hover {
+                        border-color: var(--ffe-v-accordion-border-color);
+                    }
+                }
             }
         }
 
@@ -111,14 +117,6 @@
         &--open {
             .ffe-accordion-item__heading-icon {
                 transform: rotateZ(180deg);
-            }
-        }
-
-        &--focus {
-            @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    border-color: var(--ffe-v-accordion-border-color);
-                }
             }
         }
     }
