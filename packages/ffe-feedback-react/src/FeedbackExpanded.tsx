@@ -41,7 +41,7 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
     return (
         <>
             <Paragraph>
-                {txt[locale].FEEDBACK_ANSWER}
+                {includeConsent ? txt[locale].FEEDBACK_ANSWER_INCLUDE_CONSENT : txt[locale].FEEDBACK_ANSWER}
                 {contactLinkElement && txt[locale].QUESTIONS}
                 {contactLinkElement}
             </Paragraph>
