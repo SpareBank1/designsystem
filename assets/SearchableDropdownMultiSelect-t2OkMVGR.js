@@ -1,0 +1,10 @@
+import{j as e,M as l,C as t,a as m}from"./index-Bw6lnz8B.js";import{useMDXComponents as s}from"./index-DmqVK_gK.js";import{S as a,a as n,W as p}from"./SearchableDropdownMultiSelect.stories-CIjYnOCb.js";import"./iframe-DRQmWrnB.js";import"./index-DQDNmYQF.js";import"./index-CV7naf_y.js";import"./index-BuA_lF3S.js";import"./index-CA5R8PN9.js";import"./index-DrFu-skq.js";import"./index-D2FocPV0.js";import"./ListBox-YLI9tjLh.js";import"./index-DSyfhXNB.js";import"./Paragraph-7jO2Jnpx.js";import"./index-D9tCDUwu.js";import"./Icon-D_nm5xPy.js";import"./ChipRemovable-CTCGefdY.js";import"./InputGroup-CsZXON4u.js";import"./Collapse-BVkyKCdf.js";import"./ActionButton-BlMS1Zbi.js";import"./BaseButton-By4eKdy_.js";import"./fixedForwardRef-Dm1tRvsG.js";import"./TertiaryButton-Bljp0IOX.js";function i(o){const r={code:"code",h1:"h1",h2:"h2",p:"p",...s(),...o.components};return e.jsxs(e.Fragment,{children:[e.jsx(l,{of:a}),`
+`,e.jsx(r.h1,{id:"searchabledropdownmultiselect",children:"SearchableDropdownMultiSelect"}),`
+`,e.jsx(r.p,{children:"For nedtrekkslister der du kan velge å vise flere resultater samtidig (som for eksempel sparekontoer eller aksjefond)."}),`
+`,e.jsx(r.p,{children:"I motsetning til reglene for SearchableDropdown og vanlig Dropdown er denne funksjonaliteten brukbar med så lite som to alternativer å velge mellom/kombinere."}),`
+`,e.jsx(r.p,{children:"Dropdown multiselect skal kun brukes i situasjoner det gir mening å gi brukeren mulighet til å markere flere alternativer for sammenligning eller oppsamling."}),`
+`,e.jsx(t,{of:n}),`
+`,e.jsx(m,{of:n}),`
+`,e.jsx(r.h2,{id:"med-beskrivelse",children:"Med beskrivelse"}),`
+`,e.jsxs(r.p,{children:["Du kan bruke ",e.jsx(r.code,{children:"description='tekst her'"})," på ",e.jsx(r.code,{children:"InputGroup"})," for å legge til en beskrivelse mellom label og SearchableDropdownMultiSelect."]}),`
+`,e.jsx(t,{of:p})]})}function E(o={}){const{wrapper:r}={...s(),...o.components};return r?e.jsx(r,{...o,children:e.jsx(i,{...o})}):i(o)}export{E as default};

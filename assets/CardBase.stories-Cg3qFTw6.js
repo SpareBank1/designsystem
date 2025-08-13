@@ -1,0 +1,4 @@
+import{R as o}from"./index-DQDNmYQF.js";import{C as n}from"./CardBase-qRodZFAE.js";const d=r=>o.createElement("div",{...r},"Custom ",r.children),c={title:"Komponenter/Cards/CardBase",component:n,argTypes:{as:{options:["span","div","custom"],mapping:{div:"div",span:"span",custom:d}}}},e={args:{},render:r=>o.createElement(n,{...r},"Dette er basisen for alle kort")};var a,t,s;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {},
+  render: args => <CardBase {...args}>Dette er basisen for alle kort</CardBase>
+}`,...(s=(t=e.parameters)==null?void 0:t.docs)==null?void 0:s.source}}};const m=["Standard"],l=Object.freeze(Object.defineProperty({__proto__:null,Standard:e,__namedExportsOrder:m,default:c},Symbol.toStringTag,{value:"Module"}));export{l as C,e as S};
