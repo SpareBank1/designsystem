@@ -1,7 +1,7 @@
 import { CardBase } from '@sb1/ffe-cards-react';
 import { Heading2 } from '@sb1/ffe-core-react';
 import { formatNumber } from '@sb1/ffe-formatters';
-import { DescriptionList, DescriptionListDescription, DescriptionListTerm, DetailListCard, DetailListCardItem } from '@sb1/ffe-lists-react';
+import { DescriptionList, DescriptionListDescription, DescriptionListTerm } from '@sb1/ffe-lists-react';
 import { Progressbar } from '@sb1/ffe-progressbar-react';
 import React from 'react';
 import "./loan-card.less";
