@@ -128,32 +128,38 @@ export const PhoneNumber = React.forwardRef<
                             >
                                 +
                             </span>
-                            <input
-                                ref={countryRef}
-                                id={countryCodeId}
-                                value={countryCodeInputProps?.value ?? '47'}
-                                className={classNames(
-                                    'ffe-input-field',
-                                    'ffe-phone-number__country-code-input',
-                                    'ffe-default-mode',
-                                )}
-                                type="tel"
-                                aria-invalid={
-                                    !!(
-                                        countryCodeFieldMessage ||
-                                        countryCodeAndNumberFieldMessage
-                                    )
-                                }
-                                aria-describedby={
-                                    !!(
-                                        countryCodeFieldMessage ||
-                                        countryCodeAndNumberFieldMessage
-                                    )
-                                        ? fieldMessageId
-                                        : undefined
-                                }
-                                {...countryCodeInputProps}
-                            />
+                            <div className={classNames(
+                                'ffe-input-field__wrapper',
+                                'ffe-phone-number__country-code-input',
+                                'ffe-default-mode',
+                            )}>
+                                <input
+                                    ref={countryRef}
+                                    id={countryCodeId}
+                                    value={countryCodeInputProps?.value ?? '47'}
+                                    className={classNames(
+                                        'ffe-input-field',
+                                        'ffe-default-mode',
+                                    )}
+                                    type="tel"
+                                    aria-invalid={
+                                        !!(
+                                            countryCodeFieldMessage ||
+                                            countryCodeAndNumberFieldMessage
+                                        )
+                                    }
+                                    aria-describedby={
+                                        !!(
+                                            countryCodeFieldMessage ||
+                                            countryCodeAndNumberFieldMessage
+                                        )
+                                            ? fieldMessageId
+                                            : undefined
+                                    }
+                                    {...countryCodeInputProps}
+                                />
+                                 <div className="ffe-input-field__backdrop" />
+                            </div>
                         </div>
                     </div>
                     <div className="ffe-phone-number__number">
@@ -162,31 +168,37 @@ export const PhoneNumber = React.forwardRef<
                                 ? text.MOBILE_NUMBER
                                 : text.PHONE_NUMBER}
                         </label>
-                        <input
-                            ref={numberRef}
-                            id={numberId}
-                            type="tel"
-                            className={classNames(
-                                'ffe-input-field',
-                                'ffe-phone-number__phone-input',
-                                'ffe-default-mode',
-                            )}
-                            aria-invalid={
-                                !!(
-                                    numberFieldMessage ||
-                                    countryCodeAndNumberFieldMessage
-                                )
-                            }
-                            aria-describedby={
-                                !!(
-                                    numberFieldMessage ||
-                                    countryCodeAndNumberFieldMessage
-                                )
-                                    ? fieldMessageId
-                                    : undefined
-                            }
-                            {...numberInputProps}
-                        />
+                        <div className={classNames(
+                            'ffe-input-field__wrapper',
+                            'ffe-default-mode',
+                        )}>
+                            <input
+                                ref={numberRef}
+                                id={numberId}
+                                type="tel"
+                                className={classNames(
+                                    'ffe-input-field',
+                                    'ffe-phone-number__phone-input',
+                                    'ffe-default-mode',
+                                )}
+                                aria-invalid={
+                                    !!(
+                                        numberFieldMessage ||
+                                        countryCodeAndNumberFieldMessage
+                                    )
+                                }
+                                aria-describedby={
+                                    !!(
+                                        numberFieldMessage ||
+                                        countryCodeAndNumberFieldMessage
+                                    )
+                                        ? fieldMessageId
+                                        : undefined
+                                }
+                                {...numberInputProps}
+                            />
+                            <div className="ffe-input-field__backdrop" />
+                        </div>
                     </div>
                 </div>
                 {typeof fieldMessage === 'string' && (

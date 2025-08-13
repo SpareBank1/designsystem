@@ -2,7 +2,9 @@
     --button-width: 40px;
     --border-width: var(--ffe-g-border-width);
     --border-color: var(--ffe-color-border-primary-default);
-    --detail-text-color: var(--ffe-color-component-form-input-foreground-subtle);
+    --detail-text-color: var(
+        --ffe-color-component-form-input-foreground-subtle
+    );
     --selected-icon-color: var(--ffe-color-fill-primary-selected-default);
     --text-color: var(--ffe-color-foreground-default);
 
@@ -15,6 +17,8 @@
     border-radius: var(--ffe-g-border-radius);
     color: var(--text-color);
     border: var(--border-width) solid var(--border-color);
+    outline: var(--ffe-g-outline-width) solid transparent;
+    outline-offset: var(--ffe-g-outline-offset);
     transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
     :where(.ffe-searchable-dropdown__button) {
@@ -32,14 +36,13 @@
     &:active,
     &:focus-within {
         border-color: var(--ffe-color-component-form-input-border-active);
-        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-component-form-input-border-active);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-component-form-input-border-active);
     }
 
     &:focus-within {
-        outline: var(--ffe-g-outline-width) solid var(--ffe-color-border-interactive-focus);
-        outline-offset: var(--ffe-g-outline-offset);
+        outline-color: var(--ffe-color-border-interactive-focus);
     }
-
 
     &__input {
         display: grid;
@@ -48,7 +51,7 @@
         border-right: none;
 
         @media (hover: hover) and (pointer: fine) {
-            &:hover+.ffe-searchable-dropdown__button {
+            &:hover + .ffe-searchable-dropdown__button {
                 --border-color: var(--ffe-color-border-primary-default-hover);
             }
         }
@@ -69,7 +72,8 @@
         &-icon {
             transition:
                 color var(--ffe-transition-duration) var(--ffe-ease),
-                transform var(--ffe-transition-duration) var(--ffe-ease-in-out-back);
+                transform var(--ffe-transition-duration)
+                    var(--ffe-ease-in-out-back);
         }
 
         &--flip {
@@ -124,7 +128,7 @@
     &__no-match {
         padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
 
-        &+.ffe-searchable-dropdown__list-item-container {
+        & + .ffe-searchable-dropdown__list-item-container {
             border-top: 1px solid var(--ffe-color-border-primary-default);
         }
 
@@ -147,7 +151,6 @@
         color: var(--text-color);
 
         @media (hover: hover) and (pointer: fine) {
-
             &:hover,
             &--highlighted:hover {
                 background: var(--ffe-color-surface-primary-default-hover);
@@ -175,16 +178,19 @@
 
     &:has(input[aria-invalid='true']) {
         color: var(--ffe-color-foreground-feedback-critical);
-        border: var(--ffe-g-border-width) solid var(--ffe-color-border-feedback-critical);
-        box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-feedback-critical);
+        border: var(--ffe-g-border-width) solid
+            var(--ffe-color-border-feedback-critical);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-feedback-critical);
         background-color: var(--ffe-color-surface-feedback-critical);
 
         @media (hover: hover) and (pointer: fine) {
-
             &:hover,
             &:focus {
-                border: var(--ffe-g-border-width) solid var(--ffe-color-border-feedback-critical);
-                box-shadow: var(--ffe-g-border-focus-box-shadow) var(--ffe-color-border-feedback-critical);
+                border: var(--ffe-g-border-width) solid
+                    var(--ffe-color-border-feedback-critical);
+                box-shadow: var(--ffe-g-border-focus-box-shadow)
+                    var(--ffe-color-border-feedback-critical);
                 background-color: var(--ffe-color-surface-primary-default);
             }
         }
