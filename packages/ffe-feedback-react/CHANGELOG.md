@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.27...@sb1/ffe-feedback-react@6.1.28) (2025-08-13)
+
+
+### Bug Fixes
+
+* **ffe-feedback-react:** Legg til ny tekst for feedback med samtykkeboks ([cc2977e](https://github.com/SpareBank1/designsystem/commit/cc2977ee5d5885b316ace3f92f269d673eb5eac8))
+
+
+
+
+
 ## [6.1.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.26...@sb1/ffe-feedback-react@6.1.27) (2025-07-28)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
