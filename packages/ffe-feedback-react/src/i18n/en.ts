@@ -8,7 +8,9 @@ export const en = {
     FEEDBACK_BUTTON_GROUP: 'Button group',
     FEEDBACK_IMPROVE: 'Do you have anything else on your mind?',
     FEEDBACK_ANSWER:
-        'Your feedback will be used to improve this site and will not be replied.',
+        'Your feedback will be used to improve this site and will not be answered.',
+    FEEDBACK_ANSWER_INCLUDE_CONSENT:
+        'Your feedback will be used to improve this site and will not be answered without consent.',
     FEEDBACK_CONSENT: 'I consent to be contacted regarding my feedback.',
     QUESTIONS: ' If you have questions, ',
     FEEDBACK_LINK_TEXT: 'contact customer services.',

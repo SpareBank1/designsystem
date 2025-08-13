@@ -9,6 +9,8 @@ export const nb = {
     FEEDBACK_IMPROVE: 'Har du noe mer på hjertet? (valgfritt)',
     FEEDBACK_ANSWER:
         'Svaret ditt blir brukt til å forbedre denne siden og blir ikke besvart.',
+    FEEDBACK_ANSWER_INCLUDE_CONSENT:
+        'Svaret ditt blir brukt til å forbedre denne siden og blir ikke besvart uten samtykke.',
     FEEDBACK_CONSENT:
         'Jeg samtykker til at jeg kan bli kontaktet angående tilbakemeldingen min.',
     QUESTIONS: ' Har du spørsmål, ',
