@@ -13,6 +13,8 @@ module.exports = {
                 'eslint-config-ffe-base',
                 'stylelint-config-ffe',
                 'buildtool',
+                'DSBanken',
+                'examples',
                 'ffe-accordion',
                 'ffe-accordion-react',
                 'ffe-account-selector-react',
