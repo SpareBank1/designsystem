@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@10.1.9...@sb1/ffe-core-react@10.1.10) (2025-08-13)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** fikser typeeksportering ([956f495](https://github.com/SpareBank1/designsystem/commit/956f4958b94c24cc7b6bfc5b1968fb61a784734f))
+
+
+
+
+
 ## [10.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@10.1.8...@sb1/ffe-core-react@10.1.9) (2025-07-16)
 
 **Note:** Version bump only for package @sb1/ffe-core-react

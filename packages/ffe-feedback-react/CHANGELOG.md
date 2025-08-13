@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.28...@sb1/ffe-feedback-react@6.1.29) (2025-08-13)
+
+
+### Bug Fixes
+
+* **ffe-feedback-react:** fiks typeeksportering ([46088b7](https://github.com/SpareBank1/designsystem/commit/46088b761648aa763e64b3fe9c593033df3663ff))
+
+
+
+
+
 ## [6.1.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.27...@sb1/ffe-feedback-react@6.1.28) (2025-08-13)
 
 

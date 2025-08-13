@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes-react@1.1.17...@sb1/ffe-shapes-react@1.1.18) (2025-08-13)
+
+
+### Bug Fixes
+
+* **ffe-shapes-react:** fiks typeeksportering ([91d652c](https://github.com/SpareBank1/designsystem/commit/91d652caa7ed942ec837d77dedfcce16aae89a8a))
+
+
+
+
+
 ## [1.1.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes-react@1.1.16...@sb1/ffe-shapes-react@1.1.17) (2025-07-16)
 
 **Note:** Version bump only for package @sb1/ffe-shapes-react
