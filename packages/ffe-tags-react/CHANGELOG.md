@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags-react@1.1.12...@sb1/ffe-tags-react@2.0.0) (2025-08-15)
+
+
+* feat(ffe-tags-react)!: legger til sm, md og lg varianter av tag ([9e6665b](https://github.com/SpareBank1/designsystem/commit/9e6665bc80d65b50e74d040045c7fc99675e4e30))
+
+
+### BREAKING CHANGES
+
+* Basestørrelsen på tag er endret fra 32px til 27.6px.
+30.4px finnes fortsatt i size=lg
+
+
+
+
+
 ## [1.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags-react@1.1.11...@sb1/ffe-tags-react@1.1.12) (2025-07-28)
 
 **Note:** Version bump only for package @sb1/ffe-tags-react

@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tags",
-    "version": "1.1.6",
+    "version": "2.0.0",
     "description": "En tag er en liten, fleksibel komponent som brukes til å kategorisere, merke eller gi ekstra kontekst til innhold",
     "keywords": [
         "ffe",

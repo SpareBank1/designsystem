@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags@1.1.6...@sb1/ffe-tags@2.0.0) (2025-08-15)
+
+
+* feat(ffe-tags)!: legger til sm, md og lg varianter av tag ([2b344dd](https://github.com/SpareBank1/designsystem/commit/2b344ddbb220700eb09af8c3a78846527810da28))
+
+
+### BREAKING CHANGES
+
+* Basestørrelsen på tag er endret fra 32px til 27.6px.
+30.4px finnes fortsatt i size=lg
+
+
+
+
+
 ## [1.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags@1.1.5...@sb1/ffe-tags@1.1.6) (2025-07-16)
 
 **Note:** Version bump only for package @sb1/ffe-tags
