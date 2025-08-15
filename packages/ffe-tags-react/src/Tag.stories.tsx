@@ -96,3 +96,27 @@ export const Subtle: Story = {
         );
     },
 };
+
+
+export const DifferentSizes: Story = {
+    args: {
+        variant: 'info',
+    },
+    render: args => {
+        return (
+            <div>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                    <Tag {...args} size='sm'>
+                        Tag Label
+                    </Tag>
+                    <Tag {...args}>
+                        Tag Label
+                    </Tag>
+                    <Tag {...args} size='lg'>
+                        Tag Label
+                    </Tag>
+                </div>
+            </div>
+        );
+    },
+};

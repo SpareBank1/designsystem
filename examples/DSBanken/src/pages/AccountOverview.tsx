@@ -88,6 +88,11 @@ export const AccountOverview = () => {
                     <Heading2 noMargin={true}>Brukskonto</Heading2>
                     <SmallText>Bruk av Cards, Accordion og Table</SmallText>
                 </GridCol>
+                <div className='flex items-center gap-1'>
+                    <Tag type='subtle' size="lg" variant='warning'>Bruk</Tag>
+                    <Tag type='subtle' size="lg" variant='warning'>Kontoer</Tag>
+                    <Tag type='subtle' size="lg" variant='warning'>Tag</Tag>
+                </div>
             </GridRow>
 
             <GridRow>
@@ -378,7 +383,13 @@ export const AccountOverview = () => {
                                     <CardAction href="/felles-forsikringer">
                                         <Title>Hva skjer med felles forsikringer i samlivsbrudd?</Title>
                                     </CardAction>
-                                    <Subtext>En liten undertekst</Subtext>
+                                    <Subtext>
+                                        En liten undertekst
+                                    </Subtext>
+                                    <div className='flex items-center justify-center gap-1'>
+                                        <Tag variant="info" size="sm">Samlivsbrudd</Tag>
+                                        <Tag variant="success" size="sm">Flytting</Tag>
+                                    </div>
                                     <Text>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         sed do eiusmod tempor incididunt ut labore et dolore
