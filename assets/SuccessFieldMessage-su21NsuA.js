@@ -1,0 +1,6 @@
+import{j as s,M as i,C as m,a}from"./index-Jov1O75e.js";import{useMDXComponents as r}from"./index-DmqVK_gK.js";import{S as c,a as t}from"./SuccessFieldMessage.stories-CB-dn6Wk.js";import"./iframe-Dp2ayTF_.js";import"./index-DQDNmYQF.js";import"./index-CV7naf_y.js";import"./index-BuA_lF3S.js";import"./index-DgH-xKnr.js";import"./index-DrFu-skq.js";import"./BaseFieldMessage-WVjH22u3.js";import"./index-D2FocPV0.js";import"./Icon-D_nm5xPy.js";function o(e){const n={h1:"h1",h2:"h2",p:"p",...r(),...e.components};return s.jsxs(s.Fragment,{children:[s.jsx(i,{of:c}),`
+`,s.jsx(n.h1,{id:"successfieldmessage",children:"SuccessFieldMessage"}),`
+`,s.jsx(n.p,{children:"Brukes til å vise suksessmeldinger ved et skjemaelement."}),`
+`,s.jsx(n.h2,{id:"forhåndsvisning",children:"Forhåndsvisning"}),`
+`,s.jsx(m,{of:t}),`
+`,s.jsx(a,{of:t})]})}function S(e={}){const{wrapper:n}={...r(),...e.components};return n?s.jsx(n,{...e,children:s.jsx(o,{...e})}):o(e)}export{S as default};
