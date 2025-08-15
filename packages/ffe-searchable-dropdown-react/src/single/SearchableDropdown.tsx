@@ -30,6 +30,7 @@ import { useRefs } from '../useRefs';
 import { ToggleButton } from '../ToggleButton';
 import { ListBox } from '../ListBox';
 import isDeepEqual from 'lodash.isequal';
+import { useTabPressed } from '../useTabPressed';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
@@ -296,6 +297,9 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         }
     };
 
+    const tabPressed = useTabPressed();
+    const [isFocused, setFocus] = useState(false);
+
     return (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <div
@@ -303,11 +307,16 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             className={classNames(
                 className,
                 'ffe-searchable-dropdown',
+                { 'ffe-searchable-dropdown--focus': isFocused },
                 'ffe-default-mode',
             )}
             ref={containerRef}
             onMouseDown={addFlagOnEventHandler(id)}
-            onFocus={addFlagOnEventHandler(id)}
+            onFocus={e => {
+                addFlagOnEventHandler(id)(e);
+                setFocus(tabPressed);
+            }}
+            onBlur={() => setFocus(false)}
         >
             {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
             <div
