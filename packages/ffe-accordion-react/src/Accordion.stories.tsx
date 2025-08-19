@@ -6,6 +6,32 @@ import type { StoryObj, Meta } from '@storybook/react';
 const meta: Meta<typeof Accordion> = {
     title: 'Komponenter/Accordion',
     component: Accordion,
+    parameters: {
+        docs: {
+            description: {
+                component: 'En Accordion-komponent som lar brukere vise og skjule innhold i sammenleggbare seksjoner.',
+            },
+            source: {
+                type: 'dynamic',
+                language: 'tsx',    
+            },
+        },
+    },
+    argTypes: {
+        headingLevel: {
+            control: { type: 'select' },
+            options: [1, 2, 3, 4, 5, 6],
+            description: 'Overskriftsnivå for accordion-elementer',
+            table: {
+                type: { summary: 'number' },
+                defaultValue: { summary: '2' },
+            },
+        },
+        children: {
+            control: false,
+            description: 'AccordionItem-komponenter',
+        },
+    },
 };
 export default meta;
 
@@ -18,7 +44,7 @@ export const WithSubtleBackground: Story = {
     parameters: {
         docs: {
             description: {
-                story: 'Dette eksempelet viser ',
+                story: 'Dette eksempelet viser accordion på en subtil bakgrunn for å demonstrere kontrast.',
             },
         },
     },
@@ -51,6 +77,13 @@ export const WithSubtleBackground: Story = {
 export const Standard: Story = {
     args: {
         headingLevel: 2,
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Standard accordion med enkelt innhold.',
+            },
+        },
     },
     render: args => (
         <Accordion {...args}>
