@@ -6,7 +6,7 @@ import { SmallText } from '@sb1/ffe-core-react';
 import { accountFormatter } from '../format';
 
 const meta: Meta<typeof AccountSelector> = {
-    title: 'Komponenter/Account-selector/AccountSelector',
+    title: 'Komponenter/AccountSelector/AccountSelector',
     component: AccountSelector,
     argTypes: {
         postListElement: {
