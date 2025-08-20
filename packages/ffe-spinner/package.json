@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-spinner",
-    "version": "7.0.0",
+    "version": "7.0.1",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -19,7 +19,7 @@
         "build": "lessc less/spinner.less css/spinner.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^33.0.0"
+        "@sb1/ffe-core": "^33.0.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1"

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.60](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@13.0.59...@sb1/ffe-message-box-react@13.0.60) (2025-08-20)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
 ## [13.0.59](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@13.0.58...@sb1/ffe-message-box-react@13.0.59) (2025-07-28)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

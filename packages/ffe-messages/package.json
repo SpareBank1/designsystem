@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-messages",
-    "version": "2.0.31",
+    "version": "2.0.32",
     "description": "Messages in ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -20,7 +20,7 @@
         "build": "lessc less/messages.less css/messages.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^33.0.0"
+        "@sb1/ffe-core": "^33.0.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1"

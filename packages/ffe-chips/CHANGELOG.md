@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@3.0.0...@sb1/ffe-chips@3.0.1) (2025-08-20)
+
+**Note:** Version bump only for package @sb1/ffe-chips
+
+
+
+
+
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@2.0.28...@sb1/ffe-chips@3.0.0) (2025-07-16)
 
 
