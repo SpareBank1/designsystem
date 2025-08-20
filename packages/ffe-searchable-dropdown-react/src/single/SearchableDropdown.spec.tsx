@@ -1062,4 +1062,66 @@ describe('SearchableDropdown', () => {
         expect(onChange).toHaveBeenCalledWith(companies[2]);
         expect(input.getAttribute('value')).toEqual('812602552');
     });
+
+    it('runs onOpen callback when opening dropdown and onClose when closing dropdown', async () => {
+        const onOpen = jest.fn();
+        const onClose = jest.fn();
+
+        render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                displayAttribute={'organizationNumber'}
+                dropdownList={companies}
+                onOpen={onOpen}
+                onClose={onClose}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        expect(onOpen).not.toHaveBeenCalled();
+        expect(onClose).not.toHaveBeenCalled();
+    });
+
+    it('runs onOpen when opening dropdown and onClose when closing dropdown', async () => {
+        const onOpen = jest.fn();
+        const onClose = jest.fn();
+        const user = userEvent.setup();
+
+        render(
+            <>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelledById="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    displayAttribute={'organizationNumber'}
+                    dropdownList={companies}
+                    onOpen={onOpen}
+                    onClose={onClose}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                />
+            </>,
+        );
+
+        const input = screen.getByRole('combobox');
+        const button = screen.getByText('Knapp');
+
+        // Focus combobox to open dropdown
+        await user.click(input);
+        expect(onOpen).toHaveBeenCalledTimes(1);
+
+        // Unfocus combobox to close dropdown
+        await user.click(button);
+        expect(onClose).toHaveBeenCalledTimes(1);
+    });
 });

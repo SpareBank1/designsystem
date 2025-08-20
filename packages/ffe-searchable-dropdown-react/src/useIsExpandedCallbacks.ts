@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Params {
     isExpanded: boolean;
@@ -11,8 +11,10 @@ export const useIsExpandedCallbacks = ({
     onOpen,
     onClose,
 }: Params) => {
+    const [isInitialRender, setIsInitialRender] = useState(true);
     useEffect(() => {
         const cb = isExpanded ? onOpen : onClose;
-        cb?.();
+        if (!isInitialRender) { cb?.() }
+        setIsInitialRender(false);
     }, [isExpanded, onOpen, onClose]);
 };
