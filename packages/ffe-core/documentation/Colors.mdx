@@ -36,6 +36,8 @@ module.exports = {
 Da blir fargene tilgjengelige i kebab-case uten `--ffe-color`. Feks `--ffe-color-background-default` -> `background-default`
 
 ## Liste over de semantiske fargene
+Noen av fargene har gjennomsiktighet, og dette kan påvirke hvordan de vises på forskjellige bakgrunner. 
+I eksemplene under er bakgrunnen satt til `--ffe-color-background-default` for å illustrere effekten i de forskjellige modusene og kontekstene.
 
 <table class="ffe-color-table">
     <thead>
@@ -51,19 +53,64 @@ Da blir fargene tilgjengelige i kebab-case uten `--ffe-color`. Feks `--ffe-color
         {colors.map(color => (
             <tr key={color}>
                 <td>{color}</td>
-                <td style={{ backgroundColor: `var(${color})` }}></td>
+                <td
+                    style={{ 
+                        backgroundColor: `var(--ffe-color-background-default)`,
+                        padding: '0',
+                        border: '1px solid #dfe6eb'
+                    }}
+                >
+                    <span
+                        style={{ 
+                            backgroundColor: `var(${color})`, 
+                            display: 'block',
+                            height: '40px'
+                        }}></span>
+                </td>
                 <td
                     class="ffe-accent-mode"
-                    style={{ backgroundColor: `var(${color})` }}
-                ></td>
+                    style={{ 
+                        backgroundColor: `var(--ffe-color-background-default)`,
+                        padding: '0',
+                        border: '1px solid #dfe6eb'
+                    }}
+                >
+                    <span
+                        style={{ 
+                            backgroundColor: `var(${color})`, 
+                            display: 'block',
+                            height: '40px'
+                        }}></span>
+                </td>
                 <td
                     class="dark-mode"
-                    style={{ backgroundColor: `var(${color})` }}
-                ></td>
+                    style={{ 
+                        backgroundColor: `var(--ffe-color-background-default)`,
+                        padding: '0',
+                        border: '1px solid #dfe6eb'
+                    }}
+                >
+                    <span
+                        style={{ 
+                            backgroundColor: `var(${color})`, 
+                            display: 'block',
+                            height: '40px'
+                        }}></span>
+                </td>
                 <td
                     class="dark-mode ffe-accent-mode"
-                    style={{ backgroundColor: `var(${color})` }}
-                ></td>
+                    style={{ 
+                        backgroundColor: `var(--ffe-color-background-default)`,
+                        padding: '0',
+                        border: '1px solid #dfe6eb'
+                     }}
+                >
+                    <span
+                        style={{ 
+                            backgroundColor: `var(${color})`, 
+                            display: 'block',
+                            height: '40px'
+                        }}></span></td>
             </tr>
         ))}
     </tbody>
