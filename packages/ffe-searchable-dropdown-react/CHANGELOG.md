@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [24.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@24.0.6...@sb1/ffe-searchable-dropdown-react@24.0.7) (2025-08-20)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Do not run open or close callbacks on mount ([3194eca](https://github.com/SpareBank1/designsystem/commit/3194ecaa6007f42563df5c74d4ebdfdc1bf97785))
+
+
+
+
+
 ## [24.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@24.0.5...@sb1/ffe-searchable-dropdown-react@24.0.6) (2025-08-20)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
