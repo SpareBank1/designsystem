@@ -11,6 +11,22 @@ function buildContents(paths) {
   }
 }`,
         );
+        writeToFile(path + '/SemanticColors.xcassets/default/Contents.json')(
+            `{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}`,
+        );
+        writeToFile(path + '/SemanticColors.xcassets/accent/Contents.json')(
+            `{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}`,
+        );
     });
 }
 
@@ -21,7 +37,7 @@ function buildSRGBComponentsFromHex(hex) {
     let r,
         g,
         b,
-        a = 1;
+        a = 255; // Default alpha to 255 (fully opaque)
 
     if (cleanHex.length === 3) {
         // RGB format: aaa -> aaaaaa
@@ -58,12 +74,21 @@ function buildSRGBComponentsFromHex(hex) {
     }`;
 }
 
-function colorNameToFolderName(name) {
-    return name
-        .split('.')
-        .filter(part => part !== 'color') // Remove 'color' prefix if present
-        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-        .join('');
+function colorNameToFolderName(name, prefix = '') {
+    const str = prefix ? prefix + '.' : '';
+    const parts = (str + name).split('.').filter(part => part !== 'color'); // Remove 'color' prefix if present
+
+    if (parts.length === 0) return '.colorset';
+
+    // First part: lowercase first letter, rest unchanged
+    const first = parts[0].charAt(0).toLowerCase() + parts[0].slice(1);
+
+    // Remaining parts: uppercase first letter, rest unchanged
+    const rest = parts
+        .slice(1)
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1));
+
+    return [first, ...rest].join('') + '.colorset';
 }
 
 function buildColorFileContents(
@@ -76,35 +101,16 @@ function buildColorFileContents(
 ) {
     writeToFile(
         path +
-            '/SemanticColors.xcassets/' +
+            '/SemanticColors.xcassets/default/' +
             colorNameToFolderName(name) +
             '/Contents.json',
     )(
         `{
   "colors" : [
    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
       "color" : {
         "color-space" : "srgb",
         "components" : ${buildSRGBComponentsFromHex(light)}
-      },
-      "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "lightAccent"
-        }
-      ],
-      "color" : {
-        "color-space" : "srgb",
-        "components" : ${buildSRGBComponentsFromHex(lightAccent)}
       },
       "idiom" : "universal"
     },
@@ -120,12 +126,36 @@ function buildColorFileContents(
         "components" : ${buildSRGBComponentsFromHex(dark)}
       },
       "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
+`,
+    );
+
+    writeToFile(
+        path +
+            '/SemanticColors.xcassets/accent/' +
+            colorNameToFolderName(name, 'accent') +
+            '/Contents.json',
+    )(
+        `{
+  "colors" : [
+    {
+      "color" : {
+        "color-space" : "srgb",
+        "components" : ${buildSRGBComponentsFromHex(lightAccent)}
+      },
+      "idiom" : "universal"
     },
     {
       "appearances" : [
         {
           "appearance" : "luminosity",
-          "value" : "darkAccent"
+          "value" : "dark"
         }
       ],
       "color" : {
