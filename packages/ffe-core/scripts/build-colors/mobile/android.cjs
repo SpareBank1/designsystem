@@ -29,6 +29,9 @@ function transformToAndroidColorName(name) {
 function generateAndroidColorFileContent(colors) {
     return `
 /* Generated from Figma tokens */
+/* Dokumentasjon på: https://sparebank1.github.io/designsystem/?path=/docs/design-farger-native--docs */
+/* Fargene er bygget fra FFE Core versjon: ${require('../../../package.json').version} */
+
 object Colors {
 
     object LightDefault {
