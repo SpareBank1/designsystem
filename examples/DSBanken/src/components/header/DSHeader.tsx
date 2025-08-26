@@ -71,7 +71,7 @@ const DSHeader: React.FC<Props> = ({ menuItems }) => (
                     </svg>
                 </a>
             </div>
-            <div className='ffe-header__user-nav-toggle'>
+            <div className="ffe-header__user-nav-toggle">
                 <Paragraph>
                     Ditt personlige dashbord
                     <Badge className="ml-1">4</Badge>
@@ -80,13 +80,14 @@ const DSHeader: React.FC<Props> = ({ menuItems }) => (
         </div>
         <div className="ffe-header__border">
             <nav className="ffe-header__site-nav" role="navigation">
-                <ul
-                    className="ffe-header__list ffe-header__site-nav-list"
-                >
+                <ul className="ffe-header__list ffe-header__site-nav-list">
                     {menuItems.map(item => (
                         <li className="ffe-header__list-item">
                             <a
-                                className={clsx('ffe-header__link', { 'ffe-header__link--active': window.location.pathname === item.path })}
+                                className={clsx('ffe-header__link', {
+                                    'ffe-header__link--active':
+                                        window.location.pathname === item.path,
+                                })}
                                 href={item.path}
                             >
                                 {item.label}
@@ -96,7 +97,7 @@ const DSHeader: React.FC<Props> = ({ menuItems }) => (
                 </ul>
             </nav>
         </div>
-    </header >
+    </header>
 );
 
 export default DSHeader;
