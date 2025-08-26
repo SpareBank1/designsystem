@@ -12,13 +12,16 @@ function generateCssColorFileContent(colors) {
 /* Default context */
 :root,
 :host,
-.ffe-default-mode {
+.ffe-default-mode,
+.ffe-light,
+.ffe-light .ffe-default-mode {
   ${Object.entries(colors.light)
       .map(([name, value]) => transformToCssProperty(name, value))
       .join('\n')}
 }
 
 /* Accent context */
+.ffe-light .ffe-accent-mode,
 .ffe-accent-mode {
   ${Object.entries(colors.lightAccent)
       .map(([name, value]) => transformToCssProperty(name, value))
@@ -35,6 +38,15 @@ function generateCssColorFileContent(colors) {
     }
 }
 
+
+/* dark mode accent når en overstyrer os/nettleser light/dark preferanse*/
+.ffe-dark,
+.ffe-dark .ffe-default-mode {
+${Object.entries(colors.dark)
+    .map(([name, value]) => transformToCssProperty(name, value))
+    .join('\n')}
+}
+
 /* dark mode accent context */
 @media (prefers-color-scheme: dark) {
     .regard-color-scheme-preference .ffe-accent-mode {
@@ -43,6 +55,13 @@ function generateCssColorFileContent(colors) {
         .join('\n')}
     }
 }
+
+/* dark mode accent når en overstyrer os/nettleser light/dark preferanser*/
+.ffe-dark .ffe-accent-mode {
+${Object.entries(colors.darkAccent)
+    .map(([name, value]) => transformToCssProperty(name, value))
+    .join('\n')}
+} 
 `;
 }
 
