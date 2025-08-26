@@ -5,7 +5,7 @@ import { Heading2 } from '@sb1/ffe-core-react';
 import { RadioButton, RadioButtonInputGroup } from '@sb1/ffe-form-react';
 import { SystemMessage } from '@sb1/ffe-messages-react';
 import { Tab, TabGroup } from '@sb1/ffe-tabs-react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const menuItems = [
     { id: 'profile', label: 'Profile', path: '/settings/profile' },
@@ -15,7 +15,7 @@ const menuItems = [
         label: 'Notifications',
         path: '/settings/notifications',
     },
-    { id: 'theme', label: 'Theme', path: '/settings/theme' '}
+    { id: 'theme', label: 'Theme', path: '/settings/theme' }
 ];
 
 type ColorSchemeType = 'light' | 'dark' | 'automatic';
@@ -23,6 +23,18 @@ type ColorSchemeType = 'light' | 'dark' | 'automatic';
 const DarkModeChoice = () => {
     const [colorScheme, setColorScheme] =
         useState<ColorSchemeType>('automatic');
+        useEffect(() => {
+            const root = document.body;
+            if (colorScheme === 'light') {
+                root.classList.remove('ffe-dark');
+                root.classList.add('ffe-light');
+            } else if (colorScheme === 'dark') {
+                root.classList.add('ffe-dark');
+                root.classList.remove('ffe-light');
+            } else {
+                root.classList.remove('ffe-dark', 'ffe-light');
+            }
+        }, [colorScheme]);
 
     return (
         <div>
@@ -108,11 +120,11 @@ const SettingsDashboard: React.FC = () => {
                         <MessagesView />
                     </div>
                 )}
-                                {activeTab === 'theme' && (
+                {activeTab === 'theme' && (
                     <div>
                         <Heading2>Varslingsinnstillinger</Heading2>
                         <p>Administrer dine varslingspreferanser her.</p>
-                        <MessagesView />
+                        <DarkModeChoice /> 
                     </div>
                 )}
             </div>
