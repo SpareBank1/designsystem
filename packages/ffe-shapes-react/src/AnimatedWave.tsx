@@ -25,13 +25,11 @@ interface AnimatedWaveProps {
 
 const AnimatedWave: React.FC<AnimatedWaveProps> = ({
   height = 550,
-    dynamicHeight = false,
   amplitude = 30,
   speed = 1,
-  points = 6,
+  points = 1,
   fill = '#005AA4',
   align = 'bottom',
-  sharpness = 0.5,
   children,
   paused = false,
 }) => {
@@ -110,21 +108,24 @@ const AnimatedWave: React.FC<AnimatedWaveProps> = ({
   }, [paused, points, amplitude, speed, height]);
 
   return (
-      <div className="absolute">
-      <div style={{position: 'absolute', top: amplitude < 35 ? -50 : amplitude * 2, left: 0, width: '100%', height: '100%', zIndex: 1}} >
+      <div className="ffe-animated-wave">
+      <div 
+          className="ffe-animated-wave__content"
+          style={{'--ffe-animated-wave-content-top': `${amplitude < 35 ? -50 : amplitude * 2}px`} as React.CSSProperties}
+      >
           {children && (
               <div>
-                  <div className="max-w-3xl mx-auto">
+                  <div className="ffe-animated-wave__content-inner">
                       {children}
                   </div>
               </div>
           )}
       </div>
-      <div className="relative w-full">
+      <div className="ffe-animated-wave__svg-container">
           <svg
               viewBox={`0 0 ${width} ${height}`}
               preserveAspectRatio="none"
-              className="w-full h-auto"
+              className="ffe-animated-wave__svg"
           >
               <path ref={pathRef} d="" fill={fill} />
           </svg>
