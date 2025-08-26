@@ -25,7 +25,6 @@ type Story = StoryObj<typeof Grid>;
 const gridTemplates = {
     basic: {
         name: 'Grunnleggende',
-        icon: '📐',
         code: `<Grid>
     <GridRow>
         <GridCol sm="6">
@@ -43,7 +42,6 @@ const gridTemplates = {
     },
     responsive: {
         name: 'Responsiv layout',
-        icon: '📱',
         code: `<Grid>
     <GridRow>
         <GridCol sm="12" md="6" lg="4">
@@ -79,7 +77,6 @@ const gridTemplates = {
     },
     offset: {
         name: 'Offset og sentrering',
-        icon: '↔️',
         code: `<Grid>
     <GridRow>
         <GridCol>
@@ -120,7 +117,6 @@ const gridTemplates = {
     },
     spacing: {
         name: 'Spacing og bakgrunn',
-        icon: '🎨',
         code: `<Grid gap="lg">
     <GridRow margin="xl" padding="lg" bgColor="secondary">
         <GridCol>
@@ -158,7 +154,6 @@ const gridTemplates = {
     },
     complex: {
         name: 'Kompleks layout',
-        icon: '🏗️',
         code: `<Grid>
     <GridRow>
         <GridCol>
@@ -226,7 +221,6 @@ const gridTemplates = {
     },
     dashboard: {
         name: 'Dashboard layout',
-        icon: '📊',
         code: `function DashboardExample() {
     const [selectedCard, setSelectedCard] = useState(null);
     
@@ -242,7 +236,7 @@ const gridTemplates = {
             <GridRow>
                 <GridCol>
                     <div style={{ padding: '20px', backgroundColor: 'var(--ffe-color-background-primary)', color: 'white', borderRadius: '4px', marginBottom: '24px' }}>
-                        <h2 style={{ margin: 0 }}>📊 Dashboard</h2>
+                        <h2 style={{ margin: 0 }}>Dashboard</h2>
                     </div>
                 </GridCol>
             </GridRow>
@@ -280,7 +274,7 @@ const gridTemplates = {
             <GridRow>
                 <GridCol sm="12" lg="8">
                     <div style={{ padding: '20px', backgroundColor: 'white', border: '1px solid var(--ffe-color-border-primary-subtle)', borderRadius: '4px', marginBottom: '16px' }}>
-                        <h4 style={{ margin: '0 0 16px 0' }}>📈 Trendanalyse</h4>
+                        <h4 style={{ margin: '0 0 16px 0' }}>Trendanalyse</h4>
                         <div style={{ height: '200px', backgroundColor: 'var(--ffe-color-background-subtle)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: 0, color: 'var(--ffe-color-text-secondary)' }}>
                                 Graf placeholder - {selectedCard ? \`Viser data for kort \${selectedCard}\` : 'Velg et kort for å se detaljer'}
@@ -291,7 +285,7 @@ const gridTemplates = {
                 
                 <GridCol sm="12" lg="4">
                     <div style={{ padding: '20px', backgroundColor: 'white', border: '1px solid var(--ffe-color-border-primary-subtle)', borderRadius: '4px', marginBottom: '16px' }}>
-                        <h4 style={{ margin: '0 0 16px 0' }}>🔔 Siste aktivitet</h4>
+                        <h4 style={{ margin: '0 0 16px 0' }}>Siste aktivitet</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             <div style={{ padding: '8px', backgroundColor: 'var(--ffe-color-background-subtle)', borderRadius: '4px' }}>
                                 <div style={{ fontSize: '14px', fontWeight: 'bold' }}>Ny bruker registrert</div>
@@ -317,7 +311,6 @@ render(<DashboardExample />);`
     },
     showcase: {
         name: 'Showcase',
-        icon: '🏆',
         code: `<div style={{ 
     padding: '24px', 
     backgroundColor: 'var(--ffe-color-background-subtle)', 
@@ -338,7 +331,7 @@ render(<DashboardExample />);`
             <GridCol sm="6" md="4" lg="3">
                 <CardBase style={{ marginBottom: '16px' }}>
                     <div style={{ height: '120px', backgroundColor: 'var(--ffe-color-background-secondary)', borderRadius: '4px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        📱
+Smartphone
                     </div>
                     <h5 style={{ margin: '0 0 8px 0' }}>Smartphone</h5>
                     <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: 'var(--ffe-color-text-secondary)' }}>
@@ -351,7 +344,7 @@ render(<DashboardExample />);`
             <GridCol sm="6" md="4" lg="3">
                 <CardBase style={{ marginBottom: '16px' }}>
                     <div style={{ height: '120px', backgroundColor: 'var(--ffe-color-background-secondary)', borderRadius: '4px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        💻
+Laptop
                     </div>
                     <h5 style={{ margin: '0 0 8px 0' }}>Laptop</h5>
                     <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: 'var(--ffe-color-text-secondary)' }}>
@@ -364,7 +357,7 @@ render(<DashboardExample />);`
             <GridCol sm="6" md="4" lg="3">
                 <CardBase style={{ marginBottom: '16px' }}>
                     <div style={{ height: '120px', backgroundColor: 'var(--ffe-color-background-secondary)', borderRadius: '4px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        🎧
+Hodetelefoner
                     </div>
                     <h5 style={{ margin: '0 0 8px 0' }}>Hodetelefoner</h5>
                     <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: 'var(--ffe-color-text-secondary)' }}>
@@ -377,7 +370,7 @@ render(<DashboardExample />);`
             <GridCol sm="6" md="4" lg="3">
                 <CardBase style={{ marginBottom: '16px' }}>
                     <div style={{ height: '120px', backgroundColor: 'var(--ffe-color-background-secondary)', borderRadius: '4px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        ⌚
+Smartklokke
                     </div>
                     <h5 style={{ margin: '0 0 8px 0' }}>Smartklokke</h5>
                     <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: 'var(--ffe-color-text-secondary)' }}>

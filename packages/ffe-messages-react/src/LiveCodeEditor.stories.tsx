@@ -25,8 +25,7 @@ type Story = StoryObj<typeof SystemMessage>;
 // Define simplified templates for message components
 const messagesTemplates = {
     enkelt: {
-        name: 'Enkelt',
-        icon: '💬',
+        name: 'Grunnleggende',
         code: `<div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
     <SystemMessage type="success">
         Operasjonen ble utført med suksess!
@@ -46,8 +45,7 @@ const messagesTemplates = {
 </div>`
     },
     types: {
-        name: 'Meldingstyper',
-        icon: '🎨',
+        name: 'Interaktiv',
         code: `<div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
     <div>
         <h4>SystemMessage varianter</h4>

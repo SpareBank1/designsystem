@@ -23,8 +23,7 @@ type Story = StoryObj<typeof AccountSelector>;
 // Define comprehensive templates for all account selector components
 const accountSelectorTemplates = {
     simple: {
-        name: 'Enkelt',
-        icon: '🏦',
+        name: 'Grunnleggende',
         code: `function SimpleAccountSelector() {
     const [selectedAccount, setSelectedAccount] = useState(null);
     
@@ -91,7 +90,6 @@ render(<SimpleAccountSelector />);`
     },
     multi: {
         name: 'Flervalg',
-        icon: '☑️',
         code: `function MultiAccountSelector() {
     const [selectedAccounts, setSelectedAccounts] = useState([]);
     
@@ -162,7 +160,6 @@ render(<MultiAccountSelector />);`
     },
     interactive: {
         name: 'Interaktiv',
-        icon: '⚡',
         code: `function InteractiveAccountSelector() {
     const [fromAccount, setFromAccount] = useState(null);
     const [toAccount, setToAccount] = useState(null);
@@ -317,7 +314,6 @@ render(<InteractiveAccountSelector />);`
     },
     showcase: {
         name: 'Showcase',
-        icon: '🏆',
         code: `function AccountSelectorShowcase() {
     const [selectedAccounts, setSelectedAccounts] = useState([]);
     

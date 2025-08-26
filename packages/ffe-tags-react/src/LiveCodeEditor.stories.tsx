@@ -21,8 +21,7 @@ type Story = StoryObj<typeof Tag>;
 // Define simplified template for tags
 const tagTemplates = {
     enkelt: {
-        name: 'Enkelt',
-        icon: '🏷️',
+        name: 'Grunnleggende',
         code: `<div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
     <Tag>Teknologi</Tag>
     <Tag>Design</Tag>

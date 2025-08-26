@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import type { ComponentType } from 'react';
 import Editor from '@monaco-editor/react';
-import { LiveProvider, LiveError, LivePreview } from 'react-live';
+import { Dropdown } from '@sb1/ffe-dropdown-react';
+import type { ComponentType } from 'react';
+import React, { useState } from 'react';
+import { LiveError, LivePreview, LiveProvider } from 'react-live';
 
 // Import major FFE components to make them available in live code editor
 // Buttons
-import { 
-    PrimaryButton, 
-    SecondaryButton, 
-    ActionButton, 
-    TertiaryButton,
+import {
+    ActionButton,
     BackButton,
+    ButtonGroup,
     ExpandButton,
     InlineExpandButton,
+    PrimaryButton,
+    SecondaryButton,
     ShortcutButton,
     TaskButton,
-    ButtonGroup
+    TertiaryButton,
 } from '@sb1/ffe-buttons-react';
 
 // Core components
@@ -29,14 +30,14 @@ import {
     Heading4,
     Heading5,
     Heading6,
-    LinkText,
     LinkIcon,
+    LinkText,
     MicroText,
     Paragraph,
     PreformattedText,
     SmallText,
     StrongText,
-    Wave
+    Wave,
 } from '@sb1/ffe-core-react';
 
 // Cards
@@ -58,21 +59,21 @@ import { Badge } from '@sb1/ffe-badge-react';
 import { Chip, ChipRemovable, ChipSelectable } from '@sb1/ffe-chips-react';
 
 // Lists
-import { 
-    BulletList, 
-    BulletListItem, 
-    NumberedList, 
-    NumberedListItem,
+import {
+    BulletList,
+    BulletListItem,
     CheckList,
     CheckListItem,
-    StylizedNumberedList,
-    StylizedNumberedListItem,
     DescriptionList,
-    DescriptionListTerm,
     DescriptionListDescription,
     DescriptionListMultiCol,
+    DescriptionListTerm,
     DetailListCard,
-    DetailListCardItem
+    DetailListCardItem,
+    NumberedList,
+    NumberedListItem,
+    StylizedNumberedList,
+    StylizedNumberedListItem,
 } from '@sb1/ffe-lists-react';
 
 // Standard FFE scope with all major components
@@ -81,10 +82,10 @@ const createFFEScope = () => ({
     useState: React.useState,
     useEffect: React.useEffect,
     useId: React.useId,
-    
+
     // Buttons
     PrimaryButton,
-    SecondaryButton, 
+    SecondaryButton,
     ActionButton,
     TertiaryButton,
     BackButton,
@@ -93,7 +94,7 @@ const createFFEScope = () => ({
     ShortcutButton,
     TaskButton,
     ButtonGroup,
-    
+
     // Core Typography
     BodyText,
     DividerLine,
@@ -112,28 +113,28 @@ const createFFEScope = () => ({
     SmallText,
     StrongText,
     Wave,
-    
+
     // Cards
     CardBase,
-    
+
     // Accordion
     Accordion,
     AccordionItem,
-    
+
     // Collapse
     Collapse,
-    
+
     // Icons
     Icon: FFEIcon,
-    
+
     // Badge
     Badge,
-    
+
     // Chips
     Chip,
     ChipRemovable,
     ChipSelectable,
-    
+
     // Lists
     BulletList,
     BulletListItem,
@@ -148,12 +149,12 @@ const createFFEScope = () => ({
     DescriptionListDescription,
     DescriptionListMultiCol,
     DetailListCard,
-    DetailListCardItem
+    DetailListCardItem,
 });
 
 interface Template {
     name: string;
-    icon: string;
+    icon?: string;
     code: string;
 }
 
@@ -175,10 +176,10 @@ interface LiveCodeEditorProps {
 }
 
 // Icon component for use in LiveCodeEditor
-const IconInternal = ({ 
+const IconInternal = ({
     name,
     size = 'md',
-    ariaLabel
+    ariaLabel,
 }: {
     name: string;
     size?: 'sm' | 'md' | 'lg';
@@ -186,7 +187,7 @@ const IconInternal = ({
 }) => {
     // Base path for icons - adjust as needed based on your setup
     const iconPath = `/icons/open/300/md/${name}.svg`;
-    
+
     return (
         <span
             role="img"
@@ -206,16 +207,16 @@ const IconInternal = ({
 };
 
 // Button component with proper ffe-button structure
-const Button = ({ 
-    variant = 'tertiary', 
+const Button = ({
+    variant = 'tertiary',
     size = 'sm',
-    onClick, 
-    children, 
+    onClick,
+    children,
     disabled = false,
     leftIcon,
     rightIcon,
     iconOnly = false,
-    ...props 
+    ...props
 }: {
     variant?: 'primary' | 'secondary' | 'tertiary' | 'action';
     size?: 'sm' | 'md' | 'lg';
@@ -234,15 +235,17 @@ const Button = ({
         {...props}
     >
         <span className="ffe-button__label">
-            {leftIcon && React.cloneElement(leftIcon, {
-                className: 'ffe-button__icon ffe-button__icon--left',
-                size: 'md',
-            })}
+            {leftIcon &&
+                React.cloneElement(leftIcon, {
+                    className: 'ffe-button__icon ffe-button__icon--left',
+                    size: 'md',
+                })}
             {children}
-            {rightIcon && React.cloneElement(rightIcon, {
-                className: 'ffe-button__icon ffe-button__icon--right',
-                size: 'md',
-            })}
+            {rightIcon &&
+                React.cloneElement(rightIcon, {
+                    className: 'ffe-button__icon ffe-button__icon--right',
+                    size: 'md',
+                })}
         </span>
     </button>
 );
@@ -254,14 +257,19 @@ export function LiveCodeEditor({
     defaultTemplate = Object.keys(templates)[0],
     storageKey,
     title = 'Live Code Editor',
-    description = 'Skriv JSX-kode og se resultatet umiddelbart!'
+    description = 'Skriv JSX-kode og se resultatet umiddelbart!',
 }: LiveCodeEditorProps) {
-    const [code, setCode] = React.useState(templates[defaultTemplate]?.code || '');
-    const [theme, setTheme] = React.useState<'light' | 'dark'>('light');
-    const [autoSave, setAutoSave] = React.useState(true);
-    const [selectedTemplate, setSelectedTemplate] = React.useState(defaultTemplate);
-    const [hasUnsavedChanges, setHasUnsavedChanges] = React.useState(false);
-    const [originalTemplateCode, setOriginalTemplateCode] = React.useState(templates[defaultTemplate]?.code || '');
+    const [selectedTemplate, setSelectedTemplate] =
+        useState<string>(defaultTemplate);
+    const [code, setCode] = useState<string>(
+        templates[defaultTemplate]?.code || '',
+    );
+    const [hasUnsavedChanges, setHasUnsavedChanges] = useState<boolean>(false);
+    const [autoSave, setAutoSave] = useState<boolean>(true);
+    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [showConfirmDialog, setShowConfirmDialog] = useState<boolean>(false);
+    const [pendingTemplate, setPendingTemplate] = useState<string | null>(null);
+    const [showResetDialog, setShowResetDialog] = useState<boolean>(false);
 
     // Check if current code matches any template
     const getCurrentTemplate = () => {
@@ -278,7 +286,10 @@ export function LiveCodeEditor({
         if (autoSave && hasUnsavedChanges) {
             const timeoutId = setTimeout(() => {
                 localStorage.setItem(`${storageKey}-livecode`, code);
-                localStorage.setItem(`${storageKey}-livecode-template`, selectedTemplate);
+                localStorage.setItem(
+                    `${storageKey}-livecode-template`,
+                    selectedTemplate,
+                );
             }, 500);
             return () => clearTimeout(timeoutId);
         }
@@ -287,32 +298,30 @@ export function LiveCodeEditor({
     // Load saved code on mount
     React.useEffect(() => {
         const saved = localStorage.getItem(`${storageKey}-livecode`);
-        const savedTemplate = localStorage.getItem(`${storageKey}-livecode-template`) || defaultTemplate;
-        
+        const savedTemplate =
+            localStorage.getItem(`${storageKey}-livecode-template`) ||
+            defaultTemplate;
+
         if (saved && autoSave && templates[savedTemplate]) {
             setCode(saved);
             setSelectedTemplate(savedTemplate);
-            setOriginalTemplateCode(templates[savedTemplate].code);
-            
-            // Check if saved code is different from the template
-            const isModified = saved.trim() !== templates[savedTemplate].code.trim();
-            setHasUnsavedChanges(isModified);
+            setHasUnsavedChanges(false);
         }
     }, []);
 
     // Track code changes
     const handleCodeChange = (newCode: string) => {
         setCode(newCode);
-        
+
         // Check if code has been modified from original template
-        const isModified = newCode.trim() !== originalTemplateCode.trim();
+        const isModified =
+            newCode.trim() !== templates[selectedTemplate].code.trim();
         setHasUnsavedChanges(isModified);
-        
+
         // Update selected template if code matches a template exactly
         const matchingTemplate = getCurrentTemplate();
         if (matchingTemplate && matchingTemplate !== selectedTemplate) {
             setSelectedTemplate(matchingTemplate);
-            setOriginalTemplateCode(templates[matchingTemplate].code);
             setHasUnsavedChanges(false);
         }
     };
@@ -328,172 +337,375 @@ export function LiveCodeEditor({
     };
 
     const resetToTemplate = () => {
+        setShowResetDialog(true);
+    };
+
+    const handleConfirmReset = () => {
         const template = templates[selectedTemplate];
-        if (template && confirm(`Er du sikker på at du vil tilbakestille til "${template.name}" template?`)) {
+        if (template) {
             setCode(template.code);
-            setOriginalTemplateCode(template.code);
             setHasUnsavedChanges(false);
             localStorage.removeItem(`${storageKey}-livecode`);
             localStorage.removeItem(`${storageKey}-livecode-template`);
         }
+        setShowResetDialog(false);
     };
+
+    const handleCancelReset = () => {
+        setShowResetDialog(false);
+    };
+
+    // Handle keyboard events for confirmation dialogs
+    React.useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Enter') {
+                if (showConfirmDialog) {
+                    event.preventDefault();
+                    handleConfirmTemplateChange();
+                } else if (showResetDialog) {
+                    event.preventDefault();
+                    handleConfirmReset();
+                }
+            } else if (event.key === 'Escape') {
+                if (showConfirmDialog) {
+                    event.preventDefault();
+                    handleCancelTemplateChange();
+                } else if (showResetDialog) {
+                    event.preventDefault();
+                    handleCancelReset();
+                }
+            }
+        };
+
+        if (showConfirmDialog || showResetDialog) {
+            document.addEventListener('keydown', handleKeyDown);
+            return () => document.removeEventListener('keydown', handleKeyDown);
+        }
+    }, [showConfirmDialog, showResetDialog]);
 
     const loadTemplate = (templateKey: string) => {
         const newTemplate = templates[templateKey];
         if (!newTemplate) return;
-        
-        // If user has unsaved changes, ask for confirmation
+
+        // If user has unsaved changes, show custom confirmation dialog
         if (hasUnsavedChanges) {
-            if (!confirm('Du har ulagrede endringer. Er du sikker på at du vil bytte template?')) {
-                return;
-            }
+            setPendingTemplate(templateKey);
+            setShowConfirmDialog(true);
+            return;
         }
-        
+
         setSelectedTemplate(templateKey);
         setCode(newTemplate.code);
-        setOriginalTemplateCode(newTemplate.code);
         setHasUnsavedChanges(false);
-        
+
         // Clear saved code when switching templates
         localStorage.removeItem(`${storageKey}-livecode`);
         localStorage.setItem(`${storageKey}-livecode-template`, templateKey);
+    };
+
+    const handleConfirmTemplateChange = () => {
+        if (pendingTemplate) {
+            setSelectedTemplate(pendingTemplate);
+            setCode(templates[pendingTemplate].code);
+            setHasUnsavedChanges(false);
+        }
+        setShowConfirmDialog(false);
+        setPendingTemplate(null);
+    };
+
+    const handleCancelTemplateChange = () => {
+        setShowConfirmDialog(false);
+        setPendingTemplate(null);
     };
 
     // Create scope object
     const scope = {
         ...createFFEScope(),
         [component.displayName || component.name || 'Component']: component,
-        ...additionalComponents
+        ...additionalComponents,
     };
 
     return (
         <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-            <h3 className="ffe-h3">{title} - {theme === 'light' ? 'Light' : 'Dark'} mode</h3>
+            <h3 className="ffe-h3">
+                {title} - {theme === 'light' ? 'Light' : 'Dark'} mode
+            </h3>
             <p>{description}</p>
-            
-            {/* Status indicator */}
-            {hasUnsavedChanges && (
-                <div style={{
-                    marginBottom: '12px',
-                    padding: '8px 12px',
-                    backgroundColor: '#fff3cd',
-                    border: '1px solid #ffeaa7',
-                    borderRadius: '4px',
-                    color: '#856404',
-                    fontSize: '14px'
-                }}>
-                    💾 Du har ulagrede endringer - koden lagres automatisk
-                </div>
-            )}
-            
+
+            {/* Status indicator - removed confusing message */}
+
             {/* Controls */}
-            <div style={{ 
-                marginBottom: '16px', 
-                display: 'flex', 
-                gap: '8px', 
-                alignItems: 'center', 
-                flexWrap: 'wrap',
-                padding: '12px',
-                backgroundColor: theme === 'light' ? '#f8f9fa' : '#2d3748',
-                borderRadius: '8px',
-                border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`
-            }}>
-                <label style={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: '6px',
-                    color: theme === 'light' ? 'black' : 'white'
-                }}>
-                    <input 
-                        type="checkbox" 
+            <div
+                style={{
+                    marginBottom: '16px',
+                    display: 'flex',
+                    gap: '8px',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    padding: '12px',
+                    backgroundColor: theme === 'light' ? '#f8f9fa' : '#2d3748',
+                    borderRadius: '8px',
+                    border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                }}
+            >
+                <label
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        color: theme === 'light' ? 'black' : 'white',
+                    }}
+                >
+                    <input
+                        type="checkbox"
                         checked={autoSave}
-                        onChange={(e) => setAutoSave(e.target.checked)}
+                        onChange={e => setAutoSave(e.target.checked)}
                     />
                     Auto-save
                 </label>
 
-                {/* Template selector */}
-                <select 
+                {/* Kodemal selector */}
+                <Dropdown
                     value={selectedTemplate}
-                    onChange={(e) => loadTemplate(e.target.value)}
+                    onChange={e => loadTemplate(e.target.value)}
                     style={{
-                        padding: '6px 12px',
-                        backgroundColor: theme === 'light' ? 'white' : '#4a5568',
+                        backgroundColor:
+                            theme === 'light' ? 'white' : '#4a5568',
                         color: theme === 'light' ? 'black' : 'white',
                         border: `1px solid ${theme === 'light' ? '#ddd' : '#6b7280'}`,
-                        borderRadius: '4px'
+                        width: 'auto',
+                        minWidth: '200px',
+                        maxWidth: '300px',
                     }}
                 >
                     {Object.entries(templates).map(([key, template]) => (
                         <option key={key} value={key}>
-                            {template.icon} {template.name}
+                            {template.name}
                         </option>
                     ))}
-                </select>
-                
-                <div style={{ display: 'flex', gap: '8px' }}>
-                    <Button
-                        variant="secondary"
-                        size="md"
-                        onClick={downloadCode}
-                        leftIcon={<IconInternal name="cloud_download" ariaLabel="Download code" />}
-                    >
-                        Last ned
-                    </Button>
-                    
-                    <Button
-                        variant="primary"
-                        size="md"
-                        onClick={resetToTemplate}
-                        leftIcon={<IconInternal name="restart_alt" ariaLabel="Reset to template" />}
-                    >
-                        Tilbakestill
-                    </Button>
-                </div>
+                </Dropdown>
             </div>
 
-            {/* Live Code Provider */}
-            <LiveProvider code={code} scope={scope} noInline={code.includes('function ')}>
-                <div style={{ 
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: '20px',
-                    height: '500px',
-                    fontFamily: 'system-ui, -apple-system, sans-serif'
-                }}>
-                    
-                    {/* Code Editor */}
-                    <div style={{ 
-                        border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
-                        borderRadius: '8px',
-                        overflow: 'hidden',
+            {/* Custom confirmation dialog */}
+            {showConfirmDialog && (
+                <div
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
                         display: 'flex',
-                        flexDirection: 'column',
-                        backgroundColor: theme === 'light' ? 'white' : '#2d3748'
-                    }}>
-                        <div style={{ 
-                            padding: '12px', 
-                            backgroundColor: theme === 'light' ? '#f8f9fa' : '#1a202c',
-                            borderBottom: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
-                            fontWeight: '600',
-                            fontSize: '14px',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 1000,
+                    }}
+                >
+                    <div
+                        style={{
+                            backgroundColor:
+                                theme === 'light' ? 'white' : '#2d3748',
                             color: theme === 'light' ? 'black' : 'white',
+                            padding: '24px',
+                            borderRadius: '8px',
+                            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+                            maxWidth: '400px',
+                            width: '90%',
+                            border: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`,
+                        }}
+                    >
+                        <h3
+                            style={{
+                                margin: '0 0 16px 0',
+                                fontSize: '18px',
+                                fontWeight: '600',
+                            }}
+                        >
+                            Ulagrede endringer
+                        </h3>
+                        <p
+                            style={{
+                                margin: '0 0 24px 0',
+                                lineHeight: '1.5',
+                                color:
+                                    theme === 'light' ? '#4a5568' : '#a0aec0',
+                            }}
+                        >
+                            Du har ulagrede endringer som vil gå tapt. Er du
+                            sikker på at du vil bytte kodemal?
+                        </p>
+                        <div
+                            style={{
+                                display: 'flex',
+                                gap: '12px',
+                                justifyContent: 'flex-end',
+                            }}
+                        >
+                            <SecondaryButton
+                                onClick={handleCancelTemplateChange}
+                                size="sm"
+                            >
+                                Avbryt
+                            </SecondaryButton>
+                            <PrimaryButton
+                                onClick={handleConfirmTemplateChange}
+                                size="sm"
+                            >
+                                Bytt kodemal
+                            </PrimaryButton>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Reset confirmation dialog */}
+            {showResetDialog && (
+                <div
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 1000,
+                    }}
+                >
+                    <div
+                        style={{
+                            backgroundColor:
+                                theme === 'light' ? 'white' : '#2d3748',
+                            color: theme === 'light' ? 'black' : 'white',
+                            padding: '24px',
+                            borderRadius: '8px',
+                            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+                            maxWidth: '400px',
+                            width: '90%',
+                            border: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`,
+                        }}
+                    >
+                        <h3
+                            style={{
+                                margin: '0 0 16px 0',
+                                fontSize: '18px',
+                                fontWeight: '600',
+                            }}
+                        >
+                            Tilbakestill kode
+                        </h3>
+                        <p
+                            style={{
+                                margin: '0 0 24px 0',
+                                lineHeight: '1.5',
+                                color:
+                                    theme === 'light' ? '#4a5568' : '#a0aec0',
+                            }}
+                        >
+                            Er du sikker på at du vil tilbakestille til "
+                            {templates[selectedTemplate]?.name}" kodemal? Alle
+                            endringer vil gå tapt.
+                        </p>
+                        <div
+                            style={{
+                                display: 'flex',
+                                gap: '12px',
+                                justifyContent: 'flex-end',
+                            }}
+                        >
+                            <SecondaryButton
+                                onClick={handleCancelReset}
+                                size="sm"
+                            >
+                                Avbryt
+                            </SecondaryButton>
+                            <PrimaryButton
+                                onClick={handleConfirmReset}
+                                size="sm"
+                            >
+                                Tilbakestill
+                            </PrimaryButton>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Live Code Provider */}
+            <LiveProvider
+                code={code}
+                scope={scope}
+                noInline={code.includes('function ')}
+            >
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: '1fr 1fr',
+                        gap: '20px',
+                        height: '500px',
+                        fontFamily: 'system-ui, -apple-system, sans-serif',
+                    }}
+                >
+                    {/* Code Editor */}
+                    <div
+                        style={{
+                            border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                            borderRadius: '8px',
+                            overflow: 'hidden',
                             display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center'
-                        }}>
-                            <span>📝 Live Code Editor</span>
-                            {hasUnsavedChanges && (
-                                <span style={{ 
-                                    fontSize: '12px', 
-                                    color: '#ffc107',
-                                    backgroundColor: theme === 'light' ? '#fff3cd' : '#2d3748',
-                                    padding: '2px 6px',
-                                    borderRadius: '3px'
-                                }}>
-                                    ● Endret
-                                </span>
-                            )}
+                            flexDirection: 'column',
+                            backgroundColor:
+                                theme === 'light' ? 'white' : '#2d3748',
+                        }}
+                    >
+                        <div
+                            style={{
+                                padding: '12px',
+                                backgroundColor:
+                                    theme === 'light' ? '#f8f9fa' : '#1a202c',
+                                borderBottom: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                                fontWeight: '600',
+                                fontSize: '14px',
+                                color: theme === 'light' ? 'black' : 'white',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <span>Kodeeditor</span>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '12px',
+                                }}
+                            >
+                                {hasUnsavedChanges && (
+                                    <span
+                                        style={{
+                                            fontSize: '12px',
+                                            color: '#28a745',
+                                            backgroundColor:
+                                                theme === 'light'
+                                                    ? '#d4edda'
+                                                    : '#2d3748',
+                                            padding: '2px 6px',
+                                            borderRadius: '3px',
+                                        }}
+                                    >
+                                        ● Lagret
+                                    </span>
+                                )}
+                                <Button
+                                    variant="secondary"
+                                    size="sm"
+                                    onClick={resetToTemplate}
+                                >
+                                    Tilbakestill
+                                </Button>
+                            </div>
                         </div>
                         <div style={{ flex: 1 }}>
                             <Editor
@@ -501,19 +713,39 @@ export function LiveCodeEditor({
                                 defaultLanguage="typescript"
                                 theme={theme === 'light' ? 'light' : 'vs-dark'}
                                 value={code}
-                                onChange={(value) => handleCodeChange(value || '')}
-                                beforeMount={(monaco) => {
-                                    // Disable TypeScript diagnostics to prevent squiggly lines
-                                    monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({
-                                        noSemanticValidation: true,
-                                        noSyntaxValidation: false,
-                                        noSuggestionDiagnostics: true
-                                    });
-                                    monaco.languages.typescript.javascriptDefaults.setDiagnosticsOptions({
-                                        noSemanticValidation: true,
-                                        noSyntaxValidation: false,
-                                        noSuggestionDiagnostics: true
-                                    });
+                                onChange={value =>
+                                    handleCodeChange(value || '')
+                                }
+                                beforeMount={monaco => {
+                                    // Completely disable TypeScript diagnostics to prevent squiggly lines
+                                    monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions(
+                                        {
+                                            noSemanticValidation: true,
+                                            noSyntaxValidation: true,
+                                            noSuggestionDiagnostics: true,
+                                        },
+                                    );
+                                    monaco.languages.typescript.javascriptDefaults.setDiagnosticsOptions(
+                                        {
+                                            noSemanticValidation: true,
+                                            noSyntaxValidation: true,
+                                            noSuggestionDiagnostics: true,
+                                        },
+                                    );
+
+                                    // Disable all hover providers
+                                    monaco.languages.registerHoverProvider(
+                                        'typescript',
+                                        {
+                                            provideHover: () => null,
+                                        },
+                                    );
+                                    monaco.languages.registerHoverProvider(
+                                        'javascript',
+                                        {
+                                            provideHover: () => null,
+                                        },
+                                    );
                                 }}
                                 options={{
                                     minimap: { enabled: false },
@@ -528,45 +760,66 @@ export function LiveCodeEditor({
                                     bracketPairColorization: { enabled: true },
                                     guides: {
                                         bracketPairs: true,
-                                        indentation: true
+                                        indentation: true,
                                     },
-                                    suggest: {
-                                        showKeywords: true,
-                                        showSnippets: true
-                                    }
+                                    // Disable all IntelliSense features
+                                    quickSuggestions: false,
+                                    suggestOnTriggerCharacters: false,
+                                    acceptSuggestionOnEnter: 'off',
+                                    tabCompletion: 'off',
+                                    wordBasedSuggestions: 'off',
+                                    parameterHints: { enabled: false },
+                                    hover: { enabled: false },
+                                    occurrencesHighlight: 'off',
+                                    selectionHighlight: false,
+                                    codeLens: false,
+                                    folding: false,
+                                    foldingHighlight: false,
+                                    links: false,
+                                    colorDecorators: false,
+                                    lightbulb: { enabled: 'off' as any },
                                 }}
                             />
                         </div>
                     </div>
 
                     {/* Preview */}
-                    <div style={{ 
-                        border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
-                        borderRadius: '8px',
-                        overflow: 'hidden',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        backgroundColor: theme === 'light' ? 'white' : '#2d3748'
-                    }}>
-                        <div style={{ 
-                            padding: '12px', 
-                            backgroundColor: theme === 'light' ? '#f8f9fa' : '#1a202c',
-                            borderBottom: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
-                            fontWeight: '600',
-                            fontSize: '14px',
-                            color: theme === 'light' ? 'black' : 'white'
-                        }}>
-                            👁️ Live Preview
+                    <div
+                        style={{
+                            border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                            borderRadius: '8px',
+                            overflow: 'hidden',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            backgroundColor:
+                                theme === 'light' ? 'white' : '#2d3748',
+                        }}
+                    >
+                        <div
+                            style={{
+                                padding: '12px',
+                                backgroundColor:
+                                    theme === 'light' ? '#f8f9fa' : '#1a202c',
+                                borderBottom: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                                fontWeight: '600',
+                                fontSize: '14px',
+                                color: theme === 'light' ? 'black' : 'white',
+                            }}
+                        >
+                            Preview
                         </div>
-                        <div style={{ 
-                            flex: 1,
-                            padding: '24px',
-                            backgroundColor: theme === 'light' ? 'white' : '#2d3748',
-                            color: theme === 'light' ? 'black' : 'white',
-                            overflow: 'auto'
-                        }}>
+                        <div
+                            style={{
+                                flex: 1,
+                                padding: '24px',
+                                backgroundColor:
+                                    theme === 'light' ? 'white' : '#2d3748',
+                                color: theme === 'light' ? 'black' : 'white',
+                                overflow: 'auto',
+                            }}
+                        >
                             <LivePreview />
-                            <LiveError 
+                            <LiveError
                                 style={{
                                     marginTop: '16px',
                                     padding: '16px',
@@ -575,7 +828,7 @@ export function LiveCodeEditor({
                                     borderRadius: '4px',
                                     color: '#cc0000',
                                     fontFamily: 'monospace',
-                                    fontSize: '14px'
+                                    fontSize: '14px',
                                 }}
                             />
                         </div>
@@ -597,15 +850,17 @@ export function createLiveCodeStory<T extends ComponentType<any>>(
         defaultTemplate?: string;
         title?: string;
         description?: string;
-    }
+    },
 ) {
     const storageKey = component.displayName || component.name || 'component';
-    
+
     return {
         parameters: {
             docs: {
                 description: {
-                    story: config.description || `
+                    story:
+                        config.description ||
+                        `
 **🔥 Live ${storageKey} Code Editor**
 
 Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
@@ -636,4 +891,4 @@ Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
             />
         ),
     };
-} 
+}

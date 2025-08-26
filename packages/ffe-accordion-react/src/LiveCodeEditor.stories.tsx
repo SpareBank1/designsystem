@@ -22,8 +22,7 @@ type Story = StoryObj<typeof Accordion>;
 // Define simplified templates for accordion
 const accordionTemplates = {
     enkelt: {
-        name: 'Enkelt',
-        icon: '📝',
+        name: 'Avansert',
         code: `<Accordion headingLevel={2}>
     <AccordionItem heading="Enkelt eksempel">
         Dette er et enkelt accordion-eksempel som fungerer!
@@ -31,8 +30,7 @@ const accordionTemplates = {
 </Accordion>`
     },
     multiple: {
-        name: 'Flere elementer',
-        icon: '📚',
+        name: 'Grunnleggende',
         code: `<Accordion headingLevel={2}>
     <AccordionItem heading="Første seksjon">
         Innhold i første seksjon.
@@ -44,25 +42,6 @@ const accordionTemplates = {
         Mer innhold her.
     </AccordionItem>
 </Accordion>`
-    },
-    interactive: {
-        name: 'Interaktiv',
-        icon: '⚡',
-        code: `function InteractiveExample() {
-    const [count, setCount] = useState(0);
-    return (
-        <Accordion headingLevel={2}>
-            <AccordionItem heading="Interaktiv eksempel">
-                <div>
-                    <p>Du har klikket {count} ganger</p>
-                    <p>Accordion kan inneholde interaktivt innhold.</p>
-                </div>
-            </AccordionItem>
-        </Accordion>
-    );
-}
-
-<InteractiveExample />`
     }
 };
 

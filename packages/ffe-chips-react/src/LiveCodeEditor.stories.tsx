@@ -23,8 +23,7 @@ type Story = StoryObj<typeof Chip>;
 // Define simplified template for chips
 const chipsTemplates = {
     enkelt: {
-        name: 'Enkelt',
-        icon: '🏷️',
+        name: 'Grunnleggende',
         code: `<div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
     <Chip>Standard chip</Chip>
     <Chip>Kategori</Chip>

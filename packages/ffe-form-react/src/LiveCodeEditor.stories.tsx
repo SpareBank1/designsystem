@@ -28,8 +28,7 @@ type Story = StoryObj<typeof Input>;
 const formTemplates = {
     basicInputs: {
         name: 'Grunnleggende input',
-        icon: '📝',
-        code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
+        code: `<div>
     <InputGroup label="Navn">
         <Input placeholder="Skriv ditt navn" />
     </InputGroup>
@@ -45,7 +44,6 @@ const formTemplates = {
     },
     textArea: {
         name: 'TextArea',
-        icon: '📄',
         code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
     <InputGroup label="Kort beskrivelse">
         <TextArea 
@@ -67,7 +65,6 @@ const formTemplates = {
     },
     checkboxes: {
         name: 'Checkboxes',
-        icon: '☑️',
         code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
     <fieldset style={{ border: 'none', padding: 0, margin: 0 }}>
         <legend style={{ fontWeight: 'bold', marginBottom: '12px' }}>Velg interesser:</legend>
@@ -101,7 +98,6 @@ const formTemplates = {
     },
     radioButtons: {
         name: 'Radio buttons',
-        icon: '🔘',
         code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
     <fieldset style={{ border: 'none', padding: 0, margin: 0 }}>
         <legend style={{ fontWeight: 'bold', marginBottom: '12px' }}>Velg betalingsmåte:</legend>

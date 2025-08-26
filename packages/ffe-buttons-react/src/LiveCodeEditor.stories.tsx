@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import type { StoryObj, Meta } from '@storybook/react';
+import { CardBase } from '@sb1/ffe-cards-react';
+import { Icon } from '@sb1/ffe-icons-react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
+import { ActionButton } from './ActionButton';
+import { ButtonGroup } from './ButtonGroup';
 import { PrimaryButton } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
-import { ActionButton } from './ActionButton';
 import { TertiaryButton } from './TertiaryButton';
-import { ButtonGroup } from './ButtonGroup';
-import { CardBase } from '@sb1/ffe-cards-react';
-import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 
 const meta: Meta<typeof PrimaryButton> = {
     title: 'Komponenter/Buttons/Live Code Editor',
@@ -14,7 +14,8 @@ const meta: Meta<typeof PrimaryButton> = {
     parameters: {
         docs: {
             description: {
-                component: 'Interaktiv live code editor for alle Button komponenter. Test PrimaryButton, SecondaryButton, ActionButton, TertiaryButton og mer!',
+                component:
+                    'Interaktiv live code editor for alle Button komponenter. Test PrimaryButton, SecondaryButton, ActionButton, TertiaryButton og mer!',
             },
         },
     },
@@ -28,24 +29,21 @@ type Story = StoryObj<typeof PrimaryButton>;
 const buttonTemplates = {
     simple: {
         name: 'Enkelt',
-        icon: '📝',
         code: `<PrimaryButton>
     Klikk meg
-</PrimaryButton>`
+</PrimaryButton>`,
     },
     variants: {
         name: 'Button typer',
-        icon: '🎨',
         code: `<div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
     <PrimaryButton>Primary</PrimaryButton>
     <SecondaryButton>Secondary</SecondaryButton>
     <ActionButton>Action</ActionButton>
     <TertiaryButton>Tertiary</TertiaryButton>
-</div>`
+</div>`,
     },
     sizes: {
         name: 'Størrelser',
-        icon: '📏',
         code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
     <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
         <PrimaryButton size="sm">Liten</PrimaryButton>
@@ -64,11 +62,10 @@ const buttonTemplates = {
         <ActionButton size="md">Medium</ActionButton>
         <ActionButton size="lg">Stor</ActionButton>
     </div>
-</div>`
+</div>`,
     },
     states: {
         name: 'Tilstander',
-        icon: '⚡',
         code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
     <div>
         <h4 style={{ margin: '0 0 12px 0' }}>Primary Button</h4>
@@ -96,22 +93,21 @@ const buttonTemplates = {
             <ActionButton isLoading>Laster...</ActionButton>
         </div>
     </div>
-</div>`
+</div>`,
     },
     icons: {
         name: 'Med ikoner',
-        icon: '🔗',
         code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
     <div>
         <h4 style={{ margin: '0 0 12px 0' }}>Ikoner til venstre</h4>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            <PrimaryButton leftIcon={<span>📧</span>}>
+            <PrimaryButton leftIcon={<Icon fileUrl="./icons/open/300/md/add.svg" size="sm" ariaLabel="send" />}>
                 Send e-post
             </PrimaryButton>
-            <SecondaryButton leftIcon={<span>📁</span>}>
+            <SecondaryButton leftIcon={<Icon fileUrl="./icons/open/300/md/house.svg" size="sm" ariaLabel="åpne" />}>
                 Åpne fil
             </SecondaryButton>
-            <ActionButton leftIcon={<span>💾</span>}>
+            <ActionButton leftIcon={<Icon fileUrl="./icons/open/300/md/star.svg" size="sm" ariaLabel="lagre" />}>
                 Lagre
             </ActionButton>
         </div>
@@ -120,13 +116,13 @@ const buttonTemplates = {
     <div>
         <h4 style={{ margin: '0 0 12px 0' }}>Ikoner til høyre</h4>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            <PrimaryButton rightIcon={<span>→</span>}>
+            <PrimaryButton rightIcon={<Icon fileUrl="./icons/open/300/md/expand_more.svg" size="sm" ariaLabel="neste" />}>
                 Neste
             </PrimaryButton>
-            <SecondaryButton rightIcon={<span>🔗</span>}>
+            <SecondaryButton rightIcon={<Icon fileUrl="./icons/open/300/md/add.svg" size="sm" ariaLabel="lenke" />}>
                 Ekstern lenke
             </SecondaryButton>
-            <ActionButton rightIcon={<span>⬇️</span>}>
+            <ActionButton rightIcon={<Icon fileUrl="./icons/open/300/md/expand_more.svg" size="sm" ariaLabel="last ned" />}>
                 Last ned
             </ActionButton>
         </div>
@@ -136,90 +132,20 @@ const buttonTemplates = {
         <h4 style={{ margin: '0 0 12px 0' }}>Kun ikoner</h4>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <PrimaryButton iconOnly ariaLabel="Lukk">
-                ✕
+                <Icon fileUrl="./icons/open/300/md/add.svg" size="sm" ariaLabel="lukk" />
             </PrimaryButton>
             <SecondaryButton iconOnly ariaLabel="Innstillinger">
-                ⚙️
+                <Icon fileUrl="./icons/open/300/md/star.svg" size="sm" ariaLabel="innstillinger" />
             </SecondaryButton>
             <ActionButton iconOnly ariaLabel="Mer">
-                ⋯
+                <Icon fileUrl="./icons/open/300/md/expand_more.svg" size="sm" ariaLabel="mer" />
             </ActionButton>
         </div>
     </div>
-</div>`
-    },
-    interactive: {
-        name: 'Interaktiv',
-        icon: '🖱️',
-        code: `function InteractiveButtons() {
-    const [count, setCount] = useState(0);
-    const [loading, setLoading] = useState(false);
-    const [favorites, setFavorites] = useState([]);
-    
-    const handleClick = () => {
-        setCount(prev => prev + 1);
-    };
-    
-    const handleAsyncClick = async () => {
-        setLoading(true);
-        // Simuler asynkron operasjon
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setLoading(false);
-        setCount(prev => prev + 1);
-    };
-    
-    const toggleFavorite = (item) => {
-        setFavorites(prev => 
-            prev.includes(item) 
-                ? prev.filter(f => f !== item)
-                : [...prev, item]
-        );
-    };
-    
-    return (
-        <div style={{ display: 'flex', gap: '20px', flexDirection: 'column' }}>
-            <div>
-                <h4 style={{ margin: '0 0 12px 0' }}>Teller: {count}</h4>
-                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                    <PrimaryButton onClick={handleClick}>
-                        Klikk meg (+1)
-                    </PrimaryButton>
-                    <SecondaryButton 
-                        onClick={handleAsyncClick}
-                        isLoading={loading}
-                        ariaLoadingMessage="Prosesserer..."
-                    >
-                        Asynkron klikk
-                    </SecondaryButton>
-                    <ActionButton onClick={() => setCount(0)}>
-                        Reset
-                    </ActionButton>
-                </div>
-            </div>
-            
-            <div>
-                <h4 style={{ margin: '0 0 12px 0' }}>Favoritter ({favorites.length})</h4>
-                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                    {['Produkt A', 'Produkt B', 'Produkt C'].map(item => (
-                        <SecondaryButton
-                            key={item}
-                            onClick={() => toggleFavorite(item)}
-                            leftIcon={<span>{favorites.includes(item) ? '❤️' : '🤍'}</span>}
-                        >
-                            {item}
-                        </SecondaryButton>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
-
-render(<InteractiveButtons />);`
+</div>`,
     },
     buttonGroups: {
         name: 'Button grupper',
-        icon: '👥',
         code: `<div style={{ display: 'flex', gap: '24px', flexDirection: 'column' }}>
     <div>
         <h4 style={{ margin: '0 0 12px 0' }}>Standard gruppe</h4>
@@ -233,13 +159,13 @@ render(<InteractiveButtons />);`
     <div>
         <h4 style={{ margin: '0 0 12px 0' }}>Verktøylinje</h4>
         <ButtonGroup>
-            <ActionButton leftIcon={<span>📝</span>}>
+            <ActionButton leftIcon={<Icon fileUrl="./icons/open/300/md/add.svg" size="sm" ariaLabel="rediger" />}>
                 Rediger
             </ActionButton>
-            <ActionButton leftIcon={<span>📋</span>}>
+            <ActionButton leftIcon={<Icon fileUrl="./icons/open/300/md/star.svg" size="sm" ariaLabel="kopier" />}>
                 Kopier
             </ActionButton>
-            <ActionButton leftIcon={<span>🗑️</span>}>
+            <ActionButton leftIcon={<Icon fileUrl="./icons/open/300/md/expand_more.svg" size="sm" ariaLabel="slett" />}>
                 Slett
             </ActionButton>
         </ButtonGroup>
@@ -248,167 +174,19 @@ render(<InteractiveButtons />);`
     <div>
         <h4 style={{ margin: '0 0 12px 0' }}>Navigasjon</h4>
         <ButtonGroup>
-            <SecondaryButton leftIcon={<span>←</span>}>
+            <SecondaryButton leftIcon={<Icon fileUrl="./icons/open/300/md/expand_more.svg" size="sm" ariaLabel="forrige" />}>
                 Forrige
             </SecondaryButton>
             <SecondaryButton>
                 Side 1 av 5
             </SecondaryButton>
-            <SecondaryButton rightIcon={<span>→</span>}>
+            <SecondaryButton rightIcon={<Icon fileUrl="./icons/open/300/md/expand_more.svg" size="sm" ariaLabel="neste" />}>
                 Neste
             </SecondaryButton>
         </ButtonGroup>
     </div>
-</div>`
+</div>`,
     },
-    showcase: {
-        name: 'Showcase',
-        icon: '🏆',
-        code: `<div style={{ 
-    padding: '24px', 
-    backgroundColor: 'var(--ffe-color-background-subtle)', 
-    borderRadius: '8px' 
-}}>
-    <h3 style={{ marginTop: 0, marginBottom: '24px', textAlign: 'center' }}>
-        Button Components Showcase
-    </h3>
-    
-    <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-        gap: '24px' 
-    }}>
-        <CardBase>
-            <h4>🛒 E-handel handlinger</h4>
-            <div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
-                <PrimaryButton size="lg" leftIcon={<span>🛒</span>}>
-                    Legg i handlekurv
-                </PrimaryButton>
-                <div style={{ display: 'flex', gap: '12px' }}>
-                    <SecondaryButton leftIcon={<span>❤️</span>}>
-                        Favoritt
-                    </SecondaryButton>
-                    <SecondaryButton leftIcon={<span>🔗</span>}>
-                        Del
-                    </SecondaryButton>
-                </div>
-                <TertiaryButton>
-                    Sammenlign produkter
-                </TertiaryButton>
-            </div>
-        </CardBase>
-        
-        <CardBase>
-            <h4>📝 Skjema handlinger</h4>
-            <div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', gap: '12px' }}>
-                    <PrimaryButton>
-                        Lagre
-                    </PrimaryButton>
-                    <SecondaryButton>
-                        Lagre utkast
-                    </SecondaryButton>
-                </div>
-                <div style={{ display: 'flex', gap: '12px' }}>
-                    <ActionButton leftIcon={<span>👁️</span>}>
-                        Forhåndsvis
-                    </ActionButton>
-                    <ActionButton leftIcon={<span>📤</span>}>
-                        Send
-                    </ActionButton>
-                </div>
-                <TertiaryButton>
-                    Avbryt
-                </TertiaryButton>
-            </div>
-        </CardBase>
-        
-        <CardBase>
-            <h4>⚙️ Admin handlinger</h4>
-            <div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
-                <ButtonGroup>
-                    <ActionButton leftIcon={<span>📝</span>}>
-                        Rediger
-                    </ActionButton>
-                    <ActionButton leftIcon={<span>📋</span>}>
-                        Dupliser
-                    </ActionButton>
-                    <ActionButton leftIcon={<span>🗑️</span>}>
-                        Slett
-                    </ActionButton>
-                </ButtonGroup>
-                
-                <div style={{ display: 'flex', gap: '12px' }}>
-                    <SecondaryButton size="sm">
-                        Eksporter
-                    </SecondaryButton>
-                    <SecondaryButton size="sm">
-                        Importer
-                    </SecondaryButton>
-                </div>
-                
-                <PrimaryButton leftIcon={<span>💾</span>}>
-                    Lagre endringer
-                </PrimaryButton>
-            </div>
-        </CardBase>
-        
-        <CardBase>
-            <h4>🎮 Interaktive eksempler</h4>
-            <div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
-                <div style={{ 
-                    padding: '12px', 
-                    backgroundColor: 'var(--ffe-color-background-secondary)', 
-                    borderRadius: '4px' 
-                }}>
-                    <div style={{ marginBottom: '8px', fontSize: '14px' }}>
-                        Status: Ikke lagret
-                    </div>
-                    <PrimaryButton 
-                        size="sm" 
-                        onClick={() => alert('Lagret!')}
-                    >
-                        Lagre nå
-                    </PrimaryButton>
-                </div>
-                
-                <div style={{ 
-                    padding: '12px', 
-                    backgroundColor: 'var(--ffe-color-background-secondary)', 
-                    borderRadius: '4px' 
-                }}>
-                    <div style={{ marginBottom: '8px', fontSize: '14px' }}>
-                        Laster data...
-                    </div>
-                    <SecondaryButton 
-                        size="sm" 
-                        isLoading
-                        ariaLoadingMessage="Laster..."
-                    >
-                        Oppdater
-                    </SecondaryButton>
-                </div>
-                
-                <div style={{ 
-                    padding: '12px', 
-                    backgroundColor: 'var(--ffe-color-background-secondary)', 
-                    borderRadius: '4px' 
-                }}>
-                    <div style={{ marginBottom: '8px', fontSize: '14px' }}>
-                        Handling ikke tilgjengelig
-                    </div>
-                    <ActionButton 
-                        size="sm" 
-                        isDisabled
-                    >
-                        Ikke tilgjengelig
-                    </ActionButton>
-                </div>
-            </div>
-        </CardBase>
-    </div>
-</div>`
-    }
 };
 
 export const LiveCodeEditor: Story = createLiveCodeStory(PrimaryButton, {
@@ -419,9 +197,9 @@ export const LiveCodeEditor: Story = createLiveCodeStory(PrimaryButton, {
         ActionButton,
         TertiaryButton,
         ButtonGroup,
-        CardBase
+        CardBase,
+        Icon,
     },
-    defaultTemplate: 'showcase',
+    defaultTemplate: 'simple',
     title: 'Button Components Live Code Editor',
-    description: 'Interaktiv editor for alle Button komponenter. Test PrimaryButton, SecondaryButton, ActionButton, TertiaryButton, ButtonGroup og mer i ett samlet grensesnitt!'
 });

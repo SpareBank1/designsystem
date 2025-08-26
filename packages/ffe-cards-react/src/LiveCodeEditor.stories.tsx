@@ -30,8 +30,7 @@ type Story = StoryObj<typeof CardBase>;
 // Define simplified template for cards
 const cardsTemplates = {
     enkelt: {
-        name: 'Enkelt',
-        icon: '📝',
+        name: 'Grunnleggende',
         code: `<div style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}>
     <CardBase>
         <h3>CardBase</h3>

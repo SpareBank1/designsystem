@@ -22,8 +22,7 @@ type Story = StoryObj<typeof TabGroup>;
 // Define simplified template for tabs
 const tabsTemplates = {
     enkelt: {
-        name: 'Enkelt',
-        icon: '📑',
+        name: 'Grunnleggende',
         code: `function SimpleTabs() {
     const [activeTab, setActiveTab] = useState('overview');
     

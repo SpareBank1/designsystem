@@ -34,8 +34,7 @@ type Story = StoryObj<typeof BulletList>;
 // Define comprehensive templates for all list components
 const listsTemplates = {
     simple: {
-        name: 'Enkelt',
-        icon: '📝',
+        name: 'Sjekklister',
         code: `function SimpleLists() {
     return (
         <div style={{ maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
@@ -73,7 +72,6 @@ render(<SimpleLists />);`
     },
     interactive: {
         name: 'Interaktiv',
-        icon: '⚡',
         code: `function InteractiveLists() {
     const [todoItems, setTodoItems] = useState([
         { id: 1, text: 'Gjennomgå prosjektplan', completed: true },
@@ -189,8 +187,7 @@ render(<SimpleLists />);`
 render(<InteractiveLists />);`
     },
     descriptions: {
-        name: 'Beskrivelser',
-        icon: '📖',
+        name: 'Nummererte lister',
         code: `function DescriptionLists() {
     const [selectedProduct, setSelectedProduct] = useState('laptop');
     
@@ -273,7 +270,6 @@ render(<DescriptionLists />);`
     },
     showcase: {
         name: 'Showcase',
-        icon: '🏆',
         code: `function ListsShowcase() {
     const [employees] = useState([
         { name: 'Anna Hansen', position: 'Senior Utvikler', email: 'anna@firma.no', skills: ['React', 'TypeScript'] },

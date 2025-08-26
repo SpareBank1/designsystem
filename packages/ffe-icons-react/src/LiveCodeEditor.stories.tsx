@@ -20,8 +20,7 @@ type Story = StoryObj<typeof Icon>;
 
 const iconTemplates = {
     simple: {
-        name: 'Enkelt',
-        icon: '🎨',
+        name: 'Grunnleggende',
         code: `<div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
     <div style={{ textAlign: 'center' }}>
         <Icon fileUrl="./icons/open/300/md/star.svg" />
