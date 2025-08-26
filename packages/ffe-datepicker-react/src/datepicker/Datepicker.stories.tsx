@@ -7,6 +7,10 @@ import { Datepicker, DatepickerProps } from './Datepicker';
 const meta: Meta<typeof Datepicker> = {
     title: 'Komponenter/Datepicker/Datepicker',
     component: Datepicker,
+    argTypes: {
+        minDate: { control: 'text' },
+        maxDate: { control: 'text' },
+    }
 };
 export default meta;
 
