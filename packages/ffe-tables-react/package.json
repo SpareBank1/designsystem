@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tables-react",
-    "version": "11.0.66",
+    "version": "11.0.67",
     "description": "React implementation of ffe-tables",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -25,10 +25,10 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-collapse-react": "^5.1.35",
-        "@sb1/ffe-core-react": "^10.1.11",
+        "@sb1/ffe-collapse-react": "^5.1.36",
+        "@sb1/ffe-core-react": "^10.1.12",
         "@sb1/ffe-icons-react": "^12.0.8",
-        "@sb1/ffe-tables": "^19.0.1",
+        "@sb1/ffe-tables": "^19.0.2",
         "classnames": "^2.3.1"
     },
     "devDependencies": {

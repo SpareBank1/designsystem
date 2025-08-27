@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [33.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@33.0.1...@sb1/ffe-core@33.0.2) (2025-08-27)
+
+
+### Bug Fixes
+
+* **ffe-core:** add documentation - fix ios color build ([ab5b225](https://github.com/SpareBank1/designsystem/commit/ab5b2254946cdd9dffee5561a315cebec139497c))
+
+
+
+
+
 ## [33.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@33.0.0...@sb1/ffe-core@33.0.1) (2025-08-20)
 
 **Note:** Version bump only for package @sb1/ffe-core
