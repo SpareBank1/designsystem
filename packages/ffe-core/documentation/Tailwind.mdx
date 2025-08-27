@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design/Farger/Tailwind" />
+
+# Tailwind
+
+Vi anbefaler ikke å bruke Tailwind, men vet det er mange som gjør det.
+Vi tilbyr derfor farge tokens for Tailwind også.
+
+## Versjon 4
+
+Tailwind versjon 4 bruker css layers per default. På grunn av hvilke [nettleserversjoner](https://design.sparebank1.no/grunnleggende/nettleserversjoner/) vi må støtte i dag (sept 2025) støtter vi ikke CSS layers. Vi anbefaler å bruke Tailwind 4 med en måte som importerer fargene uten CSS layers, som du kan lese mer om her: [tailwindlabs/tailwindcss#13188](https://github.com/tailwindlabs/tailwindcss/discussions/13188)
+Importer følgende css fil for å få semantiske farger i Tailwind versjon 4:
+
+```css
+@import '@sb1/ffe-core/css/colors-semantic-tailwind-4.css';
+```
+
+## Versjon 3
+
+For å bruke semantiske farger med Tailwind Versjon 3 kan du importere fargene fra `@sb1/ffe-core/lib/semanticColorsTailwind`.
+
+Her et eksempel på hvordan et utsnitt av din `tailwind.config.js` kan se ut for å sette opp til bruk av de semantske fagene
+
+```tsx
+import * as colors from '@sb1/ffe-core/lib/semanticColorsTailwind';
+module.exports = {
+    theme: {
+        colors: {
+            ...colors,
+        },
+    },
+};
+```
+
+Da blir fargene tilgjengelige i kebab-case uten `--ffe-color`. Feks `--ffe-color-background-default` -> `background-default`

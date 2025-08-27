@@ -18,23 +18,6 @@ Dark mode aktiveres automatisk basert på brukerens systeminnstillinger.
 Accent mode aktiveres med å legge klassen `ffe-accent-mode` på elementet eller på
 containeren til elementet. Se mer om accent mode på [siden om accent mode](./?path=/docs/design-farger-accent--docs) WIP
 
-## Tailwind
-
-For å bruke semantiske farger i Tailwind importerer en `@sb1/ffe-core/lib/semanticColorsTailwind`.
-
-```tsx
-import * as colors from '@sb1/ffe-core/lib/semanticColorsTailwind';
-module.exports = {
-    theme: {
-        colors: {
-            ...colors,
-        },
-    },
-};
-```
-
-Da blir fargene tilgjengelige i kebab-case uten `--ffe-color`. Feks `--ffe-color-background-default` -> `background-default`
-
 ## Liste over de semantiske fargene
 
 <table class="ffe-color-table">
