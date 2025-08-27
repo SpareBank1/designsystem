@@ -96,4 +96,30 @@ describe('<Accordion />', () => {
         const accordionBody = content.closest('.ffe-accordion-item__body');
         expect(accordionBody).toHaveClass('ffe-accordion-item__body--no-padding');
     });
+
+    it('should set focus class only when tab key is used to focus', () => {
+        render(
+            <Accordion headingLevel={3}>
+                <AccordionItem heading="heading1">
+                    <span data-testid="content1">content1</span>
+                </AccordionItem>
+            </Accordion>,
+        );
+
+        const button = screen.getByRole('button', { name: /heading1/i });
+        const accordionItem = button.closest('.ffe-accordion-item');
+
+        fireEvent.focus(button);
+        expect(accordionItem).not.toHaveClass('ffe-accordion-item--focus');
+
+        fireEvent.blur(button);
+        expect(accordionItem).not.toHaveClass('ffe-accordion-item--focus');
+
+        fireEvent.keyDown(document, { key: 'Tab', code: 'Tab' });
+        fireEvent.focus(button);
+        expect(accordionItem).toHaveClass('ffe-accordion-item--focus');
+
+        fireEvent.blur(button);
+        expect(accordionItem).not.toHaveClass('ffe-accordion-item--focus');
+    });
 });
