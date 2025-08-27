@@ -31,6 +31,9 @@
         "build:colors:ios": "node ./scripts/build-colors.cjs platform=ios iosPaths=./test/ios/colors",
         "build:colors:json": "node ./scripts/build-colors.cjs platform=json jsonPaths=./test/json/colors"
     },
+    "bin": {
+        "build-colors": "./scripts/build-colors.cjs"
+    },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.10.1",
         "case": "^1.5.5",

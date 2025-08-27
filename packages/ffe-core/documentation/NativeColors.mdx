@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design/Farger/Native" />
+
+# Farger for Native
+
+Pakken `@sb1/ffe-core` inneholder fargetokens som tokens, css, less og js.
+For å bruke disse fargene i native er det enkleste å bygge de til den relevante platformen.
+
+Scriptene som brukes for å bygge fargene til native ligger her: https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-core/scripts/build-colors/mobile
+
+For å bruke scriptet kan en bruke npx som lar en kjøre scripts fra pakker uten å installere de. Enten kjør det i root og legg til riktig path. eller kjør det i riktig mappe med path `.`Paths=./android-test/colors
+
+Vi anbefaler at dere commiter scriptet dere bruker for å bygge fargene, slik at dere har kontroll på når fargene endrer seg.
+I eksemplene under bruker vi `@sb1/ffe-core@33.0.2` som er versjon `33.0.2` av `@sb1/ffe-core`. Ved å ha dette committet blir det enklere å spore når fargene endrer seg og å vite hvilken versjon en er på.
+
+## android
+
+`npx @sb1/ffe-core@33.0.2 build-colors platform=android androidPaths=./android-test/colors`
+
+## ios
+
+`npx @sb1/ffe-core@33.0.2 build-colors platform=ios iosPaths=./test/ios/colors`
+
+## json
+
+`npx @sb1/ffe-core@33.0.2 build-colors platform=json jsonPaths=./test/json/colors`
