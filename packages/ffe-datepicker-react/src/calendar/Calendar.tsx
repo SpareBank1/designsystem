@@ -39,6 +39,8 @@ export class Calendar extends Component<CalendarProps, State> {
         this.state = {
             calendar: new SimpleCalendar(
                 getSimpleDateFromString(props?.selectedDate),
+                props.minDate,
+                props.maxDate,
                 props.locale,
             ),
             isFocusingHeader: false,
@@ -68,6 +70,8 @@ export class Calendar extends Component<CalendarProps, State> {
                 {
                     calendar: new SimpleCalendar(
                         getSimpleDateFromString(this.props.selectedDate),
+                        this.props.minDate,
+                        this.props.maxDate,
                         this.props.locale,
                     ),
                 },
@@ -264,10 +268,10 @@ export class Calendar extends Component<CalendarProps, State> {
         const { calendar } = this.state;
         let currentMonth = calendar.focusedDate.month + 1; // 1-indexed month
         let currentYear = calendar.focusedYear;
-        
+
         // Calculate how many months to move based on current and target date
         const monthsDiff = (year - currentYear) * 12 + (month - currentMonth);
-        
+
         if (monthsDiff < 0) {
             // Go backward
             for (let i = 0; i > monthsDiff; i--) {
@@ -279,7 +283,7 @@ export class Calendar extends Component<CalendarProps, State> {
                 calendar.nextMonth();
             }
         }
-        
+
         this.forceUpdate();
     }
 

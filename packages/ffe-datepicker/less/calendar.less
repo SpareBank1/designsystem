@@ -152,7 +152,9 @@
         }
 
         &:active {
-            background: var(--ffe-color-component-form-input-fill-default-pressed);
+            background: var(
+                --ffe-color-component-form-input-fill-default-pressed
+            );
             color: var(--ffe-color-component-form-input-foreground-default);
         }
 
@@ -188,13 +190,13 @@
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
-                    background: var(--ffe-color-fill-tertiary-subtle);
-                    color: var(--ffe-color-foreground-subtle);
-                }
-            }
+                    background: none;
+                    color: var(
+                        --ffe-color-component-form-input-foreground-disabled
+                    );
 
-            &-focus {
-                border-color: var(--ffe-color-foreground-subtle);
+                    cursor: not-allowed;
+                }
             }
         }
     }

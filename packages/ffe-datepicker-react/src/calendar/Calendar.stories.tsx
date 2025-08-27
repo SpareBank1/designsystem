@@ -18,8 +18,8 @@ export const Standard: Story = {
         onDatePicked: (date: string) => null,
         selectedDate: '17.12.2024',
         focusOnMount: false,
-        minDate: '01.01.2020',
-        maxDate: '31.12.2030',
+        minDate: '10.01.2025',
+        maxDate: '15.01.2025',
     },
     render: function Render(args) {
         const [selectedDate, setSelectedDate] = useState<
