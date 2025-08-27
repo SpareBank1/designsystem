@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.4.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.4.9...@sb1/ffe-datepicker-react@10.4.10) (2025-08-27)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** legg tilbake min og maxDate ([097e656](https://github.com/SpareBank1/designsystem/commit/097e656d7513f87a96f6971e55c4c1e143abefb4))
+
+
+
+
+
 ## [10.4.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.4.8...@sb1/ffe-datepicker-react@10.4.9) (2025-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
