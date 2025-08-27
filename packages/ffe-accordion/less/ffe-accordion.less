@@ -1,7 +1,5 @@
 .ffe-accordion {
-    --ffe-v-accordion-hover-color: var(
-        --ffe-color-surface-primary-default-hover
-    );
+    --ffe-v-accordion-hover-color: var(--ffe-color-surface-primary-default-hover);
     --ffe-v-accordion-border-color: var(--ffe-color-border-primary-subtle);
     --ffe-v-accordion-header-text-color: var(--ffe-color-foreground-emphasis);
     --ffe-v-accordion-body-text-color: var(--ffe-color-foreground-default);
@@ -18,14 +16,11 @@
         background-color: var(--ffe-color-surface-primary-default);
         color: var(--ffe-v-accordion-body-text-color);
         margin-bottom: var(--ffe-spacing-xs);
-        transition:
-            color var(--ffe-transition-duration) var(--ffe-ease),
-            border var(--ffe-transition-duration) var(--ffe-ease),
-            box-shadow var(--ffe-transition-duration) var(--ffe-ease),
-            background-color var(--ffe-transition-duration) var(--ffe-ease);
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
         border-radius: var(--ffe-g-border-radius-lg);
-        border: var(--ffe-g-border-width) solid
-            var(--ffe-v-accordion-border-color);
+        border: var(--ffe-g-border-width) solid var(--ffe-v-accordion-border-color);
+        outline: var(--ffe-g-outline-width) solid transparent;
+        outline-offset: var(--ffe-g-outline-offset);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
@@ -33,15 +28,19 @@
             }
         }
 
-        &:focus-within {
+        &--focus {
             box-shadow: 0 0 0 1px var(--ffe-color-border-primary-default-hover);
         }
 
         @media (pointer: fine) {
-            &:focus-within {
-                outline: var(--ffe-g-outline-width) solid
-                    var(--ffe-color-border-interactive-focus);
-                outline-offset: var(--ffe-g-outline-offset);
+            &--focus {
+                outline-color: var(--ffe-color-border-interactive-focus);
+
+                @media (hover: hover) {
+                    &:hover {
+                        border-color: var(--ffe-v-accordion-border-color);
+                    }
+                }
             }
         }
 
@@ -61,8 +60,7 @@
             outline: none;
             color: var(--ffe-v-accordion-header-text-color);
             border-radius: 16px;
-            transition: background-color var(--ffe-transition-duration)
-                var(--ffe-ease);
+            transition: background-color var(--ffe-transition-duration) var(--ffe-ease);
 
             &--open {
                 border-radius: 16px 16px 0 0;
@@ -93,14 +91,12 @@
             flex: 0 0 auto;
             color: var(--ffe-v-accordion-header-text-color);
             transition:
-                transform var(--ffe-transition-duration)
-                    var(--ffe-ease-in-out-back),
+                transform var(--ffe-transition-duration) var(--ffe-ease-in-out-back),
                 color var(--ffe-transition-duration) var(--ffe-ease);
         }
 
         &__body {
-            padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm)
-                var(--ffe-spacing-md);
+            padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm) var(--ffe-spacing-md);
             color: var(--ffe-v-accordion-body-text-color);
 
             &--no-padding {
@@ -111,14 +107,6 @@
         &--open {
             .ffe-accordion-item__heading-icon {
                 transform: rotateZ(180deg);
-            }
-        }
-
-        &--focus {
-            @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    border-color: var(--ffe-v-accordion-border-color);
-                }
             }
         }
     }
