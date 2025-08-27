@@ -9,24 +9,7 @@ function generateCssColorFileContent(colors) {
     return `
 /* Generated from Figma tokens */
 
-/* Default context */
-:root,
-:host,
-.ffe-default-mode,
-.ffe-light,
-.ffe-light .ffe-default-mode {
-  ${Object.entries(colors.light)
-      .map(([name, value]) => transformToCssProperty(name, value))
-      .join('\n')}
-}
 
-/* Accent context */
-.ffe-light .ffe-accent-mode,
-.ffe-accent-mode {
-  ${Object.entries(colors.lightAccent)
-      .map(([name, value]) => transformToCssProperty(name, value))
-      .join('\n')}
-}
 
 /* dark mode default context */
 @media (prefers-color-scheme: dark) {
@@ -62,6 +45,25 @@ ${Object.entries(colors.darkAccent)
     .map(([name, value]) => transformToCssProperty(name, value))
     .join('\n')}
 } 
+
+/* Default context */
+:root,
+:host,
+.ffe-default-mode,
+.ffe-light,
+.ffe-light .ffe-default-mode {
+  ${Object.entries(colors.light)
+      .map(([name, value]) => transformToCssProperty(name, value))
+      .join('\n')}
+}
+
+/* Accent context */
+.ffe-light .ffe-accent-mode,
+.ffe-accent-mode {
+  ${Object.entries(colors.lightAccent)
+      .map(([name, value]) => transformToCssProperty(name, value))
+      .join('\n')}
+}
 `;
 }
 
