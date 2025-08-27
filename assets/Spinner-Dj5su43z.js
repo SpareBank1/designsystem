@@ -1,8 +1,0 @@
-import{j as e,M as o,C as d,a}from"./index-Baf5jjcs.js";import{useMDXComponents as i}from"./index-DmqVK_gK.js";import{S as m,a as s}from"./Spinner.stories-DJ-cKoSB.js";import{I as p}from"./InstallImport-a0eNYgkV.js";import"./iframe-CVxcvSut.js";import"./index-DQDNmYQF.js";import"./index-CV7naf_y.js";import"./index-BuA_lF3S.js";import"./index-DgH-xKnr.js";import"./index-DrFu-skq.js";import"./index-D2FocPV0.js";import"./Paragraph-7jO2Jnpx.js";import"./Heading-YepvjHrD.js";const l=["@sb1/ffe-spinner","@sb1/ffe-core"];function t(r){const n={code:"code",h1:"h1",h2:"h2",p:"p",...i(),...r.components};return e.jsxs(e.Fragment,{children:[e.jsx(o,{of:m}),`
-`,e.jsx(n.h1,{id:"spinner",children:"Spinner"}),`
-`,e.jsx(n.p,{children:"Det er mye som skjer i bakgrunnen i et system når innholdet lastes inn. Med spinnere kan vi kommunisere tydelig til brukeren at innholdet er i ferd med å vises snart. Det er best practice å benytte seg av spinnere dersom ventetiden varer lengre enn tre sekunder. Dersom siden bruker mer enn 10 sekunder på å laste inn innholdet, vurder å bruke en notifikasjon med forklarende tekst."}),`
-`,e.jsxs(n.p,{children:["Spinneren finnes i liten og stor versjon. Liten størrelse er default og brukes i de fleste tilfeller. Stor størrelse kan aktiveres ved å sende inn ",e.jsx(n.code,{children:'size="large"'}),"."]}),`
-`,e.jsx(p,{packageName:"@sb1/ffe-spinner-react",dependencies:l}),`
-`,e.jsx(n.h2,{id:"forhåndsvisning",children:"Forhåndsvisning"}),`
-`,e.jsx(d,{of:s}),`
-`,e.jsx(a,{of:s})]})}function D(r={}){const{wrapper:n}={...i(),...r.components};return n?e.jsx(n,{...r,children:e.jsx(t,{...r})}):t(r)}export{D as default};
