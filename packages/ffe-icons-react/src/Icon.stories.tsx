@@ -3,7 +3,7 @@ import { Icon } from './Icon';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Icon> = {
-    title: 'Komponenter/Icons/Icon',
+    title: 'Komponenter/Icon',
     component: Icon,
 };
 export default meta;
