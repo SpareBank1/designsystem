@@ -43,9 +43,14 @@ ikonene til et passende format, for eksempel [base64](https://developer.mozilla.
 ### Ikonet vises ikke?
 
 Hvis ikonet ikke vises, men i stedet blir en firkantet boks etter deploy, kan det skyldes at SVG-filen ikke blir 
-riktig håndtert av byggeverktøyet. Prøv å legge til `build.assetsInlineLimit: 0` i `vite.config.ts` 
-for å sikre at SVG-ikonene ikke blir inlinet som data-URL-er.
+riktig håndtert av byggeverktøyet. To mulige løsninger er: 
+1. Legg til `build.assetsInlineLimit: 0` i `vite.config.ts` for å sikre at SVG-ikonene ikke blir inlinet som data-URL-er.  
+Merk at dette vil stoppe alt av assetinlining som Vite kan gjøre under bygg.
+2. Eller, legg til `?no-inline` på slutten av importsti for hvert ikon du importerer, eksempelvis vil import se slik ut:
 
+```
+import stacksIcon from "@sb1/ffe-icons/icons/open/500/sm/stacks.svg?no-inline"
+```
 
 ## Figma
 
