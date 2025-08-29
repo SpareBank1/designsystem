@@ -464,26 +464,28 @@ export function LiveCodeEditor({
                     Auto-save
                 </label>
 
-                {/* Kodemal selector */}
-                <Dropdown
-                    value={selectedTemplate}
-                    onChange={e => loadTemplate(e.target.value)}
-                    style={{
-                        backgroundColor:
-                            theme === 'light' ? 'white' : '#4a5568',
-                        color: theme === 'light' ? 'black' : 'white',
-                        border: `1px solid ${theme === 'light' ? '#ddd' : '#6b7280'}`,
-                        width: 'auto',
-                        minWidth: '200px',
-                        maxWidth: '300px',
-                    }}
-                >
-                    {Object.entries(templates).map(([key, template]) => (
-                        <option key={key} value={key}>
-                            {template.name}
-                        </option>
-                    ))}
-                </Dropdown>
+                {/* Kodemal selector - only show if more than one template */}
+                {Object.keys(templates).length > 1 && (
+                    <Dropdown
+                        value={selectedTemplate}
+                        onChange={e => loadTemplate(e.target.value)}
+                        style={{
+                            backgroundColor:
+                                theme === 'light' ? 'white' : '#4a5568',
+                            color: theme === 'light' ? 'black' : 'white',
+                            border: `1px solid ${theme === 'light' ? '#ddd' : '#6b7280'}`,
+                            width: 'auto',
+                            minWidth: '200px',
+                            maxWidth: '300px',
+                        }}
+                    >
+                        {Object.entries(templates).map(([key, template]) => (
+                            <option key={key} value={key}>
+                                {template.name}
+                            </option>
+                        ))}
+                    </Dropdown>
+                )}
             </div>
 
             {/* Custom confirmation dialog */}
@@ -532,8 +534,8 @@ export function LiveCodeEditor({
                                     theme === 'light' ? '#4a5568' : '#a0aec0',
                             }}
                         >
-                            Du har ulagrede endringer som vil gå tapt. Er du
-                            sikker på at du vil bytte kodemal?
+                            Ved å tilbakestille vil dine kodeendringer
+                            forsvinne. Er du sikker på at du vil tilbakestille?
                         </p>
                         <div
                             style={{
@@ -806,7 +808,7 @@ export function LiveCodeEditor({
                                 color: theme === 'light' ? 'black' : 'white',
                             }}
                         >
-                            Preview
+                            Forhåndsvisning
                         </div>
                         <div
                             style={{

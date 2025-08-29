@@ -1,19 +1,19 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 import { BulletList } from './BulletList';
 import { BulletListItem } from './BulletListItem';
 import { CheckList } from './CheckList';
 import { CheckListItem } from './CheckListItem';
+import { DescriptionList } from './DescriptionList';
+import { DescriptionListDescription } from './DescriptionListDescription';
+import { DescriptionListMultiCol } from './DescriptionListMultiCol';
+import { DescriptionListTerm } from './DescriptionListTerm';
+import { DetailListCard } from './DetailListCard';
+import { DetailListCardItem } from './DetailListCardItem';
 import { NumberedList } from './NumberedList';
 import { NumberedListItem } from './NumberedListItem';
 import { StylizedNumberedList } from './StylizedNumberedList';
 import { StylizedNumberedListItem } from './StylizedNumberedListItem';
-import { DescriptionList } from './DescriptionList';
-import { DescriptionListTerm } from './DescriptionListTerm';
-import { DescriptionListDescription } from './DescriptionListDescription';
-import { DescriptionListMultiCol } from './DescriptionListMultiCol';
-import { DetailListCard } from './DetailListCard';
-import { DetailListCardItem } from './DetailListCardItem';
-import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 
 const meta: Meta<typeof BulletList> = {
     title: 'Komponenter/Lists/Live Code Editor',
@@ -21,7 +21,8 @@ const meta: Meta<typeof BulletList> = {
     parameters: {
         docs: {
             description: {
-                component: 'Comprehensive live code editor for all list components in the FFE Lists package. Explore BulletList, CheckList, NumberedList, DescriptionList, DetailListCard and their variations with interactive examples and real-world scenarios.',
+                component:
+                    'Comprehensive live code editor for all list components in the FFE Lists package. Explore BulletList, CheckList, NumberedList, DescriptionList, DetailListCard and their variations with interactive examples and real-world scenarios.',
             },
         },
     },
@@ -39,7 +40,7 @@ const listsTemplates = {
     return (
         <div style={{ maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
             <div>
-                <h4 style={{ margin: '0 0 16px 0' }}>📝 Punktliste</h4>
+                <h4 style={{ margin: '0 0 16px 0' }}>Punktliste</h4>
                 <BulletList>
                     <BulletListItem>Første punkt i listen</BulletListItem>
                     <BulletListItem>Andre punkt med mer informasjon</BulletListItem>
@@ -48,7 +49,7 @@ const listsTemplates = {
             </div>
             
             <div>
-                <h4 style={{ margin: '0 0 16px 0' }}>🔢 Nummerert liste</h4>
+                <h4 style={{ margin: '0 0 16px 0' }}>Nummerert liste</h4>
                 <NumberedList>
                     <NumberedListItem>Start med det første steget</NumberedListItem>
                     <NumberedListItem>Fortsett med steg nummer to</NumberedListItem>
@@ -57,7 +58,7 @@ const listsTemplates = {
             </div>
             
             <div>
-                <h4 style={{ margin: '0 0 16px 0' }}>✅ Sjekkliste</h4>
+                <h4 style={{ margin: '0 0 16px 0' }}>Sjekkliste</h4>
                 <CheckList>
                     <CheckListItem isChecked={true}>Fullført oppgave</CheckListItem>
                     <CheckListItem isChecked={false}>Ventende oppgave</CheckListItem>
@@ -68,7 +69,7 @@ const listsTemplates = {
     );
 }
 
-render(<SimpleLists />);`
+render(<SimpleLists />);`,
     },
     interactive: {
         name: 'Interaktiv',
@@ -109,7 +110,7 @@ render(<SimpleLists />);`
                 textAlign: 'center',
                 marginBottom: '24px'
             }}>
-                <h3 style={{ margin: '0 0 8px 0' }}>⚡ Interaktiv Todo Liste</h3>
+                <h3 style={{ margin: '0 0 8px 0' }}>Interaktiv Todo Liste</h3>
                 <p style={{ margin: 0 }}>Administrer dine oppgaver ({completedCount}/{todoItems.length} fullført)</p>
             </div>
             
@@ -173,7 +174,7 @@ render(<SimpleLists />);`
                 backgroundColor: 'var(--ffe-color-background-success-subtle)', 
                 borderRadius: '8px' 
             }}>
-                <h4 style={{ margin: '0 0 8px 0' }}>📊 Fremgang</h4>
+                <h4 style={{ margin: '0 0 8px 0' }}>Fremgang</h4>
                 <div style={{ display: 'flex', gap: '16px', fontSize: '14px' }}>
                     <div><strong>Fullført:</strong> {completedCount}</div>
                     <div><strong>Gjenstående:</strong> {todoItems.length - completedCount}</div>
@@ -184,7 +185,7 @@ render(<SimpleLists />);`
     );
 }
 
-render(<InteractiveLists />);`
+render(<InteractiveLists />);`,
     },
     descriptions: {
         name: 'Nummererte lister',
@@ -225,7 +226,7 @@ render(<InteractiveLists />);`
                 textAlign: 'center',
                 marginBottom: '24px'
             }}>
-                <h3 style={{ margin: '0 0 8px 0' }}>📖 Produktspesifikasjoner</h3>
+                <h3 style={{ margin: '0 0 8px 0' }}>Produktspesifikasjoner</h3>
                 <p style={{ margin: 0 }}>Detaljerte beskrivelser av våre produkter</p>
             </div>
             
@@ -240,8 +241,8 @@ render(<InteractiveLists />);`
                         fontSize: '16px'
                     }}
                 >
-                    <option value="laptop">💻 Laptop Pro 15"</option>
-                    <option value="phone">📱 Smartphone X1</option>
+                    <option value="laptop">Laptop Pro 15"</option>
+                    <option value="phone">Smartphone X1</option>
                 </select>
             </div>
             
@@ -266,7 +267,7 @@ render(<InteractiveLists />);`
     );
 }
 
-render(<DescriptionLists />);`
+render(<DescriptionLists />);`,
     },
     showcase: {
         name: 'Showcase',
@@ -292,7 +293,7 @@ render(<DescriptionLists />);`
             maxWidth: '800px'
         }}>
             <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-                <h2 style={{ margin: '0 0 8px 0' }}>🏆 Prosjekt Oversikt</h2>
+                <h2 style={{ margin: '0 0 8px 0' }}>Prosjekt Oversikt</h2>
                 <p style={{ margin: 0, color: 'var(--ffe-color-text-subtle)' }}>
                     Komplett oversikt over team og fremdrift
                 </p>
@@ -304,15 +305,15 @@ render(<DescriptionLists />);`
                     borderRadius: '8px', 
                     padding: '20px'
                 }}>
-                    <h3 style={{ margin: '0 0 16px 0' }}>👥 Teammedlemmer</h3>
+                    <h3 style={{ margin: '0 0 16px 0' }}>Teammedlemmer</h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         {employees.map((employee, index) => (
                             <DetailListCard key={index}>
-                                <DetailListCardItem label="👤 Navn" value={employee.name} />
-                                <DetailListCardItem label="💼 Stilling" value={employee.position} />
-                                <DetailListCardItem label="📧 E-post" value={employee.email} />
+                                <DetailListCardItem label="Navn" value={employee.name} />
+                                <DetailListCardItem label="Stilling" value={employee.position} />
+                                <DetailListCardItem label="E-post" value={employee.email} />
                                 <DetailListCardItem 
-                                    label="🛠️ Ferdigheter" 
+                                    label="Ferdigheter" 
                                     value={employee.skills.join(', ')}
                                 />
                             </DetailListCard>
@@ -325,7 +326,7 @@ render(<DescriptionLists />);`
                     borderRadius: '8px', 
                     padding: '20px'
                 }}>
-                    <h3 style={{ margin: '0 0 16px 0' }}>📋 Prosjektplan</h3>
+                    <h3 style={{ margin: '0 0 16px 0' }}>Prosjektplan</h3>
                     <StylizedNumberedList>
                         {projectSteps.map((step, index) => (
                             <StylizedNumberedListItem key={index}>
@@ -348,8 +349,8 @@ render(<DescriptionLists />);`
     );
 }
 
-render(<ListsShowcase />);`
-    }
+render(<ListsShowcase />);`,
+    },
 };
 
 export const LiveCodeEditor: Story = createLiveCodeStory(BulletList, {
@@ -367,9 +368,10 @@ export const LiveCodeEditor: Story = createLiveCodeStory(BulletList, {
         DescriptionListDescription,
         DescriptionListMultiCol,
         DetailListCard,
-        DetailListCardItem
+        DetailListCardItem,
     },
     defaultTemplate: 'simple',
     title: 'Lists Live Code Editor',
-    description: 'Comprehensive live code editor for all list components in the FFE Lists package. Explore BulletList, CheckList, NumberedList, DescriptionList, DetailListCard and their variations with interactive examples and real-world scenarios.'
+    description:
+        'Comprehensive live code editor for all list components in the FFE Lists package. Explore BulletList, CheckList, NumberedList, DescriptionList, DetailListCard and their variations with interactive examples and real-world scenarios.',
 });

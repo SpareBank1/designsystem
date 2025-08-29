@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 import { Accordion } from './Accordion';
 import { AccordionItem } from './AccordionItem';
-import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 
 const meta: Meta<typeof Accordion> = {
     title: 'Komponenter/Accordion/Live Code Editor',
@@ -9,7 +9,8 @@ const meta: Meta<typeof Accordion> = {
     parameters: {
         docs: {
             description: {
-                component: 'Live code editor for Accordion komponenten med syntax highlighting og real-time preview.',
+                component:
+                    'Live code editor for Accordion komponenten med syntax highlighting og real-time preview.',
             },
         },
     },
@@ -21,15 +22,7 @@ type Story = StoryObj<typeof Accordion>;
 
 // Define simplified templates for accordion
 const accordionTemplates = {
-    enkelt: {
-        name: 'Avansert',
-        code: `<Accordion headingLevel={2}>
-    <AccordionItem heading="Enkelt eksempel">
-        Dette er et enkelt accordion-eksempel som fungerer!
-    </AccordionItem>
-</Accordion>`
-    },
-    multiple: {
+    basic: {
         name: 'Grunnleggende',
         code: `<Accordion headingLevel={2}>
     <AccordionItem heading="Første seksjon">
@@ -41,16 +34,17 @@ const accordionTemplates = {
     <AccordionItem heading="Tredje seksjon">
         Mer innhold her.
     </AccordionItem>
-</Accordion>`
-    }
+</Accordion>`,
+    },
 };
 
 export const LiveCodeEditor: Story = createLiveCodeStory(Accordion, {
     templates: accordionTemplates,
     additionalComponents: {
-        AccordionItem
+        AccordionItem,
     },
-    defaultTemplate: 'enkelt',
+    defaultTemplate: 'basic',
     title: 'Accordion Live Code Editor',
-    description: 'Live code editor for Accordion komponenten med alle templates og funksjonalitet.'
+    description:
+        'Live code editor for Accordion komponenten med alle templates og funksjonalitet.',
 });

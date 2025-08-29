@@ -1,12 +1,12 @@
-import type { StoryObj, Meta } from '@storybook/react';
-import { Input } from './Input';
-import { TextArea } from './TextArea';
-import { InputGroup } from './InputGroup';
+import type { Meta, StoryObj } from '@storybook/react';
+import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 import { Checkbox } from './Checkbox';
+import { Input } from './Input';
+import { InputGroup } from './InputGroup';
 import { RadioButton } from './RadioButton';
+import { TextArea } from './TextArea';
 import { ToggleSwitch } from './ToggleSwitch';
 import { ErrorFieldMessage } from './message';
-import { createLiveCodeStory } from '../../../.storybook/shared/LiveCodeEditor';
 
 const meta: Meta<typeof Input> = {
     title: 'Komponenter/Form/Live Code Editor',
@@ -14,7 +14,8 @@ const meta: Meta<typeof Input> = {
     parameters: {
         docs: {
             description: {
-                component: 'Interaktiv live code editor for alle Form komponenter. Test Input, TextArea, Checkbox, Dropdown og mer!',
+                component:
+                    'Interaktiv live code editor for alle Form komponenter. Test Input, TextArea, Checkbox, Dropdown og mer!',
             },
         },
     },
@@ -40,7 +41,7 @@ const formTemplates = {
     <InputGroup label="Telefon">
         <Input type="tel" placeholder="+47 123 45 678" />
     </InputGroup>
-</div>`
+</div>`,
     },
     textArea: {
         name: 'TextArea',
@@ -61,7 +62,7 @@ const formTemplates = {
             rows={6}
         />
     </InputGroup>
-</div>`
+</div>`,
     },
     checkboxes: {
         name: 'Checkboxes',
@@ -94,7 +95,7 @@ const formTemplates = {
             </Checkbox>
         </div>
     </InputGroup>
-</div>`
+</div>`,
     },
     radioButtons: {
         name: 'Radio buttons',
@@ -103,13 +104,13 @@ const formTemplates = {
         <legend style={{ fontWeight: 'bold', marginBottom: '12px' }}>Velg betalingsmåte:</legend>
         <div style={{ display: 'flex', gap: '12px', flexDirection: 'column' }}>
             <RadioButton name="payment" value="card">
-                💳 Bankkort
+                Bankkort
             </RadioButton>
             <RadioButton name="payment" value="invoice">
-                📄 Faktura
+                Faktura
             </RadioButton>
             <RadioButton name="payment" value="vipps">
-                📱 Vipps
+                Vipps
             </RadioButton>
         </div>
     </fieldset>
@@ -118,18 +119,18 @@ const formTemplates = {
         <legend style={{ fontWeight: 'bold', marginBottom: '12px' }}>Leveringsmåte:</legend>
         <div style={{ display: 'flex', gap: '12px', flexDirection: 'column' }}>
             <RadioButton name="delivery" value="home">
-                🏠 Hjemlevering
+                Hjemlevering
             </RadioButton>
             <RadioButton name="delivery" value="pickup">
-                🏪 Henting i butikk
+                Henting i butikk
             </RadioButton>
             <RadioButton name="delivery" value="post">
-                📮 Postkontor
+                Postkontor
             </RadioButton>
         </div>
     </fieldset>
-</div>`
-    }
+</div>`,
+    },
 };
 
 export const LiveCodeEditor: Story = createLiveCodeStory(Input, {
@@ -141,9 +142,10 @@ export const LiveCodeEditor: Story = createLiveCodeStory(Input, {
         Checkbox,
         RadioButton,
         ToggleSwitch,
-        ErrorFieldMessage
+        ErrorFieldMessage,
     },
     defaultTemplate: 'basicInputs',
     title: 'Form Components Live Code Editor',
-    description: 'Interaktiv editor for alle Form komponenter. Test Input, TextArea, Checkbox, RadioButton, ToggleSwitch og mer i ett samlet grensesnitt!'
+    description:
+        'Interaktiv editor for alle Form komponenter. Test Input, TextArea, Checkbox, RadioButton, ToggleSwitch og mer i ett samlet grensesnitt!',
 });
