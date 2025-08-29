@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [33.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@33.0.2...@sb1/ffe-core@33.1.0) (2025-08-29)
+
+
+### Features
+
+* **ffe-core:** legg til generator for tailwind 4 css farge variabler ([0eab3c6](https://github.com/SpareBank1/designsystem/commit/0eab3c676adccc648a47c96b73cb2d41452dd50f))
+
+
+
+
+
 ## [33.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@33.0.1...@sb1/ffe-core@33.0.2) (2025-08-27)
 
 
