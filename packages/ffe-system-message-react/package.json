@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-system-message-react",
-    "version": "11.0.70",
+    "version": "11.0.71",
     "description": "SpareBank 1 System Message komponent",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,7 +26,7 @@
     "dependencies": {
         "@sb1/ffe-collapse-react": "^5.1.36",
         "@sb1/ffe-grid-react": "^16.0.31",
-        "@sb1/ffe-icons-react": "^12.0.8",
+        "@sb1/ffe-icons-react": "^12.0.9",
         "@sb1/ffe-system-message": "^10.0.39",
         "classnames": "^2.3.1"
     },
