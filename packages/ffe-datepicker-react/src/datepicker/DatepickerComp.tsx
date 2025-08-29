@@ -311,134 +311,140 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
             role={'group'}
             id={id}
         >
-            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions */}
-            <div
-                className={classNames('ffe-input-field', 'ffe-dateinput', {
-                    'ffe-input-field--invalid': ariaInvalid(),
-                })}
-                onBlur={evt => {
-                    const elementReceivingFocus = evt.relatedTarget;
+            <div className={classNames(
+                'ffe-input-field__wrapper',
+                'ffe-default-mode',
+            )}>
+                {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions */}
+                <div
+                    className={classNames('ffe-input-field', 'ffe-dateinput', {
+                        'ffe-input-field--invalid': ariaInvalid(),
+                    })}
+                    onBlur={evt => {
+                        const elementReceivingFocus = evt.relatedTarget;
 
-                    if (
-                        elementReceivingFocus !== yearRef.current &&
-                        elementReceivingFocus !== dayRef.current &&
-                        elementReceivingFocus !== monthRef.current
-                    ) {
-                        onBlur?.(evt);
-                        validateDateIntervals();
-                    }
-                }}
-            >
-                <SpinButton
-                    ref={dayRef}
-                    value={day ?? undefined}
-                    min={1}
-                    max={31}
-                    onPaste={handlePaste}
-                    onSpinButtonChange={(newValue, allowFocusNext = true) => {
-                        return allowFocusNext
-                            ? setDay(newValue, () =>
-                                  monthRef.current?.focus({
-                                      preventScroll: true,
-                                  }),
-                              )
-                            : setDay(newValue);
+                        if (
+                            elementReceivingFocus !== yearRef.current &&
+                            elementReceivingFocus !== dayRef.current &&
+                            elementReceivingFocus !== monthRef.current
+                        ) {
+                            onBlur?.(evt);
+                            validateDateIntervals();
+                        }
                     }}
-                    nextSpinButton={monthRef}
-                    maxLength={2}
-                    aria-invalid={ariaInvalid()}
-                    aria-valuenow={typeof day === 'number' ? day : undefined}
-                    aria-valuetext={`${day}`}
-                    aria-label={i18n[locale].DAY}
-                    aria-describedby={ariaDescribedby()}
-                    aria-labelledby={labelId}
                 >
-                    {day ? padZero(day) : 'dd'}
-                </SpinButton>
-                .
-                <SpinButton
-                    ref={monthRef}
-                    value={month ?? undefined}
-                    min={1}
-                    max={12}
-                    onPaste={handlePaste}
-                    onSpinButtonChange={(newValue, allowFocusNext = true) => {
-                        return allowFocusNext
-                            ? setMonth(newValue, () =>
-                                  yearRef.current?.focus({
-                                      preventScroll: true,
-                                  }),
-                              )
-                            : setMonth(newValue);
-                    }}
-                    nextSpinButton={yearRef}
-                    prevSpinButton={dayRef}
-                    maxLength={2}
-                    aria-invalid={ariaInvalid()}
-                    aria-valuenow={
-                        typeof month === 'number' ? month : undefined
-                    }
-                    aria-valuetext={
-                        isMonth(month)
-                            ? `${month} - ${i18n[locale][`MONTH_${month}`]}`
-                            : undefined
-                    }
-                    aria-label={i18n[locale].MONTH}
-                    aria-describedby={ariaDescribedby()}
-                    aria-labelledby={labelId}
-                >
-                    {month ? padZero(month) : 'mm'}
-                </SpinButton>
-                .
-                <SpinButton
-                    ref={yearRef}
-                    className={'ffe-dateinput__field-year'}
-                    value={year ?? undefined}
-                    min={1}
-                    max={9999}
-                    onPaste={handlePaste}
-                    onSpinButtonChange={newValue => {
-                        setYear(newValue);
-                    }}
-                    prevSpinButton={monthRef}
-                    maxLength={4}
-                    aria-invalid={ariaInvalid()}
-                    aria-valuetext={`${year}`}
-                    aria-valuenow={typeof year === 'number' ? year : undefined}
-                    aria-label={i18n[locale].YEAR}
-                    aria-describedby={ariaDescribedby()}
-                    aria-labelledby={labelId}
-                >
-                    {year ? year : 'yyyy'}
-                </SpinButton>
-            </div>
-            <Button
-                onClick={calendarButtonClickHandler}
-                locale={locale}
-                value={calendarActiveDate || ''}
-                ref={buttonRef}
-            />
-            {displayDatePicker && (
-                <Calendar
-                    calendarClassName={classNames(
-                        'ffe-calendar ffe-calendar--datepicker',
-                        { 'ffe-calendar--datepicker--above': calendarAbove },
-                    )}
+                    <SpinButton
+                        ref={dayRef}
+                        value={day ?? undefined}
+                        min={1}
+                        max={31}
+                        onPaste={handlePaste}
+                        onSpinButtonChange={(newValue, allowFocusNext = true) => {
+                            return allowFocusNext
+                                ? setDay(newValue, () =>
+                                    monthRef.current?.focus({
+                                        preventScroll: true,
+                                    }),
+                                )
+                                : setDay(newValue);
+                        }}
+                        nextSpinButton={monthRef}
+                        maxLength={2}
+                        aria-invalid={ariaInvalid()}
+                        aria-valuenow={typeof day === 'number' ? day : undefined}
+                        aria-valuetext={`${day}`}
+                        aria-label={i18n[locale].DAY}
+                        aria-describedby={ariaDescribedby()}
+                        aria-labelledby={labelId}
+                    >
+                        {day ? padZero(day) : 'dd'}
+                    </SpinButton>
+                    .
+                    <SpinButton
+                        ref={monthRef}
+                        value={month ?? undefined}
+                        min={1}
+                        max={12}
+                        onPaste={handlePaste}
+                        onSpinButtonChange={(newValue, allowFocusNext = true) => {
+                            return allowFocusNext
+                                ? setMonth(newValue, () =>
+                                    yearRef.current?.focus({
+                                        preventScroll: true,
+                                    }),
+                                )
+                                : setMonth(newValue);
+                        }}
+                        nextSpinButton={yearRef}
+                        prevSpinButton={dayRef}
+                        maxLength={2}
+                        aria-invalid={ariaInvalid()}
+                        aria-valuenow={
+                            typeof month === 'number' ? month : undefined
+                        }
+                        aria-valuetext={
+                            isMonth(month)
+                                ? `${month} - ${i18n[locale][`MONTH_${month}`]}`
+                                : undefined
+                        }
+                        aria-label={i18n[locale].MONTH}
+                        aria-describedby={ariaDescribedby()}
+                        aria-labelledby={labelId}
+                    >
+                        {month ? padZero(month) : 'mm'}
+                    </SpinButton>
+                    .
+                    <SpinButton
+                        ref={yearRef}
+                        className={'ffe-dateinput__field-year'}
+                        value={year ?? undefined}
+                        min={1}
+                        max={9999}
+                        onPaste={handlePaste}
+                        onSpinButtonChange={newValue => {
+                            setYear(newValue);
+                        }}
+                        prevSpinButton={monthRef}
+                        maxLength={4}
+                        aria-invalid={ariaInvalid()}
+                        aria-valuetext={`${year}`}
+                        aria-valuenow={typeof year === 'number' ? year : undefined}
+                        aria-label={i18n[locale].YEAR}
+                        aria-describedby={ariaDescribedby()}
+                        aria-labelledby={labelId}
+                    >
+                        {year ? year : 'yyyy'}
+                    </SpinButton>
+                </div>
+                <Button
+                    onClick={calendarButtonClickHandler}
                     locale={locale}
-                    onDatePicked={datePickedHandler}
-                    selectedDate={calendarActiveDate}
-                    focusOnMount={true}
-                    dropdownCaption={dropdownCaption}
-                    minDate={minDate}
-                    maxDate={maxDate}
+                    value={calendarActiveDate || ''}
+                    ref={buttonRef}
                 />
-            )}
+                {displayDatePicker && (
+                    <Calendar
+                        calendarClassName={classNames(
+                            'ffe-calendar ffe-calendar--datepicker',
+                            { 'ffe-calendar--datepicker--above': calendarAbove },
+                        )}
+                        locale={locale}
+                        onDatePicked={datePickedHandler}
+                        selectedDate={calendarActiveDate}
+                        focusOnMount={true}
+                        dropdownCaption={dropdownCaption}
+                        minDate={minDate}
+                        maxDate={maxDate}
+                    />
+                )}
 
-            {!!fieldMessage && (
-                <ErrorFieldMessage as="p" id={fieldMessageId}>
-                    {fieldMessage}
-                </ErrorFieldMessage>
-            )}
+                {!!fieldMessage && (
+                    <ErrorFieldMessage as="p" id={fieldMessageId}>
+                        {fieldMessage}
+                    </ErrorFieldMessage>
+                )}
+                <div className="ffe-input-field__backdrop" />
+            </div>
         </div>
     );
 };
