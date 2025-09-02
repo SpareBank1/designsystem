@@ -1,0 +1,27 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as TextFieldStories from './TextField.stories.tsx';
+
+<Meta of={TextFieldStories} />
+
+# TextField
+
+`<TextField>` er en avart av [Input](.?path=/docs/komponenter-form-input--docs), der stylingen i stor grad er lagt på en wrapper i stedet for på selve input-feltet. Dette gjør det blant annet mulig å legge til støtte for affikser. Visuelt er `<TextField>` og `<Input>` identiske.
+
+## Forhåndsvisning
+
+<Canvas of={TextFieldStories.Standard} />
+<Controls of={TextFieldStories.Standard} />
+
+## Med affikser
+
+Affikser i inputfeltet kan sendes inn med propene `prefix` eller `suffix` på `<TextField>`.
+
+<Canvas of={TextFieldStories.WithAffixes} />
+<Controls of={TextFieldStories.WithAffixes} />
+
+## Med feilmelding
+
+Sender man inn en string eller et `<ErrorFieldMessage>`-element til `fieldMessage` på `<InputGroup>` vil input-feltet rendres med `aria-invalid` og en feilmelding.
+
+<Canvas of={TextFieldStories.FieldMessage} />
+<Controls of={TextFieldStories.FieldMessage} />
