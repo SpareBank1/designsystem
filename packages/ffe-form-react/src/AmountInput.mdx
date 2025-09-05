@@ -9,5 +9,12 @@ Denne varianten av Input er laget spesifikt for å håndtere pengebeløp. Den fa
 
 ## Forhåndsvisning
 
-<Canvas of={AmountInputStories.Standard} />
-<Controls of={AmountInputStories.Standard} />
+`AmountInput` kan brukes som en kontrollert eller ukontrollert komponent. Under ser vi en ukontrollert komponent, som godtar `defaultValue` og `onChange` som frivillige `props`.
+
+<Canvas of={AmountInputStories.Uncontrolled} />
+<Controls of={AmountInputStories.Uncontrolled} />
+
+Dersom en sender inn `value` som prop, vil komponenten oppføre seg som en kontrollert komponent. Den indre tilstanden vil dermed følge eventuelle eksterne endringer.
+
+<Canvas of={AmountInputStories.Controlled} />
+<Controls of={AmountInputStories.Controlled} />

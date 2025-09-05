@@ -11,17 +11,33 @@ type Locale = 'nb' | 'nn' | 'en';
 export interface AmountInputProps
     extends React.ComponentPropsWithoutRef<'input'> {
     defaultValue?: number;
+    value?: number;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     locale: Locale;
 }
 
-export const AmountInput = (props: AmountInputProps) => {
-    const { className, defaultValue, onChange, locale, ...rest } = props;
-    const [value, setValue] = useState<number>(defaultValue ?? 0);
+export const AmountInput = ({
+    className,
+    value: controlledValue,
+    defaultValue,
+    onChange,
+    locale,
+    ...rest
+}: AmountInputProps) => {
+    const isControlled = controlledValue !== undefined;
+    const [uncontrolledValue, setUncontrolledValue] = useState<number>(
+        defaultValue ?? 0,
+    );
+
+    const value = isControlled ? controlledValue : uncontrolledValue;
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         const amount = stripAmountAndGetFloat(event.target.value);
-        setValue(amount);
+
+        if (!isControlled) {
+            setUncontrolledValue(amount);
+        }
+
         if (onChange) {
             onChange({
                 ...event,
