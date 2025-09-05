@@ -38,7 +38,6 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
                         {suffix}
                     </div>
                 )}
-                <div className="ffe-text-field__backdrop" />
             </div>
         );
     },
