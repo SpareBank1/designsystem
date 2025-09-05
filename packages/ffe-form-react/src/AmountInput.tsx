@@ -42,11 +42,17 @@ export const AmountInput = (props: AmountInputProps) => {
                     'ffe-default-mode',
                 )}
             >
-                {value ? formatAmountWithCurrency(value, { locale }) : ''}
+                {value || value === 0
+                    ? formatAmountWithCurrency(value, { locale })
+                    : ''}
             </Paragraph>
             <input
                 defaultValue={undefined}
-                value={value ? formatAmountV2(value, { locale: locale }) : ''}
+                value={
+                    value || value === 0
+                        ? formatAmountV2(value, { locale: locale })
+                        : ''
+                }
                 onChange={handleChange}
                 className={classNames(
                     'ffe-input-field',
