@@ -1,0 +1,13 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as AmountInputStories from './AmountInput.stories.tsx';
+
+<Meta of={AmountInputStories} />
+
+# AmountInput
+
+Denne varianten av Input er laget spesifikt for å håndtere pengebeløp. Den faktiske verdien i input-feltet er et tall (typen `number`), mens det som vises er et formater tall med tusenskilletegn, desimalskilletegn og valutakode som styres av `locale`-variablen.
+
+## Forhåndsvisning
+
+<Canvas of={AmountInputStories.Standard} />
+<Controls of={AmountInputStories.Standard} />
