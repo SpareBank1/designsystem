@@ -1,15 +1,9 @@
 module.exports = {
     extends: ['stylelint-config-standard', '@sb1/stylelint-config-ffe'],
-    ignoreFiles: [
-        '**/colors-semantic.less',
-        '**/colors-semantic-storybook.less',
-    ],
+    ignoreFiles: ['**/colors-semantic.less'],
     overrides: [
         {
-            files: [
-                '**/colors-semantic.less',
-                '**/colors-semantic-storybook.less',
-            ],
+            files: ['**/colors-semantic.less'],
             rules: {
                 'selector-class-pattern': null,
                 'no-duplicate-selectors': null,
