@@ -44,7 +44,7 @@ jobs:
 
             - name: lerna publish to registry.npmjs.com
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
-              run: lerna publish --yes --no-verify-access --force-git-tag --create-release github
+              run: lerna publish --yes --no-verify-access --force-git-tag --create-release github --force-publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
                   GH_TOKEN: ${{ secrets.GH_USER_PAT }}
