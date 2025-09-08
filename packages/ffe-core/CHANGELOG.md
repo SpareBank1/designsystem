@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [33.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@33.1.0...@sb1/ffe-core@33.2.0) (2025-09-08)
+
+
+### Features
+
+* **ffe-core:** tillater overrides av dark mode med klassene ffe-dark og ffe-light ([d2a3866](https://github.com/SpareBank1/designsystem/commit/d2a3866420b08cb9bd63a31beb73cc6445687f68))
+
+
+
+
+
 # [33.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@33.0.2...@sb1/ffe-core@33.1.0) (2025-08-29)
 
 

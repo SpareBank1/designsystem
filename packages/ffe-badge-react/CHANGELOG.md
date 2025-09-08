@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-badge-react@1.1.12...@sb1/ffe-badge-react@1.1.13) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-badge-react
+
+
+
+
+
 ## [1.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-badge-react@1.1.11...@sb1/ffe-badge-react@1.1.12) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-badge-react
