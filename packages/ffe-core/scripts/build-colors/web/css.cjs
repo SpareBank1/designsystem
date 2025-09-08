@@ -9,21 +9,7 @@ function generateCssColorFileContent(colors) {
     return `
 /* Generated from Figma tokens */
 
-/* Default context */
-:root,
-:host,
-.ffe-default-mode {
-  ${Object.entries(colors.light)
-      .map(([name, value]) => transformToCssProperty(name, value))
-      .join('\n')}
-}
 
-/* Accent context */
-.ffe-accent-mode {
-  ${Object.entries(colors.lightAccent)
-      .map(([name, value]) => transformToCssProperty(name, value))
-      .join('\n')}
-}
 
 /* dark mode default context */
 @media (prefers-color-scheme: dark) {
@@ -35,6 +21,15 @@ function generateCssColorFileContent(colors) {
     }
 }
 
+
+/* dark mode accent når en overstyrer os/nettleser light/dark preferanse*/
+.ffe-dark,
+.ffe-dark .ffe-default-mode {
+${Object.entries(colors.dark)
+    .map(([name, value]) => transformToCssProperty(name, value))
+    .join('\n')}
+}
+
 /* dark mode accent context */
 @media (prefers-color-scheme: dark) {
     .regard-color-scheme-preference .ffe-accent-mode {
@@ -43,21 +38,29 @@ function generateCssColorFileContent(colors) {
         .join('\n')}
     }
 }
-`;
-}
 
-function generateStorybookCssColorFileContent(colors) {
-    return `
-/* Generated from Figma tokens */
+/* dark mode accent når en overstyrer os/nettleser light/dark preferanser*/
+.ffe-dark .ffe-accent-mode {
+${Object.entries(colors.darkAccent)
+    .map(([name, value]) => transformToCssProperty(name, value))
+    .join('\n')}
+} 
 
-.dark-mode, .dark-mode .ffe-default-mode {
-  ${Object.entries(colors.dark)
+/* Default context */
+:root,
+:host,
+.ffe-default-mode,
+.ffe-light,
+.ffe-light .ffe-default-mode {
+  ${Object.entries(colors.light)
       .map(([name, value]) => transformToCssProperty(name, value))
       .join('\n')}
 }
 
-.dark-mode .ffe-accent-mode, .dark-mode.ffe-accent-mode {
-  ${Object.entries(colors.darkAccent)
+/* Accent context */
+.ffe-light .ffe-accent-mode,
+.ffe-accent-mode {
+  ${Object.entries(colors.lightAccent)
       .map(([name, value]) => transformToCssProperty(name, value))
       .join('\n')}
 }
@@ -68,9 +71,6 @@ function buildCssColors(paths, colors) {
     paths.forEach(path => {
         const content = generateCssColorFileContent(colors);
         writeToFile(path + 'less/colors-semantic.less')(content);
-        writeToFile(path + 'less/colors-semantic-storybook.less')(
-            generateStorybookCssColorFileContent(colors),
-        );
         writeToFile(path + 'css/colors-semantic.css')(content);
     });
 }
