@@ -3,6 +3,7 @@ import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
 import { AccordionContext } from './AccordionContext';
+import { useTabPressed } from './useTabPressed';
 
 export interface AccordionItemProps
     extends React.ComponentPropsWithoutRef<'div'> {
@@ -33,6 +34,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
     noPadding = false,
     ...rest
 }) => {
+    const tabPressed = useTabPressed();
     const [isExpanded, setIsExpanded] = useState(defaultOpen);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isFocused, setFocus] = useState(false);
@@ -85,7 +87,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
                         },
                     )}
                     onClick={handleOnClick}
-                    onFocus={() => setFocus(true)}
+                    onFocus={() => setFocus(tabPressed)}
                     onBlur={() => setFocus(false)}
                 >
                     <span className="ffe-accordion-item__heading-button-content">
@@ -108,11 +110,13 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
                 role="region"
             >
                 {!collapseHidden && (
-                    <div className={
-                        classNames("ffe-accordion-item__body", {
-                            "ffe-accordion-item__body--no-padding": noPadding,
-                        })
-                    }>{children}</div>
+                    <div
+                        className={classNames('ffe-accordion-item__body', {
+                            'ffe-accordion-item__body--no-padding': noPadding,
+                        })}
+                    >
+                        {children}
+                    </div>
                 )}
             </Collapse>
         </div>
