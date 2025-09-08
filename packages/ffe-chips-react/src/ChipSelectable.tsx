@@ -23,9 +23,12 @@ function ChipSelectableForwardRef<As extends ElementType>(
         <Chip
             ref={ref}
             leftIcon={<Icon size="sm" fileUrl={checkOpen400Sm} />}
-            className={classNames(className, {
-                'ffe-chip--selected': isSelected,
-            })}
+            className={classNames(className,
+                {
+                    'ffe-chip--selectable': !isSelected,
+                    'ffe-chip--selected': isSelected,
+                }
+            )}
             {...rest}
         />
     );
