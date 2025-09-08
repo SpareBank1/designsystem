@@ -10,7 +10,7 @@ const meta: Meta<typeof AccountSelector> = {
         docs: {
             description: {
                 component:
-                    'Comprehensive live code editor for all account selector components in the FFE AccountSelector package. Explore AccountSelector and AccountSelectorMulti with interactive examples for single and multi-account selection scenarios.',
+                    'Omfattende live kode-editor for alle kontovalgkomponenter i FFE AccountSelector-pakken. Utforsk AccountSelector og AccountSelectorMulti med interaktive eksempler for enkelt- og flerkontovelgingsscenarier.',
             },
         },
     },

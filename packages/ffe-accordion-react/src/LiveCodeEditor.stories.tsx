@@ -45,6 +45,5 @@ export const LiveCodeEditor: Story = createLiveCodeStory(Accordion, {
     },
     defaultTemplate: 'basic',
     title: 'Accordion Live Code Editor',
-    description:
-        'Live code editor for Accordion komponenten med alle templates og funksjonalitet.',
+    description: 'Her kan du endre på et eksempel med bruk av Accordion.',
 });

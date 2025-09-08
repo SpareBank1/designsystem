@@ -59,6 +59,7 @@ import { Badge } from '@sb1/ffe-badge-react';
 import { Chip, ChipRemovable, ChipSelectable } from '@sb1/ffe-chips-react';
 
 // Lists
+import { InputGroup } from '@sb1/ffe-form-react';
 import {
     BulletList,
     BulletListItem,
@@ -175,81 +176,6 @@ interface LiveCodeEditorProps {
     description?: string;
 }
 
-// Icon component for use in LiveCodeEditor
-const IconInternal = ({
-    name,
-    size = 'md',
-    ariaLabel,
-}: {
-    name: string;
-    size?: 'sm' | 'md' | 'lg';
-    ariaLabel?: string;
-}) => {
-    // Base path for icons - adjust as needed based on your setup
-    const iconPath = `/icons/open/300/md/${name}.svg`;
-
-    return (
-        <span
-            role="img"
-            aria-label={ariaLabel}
-            aria-hidden={!ariaLabel}
-            className={`ffe-icons ffe-icons--${size}`}
-            style={{
-                maskImage: `url(${iconPath})`,
-                WebkitMaskImage: `url(${iconPath})`,
-                display: 'inline-block',
-                width: '1em',
-                height: '1em',
-                backgroundColor: 'currentColor',
-            }}
-        />
-    );
-};
-
-// Button component with proper ffe-button structure
-const Button = ({
-    variant = 'tertiary',
-    size = 'sm',
-    onClick,
-    children,
-    disabled = false,
-    leftIcon,
-    rightIcon,
-    iconOnly = false,
-    ...props
-}: {
-    variant?: 'primary' | 'secondary' | 'tertiary' | 'action';
-    size?: 'sm' | 'md' | 'lg';
-    onClick?: () => void;
-    children?: React.ReactNode;
-    disabled?: boolean;
-    leftIcon?: React.ReactElement;
-    rightIcon?: React.ReactElement;
-    iconOnly?: boolean;
-    [key: string]: any;
-}) => (
-    <button
-        className={`ffe-button ffe-button--${variant} ffe-button--${size} ${iconOnly ? 'ffe-button--icon-only' : ''}`}
-        onClick={onClick}
-        disabled={disabled}
-        {...props}
-    >
-        <span className="ffe-button__label">
-            {leftIcon &&
-                React.cloneElement(leftIcon, {
-                    className: 'ffe-button__icon ffe-button__icon--left',
-                    size: 'md',
-                })}
-            {children}
-            {rightIcon &&
-                React.cloneElement(rightIcon, {
-                    className: 'ffe-button__icon ffe-button__icon--right',
-                    size: 'md',
-                })}
-        </span>
-    </button>
-);
-
 export function LiveCodeEditor({
     component,
     additionalComponents = {},
@@ -257,7 +183,7 @@ export function LiveCodeEditor({
     defaultTemplate = Object.keys(templates)[0],
     storageKey,
     title = 'Live Code Editor',
-    description = 'Skriv JSX-kode og se resultatet umiddelbart!',
+    description = 'Her kan du redigere komponenten og se resultatet før du tar den i bruk.',
 }: LiveCodeEditorProps) {
     const [selectedTemplate, setSelectedTemplate] =
         useState<string>(defaultTemplate);
@@ -266,7 +192,6 @@ export function LiveCodeEditor({
     );
     const [hasUnsavedChanges, setHasUnsavedChanges] = useState<boolean>(false);
     const [autoSave, setAutoSave] = useState<boolean>(true);
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
     const [showConfirmDialog, setShowConfirmDialog] = useState<boolean>(false);
     const [pendingTemplate, setPendingTemplate] = useState<string | null>(null);
     const [showResetDialog, setShowResetDialog] = useState<boolean>(false);
@@ -307,7 +232,7 @@ export function LiveCodeEditor({
             setSelectedTemplate(savedTemplate);
             setHasUnsavedChanges(false);
         }
-    }, []);
+    }, [storageKey, autoSave, defaultTemplate, templates]);
 
     // Track code changes
     const handleCodeChange = (newCode: string) => {
@@ -326,21 +251,11 @@ export function LiveCodeEditor({
         }
     };
 
-    const downloadCode = () => {
-        const blob = new Blob([code], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `${storageKey}-component.tsx`;
-        a.click();
-        URL.revokeObjectURL(url);
-    };
-
     const resetToTemplate = () => {
         setShowResetDialog(true);
     };
 
-    const handleConfirmReset = () => {
+    const handleConfirmReset = React.useCallback(() => {
         const template = templates[selectedTemplate];
         if (template) {
             setCode(template.code);
@@ -349,11 +264,21 @@ export function LiveCodeEditor({
             localStorage.removeItem(`${storageKey}-livecode-template`);
         }
         setShowResetDialog(false);
-    };
+    }, [selectedTemplate, storageKey, templates]);
 
     const handleCancelReset = () => {
         setShowResetDialog(false);
     };
+
+    const handleConfirmTemplateChange = React.useCallback(() => {
+        if (pendingTemplate) {
+            setSelectedTemplate(pendingTemplate);
+            setCode(templates[pendingTemplate].code);
+            setHasUnsavedChanges(false);
+        }
+        setShowConfirmDialog(false);
+        setPendingTemplate(null);
+    }, [pendingTemplate, templates]);
 
     // Handle keyboard events for confirmation dialogs
     React.useEffect(() => {
@@ -381,7 +306,12 @@ export function LiveCodeEditor({
             document.addEventListener('keydown', handleKeyDown);
             return () => document.removeEventListener('keydown', handleKeyDown);
         }
-    }, [showConfirmDialog, showResetDialog]);
+    }, [
+        showConfirmDialog,
+        showResetDialog,
+        handleConfirmReset,
+        handleConfirmTemplateChange,
+    ]);
 
     const loadTemplate = (templateKey: string) => {
         const newTemplate = templates[templateKey];
@@ -403,16 +333,6 @@ export function LiveCodeEditor({
         localStorage.setItem(`${storageKey}-livecode-template`, templateKey);
     };
 
-    const handleConfirmTemplateChange = () => {
-        if (pendingTemplate) {
-            setSelectedTemplate(pendingTemplate);
-            setCode(templates[pendingTemplate].code);
-            setHasUnsavedChanges(false);
-        }
-        setShowConfirmDialog(false);
-        setPendingTemplate(null);
-    };
-
     const handleCancelTemplateChange = () => {
         setShowConfirmDialog(false);
         setPendingTemplate(null);
@@ -427,12 +347,8 @@ export function LiveCodeEditor({
 
     return (
         <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-            <h3 className="ffe-h3">
-                {title} - {theme === 'light' ? 'Light' : 'Dark'} mode
-            </h3>
+            <h3 className="ffe-h3">{title}</h3>
             <p>{description}</p>
-
-            {/* Status indicator - removed confusing message */}
 
             {/* Controls */}
             <div
@@ -443,48 +359,35 @@ export function LiveCodeEditor({
                     alignItems: 'center',
                     flexWrap: 'wrap',
                     padding: '12px',
-                    backgroundColor: theme === 'light' ? '#f8f9fa' : '#2d3748',
+                    backgroundColor: '#f8f9fa',
                     borderRadius: '8px',
-                    border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                    border: `1px solid #ddd`,
                 }}
             >
-                <label
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '6px',
-                        color: theme === 'light' ? 'black' : 'white',
-                    }}
-                >
-                    <input
-                        type="checkbox"
-                        checked={autoSave}
-                        onChange={e => setAutoSave(e.target.checked)}
-                    />
-                    Auto-save
-                </label>
-
                 {/* Kodemal selector - only show if more than one template */}
                 {Object.keys(templates).length > 1 && (
-                    <Dropdown
-                        value={selectedTemplate}
-                        onChange={e => loadTemplate(e.target.value)}
-                        style={{
-                            backgroundColor:
-                                theme === 'light' ? 'white' : '#4a5568',
-                            color: theme === 'light' ? 'black' : 'white',
-                            border: `1px solid ${theme === 'light' ? '#ddd' : '#6b7280'}`,
-                            width: 'auto',
-                            minWidth: '200px',
-                            maxWidth: '300px',
-                        }}
-                    >
-                        {Object.entries(templates).map(([key, template]) => (
-                            <option key={key} value={key}>
-                                {template.name}
-                            </option>
-                        ))}
-                    </Dropdown>
+                    <InputGroup label="Eksempler">
+                        <Dropdown
+                            value={selectedTemplate}
+                            onChange={e => loadTemplate(e.target.value)}
+                            style={{
+                                backgroundColor: 'white',
+                                color: 'black',
+                                border: `1px solid #ddd`,
+                                width: 'auto',
+                                minWidth: '200px',
+                                maxWidth: '300px',
+                            }}
+                        >
+                            {Object.entries(templates).map(
+                                ([key, template]) => (
+                                    <option key={key} value={key}>
+                                        {template.name}
+                                    </option>
+                                ),
+                            )}
+                        </Dropdown>
+                    </InputGroup>
                 )}
             </div>
 
@@ -506,15 +409,14 @@ export function LiveCodeEditor({
                 >
                     <div
                         style={{
-                            backgroundColor:
-                                theme === 'light' ? 'white' : '#2d3748',
-                            color: theme === 'light' ? 'black' : 'white',
+                            backgroundColor: 'white',
+                            color: 'black',
                             padding: '24px',
                             borderRadius: '8px',
                             boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
                             maxWidth: '400px',
                             width: '90%',
-                            border: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`,
+                            border: `1px solid #e2e8f0`,
                         }}
                     >
                         <h3
@@ -530,8 +432,7 @@ export function LiveCodeEditor({
                             style={{
                                 margin: '0 0 24px 0',
                                 lineHeight: '1.5',
-                                color:
-                                    theme === 'light' ? '#4a5568' : '#a0aec0',
+                                color: '#4a5568',
                             }}
                         >
                             Ved å tilbakestille vil dine kodeendringer
@@ -546,13 +447,13 @@ export function LiveCodeEditor({
                         >
                             <SecondaryButton
                                 onClick={handleCancelTemplateChange}
-                                size="sm"
+                                size="md"
                             >
                                 Avbryt
                             </SecondaryButton>
                             <PrimaryButton
                                 onClick={handleConfirmTemplateChange}
-                                size="sm"
+                                size="md"
                             >
                                 Bytt kodemal
                             </PrimaryButton>
@@ -579,15 +480,14 @@ export function LiveCodeEditor({
                 >
                     <div
                         style={{
-                            backgroundColor:
-                                theme === 'light' ? 'white' : '#2d3748',
-                            color: theme === 'light' ? 'black' : 'white',
+                            backgroundColor: 'white',
+                            color: 'black',
                             padding: '24px',
                             borderRadius: '8px',
                             boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
                             maxWidth: '400px',
                             width: '90%',
-                            border: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`,
+                            border: `1px solid #e2e8f0`,
                         }}
                     >
                         <h3
@@ -603,8 +503,7 @@ export function LiveCodeEditor({
                             style={{
                                 margin: '0 0 24px 0',
                                 lineHeight: '1.5',
-                                color:
-                                    theme === 'light' ? '#4a5568' : '#a0aec0',
+                                color: '#4a5568',
                             }}
                         >
                             Er du sikker på at du vil tilbakestille til "
@@ -620,13 +519,13 @@ export function LiveCodeEditor({
                         >
                             <SecondaryButton
                                 onClick={handleCancelReset}
-                                size="sm"
+                                size="md"
                             >
                                 Avbryt
                             </SecondaryButton>
                             <PrimaryButton
                                 onClick={handleConfirmReset}
-                                size="sm"
+                                size="md"
                             >
                                 Tilbakestill
                             </PrimaryButton>
@@ -653,24 +552,22 @@ export function LiveCodeEditor({
                     {/* Code Editor */}
                     <div
                         style={{
-                            border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                            border: `1px solid #ddd`,
                             borderRadius: '8px',
                             overflow: 'hidden',
                             display: 'flex',
                             flexDirection: 'column',
-                            backgroundColor:
-                                theme === 'light' ? 'white' : '#2d3748',
+                            backgroundColor: 'white',
                         }}
                     >
                         <div
                             style={{
                                 padding: '12px',
-                                backgroundColor:
-                                    theme === 'light' ? '#f8f9fa' : '#1a202c',
-                                borderBottom: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                                backgroundColor: '#f8f9fa',
+                                borderBottom: `1px solid #ddd`,
                                 fontWeight: '600',
                                 fontSize: '14px',
-                                color: theme === 'light' ? 'black' : 'white',
+                                color: 'black',
                                 display: 'flex',
                                 justifyContent: 'space-between',
                                 alignItems: 'center',
@@ -689,10 +586,7 @@ export function LiveCodeEditor({
                                         style={{
                                             fontSize: '12px',
                                             color: '#28a745',
-                                            backgroundColor:
-                                                theme === 'light'
-                                                    ? '#d4edda'
-                                                    : '#2d3748',
+                                            backgroundColor: '#d4edda',
                                             padding: '2px 6px',
                                             borderRadius: '3px',
                                         }}
@@ -700,20 +594,36 @@ export function LiveCodeEditor({
                                         ● Lagret
                                     </span>
                                 )}
-                                <Button
-                                    variant="secondary"
-                                    size="sm"
+                                <label
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '6px',
+                                        color: 'black',
+                                    }}
+                                >
+                                    <input
+                                        type="checkbox"
+                                        checked={autoSave}
+                                        onChange={e =>
+                                            setAutoSave(e.target.checked)
+                                        }
+                                    />
+                                    Lagre kodeendringer automatisk
+                                </label>
+                                <TertiaryButton
+                                    size="md"
                                     onClick={resetToTemplate}
                                 >
                                     Tilbakestill
-                                </Button>
+                                </TertiaryButton>
                             </div>
                         </div>
                         <div style={{ flex: 1 }}>
                             <Editor
                                 height="100%"
                                 defaultLanguage="typescript"
-                                theme={theme === 'light' ? 'light' : 'vs-dark'}
+                                theme="light"
                                 value={code}
                                 onChange={value =>
                                     handleCodeChange(value || '')
@@ -788,24 +698,22 @@ export function LiveCodeEditor({
                     {/* Preview */}
                     <div
                         style={{
-                            border: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                            border: `1px solid #ddd`,
                             borderRadius: '8px',
                             overflow: 'hidden',
                             display: 'flex',
                             flexDirection: 'column',
-                            backgroundColor:
-                                theme === 'light' ? 'white' : '#2d3748',
+                            backgroundColor: 'white',
                         }}
                     >
                         <div
                             style={{
                                 padding: '12px',
-                                backgroundColor:
-                                    theme === 'light' ? '#f8f9fa' : '#1a202c',
-                                borderBottom: `1px solid ${theme === 'light' ? '#ddd' : '#4a5568'}`,
+                                backgroundColor: '#f8f9fa',
+                                borderBottom: `1px solid #ddd`,
                                 fontWeight: '600',
                                 fontSize: '14px',
-                                color: theme === 'light' ? 'black' : 'white',
+                                color: 'black',
                             }}
                         >
                             Forhåndsvisning
@@ -814,9 +722,8 @@ export function LiveCodeEditor({
                             style={{
                                 flex: 1,
                                 padding: '24px',
-                                backgroundColor:
-                                    theme === 'light' ? 'white' : '#2d3748',
-                                color: theme === 'light' ? 'black' : 'white',
+                                backgroundColor: 'white',
+                                color: 'black',
                                 overflow: 'auto',
                             }}
                         >
@@ -865,19 +772,7 @@ export function createLiveCodeStory<T extends ComponentType<any>>(
                         `
 **🔥 Live ${storageKey} Code Editor**
 
-Skriv JSX-kode og se resultatet umiddelbart! Editoren støtter:
-- **TypeScript/JSX syntax highlighting** 
-- **Real-time preview** med feilhåndtering
-- **React hooks** (useState, useEffect)
-- **FFE design tokens** (var(--ffe-color-*))
-- **Smart auto-save** med template-gjenoppretting
-- **Templates** for rask start
-
-**Tips:**
-- Velg en template fra dropdown-menyen for å starte
-- Din kode lagres automatisk mens du skriver
-- Bruk "Tilbakestill" for å gå tilbake til originalversjon
-`,
+Skriv JSX-kode og se resultatet umiddelbart!`,
                 },
             },
         },
