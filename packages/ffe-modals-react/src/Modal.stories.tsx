@@ -148,7 +148,7 @@ export const DarkMode: Story = {
                 <Modal
                     ref={modalRef}
                     {...args}
-                    className={'dark-mode regard-color-scheme-preference'}
+                    className={'ffe-dark regard-color-scheme-preference'}
                 >
                     <ModalBlock>
                         <Heading2 id={headingId}>En modal</Heading2>

@@ -60,30 +60,38 @@ const preview: Preview = {
                 <div className="ffe-body-text">
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'default') && (
-                            <div className="storybook-docs-content-container ">
-                                <Heading3>Light mode</Heading3>
-                                <Story />
+                            <div className="ffe-light">
+                                <div className="storybook-docs-content-container">
+                                    <Heading3>Light mode</Heading3>
+                                    <Story />
+                                </div>
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'light') &&
                         (accent === 'both' || accent === 'accent') && (
-                            <div className="storybook-docs-content-container ffe-accent-mode">
-                                <Heading3>Light mode - Accent</Heading3>
-                                <Story />
+                            <div className="ffe-light ">
+                                <div className=" storybook-docs-content-container ffe-accent-mode">
+                                    <Heading3>Light mode - Accent</Heading3>
+                                    <Story />
+                                </div>
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'dark') &&
                         (accent === 'both' || accent === 'default') && (
-                            <div className="storybook-docs-content-container dark-mode regard-color-scheme-preference">
-                                <Heading3>Dark mode</Heading3>
-                                <Story />
+                            <div className=" ffe-dark ">
+                                <div className="storybook-docs-content-container">
+                                    <Heading3>Dark mode</Heading3>
+                                    <Story />
+                                </div>
                             </div>
                         )}
                     {(scheme === 'both' || scheme === 'dark') &&
                         (accent === 'both' || accent === 'accent') && (
-                            <div className="storybook-docs-content-container dark-mode regard-color-scheme-preference ffe-accent-mode">
-                                <Heading3>Dark mode - Accent</Heading3>
-                                <Story />
+                            <div className=" ffe-dark">
+                                <div className=" storybook-docs-content-container ffe-accent-mode">
+                                    <Heading3>Dark mode - Accent</Heading3>
+                                    <Story />
+                                </div>
                             </div>
                         )}
                 </div>
