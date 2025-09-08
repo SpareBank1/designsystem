@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@13.1.3...@sb1/ffe-accordion@13.1.4) (2025-09-08)
+
+
+### Bug Fixes
+
+* **ffe-accordion:** vis focus bare ved tastaturnavigering ([a0dd901](https://github.com/SpareBank1/designsystem/commit/a0dd901b000f11af8854b6c914d253567eea38e6))
+
+
+
+
+
 ## [13.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@13.1.2...@sb1/ffe-accordion@13.1.3) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

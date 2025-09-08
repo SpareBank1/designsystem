@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.2.4...@sb1/ffe-accordion-react@13.2.5) (2025-09-08)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** vis focus bare ved tastaturnavigering ([9c4124f](https://github.com/SpareBank1/designsystem/commit/9c4124f5f4c6c5d7228314cd2b59871593c285ed))
+
+
+
+
+
 ## [13.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.2.3...@sb1/ffe-accordion-react@13.2.4) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
