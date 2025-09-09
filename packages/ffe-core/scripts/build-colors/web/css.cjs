@@ -40,7 +40,7 @@ ${Object.entries(colors.dark)
 }
 
 /* dark mode accent når en overstyrer os/nettleser light/dark preferanser*/
-.ffe-dark .ffe-accent-mode {
+.ffe-dark .ffe-accent-mode, .ffe-dark.ffe-accent-mode {
 ${Object.entries(colors.darkAccent)
     .map(([name, value]) => transformToCssProperty(name, value))
     .join('\n')}
@@ -51,7 +51,7 @@ ${Object.entries(colors.darkAccent)
 :host,
 .ffe-default-mode,
 .ffe-light,
-.ffe-light .ffe-default-mode {
+.ffe-light .ffe-default-mode, .ffe-light.ffe-default-mode {
   ${Object.entries(colors.light)
       .map(([name, value]) => transformToCssProperty(name, value))
       .join('\n')}
