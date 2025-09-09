@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.45...@sb1/ffe-chips-react@2.1.0) (2025-09-09)
+
+
+### Features
+
+* **ffe-chips-react:** fjerner check når chipselectable ikke er valgt ([9ece1d7](https://github.com/SpareBank1/designsystem/commit/9ece1d781390458e6fda825a97103c66335d034f))
+
+
+
+
+
 ## [2.0.45](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.44...@sb1/ffe-chips-react@2.0.45) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-chips-react

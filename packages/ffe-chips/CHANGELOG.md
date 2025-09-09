@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@3.0.4...@sb1/ffe-chips@3.1.0) (2025-09-09)
+
+
+### Features
+
+* **ffe-chips:** Fjerner check når chipselectable ikke er valgt ([697edc2](https://github.com/SpareBank1/designsystem/commit/697edc28f35d28b15f22b5e9aa0072bfac6bb136))
+
+
+
+
+
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@3.0.3...@sb1/ffe-chips@3.0.4) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-chips
