@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-modals-react:** eksponerer isOpen tilstand og forebygger duplikate kall til showModal/close ([805b7c0](https://github.com/SpareBank1/designsystem/commit/805b7c0511d4e5f6c858be6b12ca08bb7661c5a4))
+* **ffe-modals:** Add missing focus color for close button ([2dd157c](https://github.com/SpareBank1/designsystem/commit/2dd157ced02e21ca83e16089058d3ef0146e2ec6))
+* **ffe-modals:** Add missing focus color for close button - firefox ([c87e4f9](https://github.com/SpareBank1/designsystem/commit/c87e4f9b06230970ec5bd922a73dc6851fd76008))
+* **ffe-modals:** added styling for modal polyfill ([3b8f04d](https://github.com/SpareBank1/designsystem/commit/3b8f04d7158fcf35060640b6940c70d5d1f5b9c4))
+* **ffe-modals:** darkmode ([ef0b02f](https://github.com/SpareBank1/designsystem/commit/ef0b02fe3980fed05ff04b6bef5002503d9c7c4e))
+* **ffe-modals:** Fix polifill so it does not overwrite safari dialog styling ([ceb580b](https://github.com/SpareBank1/designsystem/commit/ceb580bca7a3ceed2650641881f56e3d914a22fd))
+* **ffe-modals:** height of modal ([81744b7](https://github.com/SpareBank1/designsystem/commit/81744b7c20af72fab15ddee91d534f8b8cdb4a1c))
+* **ffe-modals:** justerer styling close-button modal ([d97890f](https://github.com/SpareBank1/designsystem/commit/d97890f77d9e2311a227903d633e2dacb3356158))
+* **ffe-modals:** owerflow-y scrolling ([5493046](https://github.com/SpareBank1/designsystem/commit/54930467b8fbca12924ed86e444c043c5d9a6a31))
+* **ffe-modals:** remove unused css ([1151fe0](https://github.com/SpareBank1/designsystem/commit/1151fe06409d04ff3df9ec838e9424e0052f0d36))
+* **ffe-modals:** Update polyfill styling ([94db2d4](https://github.com/SpareBank1/designsystem/commit/94db2d41bd0fa2746d50e532433da52a61d90fb5))
+
+
+* feat(ffe-modals)!: Semantiske farger ([c0e443c](https://github.com/SpareBank1/designsystem/commit/c0e443c41e68588ccd9a989efe788bc09ecb9fa3))
+
+
+### Features
+
+* **ffe-modals-react:** eksponerer dialogRef fra modal komponenten ([fc2da4c](https://github.com/SpareBank1/designsystem/commit/fc2da4ca843abb8a22b653db946aa684c4ad702a))
+* **ffe-modals:** basic modal ([7602e19](https://github.com/SpareBank1/designsystem/commit/7602e1997bda7537747985cf895226864f4bfe75))
+* **ffe-modals:** initial commit ([ace18c3](https://github.com/SpareBank1/designsystem/commit/ace18c3b3b77fb5e3930c0a15c93d8bfa6c2a976))
+* **ffe-modals:** regard-color-scheme-preference for darkmode ([6d24251](https://github.com/SpareBank1/designsystem/commit/6d24251c62c2665ac630f75b4174fcd129ee03d8))
+* **ffe-modals:** start from version 1. no breaking change ([13563a6](https://github.com/SpareBank1/designsystem/commit/13563a65754540cc7e5964dabc467b125a0dcabe))
+* **ffe-modals:** start from version 1.0.0 ([68136eb](https://github.com/SpareBank1/designsystem/commit/68136eb70f3ab5d97bcbaed48dbc332f9cdabf33))
+* **ffe-modals:** tilbyr kompilert css i tillegg til less ([898b0a4](https://github.com/SpareBank1/designsystem/commit/898b0a451658c8d317ddf9a71b95e3043c93e15a))
+
+
+### BREAKING CHANGES
+
+* oppdaterer til semantiske farger
+* **ffe-modals:** This is not a real breaking change.
+just to start from version 1.0.0
+* **ffe-modals:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [2.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-modals@2.1.8...@sb1/ffe-modals@2.1.9) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-modals

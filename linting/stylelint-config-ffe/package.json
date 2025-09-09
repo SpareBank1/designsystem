@@ -1,6 +1,6 @@
 {
     "name": "@sb1/stylelint-config-ffe",
-    "version": "2.0.2",
+    "version": "100.0.0",
     "description": "FFE shareable config for stylelint",
     "license": "MIT",
     "author": "SpareBank 1",

@@ -3,6 +3,216 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-datepicker-react:** a11y ([9510a9d](https://github.com/SpareBank1/designsystem/commit/9510a9d6e3decf029d1be36975032a496ea5a686))
+* **ffe-datepicker-react:** Add aria tags for button element ([f07961c](https://github.com/SpareBank1/designsystem/commit/f07961ca085d337673b9f2f0f73fdd8ff47538ca))
+* **ffe-datepicker-react:** add author to package.json ([af0f662](https://github.com/SpareBank1/designsystem/commit/af0f6622561e39fb739c8d257ca11e28dfeae398))
+* **ffe-datepicker-react:** add ffe-input-field class to datepicker input ([f7337e8](https://github.com/SpareBank1/designsystem/commit/f7337e819839cdf7ee86cacb9f0c56d533308352))
+* **ffe-datepicker-react:** add innerRef to Datepicker Props ([a510312](https://github.com/SpareBank1/designsystem/commit/a5103126820849d9c3aaec5443ec09b91a6ac2ca))
+* **ffe-datepicker-react:** add missing dep to ffe-form-react ([673013c](https://github.com/SpareBank1/designsystem/commit/673013cbbfc26153d2c2fe2b8497d9225c4ae31a))
+* **ffe-datepicker-react:** add RTL dependency for test helper ([60dc40c](https://github.com/SpareBank1/designsystem/commit/60dc40ca7b22fa89e4d20908e1b0cb4dc3ab4728))
+* **ffe-datepicker-react:** add the id to input ([a32881c](https://github.com/SpareBank1/designsystem/commit/a32881c5c0f25e3c531846ca08c0d063a69b1ee2))
+* **ffe-datepicker-react:** added calendar lookup debounce ([#922](https://github.com/SpareBank1/designsystem/issues/922)) ([84ef7e2](https://github.com/SpareBank1/designsystem/commit/84ef7e2b8204282e38b975e744d21fa7b555f7c8))
+* **ffe-datepicker-react:** added tests ([bd41b39](https://github.com/SpareBank1/designsystem/commit/bd41b3969c27b5c84684e96dc5066f5ffe02ce3b))
+* **ffe-datepicker-react:** allow min/maxDate to be null ([bb90eac](https://github.com/SpareBank1/designsystem/commit/bb90eac1e578982162fa9a6214c524f860540bdc))
+* **ffe-datepicker-react:** broadens version of peer dependencies ([3db61af](https://github.com/SpareBank1/designsystem/commit/3db61af53c02126831f06f2754e3501a6086cf0a))
+* **ffe-datepicker-react:** bytter ut ffe-icons med ffe-symbols ([49f52a5](https://github.com/SpareBank1/designsystem/commit/49f52a53011da1e4c88065f3038986a8648cd7ad))
+* **ffe-datepicker-react:** calender in datepicker not updated ([c3f6b5e](https://github.com/SpareBank1/designsystem/commit/c3f6b5e5b60643d71a00c78d91f7ad897a6d9405))
+* **ffe-datepicker-react:** changed slightly the logic so that calendar will open only if it is not already open ([71883db](https://github.com/SpareBank1/designsystem/commit/71883dbb2cd1fd8b37e20681a001072a2307339b))
+* **ffe-datepicker-react:** chrashes without language ([b3c3fd9](https://github.com/SpareBank1/designsystem/commit/b3c3fd994c119d4d0e7da21f2c601c128fe14acb))
+* **ffe-datepicker-react:** comment out failing test to restore pipeline ([fe136c1](https://github.com/SpareBank1/designsystem/commit/fe136c17e3e0941691f18905b04dd317a646e833))
+* **ffe-datepicker-react:** Do not overwrite aria-describedby if given as inputProp ([419b006](https://github.com/SpareBank1/designsystem/commit/419b0061ce417a605f88c65383ad3972e664e592))
+* **ffe-datepicker-react:** endre fra aria-selected til aria-current ([cc48598](https://github.com/SpareBank1/designsystem/commit/cc48598a9f722a337b55960dd39c122b031d1fd1))
+* **ffe-datepicker-react:** event type onBlur ([e38c307](https://github.com/SpareBank1/designsystem/commit/e38c307f3c25adef83305603b440cd58a8491b5a))
+* **ffe-datepicker-react:** ffe-form compat ([cd6d0fd](https://github.com/SpareBank1/designsystem/commit/cd6d0fd23eff59ea8aa57fc579db32196e4054ba))
+* **ffe-datepicker-react:** fiks lukking av calendar ved tomt input ([c19bf3d](https://github.com/SpareBank1/designsystem/commit/c19bf3d52898561e7861e330685d2e0e2d7c75ff))
+* **ffe-datepicker-react:** fix broken datepicker for JS users ([42b147b](https://github.com/SpareBank1/designsystem/commit/42b147bf55e40fd553b0e981afcd5f25420fed53))
+* **ffe-datepicker-react:** Fix bug with reacecondition with calendar input ([e6cf5c2](https://github.com/SpareBank1/designsystem/commit/e6cf5c2cd2af4cc159591b94c7e631d736506452))
+* **ffe-datepicker-react:** fix Datepicker and DateInput types ([bf68e10](https://github.com/SpareBank1/designsystem/commit/bf68e10fec8862a89d81c8836e253f7a4b39f5c5))
+* **ffe-datepicker-react:** Fix datepicker export ([6bf9e13](https://github.com/SpareBank1/designsystem/commit/6bf9e133c8e55c231c8da7fb937fc983a84abcc1))
+* **ffe-datepicker-react:** fix for å få semantiske farger styling til å fungere bedre ([006c8d5](https://github.com/SpareBank1/designsystem/commit/006c8d5d5f3d0b5e7a1d2a4b43b0fb1ae2a1a41f))
+* **ffe-datepicker-react:** fix infinite loop and wrong onChange values ([206d6c2](https://github.com/SpareBank1/designsystem/commit/206d6c2f5461ef30236d665208bf9f9f461b4858))
+* **ffe-datepicker-react:** fix issue where multiple datepickers could be open at the same time ([fb1ce95](https://github.com/SpareBank1/designsystem/commit/fb1ce95ff8d098039f9c2cb815183bdf5dad981c))
+* **ffe-datepicker-react:** fix output of onChange ([43ea9a5](https://github.com/SpareBank1/designsystem/commit/43ea9a576bf6d6a4be21059f697efbc867eba1e7))
+* **ffe-datepicker-react:** fix type on button, and send correct year type to ClickableDate ([608125b](https://github.com/SpareBank1/designsystem/commit/608125b7201e2887088acdc6affa951ed483066b))
+* **ffe-datepicker-react:** fix zeroPadding in onChange value ([024f2bd](https://github.com/SpareBank1/designsystem/commit/024f2bdd20b5122ed33e7b35cbe700cfc0fbea6e))
+* **ffe-datepicker-react:** fixed issue with tabbing through inputs ([18bd9f3](https://github.com/SpareBank1/designsystem/commit/18bd9f354ca881951cf36138792723b79a4135fa))
+* **ffe-datepicker-react:** fixed issues with focus, tab navigation, k… ([#196](https://github.com/SpareBank1/designsystem/issues/196)) ([31c28f6](https://github.com/SpareBank1/designsystem/commit/31c28f6769240e43567535e80096358d7f6f7a25))
+* **ffe-datepicker-react:** Fixes calendar using stale state for showing selected year ([659883a](https://github.com/SpareBank1/designsystem/commit/659883a2e8802325a25b53f3db82958213a01828))
+* **ffe-datepicker-react:** forhindrer scroll ved bruk av tastaturnavigasjon i datepickeren ([27cfe63](https://github.com/SpareBank1/designsystem/commit/27cfe63aaa0d45de5c90b93868a839c8ddf19782))
+* **ffe-datepicker-react:** Get input to work with user adding 0 ([2b284e0](https://github.com/SpareBank1/designsystem/commit/2b284e0c43e94b6f679e191404e451bb5771af2c))
+* **ffe-datepicker-react:** import lodash.debounce instead of lodash ([730c837](https://github.com/SpareBank1/designsystem/commit/730c837b0093947996b3b7596576aebb934a9764))
+* **ffe-datepicker-react:** Improve backspace behaviour of year ([937ea03](https://github.com/SpareBank1/designsystem/commit/937ea03c62d484fa09dcb6fa4ad33c229466a862))
+* **ffe-datepicker-react:** innerRef was not set ([6e6e5f5](https://github.com/SpareBank1/designsystem/commit/6e6e5f55f5d6e76d2330af6d9f7757bcfacc2af4))
+* **ffe-datepicker-react:** Kanseller debounce før komponent unmount ([ff50b6e](https://github.com/SpareBank1/designsystem/commit/ff50b6e64da10a099cf74f74174162ec83dafa1d))
+* **ffe-datepicker-react:** komponenten oppfører seg nå som en kontrollert komponent ([a87c6c5](https://github.com/SpareBank1/designsystem/commit/a87c6c5e669f209a59ebac2780f9f738ac990c32))
+* **ffe-datepicker-react:** legg tilbake min og maxDate ([097e656](https://github.com/SpareBank1/designsystem/commit/097e656d7513f87a96f6971e55c4c1e143abefb4))
+* **ffe-datepicker-react:** legger til manglende dependency til ffe-dropdown-react ([e559d5e](https://github.com/SpareBank1/designsystem/commit/e559d5e44f545e873110c452ebe7617d372ed2b9))
+* **ffe-datepicker-react:** make autofocus optional calendar ([7fbbf30](https://github.com/SpareBank1/designsystem/commit/7fbbf309c2052d63f2ee5e0dd1c65f42ec7eec40))
+* **ffe-datepicker-react:** make the datepicker work in shadow dom ([3b8ee15](https://github.com/SpareBank1/designsystem/commit/3b8ee15ce8fbd5864f98b0751fd809b37225b5ed))
+* **ffe-datepicker-react:** need to pad day and month in onChange ([b634117](https://github.com/SpareBank1/designsystem/commit/b63411753db334db1ac3eeb5ff0493f428655f01))
+* **ffe-datepicker-react:** onBlur should be triggered on all input fields ([560c892](https://github.com/SpareBank1/designsystem/commit/560c892e47712612a762c4457ddad64a67189bd2))
+* **ffe-datepicker-react:** oppdater Symbol implementasjon ([0eaff10](https://github.com/SpareBank1/designsystem/commit/0eaff10e25b638634be1fb97ea32c24cca7c40db))
+* **ffe-datepicker-react:** oppdaterer testhelper iht endret markup-nivå ([90a829a](https://github.com/SpareBank1/designsystem/commit/90a829a9ea17bc28f686dcb1b87bfa6234310842))
+* **ffe-datepicker-react:** Press Enter to close calendar ([a93e9c3](https://github.com/SpareBank1/designsystem/commit/a93e9c39078da59325f81a8127210c682e6da93b)), closes [#14](https://github.com/SpareBank1/designsystem/issues/14)
+* **ffe-datepicker-react:** prevent scroll when arrow buttons are pressed for changing date ([bd1e291](https://github.com/SpareBank1/designsystem/commit/bd1e291b4367080f18d7adb3ab42c811cd1837d3))
+* **ffe-datepicker-react:** Prevent submission of forms when enter-key is pressed for datepicker - IE bug ([9297dcb](https://github.com/SpareBank1/designsystem/commit/9297dcb1ae629bc6b1c017e2030c693af0810068))
+* **ffe-datepicker-react:** reduce vulnerabilities ([3b96a62](https://github.com/SpareBank1/designsystem/commit/3b96a627946d0de0865aee402fcdfc1b84d17803))
+* **ffe-datepicker-react:** refactoring ([7a4da54](https://github.com/SpareBank1/designsystem/commit/7a4da54d9220d520afca314132638e1078cbb928))
+* **ffe-datepicker-react:** remove default props ([9dced76](https://github.com/SpareBank1/designsystem/commit/9dced76b00ac8affff68209e5ac1457053334133))
+* **ffe-datepicker-react:** remove onchange debounce to fix testing problem ([ba44c4b](https://github.com/SpareBank1/designsystem/commit/ba44c4bba8f0989b25b2db15deae8690b2a18df1))
+* **ffe-datepicker-react:** remove role="none" ([fab1a69](https://github.com/SpareBank1/designsystem/commit/fab1a69b68627dffeafcd1404e4e77d3bbc78569))
+* **ffe-datepicker-react:** remove unnecessary per dependencies ([43b7178](https://github.com/SpareBank1/designsystem/commit/43b717896f6865d1d57b1724b48ce43890fba6ff))
+* **ffe-datepicker-react:** Remove use of "componentWillReceiveProps" ([633d62b](https://github.com/SpareBank1/designsystem/commit/633d62b743d787fa85e2c5cf3e033d01fa2e7405)), closes [#372](https://github.com/SpareBank1/designsystem/issues/372)
+* **ffe-datepicker-react:** ruller tillbake en fix som inførte en større feil ([3386269](https://github.com/SpareBank1/designsystem/commit/3386269bd436a6317dfce6310fda53f5045d886f))
+* **ffe-datepicker-react:** selectedDate is optional in Calendar ([455b8b7](https://github.com/SpareBank1/designsystem/commit/455b8b7bc3d418fd347777e5f1d2b7566e0a6054))
+* **ffe-datepicker-react:** set year and month are wrong ([95c3abc](https://github.com/SpareBank1/designsystem/commit/95c3abcb8d5472d5fda2ef05f8acb3998c174597))
+* **ffe-datepicker-react:** simplified and improved readibility of divBlurHandler ([cfa0ea7](https://github.com/SpareBank1/designsystem/commit/cfa0ea70059eec5390dbf8e4cfebdc668e2f27f1))
+* **ffe-datepicker-react:** store onchange value to prevent feedbackloop ([a31b0f7](https://github.com/SpareBank1/designsystem/commit/a31b0f708d7d517ca35b246d36a3628084c00d5c))
+* **ffe-datepicker-react:** This commit adds a fix to make sure date with validation error can be changed ([b7a4241](https://github.com/SpareBank1/designsystem/commit/b7a4241191aa54fd2c32b24a2f532749e01d9b16))
+* **ffe-datepicker-react:** update uuid to version 7.0.0 ([287854e](https://github.com/SpareBank1/designsystem/commit/287854e0f251011d3f1efe8f063cd360deeba555))
+* **ffe-datepicker-react:** use buildtool for transpiling ([b173781](https://github.com/SpareBank1/designsystem/commit/b173781c3a9d615e34db67db36707dabccd65ffe)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-datepicker-react:** Use dynamic imports in test helper to avoid making react testing library a dependency ([fea4b07](https://github.com/SpareBank1/designsystem/commit/fea4b07bea50a3d1a4b432c1cdc5ab2cfacff33e))
+* **ffe-datepicker-react:** use ffe-icons-react instead og ffe-symbols-react ([4762624](https://github.com/SpareBank1/designsystem/commit/4762624d2427a76f8decfc46fcbe8f9301332c9d))
+* **ffe-datepicker-react:** use react.componentsprops instead of react.htmlprops ([1562edd](https://github.com/SpareBank1/designsystem/commit/1562edd830c4ba3ba5e8c3e1caa7cf2617c8edd6))
+* packages/ffe-datepicker-react/package.json to reduce vulnerabilities ([e8c3822](https://github.com/SpareBank1/designsystem/commit/e8c3822ee59155537c9126cfa494908b55e03ece))
+* set correct type of onError-prop ([fcfea89](https://github.com/SpareBank1/designsystem/commit/fcfea89a96338470a6f652af66ff1c911ddfa3f5))
+* set keepDisplayStateOnError to optional, it has a default value ([4af5c41](https://github.com/SpareBank1/designsystem/commit/4af5c41f4383b83197013889ee5499ca876c1cde))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+* Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc1616ffd14a414bc2e27f8c90a687a7a90b93))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+
+
+### Features
+
+* **ffe-datepicker-react:** `nb` set as default language ([19ac088](https://github.com/SpareBank1/designsystem/commit/19ac088af61300c7ff362c7c88729c26bd87ae39))
+* **ffe-datepicker-react:** add dropdown for year and month in calendar ([8a5f826](https://github.com/SpareBank1/designsystem/commit/8a5f8262faa0587e1cb7972ce48bad69e4fd5b32))
+* **ffe-datepicker-react:** add innerRef to Datepicker ([294c5dd](https://github.com/SpareBank1/designsystem/commit/294c5dd08886f837d3c86702ac8453a27226fb6d))
+* **ffe-datepicker-react:** Add test helper to make it easier ot test datepicker with RTL ([dbee191](https://github.com/SpareBank1/designsystem/commit/dbee191b108bf9481d5347f729e0668d27210a08))
+* **ffe-datepicker-react:** Added types for package ([5a124c8](https://github.com/SpareBank1/designsystem/commit/5a124c83b425ed5270fc1ff58845fa722c6b99a6))
+* **ffe-datepicker-react:** be smarter about year input ([1a88466](https://github.com/SpareBank1/designsystem/commit/1a88466276cd78d6f79d29b041966e6e913aec89))
+* **ffe-datepicker-react:** expose more inputprops datepicker ([8200818](https://github.com/SpareBank1/designsystem/commit/8200818757ed45f1fb5bddfc039fc0625d77372a))
+* **ffe-datepicker-react:** import icons without need for tree shaking ([0f44e65](https://github.com/SpareBank1/designsystem/commit/0f44e654db3db034cb7ce3a95ea68ccac8e1cfc6))
+* **ffe-datepicker-react:** Improved formating for inputs of various lengths ([b89daed](https://github.com/SpareBank1/designsystem/commit/b89daed3d3841628ec0db00bcbddcb699e6f1a28))
+* **ffe-datepicker-react:** Keep display state on validation error ([4942c99](https://github.com/SpareBank1/designsystem/commit/4942c992faafbe422d347e5550ef6c99efdb9f29))
+* **ffe-datepicker-react:** Make calendar readable for screenreaders ([904b3dc](https://github.com/SpareBank1/designsystem/commit/904b3dc109043aab7e1b31f0bfc836fe77fe9b8b))
+* **ffe-datepicker-react:** nytt format på datepicker ([bdc3549](https://github.com/SpareBank1/designsystem/commit/bdc3549ccb37d9ff5c818a215b94fdda4e183ffc))
+* **ffe-datepicker-react:** Option for full width Datepicker ([d9f8162](https://github.com/SpareBank1/designsystem/commit/d9f81625280f6843ec1e785fa0707ba1f7d8fcb3))
+* **ffe-datepicker-react:** rewrite to ts ([4ec8899](https://github.com/SpareBank1/designsystem/commit/4ec8899fe421959c38b4f3697db11334269e907d))
+* **ffe-datepicker-react:** tillater kopiering inn i datepicker-feltet. Og flere fixer ([3b4bf08](https://github.com/SpareBank1/designsystem/commit/3b4bf08c4b6d398413f4d7a45b78f82be7cfccd7))
+* **ffe-datepicker-react:** update internal dependencies ([fedf7bb](https://github.com/SpareBank1/designsystem/commit/fedf7bb601aa39da8f1a7a355236a5fc70f2b624))
+* **ffe-datepicker-react:** upgrade react to >=18.2.0 ([7841843](https://github.com/SpareBank1/designsystem/commit/7841843bc3578a141478c41e58fd534e99209767))
+* **ffe-datepicker:** nye darkmodefarger fra core og hvit bakgrunn på accent context. ([be0ce29](https://github.com/SpareBank1/designsystem/commit/be0ce293d2cef9ecb5a8ed0f63598f8c9a1a7575))
+
+
+### BREAKING CHANGES
+
+* **ffe-datepicker-react:** Fjernet inputProps. labelId påkrevd
+* **ffe-datepicker-react:** Dropped support for React <18.2.0
+* **ffe-datepicker-react:** label and validation props removed, default exports are now named exports
+* **ffe-datepicker-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* **ffe-datepicker-react:** Makes the styling package @sb1/ffe-form a required
+dependency and removes it as peer dependency.
+* **ffe-datepicker-react:** Improve usability of datepicker.
+
+This commit separates date-input and calendar-button to improve accessibility
+
+Previously, datepicker toggled on focus on input field. Now calendar-button will now toggle the datepicker, and tab-key will move focus between date in datepicker and prev- and next-month buttons. Select date, esc-key and click outside datepicker will close datepicker
+
+This version adds aria label to each date in datpicker to improve readability for screen readers
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
 ## [10.4.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@10.4.12...@sb1/ffe-datepicker-react@10.4.13) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-symbols-react:** added missing symbols type ([504c418](https://github.com/SpareBank1/designsystem/commit/504c418c4c1ed650d2b7991abf9ee5dff3eb6a9c))
+* **ffe-symbols-react:** endringer relatert til at det nå er flere fontfiler ([8809cbc](https://github.com/SpareBank1/designsystem/commit/8809cbc3fde43a35576077c27c8a9355e134a971))
+* **ffe-symbols-react:** fix version number ([5979341](https://github.com/SpareBank1/designsystem/commit/5979341fb9aa3c2d58403025dfb03696c8e34d88))
+* **ffe-symbols-react:** fjern weight 400 og størrelsene xs og 2xl ([829570e](https://github.com/SpareBank1/designsystem/commit/829570e71186a08016d80c5294de0579dbff3446))
+* **ffe-symbols-react:** fjerner color prop ([b609d98](https://github.com/SpareBank1/designsystem/commit/b609d9827e1d0d56256c61ba10f0482af087c526))
+* **ffe-symbols-react:** gjør npm pakke public og fjern grade variabel ([5d178b7](https://github.com/SpareBank1/designsystem/commit/5d178b7aedcd70724dad2301c259cdfa36c75d76))
+* **ffe-symbols-react:** legg til dependency og fjern default farge ([75b5423](https://github.com/SpareBank1/designsystem/commit/75b5423a6d6df5dc12107c6b0c85449b226980af))
+* **ffe-symbols-react:** legg til export statement i index.d.ts ([c71e8d2](https://github.com/SpareBank1/designsystem/commit/c71e8d226db4a08d5cb36f946cb99d656af892f2))
+* **ffe-symbols-react:** legg til types og module i package.json ([0dc9867](https://github.com/SpareBank1/designsystem/commit/0dc9867bfc9c87402713b441bf7e0a8c6f69ce92))
+* **ffe-symbols-react:** legg til typings for symbol ([2a93040](https://github.com/SpareBank1/designsystem/commit/2a93040d0091b434335ced7080f6914916647b78))
+* **ffe-symbols-react:** oppdater symbol implementasjon ([6f2369d](https://github.com/SpareBank1/designsystem/commit/6f2369def69327cb981ae6b54ee6b503591c357a))
+* **ffe-symbols-react:** remove default props ([6f8529d](https://github.com/SpareBank1/designsystem/commit/6f8529ddeb432cda43cd08d2917dd28f2a673917))
+* **ffe-symbols-react:** rett import feil med typings ([3b6cdc6](https://github.com/SpareBank1/designsystem/commit/3b6cdc65f1f5dee580c5365c1e7dde60b96af249))
+* **ffe-symbols-react:** rett path til main i package.json ([f1cbcf6](https://github.com/SpareBank1/designsystem/commit/f1cbcf65866fa9a73ede4ee5b5194213dd816663))
+
+
+### Documentation
+
+* **ffe-symbols-react:** this package has been deprecated ([970906a](https://github.com/SpareBank1/designsystem/commit/970906a22848052d9802cf9b7a5c773a001ad629))
+
+
+### Features
+
+* **ffe-symbols-react:** legg til komponent for material symbols ([d5c50a6](https://github.com/SpareBank1/designsystem/commit/d5c50a60ee855394f1441ed7b649b459955a2641))
+* **ffe-symbols-react:** rewrite to ts ([de2229c](https://github.com/SpareBank1/designsystem/commit/de2229c8c4a1310006a584f439999f0f2a04895b))
+* **ffe-symbols-react:** upgrade react to >=18.2.0 ([46ebedb](https://github.com/SpareBank1/designsystem/commit/46ebedbae7d7d1e28f9aea410391d6070b99f73e))
+
+
+### BREAKING CHANGES
+
+* **ffe-symbols-react:** Dropped support for React <18.2.0
+* **ffe-symbols-react:** no more default export
+* **ffe-symbols-react:** This package has been deprecated.
+Please use @sb1/ffe-icons and @sb1/ffe-icons-react.
+* **ffe-symbols-react:** Fjerner 400 som weight og størrelsene xs og 2xl fra Symbol-komponenten.
+* **ffe-symbols-react:** I forrige versjon som ble feilmarkert som minor.
+Endringen innebærer at symbolnavn settes via ikon-prop og ikke children-prop.
+* **ffe-symbols-react:** fjerner color-prop da styling skal skje gjennom css
+
+
+
+
+
 ## [7.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@7.0.12...@sb1/ffe-symbols-react@7.0.13) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-symbols-react

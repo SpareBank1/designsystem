@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-shapes-react:** Add missing dependency classnames ([971d61d](https://github.com/SpareBank1/designsystem/commit/971d61d61d189350600161df54f138bfefcf0e95))
+* **ffe-shapes-react:** fiks typeeksportering ([91d652c](https://github.com/SpareBank1/designsystem/commit/91d652caa7ed942ec837d77dedfcce16aae89a8a))
+* **ffe-shapes-react:** fjerner hideindarkmode og endrer flipped-funksjonalitet ([42210f1](https://github.com/SpareBank1/designsystem/commit/42210f14db1a6b85a6fed4179e0ecb826252ac22))
+
+
+### Features
+
+* **ffe-shapes-react:** legger til bølgen som en egen pakke, pluss oppdatert med semantiske farger ([c1eb385](https://github.com/SpareBank1/designsystem/commit/c1eb3855f70c739db8b9be44fb1f296c562a5a8f))
+
+
+
+
+
 ## [1.1.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes-react@1.1.21...@sb1/ffe-shapes-react@1.1.22) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-shapes-react

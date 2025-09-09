@@ -3,6 +3,175 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-accordion-react:** a11y fixes ([837abf4](https://github.com/SpareBank1/designsystem/commit/837abf475adb0f248f26da85b8ec2ebb38bb6f77))
+* **ffe-accordion-react:** Add hint about ffe-collapse to README ([e451dd7](https://github.com/SpareBank1/designsystem/commit/e451dd7409bc24fa7e41cf88fb325916c43a2e28)), closes [#1323](https://github.com/SpareBank1/designsystem/issues/1323)
+* **ffe-accordion-react:** add missing props export ([dd9855e](https://github.com/SpareBank1/designsystem/commit/dd9855e2baab109bb35930c1f99b1d0f168ecf33))
+* **ffe-accordion-react:** added types ([2634cd5](https://github.com/SpareBank1/designsystem/commit/2634cd5598156808af7e2d353279113b873a5d61))
+* **ffe-accordion-react:** aria-hidden på ikoner ([36dfaf2](https://github.com/SpareBank1/designsystem/commit/36dfaf2066336bc51cfd5d02a9484e8b08adf66c))
+* **ffe-accordion-react:** broadens version of peer dependencies ([c3540a5](https://github.com/SpareBank1/designsystem/commit/c3540a59c6ae4702cff153f08a664113b1ebb6a4))
+* **ffe-accordion-react:** Create ID only once ([dc94925](https://github.com/SpareBank1/designsystem/commit/dc94925b13db7a5c77efa9fac5f571ba0b26066b))
+* **ffe-accordion-react:** fix ts types ([b6d0e76](https://github.com/SpareBank1/designsystem/commit/b6d0e766447b7dda1263384cf4152d822289d038))
+* **ffe-accordion-react:** fixed async issues with setState ([706dee5](https://github.com/SpareBank1/designsystem/commit/706dee5ec47046971e4387bf85073837e24affef))
+* **ffe-accordion-react:** hidden after animation is done ([dff60ae](https://github.com/SpareBank1/designsystem/commit/dff60aee86c077e06d3bd53d0e27f9b0000c065f))
+* **ffe-accordion-react:** legger til role group og aria-label ([b9af352](https://github.com/SpareBank1/designsystem/commit/b9af352a4d17558dd813d1378145d0253236d2a7))
+* **ffe-accordion-react:** oppdater symbol implementering ([2565522](https://github.com/SpareBank1/designsystem/commit/2565522094f884efcc9f5eecda61c9790da0b2cd))
+* **ffe-accordion-react:** reduce vulnerabilities ([7bb8af5](https://github.com/SpareBank1/designsystem/commit/7bb8af5bf84c3cfcaba1f6087b0a6091efce21a7))
+* **ffe-accordion-react:** Remove "expandableContent" prop ([be8043d](https://github.com/SpareBank1/designsystem/commit/be8043d7dd3ea94de174e5b8fe177f9143b78cd3))
+* **ffe-accordion-react:** renamed title tag ([ee21117](https://github.com/SpareBank1/designsystem/commit/ee211179b4795e922128561140621876f69d3136))
+* **ffe-accordion-react:** replace aria-level on heading with heading-tags ([db5b211](https://github.com/SpareBank1/designsystem/commit/db5b211987f513aa812509ce811a2e642143dcf7))
+* **ffe-accordion-react:** set type of button ([7612ac5](https://github.com/SpareBank1/designsystem/commit/7612ac50f4f3c3c13ea37b204e022ff38091052b))
+* **ffe-accordion-react:** transitionstart not triggered ([5c66df8](https://github.com/SpareBank1/designsystem/commit/5c66df8527af3bf0aafa1efb1f871abf5b6df71c))
+* **ffe-accordion-react:** update uuid to version 7.0.0 ([dcf4aee](https://github.com/SpareBank1/designsystem/commit/dcf4aee5cb3341f936343e54c469fc0208bb6f0b))
+* **ffe-accordion-react:** use context for accordion item props ([361a8e7](https://github.com/SpareBank1/designsystem/commit/361a8e7ea7d924ab3c69603c9bb8e149aaa13718))
+* **ffe-accordion-react:** use ffe-buildtool for transpiling ([4e44d6f](https://github.com/SpareBank1/designsystem/commit/4e44d6f7eb68c281eb8ba59ff708e552b2612aae)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-accordion-react:** use our own Collapse component ([04db7bc](https://github.com/SpareBank1/designsystem/commit/04db7bc3a52bb1e14c685d94b95763448c48880f))
+* **ffe-accordion-react:** vis focus bare ved tastaturnavigering ([9c4124f](https://github.com/SpareBank1/designsystem/commit/9c4124f5f4c6c5d7228314cd2b59871593c285ed))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* packages/ffe-accordion-react/package.json to reduce vulnerabilities ([88b1e26](https://github.com/SpareBank1/designsystem/commit/88b1e26a8280ad7811689d93f45f165ea135c79c))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+* Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc1616ffd14a414bc2e27f8c90a687a7a90b93))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+
+
+### Features
+
+* **ffe-accordion-react:** accessibility fixes ([ee40ce7](https://github.com/SpareBank1/designsystem/commit/ee40ce752ce6f9b344dded2068ea195c65d69cdb))
+* **ffe-accordion-react:** Add classname prop for Accordion and AccordionItem ([79859cb](https://github.com/SpareBank1/designsystem/commit/79859cbd85b75597d5c5d25882f35e9f2042dad1))
+* **ffe-accordion-react:** Add isOpen as new prop on items ([401066d](https://github.com/SpareBank1/designsystem/commit/401066dacd0071fc685efff6fcf5fc5afb18c58c))
+* **ffe-accordion-react:** bytter ikon til material ([7df52e9](https://github.com/SpareBank1/designsystem/commit/7df52e9360c20b09bd8504527e9998863a9c845c))
+* **ffe-accordion-react:** DIG-48762 - Added support for supplying id to AccordionItem ([1943cbf](https://github.com/SpareBank1/designsystem/commit/1943cbf7dafe532caa3fcc945c57c9cf59f3a7d0))
+* **ffe-accordion-react:** hvit bakgrunn på accent context ([242c38f](https://github.com/SpareBank1/designsystem/commit/242c38f4367566df16435fa386d33920610b3999))
+* **ffe-accordion-react:** legger til noPadding på body til accordionItem ([6b1ed15](https://github.com/SpareBank1/designsystem/commit/6b1ed1500936be2e146f6ab80568d8fe16261e65))
+* **ffe-accordion-react:** Make AccordionItems controllable ([a2761e8](https://github.com/SpareBank1/designsystem/commit/a2761e8a43c66893af8093aed55514be5a111200)), closes [#155](https://github.com/SpareBank1/designsystem/issues/155)
+* **ffe-accordion-react:** possible to pass properties to button ([4bb3d34](https://github.com/SpareBank1/designsystem/commit/4bb3d3466fbe4817d22cf5f4039bc88f871a14ae))
+* **ffe-accordion-react:** rewrite in ts ([263547e](https://github.com/SpareBank1/designsystem/commit/263547e28b9cd828467166ee0b49468631038f63))
+* **ffe-accordion-react:** update design ([063916e](https://github.com/SpareBank1/designsystem/commit/063916e1e17cd3d1417ffe56fad7c1590d8ec741))
+* **ffe-accordion-react:** update internal dependencies ([793e63b](https://github.com/SpareBank1/designsystem/commit/793e63b1dbde9b222a76f39cfcf88396c2c45c7b))
+* **ffe-accordion-react:** upgrade react to >=18.2.0 ([397b83e](https://github.com/SpareBank1/designsystem/commit/397b83ef400c2dd28ce6559b9eb8fe457f057ffc))
+* **ffe-accordion-react:** Use css transition ([8aae70c](https://github.com/SpareBank1/designsystem/commit/8aae70c196a2b315cd4ebe12b720e23e442c7ef3))
+* **ffe-accordion-react:** Use new modifier class names ([8bf9c03](https://github.com/SpareBank1/designsystem/commit/8bf9c037b44a8e8fd71e2399e47c1bbd0269bf8e))
+* **ffe-accordion-react:** use new version Collapse ([79027a3](https://github.com/SpareBank1/designsystem/commit/79027a3bfdc8e729927506f27b969f66c83f9399))
+
+
+### Performance Improvements
+
+* **ffe-accordion-react:** dont render collapsed content when closed ([b500738](https://github.com/SpareBank1/designsystem/commit/b500738fb54937f32cb64431e3c4d72114520766))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** Dropped support for React <18.2.0
+* **ffe-accordion-react:** manuel types did not match actual types
+* **ffe-accordion-react:** Bytter fra ffe-icons til ffe-symbols
+* **ffe-accordion-react:** Makes the styling package @sb1/ffe-core a required dependency and
+removes it as peer dependency.
+* **ffe-accordion-react:** Changing the API of this component to make it more accessible
+* **ffe-accordion-react:** title is an existing property on li-elements and could cause confusion (TypeScript isn't amused when we override it, either).
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-accordion-react:** `AccordionItem`'s prop `isOpen` is renamed to
+`defaultOpen`, while a new `open` prop let's the consumer control the
+open state of the accordion. To migrate, simply rename all `isOpen`
+props to `defaultOpen`.
+* **ffe-accordion-react:** `AccordionItem`'s props `onOpen` and `onClose` replaced
+with `onToggleOpen(nextIsOpen)`.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-accordion-react:** Replace "expandedContent" with children- & title- prop
+
+This commit changes the structure of ffe-accordion-react by making
+the expandable content of the accordion item the children, while the heading of the item
+is now a new "title"-prop. This previous soulution was somewhat backwards,
+while this change will be more the React way of doing things.
+
+
+
+
+
 ## [13.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@13.2.5...@sb1/ffe-accordion-react@13.2.6) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

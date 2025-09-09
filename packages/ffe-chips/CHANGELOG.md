@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-chips:** Fix semantic colors ([bf08f6a](https://github.com/SpareBank1/designsystem/commit/bf08f6a26f5a968ef1ff450c04c965bcd6541a02))
+* **ffe-chips:** legger til pressed button styling ([91e8f82](https://github.com/SpareBank1/designsystem/commit/91e8f82cceabd5195a57afab0035c1ff7a2c89aa))
+* **ffe-chips:** oppdatert fargevariabel ([9b17e96](https://github.com/SpareBank1/designsystem/commit/9b17e96d8a5df32c34da99d09bdd8fe47c0b8a0a))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+
+
+* feat(ffe-chips)!: oppdartert fokusstate ([8f502e4](https://github.com/SpareBank1/designsystem/commit/8f502e4ef01dfb64e81cc961132f11cb4e43a021))
+* feat(ffe-chips)!: Semantiske farger ([4c96f0a](https://github.com/SpareBank1/designsystem/commit/4c96f0a171f81458c41f866e1f03994ff38fe90a))
+
+
+### Features
+
+* **ffe-chips:** change colors ([49fc122](https://github.com/SpareBank1/designsystem/commit/49fc12267ec22f6425369aab5de4cf67c2a2802c))
+* **ffe-chips:** Fjerner check når chipselectable ikke er valgt ([697edc2](https://github.com/SpareBank1/designsystem/commit/697edc28f35d28b15f22b5e9aa0072bfac6bb136))
+* **ffe-chips:** initial commit ([c419b53](https://github.com/SpareBank1/designsystem/commit/c419b5328e840df78f61d4a7da96543bee9e87b7))
+* **ffe-chips:** tilbyr kompilert css i tillegg til less ([d9d5e8d](https://github.com/SpareBank1/designsystem/commit/d9d5e8d0895fab3e669ffdd07913ddd012d627a1))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* Komponenten er oppdatert til å støtte semantiske farger. klassen `ffe-chip--on-colored-bg` er derfor fjernet og en må oppdatere `ffe-core` for at dark mode og accent mode av komponenten skal fortsette å fungere.
+
+
+
+
+
 # [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips@3.0.4...@sb1/ffe-chips@3.1.0) (2025-09-09)
 
 

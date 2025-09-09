@@ -3,6 +3,148 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-dropdown-react:** add author to package.json ([4ee9a22](https://github.com/SpareBank1/designsystem/commit/4ee9a228f3fa2ff368ded8dd874db5c9aa49822a))
+* **ffe-dropdown-react:** Add missing proptypes check ([77bb118](https://github.com/SpareBank1/designsystem/commit/77bb118f864075cbb8513c2022ec3a5ca74edcd5))
+* **ffe-dropdown-react:** Added defaultProps false for dark variant. ([69d109b](https://github.com/SpareBank1/designsystem/commit/69d109b6c809ea4bbef52c2045326e0fbf7af522))
+* **ffe-dropdown-react:** broadens version of peer dependencies ([09f3640](https://github.com/SpareBank1/designsystem/commit/09f364091814ca77e5f4c7a8b18c2a3c4a27b02c))
+* **ffe-dropdown-react:** ffe-form compat ([d52f3bf](https://github.com/SpareBank1/designsystem/commit/d52f3bf909d16c2e6d53fc4ecf1dcd0647184275))
+* **ffe-dropdown-react:** fixed type definition of innerref ([16caf9c](https://github.com/SpareBank1/designsystem/commit/16caf9ced84d5d069d8e5682d4fefff8c2af8833))
+* **ffe-dropdown-react:** fixing incorrect types ([64b7adc](https://github.com/SpareBank1/designsystem/commit/64b7adcd8ba518351bc7570306df5efceeab4ff1))
+* **ffe-dropdown-react:** fjerner gjenglemte referanser til --dark ([e89f245](https://github.com/SpareBank1/designsystem/commit/e89f2455dee35b147a14eb3ff79a34b7261ced0c))
+* **ffe-dropdown-react:** reduce vulnerabilities ([f0eb019](https://github.com/SpareBank1/designsystem/commit/f0eb01913c24163a04c3c3346481cf1fc40f6758))
+* **ffe-dropdown-react:** use buildtool for transpiling ([7d4c40c](https://github.com/SpareBank1/designsystem/commit/7d4c40ca2953541e9200e8e6ba57e6c5440ae365)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-dropdown-react:** use react.componentsprops instead of react.htmlprops ([6d98b0c](https://github.com/SpareBank1/designsystem/commit/6d98b0c79b100b56eaed93d1acaea491ba6c18e7))
+* packages/ffe-dropdown-react/package.json to reduce vulnerabilities ([9493e8c](https://github.com/SpareBank1/designsystem/commit/9493e8cd7fe5d970f16cd910d03a25f14f954478))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-dropdown-react:** Import ffe-dropdown-react ([9234074](https://github.com/SpareBank1/designsystem/commit/92340749a94f23986f5dc3ecf8e1d5b7ae60b7ed))
+
+
+* feat(ffe-dropdown-react)!: nye fargevariabler, fokusstate og aria-invalid state ([f165c4e](https://github.com/SpareBank1/designsystem/commit/f165c4e39338bc41c2695287ccd5441173144f9c))
+
+
+### Features
+
+* **ffe-dropdown-react:** Added dark property with documentation ([28bc5f4](https://github.com/SpareBank1/designsystem/commit/28bc5f4db32bcb557707847c6be6c644e8e6548b))
+* **ffe-dropdown-react:** added optional property innerref ([4867d27](https://github.com/SpareBank1/designsystem/commit/4867d27a61a7549de9a1258d94b8d2e6a455531d))
+* **ffe-dropdown-react:** Added type definitions for typescript ([9e91e0c](https://github.com/SpareBank1/designsystem/commit/9e91e0c7ec9a570cb51f1966aeb4d10030b7e336))
+* **ffe-dropdown-react:** hvit bakgrunn på accent context ([dc65bf3](https://github.com/SpareBank1/designsystem/commit/dc65bf301ee175cccff8bf6b6f797b8969530f98))
+* **ffe-dropdown-react:** rewrite to ts ([0d29a53](https://github.com/SpareBank1/designsystem/commit/0d29a53c6f997d0268044a8d21a1ac252d3efaca))
+* **ffe-dropdown-react:** update internal dependencies ([c6e79e4](https://github.com/SpareBank1/designsystem/commit/c6e79e4aa641aeda9c7126c193f77f8c0d3ee4f4))
+* **ffe-dropdown-react:** upgrade react to >=18.2.0 ([f178bb1](https://github.com/SpareBank1/designsystem/commit/f178bb12e2fa579eec14ed378484f76d6a5f44b5))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* **ffe-dropdown-react:** Dropped support for React <18.2.0
+* **ffe-dropdown-react:** innerRef -> refm default export -> named export
+* **ffe-dropdown-react:** Makes the styling package @sb1/ffe-form a required
+dependency and removes it as peer dependency.
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-dropdown-react:** Simplify the ffe-dropdown-react implementation.
+
+This commit simplifies the component, and leaves more of the
+compositional power to the consumer.
+
+In order to migrate to this new major, the consumer should wrap
+their existing component in `ffe-form-react`'s `InputGroup`
+component. This will provide most of the functionality that this
+major removes from `ffe-dropdown-react`. Please refer to the
+documentation for new usage information.
+
+
+
+
+
 ## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@9.0.6...@sb1/ffe-dropdown-react@9.0.7) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

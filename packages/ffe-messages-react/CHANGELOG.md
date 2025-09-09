@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-messages-react:** Gi bedre feilmelding ved bruk av utdatert property ([34a4ca5](https://github.com/SpareBank1/designsystem/commit/34a4ca57b1e08f61e8fcabea5f2bc0f8f5fb1fdf))
+* **ffe-messages-react:** provided role prop was not used in component ([cbe4849](https://github.com/SpareBank1/designsystem/commit/cbe48497159323ccab1f976fae0c1793a8b792c7))
+* **ffe-messages-react:** remove ffe-body-text ([aaee724](https://github.com/SpareBank1/designsystem/commit/aaee724dc1c740111fdf8a3ee538d17675aec449))
+* **ffe-messages-react:** update dep to ffe-messages ([a6631cc](https://github.com/SpareBank1/designsystem/commit/a6631ccd7aea2473817810ba37e64dfbb55d69d9))
+
+
+* feat(ffe-messages-react)!: endrer til default mode i accent context ([2b56246](https://github.com/SpareBank1/designsystem/commit/2b56246587de93ba5755570404caa56b77d8613e))
+
+
+### Features
+
+* **ffe-messages-react:** fjerner oncoloredbg. ([5c2a5e3](https://github.com/SpareBank1/designsystem/commit/5c2a5e30cafa33382854ec91664ab6aff3ec96d9))
+* **ffe-messages-react:** initial commit ([d9ebf12](https://github.com/SpareBank1/designsystem/commit/d9ebf12c8adb1ba5da4ccd52ad07f25722f0da73))
+* **ffe-messages-react:** initial commit ([190937e](https://github.com/SpareBank1/designsystem/commit/190937ec2115daccf5c7f29ed3e786d4bf51d86f))
+* **ffe-messages-react:** initial commit ([9739be1](https://github.com/SpareBank1/designsystem/commit/9739be11520dc93e8fbb4e18ac346f411b1d2213))
+* **ffe-messages-react:** initial release ([de1ba88](https://github.com/SpareBank1/designsystem/commit/de1ba8811ba9c34823fcfaf710a5c078255d8dc4))
+* **ffe-messages-react:** start from version 1.0.0 ([02de9ea](https://github.com/SpareBank1/designsystem/commit/02de9eafb4eb0e5728d21c24009caef749a3b256))
+* **ffe-messages-react:** upgrade react to >=18.2.0 ([4905d2b](https://github.com/SpareBank1/designsystem/commit/4905d2bacdfe099def10bf1dd325b257c279713a))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* **ffe-messages-react:** Fjerner onColoredBg. Bruk .ffe-accent-mode på området i
+stedet. Typen NEWS er også fjernet. Warning er introdusert.
+* **ffe-messages-react:** This is not a real breaking change.
+just to start from version 1.0.0
+* **ffe-messages-react:** This is not a real breaking change.
+just to start from version 1.0.0
+* **ffe-messages-react:** Dropped support for React <18.2.0
+* **ffe-messages-react:** version 1.0.0
+
+
+
+
+
 ## [3.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages-react@3.0.6...@sb1/ffe-messages-react@3.0.7) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-messages-react

@@ -3,6 +3,157 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-tables:** added css print for row with expanded content ([a1af38a](https://github.com/SpareBank1/designsystem/commit/a1af38abcf5cd39064788a088db63045e6457e80))
+* **ffe-tables:** added peerDependency to ffe-core@^13.0.0 ([5f25bff](https://github.com/SpareBank1/designsystem/commit/5f25bff6d1c5d9dcb3f0b39bf04ec2ec3cbb7fd5))
+* **ffe-tables:** adjust padding ([f05395e](https://github.com/SpareBank1/designsystem/commit/f05395eec40bdef5230721e3f2b5645f818b2856))
+* **ffe-tables:** broadens version of peer dependencies ([1efd247](https://github.com/SpareBank1/designsystem/commit/1efd2477f234694c139566c1ac6c3b3ace906c26))
+* **ffe-tables:** bytter ut ffe-icons med ffe-symbols ([179aa34](https://github.com/SpareBank1/designsystem/commit/179aa3487b3b156424823cd2b17bc90a38518850))
+* **ffe-tables:** bytter ut utfaset farge ([d2e326e](https://github.com/SpareBank1/designsystem/commit/d2e326eab0483cdd601cb917541364190d021ffb))
+* **ffe-tables:** change text values to rem ([41e25d4](https://github.com/SpareBank1/designsystem/commit/41e25d4f58f0ca5d4a2afc519852d447e0b3ff6d))
+* **ffe-tables:** darkmode styling missing for table cell ([d5b0728](https://github.com/SpareBank1/designsystem/commit/d5b0728b4242e9899af64901d175ba413fb279e0))
+* **ffe-tables:** ensure caption is more visible in dark mode ([046d9ad](https://github.com/SpareBank1/designsystem/commit/046d9ad7d2ac95724e954bc87d782aff85104cb7))
+* **ffe-tables:** escape / in less ([6925840](https://github.com/SpareBank1/designsystem/commit/6925840ef490fbe05fda196a0526dd048dbfbd6f))
+* **ffe-tables:** fix header hover bug on mobile ([f1ff989](https://github.com/SpareBank1/designsystem/commit/f1ff989572849edfc39a258325140e687522fba8))
+* **ffe-tables:** Fix overlapping media queries ([756b86a](https://github.com/SpareBank1/designsystem/commit/756b86a6a3a64ae284c4e1c2a4b7188d5b97b8da))
+* **ffe-tables:** fjern museo sans som fallback font ([f579476](https://github.com/SpareBank1/designsystem/commit/f5794762b543420b3c6fe9dd46a5d8fe99d28d7f))
+* **ffe-tables:** hovering styles only when using pointer/mouse ([1aa5aad](https://github.com/SpareBank1/designsystem/commit/1aa5aad602e83dbe15ebc6dacd1f3c78b2001239))
+* **ffe-tables:** legger til default font ([0bba263](https://github.com/SpareBank1/designsystem/commit/0bba26392785ba501693ba7fbc999293b21fa2a0))
+* **ffe-tables:** legger til riktig bakgrunnsfarge på table header og cell, ved selected og pressed ([946e00c](https://github.com/SpareBank1/designsystem/commit/946e00cb6b7c2d56f3156d1208187ddd03c65aa7))
+* **ffe-tables:** legger til riktig farger på hover og pressed selected ([3a4ccc3](https://github.com/SpareBank1/designsystem/commit/3a4ccc3805d406c37809382b1270e6e970f1af3c))
+* **ffe-tables:** oppdatert fargevariabel ([854a13c](https://github.com/SpareBank1/designsystem/commit/854a13ccce93e2ffe6c8f3c2f35ef84c5fe30c16))
+* **ffe-tables:** reduce vulnerabilities ([5be05b7](https://github.com/SpareBank1/designsystem/commit/5be05b7db227de7da9018a3d44e4764541e71c41))
+* **ffe-tables:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([1af6589](https://github.com/SpareBank1/designsystem/commit/1af6589fa3488077e888299bb1002de440d86359))
+* **ffe-tables:** replace hardcoded spacing with variables ([04bce27](https://github.com/SpareBank1/designsystem/commit/04bce27dc00793f06139b42252742de6afa2499d))
+* **ffe-tables:** retter farge på table-headinger ([acd2e20](https://github.com/SpareBank1/designsystem/commit/acd2e20bd8875d5a1649ccdf683e70ec8cf56903))
+* **ffe-tables:** semantiske farger i tables ([3f43a95](https://github.com/SpareBank1/designsystem/commit/3f43a957251c6918bf2789648cb54372f46fd8ac))
+* **ffe-tables:** sort buttons should have full width on responsive table ([b73fc2d](https://github.com/SpareBank1/designsystem/commit/b73fc2d9468842b805c741e3545382cdfcfc3149))
+* **ffe-tables:** td and th should not wrap ([997c33b](https://github.com/SpareBank1/designsystem/commit/997c33b9a461394ed9f694aef2f3c24134fc3d7f))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+* feat(ffe-tables)!: nye fargevariabler ([8d1c390](https://github.com/SpareBank1/designsystem/commit/8d1c39084804d1f32b403a6d1b72cdc504a36cde))
+
+
+### Features
+
+* **ffe-tables:** add :host for shadow dom support ([5063227](https://github.com/SpareBank1/designsystem/commit/506322713129cad63c39e5d0dec80e488b99e0bc))
+* **ffe-tables:** add darkmode styling overrides ([301f4ee](https://github.com/SpareBank1/designsystem/commit/301f4ee73f009369392a4833ac0b07798e7fcb5f))
+* **ffe-tables:** complete rewrite ([fa0c534](https://github.com/SpareBank1/designsystem/commit/fa0c534e059ae76bed7f5d196a30c5af05de2965))
+* **ffe-tables:** legger til støtte for theming ([d62f63f](https://github.com/SpareBank1/designsystem/commit/d62f63f286f3d063c211da966383a7c7c74b636f))
+* **ffe-tables:** oppdaterte farger iht ny profil ([77f1e03](https://github.com/SpareBank1/designsystem/commit/77f1e03969d812ae7a05bd6b1e123d1e2a209825))
+* **ffe-tables:** regard-color-scheme-preference for darkmode ([700d0cd](https://github.com/SpareBank1/designsystem/commit/700d0cd7ef07aa0999ec3fc5c88430e80433af9b))
+* **ffe-tables:** responsive table ([7e88369](https://github.com/SpareBank1/designsystem/commit/7e883690242a68cf8b2349073a507b2dc2dfed73))
+* **ffe-tables:** tilbyr kompilert css i tillegg til less ([f0a813e](https://github.com/SpareBank1/designsystem/commit/f0a813e9168a94b5951125218c4fce7fc4c5d4e7))
+* **ffe-tables:** update internal dependencies ([b75c5ee](https://github.com/SpareBank1/designsystem/commit/b75c5ee041cd339373576f289a43ced2138db43b))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* **ffe-tables:** endrede farger og tildels former i tables
+* **ffe-tables:** ffe-table must be wrapped in ffe-table-container
+* **ffe-tables:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-tables:** complete rewrite of component
+* **ffe-tables:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* **ffe-tables:** Makes the styling package @sb1/ffe-core a required
+dependency and removes it as peer dependency.
+* **ffe-tables:** nye farger og endret focus-state
+* **ffe-tables:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+* **ffe-tables:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
 ## [19.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@19.0.3...@sb1/ffe-tables@19.0.4) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-tables

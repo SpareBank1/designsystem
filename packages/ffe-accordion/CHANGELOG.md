@@ -3,6 +3,170 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-accordion:** add gap between button and text ([259e5d3](https://github.com/SpareBank1/designsystem/commit/259e5d3caa2fedf058ab009ea7ea33ef167e0b5a))
+* **ffe-accordion:** added peerDependency to ffe-core@^13.0.0 ([c794897](https://github.com/SpareBank1/designsystem/commit/c7948976503a9da9f348a6c814c2b5c06baba12e))
+* **ffe-accordion:** Background transition for blue accordion ([85110f7](https://github.com/SpareBank1/designsystem/commit/85110f70e85b6010d7bf4a73f0e39e1ae3a5104d)), closes [#398](https://github.com/SpareBank1/designsystem/issues/398)
+* **ffe-accordion:** broadens version of peer dependencies ([1e1c3ef](https://github.com/SpareBank1/designsystem/commit/1e1c3efbe665a22eda647581de0d966395c582b9))
+* **ffe-accordion:** cleanup meta data in package.json ([4ff2fbd](https://github.com/SpareBank1/designsystem/commit/4ff2fbd58c4fdf1df2d095b06ea0b41ee6706529))
+* **ffe-accordion:** correct easing function for height transition ([da75ef4](https://github.com/SpareBank1/designsystem/commit/da75ef4e6ed41e376ab6fe230c4a52c85f6b5fc4))
+* **ffe-accordion:** endre måten ikon farge settes ([077e2b1](https://github.com/SpareBank1/designsystem/commit/077e2b105c2dc2f8fb42532903a0f63fafe86ced))
+* **ffe-accordion:** fjerner bruk av depricated variabel ([26029af](https://github.com/SpareBank1/designsystem/commit/26029af2272dddfa5c9466254e1bc407a4fc74b8))
+* **ffe-accordion:** hovering styles only when using pointer/mouse ([1e77004](https://github.com/SpareBank1/designsystem/commit/1e77004e153c5add97539b6f30b3f4fa9772fde8))
+* **ffe-accordion:** legger til bakgrunnsfarge på accordion ([bbe0fce](https://github.com/SpareBank1/designsystem/commit/bbe0fce49514cf745293b3bc1a0256e7d45bb879))
+* **ffe-accordion:** legger til default font ([0e1b3cb](https://github.com/SpareBank1/designsystem/commit/0e1b3cba4ca5193aaae64f4d256e59fd7642ce73))
+* **ffe-accordion:** replace hardcoded spacing with variables ([a45ed42](https://github.com/SpareBank1/designsystem/commit/a45ed429ff8098cee66fca0db721f915fe4338d3))
+* **ffe-accordion:** specifity issue on headings ([c5a4c4a](https://github.com/SpareBank1/designsystem/commit/c5a4c4adfeca704890022618562b7e60c9eb2673))
+* **ffe-accordion:** text should not be centered ([35ee5a5](https://github.com/SpareBank1/designsystem/commit/35ee5a5d9351f9ccee6eb9731939c1b25f6883f6))
+* **ffe-accordion:** use `break-all` to wrap words ([e17a67c](https://github.com/SpareBank1/designsystem/commit/e17a67cb8250f8c2cd177312cfe07bacd53ec8f0))
+* **ffe-accordion:** use overflow-wrap:anywhere with word-break:normal ([00fa761](https://github.com/SpareBank1/designsystem/commit/00fa761012084eb89a8577a26be1e8fc4ae2a558))
+* **ffe-accordion:** venstrejusterer tittel istedenfor sentrert ([49c646e](https://github.com/SpareBank1/designsystem/commit/49c646e004db4d46b64dab18cf3b775c57dd05bd))
+* **ffe-accordion:** vis focus bare ved tastaturnavigering ([a0dd901](https://github.com/SpareBank1/designsystem/commit/a0dd901b000f11af8854b6c914d253567eea38e6))
+* **ffe-accordion:** word-break content ([97d8ca8](https://github.com/SpareBank1/designsystem/commit/97d8ca8a6810a20e58bba9e91a130992836d1715))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+* feat(ffe-accordion)!: nye fargevariabler og fokusstil ([eaa72a7](https://github.com/SpareBank1/designsystem/commit/eaa72a76f3acfad6574b48d15617f1ac6fa9d74d))
+
+
+### Features
+
+* **ffe-accordion:** add :host for shadow dom support ([7f59333](https://github.com/SpareBank1/designsystem/commit/7f5933378ffc9ad51ac944c576e2bffc50b4b8cb))
+* **ffe-accordion:** add darkmode styling overrides ([60a14fb](https://github.com/SpareBank1/designsystem/commit/60a14fb815887ab190dadc0a42fba3fdae5d5255))
+* **ffe-accordion:** Decrease use of modifiers ([9e5b575](https://github.com/SpareBank1/designsystem/commit/9e5b575383d62c59e38fe4780e5518d85beea59d))
+* **ffe-accordion:** justerte farger iht ny profil ([952695c](https://github.com/SpareBank1/designsystem/commit/952695cfb65bf0a655374667a165a0b9a50be9f0))
+* **ffe-accordion:** legg til theming og rett fargefeil ([b261c75](https://github.com/SpareBank1/designsystem/commit/b261c7564138d4529585f774ad82fff014a78254))
+* **ffe-accordion:** legger til noPadding på body til accordion ([8a73443](https://github.com/SpareBank1/designsystem/commit/8a73443ea54bf6679482ae435fe493192dc78f0c))
+* **ffe-accordion:** modernisering og oppdatering til semantiske farger ([fdd902c](https://github.com/SpareBank1/designsystem/commit/fdd902cd3d0c6cb48d505909526a052ee3f9b123))
+* **ffe-accordion:** nye darkmodefarger fra core, oppdatert fargevariabel og hvit bakgrunn på accent context ([fe5f0ad](https://github.com/SpareBank1/designsystem/commit/fe5f0ad515b92a5c198b1946e1c7b7798ea8c5b1))
+* **ffe-accordion:** regard-color-scheme-preference for darkmode ([d50a5d6](https://github.com/SpareBank1/designsystem/commit/d50a5d61e7c5b82b76224c9f3f8aa15fd2d9af6b))
+* **ffe-accordion:** simplified and more accessible ([c9727d8](https://github.com/SpareBank1/designsystem/commit/c9727d84f81433f534ee7e1c868984ae58a68495))
+* **ffe-accordion:** tilbyr kompilert css i tillegg til less ([8651821](https://github.com/SpareBank1/designsystem/commit/865182170aca1b9ce6c018402e4a44573ccce86f))
+* **ffe-accordion:** update design ([c265a12](https://github.com/SpareBank1/designsystem/commit/c265a126c505a0c6e2583d7407365808698f2c3e))
+* **ffe-accordion:** update internal dependencies ([1b298ff](https://github.com/SpareBank1/designsystem/commit/1b298ff9cc419a72b6f6abd5fded3c8a413aab77))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* **ffe-accordion:** Nye semantiske farger. Slettet theme.less. Ingen
+endringer nødvendig
+* **ffe-accordion:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-accordion:** Endre fra fill til color på ikon pga nye ikoner
+* **ffe-accordion:** Makes the styling package @sb1/ffe-core a required
+dependency and removes it as peer dependency.
+* **ffe-accordion:** nye farger kan medføre regresjonsfeil
+* **ffe-accordion:** New API for styling the accordion
+* **ffe-accordion:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* **ffe-accordion:** The modified class `ffe-accordion--blue` supersedes
+the modified class `ffe-accordion-item--blue` and all element level
+classes of `ffe-accordion-item` with the `--blue` modifier, i.e.
+`ffe-accordion-item__(toggler,icon,content)--blue` are no longer in use.
+
+The modified class `ffe-accordion-item--open` is still needed, but the
+modifier `--open` on element level classes in this block is not
+necessary any longer.
+
+Important: The collapse and expand animation of accordion items requires
+scripting, because a css transition to `height: auto` does not work. A
+script should measure the height of the child element
+`ffe-accordion-item__content` (i.e. using the DOM element's property
+`scrollHeight`) and set the height of the surrounding element with class
+name `ffe-accordion-item__content-container` by changing the inline
+style declaration accordingly (i.e. the property `style.height`).
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
 ## [13.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@13.1.4...@sb1/ffe-accordion@13.1.5) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

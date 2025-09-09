@@ -3,6 +3,183 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-grid-react:** add missing background colors to typescript declarations ([0816855](https://github.com/SpareBank1/designsystem/commit/0816855c40f07d8f812d33dfa34017ea053723a2))
+* **ffe-grid-react:** broadens version of peer dependencies ([1827e12](https://github.com/SpareBank1/designsystem/commit/1827e12d8decd0ee3d2fe37c7c8689a952826b9e))
+* **ffe-grid-react:** erstatter let med const for bakgrunnsfarge ([1f3e81e](https://github.com/SpareBank1/designsystem/commit/1f3e81ed64d3c38f1369d00235b1a09c3d47d76f))
+* **ffe-grid-react:** fiks typeeksportering ([9079df4](https://github.com/SpareBank1/designsystem/commit/9079df43b9d0c84fe7e9d482b65823b2a9ec4d3c))
+* **ffe-grid-react:** Fix in typescript definition, children should not be required. ([cdfeaa8](https://github.com/SpareBank1/designsystem/commit/cdfeaa83529a77db7f5e7d5b2ce6651f90b40d8b))
+* **ffe-grid-react:** Fix incorrect propType ([e26c1d6](https://github.com/SpareBank1/designsystem/commit/e26c1d6c070e84e79ac1e62b4c9e55543b2c50bf))
+* **ffe-grid-react:** Gi bedre feilmelding ved bruk av utdatert property ([37e1263](https://github.com/SpareBank1/designsystem/commit/37e12631727fa4f5c7d025d11228bd0c10bcc8bc))
+* **ffe-grid-react:** legger til center i ts-props ([83f07bd](https://github.com/SpareBank1/designsystem/commit/83f07bd5773b3b96f4e4fd5f8f8df2c142f1da00))
+* **ffe-grid-react:** legger tilbake prop for sentrert innhold ([7860022](https://github.com/SpareBank1/designsystem/commit/786002268fee6bde4800b92e98848cbdc2f438ab))
+* **ffe-grid-react:** Reduce console.error noise with inline-grid ([697318d](https://github.com/SpareBank1/designsystem/commit/697318d1f9f89872032ab61dd4e98e137e8934c8))
+* **ffe-grid-react:** reduce vulnerabilities ([680ad96](https://github.com/SpareBank1/designsystem/commit/680ad969eeafc1eb6fffb4e074cc0fed50f06435))
+* **ffe-grid-react:** remove check for nested grids ([6304ddc](https://github.com/SpareBank1/designsystem/commit/6304ddcbfdc6373bec426484c116463069c3772a))
+* **ffe-grid-react:** remove default props ([f735573](https://github.com/SpareBank1/designsystem/commit/f73557368d5b3604babf98a7a540bbd33afb3f8d))
+* **ffe-grid-react:** remove warning when running tests ([aeefcb3](https://github.com/SpareBank1/designsystem/commit/aeefcb3e5b70a8360525a8af1f058b78b2d1f75e))
+* **ffe-grid-react:** Removed FFE support for some backgrounds ([713ab6d](https://github.com/SpareBank1/designsystem/commit/713ab6d78798453c3602888198be076a7af66768)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+* **ffe-grid-react:** støtte for bakgrunnsfarge i full bredde ([ee027ba](https://github.com/SpareBank1/designsystem/commit/ee027ba162327a59ea536a4d975e4aad93b73387))
+* **ffe-grid-react:** use buildtool for transpiling ([9c7c78d](https://github.com/SpareBank1/designsystem/commit/9c7c78d2eefacdcd30b4dc413be6aa4bd592503a)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-grid-react:** use react.componentsprops instead of react.htmlprops ([66ab0fd](https://github.com/SpareBank1/designsystem/commit/66ab0fd16aa70b9465683464fbc89722fd28c132))
+* **ffe-grid-react:** use react.htmlprops instead of react.componentprops ([c583b38](https://github.com/SpareBank1/designsystem/commit/c583b384da788ca10487255479033c097e874a0b))
+* packages/ffe-grid-react/package.json to reduce vulnerabilities ([d81834c](https://github.com/SpareBank1/designsystem/commit/d81834cc927050296e7d06657b897f854a5f58a4))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+
+
+### Code Refactoring
+
+* **ffe-grid-react:** Normalized padding props ([97ffc71](https://github.com/SpareBank1/designsystem/commit/97ffc716b7453193b547209e7e76e6cc08ffe782)), closes [#282](https://github.com/SpareBank1/designsystem/issues/282)
+
+
+### Features
+
+* **ffe-grid-react:** Add centerText prop to GridCol ([a116f24](https://github.com/SpareBank1/designsystem/commit/a116f241e188dbe5394ec58e111fecd667b83b40))
+* **ffe-grid-react:** Add support for col bg ([bd16761](https://github.com/SpareBank1/designsystem/commit/bd1676196574b369cbe592510bc861b1de04f40a))
+* **ffe-grid-react:** Add support for inline grid ([9966b86](https://github.com/SpareBank1/designsystem/commit/9966b86a48ac266fc8df96473d5a12eed2d58ba6))
+* **ffe-grid-react:** Add support for more backgrounds ([6a4062a](https://github.com/SpareBank1/designsystem/commit/6a4062a4d832c631d850cbc3b6b032f53f5e1f4d)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+* **ffe-grid-react:** add white as background color ([5c64729](https://github.com/SpareBank1/designsystem/commit/5c64729316784f4814060f27dbf4ca561afcadcb))
+* **ffe-grid-react:** Added type definitions for typescript ([524cf3e](https://github.com/SpareBank1/designsystem/commit/524cf3eb524738f4d21ff786622def02b5a73fee))
+* **ffe-grid-react:** Added type definitions for typescript ([4dd607a](https://github.com/SpareBank1/designsystem/commit/4dd607af79c8c7980c68b6c436113999794e6107))
+* **ffe-grid-react:** Avoid circular imports ([dbfc95b](https://github.com/SpareBank1/designsystem/commit/dbfc95bae03bdc5187585a9dc8f43f9aad13454c))
+* **ffe-grid-react:** eksporter size modifier type ([f9d222f](https://github.com/SpareBank1/designsystem/commit/f9d222f8c3321f5d2e3b549c274412d3185a3b4e))
+* **ffe-grid-react:** fjerner condensed og inline, legger til modifiere for gap og spacing ([453e254](https://github.com/SpareBank1/designsystem/commit/453e2547e75070772f3cbeb5ff7113b34bdf9272))
+* **ffe-grid-react:** legg til vann-30 som bakgrunnsfarge ([a3b5346](https://github.com/SpareBank1/designsystem/commit/a3b5346cdf9cab924356d6d6953e877a49a30e32))
+* **ffe-grid-react:** legger til mørk bakgrunnsfarge i GridCol ([caff39a](https://github.com/SpareBank1/designsystem/commit/caff39a23f6c17a63af17f3e534a3cb0fec3f6f0))
+* **ffe-grid-react:** legger til mørk bakgrunnsfarge i GridRow ([1997a8e](https://github.com/SpareBank1/designsystem/commit/1997a8e39f4ecd46311924fbafcfae84a9918959))
+* **ffe-grid-react:** legger til støtte for responsiv spacing ([a12a961](https://github.com/SpareBank1/designsystem/commit/a12a9615f085366422aef5343b7f52be5bc95212))
+* **ffe-grid-react:** omskriving av grid ([bf429d8](https://github.com/SpareBank1/designsystem/commit/bf429d89cb6e5af8553026ca562d57d51888edcf))
+* **ffe-grid-react:** oppdater bakgrunnsfarger ([35271a8](https://github.com/SpareBank1/designsystem/commit/35271a8b4d6e2bd248439f818c590aba25051049))
+* **ffe-grid-react:** rewrite to ts ([192e27d](https://github.com/SpareBank1/designsystem/commit/192e27d85df48458bb1d20c179ccdb032c293e6b))
+* **ffe-grid-react:** semantiske farger i grid ([9a7ef98](https://github.com/SpareBank1/designsystem/commit/9a7ef987c369065b665b1a2f0d2692bfb7cf6b1c))
+* **ffe-grid-react:** update internal dependencies ([17aa557](https://github.com/SpareBank1/designsystem/commit/17aa557475260292e6898bb02ebc35da796b094c))
+* **ffe-grid-react:** upgrade react to >=18.2.0 ([3f6c17e](https://github.com/SpareBank1/designsystem/commit/3f6c17e281dbb73f7970d55f045060e66d8de428))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid-react:** fjernet gamle bakgrunnsfarger og erstattet med semantiske
+* **ffe-grid-react:** Dropped support for React <18.2.0
+* **ffe-grid-react:** does not throw for invalid colors
+* **ffe-grid-react:** Makes the styling package @sb1/ffe-grid a required
+dependency and removes it as peer dependency.
+* **ffe-grid-react:** og -modifieren fjernes, og erstattes med modifiere for gap, margin og padding
+* **ffe-grid-react:** grid-styling er skrevet om, og mange modifiere er fjernet
+* **ffe-grid-react:** Alle bakgrunnsfarge properties har fått nye navn til
+å passe den nye visuelle profilen. Bruk av gamle navn/verdier vil gi feilmelding.
+Det er også fjernet en del alternativer som ikke lenger skal bli brukt.
+
+Nye fargealternativer er:
+- frost-30
+- sand
+- sand-70
+- sand-30
+- syrin-70
+- syrin-30
+- vann
+- fjell
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-grid-react:** Support for background colours that are not listed as backgrounds in the [design guide](https://design.sparebank1.no/visuell-identitet.html#visuell-identitet_farger) has been removed. This means the background props `blue-cobalt`, `blue-royal` and `purple-magenta`. If you were using any of those on rows or columns, please consider switching to one of those that are supported by FFE directly or add your own custom CSS classes in userland in order to have these colours.
+* **ffe-grid-react:** Removed the "no" prefix from the padding props.
+For `GridCol`, `noBottomPadding` is now `bottomPadding`.
+For `Grid`, `noTopPadding` is now `topPadding`.
+
+The default behaviour has not been changed, so to migrate you need to
+* Replace all usage of `noBottomPadding={true}` with `bottomPadding={false}` on GridCols.
+* Replace all usage of `noTopPadding={true}` with `topPadding={false}` on Grids.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
 ## [16.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@16.0.32...@sb1/ffe-grid-react@16.0.33) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react

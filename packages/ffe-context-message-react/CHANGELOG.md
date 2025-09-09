@@ -3,6 +3,160 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-context-message-react:** added missing ts type ([cf2ab8f](https://github.com/SpareBank1/designsystem/commit/cf2ab8f98b154b057a15780ebde819d6427a64a0))
+* **ffe-context-message-react:** Allow custom header tag ([9282f48](https://github.com/SpareBank1/designsystem/commit/9282f48247cd80f32cd98d331fc79ef07064fd3d))
+* **ffe-context-message-react:** broadens version of peer dependencies ([fdd06cd](https://github.com/SpareBank1/designsystem/commit/fdd06cdd7614f8a0b9c20f03be1c4fa5ca05b3b8))
+* **ffe-context-message-react:** Do not set aria-labelledby when referenced header is not rendered ([3da2550](https://github.com/SpareBank1/designsystem/commit/3da2550cf571e0d04bed8428fd6c17b693cff2eb))
+* **ffe-context-message-react:** Enable class overrides ([c8540e5](https://github.com/SpareBank1/designsystem/commit/c8540e53f4a5398246a8f421030dbd7f28b57fa0)), closes [#377](https://github.com/SpareBank1/designsystem/issues/377)
+* **ffe-context-message-react:** Endre default tittel element fra div til h2 ([7c2a0c2](https://github.com/SpareBank1/designsystem/commit/7c2a0c2672eb454ccb8d92780614666d8408ccf3))
+* **ffe-context-message-react:** endre navn og meldingtype verdi for tips ([6197e38](https://github.com/SpareBank1/designsystem/commit/6197e3857579a1baf2d129556a8c5b17e5c62515))
+* **ffe-context-message-react:** endrer fra ffe-icons til ffe-symbols ([f913565](https://github.com/SpareBank1/designsystem/commit/f913565e277d265e2a07056e6214f41f4e820c59))
+* **ffe-context-message-react:** feil ikon i ContextInfoMessage-compact ([c87ae5f](https://github.com/SpareBank1/designsystem/commit/c87ae5f3f70651730c86cb37fec556af210ba2e3))
+* **ffe-context-message-react:** fiks typerna ([313902d](https://github.com/SpareBank1/designsystem/commit/313902d1ec6cb90cc478ce4a80172b5c1770753a))
+* **ffe-context-message-react:** fikse feilmeldinger i konsollet ved alert=false ([ee63216](https://github.com/SpareBank1/designsystem/commit/ee6321630cd778fb448cff0e80ad3820d08faeb4))
+* **ffe-context-message-react:** fix failing test ([0f5f136](https://github.com/SpareBank1/designsystem/commit/0f5f136fbedc3f5c8ebf94d6712c722c1f48db80))
+* **ffe-context-message-react:** fjern referanse til weight prop ([8309daa](https://github.com/SpareBank1/designsystem/commit/8309daac38c3c82970249f90a3222d8f68f94a43))
+* **ffe-context-message-react:** Gi bedre feilmelding ved bruk av utdatert property ([e760b20](https://github.com/SpareBank1/designsystem/commit/e760b20820aef4c437ffed3de2c3cdd0f6526e17))
+* **ffe-context-message-react:** icon override not possible anymore ([2a26d1a](https://github.com/SpareBank1/designsystem/commit/2a26d1ae91084e269d22b6f4da1a3704d0e2c398))
+* **ffe-context-message-react:** legg til aria attributer på wrapper og ikoner ([6253dd4](https://github.com/SpareBank1/designsystem/commit/6253dd4aa5eee69031ed334f2c09482a429916b9))
+* **ffe-context-message-react:** oppdater symbol implementering ([820ddd4](https://github.com/SpareBank1/designsystem/commit/820ddd43d6e0313130d7e81e7b46c7b6776f9dce))
+* **ffe-context-message-react:** optout var for alert for error message ([1cca332](https://github.com/SpareBank1/designsystem/commit/1cca332fcbf83ee5324984c8e0737b4763408d52))
+* **ffe-context-message-react:** reduce vulnerabilities ([9158417](https://github.com/SpareBank1/designsystem/commit/91584177f07cf16c6332ff79dd54ec0ce94f00b0))
+* **ffe-context-message-react:** remove default props ([2fa80b0](https://github.com/SpareBank1/designsystem/commit/2fa80b0ecea954ca10af01a8bdffb98ffba991d8))
+* **ffe-context-message-react:** translations of aria labels ([b19e6be](https://github.com/SpareBank1/designsystem/commit/b19e6be2c4a901b47af8083c6780676ebc761f23))
+* **ffe-context-message-react:** use buildtool for transpiling ([aa9b971](https://github.com/SpareBank1/designsystem/commit/aa9b971934a1374f28196d0f4cbc9d28137b705c)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-context-message-react:** use react.componentsprops instead of react.htmlprops ([1036f5f](https://github.com/SpareBank1/designsystem/commit/1036f5fc2d5039461a96415c3385562e26f0e3c7))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* packages/ffe-context-message-react/package.json to reduce vulnerabilities ([f20b5c2](https://github.com/SpareBank1/designsystem/commit/f20b5c29759e8eda6c48bd6140527a8ae277c701))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+* typo in docs for header prop in ctx msg ([078e142](https://github.com/SpareBank1/designsystem/commit/078e142555908c9d23993946bbe985527ff47b10))
+* Update example imports with package scope ([a6d8f45](https://github.com/SpareBank1/designsystem/commit/a6d8f45628eff6d87ffb878547bcfb38f14a01c4))
+* Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc1616ffd14a414bc2e27f8c90a687a7a90b93))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+
+
+### Features
+
+* **ffe-context-message-react:** add role="alert" to error message ([e3aeaef](https://github.com/SpareBank1/designsystem/commit/e3aeaef8c1786b1fd993eed61f164bc4648360be))
+* **ffe-context-message-react:** Added type definitions for typescript ([2f3d763](https://github.com/SpareBank1/designsystem/commit/2f3d763b447f5daa4ab7de53726e7505bc5a4389))
+* **ffe-context-message-react:** deprecate package ([a2ff278](https://github.com/SpareBank1/designsystem/commit/a2ff2789ccc505d2bdde6c4e2483bf4ffa641101))
+* **ffe-context-message-react:** fjern custom ikon og legg til ny prop ([1d7fea2](https://github.com/SpareBank1/designsystem/commit/1d7fea29a68bc5636bfc3655e732f02aac698c97))
+* **ffe-context-message-react:** import icons without need for tree shaking ([d14bb11](https://github.com/SpareBank1/designsystem/commit/d14bb1135dda5c54b6046c9c994276ae8df3bde2))
+* **ffe-context-message-react:** pass rest props to root node ([561c61c](https://github.com/SpareBank1/designsystem/commit/561c61c0f24ab795dec343ee2d98a5e571f3b60c))
+* **ffe-context-message-react:** rewrite to ts ([f4eb27b](https://github.com/SpareBank1/designsystem/commit/f4eb27be3400b9bb4454c19f9e0cf2fa4a96ae4c))
+* **ffe-context-message-react:** update internal dependencies ([67203d1](https://github.com/SpareBank1/designsystem/commit/67203d15d0628743b3682c517de0369a7a25a4c7))
+* **ffe-context-message-react:** upgrade react to >=18.2.0 ([bf264a5](https://github.com/SpareBank1/designsystem/commit/bf264a5f34a15f74998f9d0563270d022c3280c0))
+* **ffe-context-message-react:** use uuid to genereate id ([6c10085](https://github.com/SpareBank1/designsystem/commit/6c100857c28d0ba8746a664b1f814544b7ac4ad8))
+
+
+### BREAKING CHANGES
+
+* **ffe-context-message-react:** Dropped support for React <18.2.0
+* **ffe-context-message-react:** package is now deprecated
+* **ffe-context-message-react:** see above
+* **ffe-context-message-react:** Bytter fra ffe-icons til ffe-symbols
+Bytter ut ikonene med ikoner fra ffe-symbols. Det betyr at ffe-icons-react
+fjernes som dependency og ffe-symbols-react legges til
+* **ffe-context-message-react:** Makes the styling package @sb1/ffe-context-message a
+required dependency and removes it as peer dependency.
+* **ffe-context-message-react:** For å bruke tips varianten av ContextMessage må du nå sende "tips" og ikke "tip".
+Tips komponenten har også endret navn til ContextTipsMessage
+* **ffe-context-message-react:** fjerner muligheten til å legge inn custom ikon og setter faste ikoner pr type
+
+Legger inn onColoredBg prop som skrur på styling til bruk på farget bakgrunn
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
 ## [12.0.68](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@12.0.67...@sb1/ffe-context-message-react@12.0.68) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

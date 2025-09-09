@@ -3,6 +3,127 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-webfonts:** add missing development dependency to less ([5db2d80](https://github.com/SpareBank1/designsystem/commit/5db2d807b5e0743d0b6385c1da9a35f93abf1910))
+* **ffe-webfonts:** fjern museo sans fonten ([61f7b78](https://github.com/SpareBank1/designsystem/commit/61f7b788d64d90410c46ddcb06a57df6f4677f91))
+* **ffe-webfonts:** fjerner fonter som ikke skal brukes ([e22fb2b](https://github.com/SpareBank1/designsystem/commit/e22fb2b6313bb49b779236efe4164669b0e13bf7))
+* **ffe-webfonts:** fjerner ting fra package.json files som ikke lenger finnes ([90dcf76](https://github.com/SpareBank1/designsystem/commit/90dcf76f33b60fec032bdd95bb925d823de72a04))
+* **ffe-webfonts:** legger til italic font ([2f14bf1](https://github.com/SpareBank1/designsystem/commit/2f14bf131a46ae1046546b6dca25c688852ea66c))
+* **ffe-webfonts:** License text survives minification ([aaf9737](https://github.com/SpareBank1/designsystem/commit/aaf9737d06d3cc952096c1fb1140c0c3231436d0))
+* **ffe-webfonts:** Makes SpareBank1-font family opt-in ([712c758](https://github.com/SpareBank1/designsystem/commit/712c7580573d001b499d00a950366dbc28601ed3))
+* **ffe-webfonts:** reduce vulnerabilities ([15d2ec4](https://github.com/SpareBank1/designsystem/commit/15d2ec491b711a7fe3eedda32793d82fa16751be))
+* **ffe-webfonts:** removed woff from sb1-fonts-inline.less ([cf6d86d](https://github.com/SpareBank1/designsystem/commit/cf6d86d9d5f2449d2c4bf8ea30d27c4bb6b27590))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+### Features
+
+* **ffe-webfonts:** legger til fonter fra ny identitet ([521426d](https://github.com/SpareBank1/designsystem/commit/521426ddeee2c1f4fa191bddfd44392ae64957af))
+* **ffe-webfonts:** New package with FFE webfonts ([f725f32](https://github.com/SpareBank1/designsystem/commit/f725f32932cbbc2ee2958afc9b3225945215d201))
+* **ffe-webfonts:** set font loading behavior to fallback ([9cbf83b](https://github.com/SpareBank1/designsystem/commit/9cbf83bff9db2dea163a8c6b6d3fbf09a39f7f0f))
+
+
+### BREAKING CHANGES
+
+* **ffe-webfonts:** removed woff format in favor of woff2
+* **ffe-webfonts:** fjerner museo sans font filer og css
+* **ffe-webfonts:** fjerner fonter som ikke skal brukes på web for å redusere filstørrelse og lastetid
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-webfonts:** This package contains all webfonts and font-face
+definitions from ffe-core.
+
+*Caveat*: TrueType font files are no longer included.  This effectively
+drops support for Museo Sans webfont in IE 8 and older IEs.
+
+Upgrade from ffe-core: Install ffe-webfonts and include the less file
+accordingly the package's README.  Change your `@build-path` to `@fonts-path`.
+Please note that `fonts-path` is the actual `fonts`-folder and not the parent
+folder.
+
+
+
+
+
 ## [5.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@5.0.19...@sb1/ffe-webfonts@5.0.20) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-webfonts

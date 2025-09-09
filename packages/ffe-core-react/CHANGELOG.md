@@ -3,6 +3,167 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* correct type for prop in Wave, closes [#1436](https://github.com/SpareBank1/designsystem/issues/1436) ([4c9486f](https://github.com/SpareBank1/designsystem/commit/4c9486f37db1b7099aa5b286c44254d8ee43ab9b))
+* **ffe-core-react:** added peerDependency to ffe-core@^13.0.0 ([d1a6451](https://github.com/SpareBank1/designsystem/commit/d1a64510846bd81b15799eb518ca11546d4c2c20))
+* **ffe-core-react:** added prop-types for Heading ([f884467](https://github.com/SpareBank1/designsystem/commit/f8844673a842af78896e0f768a3fbd546482bd14))
+* **ffe-core-react:** broadens version of peer dependencies ([cec30c6](https://github.com/SpareBank1/designsystem/commit/cec30c69822ca8d6566e34d7493cd383809d3e67))
+* **ffe-core-react:** bump prop-types ([7f88f98](https://github.com/SpareBank1/designsystem/commit/7f88f98a524328efc72d62dee335cd10687aa53f))
+* **ffe-core-react:** children optional in wave ([02afd12](https://github.com/SpareBank1/designsystem/commit/02afd128ac68d3e4f660c903dcc401bb285e1ac4))
+* **ffe-core-react:** className in Wave should be optional ([729c7f4](https://github.com/SpareBank1/designsystem/commit/729c7f41814afa6315bfed8cd67686913126294a))
+* **ffe-core-react:** element prop-type needs elementType ([95d0ce1](https://github.com/SpareBank1/designsystem/commit/95d0ce1a4451c0afa8103eb978ec18ddf92d2afe))
+* **ffe-core-react:** element-type for type script ([f041763](https://github.com/SpareBank1/designsystem/commit/f04176300b4ef9e361d5a833cdc882190a9bf3a8))
+* **ffe-core-react:** fikser typeeksportering ([956f495](https://github.com/SpareBank1/designsystem/commit/956f4958b94c24cc7b6bfc5b1968fb61a784734f))
+* **ffe-core-react:** fjern waveHeight og legger til bgColor og bgDarkmodeColor props ([00706cf](https://github.com/SpareBank1/designsystem/commit/00706cf947a99d1aad98eee8e72a8336365e83a1))
+* **ffe-core-react:** gjør darkmodeColor og children optional ([7881d8e](https://github.com/SpareBank1/designsystem/commit/7881d8e04645c50ee3dee07328ccad454155670a))
+* **ffe-core-react:** legger tilbake bølgen som depricated for å hindre byggfeil hos andre ([a5ac20a](https://github.com/SpareBank1/designsystem/commit/a5ac20a6a4dc106e2a07149b07d0dce635be763c))
+* **ffe-core-react:** possible to add additional class to wave ([ed51373](https://github.com/SpareBank1/designsystem/commit/ed51373ebd54bafc24db5cdd795dc059c5527764))
+* **ffe-core-react:** reduce vulnerabilities ([add5cba](https://github.com/SpareBank1/designsystem/commit/add5cbaabf058aea4faa0f54f0654d2a3bae5a5e))
+* **ffe-core-react:** Relax peerDeps to allow React 15. ([78eb5b4](https://github.com/SpareBank1/designsystem/commit/78eb5b444cf5070aaf702e494c176790381bb5a0))
+* **ffe-core-react:** remove default props ([36b8852](https://github.com/SpareBank1/designsystem/commit/36b8852d30a937ba57876ff6ff163763ec3402dc))
+* **ffe-core-react:** restrukturering for å fikse plasseringsissue og endre propnavn ([7417320](https://github.com/SpareBank1/designsystem/commit/74173207bc5c9df9888de3b9f56a2294d57567d7))
+* **ffe-core-react:** use buildtool for transpiling ([71b8776](https://github.com/SpareBank1/designsystem/commit/71b87768d6918612efedf9b9ac17f27bd59af514)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-core-react:** use react.componentsprops instead of react.htmlprops ([c08e0d4](https://github.com/SpareBank1/designsystem/commit/c08e0d464b224103f35700ca491e3df190505f92))
+* **ffe-core-react:** use react.htmlprops instead of react.componentprops ([fb49f1b](https://github.com/SpareBank1/designsystem/commit/fb49f1b400933a5f8fb954848034a317145ef18e))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* Fix a few issues with the documentation ([ab3d579](https://github.com/SpareBank1/designsystem/commit/ab3d579778052fd23d72320316f1059b72bc06d7))
+* packages/ffe-core-react/package.json to reduce vulnerabilities ([94d6ae8](https://github.com/SpareBank1/designsystem/commit/94d6ae8a259fd148247fac23687c65510b2bfdb4))
+* Run just 'jest', not 'jest src' ([6377dc5](https://github.com/SpareBank1/designsystem/commit/6377dc53a69338daa78adb1927a799918912226c))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-core-react:** Remove deprecated layout ([60e8863](https://github.com/SpareBank1/designsystem/commit/60e886347907171072a83a3433840a9914c7db5e))
+
+
+### Features
+
+* **ffe-core-react:** Add `LinkText` component ([b51ed59](https://github.com/SpareBank1/designsystem/commit/b51ed59318e0da6ef57e780e70b23eacb3970267))
+* **ffe-core-react:** Add contribute.md link to readme ([1a8aab0](https://github.com/SpareBank1/designsystem/commit/1a8aab0fac48928220470c6f65ea18238c13fb89))
+* **ffe-core-react:** add generic linktext ([26590af](https://github.com/SpareBank1/designsystem/commit/26590af8a25c7747be647bd0cc15b9393df2ac39))
+* **ffe-core-react:** add LinkIcon component ([29ed631](https://github.com/SpareBank1/designsystem/commit/29ed6311cf606eb64644407bb636e36fa06689ff))
+* **ffe-core-react:** Add new inline prop ([148bdcb](https://github.com/SpareBank1/designsystem/commit/148bdcbd6ec4eb0192271edc7f8263fcfb82a606))
+* **ffe-core-react:** add ref to Heading ([069de5b](https://github.com/SpareBank1/designsystem/commit/069de5b18ca6d6e178d3246ea41fb23bcc94b0ad))
+* **ffe-core-react:** add wave component ([647156a](https://github.com/SpareBank1/designsystem/commit/647156aa0d546e4fbaa33395a3dcb9ec51a4c084))
+* **ffe-core-react:** Added type definitions for typescript ([630b457](https://github.com/SpareBank1/designsystem/commit/630b4579c0e9bf2ab3f15de744d93a951a4c7249))
+* **ffe-core-react:** center leading paragraph ([c12806b](https://github.com/SpareBank1/designsystem/commit/c12806b3b6602c024ea09569856e6b69f17cd755))
+* **ffe-core-react:** custom element for SmallText ([6240db0](https://github.com/SpareBank1/designsystem/commit/6240db011baa900224d6f9ee87d5dc422d49ae93))
+* **ffe-core-react:** Expose named exports ([4efe35a](https://github.com/SpareBank1/designsystem/commit/4efe35a10aac9cfad831df1be67b9f339392a8de))
+* **ffe-core-react:** fjerner bølgen fra core ([258dd07](https://github.com/SpareBank1/designsystem/commit/258dd0745225da33851e023d489ae8d8d4f43896))
+* **ffe-core-react:** legg til noMargin prop på paragraph ([e7e1df6](https://github.com/SpareBank1/designsystem/commit/e7e1df6fd49b38f0b1ec101c34e13814b23292d1))
+* **ffe-core-react:** ny bodytext-komponent ([6960314](https://github.com/SpareBank1/designsystem/commit/6960314067e751ae40c5409c07f78490f3a2f656))
+* **ffe-core-react:** Ny StrongMicroText komponent ([265d6a9](https://github.com/SpareBank1/designsystem/commit/265d6a933ecdef024aee3f37bcead43169e8faeb))
+* **ffe-core-react:** possible to center heading ([4a563b1](https://github.com/SpareBank1/designsystem/commit/4a563b1186c95468865c9ed82f5429c89fda05c7))
+* **ffe-core-react:** rewrite core as ts ([1117c70](https://github.com/SpareBank1/designsystem/commit/1117c70b4c36eda05d8d5e938b3c59f9b9ebfb06))
+* **ffe-core-react:** update internal dependencies ([dd5d0d0](https://github.com/SpareBank1/designsystem/commit/dd5d0d0a74e350d03a6e0d382a8fcc2d7010f13e))
+* **ffe-core-react:** upgrade react to >=18.2.0 ([24bb389](https://github.com/SpareBank1/designsystem/commit/24bb3892abb0aefe08023e8d2f68e327d708e60a))
+* **ffe-core-react:** Upgrade to React 16 ([ef3a686](https://github.com/SpareBank1/designsystem/commit/ef3a6867982ab198549df7b57309cb6ef661583d))
+
+
+### BREAKING CHANGES
+
+* **ffe-core-react:** bølge med nye farger flyttet til ffe-shapes
+* **ffe-core-react:** Dropped support for React <18.2.0
+* **ffe-core-react:** new props
+* **ffe-core-react:** Makes the styling package @sb1/ffe-core a required dependency and
+removes it as peer dependency.
+* **ffe-core-react:** fjerner waveHeight prop
+* **ffe-core-react:** endrer propnavn fra rotate til flip
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-core-react:** Removed the React components for the deprecated
+Hawaii layout system. Please don't use this layout when developing
+new functionality and please consider moving away from it when
+visiting old functionality.
+
+New layouts should be based on the `ffe-grid` component.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
 ## [10.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@10.1.13...@sb1/ffe-core-react@10.1.14) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-core-react

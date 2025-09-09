@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-chips-react:** Gi bedre feilmelding ved bruk av utdatert property ([e0e43ae](https://github.com/SpareBank1/designsystem/commit/e0e43aec315c9921aff3f8ead6cb5d3c4b70b56b))
+* **ffe-chips-react:** legger til ikon på chip selected ([884e002](https://github.com/SpareBank1/designsystem/commit/884e002e23cea91d626b53a4eef105dade9611c5))
+* **ffe-chips-react:** legger til manglende dep classnames ([afcbe5f](https://github.com/SpareBank1/designsystem/commit/afcbe5f0a4928904475f2d05706aa20d4670cc21))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+
+
+* feat(ffe-chips-react)!: Semantiske farger ([44037df](https://github.com/SpareBank1/designsystem/commit/44037df0f9a230297712f495f4165c75ed61d339))
+
+
+### Features
+
+* **ffe-chips-react:** fjerner check når chipselectable ikke er valgt ([9ece1d7](https://github.com/SpareBank1/designsystem/commit/9ece1d781390458e6fda825a97103c66335d034f))
+* **ffe-chips-react:** initial commit ([77746a2](https://github.com/SpareBank1/designsystem/commit/77746a207673948c448e32fb5d25e54901448df5))
+* **ffe-chips-react:** selectable chip no icon ([0841c9b](https://github.com/SpareBank1/designsystem/commit/0841c9bf65d7bdd099478c04875c7a5ddabdfa1d))
+
+
+### BREAKING CHANGES
+
+* Komponenten er oppdatert til å støtte semantiske farger. Propertien `onColoredBg` er derfor fjernet og en oppnår samme effekt ved å gi komponenten eller en parent klassen `accent`. Komponenten er og avhengig av at `ffe-core` og `ffe-chips` er oppdatert.
+
+
+
+
+
 # [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chips-react@2.0.45...@sb1/ffe-chips-react@2.1.0) (2025-09-09)
 
 

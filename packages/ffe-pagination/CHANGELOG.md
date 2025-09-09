@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-pagination:** buttons in list ([1f3f4a4](https://github.com/SpareBank1/designsystem/commit/1f3f4a4ce3faf7900f88ff41b5c1f8c6607ee85b))
+* **ffe-pagination:** fix distance and text wrapping ([71177cc](https://github.com/SpareBank1/designsystem/commit/71177cc2c9667700a8815ffc49409fbf3c2f4a6f))
+* **ffe-pagination:** fix semantiske farger og knappehøyde pagniering ([0224647](https://github.com/SpareBank1/designsystem/commit/02246479dca97dcd309c1559b5c0e9614a780539))
+* **ffe-pagination:** justerer knappestørrelsene ([0fcc79e](https://github.com/SpareBank1/designsystem/commit/0fcc79ee89ae869455af7e26af2801741df9e1eb))
+* **ffe-pagination:** stop jump around and fix text zoom ([50509aa](https://github.com/SpareBank1/designsystem/commit/50509aaec10a2f61c5d5e62c6893dd31dc002d23))
+* **ffe-pagination:** styling for texten i knappen på feil element ([dd73dc7](https://github.com/SpareBank1/designsystem/commit/dd73dc70b6a5540d1ef9216398b077cda2da2e27))
+
+
+* fix(ffe-pagination)!: Endrer selected-fargene på knappene så det blir ([6a9363e](https://github.com/SpareBank1/designsystem/commit/6a9363e1903c4c271ff6c28ebb9cf0b9901b64d2))
+
+
+### Features
+
+* **ffe-pagination:** ny komponent paginering ([51fa404](https://github.com/SpareBank1/designsystem/commit/51fa404464f23e6144e6f21e4161ab3260e3b175))
+* **ffe-pagination:** regard-color-scheme-preference for darkmode ([0b23a5e](https://github.com/SpareBank1/designsystem/commit/0b23a5e9d0a3cb7d667118a7eeefffcf3cdf9dbd))
+* **ffe-pagination:** semantiske farger i pagination ([38644b5](https://github.com/SpareBank1/designsystem/commit/38644b57e39457a4a3e47e81d2bb4f8a725bdabe))
+* **ffe-pagination:** tilbyr kompilert css i tillegg til less ([a2021aa](https://github.com/SpareBank1/designsystem/commit/a2021aa0285bcd6396c829d7a7c4a8a93fa88e47))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* **ffe-pagination:** oppdaterte farger
+* **ffe-pagination:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination@4.0.3...@sb1/ffe-pagination@4.0.4) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-pagination

@@ -3,6 +3,179 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **component-overview:** add ffe-body to documentation ([f59c7a6](https://github.com/SpareBank1/designsystem/commit/f59c7a6cb46b70a1d38d09e0dbf981730a30f6c1))
+* **component-overview:** add id-prop to SearchableDrowpdown examples ([9230d15](https://github.com/SpareBank1/designsystem/commit/9230d15f9f1578e984c7fb4d703363d55c16a039))
+* **component-overview:** add locale to examples ([843d83d](https://github.com/SpareBank1/designsystem/commit/843d83de33cdb8cf745712f2408217ae95f3d07c))
+* **component-overview:** add npmrc file to not generate package-lock ([2f0f52f](https://github.com/SpareBank1/designsystem/commit/2f0f52faf34681770e9abad6658713b5c2f64458))
+* **component-overview:** added missing dep to chips ([f612be4](https://github.com/SpareBank1/designsystem/commit/f612be4f811244e1d3f6cbecc7844bf4b78688fb))
+* **component-overview:** added missing dep to ffe-lists-react ([033d20c](https://github.com/SpareBank1/designsystem/commit/033d20ced58c3a0f68a68b0357751c7ea891fb40))
+* **component-overview:** bump ffe-dependencies ([50e8b38](https://github.com/SpareBank1/designsystem/commit/50e8b38ba8644171fb6a8b4a3d9dce3a6052e91d))
+* **component-overview:** correct path in build script ([4fcc6a3](https://github.com/SpareBank1/designsystem/commit/4fcc6a3ce4b049931278e45df64b82ad722701f3))
+* **component-overview:** css imports without css: prefix ([20f9d50](https://github.com/SpareBank1/designsystem/commit/20f9d50721cdd8da2506d479d0084c4338029c82))
+* **component-overview:** delete high capacity examples og account slector and searchable dropdown ([3c05156](https://github.com/SpareBank1/designsystem/commit/3c051565d9f4903bc7f1b84d3caee8665e91d6ee))
+* **component-overview:** endre collapse knapp til expandbutton komponent ([33d08bd](https://github.com/SpareBank1/designsystem/commit/33d08bda3b9f1426480364a30d53cc806b454bf2))
+* **component-overview:** endre eksempel til å vise plassering av grid ([ea84626](https://github.com/SpareBank1/designsystem/commit/ea8462683f5e7aab011c301ef87dcff45c77a3cc))
+* **component-overview:** endre fra noShadow til shadow ([281caa1](https://github.com/SpareBank1/designsystem/commit/281caa1bfeef4f83c1c0fe1a6b48ffdc20613e92))
+* **component-overview:** endrer fra string til number i eksempel så det blir riktig ([35c2b1f](https://github.com/SpareBank1/designsystem/commit/35c2b1f8fcbe57333d95fde7ad3906c19873818e))
+* **component-overview:** erstatter ikon som ikke lenger finnes ([b7a5651](https://github.com/SpareBank1/designsystem/commit/b7a5651ff2dc88256521cb8b2bb5073c9fa3764c))
+* **component-overview:** få in-page nav til å følge siden ([1dfc759](https://github.com/SpareBank1/designsystem/commit/1dfc75915307c896feea894b4fd8178693960811))
+* **component-overview:** fiks ikon eksempler ([9713ac4](https://github.com/SpareBank1/designsystem/commit/9713ac4a8f32c8834e6205e987f64a59a7d5b770))
+* **component-overview:** fiks ikon eksempler ([9b3de01](https://github.com/SpareBank1/designsystem/commit/9b3de0161a28cb1014e25b27a0688686cbb00b59))
+* **component-overview:** fikser cutet illustrasjon ([534adaa](https://github.com/SpareBank1/designsystem/commit/534adaa98334be54ae561049db085c87de3f8b2b))
+* **component-overview:** fix 404-redirect on github pages ([5f9286a](https://github.com/SpareBank1/designsystem/commit/5f9286a27d8c14c5f6318021789fabe65f7954f3))
+* **component-overview:** fix darkmode bug i wave eksempel ([842427a](https://github.com/SpareBank1/designsystem/commit/842427a26766edbf03caa6ea0cdf4346d469aa8b))
+* **component-overview:** fix failing examples ([a7f7264](https://github.com/SpareBank1/designsystem/commit/a7f726414a4f86032f879f254b7a5804215460d0))
+* **component-overview:** fix i package.json for pagination ([2ce5ebf](https://github.com/SpareBank1/designsystem/commit/2ce5ebf19566458ad7d4be39bec480af8d7f5a18))
+* **component-overview:** fix import statements of formatter examples ([5cf2b69](https://github.com/SpareBank1/designsystem/commit/5cf2b69cec1aff4bff08499b8b42d5b114220cc0))
+* **component-overview:** fix props of multiple examples ([1d827c4](https://github.com/SpareBank1/designsystem/commit/1d827c45466169e465cc258a2229f230e3e94fa2))
+* **component-overview:** fjern museo sans font som fallback ([c80306e](https://github.com/SpareBank1/designsystem/commit/c80306eb144a36a3cce42537b7f3999d519ca41b))
+* **component-overview:** fjern symbol color eksempel ([60e6b4b](https://github.com/SpareBank1/designsystem/commit/60e6b4b6985148f7177156495aeec7c17ff9b56d))
+* **component-overview:** fjern waveheight eksempler og legg til layout og bgcolor eksempler ([b395236](https://github.com/SpareBank1/designsystem/commit/b395236b1539954b797dde1c233ff03a97392a30))
+* **component-overview:** fjerner 2 størrelser og weights i symbols eksempler ([9a1c995](https://github.com/SpareBank1/designsystem/commit/9a1c995b8eee2d9ac876c905d14e84071b324888))
+* **component-overview:** fjerner bundleddependencies siden det ikke funket ([e315e6b](https://github.com/SpareBank1/designsystem/commit/e315e6bda11121e3868fbec06a13080943297ea5))
+* **component-overview:** fjerner eksempler knyttet til tabbutton og tabbuttongroup ([46a1d6d](https://github.com/SpareBank1/designsystem/commit/46a1d6daabce14dced46f651613b24a89c6711a3))
+* **component-overview:** fjerner ubrukt prop ([df3bf06](https://github.com/SpareBank1/designsystem/commit/df3bf064f7269609c88392552592c5a04db3a042))
+* **component-overview:** force compile before building gh-pages ([9673986](https://github.com/SpareBank1/designsystem/commit/9673986fed18e16a29b750c5853268e3b5e94e15))
+* **component-overview:** group examples for messages ([3565dab](https://github.com/SpareBank1/designsystem/commit/3565dabc4a106c3fd2da0c755d96b6e083405754))
+* **component-overview:** groups examples also on Mac ([6820295](https://github.com/SpareBank1/designsystem/commit/68202956de0bb74b56ec06206bc0aa83c45e7cbc))
+* **component-overview:** keep scroll position when navigation back ([f66f95c](https://github.com/SpareBank1/designsystem/commit/f66f95c646500b02f54a1e0fb47611baa73664bc))
+* **component-overview:** lagre sist brukt colorScheme ([8922cd5](https://github.com/SpareBank1/designsystem/commit/8922cd5f5076681022bce880be12339bed460ccc))
+* **component-overview:** legg til detailListCard eksempler ([707a822](https://github.com/SpareBank1/designsystem/commit/707a82294d12ed38a7897980e686f73032a3cbea))
+* **component-overview:** legg til eksempel for bruk av titleElement i messagebox ([0efe5c5](https://github.com/SpareBank1/designsystem/commit/0efe5c54fb5d8fc46c81ee209ff73bcbe11aaded))
+* **component-overview:** legg til eksempel med radioswitch uten group ([17eb51e](https://github.com/SpareBank1/designsystem/commit/17eb51ef4b494f5ca96e2db42e81131d81933d16))
+* **component-overview:** legg til ffe-icons som bundleddependency ([105435a](https://github.com/SpareBank1/designsystem/commit/105435a49d4abd7b042190500c06949b120996b0))
+* **component-overview:** legg til ikke-klikkbart baseCard eksempel ([3d3312a](https://github.com/SpareBank1/designsystem/commit/3d3312a149a73ec77ca83b805b3b117b90ffc830))
+* **component-overview:** legg til knappe eksempler med ikon ([a4c6f2a](https://github.com/SpareBank1/designsystem/commit/a4c6f2a0ad1261165657ab509bcd02ba9c67eadf))
+* **component-overview:** legg til manglende darkmode farge grid i eksempel ([db6be8b](https://github.com/SpareBank1/designsystem/commit/db6be8bba160214016bfdca7b72aeaaea054170b))
+* **component-overview:** legg til og juster meldingsboks eksempler ([66d5731](https://github.com/SpareBank1/designsystem/commit/66d57310e36256e2465a73f96a8dcba7aa1cef3c))
+* **component-overview:** legg til og oppdater eksempel for spinner ([055aae1](https://github.com/SpareBank1/designsystem/commit/055aae1183f9188dafaa255e5b775d2d76200441))
+* **component-overview:** legg til spacing i eksempel ([918b2c6](https://github.com/SpareBank1/designsystem/commit/918b2c6375e42306b91487a99b05fc95ac8832d1))
+* **component-overview:** legg til title på ikon i eksempel ([1197e23](https://github.com/SpareBank1/designsystem/commit/1197e23694cb5781eb1c4a1d421446c1294fbf0b))
+* **component-overview:** legger til et ekstra eksempel på toggleswitch ([e481396](https://github.com/SpareBank1/designsystem/commit/e481396301d58c68810ded216298ec4125cc8e03))
+* **component-overview:** legger til fungerende ikon i eksempel på secondarybutton ([d447d89](https://github.com/SpareBank1/designsystem/commit/d447d8927be310f463bb01377f9a11a5cc1287c0))
+* **component-overview:** legger til klasse på logo for å støtte darkmode ([36e25b1](https://github.com/SpareBank1/designsystem/commit/36e25b13de8f86a541a8bcb1fa3da071c36f12e0))
+* **component-overview:** must import from index file ([40f41ac](https://github.com/SpareBank1/designsystem/commit/40f41acf1aa410dac1d5f1f2a111339c06719502))
+* **component-overview:** oppdater buttongroup eksempler ([081a05d](https://github.com/SpareBank1/designsystem/commit/081a05d3d6253531a9e4881cfd982d3136a2300c))
+* **component-overview:** oppdater eksempeler til å matche nytt komponentnavn ([b05b6de](https://github.com/SpareBank1/designsystem/commit/b05b6de4e2364e2f180d6c6a23b6c58848f1ead4))
+* **component-overview:** oppdater eksemplene ([b608975](https://github.com/SpareBank1/designsystem/commit/b608975d12311296db2d6dc0cce7411a8dab551d))
+* **component-overview:** oppdater eksempler ([3cdb512](https://github.com/SpareBank1/designsystem/commit/3cdb51205ff1883a61bd20e668ae134c554eb5a4))
+* **component-overview:** oppdater eksempler med ny symbol implementasjon ([7a97f1a](https://github.com/SpareBank1/designsystem/commit/7a97f1ac20ea0915ffe22f3546fc9130654d8f09))
+* **component-overview:** oppdater farge i inlinegrid eksempel ([06ea649](https://github.com/SpareBank1/designsystem/commit/06ea649de0865cc3fa92785b13351fdfaef72c7b))
+* **component-overview:** oppdater imagecard eksempler etter prop endringer ([59dd0d2](https://github.com/SpareBank1/designsystem/commit/59dd0d2300d16b6ec33230a5cfdbfdaf709baad6))
+* **component-overview:** oppdater less import ([7e75ecb](https://github.com/SpareBank1/designsystem/commit/7e75ecbae9d6725f0f0a4946ef607c909be2e0fc))
+* **component-overview:** oppdater liste over grid bakgrunnsfarger ([1ec5206](https://github.com/SpareBank1/designsystem/commit/1ec520678d4f5f868ca51c29a7d77d93ae7d3041))
+* **component-overview:** oppdater svg paths ([361ec9f](https://github.com/SpareBank1/designsystem/commit/361ec9f658710ecbb3c0b6393c66560adf84f4a7))
+* **component-overview:** oppdaterer eksempel-tabell som brukte gamle ikoner ([27c0958](https://github.com/SpareBank1/designsystem/commit/27c0958d12a876a1f911b162210b88580a25022b))
+* **component-overview:** oppdaterer eksempler med nytt default element ([0b8156b](https://github.com/SpareBank1/designsystem/commit/0b8156b789cfa7cdaf12e0b83b25379c16001c1d))
+* **component-overview:** oppdaterte eksempler på grid ([eda3ab8](https://github.com/SpareBank1/designsystem/commit/eda3ab8d2240edf3a76aa9240a82293ada7aa012))
+* **component-overview:** remove default props ([99a0a2b](https://github.com/SpareBank1/designsystem/commit/99a0a2b8026147768600f78b6d58e3fcaee4a774))
+* **component-overview:** remove dependency to ffe-details-list ([97ea589](https://github.com/SpareBank1/designsystem/commit/97ea589374c6bcf42d2f3c82d8862f367c46a40b))
+* **component-overview:** remove example of ghost-action-button ([69f5618](https://github.com/SpareBank1/designsystem/commit/69f56189a9917a5ba1d636855ecebf194c4c9f8d))
+* **component-overview:** removes semicolon at end of examples ([eeb23b0](https://github.com/SpareBank1/designsystem/commit/eeb23b05077123ebfa57854493f3a81e87ca8d31))
+* **component-overview:** rename linktext-icon example and show new LinkIcon component ([af162c5](https://github.com/SpareBank1/designsystem/commit/af162c56c48e0f9deb998bf7ae60fad080ba2cdb))
+* **component-overview:** rett feil i radioswitch eksempler ([80ed550](https://github.com/SpareBank1/designsystem/commit/80ed55074300c28723f489575b875efe5a817f1d))
+* **component-overview:** Rette opp tekst i meldingeksempeler ([832d5a4](https://github.com/SpareBank1/designsystem/commit/832d5a4c6438cf7018acd27c44f6f5f2f2b388a1))
+* **component-overview:** retter feil i eksempel tooltip-external ([69732e9](https://github.com/SpareBank1/designsystem/commit/69732e9b38cb3a487b0c19de32615c0a503550e2))
+* **component-overview:** retter tabgroup advanced eksempel ([cde03dc](https://github.com/SpareBank1/designsystem/commit/cde03dc23935a283738180805a3897a023c1c624))
+* **component-overview:** revert less import endringer ([c639d5d](https://github.com/SpareBank1/designsystem/commit/c639d5df2da9a70d6d1a43d5a5d8f408e57ed7d3))
+* **component-overview:** solve issues related to examples path ([5a2d266](https://github.com/SpareBank1/designsystem/commit/5a2d266def70f80bea530250b83b2e8340b67b19))
+* **component-overview:** Tar ibruk ny input-group ([4b6f379](https://github.com/SpareBank1/designsystem/commit/4b6f379d58edc7633863f2e326ed15d11982f23e))
+* **component-overview:** typo in start up script ([b325b9b](https://github.com/SpareBank1/designsystem/commit/b325b9be8967e8c60c7246285123a20aa99c34b3))
+* **component-overview:** use correct language ([210b42a](https://github.com/SpareBank1/designsystem/commit/210b42ac6e4443373dc537a218d9f9ce8dd9a411))
+* **component-overview:** use relative path to main js file ([88dd02f](https://github.com/SpareBank1/designsystem/commit/88dd02fccf11b390abc729b4747f1af12837e1e7))
+* **component-overview:** workaround for en bug i parcel ([a26082a](https://github.com/SpareBank1/designsystem/commit/a26082a072ea8583b6b9c1ce08f70d12dc2d206b))
+* **ffe-chart-donut-react:** move less files ([8703a37](https://github.com/SpareBank1/designsystem/commit/8703a37b254eb51fb52d23d271b8ac87ae1472dc))
+* **ffe-context-message:** Now supports using Paragraphs in darkmode ([d06716b](https://github.com/SpareBank1/designsystem/commit/d06716bc0da781e1ef8b020d6ee2a9de13df8e01))
+* **ffe-file-upload-react:** use correct onFileDeleted() ([eb0116c](https://github.com/SpareBank1/designsystem/commit/eb0116cd55e906f3e6319601b2e7e0525e9b1827))
+* **ffe-form-react:** endrer til nye props på phonenumber ([e0f7ecb](https://github.com/SpareBank1/designsystem/commit/e0f7ecbc5108f3c18ff36622a7e8bb02992a51c7))
+* **ffe-form:** add word-break in label ([ec40eef](https://github.com/SpareBank1/designsystem/commit/ec40eef7b09dfcc2eaf30a4e47221c2b15f944a7)), closes [#1758](https://github.com/SpareBank1/designsystem/issues/1758)
+* **ffe-form:** add word-break in radio-button ([df86dab](https://github.com/SpareBank1/designsystem/commit/df86dab6ac00f4cdcb5d83e6981841a614af7dca)), closes [#1762](https://github.com/SpareBank1/designsystem/issues/1762)
+* fjern referanser til slettede komponenter ([e716c19](https://github.com/SpareBank1/designsystem/commit/e716c1954f5231251b85dd1f6fcf52daf232c8f4))
+
+
+### Features
+
+* **component-overview:** add darkmode toggling ([9d1d766](https://github.com/SpareBank1/designsystem/commit/9d1d766dc1497cb3abce32078a6da988e8ac641a))
+* **component-overview:** add example for SearchableDropdown.isLoading ([3834e5c](https://github.com/SpareBank1/designsystem/commit/3834e5c11cee5a4882a6423104e515a52ed12250))
+* **component-overview:** add example with 2 datepickers on one page ([752b3b1](https://github.com/SpareBank1/designsystem/commit/752b3b104baa3f7affbf249b8725049534b08b1f))
+* **component-overview:** add header example ([f61539e](https://github.com/SpareBank1/designsystem/commit/f61539e452e2401b08b65f942ff32a5b49ac71e3))
+* **component-overview:** add wave examples ([476408b](https://github.com/SpareBank1/designsystem/commit/476408bca646bb56eb5db5e75da3cf34eea73f66))
+* **component-overview:** added headingLevel on feedback ([5acfa3e](https://github.com/SpareBank1/designsystem/commit/5acfa3ea479f8989c7d7f109961d98a1a774a12c))
+* **component-overview:** added invalid radio button example ([73507d8](https://github.com/SpareBank1/designsystem/commit/73507d876e1df372247f460b9875a4a46ee1d4d0))
+* **component-overview:** added StippledCard ([d846b31](https://github.com/SpareBank1/designsystem/commit/d846b3182dc71e945a57eaff5c44cc7c65afb8cf))
+* **component-overview:** dogfooding design tokens for colors ([ab590c8](https://github.com/SpareBank1/designsystem/commit/ab590c8393a1b6da4aea3a685ff3f738e1cc1e7e))
+* **component-overview:** grid-eksempler med modifiere ([0e0ee1a](https://github.com/SpareBank1/designsystem/commit/0e0ee1a8fecc4580bee6d40b06659c01fa601347))
+* **component-overview:** haptic button example ([5894c32](https://github.com/SpareBank1/designsystem/commit/5894c32c383ddf6fc6296a7e603a8a033af02afe))
+* **component-overview:** legg til eksempel for cardbase no padding ([8ca9d1c](https://github.com/SpareBank1/designsystem/commit/8ca9d1c620d7d42b584f8873f5117c7f942ea53c))
+* **component-overview:** legg til eksempel for isMobileNumber prop ([94d4a7c](https://github.com/SpareBank1/designsystem/commit/94d4a7c7d8f0c299277dd0514927a355a7081b8d))
+* **component-overview:** legg til eksempel for plassering av bølge og rename av fil ([80864fb](https://github.com/SpareBank1/designsystem/commit/80864fb9be5139a6fdeda1c5a84de437c89f67e8))
+* **component-overview:** legg til eksempler på RadioButtonInputGroup brukes til UU testing ([cf78a45](https://github.com/SpareBank1/designsystem/commit/cf78a4566ddf78662d18237e1645f6c4a2d79110))
+* **component-overview:** Legg til flere eksempler ([b25921c](https://github.com/SpareBank1/designsystem/commit/b25921cf9f60ab6b7bc5798d8d20a4dcd7c11f21))
+* **component-overview:** legg til icon eksempler ([3436584](https://github.com/SpareBank1/designsystem/commit/3436584052b8c8d5488d3fae47bc1b9785d53ada))
+* **component-overview:** legg til noMargin eksempel på paragraph ([f7827d0](https://github.com/SpareBank1/designsystem/commit/f7827d017ce7f4a4efb189a445ac7fe60baa6ee9))
+* **component-overview:** legg til symbol komponent eksempler ([dba8c5f](https://github.com/SpareBank1/designsystem/commit/dba8c5fabf5367de09eb499f70be84f5ea5110e9))
+* **component-overview:** legg til tabell inni tabell eksempel ([db4ddee](https://github.com/SpareBank1/designsystem/commit/db4ddeeb358b7c1bacc66c827176aa5bdefd6898))
+* **component-overview:** legg til vann-30 som bakgrunnsfarge i grid eksempel ([1962ce0](https://github.com/SpareBank1/designsystem/commit/1962ce07faeccac74c92b5f5b11bd32d0400644b))
+* **component-overview:** legger til et eksempel av theming ([bfdfe0c](https://github.com/SpareBank1/designsystem/commit/bfdfe0c9ced274b8b91e5ff51a22a21f8cfe6351))
+* **component-overview:** ny toggleswitch-komponent ([f281af9](https://github.com/SpareBank1/designsystem/commit/f281af99a09998961d511df65b5a1ac33ca671c8))
+* **component-overview:** oppdater eksempler for meldingsbokser ([d650af9](https://github.com/SpareBank1/designsystem/commit/d650af9405135ba2c99e48b4d38a0ee513eb049d))
+* **component-overview:** rebuild/reload webapp on code changes ([646a0c7](https://github.com/SpareBank1/designsystem/commit/646a0c7bbd3cd6afb66f3808a74bfb16caa4556b))
+* **component-overview:** redesign av faner ([68d3359](https://github.com/SpareBank1/designsystem/commit/68d33592ffae7c5cefe543f1af7469030a071363))
+* **component-overview:** redesign of component overview ([104a2a3](https://github.com/SpareBank1/designsystem/commit/104a2a3cb603b76f371a2c9040e917cdfef4fa14))
+* **component-overview:** remove example of condensed button ([1c495df](https://github.com/SpareBank1/designsystem/commit/1c495df2e0f0e6803ef8a232506d327f95403203)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
+* **component-overview:** replace snowpack with parcel ([e90d4f9](https://github.com/SpareBank1/designsystem/commit/e90d4f9ca5e74701e03a2691925dfd23127a1e4c))
+* **component-overview:** set max-width on examples ([22e16d5](https://github.com/SpareBank1/designsystem/commit/22e16d5193e9e01dd7e6b0e1d5ebabedbd001cf1))
+* **component-overview:** show dependency versions ([d1abfc3](https://github.com/SpareBank1/designsystem/commit/d1abfc314b6e30a3e0b64fe181d3a14e60bbf548))
+* **component-overview:** tar i bruk ffe-feedback og ffe-feedback-react ([740f253](https://github.com/SpareBank1/designsystem/commit/740f253d1d2f58c14d427bfbd92398ee5ee238e9))
+* **component-overview:** update examples new Collapse ([b9c12ac](https://github.com/SpareBank1/designsystem/commit/b9c12ac572971f10190e8bb031fc76e45d3405c6))
+* **component-overview:** upgrade parcel to get better css-support ([10aaced](https://github.com/SpareBank1/designsystem/commit/10aaced269c5a34be66a141a2e3240124eb31604))
+* **component-overview:** upgrade react ([a96c8a8](https://github.com/SpareBank1/designsystem/commit/a96c8a8deea187d23b090d8362a8c84485896ec0))
+* **component-overview:** use css properties from less, not css ([5fa9f1f](https://github.com/SpareBank1/designsystem/commit/5fa9f1ff0eb682968297dc210f30befa9c08c89b))
+* **ffe-account-selector-react:** change labelId to labelledById ([f184abe](https://github.com/SpareBank1/designsystem/commit/f184abe2725fb5b307073f444d450f3ea636f5b0))
+* **ffe-account-selector-react:** lagt til mulighet for å skjule AccountDetails ([fb3a0ee](https://github.com/SpareBank1/designsystem/commit/fb3a0eed5522b2ceb05f4447c12ec83e41ce49db))
+* **ffe-account-selector-react:** Lagt til postListElement ([458b98d](https://github.com/SpareBank1/designsystem/commit/458b98d4403a31a0d0d305b5d16fbd2e849b59b2))
+* **ffe-account-selector-react:** refactor multi- and single account selector ([2f4b90d](https://github.com/SpareBank1/designsystem/commit/2f4b90d68eec568d9867f9951c5524945ed978d6))
+* **ffe-account-selector-react:** remove high capacity prop ([0c66d68](https://github.com/SpareBank1/designsystem/commit/0c66d686fb13f9393078c905e517c7115800ed13))
+* **ffe-cards-react:** added StrippledCard ([7e884d4](https://github.com/SpareBank1/designsystem/commit/7e884d48ec241f42bb34585b9be51f7c03fc5de7))
+* **ffe-cards:** added illustration on right IllustrationCard ([ec9dea5](https://github.com/SpareBank1/designsystem/commit/ec9dea5c94febb1061eb85aca1984fcd2aefee30))
+* **ffe-cards:** css til illustration-card ([6924a00](https://github.com/SpareBank1/designsystem/commit/6924a0049b75ddb9a3045a8c095880bb6547d8ab))
+* **ffe-core-react:** Ny StrongMicroText komponent ([265d6a9](https://github.com/SpareBank1/designsystem/commit/265d6a933ecdef024aee3f37bcead43169e8faeb))
+* **ffe-core-react:** rewrite core as ts ([1117c70](https://github.com/SpareBank1/designsystem/commit/1117c70b4c36eda05d8d5e938b3c59f9b9ebfb06))
+* **ffe-datepicker-react:** be smarter about year input ([1a88466](https://github.com/SpareBank1/designsystem/commit/1a88466276cd78d6f79d29b041966e6e913aec89))
+* **ffe-form-react:** added forward ref to tooltip ([98ff415](https://github.com/SpareBank1/designsystem/commit/98ff415ead7c48ec3dc9211a5f89e17f0429daf9))
+* **ffe-searchable-dropdown-react:** change labelId to labelledById ([c0d5354](https://github.com/SpareBank1/designsystem/commit/c0d5354ef9a6878e798f7195f4c86548c283d62a))
+* **ffe-searchable-dropdown-react:** Lagt til postListElement ([3688435](https://github.com/SpareBank1/designsystem/commit/3688435f24472e56c5eb352263e28ce3746ae18b))
+* **ffe-searchable-dropdown-react:** remove high capacity prop ([f5a6612](https://github.com/SpareBank1/designsystem/commit/f5a66129f7cecbb1d3ad32815bfeb5dd1128624b))
+* **ffe-spinner-react:** rewrite in ts ([dd3d6c9](https://github.com/SpareBank1/designsystem/commit/dd3d6c98b0b648277a6788761f1bc62639af2a80))
+* remove ffe-decorators-react ([c2a1afd](https://github.com/SpareBank1/designsystem/commit/c2a1afd14147739a40016158c5ddf1a7af44b96b))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** endrer til nye props på phonenumer
+* **ffe-spinner-react:** default export -> named export
+* **ffe-core-react:** new props
+* **ffe-cards-react:** removed greyChoral modifier on IconCard
+* **ffe-account-selector-react:** use AccountSelectorHighCapacity for high capacity
+* **ffe-searchable-dropdown-react:** use SearchableDropdownHighCapacity instead og prop
+* **ffe-account-selector-react:** Change labelId to labelledById, and make it optional.
+* **ffe-searchable-dropdown-react:** Change labelId to labelledById, and make it optional.
+* **ffe-chart-donut-react:** `ffe-chart-donut.less` has moved from `lib/` to
+`less/`. Consumers need to update their less imports.
+
+```css
+@import '@sb1/ffe-chart-donut-react/less/ffe-chart-donut';
+```
+
+
+
+
+
 ## [8.4.205](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@8.4.204...@sb1/ffe-component-index@8.4.205) (2025-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

@@ -3,6 +3,157 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-file-upload-react:** accessibility issue ([f18635d](https://github.com/SpareBank1/designsystem/commit/f18635d25107e2ab54a9ca28cedff9e90c3815c2))
+* **ffe-file-upload-react:** added peerDependency to ffe-core@^13.0.0 ([bb426a9](https://github.com/SpareBank1/designsystem/commit/bb426a9d54571680c0615aadde9644f384301871))
+* **ffe-file-upload-react:** broadens version of peer dependencies ([627577b](https://github.com/SpareBank1/designsystem/commit/627577b9a8fa4850f025d7d42e5d77be5af73626))
+* **ffe-file-upload-react:** bytter ut ffe-icons med ffe-symbols ([3ec200a](https://github.com/SpareBank1/designsystem/commit/3ec200a162a981fde679c676d1a3f97fa400cef9))
+* **ffe-file-upload-react:** bytter ut hardkodet ikon med ikon fra ffe-icons ([e77c50f](https://github.com/SpareBank1/designsystem/commit/e77c50f25fd35e139870b384ff71dd9bca2a8f6c))
+* **ffe-file-upload-react:** endrer feilmelding til å gjenspeile oppdatert fieldmessage ([f63bc99](https://github.com/SpareBank1/designsystem/commit/f63bc99c87a95e9fbe251640246f2fd05a8fabbe))
+* **ffe-file-upload-react:** erstatt knapp med secondarybutton ([200f351](https://github.com/SpareBank1/designsystem/commit/200f351ae80329a7e45f7d3f5dfeb9e3ac927940))
+* **ffe-file-upload-react:** ffe-form compat ([ece3fd3](https://github.com/SpareBank1/designsystem/commit/ece3fd373d85fc1ebc4a9f9196d8086c1beb3a43))
+* **ffe-file-upload-react:** fikse sletting av opplastede filer ([8db3c7f](https://github.com/SpareBank1/designsystem/commit/8db3c7f66f423fadc2d05d967264eaf2073483b4))
+* **ffe-file-upload-react:** fixed async issues with setState ([0a6b546](https://github.com/SpareBank1/designsystem/commit/0a6b54619825de6f1f37d5a67012ca1b0f4704a3))
+* **ffe-file-upload-react:** make accept prop optional ([10b9af9](https://github.com/SpareBank1/designsystem/commit/10b9af9c53731fbd355912e287becb25e891780b))
+* **ffe-file-upload-react:** oppdater symbol implentasjon ([9e811d1](https://github.com/SpareBank1/designsystem/commit/9e811d141de862cb59b20d6cc10490a554bcd8fd))
+* **ffe-file-upload-react:** reduce vulnerabilities ([9af58e1](https://github.com/SpareBank1/designsystem/commit/9af58e1b015455647460f2f22e4b51ca6ca680ce))
+* **ffe-file-upload-react:** show uploaded files with error only once ([e0601c4](https://github.com/SpareBank1/designsystem/commit/e0601c43285ca71b6999b2af61a0447df1a436de))
+* **ffe-file-upload-react:** use buildtool for transpiling ([4231efd](https://github.com/SpareBank1/designsystem/commit/4231efde54cbdf1ad606d882cd281de5be4ee2ad)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-file-upload-react:** use correct onFileDeleted() ([eb0116c](https://github.com/SpareBank1/designsystem/commit/eb0116cd55e906f3e6319601b2e7e0525e9b1827))
+* **ffe-file-upload-react:** use tsc not babel ([518084f](https://github.com/SpareBank1/designsystem/commit/518084ff49b887c9c95582ee9e5d39dc466a83be))
+* packages/ffe-file-upload-react/package.json to reduce vulnerabilities ([ac3ee52](https://github.com/SpareBank1/designsystem/commit/ac3ee52514b4a65093f09a38e9a40f3d1799b180))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-file-upload-react:** Moving in ([870b07f](https://github.com/SpareBank1/designsystem/commit/870b07f4870f3f3a583fa4cdec4144441d1f38b6))
+
+
+### Code Refactoring
+
+* **ffe-file-upload-react:** Refactor with new design ([30400f2](https://github.com/SpareBank1/designsystem/commit/30400f2cb21d44e5c92dcf570cf03e521b49b903))
+
+
+* fix(ffe-file-upload-react)!: make component props compliant with its type definitions ([d01ff61](https://github.com/SpareBank1/designsystem/commit/d01ff617d51e7a3ab028817fa2a2ac20793d988b))
+
+
+### Features
+
+* **ffe-file-upload-react:** Expose file input property `accept` as property on FileUpload component ([22c9ba1](https://github.com/SpareBank1/designsystem/commit/22c9ba12ae099f4cb2d01372e2bdbf6fbde6f356))
+* **ffe-file-upload-react:** rewrite to ts ([218a198](https://github.com/SpareBank1/designsystem/commit/218a19842bf544e6656590335b1fb549004914af))
+* **ffe-file-upload-react:** update internal dependencies ([157b1f2](https://github.com/SpareBank1/designsystem/commit/157b1f2dccceb14f5a0a6d30e1a18cc7294540e1))
+* **ffe-file-upload-react:** upgrade react to >=18.2.0 ([6f6043d](https://github.com/SpareBank1/designsystem/commit/6f6043dfde8ce7db7405f1e7dc57920abff0e275))
+* **ffe-file-upload:** add typescript declarations ([058f392](https://github.com/SpareBank1/designsystem/commit/058f392487728b71eaf86e26ef931ad62d6cf373)), closes [#1291](https://github.com/SpareBank1/designsystem/issues/1291)
+
+
+### BREAKING CHANGES
+
+* **ffe-file-upload-react:** Dropped support for React <18.2.0
+* **ffe-file-upload-react:** default export -> named export
+* **ffe-file-upload-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* **ffe-file-upload-react:** fieldmessage har ny styling- og markupstruktur, dette påvirker også fileupload
+* The `onFilesDropped` callback prop is now called with a `fileList` instead
+of the drop event
+* **ffe-file-upload-react:** Makes the styling packages @sb1/ffe-form and
+@sb1/ffe-file-upload required dependencies and removes these as peer
+dependencies.
+* **ffe-file-upload-react:** fjerner custom knapp og erstatter den med secondaryButton
+* **ffe-file-upload-react:** Redesign of module with new design, including drag and drop support
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-file-upload-react:** Requires React 16.2 or newer
+
+With this ffe-file-upload-react is moved to the monorepo. A breaking
+change is introduced to remove support for React 15. The upgrade should
+be a drop-in upgrade for users of React 16.2 or newer.
+
+
+
+
+
 ## [12.0.102](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@12.0.101...@sb1/ffe-file-upload-react@12.0.102) (2025-09-08)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
