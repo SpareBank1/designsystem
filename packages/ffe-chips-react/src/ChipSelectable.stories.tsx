@@ -18,9 +18,11 @@ export const Standard: Story = {
     render: args => {
         const [chip1Selected, setChip1Selected] = React.useState(false);
         const [chip2Selected, setChip2Selected] = React.useState(true);
+        const [chip3Selected, setChip3Selected] = React.useState(false);
+        const [chip4Selected, setChip4Selected] = React.useState(true);
 
         return (
-            <div className="storybook-button-display-group">
+            <div style={{display: 'flex', gap: '8px', flexWrap: 'wrap'}}>
                 <ChipSelectable
                     {...args}
                     isSelected={chip1Selected}
@@ -34,6 +36,20 @@ export const Standard: Story = {
                     onClick={() => setChip2Selected(!chip2Selected)}
                 >
                     Selected Chip
+                </ChipSelectable>
+                <ChipSelectable
+                    {...args}
+                    isSelected={chip3Selected}
+                    onClick={() => setChip3Selected(!chip3Selected)}
+                >
+                    Chip
+                </ChipSelectable>
+                <ChipSelectable
+                    {...args}
+                    isSelected={chip4Selected}
+                    onClick={() => setChip4Selected(!chip4Selected)}
+                >
+                    Chip
                 </ChipSelectable>
             </div>
         );
