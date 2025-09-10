@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-buttons",
-    "version": "100.0.2",
+    "version": "100.0.3",
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
@@ -19,10 +19,10 @@
         "build": "lessc less/buttons.less css/buttons.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.0.2"
+        "@sb1/ffe-core": "^100.0.3"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.0.2"
+        "@sb1/ffe-buildtool": "^100.0.3"
     },
     "publishConfig": {
         "access": "public"

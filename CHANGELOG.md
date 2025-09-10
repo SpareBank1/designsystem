@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+
+### Bug Fixes
+
+* **ffe-core:** Trigger build ([8509920](https://github.com/SpareBank1/designsystem/commit/85099207606ed6ea16bc756ee01e787aaaaefe6c))
+
+
+
+
+
 ## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
 
 
