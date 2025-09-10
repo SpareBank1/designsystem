@@ -28,7 +28,7 @@ jobs:
                   registry-url: 'https://registry.npmjs.com'
 
             - run: |
-                  npm install
+                  npm ci
                   echo "$GITHUB_WORKSPACE/node_modules/.bin/" >> $GITHUB_PATH
 
             - name: lerna changed

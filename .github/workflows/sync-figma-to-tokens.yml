@@ -26,7 +26,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Install dependencies
-              run: npm install
+              run: npm ci
 
             - name: Sync variables in Figma file to tokens
               run: npm run sync-figma-to-tokens -- --output packages/ffe-core/tokens
