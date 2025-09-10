@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+
+### Bug Fixes
+
+* **ffe-core:** fiks slik at script for å bygge farger til native blir publisert ([38e28e5](https://github.com/SpareBank1/designsystem/commit/38e28e5e283a42fb1269de49841e90f06cf575c0))
+
+
+
+
+
 ## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
 
 

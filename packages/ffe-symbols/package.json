@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-symbols",
-    "version": "100.0.1",
+    "version": "100.0.2",
     "description": "Styling for tilpasning av material symbols til Sb1",
     "main": "ffe-symbol.css",
     "scripts": {
@@ -9,7 +9,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.0.1",
+        "@sb1/ffe-buildtool": "^100.0.2",
         "less": "^4.1.2"
     },
     "repository": {

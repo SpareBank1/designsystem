@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-buttons-react",
-    "version": "100.0.1",
+    "version": "100.0.2",
     "description": "React implementation of ffe-buttons",
     "keywords": [
         "ffe"
@@ -28,12 +28,12 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-buttons": "^100.0.1",
-        "@sb1/ffe-icons-react": "^100.0.1",
+        "@sb1/ffe-buttons": "^100.0.2",
+        "@sb1/ffe-icons-react": "^100.0.2",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.0.1",
+        "@sb1/ffe-buildtool": "^100.0.2",
         "eslint": "^9.22.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
