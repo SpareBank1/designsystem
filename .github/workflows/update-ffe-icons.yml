@@ -19,7 +19,7 @@ jobs:
             - name: Install dependencies
               run: |
                   pwd
-                  npm install
+                  npm ci
               working-directory: packages/ffe-icons
 
             - name: Build icons
@@ -30,7 +30,7 @@ jobs:
               uses: peter-evans/create-pull-request@v3
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
-                  commit-message: 'fix(ffe-icons): oppdater ikon SVGer'
-                  title: 'feat(ffe-icons): oppdater ikon SVGer'
+                  commit-message: "fix(ffe-icons): oppdater ikon SVGer"
+                  title: "feat(ffe-icons): oppdater ikon SVGer"
                   body: "BREAKING CHANGE: Oppdaterer SVG'ene i ffe-icons til å passe med de som er tilgjengelige i Material Symbols"
-                  branch: 'auto-update-icons'
+                  branch: "auto-update-icons"
