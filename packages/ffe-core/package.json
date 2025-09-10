@@ -9,7 +9,9 @@
         "lib",
         "es",
         "less",
-        "css"
+        "css",
+        "scripts",
+        "tokens"
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
