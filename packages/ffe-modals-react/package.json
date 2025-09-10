@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-modals-react",
-    "version": "100.0.0",
+    "version": "100.0.1",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -24,13 +24,13 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-icons-react": "^100.0.0",
-        "@sb1/ffe-modals": "^100.0.0",
+        "@sb1/ffe-icons-react": "^100.0.1",
+        "@sb1/ffe-modals": "^100.0.1",
         "classnames": "^2.5.1",
         "dialog-polyfill": "^0.5.6"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.0.0",
+        "@sb1/ffe-buildtool": "^100.0.1",
         "eslint": "^9.22.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"

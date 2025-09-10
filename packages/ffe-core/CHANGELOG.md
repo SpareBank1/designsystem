@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+
+### Bug Fixes
+
+* **ffe-core:** Trigg ny versjon ([f801c28](https://github.com/SpareBank1/designsystem/commit/f801c285fc0af84ee7f348da790f7a4e8445d7c3))
+* **ffe-core:** Trigg release ([0a9bcd2](https://github.com/SpareBank1/designsystem/commit/0a9bcd2d67ab51cbfd5d48e40c163ac8404bdf2e))
+
+
+
+
+
 # 100.0.0 (2025-09-09)
 
 
