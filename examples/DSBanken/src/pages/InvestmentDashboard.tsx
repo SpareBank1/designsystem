@@ -14,6 +14,7 @@ import {
     TableHeaderCell,
     TableRow,
 } from '@sb1/ffe-tables-react';
+import "./investmentDashboard.css";
 
 const portfolioData = {
     totalValue: 125678.50,
@@ -43,7 +44,7 @@ export const InvestmentDashboard = () => {
     const paginationControls = usePagination(portfolioData.allocation.length, 4);
 
     return (
-        <>
+        <div className='investment-dashboard'>
             <GridRow>
                 <GridCol sm={12}>
                     <Heading1>Mine investeringer</Heading1>
@@ -149,6 +150,6 @@ export const InvestmentDashboard = () => {
                     <Feedback onFeedbackSend={() => console.log("Sent")} onThumbClick={() => console.log("thumb hurra")} />
                 </GridCol>
             </GridRow>
-        </>
+        </div>
     );
 };

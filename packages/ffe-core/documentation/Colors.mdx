@@ -14,12 +14,18 @@ kan vi variere hvilke farge som vises på tvers av appen. Vi støtter 4 moduser 
 - Dark - for mørk modus
 - Dark accent - for å fremheve elementer i mørk modus
 
-Dark mode aktiveres automatisk basert på brukerens systeminnstillinger.
-Accent mode aktiveres med å legge klassen `ffe-accent-mode` på elementet eller på
+**Dark mode** aktiveres automatisk basert på brukerens systeminnstillinger gitt en har lagt `regard-color-scheme-preference` klassen ytterst.
+
+> En kan også tvinge dark eller light mode med klassene `ffe-dark` og `ffe-light`. Men dette skal ikke gjøres per app. Det skal kun gjøres på hele områder for å sikkre en lik brukeropplevelse.
+>
+> **Bruk av disse klassene skal godkjennes av designsystemet.**
+
+**Accent mode** aktiveres med å legge klassen `ffe-accent-mode` på elementet eller på
 containeren til elementet. Se mer om accent mode på [siden om accent mode](./?path=/docs/design-farger-accent--docs) WIP
 
 ## Liste over de semantiske fargene
-Noen av fargene har gjennomsiktighet, og dette kan påvirke hvordan de vises på forskjellige bakgrunner. 
+
+Noen av fargene har gjennomsiktighet, og dette kan påvirke hvordan de vises på forskjellige bakgrunner.
 I eksemplene under er bakgrunnen satt til `--ffe-color-background-default` for å illustrere effekten i de forskjellige modusene og kontekstene.
 
 <table class="ffe-color-table">
@@ -37,63 +43,68 @@ I eksemplene under er bakgrunnen satt til `--ffe-color-background-default` for �
             <tr key={color}>
                 <td>{color}</td>
                 <td
-                    style={{ 
+                    style={{
                         backgroundColor: `var(--ffe-color-background-default)`,
                         padding: '0',
-                        border: '1px solid #dfe6eb'
+                        border: '1px solid #dfe6eb',
                     }}
                 >
                     <span
-                        style={{ 
-                            backgroundColor: `var(${color})`, 
+                        style={{
+                            backgroundColor: `var(${color})`,
                             display: 'block',
-                            height: '40px'
-                        }}></span>
+                            height: '40px',
+                        }}
+                    ></span>
                 </td>
                 <td
                     class="ffe-accent-mode"
-                    style={{ 
+                    style={{
                         backgroundColor: `var(--ffe-color-background-default)`,
                         padding: '0',
-                        border: '1px solid #dfe6eb'
+                        border: '1px solid #dfe6eb',
                     }}
                 >
                     <span
-                        style={{ 
-                            backgroundColor: `var(${color})`, 
+                        style={{
+                            backgroundColor: `var(${color})`,
                             display: 'block',
-                            height: '40px'
-                        }}></span>
+                            height: '40px',
+                        }}
+                    ></span>
                 </td>
                 <td
-                    class="dark-mode"
-                    style={{ 
+                    class="ffe-dark"
+                    style={{
                         backgroundColor: `var(--ffe-color-background-default)`,
                         padding: '0',
-                        border: '1px solid #dfe6eb'
+                        border: '1px solid #dfe6eb',
                     }}
                 >
                     <span
-                        style={{ 
-                            backgroundColor: `var(${color})`, 
+                        style={{
+                            backgroundColor: `var(${color})`,
                             display: 'block',
-                            height: '40px'
-                        }}></span>
+                            height: '40px',
+                        }}
+                    ></span>
                 </td>
                 <td
-                    class="dark-mode ffe-accent-mode"
-                    style={{ 
+                    class="ffe-dark ffe-accent-mode"
+                    style={{
                         backgroundColor: `var(--ffe-color-background-default)`,
                         padding: '0',
-                        border: '1px solid #dfe6eb'
-                     }}
+                        border: '1px solid #dfe6eb',
+                    }}
                 >
                     <span
-                        style={{ 
-                            backgroundColor: `var(${color})`, 
+                        style={{
+                            backgroundColor: `var(${color})`,
                             display: 'block',
-                            height: '40px'
-                        }}></span></td>
+                            height: '40px',
+                        }}
+                    ></span>
+                </td>
             </tr>
         ))}
     </tbody>

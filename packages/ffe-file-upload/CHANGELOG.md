@@ -3,6 +3,100 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-file-upload
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-file-upload
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-file-upload
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-file-upload:** broadens version of peer dependencies ([c1a147f](https://github.com/SpareBank1/designsystem/commit/c1a147f139849263400b9b900c8ebd3867ac8479))
+* **ffe-file-upload:** bytter ut ffe-icons med ffe-symbols ([41f299e](https://github.com/SpareBank1/designsystem/commit/41f299e07f94581f572b324d443670a8159693f7))
+* **ffe-file-upload:** bytter ut hardkodet ikon med ikon fra ffe-icons ([9dc7722](https://github.com/SpareBank1/designsystem/commit/9dc77223e97abcd889f165a2a3989780bdf66655))
+* **ffe-file-upload:** change text values to rem ([e4f10db](https://github.com/SpareBank1/designsystem/commit/e4f10db76a54dea51910310609ea44dd376b5c2e))
+* **ffe-file-upload:** endrer feilmelding til å gjenspeile oppdatert fieldmessage ([25618ac](https://github.com/SpareBank1/designsystem/commit/25618ace5451bace2cecc2a7508e2883f33d2df5))
+* **ffe-file-upload:** fikser layout-bug i file upload ([9c0f412](https://github.com/SpareBank1/designsystem/commit/9c0f412f71395d9e0af39713325363e4869c76c9))
+* **ffe-file-upload:** fjern upload knapp styling ([3374c48](https://github.com/SpareBank1/designsystem/commit/3374c482e9b9820040c26ffc92cbdd7ca9f71d1b))
+* **ffe-file-upload:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([ed13768](https://github.com/SpareBank1/designsystem/commit/ed137684150f7a27aba4b4a0295a0f0ebe03892b))
+* **ffe-file-upload:** hovering styles only when using pointer/mouse ([cbbb373](https://github.com/SpareBank1/designsystem/commit/cbbb3733abe5769443994e82a673056472476949))
+* **ffe-file-upload:** legger til default font ([2f32e0e](https://github.com/SpareBank1/designsystem/commit/2f32e0e1560cc8a127856c989bc2464abd79af78))
+* **ffe-file-upload:** ornder text zzom ([2090c6f](https://github.com/SpareBank1/designsystem/commit/2090c6fb54a1203eea00b760e67d48359b36d6f8))
+* **ffe-file-upload:** remove main entry field from package.json ([b7c3605](https://github.com/SpareBank1/designsystem/commit/b7c3605dd7ff55f184c88071cfad116c2401af89))
+* **ffe-file-upload:** replace hardcoded spacing with variables ([058ebeb](https://github.com/SpareBank1/designsystem/commit/058ebeb478a57b7e5041a6f4cdd1abcbb5373520))
+* **ffe-file-upload:** semantiske farger i file upload ([8f54295](https://github.com/SpareBank1/designsystem/commit/8f54295b208cfb9ac1142477cea127ffbcbf9f72))
+
+
+### chore
+
+* **ffe-file-upload:** add new package ([e127133](https://github.com/SpareBank1/designsystem/commit/e127133800ba19855e552ed0ac7d117a2022d989))
+
+
+### Features
+
+* **ffe-file-upload:** add :host for shadow dom support ([e337278](https://github.com/SpareBank1/designsystem/commit/e337278778cde97dc5b0e52224fd7ffa68c882f8))
+* **ffe-file-upload:** add darkmdoe styling overrides ([0946b37](https://github.com/SpareBank1/designsystem/commit/0946b37d65c283c443e5dc23e5b71ed11c257351))
+* **ffe-file-upload:** legger til støtte for theming ([d20b793](https://github.com/SpareBank1/designsystem/commit/d20b7934c00c82bca20ac49acd423e4cf12e7ff8))
+* **ffe-file-upload:** oppdaterte farger iht ny profil ([dfd1dc1](https://github.com/SpareBank1/designsystem/commit/dfd1dc10f107297b414e6d56b4d49538c42da26a))
+* **ffe-file-upload:** regard-color-scheme-preference for darkmode ([8aca5ff](https://github.com/SpareBank1/designsystem/commit/8aca5ff007492a7f08047e56b5399c3f34bc4685))
+* **ffe-file-upload:** tilbyr kompilert css i tillegg til less ([8e6ca71](https://github.com/SpareBank1/designsystem/commit/8e6ca71746374476b94a7e3d1c7ed9065958aab8))
+* **ffe-file-upload:** update internal dependencies ([fff83d3](https://github.com/SpareBank1/designsystem/commit/fff83d3c8b9b5c9f7996d634009a4db8aa03b125))
+
+
+### BREAKING CHANGES
+
+* **ffe-file-upload:** endring i farger og import
+* **ffe-file-upload:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-file-upload:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* **ffe-file-upload:** fieldmessage har ny styling- og markupstruktur, dette påvirker også fileupload
+* **ffe-file-upload:** Makes the styling packages @sb1/ffe-core and
+@sb1/ffe-form required dependencies and removes these as peer
+dependencies.
+* **ffe-file-upload:** fjerner styling for upload knapp som nå bare er en secondary button
+* **ffe-file-upload:** visuelle endringer i komponenten kan medføre regresjonsfeil
+* **ffe-file-upload:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+* **ffe-file-upload:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* **ffe-file-upload:** add new package
+
+
+
+
+
+## [12.0.46](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@12.0.45...@sb1/ffe-file-upload@12.0.46) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-file-upload
+
+
+
+
+
 ## [12.0.45](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@12.0.44...@sb1/ffe-file-upload@12.0.45) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload

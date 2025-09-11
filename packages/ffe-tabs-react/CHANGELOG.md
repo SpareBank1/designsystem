@@ -3,6 +3,181 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tabs-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tabs-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tabs-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-tabs-react:** add type button to tab ([a703d8a](https://github.com/SpareBank1/designsystem/commit/a703d8ae4684b19d3e461bece38d58d2fe2c35dd))
+* **ffe-tabs-react:** Added defaultProps false for dark variant. ([30f7697](https://github.com/SpareBank1/designsystem/commit/30f76977f7f4fa609e356c61e21d42d0ee3dec39))
+* **ffe-tabs-react:** added peerDependency to ffe-core@^13.0.0 ([e12b0dd](https://github.com/SpareBank1/designsystem/commit/e12b0dd7f6f78b688954abb256fd670d05f9bb98))
+* **ffe-tabs-react:** broadens version of peer dependencies ([05a39f0](https://github.com/SpareBank1/designsystem/commit/05a39f00544d1d1e87aa5d38dd5ff4d6a9d3939b))
+* **ffe-tabs-react:** fjerner gjenglemte referanser til --dark ([79c1fa6](https://github.com/SpareBank1/designsystem/commit/79c1fa634d7cefbd5b3a3bba0b88b9c5ab58b623))
+* **ffe-tabs-react:** Legger til piltastnavigering på tabgroup ([c004c55](https://github.com/SpareBank1/designsystem/commit/c004c55bca7c9f08c6932115b48886c1d0e6513f))
+* **ffe-tabs-react:** make aria-controls-prop not required ([d6c7982](https://github.com/SpareBank1/designsystem/commit/d6c798262044fad75b935fd160f564b2313315a5))
+* **ffe-tabs-react:** reduce vulnerabilities ([28ff9b1](https://github.com/SpareBank1/designsystem/commit/28ff9b1657744bfd7ddd7dc7eb9ceae042795b20))
+* **ffe-tabs-react:** tab-button default type to button ([14417f6](https://github.com/SpareBank1/designsystem/commit/14417f68319c6c1b401c08f359830091150799a5))
+* **ffe-tabs-react:** Update TypeScript definitions ([918f2b2](https://github.com/SpareBank1/designsystem/commit/918f2b2d04f547b00ea868a26a1dba4fa5896a6f))
+* **ffe-tabs-react:** Updated readme file with install instructions ([dadca45](https://github.com/SpareBank1/designsystem/commit/dadca45a490f271b37dab41a751bb803ac21fd9a))
+* **ffe-tabs-react:** use buildtool for transpiling ([287763f](https://github.com/SpareBank1/designsystem/commit/287763fe94e7abc1f3e8ff4aa9b45c9acc5e5e7b)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-tabs-react:** use react.componentsprops instead of react.htmlprops ([cb53798](https://github.com/SpareBank1/designsystem/commit/cb537985f169deae87d8e10dbf0fb2bc01d44a2b))
+* packages/ffe-tabs-react/package.json to reduce vulnerabilities ([501daa3](https://github.com/SpareBank1/designsystem/commit/501daa3bd3aefb484f8aec11072378785345e6b8))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+
+
+### Features
+
+* Change tab styling to resemble actual tabs, rename components ([afd8cbc](https://github.com/SpareBank1/designsystem/commit/afd8cbc04bc305d236940a69b682e9cdf13de428))
+* **ffe-tabs-react:** Add aria-controls as required to tabs ([07d9676](https://github.com/SpareBank1/designsystem/commit/07d96766e6d78d5ebf2ed6d73e33ff9e818cadc2)), closes [#626](https://github.com/SpareBank1/designsystem/issues/626)
+* **ffe-tabs-react:** Add aria-selected to tabs ([b4a3fbe](https://github.com/SpareBank1/designsystem/commit/b4a3fbe391470bc54f1ce48f55a4a425f7fd5ae2))
+* **ffe-tabs-react:** add props thin and className to TabGroup ([5c9b486](https://github.com/SpareBank1/designsystem/commit/5c9b4861ba3f7d39877848755f21df4e1a499124))
+* **ffe-tabs-react:** Add tabs examples with content tied to each tab ([5b5b534](https://github.com/SpareBank1/designsystem/commit/5b5b534dcdbbca58def62f01a0f17eb0c28231d7))
+* **ffe-tabs-react:** Added dark property with example ([ff37a51](https://github.com/SpareBank1/designsystem/commit/ff37a514a0b684fe1087894fcc45b82eb782b2ab))
+* **ffe-tabs-react:** Added type definitions for typescript ([a524b29](https://github.com/SpareBank1/designsystem/commit/a524b29ba98ca97c43024cbf6cc2292e796fb249))
+* **ffe-tabs-react:** fjerner TabButton og TabButtonGroup ([406e37b](https://github.com/SpareBank1/designsystem/commit/406e37b98633efa163f9f74e2c4b18d063ae709c))
+* **ffe-tabs-react:** redesign av faner ([32cdd2d](https://github.com/SpareBank1/designsystem/commit/32cdd2dd79346651ef76fe54d0bef210e2838c6d))
+* **ffe-tabs-react:** rewrite to ts ([5c0d31c](https://github.com/SpareBank1/designsystem/commit/5c0d31c60bbc7436a812a3891d9cd99a2dedd0c6))
+* **ffe-tabs-react:** update internal dependencies ([2543cb0](https://github.com/SpareBank1/designsystem/commit/2543cb08767614a11977e7b110238d6510a6ba4d))
+* **ffe-tabs-react:** upgrade react to >=18.2.0 ([a403bcf](https://github.com/SpareBank1/designsystem/commit/a403bcfa33f02bd0d5b0b598ade1e131fc96c3dc))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs-react:** Dropped support for React <18.2.0
+* **ffe-tabs-react:** some manual props where wrong
+* **ffe-tabs-react:** Makes the styling package @sb1/ffe-tabs a required
+dependency and removes it as peer dependency.
+* **ffe-tabs-react:** fjerner tabButton og TabButtonGroup komponentene
+* **ffe-tabs-react:** Fjerne thin prop fra TabGroup og condensed fra Tab. Lagt til ny prop noBreak
+
+This reverts commit f136d98e4e74dd57091c95a50d5815bbfb4bed2f.
+
+feat(ffe-tabs-react): redesign av faner
+
+feat(ffe-tabs-react): redesign av faner
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* This commit renames the existing Tab and TabGroup components to TabButton and TabButtonGroup. A new Tab and TabGroup component is added, but uses different styling in order to represent actual tabs.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [10.0.56](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@10.0.55...@sb1/ffe-tabs-react@10.0.56) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-tabs-react
+
+
+
+
+
 ## [10.0.55](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@10.0.54...@sb1/ffe-tabs-react@10.0.55) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react

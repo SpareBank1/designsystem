@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-badge-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-badge-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-badge-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-badge-react:** legger til manglene dep classnames ([7e4c118](https://github.com/SpareBank1/designsystem/commit/7e4c1186c9ea048cf1dc75d614ebc38bb6d3147b))
+
+
+### Features
+
+* **ffe-badge-react:** ny komponent badge ([51fcf28](https://github.com/SpareBank1/designsystem/commit/51fcf28a725b13ab62d51c3b12285a8da476c72b))
+
+
+
+
+
+## [1.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-badge-react@1.1.12...@sb1/ffe-badge-react@1.1.13) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-badge-react
+
+
+
+
+
 ## [1.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-badge-react@1.1.11...@sb1/ffe-badge-react@1.1.12) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-badge-react

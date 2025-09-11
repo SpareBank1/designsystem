@@ -3,6 +3,325 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-form-react:** accessibility issue when using hidden label in checkbox ([412c649](https://github.com/SpareBank1/designsystem/commit/412c6494db0aaa99f68042624d13e8eea8b9618e))
+* **ffe-form-react:** add aria-describedby to radio block description ([6697304](https://github.com/SpareBank1/designsystem/commit/6697304288cca179751f365b4c83fd4844afbae7))
+* **ffe-form-react:** add children props for render-as-a-child ([44834ed](https://github.com/SpareBank1/designsystem/commit/44834ed8584d21cd70064a099f7df8e342f97a73))
+* **ffe-form-react:** add expectations and fix tests ([eccd46c](https://github.com/SpareBank1/designsystem/commit/eccd46c4ef5d10e40e1fbb9ccd91594a116fa0aa))
+* **ffe-form-react:** add isMobileNumber to PhoneNumberProps ([24f01e7](https://github.com/SpareBank1/designsystem/commit/24f01e721c151a2cb023130d1d74105d27345b05))
+* **ffe-form-react:** Add role="status" to expanded content in Tooltip ([db63aea](https://github.com/SpareBank1/designsystem/commit/db63aeae17ecda2dc1fe36738533bc1a90dbd2d3))
+* **ffe-form-react:** Added defaultProps false for dark variant. ([6309011](https://github.com/SpareBank1/designsystem/commit/6309011b90bb0e3cef4b87924b7b9105a51d5353))
+* **ffe-form-react:** Added generated id on tooltip button to avoid warnings when used in forms validated with formik (expects id on every input or button field). ([6327676](https://github.com/SpareBank1/designsystem/commit/63276769624a7212536d3594fa6ee1123e3aaeda))
+* **ffe-form-react:** added peerDependency to ffe-core@^13.0.0 ([76ec2eb](https://github.com/SpareBank1/designsystem/commit/76ec2eb8c0ce3a3444eaf4c44c222de376ea37a5))
+* **ffe-form-react:** align radio button in top when element breaks ([10572b3](https://github.com/SpareBank1/designsystem/commit/10572b3432cc8e282c807c59fe8653b2dcaa6ffc))
+* **ffe-form-react:** allow number values in prop types ([cb1c093](https://github.com/SpareBank1/designsystem/commit/cb1c093971599ebf59cab9b2be32e008aa876af2))
+* **ffe-form-react:** ARIA improvements to Tooltip ([f9f0372](https://github.com/SpareBank1/designsystem/commit/f9f0372a16fa2801efe69c952fc539238b4e64e0)), closes [#504](https://github.com/SpareBank1/designsystem/issues/504)
+* **ffe-form-react:** broadens version of peer dependencies ([79a58a7](https://github.com/SpareBank1/designsystem/commit/79a58a7d3b5b95efa1674be45f258899f1c489bf))
+* **ffe-form-react:** Bug fixes for propType and typescript type-definitions for InputGroup: ([ad962c3](https://github.com/SpareBank1/designsystem/commit/ad962c396a96bf00f52129eb6e2993e8d04f588d))
+* **ffe-form-react:** bytte plassering på span og div i tooltip ([0cba1b6](https://github.com/SpareBank1/designsystem/commit/0cba1b63e797789383c89757275f4929245b4365))
+* **ffe-form-react:** bytter ut ffe-icons med ffe-symbols ([e9da2ad](https://github.com/SpareBank1/designsystem/commit/e9da2adebfa4fae5deaca3a28ed0beb654375561))
+* **ffe-form-react:** center checkbox ([90a12e4](https://github.com/SpareBank1/designsystem/commit/90a12e4c006638308fd222776d545755ae71cfe7))
+* **ffe-form-react:** correct type definitions for onCountryCodeChange and onNumberChange ([9f6b6fe](https://github.com/SpareBank1/designsystem/commit/9f6b6fe54b6298511da27cb9f5aeef2cd4f35f1c))
+* **ffe-form-react:** correctly handle non-undefined selected value ([907e56a](https://github.com/SpareBank1/designsystem/commit/907e56a30acc45061bb9d20216c6dbab6fcc673e))
+* **ffe-form-react:** definerer proptypes på errorfieldmessage ([7c453ae](https://github.com/SpareBank1/designsystem/commit/7c453ae0b27d051a8db959579b0d12410eb4eb22))
+* **ffe-form-react:** dont set aria-describedby when child element is hidden ([e348e55](https://github.com/SpareBank1/designsystem/commit/e348e5583aca53233611f7d149c4965b46ff8d9a))
+* **ffe-form-react:** endrer størrelse og alignment i tooltip ([0c9f597](https://github.com/SpareBank1/designsystem/commit/0c9f597da28efdeaaf9d8af3d4742d0dbbd25f49))
+* **ffe-form-react:** endrer til nye props på phonenumber ([e0f7ecb](https://github.com/SpareBank1/designsystem/commit/e0f7ecbc5108f3c18ff36622a7e8bb02992a51c7))
+* **ffe-form-react:** Ensure type definitions for type script is correct. ([5866dea](https://github.com/SpareBank1/designsystem/commit/5866dea6115adfbe389dd881b53dcd76470f3679))
+* **ffe-form-react:** Fikse div med tooltip inne i fieldset legend ([fc9559e](https://github.com/SpareBank1/designsystem/commit/fc9559e8266c05867c0790414e81e16b33e4288c))
+* **ffe-form-react:** fikser [#1379](https://github.com/SpareBank1/designsystem/issues/1379) og [#1380](https://github.com/SpareBank1/designsystem/issues/1380) ([d310a68](https://github.com/SpareBank1/designsystem/commit/d310a68f634fd276fb948789f4d70d4941b1cf14))
+* **ffe-form-react:** fikser advarsel ([f6976ff](https://github.com/SpareBank1/designsystem/commit/f6976ff09468c7a2f35b31701f19f23ab6fed2f2))
+* **ffe-form-react:** Fix a classNames definition ([97a8c27](https://github.com/SpareBank1/designsystem/commit/97a8c275cc306f353f57636fd9730e980f9b335d))
+* **ffe-form-react:** fix declaration for ToggleSwitch and Checkbox ([ea2baee](https://github.com/SpareBank1/designsystem/commit/ea2baeefe7df0bc2d5955d56ba24910e68ed0c45))
+* **ffe-form-react:** Fix documentation ([c06149a](https://github.com/SpareBank1/designsystem/commit/c06149aeab086024a8a82672c12234a62df5c74b))
+* **ffe-form-react:** Fix for extra error padding ([1434872](https://github.com/SpareBank1/designsystem/commit/14348721d977ebf46f3a41718e6cbe2c825346c4))
+* **ffe-form-react:** Fix linting ([b54d9e5](https://github.com/SpareBank1/designsystem/commit/b54d9e53970d8b58fb3a00d0b58e2b53ce94154c))
+* **ffe-form-react:** Fix linting errors ([d293f00](https://github.com/SpareBank1/designsystem/commit/d293f006e2772f390972de62ec590c1a5d551d46))
+* **ffe-form-react:** Fix peer dependency version ([ff0958d](https://github.com/SpareBank1/designsystem/commit/ff0958d517bab6ec8897972a04621587c7c8b6ff)), closes [#469](https://github.com/SpareBank1/designsystem/issues/469)
+* **ffe-form-react:** Fix tooltip bug in RadioButtonInputGroup ([076b5e8](https://github.com/SpareBank1/designsystem/commit/076b5e8648f8be825ba725cefba59fd9083d255c)), closes [#631](https://github.com/SpareBank1/designsystem/issues/631)
+* **ffe-form-react:** fix tooltip ref type ([6f45ece](https://github.com/SpareBank1/designsystem/commit/6f45eceb45a9d665400268e1d0a472ce265e73e4))
+* **ffe-form-react:** fix type definition for inputgroup ([ef89146](https://github.com/SpareBank1/designsystem/commit/ef89146ea6ca9638e8a560a32eedd019a8f11c1f))
+* **ffe-form-react:** fix type definition on onchange ([6a7fc54](https://github.com/SpareBank1/designsystem/commit/6a7fc54695e98f7aabd165f03e9d9c4faf27bf05))
+* **ffe-form-react:** fix type for ref for tooltip ([920f65c](https://github.com/SpareBank1/designsystem/commit/920f65c543d54aac97310a4ce079683b2595d49f))
+* **ffe-form-react:** fixed async issues with setState ([4cad2d8](https://github.com/SpareBank1/designsystem/commit/4cad2d8eebe7357bc4598ec1a98ab0c0f51da1e3))
+* **ffe-form-react:** fixing incorrect types ([cd4614b](https://github.com/SpareBank1/designsystem/commit/cd4614b9724e5825aedfb33de30ce0b4f6a704ff))
+* **ffe-form-react:** fjern støtte for aria-invalid på radiobtn ([49e1d75](https://github.com/SpareBank1/designsystem/commit/49e1d750008ec3325a1faafcb4601604ca1f2250))
+* **ffe-form-react:** fjern tester der aria-invalid blir passed down til radiobutton ([0d22d7a](https://github.com/SpareBank1/designsystem/commit/0d22d7a7c5722e6ed4854851e36680e37f37eb07))
+* **ffe-form-react:** fjerner gjenglemte referanser til --dark ([92d22c9](https://github.com/SpareBank1/designsystem/commit/92d22c9d10017b96c3dc963531dc8a27c0b3ab50))
+* **ffe-form-react:** fjerner oncoloredbg story ([88471d5](https://github.com/SpareBank1/designsystem/commit/88471d5069e38251f07ed9146f404a8f306ad995))
+* **ffe-form-react:** fjerner uuid og bruker useId ([7c4a0ea](https://github.com/SpareBank1/designsystem/commit/7c4a0eae8a24cf61d9e8d8fb9487d1cbe1cadd8e))
+* **ffe-form-react:** gjør name prop required ([a6ad97e](https://github.com/SpareBank1/designsystem/commit/a6ad97e6592d49c21fb4f5cd4de5bb519fc7cabf))
+* **ffe-form-react:** gjør name prop required i TS ([64a29c7](https://github.com/SpareBank1/designsystem/commit/64a29c79ca33df6dac2a2f3892b70132db9d5550)), closes [#1275](https://github.com/SpareBank1/designsystem/issues/1275) [#1264](https://github.com/SpareBank1/designsystem/issues/1264)
+* **ffe-form-react:** godtta null for fieldmessage på inputgroup ([14506f3](https://github.com/SpareBank1/designsystem/commit/14506f3ead3fe799332912d99882f1d536145dbb))
+* **ffe-form-react:** inputs controlled not uncontrolled ([dc61d8a](https://github.com/SpareBank1/designsystem/commit/dc61d8a79682c11509494f827cd6199d1d41b808))
+* **ffe-form-react:** legg til manglende textRightAlign prop i ts ([1c9e63d](https://github.com/SpareBank1/designsystem/commit/1c9e63d8712877ea08f09c0c40b6705f45f09b92))
+* **ffe-form-react:** legger til manglende klassedeklarasjon ([d94533b](https://github.com/SpareBank1/designsystem/commit/d94533bea6b7a383c32cee7ee65f62b975a6d0c2))
+* **ffe-form-react:** Make classnames a dependency ([931ffce](https://github.com/SpareBank1/designsystem/commit/931ffce653b9e2b8b2d6846a373aa8d909f96d49))
+* **ffe-form-react:** make place for fieldmessage under input group ([9de7d45](https://github.com/SpareBank1/designsystem/commit/9de7d4540f4cd5bc5a7499977100094bfc353c80))
+* **ffe-form-react:** Make sure InputGroup's onTooltipToggle is not called twice. ([a188400](https://github.com/SpareBank1/designsystem/commit/a1884003f20885c4eae833d696cbfde810f7968b)), closes [#457](https://github.com/SpareBank1/designsystem/issues/457)
+* **ffe-form-react:** make text alig right ts type optional ([e54999d](https://github.com/SpareBank1/designsystem/commit/e54999d7c9af7601c266b5d38bb5fa523f19b230))
+* **ffe-form-react:** Moved tooltip button id generation to constructor to avoid unnecessary DOM-updates. ([1c0136c](https://github.com/SpareBank1/designsystem/commit/1c0136ced8a4e84e943da10bb32368061bcf8327))
+* **ffe-form-react:** onclick on tooltip should be optional(ts) ([4921274](https://github.com/SpareBank1/designsystem/commit/4921274fe2aff93057babb9bbb86711196824b44))
+* **ffe-form-react:** onColoredBg kan ikke vare med til children pg av clone ([d815188](https://github.com/SpareBank1/designsystem/commit/d815188da2a68135be68ddc4eaed477c1765baf4))
+* **ffe-form-react:** Only use role="status" when tooltip is expanded ([f96f84e](https://github.com/SpareBank1/designsystem/commit/f96f84e9af073875f12098f23c90b224b78b6bf1))
+* **ffe-form-react:** oppdater symbol implementasjon) ([cf3d8c8](https://github.com/SpareBank1/designsystem/commit/cf3d8c849321f86a699db91349f8b125c1f1edbf))
+* **ffe-form-react:** oppdatering av tooltip-ikon ([9a915e8](https://github.com/SpareBank1/designsystem/commit/9a915e88a3d2e1ea0560e5ae143401db74263d75))
+* **ffe-form-react:** propagate `dark` prop ([33618fe](https://github.com/SpareBank1/designsystem/commit/33618fe9ec72566cb956476e462ae059dfabacb1)), closes [#613](https://github.com/SpareBank1/designsystem/issues/613)
+* **ffe-form-react:** radiobutton tillot ikke lengre labels ([f6265a9](https://github.com/SpareBank1/designsystem/commit/f6265a98dc40cc7416277dbb49e4a6451bfe45ce))
+* **ffe-form-react:** reduce vulnerabilities ([40fcdff](https://github.com/SpareBank1/designsystem/commit/40fcdff9d89e5c495d87fffbe2a1d7d38724c4c2))
+* **ffe-form-react:** remove checkbox props ([9e6b39b](https://github.com/SpareBank1/designsystem/commit/9e6b39b4172b09a5f62ea20727240efaffb6c248))
+* **ffe-form-react:** remove children prop from RadioSwitch ([f1041fe](https://github.com/SpareBank1/designsystem/commit/f1041fe2ec22f83febb44d04e750d86f160646e2))
+* **ffe-form-react:** remove default props ([02ecec9](https://github.com/SpareBank1/designsystem/commit/02ecec9075be3a792c46545be9e954ce9b628090))
+* **ffe-form-react:** remove field message wrapper from input group to fix extra margin ([cea0c9e](https://github.com/SpareBank1/designsystem/commit/cea0c9e67ae4bb77c5a929cbda71d7df15e139c3))
+* **ffe-form-react:** Remove setInputGroupLabelAsSpan ([3e5e55b](https://github.com/SpareBank1/designsystem/commit/3e5e55b362285c426dd9061003ec5739a95aa7ea))
+* **ffe-form-react:** selected value no passed from radio switch ([8a33836](https://github.com/SpareBank1/designsystem/commit/8a3383679428287556cc36edc680d93ef2e1e794))
+* **ffe-form-react:** Split inputgroup  function and element children types avoid warning ([34b6a23](https://github.com/SpareBank1/designsystem/commit/34b6a238be90b5a3aff1e1de91518fb68e8fbc77))
+* **ffe-form-react:** spreading labelId on the container causes a warning ([ccb2803](https://github.com/SpareBank1/designsystem/commit/ccb28031a5ce491fe661181453b6d42584d03e42))
+* **ffe-form-react:** tar i bruk ikoner fra ffe-icons i fieldmessage ([b6e5f68](https://github.com/SpareBank1/designsystem/commit/b6e5f688383bd7286fa3c122559c0fe2762d144c))
+* **ffe-form-react:** Tar ibruk ny versjon av ffe-input-group ([6993008](https://github.com/SpareBank1/designsystem/commit/699300890890842a8b410711b2c00b482e28a53a))
+* **ffe-form-react:** Tillat null som selectedValue når ingen radiobutton er valgt, siden undefined gjør at den blir uncontrolled ([36bd432](https://github.com/SpareBank1/designsystem/commit/36bd4329d08b0624b67118f50ac549d445499b58))
+* **ffe-form-react:** Tooltip handles aria-controls better ([4d9a6be](https://github.com/SpareBank1/designsystem/commit/4d9a6becebaf535487c82b312a858ac2f48df4d5)), closes [#633](https://github.com/SpareBank1/designsystem/issues/633)
+* **ffe-form-react:** update uuid to version 7.0.0 ([f8c993d](https://github.com/SpareBank1/designsystem/commit/f8c993d684b48cfc08140f9f35a6bd04daaa7048))
+* **ffe-form-react:** use buildtool for transpiling ([4d46c6a](https://github.com/SpareBank1/designsystem/commit/4d46c6a64ea5a23861a169a317f3e9ef36e573b7)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-form-react:** use our own Collapse component ([548e30c](https://github.com/SpareBank1/designsystem/commit/548e30c15146554c7991b7486155eefa1b2f10ef))
+* **ffe-form-react:** use react.componentsprops instead of react.htmlprops ([f1860d2](https://github.com/SpareBank1/designsystem/commit/f1860d22e024a4c8a6209a64561ab94416e5b9c4))
+* **ffe-form-react:** use react.htmlprops instead of react.componentprops ([66cf878](https://github.com/SpareBank1/designsystem/commit/66cf878dbbf74c34ea29fe3725a36348038371b9))
+* **ffe-form-react:** using class message instead og error ([f1b3268](https://github.com/SpareBank1/designsystem/commit/f1b3268aeaec766ce2909b8b4909af4ccbaaddba))
+* **ffe-form:** la til spacing mellom description og input-felt ([8e516d5](https://github.com/SpareBank1/designsystem/commit/8e516d51225303878894cd96fd229b4ebb28b95c))
+* packages/ffe-form-react/package.json to reduce vulnerabilities ([8233f93](https://github.com/SpareBank1/designsystem/commit/8233f93f385ee9ce1a755f3c7ca935787334cb28))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+
+
+* feat(ffe-form-react)!: oppdatert design på radioblock ([4334c47](https://github.com/SpareBank1/designsystem/commit/4334c47c21505275d2a7adc3935d701a66276382))
+* feat(ffe-form-react)!: oppdaterte alle komponenter med semantiske farger ([fbcedbb](https://github.com/SpareBank1/designsystem/commit/fbcedbbe1fa5d337112422f12158d5177231e62f))
+
+
+### Features
+
+* **ffe-collapse-react:** rewrite with ts ([fbaf68f](https://github.com/SpareBank1/designsystem/commit/fbaf68ff21b24c962943f5da69fe16a08cf964bc))
+* **ffe-form-react:** add `aria-describedby` to `InputGroup` ([50610c2](https://github.com/SpareBank1/designsystem/commit/50610c25886b19424d464ee6c57ba8ba891e19f5))
+* **ffe-form-react:** Add new `description` prop to `InputGroup` ([d839b85](https://github.com/SpareBank1/designsystem/commit/d839b8555aac2570b52fa664f6fddeef6d468e6c)), closes [#291](https://github.com/SpareBank1/designsystem/issues/291)
+* **ffe-form-react:** Add parameter to input group to change the element of label to improve accessability ([2666f88](https://github.com/SpareBank1/designsystem/commit/2666f886d8b7d16134e7e3991f82df7004486d8c))
+* **ffe-form-react:** add role="alert" to ErrorFieldMessage ([ff6ea6c](https://github.com/SpareBank1/designsystem/commit/ff6ea6cd367c377eb538e959f9ba6fff88230ac7))
+* **ffe-form-react:** Add showChildren prop to RadioBlock ([99db6e4](https://github.com/SpareBank1/designsystem/commit/99db6e49cdd237be723c1fceba46ff6953024e34))
+* **ffe-form-react:** Add support for forwarding refs ([cdc58c6](https://github.com/SpareBank1/designsystem/commit/cdc58c6c56d0d6edd8ae6b1f06a99cd1a0558f10))
+* **ffe-form-react:** added forward ref to tooltip ([98ff415](https://github.com/SpareBank1/designsystem/commit/98ff415ead7c48ec3dc9211a5f89e17f0429daf9))
+* **ffe-form-react:** Added new prop labelClass to RadioBlock. ([8c08838](https://github.com/SpareBank1/designsystem/commit/8c08838d385893be13d14192c4e0901c15e41af2))
+* **ffe-form-react:** added support for passing ref to input elements ([5bb478e](https://github.com/SpareBank1/designsystem/commit/5bb478ea50c6e4085ee6503502f9755425b70f98))
+* **ffe-form-react:** added support for passing ref to radio buttons ([845ce6a](https://github.com/SpareBank1/designsystem/commit/845ce6ab9d1bc334763ad4d045bb630d9b7951e8))
+* **ffe-form-react:** Added type definitions for typescript ([a1ac175](https://github.com/SpareBank1/designsystem/commit/a1ac1751f18c5da06ef44b46c9e4e3498876fa2a))
+* **ffe-form-react:** Adding inputId as an optional prop for InputGroup to be used as id on the Input child element instead of the generated one. ([05a6aaf](https://github.com/SpareBank1/designsystem/commit/05a6aaf2421cabf9add36db0f6d2d9af455da4f9))
+* **ffe-form-react:** Adds a PhoneNumber component to ffe-form-react ([6ec0f92](https://github.com/SpareBank1/designsystem/commit/6ec0f92cec540c41b90666abb9b34dff9bf23512))
+* **ffe-form-react:** Allow node as label ([ef3a58f](https://github.com/SpareBank1/designsystem/commit/ef3a58fc94c2866a8e15ae2829e723b2d6d559bc)), closes [#522](https://github.com/SpareBank1/designsystem/issues/522)
+* **ffe-form-react:** Bottom padding of input controls ([c5621a6](https://github.com/SpareBank1/designsystem/commit/c5621a640ddf4ae4b6a2ce630f4c4ca285928480)), closes [#381](https://github.com/SpareBank1/designsystem/issues/381)
+* **ffe-form-react:** Extend Description prop in RadioButtonInputGroup ([bcd1642](https://github.com/SpareBank1/designsystem/commit/bcd1642699315b5eb316313bbdbd2ebf22c40bea))
+* **ffe-form-react:** fieldMessage as function ([16137d2](https://github.com/SpareBank1/designsystem/commit/16137d27a1c91d9e65c27189b74d06e6bc786df1))
+* **ffe-form-react:** i18n for av- og på-tekst ([2558da7](https://github.com/SpareBank1/designsystem/commit/2558da73948ad2810732a81313bf73458ef34ded))
+* **ffe-form-react:** legg til isMobileNumber prop for å endre labeltekst ([007a30e](https://github.com/SpareBank1/designsystem/commit/007a30e06e326041e2dc10bb937f0ffcee884545))
+* **ffe-form-react:** legg til role=switch på toggleswitch for bedre skjermleser-støtte ([762098d](https://github.com/SpareBank1/designsystem/commit/762098dc274b3232280ff75a8da2d33ac2ae1dd4))
+* **ffe-form-react:** legg til textRightAlign prop for å høyre justere tekst i inputfelt ([46bf73d](https://github.com/SpareBank1/designsystem/commit/46bf73d59881febcb0b998319e457d54fd46d765))
+* **ffe-form-react:** Make PhoneNumber accept FieldMessage ([755c10b](https://github.com/SpareBank1/designsystem/commit/755c10b90d216ba1a4bf5a67914b07e90c2013e5))
+* **ffe-form-react:** modernisering av skjemaelementer ([f7d9af3](https://github.com/SpareBank1/designsystem/commit/f7d9af3efe0fdd3224662aa209b3d4c99644a27a))
+* **ffe-form-react:** New components ([98620ce](https://github.com/SpareBank1/designsystem/commit/98620cebb1891aff02b41d576eeff2320cdef7c3))
+* **ffe-form-react:** ny toggleswitch-komponent ([816100e](https://github.com/SpareBank1/designsystem/commit/816100ea01a73756006ac34e00062346b98366f7))
+* **ffe-form-react:** nye darkmodefarger fra core og hvit bakgrunn på accent context ([ff40801](https://github.com/SpareBank1/designsystem/commit/ff40801c27f74205091e5999b52ae0ac67628909))
+* **ffe-form-react:** possible to add label id to input groups ([18ae5c2](https://github.com/SpareBank1/designsystem/commit/18ae5c2c4899eaeb8c0818bab8326956d86a7dc6))
+* **ffe-form-react:** possible to hade uncontrolled radio/checkbox ([43e2e57](https://github.com/SpareBank1/designsystem/commit/43e2e57395f59cb3a3bbc99981627e82c9ebb0cc))
+* **ffe-form-react:** RadioButtonInputGroup supports "description" ([73b9d8d](https://github.com/SpareBank1/designsystem/commit/73b9d8d310d2e2d2d75f753b2c1152ca251ee31c)), closes [#641](https://github.com/SpareBank1/designsystem/issues/641) [#642](https://github.com/SpareBank1/designsystem/issues/642)
+* **ffe-form-react:** rewrite to ts ([31063a0](https://github.com/SpareBank1/designsystem/commit/31063a0911436232fed4094a8f6f5aa0467c3e75))
+* **ffe-form-react:** skiller ut textlike input i egen komponent ([f0fd633](https://github.com/SpareBank1/designsystem/commit/f0fd63322cc3240156213704b818b2409a854961))
+* **ffe-form-react:** standardize selectedValue in radio components ([97f596d](https://github.com/SpareBank1/designsystem/commit/97f596d0b85462e5c942f5547225532fd70341ae))
+* **ffe-form-react:** support on colored background in some basic components ([c9d241c](https://github.com/SpareBank1/designsystem/commit/c9d241c9938c564cc01f3d123b9e6834dad5d353))
+* **ffe-form-react:** update internal dependencies ([7a13c1c](https://github.com/SpareBank1/designsystem/commit/7a13c1c411b789d0c3de1d47820cadb006682aec))
+* **ffe-form-react:** upgrade react to >=18.2.0 ([75dfb1f](https://github.com/SpareBank1/designsystem/commit/75dfb1f429e4c596b53d7b516360e8dca5615c1a))
+* **ffe-form-react:** use new version Collapse ([66ea03b](https://github.com/SpareBank1/designsystem/commit/66ea03b54f12554baaed0414b2922e00ab96ad62))
+* **ffe-form-react:** Use react-css-collapse ([3bd1f85](https://github.com/SpareBank1/designsystem/commit/3bd1f858bb7af8e0541d167c94c0fc31f4bbb51e))
+* **ffe-form:** modernisering av skjemaelementer ([108eb12](https://github.com/SpareBank1/designsystem/commit/108eb12f968b09ca36b37e507ec88e346f903658))
+* **ffe-forms-react:** Added dark property for Input, Label, PhoneNumber, TextArea and Tooltip with documentation ([0201f1c](https://github.com/SpareBank1/designsystem/commit/0201f1cde63f70413d95289e0c0e2941da013288))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* Oppdaterer til semantiske farger
+* **ffe-form-react:** limit selectedValue in radio komponents
+to string, null, undefined.
+* **ffe-form-react:** Dropped support for React <18.2.0
+* **ffe-form-react:** endrer til nye props på phonenumer
+* **ffe-form-react:** som props where changed
+* **ffe-collapse-react:** manuel types remoed
+* **ffe-form-react:** children is now required also when using hiddenLabel.
+When hiddenLabel is set to true children will just be visible to screen readers.
+* **ffe-form-react:** new markup
+* **ffe-form-react:** Markup has changed
+* **ffe-form-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* **ffe-form-react:** Input som bruker textLike-modifieren må ta i bruk InputTextLike
+* **ffe-form-react:** fieldmessage har ny styling- og markupstruktur
+
+feat(ffe-form-react): default aria-role på fieldmessage
+
+fix(ffe-form-react): begrenser role-proptype til utvalgte verdier
+* **ffe-form-react:** Makes the styling package @sb1/ffe-form a required
+dependency and removes it as peer dependency.
+* **ffe-form-react:** fjerner støtte for aria-invalid på radiobtn/BaseRadioButton
+* **ffe-form-react:** Name property i RadioButtonInputGroup er nå required da alle
+radio buttons skal ha navn.
+* **ffe-form-react:** Replaces countryCodeInvalid and numberInvalid with countryCodeFieldMessage, numberFieldMessage and countryCodeAndNumberFieldMessage.
+
+This commit changes how the components shows invalidation errors. It replaces countryCodeInvalid and numberInvalid with countryCodeFieldMessage, numberFieldMessage and countryCodeAndNumberFieldMessage. This makes it possible to render an error message instead of just making the input field red.
+* **ffe-form-react:** Instead of having an `innerRef` prop, use the more modern
+approach with `React.forwardRef`. This means that instead
+of using the `innerRef` prop, refs should be passed as
+they would to any other React element.
+
+```diff
+- <Checkbox innerRef={ref} />
++ <Checkbox ref={ref} />
+```
+
+While we're doing breaking changes anyway, removed
+support from the two deprecated props `label` and
+`valid`. Use children and `aria-invalid` instead.
+
+```diff
+- <Checkbox invalid={true} label="To arr is pirate" />
++ <Checkbox aria-invalid={true}>To arr is pirate</Checkbox>
+```
+* **ffe-form-react:** selectedValue now overrides checked, when both props are passed to radio buttons
+
+This version offers new optional properties (innerRef on RadioButton and RadioBlock, leftInnerRef and rightInnerRef on RadioSwitch), which is passed as refs to input elements
+On BaseRadioButton, checked attribute is only set if the selectedValue prop is set, so that re-render is no longer required when radio buttons are clicked
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-form-react:** Requires react@^16.3
+
+This commit adds support for forwarding refs to the `Input` and
+`TextArea` components, so consumers can handle focus programmatically.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [24.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@24.0.8...@sb1/ffe-form-react@24.0.9) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+
+
+
+
 ## [24.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@24.0.7...@sb1/ffe-form-react@24.0.8) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

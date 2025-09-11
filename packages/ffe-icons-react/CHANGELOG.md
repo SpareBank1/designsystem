@@ -3,6 +3,231 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-icons-react:** add author to package.json ([2851f42](https://github.com/SpareBank1/designsystem/commit/2851f42770f9894f36d03bd59197a60edb435b64))
+* **ffe-icons-react:** add missing dep classnames ([0da7c66](https://github.com/SpareBank1/designsystem/commit/0da7c6625c88b2f13825e4c3edefd3798f660bc7))
+* **ffe-icons-react:** add webkit to support android browser ([8c9e969](https://github.com/SpareBank1/designsystem/commit/8c9e9697874c1075f7cdb60a8add655811a5a106))
+* **ffe-icons-react:** Adjust file path to monorepo layout ([599b38e](https://github.com/SpareBank1/designsystem/commit/599b38e95e4f5d4a069b0d0200951d0317b069a2))
+* **ffe-icons-react:** broadens version of peer dependencies ([34d2fec](https://github.com/SpareBank1/designsystem/commit/34d2fecb8b64ffc6461b202a92cb47112894edb6))
+* **ffe-icons-react:** corrects wrong use of ts types instead of propTypes ([986ce3a](https://github.com/SpareBank1/designsystem/commit/986ce3a8ed58909b75ef60cb42b905b558f456a8))
+* **ffe-icons-react:** Don't set inline size on SVG ([b75799b](https://github.com/SpareBank1/designsystem/commit/b75799b1c006dfd5730043763573cd1f17991124)), closes [#285](https://github.com/SpareBank1/designsystem/issues/285)
+* **ffe-icons-react:** Enable code splitting ([c9441e4](https://github.com/SpareBank1/designsystem/commit/c9441e44c0e1e289faa8ef2a76efd1ca56204510))
+* **ffe-icons-react:** endre propnavn fra filePath til fileUrl ([1a2d722](https://github.com/SpareBank1/designsystem/commit/1a2d722f20f4fc7da77ca0e2ce21afdf1e88955d))
+* **ffe-icons-react:** extend svg attributes in typescript interface ([8a4c541](https://github.com/SpareBank1/designsystem/commit/8a4c541050cad2d527b1d681cf6d80f9d46c4492))
+* **ffe-icons-react:** fix build script to work inside monorepo ([6cb9b97](https://github.com/SpareBank1/designsystem/commit/6cb9b973f8f7e9fb6d1dcfac05fe9e25eff4e468))
+* **ffe-icons-react:** fix ts types ([77089b8](https://github.com/SpareBank1/designsystem/commit/77089b87ed711b95787022ffa62b430e6bc3e7ae))
+* **ffe-icons-react:** Fixed build script after changes to path in ffe-icons ([a7270ae](https://github.com/SpareBank1/designsystem/commit/a7270ae42ec2be3e6fabe13a68eb266bae72659f))
+* **ffe-icons-react:** fixed typescript props and proptype mismatch ([5676790](https://github.com/SpareBank1/designsystem/commit/567679054951b39ad4d552f25932985d802276d7))
+* **ffe-icons-react:** fjern ubrukt weight-prop ([4db6b8a](https://github.com/SpareBank1/designsystem/commit/4db6b8aa7c97bcae7e304bb03c45e3600bf38575))
+* **ffe-icons-react:** Oppdater dokumentasjonen i sammenheng med semantiske farger ([a52c665](https://github.com/SpareBank1/designsystem/commit/a52c66556d1decdd7dc22d4a8c817e82c043e72f))
+* **ffe-icons-react:** Output components to /lib ([2d02dbb](https://github.com/SpareBank1/designsystem/commit/2d02dbb1c7b2c26cc465b28b53c98f32409ab97b))
+* **ffe-icons-react:** remove default props ([46edd46](https://github.com/SpareBank1/designsystem/commit/46edd467fb9297e95bcdace0da2f04f822841002))
+* **ffe-icons-react:** remove duplicate prop + make svg props overridable ([c4b88b8](https://github.com/SpareBank1/designsystem/commit/c4b88b82dc7c82eb3e80bbab10890d227932f72e))
+* **ffe-icons-react:** style was not applied ([f7f1168](https://github.com/SpareBank1/designsystem/commit/f7f116849f7d338a85b1604743e5fa0623a8c8ca))
+* **ffe-icons-react:** use buildtool for transpiling ([3f34310](https://github.com/SpareBank1/designsystem/commit/3f34310fa1c36715e6709afdf7123166f99c3957)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-icons-react:** Use relative path to `opts` ([5cfba06](https://github.com/SpareBank1/designsystem/commit/5cfba06d493a0d70ca41babe3e71d8a71042dbed)), closes [#67](https://github.com/SpareBank1/designsystem/issues/67)
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-icons-react:** Upgrade to new ffe-icons ([bab479f](https://github.com/SpareBank1/designsystem/commit/bab479f9b8cff8da3b7f955f006207d911009c6f))
+
+
+### Code Refactoring
+
+* **ffe-icons-react:** Improve API ([e9b88a4](https://github.com/SpareBank1/designsystem/commit/e9b88a4399caa44f4b5a2f729911a4267acd6f3d))
+
+
+### Features
+
+* **ffe-icons-react:** Add contribute.md link to readme ([532c784](https://github.com/SpareBank1/designsystem/commit/532c784827377460323928ab8e7cb87c49c87d5c))
+* **ffe-icons-react:** generate typescript declarations for all icons ([d444c47](https://github.com/SpareBank1/designsystem/commit/d444c477c19a63347faa3322243f363280d28fb5))
+* **ffe-icons-react:** improved build ([eec4061](https://github.com/SpareBank1/designsystem/commit/eec4061809717bc05a9bc2d27841ce2aceb96fe4))
+* **ffe-icons-react:** legg til ikon wrapper komponent ([3bfa354](https://github.com/SpareBank1/designsystem/commit/3bfa3542aa633d87ce06490efdd81929f606c481))
+* **ffe-icons-react:** rewrite to ts ([8341177](https://github.com/SpareBank1/designsystem/commit/8341177a72e04882b326f589547748a15af9af04))
+* **ffe-icons-react:** upgrade react to >=18.2.0 ([80407ca](https://github.com/SpareBank1/designsystem/commit/80407caacb2cc43591009524a9be370be259241b))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([a9d5741](https://github.com/SpareBank1/designsystem/commit/a9d5741bb4da444b345c695c127c31cd94efe318))
+
+
+### Reverts
+
+* Revert "docs(ffe-icons-react): erstatter innholdet i readme med deprecation notice" ([eacf9ec](https://github.com/SpareBank1/designsystem/commit/eacf9ecd6680d4c3cdc83c9c399362a09e2c2636))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons-react:** fjerner ubrukt weight-prop
+* **ffe-icons-react:** Dropped support for React <18.2.0
+* **ffe-icons-react:** default export -> named export
+* **ffe-icons-react:** endrer navn på prop
+* **ffe-icons-react:** helt ny komponent
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-icons-react:** This version migrates to the new `ffe-icons` which
+replaced its method of generating the SVG sprite to no longer need
+PhantomJS. This may or may not introduce visual regressions. From the
+looks of it in the styleguide it should be a drop-in replacement,
+however for safety this is marked as a breaking change.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-icons-react:** Improve the API of ffe-icons-react.
+
+This commit changes the API of the ffe-icons-react package to take
+advantage of dead code eliminination and tree shaking in
+Webpack >= 2.
+
+Previously, you imported one and one icon from the corresponding
+JSX file. Now all icons are available as named exports from the
+root level of `ffe-icons-react`.
+
+If you're using webpack@>=2.0.0,  please make the following changes
+to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import { ChevronIkon, FamilieIkon } from 'ffe-icons-react';
+```
+
+If you're not using a build tool that enables dead code elimination
+and tree shaking, please make the following changes to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
++ import FamilieIkon from 'ffe-icons-react/lib/familie-ikon';
+```
+
+This API change allows for cleaner usage and better documentation.
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
+
+## [12.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@12.0.9...@sb1/ffe-icons-react@12.0.10) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
 ## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@12.0.8...@sb1/ffe-icons-react@12.0.9) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

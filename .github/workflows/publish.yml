@@ -25,10 +25,10 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 20
-                  registry-url: 'https://registry.npmjs.com'
+                  registry-url: 'https://registry.npmjs.org'
 
             - run: |
-                  npm install
+                  npm ci
                   echo "$GITHUB_WORKSPACE/node_modules/.bin/" >> $GITHUB_PATH
 
             - name: lerna changed
@@ -42,9 +42,9 @@ jobs:
                   npm run build
                   npm test -- --ci
 
-            - name: lerna publish to registry.npmjs.com
+            - name: lerna publish to registry.npmjs.org
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
-              run: lerna publish --yes --no-verify-access --force-git-tag --create-release github
+              run: lerna publish --yes --no-verify-access --force-git-tag --create-release github --force-publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
                   GH_TOKEN: ${{ secrets.GH_USER_PAT }}

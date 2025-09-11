@@ -12,6 +12,23 @@ F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core
 
 Vi har laget en ny komponent, `<TextField>`. Dette er en avart av `<Input>`, som er laget for å støtte affikser (prefix og suffix) i input-feltet - funksjonalitet som har vært etterspurt av flere team. Dette er ikke er mulig å legge til i dagens implementasjon av `<Input>` uten en større omskrivning med breaking changes, noe som i tillegg ville påvirket andre komponenter som avhenger av `<Input>`.
 
+## 2025 - September - Ett versjonsnummer for alle pakker og justering av darkmode bakgrunnsfarger
+Fra og med denne versjonen (100.0.0) vil alle pakker i designsystemet ha samme versjonsnummer.
+Dette er et mellomsteg før vi går over til én pakke for hele designsystemet.
+Vi tror det kan gjøre det enklere å holde oversikt over hvilke versjoner som fungerer sammen og at det blir lettere å oppdatere.
+
+I tillegg har vi gjort noen justeringer på bakgrunnsfargene i darkmode, slik at
+`background-subtle` i både default og accent har blitt mørkere. 
+Vi har justert fargene til å være litt mørkere slik at de oppleves bedre i bruk.
+
+Det er ikke gjort noen endringer i koden eller på variabelnavn, det er kun fargene som er justert.
+
+<img
+    alt="image"
+    src="./images/background-colors.png"
+    style={{ maxHeight: '400px', marginBottom: '50px' }}
+/>
+
 ## 2025 - Juli - Oppdatering av semantiske farger
 
 ### ! Fargene i det semantiske og primitive laget er ikke lenger tilgjengelige

@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tags
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tags
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tags
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+* feat(ffe-tags)!: legger til sm, md og lg varianter av tag ([2b344dd](https://github.com/SpareBank1/designsystem/commit/2b344ddbb220700eb09af8c3a78846527810da28))
+
+
+### Features
+
+* **ffe-tags:** ny komponent tags ([e067a38](https://github.com/SpareBank1/designsystem/commit/e067a38f5ca280171740d5e356e33ab22ab25ea1))
+
+
+### BREAKING CHANGES
+
+* Basestørrelsen på tag er endret fra 32px til 27.6px.
+30.4px finnes fortsatt i size=lg
+
+
+
+
+
+## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags@2.0.3...@sb1/ffe-tags@2.0.4) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-tags
+
+
+
+
+
 ## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tags@2.0.2...@sb1/ffe-tags@2.0.3) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-tags

@@ -3,6 +3,181 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-system-message:** added peerDependency to ffe-core@^13.0.0 ([97f07ae](https://github.com/SpareBank1/designsystem/commit/97f07aea04e17119d68ead2327d5ec79575bfbfa))
+* **ffe-system-message:** Apply its own layout ([92beb7f](https://github.com/SpareBank1/designsystem/commit/92beb7fc0676dd5c215a065cf0bee6a59b67b92b))
+* **ffe-system-message:** broadens version of peer dependencies ([fe5d14e](https://github.com/SpareBank1/designsystem/commit/fe5d14e2a20543fa95909edd104bef02dc0f0594))
+* **ffe-system-message:** change text values to rem ([7ab0d32](https://github.com/SpareBank1/designsystem/commit/7ab0d32a7169da65bc85207a42e2067d57a3e70c))
+* **ffe-system-message:** close icon renders on top of text ([ecee81d](https://github.com/SpareBank1/designsystem/commit/ecee81dc8d0782ba75b361b34e630599e5ee7b19))
+* **ffe-system-message:** colour update to match new profile ([#1137](https://github.com/SpareBank1/designsystem/issues/1137)) ([711c444](https://github.com/SpareBank1/designsystem/commit/711c44495ef07bc8d15711c8a9410b5e614b1c19))
+* **ffe-system-message:** darkmode styling for list ([2f884fc](https://github.com/SpareBank1/designsystem/commit/2f884fc4d59d57e287f720c68e93f90b7f394de3))
+* **ffe-system-message:** endre suksessikon farge til skog ([37f7a4c](https://github.com/SpareBank1/designsystem/commit/37f7a4cdfeceae58d3d734cc362c2f544d5e38ad))
+* **ffe-system-message:** endre til material symbols ([c2fe894](https://github.com/SpareBank1/designsystem/commit/c2fe8941ae74a593be1882482659ad7206a79c63))
+* **ffe-system-message:** Ensure close button icon doesn't get cropped on Safari ([c7e5a9c](https://github.com/SpareBank1/designsystem/commit/c7e5a9ce0101e195183f5631b02781761480f03d))
+* **ffe-system-message:** erstatter moerkgraa-wcag med moerkgraa som bakgrunn ([d73a8a3](https://github.com/SpareBank1/designsystem/commit/d73a8a3e820d8d1463899239c95c898ebf07bd5e))
+* **ffe-system-message:** gjør sirkel sort og justere ikon farger i darkmode ([d420aac](https://github.com/SpareBank1/designsystem/commit/d420aacc4713cdee7e37cfc053faf9f8b5e1f275))
+* **ffe-system-message:** hovering styles only when using pointer/mouse ([ee73583](https://github.com/SpareBank1/designsystem/commit/ee7358353f103d6ef24d80e1998b83e07f1ed83c))
+* **ffe-system-message:** legger til default font ([75ad441](https://github.com/SpareBank1/designsystem/commit/75ad44104796540686f33705e1a013e9a4653c3e))
+* **ffe-system-message:** overstyrer lenkefarge i dark mode ([93db793](https://github.com/SpareBank1/designsystem/commit/93db793d511fb4450669aa941d218fa7f0726e31))
+* **ffe-system-message:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([eb070fd](https://github.com/SpareBank1/designsystem/commit/eb070fd7c233f1178698687032046ad54d274d0f))
+* **ffe-system-message:** replace hardcoded spacing with variables ([b34c27f](https://github.com/SpareBank1/designsystem/commit/b34c27fcdd90038b635ba632aaa1201e1a2731d3))
+* **ffe-system-message:** rett navn på less filer ([5f513a8](https://github.com/SpareBank1/designsystem/commit/5f513a8b16f8fa6980ab8143a42276c5e776b484))
+* **ffe-system-message:** Revert "colour update to match new profile ([#1137](https://github.com/SpareBank1/designsystem/issues/1137))" ([4152fc6](https://github.com/SpareBank1/designsystem/commit/4152fc6b11a560007329de4ea4faebf83d95c331))
+* **ffe-system-message:** text does not take full with ([03f537b](https://github.com/SpareBank1/designsystem/commit/03f537b17b78c02f212a1b35f2f3f6d41a409e7d))
+* **ffe-system-message:** use `break-all` to wrap words ([50ce010](https://github.com/SpareBank1/designsystem/commit/50ce01092c4c6110e319e6b730c2844f9fb38b87))
+* **ffe-system-message:** use overflow-wrap:anywhere with word-break:normal ([52e9596](https://github.com/SpareBank1/designsystem/commit/52e9596babfeab98a6cdfc56d9ccd8ffac27c1ad))
+* **ffe-system-message:** word-break content ([4ba3f1a](https://github.com/SpareBank1/designsystem/commit/4ba3f1a0ef85a6bd3c6a3e52d50ad6e8b56c8e6e))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+### Features
+
+* **ffe-system-message:** add :host for shadow dom support ([b471536](https://github.com/SpareBank1/designsystem/commit/b47153683f43a738aef31356b06d3af735e9307b))
+* **ffe-system-message:** add darkmode styling overrides ([b30ead8](https://github.com/SpareBank1/designsystem/commit/b30ead809bb6e3f88be8b76bad83b78b5f704658))
+* **ffe-system-message:** colour update to match new profile ([#1137](https://github.com/SpareBank1/designsystem/issues/1137)) ([b4f3eaf](https://github.com/SpareBank1/designsystem/commit/b4f3eafa22d3a417d6dcafd0d849492762a0f683))
+* **ffe-system-message:** deprecate package ([14248cf](https://github.com/SpareBank1/designsystem/commit/14248cf4ca5d6b36a32f47e6af0d31a42090f779))
+* **ffe-system-message:** legg til theming muligheter ([46a11fd](https://github.com/SpareBank1/designsystem/commit/46a11fdb96c5471647ea0ec0aed9ccbbee6aa1f5))
+* **ffe-system-message:** make border radius more round ([6327d76](https://github.com/SpareBank1/designsystem/commit/6327d76ea33c151f766ca49e6c6bbb133ed7d1fc))
+* **ffe-system-message:** oppdater farger og legg til alternativ variant ([9d5e4ad](https://github.com/SpareBank1/designsystem/commit/9d5e4ad0b01ae019e50ba3e069d953947b3554b3))
+* **ffe-system-message:** regard-color-scheme-preference for darkmode ([267cfe1](https://github.com/SpareBank1/designsystem/commit/267cfe1e8ceb552f86b6c9d354e41ec5c3afb6d8))
+* **ffe-system-message:** update internal dependencies ([288a8b7](https://github.com/SpareBank1/designsystem/commit/288a8b790bf50f6bb990cb1f8df0b8b06ba203bb))
+
+
+### BREAKING CHANGES
+
+* **ffe-system-message:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-system-message:** package is now deprecated
+* **ffe-system-message:** Endrer fra fill til color, fjerner svg-relatert styling
+* **ffe-system-message:** Makes the styling package @sb1/ffe-core a required
+dependency and removes it as peer dependency.
+* **ffe-system-message:** requires ffe-core@18.3
+* **ffe-system-message:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+* **ffe-system-message:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [10.0.41](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@10.0.40...@sb1/ffe-system-message@10.0.41) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+
+
+
+
 ## [10.0.40](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@10.0.39...@sb1/ffe-system-message@10.0.40) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

@@ -3,6 +3,204 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-grid:** Add example with necessary markup for grid rows with background color ([291684b](https://github.com/SpareBank1/designsystem/commit/291684b124b1e5747d438352d84a35b4348344a9))
+* **ffe-grid:** add parentheses to division in less ([6ab32ad](https://github.com/SpareBank1/designsystem/commit/6ab32ad10d35936555c6d23d7a694a0a252c26ed))
+* **ffe-grid:** added peerDependency to ffe-core@^13.0.0 ([3125659](https://github.com/SpareBank1/designsystem/commit/3125659a56b0ef0b12e4f686856d3e98441e1d0b))
+* **ffe-grid:** broadens version of peer dependencies ([3c5d47b](https://github.com/SpareBank1/designsystem/commit/3c5d47bc5e928237b211f3b90f4128cf915a5ef3))
+* **ffe-grid:** escape / in less ([a459afd](https://github.com/SpareBank1/designsystem/commit/a459afddb9ce0b529eb233ed2de319dd43df34de))
+* **ffe-grid:** fjern padding fra wrapper klasse ([6ed2291](https://github.com/SpareBank1/designsystem/commit/6ed2291a20aade549aaa97226b2808a9c965473e))
+* **ffe-grid:** flytter padding fra container til kolonne ([46c0511](https://github.com/SpareBank1/designsystem/commit/46c0511827504533d9a6aad77bc9c5c3fe540f11))
+* **ffe-grid:** Give all grid-col descendants max-width 100% ([eedcaa8](https://github.com/SpareBank1/designsystem/commit/eedcaa882a05a7b23cd75ee1321d3fabf769cae7))
+* **ffe-grid:** legg til hvit tekst på mørkere bakgrunner ([5d68186](https://github.com/SpareBank1/designsystem/commit/5d68186f337fc34f105fd2bd547cee04cc46bce3))
+* **ffe-grid:** legger tilbake modifiere og defaults fra tidligere versjon ([d2217fe](https://github.com/SpareBank1/designsystem/commit/d2217fedf2ff37ba81cb05b682964bf5be7df82d))
+* **ffe-grid:** Normalize padding and margin ([ea0a05e](https://github.com/SpareBank1/designsystem/commit/ea0a05ef241c517c4c7bd9d79fc1a78dba5d9bcf)), closes [#241](https://github.com/SpareBank1/designsystem/issues/241)
+* **ffe-grid:** overstyrer padding kun vertikalt ([0a8f121](https://github.com/SpareBank1/designsystem/commit/0a8f1217a72fcf1263d1a1902493fba8348ae498))
+* **ffe-grid:** reduce vulnerabilities ([4157dd5](https://github.com/SpareBank1/designsystem/commit/4157dd540e307df271a1ad4195133aebe9b220a5))
+* **ffe-grid:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([5feb6f3](https://github.com/SpareBank1/designsystem/commit/5feb6f3ed5d41539e44531550be523a7e20a4b51))
+* **ffe-grid:** Removed FFE support for some backgrounds ([be4d7c8](https://github.com/SpareBank1/designsystem/commit/be4d7c8bbd2ea8d70417c97f859102a1d9c35c87)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+* **ffe-grid:** replace hardcoded spacing with variables ([92088be](https://github.com/SpareBank1/designsystem/commit/92088bee046a15a6a5a22f83576cd3342aae4300))
+* **ffe-grid:** støtte for bakgrunnsfarge i full bredde ([d5d0747](https://github.com/SpareBank1/designsystem/commit/d5d0747d9f696744f21ba0ef130b148565f293f4))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+### Features
+
+* **ffe-grid:** Add bleeding column backgrounds ([6f7aa4e](https://github.com/SpareBank1/designsystem/commit/6f7aa4ee6e9d1febd3cbc2884c09210d388eb769))
+* **ffe-grid:** Add center-text modifier to cols ([8a943e7](https://github.com/SpareBank1/designsystem/commit/8a943e741b364a74c9610561e15ca040afb22426))
+* **ffe-grid:** add darkmode styling overrides ([5118558](https://github.com/SpareBank1/designsystem/commit/511855815708058933a4dfc2b112411070e77b08))
+* **ffe-grid:** Add support for inline grid ([e5aa265](https://github.com/SpareBank1/designsystem/commit/e5aa265adb768566e6a3e962ce64d4dade824979))
+* **ffe-grid:** Add support for more backgrounds ([e225cd8](https://github.com/SpareBank1/designsystem/commit/e225cd8ef66fc4ca6a5b733fd94a436c80d8de7f)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+* **ffe-grid:** add white as valid background ([f5f3f42](https://github.com/SpareBank1/designsystem/commit/f5f3f42515331ac74dd7dd0b5455a1e3da136e48))
+* **ffe-grid:** fjerner condensed og inline, legger til modifiere for gap og spacing ([ba0f8ad](https://github.com/SpareBank1/designsystem/commit/ba0f8ad2025b4a65d1ca250a73de0b3c3e8a5ab1))
+* **ffe-grid:** legg til vann-30 som bakgrunnsfarge i grid ([2ccb24b](https://github.com/SpareBank1/designsystem/commit/2ccb24bd95f222cf58e47c207290d32741a51971))
+* **ffe-grid:** legger til mørk bakgrunnsfarge i GridCol ([e3f451d](https://github.com/SpareBank1/designsystem/commit/e3f451d159c4654e19d975bcc66c38f136794b78))
+* **ffe-grid:** legger til mørk bakgrunnsfarge i GridRow ([be64d63](https://github.com/SpareBank1/designsystem/commit/be64d63ea6ee8e8c7d4d7d1e294b097af1131b5f))
+* **ffe-grid:** legger til støtte for responsiv spacing ([c38cfaa](https://github.com/SpareBank1/designsystem/commit/c38cfaafaf80cc0c4f961696db9486c935b2dbdf))
+* **ffe-grid:** omskriving av grid-styling ([c2f9d59](https://github.com/SpareBank1/designsystem/commit/c2f9d5993a082db9bd2af5a7d5e43ed1d29757d9))
+* **ffe-grid:** oppdater alle bakgrunnsfarger ([d7ce1ce](https://github.com/SpareBank1/designsystem/commit/d7ce1ce07363026173b9e3271ec3bcc97aa71e47))
+* **ffe-grid:** regard-color-scheme-preference for darkmode ([1145199](https://github.com/SpareBank1/designsystem/commit/11451995041d60884f6f7dd252f7c01cbf7b52f7))
+* **ffe-grid:** semantiske farger i grid ([d02c84b](https://github.com/SpareBank1/designsystem/commit/d02c84b41e8989b28a68410672c3b122266e0f3c))
+* **ffe-grid:** tilbyr kompilert css i tillegg til less ([803b0ed](https://github.com/SpareBank1/designsystem/commit/803b0edd38f4d9e493bbc191d344372286832dab))
+* **ffe-grid:** update internal dependencies ([aa85f6c](https://github.com/SpareBank1/designsystem/commit/aa85f6c4c6ed6f6ee2c8e81adcd54b9eef1ea88d))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** fjernet gamle bakgrunnsfarger og erstattet med semantiske
+* **ffe-grid:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-grid:** Makes the styling package @sb1/ffe-core a required
+dependency and removes it as peer dependency.
+* **ffe-grid:** og  fjernes, og erstattes med modifiere for gap, margin og padding
+* **ffe-grid:** grid-styling er skrevet om, og disse modifierne er fjernet
+
+* .ffe-grid__row--reverse
+* .ffe-grid__row--horizontal
+* .ffe-grid__col--reverse
+* .ffe-grid__col--horizontal
+* .ffe-grid__col--start
+* .ffe-grid__col--center
+* .ffe-grid__col--end
+* .ffe-grid__col--top
+* .ffe-grid__col--middle
+* .ffe-grid__col--bottom
+* .ffe-grid__col--around
+* .ffe-grid__col--between
+* **ffe-grid:** Alle klassenavn og fargealternativer for bakgrunnsfarge på row og col
+er oppdatert med farger fra den nye visuelle profilen.
+* **ffe-grid:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* **ffe-grid:** All direct descendants of a grid column now
+receives `max-width: 100%`. This fixes an issue in IE where
+the contents of centered grid columns would ignore the width
+of the column. This might break parts of your layout, e.g. if
+you have SVGs directly inside full-width centered columns (they
+will now use the entire width where they might not have done so
+before) and possibly also in other scenarios
+* **ffe-grid:** Support for background colours that are not listed as backgrounds in the [design guide](https://design.sparebank1.no/visuell-identitet.html#visuell-identitet_farger) has been removed. This means the modifiers `--bg-blue-cobalt`, `--bg-blue-royal` and `--bg-purple-magenta`. If you were using any of those on rows or columns, please consider switching to one of those that are supported by FFE directly or add your own custom CSS classes in userland in order to have these colours.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [16.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@16.0.28...@sb1/ffe-grid@16.0.29) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+
+
+
+
 ## [16.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@16.0.27...@sb1/ffe-grid@16.0.28) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-grid

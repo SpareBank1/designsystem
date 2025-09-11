@@ -3,6 +3,356 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-account-selector-react:** accept aria-invalid ([720cad2](https://github.com/SpareBank1/designsystem/commit/720cad2d9194f76bb9b7d4e182cab9fd5a24eb3e))
+* **ffe-account-selector-react:** add default account type for generic account selector props ([ef93c1a](https://github.com/SpareBank1/designsystem/commit/ef93c1a7b6c9891cba9ed66dca2ddc72a02a7f21))
+* **ffe-account-selector-react:** Add ellipsis to account name ([671dcce](https://github.com/SpareBank1/designsystem/commit/671dcce785cc989dd78e9e659f8f8e31994ac775))
+* **ffe-account-selector-react:** add generic type for account ([b2b1048](https://github.com/SpareBank1/designsystem/commit/b2b1048e23df50ddf91953949210774dbac7d262))
+* **ffe-account-selector-react:** Add selectedAccount not found in accounts list to accounts list ([88d049c](https://github.com/SpareBank1/designsystem/commit/88d049cbaf9db1a2941557024cf6880ac8388712))
+* **ffe-account-selector-react:** Adds support for filtering on account numbers with unicode spaces ([bd97d83](https://github.com/SpareBank1/designsystem/commit/bd97d83d8df80aaec1d9f5477716b6621b8d9fe0))
+* **ffe-account-selector-react:** åpne currencycode for andre koder enn bare nok og eur ([938bc1d](https://github.com/SpareBank1/designsystem/commit/938bc1d9807f1552118992d9d4f2247c636bef9f))
+* **ffe-account-selector-react:** broadens version of peer dependencies ([e25ea2c](https://github.com/SpareBank1/designsystem/commit/e25ea2c91a17fb2c1087e419bf047d4e4688c2d9))
+* **ffe-account-selector-react:** bytt til oneOfType for balance ([3ca716e](https://github.com/SpareBank1/designsystem/commit/3ca716e80db242f4d6aea21a263537ce20bf9bc3))
+* **ffe-account-selector-react:** bytter ut ffe-icons med ffe-symbols ([84868c9](https://github.com/SpareBank1/designsystem/commit/84868c97503f93743cc867ad1776e104baeedc6c))
+* **ffe-account-selector-react:** bytter ut utfaset farge ([3d30c20](https://github.com/SpareBank1/designsystem/commit/3d30c206bf976a130ca83ea7410514ae89b567f2))
+* **ffe-account-selector-react:** change text values to rem ([6cf76f4](https://github.com/SpareBank1/designsystem/commit/6cf76f4a03d87f4bae4d27615322aea0ce3bdb4c))
+* **ffe-account-selector-react:** changed button classes ([ea0ff13](https://github.com/SpareBank1/designsystem/commit/ea0ff131423029ca883103114cf50750b7dc0482))
+* **ffe-account-selector-react:** converted to functional components ([d0d6139](https://github.com/SpareBank1/designsystem/commit/d0d6139f86347229fbc1196a8bdcfd222a5ab74a))
+* **ffe-account-selector-react:** do not mutate accounts passed in ([fd77864](https://github.com/SpareBank1/designsystem/commit/fd77864e68cfbfb8a06d9783a994ceeccf9d05fe))
+* **ffe-account-selector-react:** do not mutate accounts passed in multiselect ([4ce701f](https://github.com/SpareBank1/designsystem/commit/4ce701f19d2de0db40707ef4326c832eef825e9e))
+* **ffe-account-selector-react:** Do not set account to inputValue if account is chosen from dropdown ([a290b5f](https://github.com/SpareBank1/designsystem/commit/a290b5fc6dcc7237e1da090f951a8e86288289c6))
+* **ffe-account-selector-react:** Empty dropdownList in noMatch if inputValue is not set ([5b4f28e](https://github.com/SpareBank1/designsystem/commit/5b4f28ebadedffece8782701009fbbfd5cc33e98))
+* **ffe-account-selector-react:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c68046c](https://github.com/SpareBank1/designsystem/commit/c68046cdf7fda5fd93032a58b2d079f121c2a746))
+* **ffe-account-selector-react:** exclude the less-mixin `highlighted` from css ([c51842a](https://github.com/SpareBank1/designsystem/commit/c51842a42d62fb7dc47197473babe4970af813e6)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
+* **ffe-account-selector-react:** Explicit specify padding on "reset" button in account selector ([07404b3](https://github.com/SpareBank1/designsystem/commit/07404b3fe8d25450a2c59e2e4df0e68c5c0c0be9))
+* **ffe-account-selector-react:** ffe-form compat ([2b01828](https://github.com/SpareBank1/designsystem/commit/2b01828691b742dbca7c500b0820f2e2ac4f4143))
+* **ffe-account-selector-react:** fikser padding-issue i __selection-status ([bd9677c](https://github.com/SpareBank1/designsystem/commit/bd9677ca8240e1fec8b5e47e22f57de79f2fcb3e))
+* **ffe-account-selector-react:** Fix account balance check in AccountSelectorMulti ([8e29fe4](https://github.com/SpareBank1/designsystem/commit/8e29fe450f2e804bf43f7e02b8248c5c93889b9b))
+* **ffe-account-selector-react:** fix at currencycode var for streng ([023f08b](https://github.com/SpareBank1/designsystem/commit/023f08b0b54a371d551da667b85206d7df677eb4))
+* **ffe-account-selector-react:** fix build ([6ba49d9](https://github.com/SpareBank1/designsystem/commit/6ba49d9f4d31c9e5d023853a562120804edd8b2c))
+* **ffe-account-selector-react:** fix button styling ([729de3c](https://github.com/SpareBank1/designsystem/commit/729de3c870894626776257354c5030418f067a46))
+* **ffe-account-selector-react:** fix declaration for AccountSelector ([fb24af9](https://github.com/SpareBank1/designsystem/commit/fb24af905b88f7ac2e5f7093375018723b46329e))
+* **ffe-account-selector-react:** fix types ([2548612](https://github.com/SpareBank1/designsystem/commit/25486123f1bb0651086c4a2e42f08ca3114a7108))
+* **ffe-account-selector-react:** fix typo in .d.ts file ([6aa35e2](https://github.com/SpareBank1/designsystem/commit/6aa35e2d1029f18ef4df2455e8e8ccfbf617b022))
+* **ffe-account-selector-react:** fixed accessibility errors ([71da276](https://github.com/SpareBank1/designsystem/commit/71da276e38664dd5221d487db73c98151a8ccc05))
+* **ffe-account-selector-react:** fixed broken margin ([3c03223](https://github.com/SpareBank1/designsystem/commit/3c03223736d9318a9ff4b01c9381bf80c0a81b50))
+* **ffe-account-selector-react:** fixed typescript file ([#891](https://github.com/SpareBank1/designsystem/issues/891)) ([3ebdc28](https://github.com/SpareBank1/designsystem/commit/3ebdc2816edfd6a6ac9b6325c60c962479ce400f))
+* **ffe-account-selector-react:** fixer centering av alternativer ([8067d1b](https://github.com/SpareBank1/designsystem/commit/8067d1b875b0a8af35b35cecae1c87fe7d0c3aa0))
+* **ffe-account-selector-react:** fixer field message ([a9a6212](https://github.com/SpareBank1/designsystem/commit/a9a6212d79f46811086801c86f8c40e59c19c641))
+* **ffe-account-selector-react:** Fixes reset and expand button spacing ([e71e3e9](https://github.com/SpareBank1/designsystem/commit/e71e3e9588fb8ebdf691f02891b517726e5fdcd9))
+* **ffe-account-selector-react:** fixes types ([f16e021](https://github.com/SpareBank1/designsystem/commit/f16e02165fe68def818fb9cab032e96039d1d631))
+* **ffe-account-selector-react:** format account number in drodown ([8b3e4c5](https://github.com/SpareBank1/designsystem/commit/8b3e4c50e56b295bf912004918bb23a346de5475))
+* **ffe-account-selector-react:** Gi bedre feilmelding ved bruk av utdatert property ([ee3b23b](https://github.com/SpareBank1/designsystem/commit/ee3b23b9865b6c4ff08922617f7746cb0e8d093d))
+* **ffe-account-selector-react:** hide reset button in readOnly mode ([a416b42](https://github.com/SpareBank1/designsystem/commit/a416b424478a902edae1b5b212c909611520d26d))
+* **ffe-account-selector-react:** hovering styles only when using pointer/mouse ([b9666b3](https://github.com/SpareBank1/designsystem/commit/b9666b325ee668d56ca2d688ea88d856f7031cd8))
+* **ffe-account-selector-react:** Legg til skjermleser tester ([fbe057d](https://github.com/SpareBank1/designsystem/commit/fbe057d0cb83395010266392051516ff93518f5a))
+* **ffe-account-selector-react:** legger til default font ([e0d81c4](https://github.com/SpareBank1/designsystem/commit/e0d81c44b5b9e1a3546e046cfc3e1937bde0b7f1))
+* **ffe-account-selector-react:** Lukking når noe er valgt, fjerner ubrukte props og oppdaterer typer ([98405cc](https://github.com/SpareBank1/designsystem/commit/98405cc030fc786c02eb8f35cb7418149f74f00f))
+* **ffe-account-selector-react:** make Account type in account selector generic ([ec80110](https://github.com/SpareBank1/designsystem/commit/ec801100429b31a51367888ac842396fafcd6101))
+* **ffe-account-selector-react:** oppdater symbol implementasjon ([2ce61e5](https://github.com/SpareBank1/designsystem/commit/2ce61e5fbe887d6869ae2ae27bf05e6e3618a255))
+* **ffe-account-selector-react:** Oppdaterer typer ([e50f296](https://github.com/SpareBank1/designsystem/commit/e50f2967e7af1c7c1c1c55d547074f08862c50e1))
+* **ffe-account-selector-react:** Oppdatert typeof sjekker ([178cb48](https://github.com/SpareBank1/designsystem/commit/178cb482c25e453e772156ba34a41c445e353d6c))
+* **ffe-account-selector-react:** Properly aligns reset and expand button ([e668d69](https://github.com/SpareBank1/designsystem/commit/e668d6939567986813c57588470442647df40afc))
+* **ffe-account-selector-react:** Provide default selectedAccounts ([031ab9c](https://github.com/SpareBank1/designsystem/commit/031ab9ce12010382c8de50d4c847a17d11008d5b))
+* **ffe-account-selector-react:** reduce vulnerabilities ([b04783d](https://github.com/SpareBank1/designsystem/commit/b04783d216e7d0ce06e526c23c50ae45605c1b80))
+* **ffe-account-selector-react:** Reintroducing the missing decimals in account balance. ([2b1956a](https://github.com/SpareBank1/designsystem/commit/2b1956a39a46740537cd0ba824d415c5ee749922))
+* **ffe-account-selector-react:** remove default props ([d5cce9f](https://github.com/SpareBank1/designsystem/commit/d5cce9f4d84d2ea14141e794a07085eeba205b7a))
+* **ffe-account-selector-react:** Remove onBlur functionality ([bd84aaf](https://github.com/SpareBank1/designsystem/commit/bd84aaf26f13bc17532b2dd644e8609e8aaa9503))
+* **ffe-account-selector-react:** Remove unused dependency ([ac984a9](https://github.com/SpareBank1/designsystem/commit/ac984a9905cd0856e3824b0de3cd9d4deffaab46))
+* **ffe-account-selector-react:** replace hardcoded spacing with vars ([2a6c194](https://github.com/SpareBank1/designsystem/commit/2a6c1942f8f290af59747f5e82126b01a9c3c6da))
+* **ffe-account-selector-react:** retter setting av className på BaseAccountSelector ([95574c5](https://github.com/SpareBank1/designsystem/commit/95574c5baa5deefe971ac6fd58a950e3ab364ac0))
+* **ffe-account-selector-react:** search does not work with custom account ([4b84859](https://github.com/SpareBank1/designsystem/commit/4b84859f0dc1071e73742d050f5cf3aee277e586))
+* **ffe-account-selector-react:** Set inputValue when account is selected ([2056aef](https://github.com/SpareBank1/designsystem/commit/2056aef8769774fb40d5385d46633304b08bcec3))
+* **ffe-account-selector-react:** Spaceless queries ([aeebfa1](https://github.com/SpareBank1/designsystem/commit/aeebfa1b807ef8b324f9806450c6688109f29ee8))
+* **ffe-account-selector-react:** Suggestions will now correctly lose focus ([137459a](https://github.com/SpareBank1/designsystem/commit/137459adb39decf7729aceaf81470e26162a1154))
+* **ffe-account-selector-react:** ts-interface locale should not be list ([da7e183](https://github.com/SpareBank1/designsystem/commit/da7e18381d6f55117420e1e29520dd52206f37b5))
+* **ffe-account-selector-react:** upgrade scrollbars ([cd7d1bf](https://github.com/SpareBank1/designsystem/commit/cd7d1bf63f8f39eb4128954256ea5134a87e62a7)), closes [#1511](https://github.com/SpareBank1/designsystem/issues/1511)
+* **ffe-account-selector-react:** use ffe-buildtool for transpiling ([c328b5d](https://github.com/SpareBank1/designsystem/commit/c328b5d25ee464d533b7ab81b72ed10fdfa03780)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-account-selector-react:** use react.componentsprops instead of react.htmlprops ([5ff895c](https://github.com/SpareBank1/designsystem/commit/5ff895c1beb5d238ec100d0006a52792a5f15a1f))
+* **ffe-account-selector-react:** used texts from the language files and locale prop ([3de1493](https://github.com/SpareBank1/designsystem/commit/3de1493bebe9cfd1b512e8d9decfb54211cf61af))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* packages/ffe-account-selector-react/package.json to reduce vulnerabilities ([cbb2758](https://github.com/SpareBank1/designsystem/commit/cbb2758fdb237c855f094ce841bbc66bc9400d95))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-account-selector-react:** bump less ([ed49b6c](https://github.com/SpareBank1/designsystem/commit/ed49b6c26d96feb70cdb90486c6e520e3949eec0))
+
+
+### Code Refactoring
+
+* **ffe-account-selector-react:** endret prop fra listelementBody til optionBody ([63970b9](https://github.com/SpareBank1/designsystem/commit/63970b9252d0ba8a70397caa08e5b43af2ba178b))
+* **ffe-account-selector-react:** New dependencies ([53df20f](https://github.com/SpareBank1/designsystem/commit/53df20faf87bbce920257012dd1665e9ba104be2))
+* **ffe-account-selector-react:** remove deprecated lifecycle ([88d6543](https://github.com/SpareBank1/designsystem/commit/88d6543b7207248b943b03b3a262bbae5ed7c5d6))
+
+
+* feat(ffe-account-selector)!: Semantiske farger ([8a4e692](https://github.com/SpareBank1/designsystem/commit/8a4e692a937222d4970610ba418c8e7746408e4a))
+* chore(ffe-account-selector-react)!: remove AccountSelectorHighCapacity ([c8190b9](https://github.com/SpareBank1/designsystem/commit/c8190b9b95645b4ce1dc8ba06841e0233d42393e))
+
+
+### Features
+
+* **ffe-account-selector-react:** add :host for shadow dom support ([cefa37e](https://github.com/SpareBank1/designsystem/commit/cefa37e5f4eb23f859395516ae77fd1371668c3e))
+* **ffe-account-selector-react:** add displayAttribute prop ([c1baf20](https://github.com/SpareBank1/designsystem/commit/c1baf20795bcb35d0a9623bac63116da7a7817c7))
+* **ffe-account-selector-react:** add open and close prop to account-selector ([33898df](https://github.com/SpareBank1/designsystem/commit/33898df2719c9fac9471c95890a33cad665dd3f2))
+* **ffe-account-selector-react:** Add possibility to use a highCapacity account selector ([ffe2b41](https://github.com/SpareBank1/designsystem/commit/ffe2b410938fe338bcc179587c8d6d33f2c0abfd))
+* **ffe-account-selector-react:** added prop to disable input-field ([cdfb23c](https://github.com/SpareBank1/designsystem/commit/cdfb23cf098737eb2b39cb2f91d7d76441e556d8))
+* **ffe-account-selector-react:** Added types for Account-selector components ([b3df76c](https://github.com/SpareBank1/designsystem/commit/b3df76c3b718d51e64998c0ef24cb34f226dcf4b))
+* **ffe-account-selector-react:** Adds expand/collapse button to input field ([a655661](https://github.com/SpareBank1/designsystem/commit/a655661504d6b970a966846f6f92003958253317))
+* **ffe-account-selector-react:** change labelId to labelledById ([f184abe](https://github.com/SpareBank1/designsystem/commit/f184abe2725fb5b307073f444d450f3ea636f5b0))
+* **ffe-account-selector-react:** Fix missing color for top line of suggestion ([2a64f91](https://github.com/SpareBank1/designsystem/commit/2a64f913c0321e4a1fc8db7c2718e7ee16f833d5))
+* **ffe-account-selector-react:** lagt til mulighet for å skjule AccountDetails ([fb3a0ee](https://github.com/SpareBank1/designsystem/commit/fb3a0eed5522b2ceb05f4447c12ec83e41ce49db))
+* **ffe-account-selector-react:** Lagt til postListElement ([458b98d](https://github.com/SpareBank1/designsystem/commit/458b98d4403a31a0d0d305b5d16fbd2e849b59b2))
+* **ffe-account-selector-react:** legger til theming av accountselector ([9e01514](https://github.com/SpareBank1/designsystem/commit/9e01514eae68abfc23b6bcdff4ce97a45ba4eafd))
+* **ffe-account-selector-react:** Make AccountSelector use SearchableDropdown under the hood ([f3ef452](https://github.com/SpareBank1/designsystem/commit/f3ef4520c75e285aa085204c9d24477572a39b41))
+* **ffe-account-selector-react:** oppdater react-custom-scrollbars ([72e7023](https://github.com/SpareBank1/designsystem/commit/72e70231fa23337d08c903fac18ee25d498a5bb8))
+* **ffe-account-selector-react:** oppdaterte farger iht ny profil ([616d05b](https://github.com/SpareBank1/designsystem/commit/616d05b7af9f84be0a9dfcf4b080df1ac7cc2fe5))
+* **ffe-account-selector-react:** optimize suggestion list render ([93f2189](https://github.com/SpareBank1/designsystem/commit/93f21898c85988153091b15af7704df1d51ef105))
+* **ffe-account-selector-react:** refactor multi- and single account selector ([2f4b90d](https://github.com/SpareBank1/designsystem/commit/2f4b90d68eec568d9867f9951c5524945ed978d6))
+* **ffe-account-selector-react:** regard-color-scheme-preference for darkmode ([1927788](https://github.com/SpareBank1/designsystem/commit/19277886009595ba913a969ed561a3f5db8de01d))
+* **ffe-account-selector-react:** Remove clear button from dropdown ([e54955f](https://github.com/SpareBank1/designsystem/commit/e54955f07b26383cff47b032d50fbdf0bbd59558))
+* **ffe-account-selector-react:** remove high capacity prop ([0c66d68](https://github.com/SpareBank1/designsystem/commit/0c66d686fb13f9393078c905e517c7115800ed13))
+* **ffe-account-selector-react:** rewrite to typescript ([40324d0](https://github.com/SpareBank1/designsystem/commit/40324d05a2879002bae72793f4ca65da50a189c1))
+* **ffe-account-selector-react:** Show account number in input field when customAccount is allowed ([607529f](https://github.com/SpareBank1/designsystem/commit/607529f9aa3cb059a0ddbbca3ab03d74a472ed3f))
+* **ffe-account-selector-react:** slightly tweak colors ([e8e7164](https://github.com/SpareBank1/designsystem/commit/e8e7164088d4b9e52cbf97db249db532edc7ef84))
+* **ffe-account-selector-react:** support colored bg ([2066a46](https://github.com/SpareBank1/designsystem/commit/2066a466fac7e45e4d042e433db027d0badfa745))
+* **ffe-account-selector-react:** support for dark-mode ([5af5ebe](https://github.com/SpareBank1/designsystem/commit/5af5ebedb34e7561e57c821a498c5242dd6ad598))
+* **ffe-account-selector-react:** tilbyr kompilert css i tillegg til less ([705a284](https://github.com/SpareBank1/designsystem/commit/705a2842c7bd47c68b00cdad851892a494143d1c))
+* **ffe-account-selector-react:** Tillat string som verdi for balance ([e2d65c0](https://github.com/SpareBank1/designsystem/commit/e2d65c02f39bc27f3f8702ca1a656de4ef3f35d2))
+* **ffe-account-selector-react:** Update CHANGELOG.md and README.md ([51ac7c3](https://github.com/SpareBank1/designsystem/commit/51ac7c3474548965db98b76e6a016d018009b7ec))
+* **ffe-account-selector-react:** update internal dependencies ([139236a](https://github.com/SpareBank1/designsystem/commit/139236a81043b273707733c57548b1af1ac8cd67))
+* **ffe-account-selector-react:** upgrade react to >=18.2.0 ([9394364](https://github.com/SpareBank1/designsystem/commit/93943644bf73ec006af3e77f7ee26683d831e64b))
+* **ffe-account-selector-react:** use locale in formatAmount ([6a2f6f5](https://github.com/SpareBank1/designsystem/commit/6a2f6f52ea15c5963e21995583d481729bffc457))
+* **ffe-account-selector-react:** use SearchableDropdownMultiSelect for AccountSelectorMulti ([5757516](https://github.com/SpareBank1/designsystem/commit/5757516c377f5a9f2b429eb8d55fadf5fc060d82))
+* **ffe-spinner-react:** rewrite in ts ([dd3d6c9](https://github.com/SpareBank1/designsystem/commit/dd3d6c98b0b648277a6788761f1bc62639af2a80))
+
+
+### BREAKING CHANGES
+
+* oppdaterer til semantiske farger
+* **ffe-account-selector-react:** BaseSelector is removed. The new AccountSelectorMulti does not have
+an "select all" option but this can be implemented with controlled state. Se code examples.
+AccountSelectorMulti has completely new API.
+* **ffe-account-selector-react:** endret navn fra listElementBody til optionBody. Endring i.fbm searchabledropdownmultiselect
+* **ffe-account-selector-react:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-account-selector-react:** Dropped support for React <18.2.0
+* **ffe-account-selector-react:** highCapacity prop removed.
+* **ffe-spinner-react:** default export -> named export
+* **ffe-account-selector-react:** AccountSelector sin ariaInvalid er ikke lenger required.
+withSpaceForDetails prop er fjernet
+* **ffe-account-selector-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* AccountSelectorHighCapacity is no longer exported.
+Use AccountSelectorMulti or BaseSelector with prop highCapacity=true
+* **ffe-account-selector-react:** use AccountSelectorHighCapacity for high capacity
+* **ffe-account-selector-react:** Makes the styling package @sb1/ffe-form a required
+dependency and removes it as peer dependency.
+* **ffe-account-selector-react:** Change labelId to labelledById, and make it optional.
+* **ffe-account-selector-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
+* **ffe-account-selector-react:** Make `AccountSelector` use `SearchableDropdown` under the hood
+
+This means many of the props and some of the details of the functionality of
+`AccountSelector` have changed.
+Reusing SearchableDropdown in `AccountSelector` means we don't have to reinvent the wheel.
+Note: The `highCapacity` prop has been removed as windowing is now enabled by default.
+
+`AccountSelectorMulti` remains the same as before.
+
+New props:
+```
+export interface AccountSelectorProps<T> {
+    accounts: Array<Account>;
+    className?: string;
+    id: string;
+    locale: string;
+    noMatches?: NoMatch<T>;
+    inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+    onAccountSelected: (account: Account) => void;
+    onReset: () => void;
+    selectedAccount?: Account;
+    showBalance?: boolean;
+    formatAccountNumber?: boolean;
+    labelId: string;
+    allowCustomAccount?: boolean;
+    listElementBody?: (
+        props: ListElementBodyProps<T>,
+    ) => React.FC<HTMLDivElement>;
+    saveSpaceForDetails?: boolean;
+    ariaInvalid: boolean;
+}
+```
+
+Old props:
+```
+export interface AccountSelectorProps {
+    accounts?: Array<Account>;
+    className?: string;
+    id: string;
+    locale: string;
+    noMatches?: string;
+    onAccountSelected: (account: Account) => void;
+    onChange: (value: string) => void;
+    selectedAccount?: Account;
+    showBalance?: boolean;
+    value: string;
+    readOnly?: boolean;
+    highCapacity?: boolean;
+}
+```
+* **ffe-account-selector-react:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
+* **ffe-account-selector-react:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+* **ffe-account-selector-react:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* **ffe-account-selector-react:** This commit removes the deprecated lifecycle method
+`componentWillReceiveProps` from the `InputField` component. The component
+used this lifecycle to keep the `value` prop and the internal `value`
+state in sync. However this is a bad pattern, as there is no reason for
+this component to keep an internal state of the field value.
+The component _should_ be used as a controlled component, where the
+consumer is responsible for keeping and providing the value. If you do this
+already, you'll be fine with. However, if you've simply been listening for
+changes through `onChange`, and not keeping your own state, this change will
+break your UI.
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-account-selector-react:** This package relied on `ffe-checkbox-react` which has been merged into `ffe-form-react`.
+
+As a result, you need to update your dependencies to use this version. Replace the dependency on `ffe-checkbox-react` with `ffe-form-react`.
+
+*Make sure you're at least on version* `4.3.0` of `ffe-form-react`.
+
+No further action should be required to update this version.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [31.2.45](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@31.2.44...@sb1/ffe-account-selector-react@31.2.45) (2025-09-09)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+
+
+
+
+## [31.2.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@31.2.43...@sb1/ffe-account-selector-react@31.2.44) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+
+
+
+
 ## [31.2.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@31.2.42...@sb1/ffe-account-selector-react@31.2.43) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

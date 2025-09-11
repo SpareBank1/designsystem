@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-badge
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-badge
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-badge
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Features
+
+* **ffe-badge:** ny badge komponent ([bda5719](https://github.com/SpareBank1/designsystem/commit/bda5719362c0b59ab57daefc59344f172780368e))
+
+
+
+
+
+## [1.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-badge@1.1.9...@sb1/ffe-badge@1.1.10) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-badge
+
+
+
+
+
 ## [1.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-badge@1.1.8...@sb1/ffe-badge@1.1.9) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-badge

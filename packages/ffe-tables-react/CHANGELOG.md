@@ -3,6 +3,191 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-tables-react:** add missing author field to package.json ([8049e4f](https://github.com/SpareBank1/designsystem/commit/8049e4f1b0cdeb4f003d6b083621d51cb82607d3))
+* **ffe-tables-react:** add typescript declaration for `onSort` prop ([0cb8099](https://github.com/SpareBank1/designsystem/commit/0cb80999b8998b31f339b4c5d68b7adf46020598))
+* **ffe-tables-react:** added class on row containing expand content ([7c68346](https://github.com/SpareBank1/designsystem/commit/7c683465165d3eff6d96b78350eb7662ef194b23))
+* **ffe-tables-react:** broadens version of peer dependencies ([8f9101a](https://github.com/SpareBank1/designsystem/commit/8f9101abe601d3812e2e8ce7ea7372a9c03d1af9))
+* **ffe-tables-react:** bytter ut ffe-icons med ffe-symbols ([28b7b54](https://github.com/SpareBank1/designsystem/commit/28b7b542d738e835d1cd46f8e5a475e4ab2b75b6))
+* **ffe-tables-react:** Correct main file in package.json ([4aaf79d](https://github.com/SpareBank1/designsystem/commit/4aaf79d67d7f00b60e2f1820890b46a6d68184be))
+* **ffe-tables-react:** dont mutate passed columns ([d5e4a5d](https://github.com/SpareBank1/designsystem/commit/d5e4a5d1fd0051392b2ac74a727abe22d90ce94a)), closes [#883](https://github.com/SpareBank1/designsystem/issues/883)
+* **ffe-tables-react:** endrer størrelse på ikon ([eb26de8](https://github.com/SpareBank1/designsystem/commit/eb26de841526af45a7a6e727a13cc8b506e9f224))
+* **ffe-tables-react:** Fix aria-issue with expandable rows ([a204fe2](https://github.com/SpareBank1/designsystem/commit/a204fe240f8631694dd39656e39b60958cdc9356))
+* **ffe-tables-react:** fix linting errors in test case ([55212bb](https://github.com/SpareBank1/designsystem/commit/55212bbe92dc2cf72ca8382cd5077510b53c6328))
+* **ffe-tables-react:** fix naming of source directory ([a760192](https://github.com/SpareBank1/designsystem/commit/a7601927fc3aabb066f859ce22b2886467bcbf64))
+* **ffe-tables-react:** fixed async issues with setState ([d0c6954](https://github.com/SpareBank1/designsystem/commit/d0c6954cedd990c2e834d349342fd4a2bc446a89))
+* **ffe-tables-react:** fixed async issues with setState ([44dccea](https://github.com/SpareBank1/designsystem/commit/44dccea711f02cc3cbe757c6e0a589a7f06cba8f))
+* **ffe-tables-react:** fjerner uuid og bruker useId ([e14cfb4](https://github.com/SpareBank1/designsystem/commit/e14cfb4aa02bde2d3d583a646d04fbf138cba68a))
+* **ffe-tables-react:** legg til screenreader-only text in header ([919a18f](https://github.com/SpareBank1/designsystem/commit/919a18f6626296c78cd810ebaa67b4747e14636a))
+* **ffe-tables-react:** legger til manglende dep ffe-core-react ([a3bad62](https://github.com/SpareBank1/designsystem/commit/a3bad62936bfb190d6c35ba734eda8285bdedc7a))
+* **ffe-tables-react:** onClick was called 2 times in TableRowExpandable ([2565ab8](https://github.com/SpareBank1/designsystem/commit/2565ab8b16a1f7e77c84b78e67a55bdbe343240d))
+* **ffe-tables-react:** onSort ble ikke kalt ved initiell sortering ([e9c5746](https://github.com/SpareBank1/designsystem/commit/e9c5746871fd43692d89799b14ac36b109919ff7))
+* **ffe-tables-react:** oppdater symbol implementasjon ([48137fe](https://github.com/SpareBank1/designsystem/commit/48137fe51eeb561ec9aa21239fed802044274383))
+* **ffe-tables-react:** Properly handle zero as row id ([8c8cc67](https://github.com/SpareBank1/designsystem/commit/8c8cc672bb90b5d30e7f9675419d7e18b43c67e0))
+* **ffe-tables-react:** reduce vulnerabilities ([0bf6476](https://github.com/SpareBank1/designsystem/commit/0bf647686aa7e604ef5a2d84be29bb7c441539e6))
+* **ffe-tables-react:** remove default props ([7c99844](https://github.com/SpareBank1/designsystem/commit/7c998443cef66610c45799190689c4f9d413f456))
+* **ffe-tables-react:** rows with non-expandable should not be expandable ([81d7353](https://github.com/SpareBank1/designsystem/commit/81d7353e580045d669c204d44ee1c8d82010425b)), closes [#514](https://github.com/SpareBank1/designsystem/issues/514)
+* **ffe-tables-react:** ts types not generated ([5a2ca80](https://github.com/SpareBank1/designsystem/commit/5a2ca807edf5ac3307f3ee31dc96f4a38164d48d))
+* **ffe-tables-react:** update to correct collapse version ([b8358bb](https://github.com/SpareBank1/designsystem/commit/b8358bb7ba044545eef636208e776d11bcc823a1))
+* **ffe-tables-react:** use buildtool for transpiling ([9ae0253](https://github.com/SpareBank1/designsystem/commit/9ae0253bf7d5360bed23fa96ed6bbf15611b09cd)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-tables-react:** use react.componentsprops instead of react.htmlprops ([716f2d7](https://github.com/SpareBank1/designsystem/commit/716f2d753e16588062246918c04b8e4e76fa8fc1))
+* packages/ffe-tables-react/package.json to reduce vulnerabilities ([c8ac722](https://github.com/SpareBank1/designsystem/commit/c8ac722507b50c965c5cbbb768a6593e07ffc3a9))
+* **package:** update memoize-one to version 5.0.0 ([778a8a6](https://github.com/SpareBank1/designsystem/commit/778a8a65c43fefe201523017753cd069cadb5223))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+* Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc1616ffd14a414bc2e27f8c90a687a7a90b93))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+
+
+### Features
+
+* **ffe-tables-react:** Add prop onSort ([2dc9652](https://github.com/SpareBank1/designsystem/commit/2dc9652cecec52f27005920d4a22df65df66d1e0))
+* **ffe-tables-react:** Add property className ([86552d1](https://github.com/SpareBank1/designsystem/commit/86552d1c7b68dd7c77f9639867d8536111c2e6a4))
+* **ffe-tables-react:** added render override functions ([#228](https://github.com/SpareBank1/designsystem/issues/228)) ([88908a0](https://github.com/SpareBank1/designsystem/commit/88908a0685a638f1d0289cd386610a953d8a3d3e))
+* **ffe-tables-react:** Added type definitions for typescript ([2e25360](https://github.com/SpareBank1/designsystem/commit/2e253608182a85d7d4a894571285e1d27f1a3765))
+* **ffe-tables-react:** Expandable table rows may be expanded as default ([9217453](https://github.com/SpareBank1/designsystem/commit/92174538a0f80d3cc8bad128a3eb06c4dcfe41e7))
+* **ffe-tables-react:** import icons without need for tree shaking ([c5eb179](https://github.com/SpareBank1/designsystem/commit/c5eb179f091c7fbe5377d56e8a445d8eae8ccb5a))
+* **ffe-tables-react:** Migrate from deprecated componentWillReceiveProps to getDerivedStateFromProps ([bc969f1](https://github.com/SpareBank1/designsystem/commit/bc969f1712918cc353867fa3a86c024a1488b9c3))
+* **ffe-tables-react:** possible for default expanded rows ([24b4769](https://github.com/SpareBank1/designsystem/commit/24b4769657e15a92207b799e0895f1ab2de80248))
+* **ffe-tables-react:** responsive table ([39f94dd](https://github.com/SpareBank1/designsystem/commit/39f94dd0fc148b328ee4dba0c161fd119db1c361))
+* **ffe-tables-react:** rewrite of component ([996104d](https://github.com/SpareBank1/designsystem/commit/996104df269b01a290b12b4c036d891e435e6628))
+* **ffe-tables-react:** update internal dependencies ([a5e00c3](https://github.com/SpareBank1/designsystem/commit/a5e00c34f8ac793288b516f47a56b8efd5706502))
+* **ffe-tables-react:** upgrade react to >=18.2.0 ([01e81c0](https://github.com/SpareBank1/designsystem/commit/01e81c0f4a10e61b75288521ff41b561a97af163))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables-react:** columnHeader must be provided on <TableDataCell/>.
+These are used on small screens.
+* **ffe-tables-react:** Compent API is new
+* **ffe-tables-react:** Dropped support for React <18.2.0
+* **ffe-tables-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* **ffe-tables-react:** Makes the styling package @sb1/ffe-tables a required
+dependency and removes it as peer dependency.
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [11.0.70](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.69...@sb1/ffe-tables-react@11.0.70) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+
+
+
+
 ## [11.0.69](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@11.0.68...@sb1/ffe-tables-react@11.0.69) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

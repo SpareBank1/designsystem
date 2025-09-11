@@ -3,6 +3,315 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-searchable-downdown-react:** remove double var ([398a133](https://github.com/SpareBank1/designsystem/commit/398a133d48baadb7a0d21af7ec94d671a6cecbb1))
+* **ffe-searchable-dropdown-react:** accept aria-invalid ([d25adf1](https://github.com/SpareBank1/designsystem/commit/d25adf1c5d2a2628c911eea6ee0f29dfb6fddf0b))
+* **ffe-searchable-dropdown-react:** add dark class to noMatch.text element ([4b1ee35](https://github.com/SpareBank1/designsystem/commit/4b1ee35b6249dcbfd9e224a6f2cdfd36ac6a5ad3))
+* **ffe-searchable-dropdown-react:** add dark mode styling to list ([0dc75d8](https://github.com/SpareBank1/designsystem/commit/0dc75d8a9e7fbea9ab33c7a3c021ade8101f58bd))
+* **ffe-searchable-dropdown-react:** add inner ref typescript prop ([a212f9f](https://github.com/SpareBank1/designsystem/commit/a212f9fa39586ca448e6373271ef593ea6a30485))
+* **ffe-searchable-dropdown-react:** add missing uuid dependency ([d59433a](https://github.com/SpareBank1/designsystem/commit/d59433af9c0b46fa8a4c0bffffda029cf4b0b0ca))
+* **ffe-searchable-dropdown-react:** add more height to dropdown list ([d1ee118](https://github.com/SpareBank1/designsystem/commit/d1ee1181608b26ddda7ff0bb4efe3ea52bd3bfde))
+* **ffe-searchable-dropdown-react:** Added defaultProps false for dark variant. ([ecbb5b4](https://github.com/SpareBank1/designsystem/commit/ecbb5b4113d45e553d5de5049b98ce6c77feb2e8))
+* **ffe-searchable-dropdown-react:** Added missing border on invalid searchable dropdown ([6585f7c](https://github.com/SpareBank1/designsystem/commit/6585f7cc12528ac0012db501839e99233ad817ca))
+* **ffe-searchable-dropdown-react:** added peerDependency to ffe-core@^13.0.0 ([8579723](https://github.com/SpareBank1/designsystem/commit/8579723f8592c215d33477fb62cc9fe910e9e2af))
+* **ffe-searchable-dropdown-react:** adds missing dep. to useEffect ([87383a8](https://github.com/SpareBank1/designsystem/commit/87383a8969ab414d8f21750ce8ef1215bc222b4b))
+* **ffe-searchable-dropdown-react:** aria-invalid should be a string ([9a14a59](https://github.com/SpareBank1/designsystem/commit/9a14a5950d43f5b825d917e04512af65df8bb4b1))
+* **ffe-searchable-dropdown-react:** aria-selected ([6177830](https://github.com/SpareBank1/designsystem/commit/6177830c3eb31f0669621281269fa5799a80df02))
+* **ffe-searchable-dropdown-react:** better screen reader support ([240f4f8](https://github.com/SpareBank1/designsystem/commit/240f4f85e4b487916ed5ef1c829e4b3a10e59463))
+* **ffe-searchable-dropdown-react:** broadens version of peer dependencies ([19283b0](https://github.com/SpareBank1/designsystem/commit/19283b0f141b356227a12ec5e2b47c5fd0b5cdd4))
+* **ffe-searchable-dropdown-react:** bytter ut ffe-icons med ffe-symbols ([aa55fc6](https://github.com/SpareBank1/designsystem/commit/aa55fc6f6ad7a4b1a76736817e63c43b3a4bea4c))
+* **ffe-searchable-dropdown-react:** bytter ut utfaset farge ([75a56b9](https://github.com/SpareBank1/designsystem/commit/75a56b91370daceb003c33f987d0db539bd12d88))
+* **ffe-searchable-dropdown-react:** Changes selectedItems to replace the internal state when change programmatically to support removing items programmatically ([43edeaa](https://github.com/SpareBank1/designsystem/commit/43edeaa87546fe3e52656cdeac2f8636319fc698))
+* **ffe-searchable-dropdown-react:** clear button cant be ot type submit ([1eb0c76](https://github.com/SpareBank1/designsystem/commit/1eb0c76dcd52aa425ca0214520057985ce8ace39))
+* **ffe-searchable-dropdown-react:** clear button was not working on device ([1cb706e](https://github.com/SpareBank1/designsystem/commit/1cb706ea79d055ba1ecac370c6a362f1d89dc0dd))
+* **ffe-searchable-dropdown-react:** correct name of focusToggleButton prop ([e2a7275](https://github.com/SpareBank1/designsystem/commit/e2a7275d56f6c87c45baf34e9a29fe25a25dc905))
+* **ffe-searchable-dropdown-react:** Disable browsers autoComplete for SearchableDropdown ([a213b69](https://github.com/SpareBank1/designsystem/commit/a213b690e7ecdf011ffcf0b9fd272833ca505294))
+* **ffe-searchable-dropdown-react:** Do not automatically change passed selecteditem ([413fa43](https://github.com/SpareBank1/designsystem/commit/413fa4329eba2ade950357867bc840ce6c9c767d))
+* **ffe-searchable-dropdown-react:** Do not run open or close callbacks on mount ([3194eca](https://github.com/SpareBank1/designsystem/commit/3194ecaa6007f42563df5c74d4ebdfdc1bf97785))
+* **ffe-searchable-dropdown-react:** Do onBlur functionality if clicked outside dropdown on blur ([df49c99](https://github.com/SpareBank1/designsystem/commit/df49c99db8d1f9ba5727510e3274d272f71fc608))
+* **ffe-searchable-dropdown-react:** Dont auto select if list has one element and no highlightedIndex ([00fb8e7](https://github.com/SpareBank1/designsystem/commit/00fb8e774aa568c0de977df4072c3eaa93b1f567))
+* **ffe-searchable-dropdown-react:** fiks issue med at border-bottom ikke settes på highCapacity ([fc2ca5a](https://github.com/SpareBank1/designsystem/commit/fc2ca5aa16c805fe223171a9767db963fafff495))
+* **ffe-searchable-dropdown-react:** Fiks skjermleser bug og legg til tester ([45da8ee](https://github.com/SpareBank1/designsystem/commit/45da8eeb2b722261d834637f8261c60b4d680575))
+* **ffe-searchable-dropdown-react:** fikse lint om depenency til useEffect ([710d5fb](https://github.com/SpareBank1/designsystem/commit/710d5fbcf64661d964452f42daedf2d62e2bee8e))
+* **ffe-searchable-dropdown-react:** fikser feil der to er åpne samtidig ([8a957cf](https://github.com/SpareBank1/designsystem/commit/8a957cf639c456ace44b26d262768bb98a6c9cd5))
+* **ffe-searchable-dropdown-react:** Fikser semantiske farger. Fjerner at chevronen oppfører seg som en knapp ([5f964a8](https://github.com/SpareBank1/designsystem/commit/5f964a81c582157e648f8f76bdd02b34eed0e53d))
+* **ffe-searchable-dropdown-react:** Fix highlighting of list element on input change ([60a2991](https://github.com/SpareBank1/designsystem/commit/60a2991e64e5750350e092124c33cb0fefbbe629))
+* **ffe-searchable-dropdown-react:** Fix issue with too many parameters being passed to InputField ([a72208c](https://github.com/SpareBank1/designsystem/commit/a72208ce6ee589ee1578a50fa9807c0314904f4b))
+* **ffe-searchable-dropdown-react:** Fix issue with too many parameters being passed to InputField ([75e63c5](https://github.com/SpareBank1/designsystem/commit/75e63c53364c6bb5383e91adeb49c86910ed993e))
+* **ffe-searchable-dropdown-react:** fix missing noMatch list on first render ([bcbcad2](https://github.com/SpareBank1/designsystem/commit/bcbcad252099856d4e3490004052f5f59dd525f9))
+* **ffe-searchable-dropdown-react:** Fix not being able to select item by tabbing ([84c184f](https://github.com/SpareBank1/designsystem/commit/84c184fa20ed46e8ab2765cbb5ccb39f33b41335))
+* **ffe-searchable-dropdown-react:** Fix test data so test work again ([ae634c0](https://github.com/SpareBank1/designsystem/commit/ae634c0a4d4fd6120cb527b956965ed601e89922))
+* **ffe-searchable-dropdown-react:** fixed dark mode version ([907a6dc](https://github.com/SpareBank1/designsystem/commit/907a6dc3b39b141d42215adf81bb253fd73108c1))
+* **ffe-searchable-dropdown-react:** fjerner gjenglemte referanser til --dark ([fe381db](https://github.com/SpareBank1/designsystem/commit/fe381dbf67679b4dfeb8d9b885095942e346d79c))
+* **ffe-searchable-dropdown-react:** Have separate list for highCapacity and lowCapacity ([68faffb](https://github.com/SpareBank1/designsystem/commit/68faffb3da676ad2bdc33033db745dce4297797f))
+* **ffe-searchable-dropdown-react:** hovering styles only when using pointer/mouse ([5493196](https://github.com/SpareBank1/designsystem/commit/54931965d6d4d336eba86de354e91819c58eec07))
+* **ffe-searchable-dropdown-react:** icons are to big ([6a3aefa](https://github.com/SpareBank1/designsystem/commit/6a3aefa159695eaa6666943df6f840b66747d2a1))
+* **ffe-searchable-dropdown-react:** ie11 did not support heigth unset ([560c786](https://github.com/SpareBank1/designsystem/commit/560c78605672a08077055bad54a4868d8b9de2db))
+* **ffe-searchable-dropdown-react:** Improve screen reader of dropdown actions ([fe3d295](https://github.com/SpareBank1/designsystem/commit/fe3d2951b3e5e9234cea3e3a575e2b8a85e302e3))
+* **ffe-searchable-dropdown-react:** kebab-case css class name ([596c707](https://github.com/SpareBank1/designsystem/commit/596c7079a493c0abe9659e6c1d60849f373335ca))
+* **ffe-searchable-dropdown-react:** legger til default font ([e002e74](https://github.com/SpareBank1/designsystem/commit/e002e7461f265f45d583576bddfe36cd054cfffe))
+* **ffe-searchable-dropdown-react:** make it work in shadow dom ([8964949](https://github.com/SpareBank1/designsystem/commit/8964949dc9f6e2bc7f155995d7917820c076f30e))
+* **ffe-searchable-dropdown-react:** minor fix of typescript declarations ([1bbe3bf](https://github.com/SpareBank1/designsystem/commit/1bbe3bf815b4d1d960dc4b3dc75e5837302682c6))
+* **ffe-searchable-dropdown-react:** mouse click selects item of list ([3e4ce9f](https://github.com/SpareBank1/designsystem/commit/3e4ce9f5fe86f969c6d7cab9b127db3c913c52b5)), closes [#1221](https://github.com/SpareBank1/designsystem/issues/1221)
+* **ffe-searchable-dropdown-react:** only show no result when open ([e5840a0](https://github.com/SpareBank1/designsystem/commit/e5840a0dceff58da9750ebc16d1de7a16fd7599b))
+* **ffe-searchable-dropdown-react:** oppdaterer symbol implementasjon ([a9529fd](https://github.com/SpareBank1/designsystem/commit/a9529fdf204d78d67e1419c53162d6cb375d0fa7))
+* **ffe-searchable-dropdown-react:** Option list keys now use more than one attribute ([911c03e](https://github.com/SpareBank1/designsystem/commit/911c03e370a7747cf839d01162979a3025362517))
+* **ffe-searchable-dropdown-react:** overflow hidden on dropdown list ([6e373f7](https://github.com/SpareBank1/designsystem/commit/6e373f767c1b9876cf0b58f9c6c288c5645d8bc5))
+* **ffe-searchable-dropdown-react:** Remove some commented code ([ab2f628](https://github.com/SpareBank1/designsystem/commit/ab2f6288985a1282fc561c154b38ccc08091242b))
+* **ffe-searchable-dropdown-react:** remove unnecessary less-dependency ([0088865](https://github.com/SpareBank1/designsystem/commit/00888650a8fd1bb8afed2fd7b43628b4b8f4687e))
+* **ffe-searchable-dropdown-react:** require .native for darkmode ([83683c4](https://github.com/SpareBank1/designsystem/commit/83683c47adb4113ccf8e38b4f8fb1b1a2f9b2b8b)), closes [#1420](https://github.com/SpareBank1/designsystem/issues/1420)
+* **ffe-searchable-dropdown-react:** revert upgrade of less ([a2df79c](https://github.com/SpareBank1/designsystem/commit/a2df79cfc4e1dc427c954fc9b95fa22ec826ee6e))
+* **ffe-searchable-dropdown-react:** set autoComplete="off" so the user do not get the browsers default suggestions in addition to our components suggestions. ([7153a82](https://github.com/SpareBank1/designsystem/commit/7153a827a2c4715aead79d5e278a20920f603a9b))
+* **ffe-searchable-dropdown-react:** setter riktig transition på chevron ([c709811](https://github.com/SpareBank1/designsystem/commit/c709811ac7c4816b35d765144e8aa5d278182133))
+* **ffe-searchable-dropdown-react:** Should set inputValue as selectedItem if allowCustomItem is true ([8ddcf47](https://github.com/SpareBank1/designsystem/commit/8ddcf4704f5cdfc1bd10396271a782470ba8895f))
+* **ffe-searchable-dropdown-react:** Should set selectedItem to null when input field is empty ([e325abb](https://github.com/SpareBank1/designsystem/commit/e325abbd0259ccf878597f641d24242dfe124c40))
+* **ffe-searchable-dropdown-react:** support for aria-invalid ([05ec174](https://github.com/SpareBank1/designsystem/commit/05ec174a88ad17337c91ae12f996d8d691b44206))
+* **ffe-searchable-dropdown-react:** the dropdown had heigth in some browsers when not expanded ([38e2f67](https://github.com/SpareBank1/designsystem/commit/38e2f67297d47be0a260933fed9a6455b78155c4))
+* **ffe-searchable-dropdown-react:** ts types ([c19ed6a](https://github.com/SpareBank1/designsystem/commit/c19ed6a97e3e5d2802d850ac2bcd21c2d99aaea5))
+* **ffe-searchable-dropdown-react:** Update custom scroll dependency to support React 19 ([b958591](https://github.com/SpareBank1/designsystem/commit/b9585913ef8a0529b17dd9ec92a04bdaa6d9253c))
+* **ffe-searchable-dropdown-react:** upgrade scrollbars ([91d625e](https://github.com/SpareBank1/designsystem/commit/91d625e5d6a1a70c3843d277d63e20df0da78322)), closes [#1511](https://github.com/SpareBank1/designsystem/issues/1511)
+* **ffe-searchable-dropdown-react:** use buildtool for transpiling ([3baba25](https://github.com/SpareBank1/designsystem/commit/3baba25ed90685469ba9058af2b9557c1414ba00)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-searchable-dropdown-react:** use ffe-spacings ([affa325](https://github.com/SpareBank1/designsystem/commit/affa3256718db076bcc815770509474b342a7ed2))
+* **ffe-searchable-dropdown-react:** use hoisted version of dependencies ([f1ba65d](https://github.com/SpareBank1/designsystem/commit/f1ba65d391a1a396a774de9b19383ddcccd1e7ab))
+* **ffe-searchable-dropdown-react:** use react.componentsprops instead of react.htmlprops ([cefa5f7](https://github.com/SpareBank1/designsystem/commit/cefa5f79e15cb1bedca614b899e5ca5cd5c61e4e))
+* Run just 'jest', not 'jest src' ([6377dc5](https://github.com/SpareBank1/designsystem/commit/6377dc53a69338daa78adb1927a799918912226c))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+* Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc1616ffd14a414bc2e27f8c90a687a7a90b93))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-searchable-dropdown-react:** bump less ([ed6f330](https://github.com/SpareBank1/designsystem/commit/ed6f330ace371d55cecab73edbd1e953010e912f))
+* **ffe-searchable-dropdown-react:** Remove unused mixin ([da0a8b9](https://github.com/SpareBank1/designsystem/commit/da0a8b9af129f4ec88fad93fdcc833bc39ade6f5))
+* **ffe-spinner-react:** Reimplement ffe-spinner-react ([f3f8795](https://github.com/SpareBank1/designsystem/commit/f3f87955f75be482218834b80a42649b6fe2b88c))
+
+
+* feat(ffe-searchable-dropdown-react)!: nye fargevariaber, fokusstate og aria-invalid state ([898168c](https://github.com/SpareBank1/designsystem/commit/898168cf01717fe74fddaad775eb956dfb9e8047))
+* feat(ffe-searchable-dropdown-react)!: Semantiske farger ([e0e809a](https://github.com/SpareBank1/designsystem/commit/e0e809a84f89ec2f5c2b54c9fcf3dc646e1e18df))
+* chore(ffe-searchable-dropdown-react)!: remove SearchableDropdownHighCapacity ([9b3cde8](https://github.com/SpareBank1/designsystem/commit/9b3cde8b7c910c70bec17a26fef2d4bb86088357))
+
+
+### Features
+
+* **ffe-datepicker:** nye darkmodefarger fra core, nye fargevariabler og hvit bakgrunn på accent context ([f62d7d0](https://github.com/SpareBank1/designsystem/commit/f62d7d0b62b7c601cf059feb147ce08e715af4b2))
+* **ffe-searchable-dropdown-react:** add :host for shadow dom support ([7753099](https://github.com/SpareBank1/designsystem/commit/775309925a34c5f0320ef701aab453a0872cc2bf))
+* **ffe-searchable-dropdown-react:** add displayAttribute prop ([e2bf820](https://github.com/SpareBank1/designsystem/commit/e2bf820bb6aa884233e978ee1b73c3a730a3e156))
+* **ffe-searchable-dropdown-react:** add open and close prop to account-selector ([1550160](https://github.com/SpareBank1/designsystem/commit/1550160d5f4ff6df1df8f2db54328f8598ca7bc0))
+* **ffe-searchable-dropdown-react:** Add support for limiting number of rendered dropdown elements ([d84187e](https://github.com/SpareBank1/designsystem/commit/d84187eae9110bdfe5a4dc7d736ae843e102879d))
+* **ffe-searchable-dropdown-react:** Add support for tens of thousands of options ([d5dc190](https://github.com/SpareBank1/designsystem/commit/d5dc190bbb34986da928b6925a6396d6a78d62c6))
+* **ffe-searchable-dropdown-react:** Added dark property with documentation ([0a5e7e5](https://github.com/SpareBank1/designsystem/commit/0a5e7e56c9d58137ccfd2daeb6c07165e6fd7ae2))
+* **ffe-searchable-dropdown-react:** Allow selecting item programmatically ([838372a](https://github.com/SpareBank1/designsystem/commit/838372adff7d09ee0be622817d68204318906ceb))
+* **ffe-searchable-dropdown-react:** change labelId to labelledById ([c0d5354](https://github.com/SpareBank1/designsystem/commit/c0d5354ef9a6878e798f7195f4c86548c283d62a))
+* **ffe-searchable-dropdown-react:** custom isEqual ([9d9b854](https://github.com/SpareBank1/designsystem/commit/9d9b854dae03201818a230d07562e6abecde13be))
+* **ffe-searchable-dropdown-react:** downshift implmentation ([33085b6](https://github.com/SpareBank1/designsystem/commit/33085b656c2b88f81dd9fd9bbb3d665c0345f62f))
+* **ffe-searchable-dropdown-react:** Extended noMatch to allow for a set of fallback items. ([bea59fe](https://github.com/SpareBank1/designsystem/commit/bea59fe551178acd1530ddb39b13efe46d1badf3))
+* **ffe-searchable-dropdown-react:** Fix a11y message when just opening and closing the dropdown ([03bfb05](https://github.com/SpareBank1/designsystem/commit/03bfb059f6dd9c4926d2a048f22313441e05c30b))
+* **ffe-searchable-dropdown-react:** Fix some bugs and add some features ([06aca67](https://github.com/SpareBank1/designsystem/commit/06aca6731c930c1f13544df556d063ad0a0c6690))
+* **ffe-searchable-dropdown-react:** focus clear button instead of input field on option selection ([0c24147](https://github.com/SpareBank1/designsystem/commit/0c241479696deeaa37f18d05abb463ab929e26d2))
+* **ffe-searchable-dropdown-react:** Lagt til postListElement ([3688435](https://github.com/SpareBank1/designsystem/commit/3688435f24472e56c5eb352263e28ce3746ae18b))
+* **ffe-searchable-dropdown-react:** legg til inner-ref prop ([b53773f](https://github.com/SpareBank1/designsystem/commit/b53773f997f2233bf3aafcbd57faf71eca528ef4))
+* **ffe-searchable-dropdown-react:** legg til theming og fiks farger i darkmode ([1629a35](https://github.com/SpareBank1/designsystem/commit/1629a35db1e7b9f14ce92b26ed0632399855c26e))
+* **ffe-searchable-dropdown-react:** Legger til multiselect. ([7bbb6ce](https://github.com/SpareBank1/designsystem/commit/7bbb6cee62d77111b8d90b346c4112f46b19dcb8))
+* **ffe-searchable-dropdown-react:** loading indicator + support for updatable dropdownList-prop ([b297934](https://github.com/SpareBank1/designsystem/commit/b297934996c492bac5c449c6d42f8fc7016b14f3))
+* **ffe-searchable-dropdown-react:** open dropdown when using arrow keys ([1a60f41](https://github.com/SpareBank1/designsystem/commit/1a60f4181375d7b32aa6bde49bebb7d7dc692af2))
+* **ffe-searchable-dropdown-react:** oppdaterte farger iht ny profil ([9f10a87](https://github.com/SpareBank1/designsystem/commit/9f10a87b55bdaebd50bbb2c3a7c65e99ed04869c))
+* **ffe-searchable-dropdown-react:** regard-color-scheme-preference for darkmode ([d123ed7](https://github.com/SpareBank1/designsystem/commit/d123ed7b5647c4fb152de00d7ec5a6b68230bd66))
+* **ffe-searchable-dropdown-react:** Remove clear button from dropdown ([0c2fccc](https://github.com/SpareBank1/designsystem/commit/0c2fccc6d6bdcc12f167ceff8b0bdfbcbbba03b0))
+* **ffe-searchable-dropdown-react:** remove high capacity prop ([f5a6612](https://github.com/SpareBank1/designsystem/commit/f5a66129f7cecbb1d3ad32815bfeb5dd1128624b))
+* **ffe-searchable-dropdown-react:** Remove onBlur functionality and programmatically selecting item ([ba1b103](https://github.com/SpareBank1/designsystem/commit/ba1b103b3de741974867af4e1d8d2cdee5e9ed18))
+* **ffe-searchable-dropdown-react:** rewrite in ts ([0f2565a](https://github.com/SpareBank1/designsystem/commit/0f2565a0be669ceb3395696ba7dc16da3d5e89d4))
+* **ffe-searchable-dropdown-react:** Select single matching item on blur ([0a36ba5](https://github.com/SpareBank1/designsystem/commit/0a36ba568ee0abd6e9f05bf6cea061f6d13c2445))
+* **ffe-searchable-dropdown-react:** Set selectedItem to item in dropdownList matching inputValue ([ec99c54](https://github.com/SpareBank1/designsystem/commit/ec99c5429f9e2eebd255ec86e6c43f65a9a525b2))
+* **ffe-searchable-dropdown-react:** show elements on click and focus ([456af97](https://github.com/SpareBank1/designsystem/commit/456af973eb34052783f7c5083595f9a055c39a71))
+* **ffe-searchable-dropdown-react:** slightly tweak colors ([3ba782f](https://github.com/SpareBank1/designsystem/commit/3ba782f5bbcc4c7c44a6287c012a9bf07a9b7331))
+* **ffe-searchable-dropdown-react:** tilbyr kompilert css i tillegg til less ([92676e7](https://github.com/SpareBank1/designsystem/commit/92676e71f1b5ee130dfa4062ed3c942440043397))
+* **ffe-searchable-dropdown-react:** types for typescript ([713b6e0](https://github.com/SpareBank1/designsystem/commit/713b6e03235a0316489970f26e8dcc3367424827))
+* **ffe-searchable-dropdown-react:** upgrade react to >=18.2.0 ([06e25c2](https://github.com/SpareBank1/designsystem/commit/06e25c2ceb51403c34b93276b628f942646dc1ce))
+* **ffe-spinner-react:** rewrite in ts ([dd3d6c9](https://github.com/SpareBank1/designsystem/commit/dd3d6c98b0b648277a6788761f1bc62639af2a80))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* oppdaterer til semantiske farger
+* **ffe-searchable-dropdown-react:** Endrer fra listElementBody til optionBody på eksisterende searchabledropdown
+* **ffe-searchable-dropdown-react:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-searchable-dropdown-react:** Dropped support for React <18.2.0
+* **ffe-searchable-dropdown-react:** innerRef -> ref. Som props maunall props where wrong
+* **ffe-spinner-react:** default export -> named export
+* **ffe-searchable-dropdown-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
+fix(ffe-searchable-dropdown-react): glemte en dependency
+* SearchableDropdownHighCapacity is no longer exported.
+* **ffe-searchable-dropdown-react:** use SearchableDropdownHighCapacity instead og prop
+* **ffe-searchable-dropdown-react:** Change labelId to labelledById, and make it optional.
+* **ffe-searchable-dropdown-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
+* **ffe-searchable-dropdown-react:** Replaced `initialValue` with `selectedItem`
+
+`selectedItem` is an OPTIONAL prop which enables you to programmatically decide which item
+is displayed in the input field. When the user selects a different item, you should
+update the `selectedItem` value to reflect this newly chosen item. If not, your props
+and the internal state of SearchableDropdown will become out of sync.
+* **ffe-searchable-dropdown-react:** Changed `aria-invalid` to `ariaInvalid`
+
+Add optional input value formatter prop `formatter`.
+Add optional search matcher prop `searchMatcher`.
+Fix clearing when emptying input field.
+Change `aria-invalid` to `ariaInvalid`.
+* **ffe-searchable-dropdown-react:** Requires less ^4.0.0
+* **ffe-searchable-dropdown-react:** New API for this component. Now plays good togheter
+with InputGroup instead of having its own label and error messages. This
+component hade som accesibilty issues that also should have been
+improved.
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-searchable-dropdown-react:** Removed the `ffe-chevron-icon-with-color` mixin
+
+If you need it, use the identical mixin provided in `@sb1/ffe-form`.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-spinner-react:** This commit reimplements and simplifies the
+ffe-spinner-react implementation. It no longer includes layout, which
+requires the consumer to place it correctly.
+
+The `<InlineSpinner />` and `<LargeSpinner />` are now available as
+`<Spinner large={true|false} />`.
+
+The previous `<Spinner />` implementation, which wrapped a large
+spinner in a `ffe-content-container` class is now removed. To keep this
+behavior, the consumer can create its own implementation of a
+`<SpinnerWithLayout />` or something similar.
+
+
+
+
+
+## [24.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@24.0.11...@sb1/ffe-searchable-dropdown-react@24.0.12) (2025-09-09)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+
+
+
+
+## [24.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@24.0.10...@sb1/ffe-searchable-dropdown-react@24.0.11) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+
+
+
+
 ## [24.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@24.0.9...@sb1/ffe-searchable-dropdown-react@24.0.10) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

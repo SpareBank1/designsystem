@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-buildtool
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-buildtool
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-buildtool
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **buildtool:** bugfix for npm 6 ([1b33af6](https://github.com/SpareBank1/designsystem/commit/1b33af6c31c516bd5034889cce2fb2509f4a135b))
+* **buildtool:** fail with exit code if jest fails ([57897ae](https://github.com/SpareBank1/designsystem/commit/57897aece8c6af251cb18d4e052a2f383058fe22))
+* **buildtool:** fix babel plugin error ([bce83d8](https://github.com/SpareBank1/designsystem/commit/bce83d8c6b0b578af9382ddbdc8b8e47e27a4fab))
+* **buildtool:** makes snapshot testing less dependent on cwd ([d0a76bc](https://github.com/SpareBank1/designsystem/commit/d0a76bcacbfb7400df7899e631a16982b9fcb006))
+* **buildtool:** run jest tests with jsdom environment ([c032574](https://github.com/SpareBank1/designsystem/commit/c0325741d0d3f7afe685d94112307c7b70ad86f2))
+* **buildtool:** update tests ([4778a15](https://github.com/SpareBank1/designsystem/commit/4778a15146aa5872ab7e0885dabab21e38a8c5c8))
+* **ffe-messages:** add mask image css variable on icon inside ffe-messages ([d952cbb](https://github.com/SpareBank1/designsystem/commit/d952cbba5a6505ca784d0699bddca1ff40806c20))
+
+
+### Features
+
+* **buildtool:** babel plugin for ffe-icons-react ([4e33507](https://github.com/SpareBank1/designsystem/commit/4e3350725e15877b5a578b00928f07f844231ffc))
+* **buildtool:** change from native to regard-color-scheme-preference in allowed classNames ([d646e5e](https://github.com/SpareBank1/designsystem/commit/d646e5e2a118cba598094238b516695cbc7a5326))
+* **buildtool:** new command `babel-watch` ([d3c13ff](https://github.com/SpareBank1/designsystem/commit/d3c13ff2054748827cff387fdc804ca2b61848d1))
+* **buildtool:** new command `ffe-buildtool jest` ([0ef3658](https://github.com/SpareBank1/designsystem/commit/0ef3658e530e5cad4285b8c02bd9b0361abbf3a9))
+* **buildtool:** new command `ffe-buildtool stylelint` ([f8648e9](https://github.com/SpareBank1/designsystem/commit/f8648e9b5a004eff29502998b64ffffe3876c2b5))
+* **buildtool:** new package `ffe-buildtool` ([3c8939a](https://github.com/SpareBank1/designsystem/commit/3c8939a5c90662963e7c9148ca25ace6e91f68d2)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **buildtool:** no more babel support ([2a9d551](https://github.com/SpareBank1/designsystem/commit/2a9d5515a47cc11c7178aa441c8149d53d21e896))
+* **buildtool:** suport e(less) function ([19a18a4](https://github.com/SpareBank1/designsystem/commit/19a18a47131bc773687845d5cd284329a1c5b52a))
+* **component-overview:** replace snowpack with parcel ([e90d4f9](https://github.com/SpareBank1/designsystem/commit/e90d4f9ca5e74701e03a2691925dfd23127a1e4c))
+* **ffe-buttons-react:** use typescript ([946d225](https://github.com/SpareBank1/designsystem/commit/946d225af2d194e3a9b46f69490652a7c53fe190))
+* **ffe-datepicker:** add semantic colors to components ([e736678](https://github.com/SpareBank1/designsystem/commit/e7366780b5cce353dd9676024769b64d0ed45c50))
+
+
+### BREAKING CHANGES
+
+* **buildtool:** babel commands removed
+* **ffe-buttons-react:** No more manuel types so be aware. Generics are now inferred.
+
+
+
+
+
+## [0.10.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.10.1...@sb1/ffe-buildtool@0.10.2) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-buildtool
+
+
+
+
+
 ## [0.10.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.10.0...@sb1/ffe-buildtool@0.10.1) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-buildtool

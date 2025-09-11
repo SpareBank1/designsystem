@@ -3,6 +3,80 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-messages
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-messages
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-messages
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-messages:** add mask image css variable on icon inside ffe-messages ([d952cbb](https://github.com/SpareBank1/designsystem/commit/d952cbba5a6505ca784d0699bddca1ff40806c20))
+* **ffe-messages:** add webkit prefixes to fix android HMR bug ([f406b4a](https://github.com/SpareBank1/designsystem/commit/f406b4a368887cb5d542e0229320b853c3c99e7e))
+* **ffe-messages:** escape / in less ([eb0bd4a](https://github.com/SpareBank1/designsystem/commit/eb0bd4af219165ef7c52783258b10bf8d8be142c))
+* **ffe-messages:** fikser alignment av ikonet på contextmessage ([efceb3c](https://github.com/SpareBank1/designsystem/commit/efceb3c389d1a91fe1595173a4782299f4bc37c9))
+* **ffe-messages:** fix semantiske farger og ikon-alignment context message ([09b53d6](https://github.com/SpareBank1/designsystem/commit/09b53d6c230bcb2158684d52a3d96980db0e4540))
+* **ffe-messages:** heading should be bold ([605a099](https://github.com/SpareBank1/designsystem/commit/605a0993b2ac400a3b242932a5817b238496dd45))
+
+
+### Features
+
+* **ffe-messages:** bruker semantiske farger. ([f7f89ec](https://github.com/SpareBank1/designsystem/commit/f7f89ecccd92b4cd3320e8a76c4d9f0b879dadb9))
+* **ffe-messages:** initial commit ([8ec8ae4](https://github.com/SpareBank1/designsystem/commit/8ec8ae41fb8cf3bfd4a8b305564199874968e88e))
+* **ffe-messages:** initial commit ([3ef213c](https://github.com/SpareBank1/designsystem/commit/3ef213c1306e06f00636ed25e7c9485a81322e4a))
+* **ffe-messages:** initial commit ([0341758](https://github.com/SpareBank1/designsystem/commit/0341758d7aabdfc8617bc1f633b75abcb4c7e3dd))
+* **ffe-messages:** regard-color-scheme-preference for darkmode ([c9ca170](https://github.com/SpareBank1/designsystem/commit/c9ca1703b64228c3e7ee86f7c9d0f99d1da6ebbe))
+* **ffe-messages:** start from version 1.0.0 ([4007672](https://github.com/SpareBank1/designsystem/commit/400767241c259c612244640b4ac8f7e6d1fcbef6))
+* **ffe-messages:** tilbyr kompilert css i tillegg til less ([b059b64](https://github.com/SpareBank1/designsystem/commit/b059b64d7ee9b8bd92c9e7bc884cc72c76eebe58))
+
+
+### BREAKING CHANGES
+
+* **ffe-messages:** tar i bruk semantiske farger. Ingen endringer nødvendig
+i css, men oncoloredbg blir fjernet, og typen news er descricated.
+* **ffe-messages:** This is not a real breaking change.
+just to start from version 1.0.0
+* **ffe-messages:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-messages:** version 1.0.0
+
+
+
+
+
+## [2.0.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.34...@sb1/ffe-messages@2.0.35) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-messages
+
+
+
+
+
 ## [2.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-messages@2.0.33...@sb1/ffe-messages@2.0.34) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-messages

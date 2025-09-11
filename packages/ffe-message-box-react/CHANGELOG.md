@@ -3,6 +3,193 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-message-box-react:** add misssing locale to ts type ([d04f0fc](https://github.com/SpareBank1/designsystem/commit/d04f0fc677968991c15882627edec9d5aea5ac3f))
+* **ffe-message-box-react:** added missing titleElement ts type ([2f1959e](https://github.com/SpareBank1/designsystem/commit/2f1959eb53b91f7861b178e8e153c61adae2cff3))
+* **ffe-message-box-react:** broadens version of peer dependencies ([cee3a33](https://github.com/SpareBank1/designsystem/commit/cee3a33cddc4bd482e40dd497542ee86b62999c8))
+* **ffe-message-box-react:** Change info message box icon ([fb69a92](https://github.com/SpareBank1/designsystem/commit/fb69a92566a983f082887c7a9c5aa94523596e15))
+* **ffe-message-box-react:** Custom icons get default style ([8adcd76](https://github.com/SpareBank1/designsystem/commit/8adcd76f98d3e0ea2339542312f0ba3add945698)), closes [#253](https://github.com/SpareBank1/designsystem/issues/253)
+* **ffe-message-box-react:** endre ikon størrelse og fjern ubrukt klasse ([abcceab](https://github.com/SpareBank1/designsystem/commit/abcceab38f0f5fd87848e2bac525113d7d503bec))
+* **ffe-message-box-react:** endrer ikon til material symbols ([d5f3d9b](https://github.com/SpareBank1/designsystem/commit/d5f3d9bb7a8d00e93a5b23aee60873bcd20fdb82))
+* **ffe-message-box-react:** fikse feilmeldinger i konsollet ved alert=false ([32f0861](https://github.com/SpareBank1/designsystem/commit/32f0861e0a47bdf5dfd747f7ffddf1a18dbfbd60))
+* **ffe-message-box-react:** fix MessageBox Typescript types ([be1e239](https://github.com/SpareBank1/designsystem/commit/be1e2394eea4be49cccf8169375ada1b5fb267aa))
+* **ffe-message-box-react:** icon is possible to override ([fedef52](https://github.com/SpareBank1/designsystem/commit/fedef52548799bc3338e39500d19595656e01f47))
+* **ffe-message-box-react:** legger til role og title ([400edd6](https://github.com/SpareBank1/designsystem/commit/400edd6d4bd350df10495537a5deaaf2089a72a7))
+* **ffe-message-box-react:** Legger til titleElement prop ([24fee3e](https://github.com/SpareBank1/designsystem/commit/24fee3efc97634b7bd8d16999f74da30b59d4479))
+* **ffe-message-box-react:** oppdater symbol implementasjon ([06df842](https://github.com/SpareBank1/designsystem/commit/06df8425b466ab7b6bb435068f08ac760187d6fb))
+* **ffe-message-box-react:** opt-out param for alert for error message ([61ea63d](https://github.com/SpareBank1/designsystem/commit/61ea63de447bc5c397bfb31115dda71f1f91ce3a))
+* **ffe-message-box-react:** reduce vulnerabilities ([4d8e6d6](https://github.com/SpareBank1/designsystem/commit/4d8e6d6ebbe5a231d2f82a502071b2ded4b7639a))
+* **ffe-message-box-react:** remove aria-label on icon ([0acceaa](https://github.com/SpareBank1/designsystem/commit/0acceaa521ecebfadd1becbe2067d3f3ebd5111b))
+* **ffe-message-box-react:** remove content from message box prop ([2434145](https://github.com/SpareBank1/designsystem/commit/24341458e2f9acd61f40bbe232559e808dedf2fb))
+* **ffe-message-box-react:** remove default props ([562fac3](https://github.com/SpareBank1/designsystem/commit/562fac349b2726a86611e365b5c5ab46c6ea04dd))
+* **ffe-message-box-react:** remove deprecated property 'content' because of typescript errors ([6236513](https://github.com/SpareBank1/designsystem/commit/62365135a1fb230bf3a8f66057ac8a4c3d2f7dfd))
+* **ffe-message-box-react:** revert "Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152))" ([5efe26f](https://github.com/SpareBank1/designsystem/commit/5efe26fd915da4fc22a3a8c8ded27765de9afc3c))
+* **ffe-message-box-react:** sett role til group når alert er satt til false på ErrorMessage ([53a330a](https://github.com/SpareBank1/designsystem/commit/53a330a7d185988ef58d2b7a592488bbfcb36408))
+* **ffe-message-box-react:** Update docs ([56ffb6c](https://github.com/SpareBank1/designsystem/commit/56ffb6c1bf30b10005463d49009ac51b3a93d559)), closes [#252](https://github.com/SpareBank1/designsystem/issues/252)
+* **ffe-message-box-react:** use buildtool for transpiling ([3a578bc](https://github.com/SpareBank1/designsystem/commit/3a578bc6d2d8a7b96c0969452b2d7eac52c45e34)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-message-box-react:** use react.componentsprops instead of react.htmlprops ([3d0b4c0](https://github.com/SpareBank1/designsystem/commit/3d0b4c02d47868ecbe438a2e5aa92aeddcae0cea))
+* **ffe-message-box-react:** use translations from locale ([7667d91](https://github.com/SpareBank1/designsystem/commit/7667d913ca8666d17b93ecf3b43d6bde7082fc9b))
+* packages/ffe-message-box-react/package.json to reduce vulnerabilities ([e41dd4c](https://github.com/SpareBank1/designsystem/commit/e41dd4cd0f9f0585bbd8c7bb85e47734feb9b203))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+* Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc1616ffd14a414bc2e27f8c90a687a7a90b93))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-message-box-react:** move to newest ffe-message-box ([03a21de](https://github.com/SpareBank1/designsystem/commit/03a21de436b61da0995164919c733f4de62b5373))
+
+
+### Features
+
+* **ffe-message-box-react:** add role="alert" to ErrorMessage ([6e2f73a](https://github.com/SpareBank1/designsystem/commit/6e2f73a8b14e46e724bd9b25c7ffb86b12d31c92))
+* **ffe-message-box-react:** Added type definitions for typescript ([d6964c9](https://github.com/SpareBank1/designsystem/commit/d6964c94ed177cc8aca9c39c1a2519d2d450a207))
+* **ffe-message-box-react:** Allow nodes for title prop ([b798f45](https://github.com/SpareBank1/designsystem/commit/b798f4528198001e88d617d9dd287d0a94b70e05))
+* **ffe-message-box-react:** deprecate package ([55b51f6](https://github.com/SpareBank1/designsystem/commit/55b51f6eeed3a6ff2646b486e229728efff4ecf4))
+* **ffe-message-box-react:** import icons without need for tree shaking ([a0c0291](https://github.com/SpareBank1/designsystem/commit/a0c029179459d2d65988e44cd89669f765bad9e4))
+* **ffe-message-box-react:** legg til alt styling for fargede bakgrunner ([01f5593](https://github.com/SpareBank1/designsystem/commit/01f559307a632d0c35c4015a146e419d00341283))
+* **ffe-message-box-react:** rewrite to ts ([a6a0843](https://github.com/SpareBank1/designsystem/commit/a6a0843bd36f1e7bec84c937f1ff735fc553c47a))
+* **ffe-message-box-react:** update internal dependencies ([0477daf](https://github.com/SpareBank1/designsystem/commit/0477daf72d761fe6a4358875da04a345e507c579))
+* **ffe-message-box-react:** Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152)) ([3d89954](https://github.com/SpareBank1/designsystem/commit/3d89954fbf86d64963b5b47af550549512892b24))
+* **ffe-message-box-react:** upgrade react to >=18.2.0 ([f0be0c5](https://github.com/SpareBank1/designsystem/commit/f0be0c5963881636bf74d88f8df27980f9a057f4))
+
+
+### BREAKING CHANGES
+
+* **ffe-message-box-react:** Dropped support for React <18.2.0
+* **ffe-message-box-react:** package is now deprecated
+* **ffe-message-box-react:** props may have changed
+* **ffe-message-box-react:** BaseMessage legger til props-spesifikt for Symbol-komponenten,
+fjerner depedency til ffe-icons-react og legger til ffe-symbols-react
+* **ffe-message-box-react:** Remove deprecated property 'content'
+* **ffe-message-box-react:** Makes the styling package @sb1/ffe-message-box a
+required dependency and removes it as peer dependency.
+* **ffe-message-box-react:** requires ffe-core@18.3
+
+This reverts commit 5efe26fd915da4fc22a3a8c8ded27765de9afc3c.
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-message-box-react:** This commit moves our peer dependency to the newest
+major version of ffe-message-box.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [13.0.64](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@13.0.63...@sb1/ffe-message-box-react@13.0.64) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
 ## [13.0.63](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@13.0.62...@sb1/ffe-message-box-react@13.0.63) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

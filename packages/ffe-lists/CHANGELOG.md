@@ -3,6 +3,235 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-lists:** added peerDependency to ffe-core@^13.0.0 ([8b6472b](https://github.com/SpareBank1/designsystem/commit/8b6472b4e3d20b69f8c14d70fdda1e296cf5a4eb))
+* **ffe-lists:** allow for long words in description term ([87af2f4](https://github.com/SpareBank1/designsystem/commit/87af2f4bca25d95386ea0640ef63ee3fc0e33c24))
+* **ffe-lists:** broadens version of peer dependencies ([2fcb29e](https://github.com/SpareBank1/designsystem/commit/2fcb29ebb3fb93813812eea77738a011883c171e))
+* **ffe-lists:** darkode styling missing for checklist ([290e358](https://github.com/SpareBank1/designsystem/commit/290e358e6948f2222ae398c615510f432d7f17c3))
+* **ffe-lists:** description list, margin left on sibling dd only on horizontal list ([989cd4a](https://github.com/SpareBank1/designsystem/commit/989cd4a208839f15cb90e0153fec551ad0b512a2))
+* **ffe-lists:** endre styling til å passe ffe-symbols ([57dabfa](https://github.com/SpareBank1/designsystem/commit/57dabfac2537214a329bcdb3a06373fcef7437f0))
+* **ffe-lists:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([7ee8ff2](https://github.com/SpareBank1/designsystem/commit/7ee8ff226cd3addd66e1988d8eef611faf146063))
+* **ffe-lists:** escape / in less ([571aa30](https://github.com/SpareBank1/designsystem/commit/571aa30673bb9d43a06a71258197fd7b7703e0ea))
+* **ffe-lists:** fikser tekstbryting ved checklistitem over flere linjer ([8f583d3](https://github.com/SpareBank1/designsystem/commit/8f583d3a8b0ae798cd58a0ec1f8410506db71726))
+* **ffe-lists:** fix --md and --lg modifiers ([135eb65](https://github.com/SpareBank1/designsystem/commit/135eb65cb96ed5f95073a26872d3120f71311a80)), closes [#647](https://github.com/SpareBank1/designsystem/issues/647)
+* **ffe-lists:** fix zoom ([1a04fde](https://github.com/SpareBank1/designsystem/commit/1a04fdec4ed2de9b7f38a30a20ffdcff304bd401))
+* **ffe-lists:** fix zoom stylized numbered list ([c4c24ad](https://github.com/SpareBank1/designsystem/commit/c4c24ad9d62f3a5739b841ec8a18f947dbdb0925))
+* **ffe-lists:** fjerner checklist ikoner og sand-bg variant ([5c92650](https://github.com/SpareBank1/designsystem/commit/5c92650795ff68cf181bc88f8880749f584c9a08))
+* **ffe-lists:** fjerner display: block fra checklist items ([771c0f7](https://github.com/SpareBank1/designsystem/commit/771c0f74ee22b2f2839f5289c66367b0a2fd5e1f))
+* **ffe-lists:** legger til default font ([223ab05](https://github.com/SpareBank1/designsystem/commit/223ab05eb25793683452ad83a01ead88f1e84c4e))
+* **ffe-lists:** no space when to dd folow each other ([3a7df3f](https://github.com/SpareBank1/designsystem/commit/3a7df3f36d94d9fdef46dedb7f1a8428079396e8))
+* **ffe-lists:** oppdater checkikon farge til skog ([9be28f4](https://github.com/SpareBank1/designsystem/commit/9be28f49d7596949b968b2c9390161ab987213fa))
+* **ffe-lists:** remove main entry field from package.json ([aa76078](https://github.com/SpareBank1/designsystem/commit/aa7607851d823fd6ee4e362a846d2bea43396fdf))
+* **ffe-lists:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([477ac74](https://github.com/SpareBank1/designsystem/commit/477ac7484a2cd88ea69c2a821035e983fc5de9c3))
+* **ffe-lists:** Remove unused custom properties ([d214aea](https://github.com/SpareBank1/designsystem/commit/d214aea8192cafd2f1842410f7b0ac3c8f272469))
+* **ffe-lists:** replace hardcoded spacing with variables ([0e37e54](https://github.com/SpareBank1/designsystem/commit/0e37e54a0a3c571a682565373aa17f932329f084))
+* **ffe-lists:** Reset margin to allow using `dl` ([867ebc8](https://github.com/SpareBank1/designsystem/commit/867ebc85b8891fdf231f386d4efb8d06e8e75ccb))
+* **ffe-lists:** retter filnavn for css og legger til info om import ([651fcc7](https://github.com/SpareBank1/designsystem/commit/651fcc76a7ebd6be3681a2e564f5d6aa058dc3d5))
+* **ffe-lists:** revert "update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164))" ([cd2695a](https://github.com/SpareBank1/designsystem/commit/cd2695ae59f1ce68241de77b6e560c8971ac5d76))
+* **ffe-lists:** tekst-overflow i lister ([684b48f](https://github.com/SpareBank1/designsystem/commit/684b48ff895305c785d862d6477c1db08c47b001))
+* **ffe-lists:** term same line heigth as description in description list ([074fe53](https://github.com/SpareBank1/designsystem/commit/074fe533e2ded6b6880d21cb41d33aaf275cb3ca))
+* **ffe-lists:** tøm content så ikon ikke leses dobbelt av skjermleser ([6fda298](https://github.com/SpareBank1/designsystem/commit/6fda298eaa808d48f4f67fac24a96b2b1fdc203d))
+* **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([dd146ea](https://github.com/SpareBank1/designsystem/commit/dd146eaf65288bc839b75f046954307e10c88a02))
+* **ffe-lists:** wrong distance between elements ([904cb85](https://github.com/SpareBank1/designsystem/commit/904cb85bcb269ea61db8425fbbdfe3aa6be25609))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* **ffe-lists:** bump less ([8d81dfb](https://github.com/SpareBank1/designsystem/commit/8d81dfb08f8457218545c7f230fd92ebd2d4a720))
+
+
+### Code Refactoring
+
+* **ffe-lists:** Introduce list item classes ([4961fda](https://github.com/SpareBank1/designsystem/commit/4961fda7b5ff3f11330822038c8e663ef0e278ed))
+
+
+### Features
+
+* **ffe-lists:** add :host for shadow dom support ([c9d5636](https://github.com/SpareBank1/designsystem/commit/c9d5636b2297364fd2fa3f78bdf50201e0c581ad))
+* **ffe-lists:** add darkmode styling overrides ([0be98e8](https://github.com/SpareBank1/designsystem/commit/0be98e8a60ddecaf845dfd7c171348acad8a3fa3))
+* **ffe-lists:** Add support for two-column check lists ([7cfa60c](https://github.com/SpareBank1/designsystem/commit/7cfa60c673a57dcee6cad5eec88b11c4d38d9bf3))
+* **ffe-lists:** added vertical description list ([e3bb220](https://github.com/SpareBank1/designsystem/commit/e3bb2209d6a1f31686901a2f3b132ca7de0d66a0))
+* **ffe-lists:** endrer semantisk struktur på detaillist, legger til ([0ac6860](https://github.com/SpareBank1/designsystem/commit/0ac68602fb3b3814f5ac8a1c1414755b28d3839e))
+* **ffe-lists:** fjerner grey-choral som modifier ([e96bd33](https://github.com/SpareBank1/designsystem/commit/e96bd33ed1c73c0462530bb3f1c0d69c2d1aba4f))
+* **ffe-lists:** legg til bakgrunnsfarger på detail list card ([bfa9c43](https://github.com/SpareBank1/designsystem/commit/bfa9c430fe32c854ee169463a1a3b981b4a8aac2))
+* **ffe-lists:** legg til detailListCard komponent styling ([ba78958](https://github.com/SpareBank1/designsystem/commit/ba789586b53ef1b027870c32279da220ff0eb7f9))
+* **ffe-lists:** legg til theming ([89dea6c](https://github.com/SpareBank1/designsystem/commit/89dea6c1e6bf6531867f56980e6fea1380cdd738))
+* **ffe-lists:** regard-color-scheme-preference for darkmode ([5925fcc](https://github.com/SpareBank1/designsystem/commit/5925fcce4ea17ee323d8f27d16f20600963d50f1))
+* **ffe-lists:** semantiske farger i lists ([8e40f26](https://github.com/SpareBank1/designsystem/commit/8e40f2697c4e23a9104710fb7ec392d6561423a9))
+* **ffe-lists:** tilbyr kompilert css i tillegg til less ([913daac](https://github.com/SpareBank1/designsystem/commit/913daace67995fbdd50123b8ea18005c443b218f))
+* **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([c4f4951](https://github.com/SpareBank1/designsystem/commit/c4f4951ff7d427b129b2f8bbfeb80a8505a8a877))
+* **ffe-lists:** update internal dependencies ([cd84535](https://github.com/SpareBank1/designsystem/commit/cd8453554e141d4b76964bed1c895006cf4679e9))
+* **ffe-lists:** use custom props for font sizes ([2ac39e8](https://github.com/SpareBank1/designsystem/commit/2ac39e8b413a33e0e06b8dad6f1b4234077a785e))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists:** nye farger i komponentene, bgDarkmodeColor er fjernet fra DetailListCard
+* **ffe-lists:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-lists:** fjerner mulighet for grey-choral i darkmode.
+Byter også border color i darkmode fordi att koksgraa også
+er en bakgrundsfarge.
+* **ffe-lists:** New markup
+* **ffe-lists:** new markup
+* **ffe-lists:** endrer fra fill til color, fjerner størrelse og top margins
+* **ffe-lists:** Makes the styling package @sb1/ffe-core a required
+dependency and removes it as peer dependency.
+* **ffe-lists:** fjerner checklist ikonene og sand-bg varianten.
+For å oppfylle wcag krav flyttes checkliste ikonene inn i react-komponenten
+det fører med seg endringer på klasse hierarki og navngivning
+* **ffe-lists:** requires ffe-core@18.3
+* **ffe-lists:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
+* **ffe-lists:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* **ffe-lists:** The description list is now vertical by default. To get old behaviour 'horizontal' class modifier must be used
+* **ffe-lists:** This commit requires all list items to have a
+corresponding list item class. The element classes introduced are as
+follows:
+
+- `ffe-bullet-list__item`
+- `ffe-numbered-list__item`
+- `ffe-stylized-numbered-list__item`
+- `ffe-check-list__item`
+
+To migrate, add the correct element class to each `li` in your
+application. It should be a pretty simple search-replace for most cases,
+but YMMV.
+
+This change furthers our move away from element styling, to a design
+system completely based on BEM.
+
+Also, this commit adds a `cross` modifyer class for the `ffe-check-list__item`.
+
+Finally, this commit also introduces element classes for the dd and dt elements
+for `ffe-description-list` and `ffe-description-list-multicol`.
+
+There are two new classes:
+
+- `ffe-description-list__term` for `<dt />` tags
+- `ffe-description-list__description` for `<dd />` tags
+
+To migrate, please apply the correct class to the correct element
+for all `ffe-description-list` instances.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [18.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@18.1.3...@sb1/ffe-lists@18.1.4) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+
+
+
+
 ## [18.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@18.1.2...@sb1/ffe-lists@18.1.3) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-lists

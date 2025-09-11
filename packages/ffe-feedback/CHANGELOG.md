@@ -3,6 +3,77 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-feedback
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-feedback
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-feedback
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-feedback-react:** samkjør semantiske HTML-overskrifter med LESS-klasser ([1efd574](https://github.com/SpareBank1/designsystem/commit/1efd574e7f5a89e582f8c064e07c4199142d2a0e))
+* **ffe-feedback:** endrer bgColor og oppdaterer farger ([179bb9e](https://github.com/SpareBank1/designsystem/commit/179bb9e13747932a30b4c78c13bb98c0451a8187))
+* **ffe-feedback:** fix thumb con to look good with new 40px xl sizee ([820f463](https://github.com/SpareBank1/designsystem/commit/820f463854e54ce78da83ae8384ef95fdd610584))
+* **ffe-feedback:** hovering styles only when using pointer/mouse ([21382bc](https://github.com/SpareBank1/designsystem/commit/21382bcb55fc07255b564408a25d20d942fe9449))
+* **ffe-feedback:** legger til riktig fokus styling på tomlene ([eded64a](https://github.com/SpareBank1/designsystem/commit/eded64a5753c50535e862f368d759ae6e0fa312a))
+* **ffe-feedback:** remove background and refactor less into one file ([12dc6ad](https://github.com/SpareBank1/designsystem/commit/12dc6ad2d0492d390677ffcb7f56740ad485f153))
+* **ffe-feedback:** venstrestiller tekst, som det var tidligere ([bd8c6a3](https://github.com/SpareBank1/designsystem/commit/bd8c6a343e3cfda9b7013b387eab8214dfca9d11))
+
+
+### Features
+
+* **ffe-feedback:** ny styling til ffe-feedback, nye knapper og litt annet oppsett ([ecf9138](https://github.com/SpareBank1/designsystem/commit/ecf9138abd4bc5978c8d783b25ae3e34b28aec8d))
+* **ffe-feedback:** regard-color-scheme-preference for darkmode ([59c0ab1](https://github.com/SpareBank1/designsystem/commit/59c0ab1e425c5f8ae3dae0649d5c5b9e374d0182))
+* **ffe-feedback:** semantiske farger i feedback ([1756d89](https://github.com/SpareBank1/designsystem/commit/1756d8927e90890bbf89b9aa88158f2dfd438b74))
+* **ffe-feedback:** stiler til ffe-feedback ([f564fe4](https://github.com/SpareBank1/designsystem/commit/f564fe447f0eb80572669d5765e78e02ea756f7f))
+* **ffe-feedback:** tilbyr kompilert css i tillegg til less ([c9059f4](https://github.com/SpareBank1/designsystem/commit/c9059f40aa6b232a7e28f406a6149d3281c2feda))
+* **ffe-feedback:** viser/skjuler tommel-ikon basert på hover-klasse i css ([201c34a](https://github.com/SpareBank1/designsystem/commit/201c34a769f8e0fb7663e6e4103a38475a3b6248))
+
+
+### BREAKING CHANGES
+
+* **ffe-feedback:** bgColor støtter nå kun semantiske farger
+* **ffe-feedback:** noe endringer i farger og styling
+* **ffe-feedback:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+
+
+
+
+
+## [4.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@4.1.11...@sb1/ffe-feedback@4.1.12) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-feedback
+
+
+
+
+
 ## [4.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@4.1.10...@sb1/ffe-feedback@4.1.11) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-feedback

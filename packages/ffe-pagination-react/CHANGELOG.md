@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-pagination-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-pagination-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-pagination-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-pagination-react:** add missing dependency to ffe-pagination ([b15a893](https://github.com/SpareBank1/designsystem/commit/b15a893da6c48f91b2a6296cd4bb1591814978fb))
+* **ffe-pagination-react:** fixer raska click på prev og next ([f61a40b](https://github.com/SpareBank1/designsystem/commit/f61a40b9483c5ac3b44558bce67ebb319ef929a2))
+* **ffe-pagination-react:** focus managment, jump aorund ([289a455](https://github.com/SpareBank1/designsystem/commit/289a455a42c7229abd21c5a4bab4821f70b4b81a))
+* **ffe-pagination-react:** group instead of nav. nav just wraps buttons ([081f623](https://github.com/SpareBank1/designsystem/commit/081f6234ae6cf9be7f4badd84279520601c9702c))
+* **ffe-pagination-react:** ikke hvis knappar når det kun er 1 side ([5569223](https://github.com/SpareBank1/designsystem/commit/5569223c3d35ead6a7d0f21dbd13fd743628c35b))
+* **ffe-pagination-react:** legger til manglende deps classnames og ffe-core ([4fdc62d](https://github.com/SpareBank1/designsystem/commit/4fdc62db9e57c5522ee5da3b632d354ea11f83aa))
+* **ffe-pagination-react:** legger til prop eksport ([39420bf](https://github.com/SpareBank1/designsystem/commit/39420bf01a5bf0414e324ae09171a265be8bac92))
+* **ffe-pagination-react:** Reset current page when updating totalElements ([6a5c730](https://github.com/SpareBank1/designsystem/commit/6a5c73089b983a1953e64fe7aec0516c092aadc2))
+
+
+### Features
+
+* **ffe-pagination-react:** ny komponent paginering ([6fe0c3f](https://github.com/SpareBank1/designsystem/commit/6fe0c3ffe6a84fc1e9eb49ad7aa591bfe0221db7))
+* **ffe-pagination-react:** on clicks ([834a133](https://github.com/SpareBank1/designsystem/commit/834a1339038bddedf8bcefd672cd69d0baac99e0))
+
+
+
+
+
+## [1.2.103](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.102...@sb1/ffe-pagination-react@1.2.103) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-pagination-react
+
+
+
+
+
 ## [1.2.102](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-pagination-react@1.2.101...@sb1/ffe-pagination-react@1.2.102) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-pagination-react

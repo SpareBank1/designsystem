@@ -3,6 +3,257 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-icons
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-icons
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-icons
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-icons:** add icons to files in package.json ([70a9c9e](https://github.com/SpareBank1/designsystem/commit/70a9c9e561a3042e7cf0c21ffcf1e5b2172c9686))
+* **ffe-icons:** Add missing 'ffe-' prefix to example ([9121907](https://github.com/SpareBank1/designsystem/commit/9121907518343d603497400cfd2d9d3e2a51d0bc))
+* **ffe-icons:** added correct colors for icons preview in darkmode ([863c10a](https://github.com/SpareBank1/designsystem/commit/863c10a0f98320514a4c2974170b1c9c6b9566b9))
+* **ffe-icons:** Create target folder before build ([62bdf6d](https://github.com/SpareBank1/designsystem/commit/62bdf6d33982bf01026cc130b764e0ce2d91045b))
+* **ffe-icons:** Dont try to lint non-existing files ([5a9c3bf](https://github.com/SpareBank1/designsystem/commit/5a9c3bff1f6b8feec885640c69b1265859ef49c3))
+* **ffe-icons:** endrer mappe struktur på svg filer ([a19df15](https://github.com/SpareBank1/designsystem/commit/a19df1534135f167876ec50cf0e4913b5026a379))
+* **ffe-icons:** fikser feil som gjør at filled og open havner i feil mappe ([9c9fa2d](https://github.com/SpareBank1/designsystem/commit/9c9fa2d69fb88b09f38139d4cb747272fe062e2f))
+* **ffe-icons:** fikser typo i byggescript ([c809dfd](https://github.com/SpareBank1/designsystem/commit/c809dfd3761db89f046adbfea9b37b930538d0de))
+* **ffe-icons:** Fix git repository url ([cbe0f63](https://github.com/SpareBank1/designsystem/commit/cbe0f637ca4b52daaff696b890ea839ad5403d96))
+* **ffe-icons:** fixed color bug on pose-trettien iconn ([209eacd](https://github.com/SpareBank1/designsystem/commit/209eacd00003106e3ce4dee339677d3d9d35819d))
+* **ffe-icons:** Fixed cwd in build script to compensate for package-scoping ([794c608](https://github.com/SpareBank1/designsystem/commit/794c6082fb59d3784c491a1db4442884ea0ec39b))
+* **ffe-icons:** lower specificity on default color ([6980074](https://github.com/SpareBank1/designsystem/commit/698007486cc4ce5f61e29fe4f3c87729f6e6e5c0))
+* **ffe-icons:** Makes build parameter `--opts` relative to cwd ([24d75e0](https://github.com/SpareBank1/designsystem/commit/24d75e09bc8ab429cd0ef4d8814b61f7e5f1bd95)), closes [#67](https://github.com/SpareBank1/designsystem/issues/67)
+* **ffe-icons:** Move from height/width to viewBox ([fc62367](https://github.com/SpareBank1/designsystem/commit/fc623679cf11971fb0294e7dd4225c4eed3f00a3))
+* **ffe-icons:** oppdater ikon SVGer ([fde6365](https://github.com/SpareBank1/designsystem/commit/fde6365b02d0d1f18b282a5c29300c18531a846d))
+* **ffe-icons:** oppdater svgstore dependency ([907e777](https://github.com/SpareBank1/designsystem/commit/907e7776b942b8b3804542c4c74845c1a90a5913))
+* **ffe-icons:** reduce vulnerabilities ([248319d](https://github.com/SpareBank1/designsystem/commit/248319db6ac0a488c2885e852101b109d0c7fdfb))
+* **ffe-icons:** Remove class attribute from klokke-ikon ([d425ca5](https://github.com/SpareBank1/designsystem/commit/d425ca58501b938abf042ec89e6c768a3aaf15c9))
+* **ffe-icons:** Remove redundant XML tags and ns ([443b13c](https://github.com/SpareBank1/designsystem/commit/443b13c181c208bd7630e804ed2685d6efe10f5f))
+* **ffe-icons:** Remove svg-sprite dependency ([416c65e](https://github.com/SpareBank1/designsystem/commit/416c65e2e1281cfed9f7c3266dbdfd5fabc833cd))
+* **ffe-icons:** removed empty space around bil-pil-ikon ([fd3f7a2](https://github.com/SpareBank1/designsystem/commit/fd3f7a2c601d20bc7f6030381b0986af9626d9da))
+* **ffe-icons:** removed whitespace and unnecessary code ([7c6dcb8](https://github.com/SpareBank1/designsystem/commit/7c6dcb8cdea80c58f1480c982cf1e759e2502e50))
+* **ffe-icons:** Rename numeric icons ([7258fcc](https://github.com/SpareBank1/designsystem/commit/7258fcc0eba73b5bede5110bbb87ac5b06dc865d))
+* **ffe-icons:** Replace widget icon ([5940ac6](https://github.com/SpareBank1/designsystem/commit/5940ac6d19d7a595d3eff40344eac04c85fd60f3))
+* **ffe-icons:** rett opp i bug der filled havnet i open folder og motsatt ([4fe3e97](https://github.com/SpareBank1/designsystem/commit/4fe3e9780419ad86763504f2237176a6eb29bdd6))
+* **ffe-icons:** revert to old fileendings ([a41df97](https://github.com/SpareBank1/designsystem/commit/a41df9756ee01000e0d7cb50b88520d357071063))
+* **ffe-icons:** update kake-kvart for thinner stroke ([c49c745](https://github.com/SpareBank1/designsystem/commit/c49c745fc530691e39a35c639d22d32a01675dba))
+* **ffe-icons:** updated README and moved requirements ([8e1cb56](https://github.com/SpareBank1/designsystem/commit/8e1cb564de68a68c2a49eb78b885e082a2f6a289))
+* **ffe-icons:** use buildtool for transpiling ([3e11f6b](https://github.com/SpareBank1/designsystem/commit/3e11f6be485fb4ba40975a6e9cf792ebeaeea8da)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* packages/ffe-icons/package.json to reduce vulnerabilities ([01fa1e5](https://github.com/SpareBank1/designsystem/commit/01fa1e5323555ec90bb3fd39e62715c815b264a8))
+* packages/ffe-icons/package.json to reduce vulnerabilities ([4b8e148](https://github.com/SpareBank1/designsystem/commit/4b8e148a8ef09aa153e41d1807164703833e82cb))
+* packages/ffe-icons/package.json to reduce vulnerabilities ([2df5857](https://github.com/SpareBank1/designsystem/commit/2df58573b021d5d9b023bc3b49a7540613b07aba))
+* **package:** update yargs to version 13.1.0 ([1a3ed34](https://github.com/SpareBank1/designsystem/commit/1a3ed34ce011723c7e7e4b5f8254096ce3228aeb))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+* feat(ffe-icons)!: Semantiske farger ([2359a06](https://github.com/SpareBank1/designsystem/commit/2359a06366e9d8ccf08ef13d1759973144525fcc))
+
+
+### Features
+
+* **ffe-icons:** add a copy icon ([50a7519](https://github.com/SpareBank1/designsystem/commit/50a75194744a40b7feb9fc507342877196d40c9b))
+* **ffe-icons:** Add a widget icon ([ddc6aca](https://github.com/SpareBank1/designsystem/commit/ddc6aca08689a93e9ad755db62f0f7ae7728548e))
+* **ffe-icons:** Add contribute.md link to readme ([99ffd12](https://github.com/SpareBank1/designsystem/commit/99ffd129fb06f00c4df9d8892033cf6e3aa63d6f))
+* **ffe-icons:** Add globe icon ([1b64396](https://github.com/SpareBank1/designsystem/commit/1b64396326a1ea397e119dfb536053ebfbb4204a))
+* **ffe-icons:** Add icon for real estate loans (hus-kr-ikon) ([0960d2c](https://github.com/SpareBank1/designsystem/commit/0960d2cd8e23edc9ea22d11e5dbda17bfc6c4e29))
+* **ffe-icons:** Add mobil-snakkeboble ikon ([263b89b](https://github.com/SpareBank1/designsystem/commit/263b89bf2e0bba92e1b85941af5f36c665bcebaa))
+* **ffe-icons:** Add plus and minus to magnifying glass icon ([286705b](https://github.com/SpareBank1/designsystem/commit/286705b991c198913f82efc034cea6f7f8e37f70))
+* **ffe-icons:** Add watch icon with kr-symbol to ffe-icons ([2b77b56](https://github.com/SpareBank1/designsystem/commit/2b77b56b954f7e6a75d4b751bbae6305998fa767))
+* **ffe-icons:** Added `kr-sirkel-pil-ikon.svg` ([7faa13e](https://github.com/SpareBank1/designsystem/commit/7faa13ef64b28d45e16b084a6871da55b60ddfaa))
+* **ffe-icons:** Added a solid circular cross icon based on kryss-sirkel-ikon.svg ([2c1b18c](https://github.com/SpareBank1/designsystem/commit/2c1b18ccf7203e98af3ae3ccdf4f1e72c218f998))
+* **ffe-icons:** Added hengelas-omriss-ikon ([7ff2ec1](https://github.com/SpareBank1/designsystem/commit/7ff2ec10cc883c00c526c3dc75de7cc1eea65bda))
+* **ffe-icons:** added lys-mork-ikon ([ea69364](https://github.com/SpareBank1/designsystem/commit/ea69364b7beb94f52cf8c8477c7d4e3bbb55c1e6))
+* **ffe-icons:** Added new plasseringskonto icon, intended primarily for BM use ([2f09fa6](https://github.com/SpareBank1/designsystem/commit/2f09fa6a1608f3d25485d9976b0e831a30f30f2f))
+* **ffe-icons:** Added new plasseringskonto pluss icon, intended primarily for BM use ([8dcbffe](https://github.com/SpareBank1/designsystem/commit/8dcbffef46e4c4fbf86f0f238c18a2cbb266c2ba))
+* **ffe-icons:** Added new skattetrekks-konto icon ([951d25c](https://github.com/SpareBank1/designsystem/commit/951d25cd9cad08fca69f456fef39e692b7d47089))
+* **ffe-icons:** Added rundt-snakkeboble-ikon ([9885a9e](https://github.com/SpareBank1/designsystem/commit/9885a9e1cf33ecb956015a65e7fe8296f1629e8d))
+* **ffe-icons:** Added trashcan icon to ffe-icons ([4267b64](https://github.com/SpareBank1/designsystem/commit/4267b640267d79b2919f7b8b57b7fe0383547807))
+* **ffe-icons:** added two new icons ([c8dc813](https://github.com/SpareBank1/designsystem/commit/c8dc813659e4d93e386784e468faae5b72b8d5c4))
+* **ffe-icons:** Adding 'spleis-ikon.svg' ([9b4f619](https://github.com/SpareBank1/designsystem/commit/9b4f619540bc53edda92682dd5d5e488ccdf11a7))
+* **ffe-icons:** Edited trash icon to standards ([c108f7a](https://github.com/SpareBank1/designsystem/commit/c108f7ae533d6cc8920a2711cb1905a9efda1e27))
+* **ffe-icons:** lagt til soylediagram-med-pil-ikon ([1063b16](https://github.com/SpareBank1/designsystem/commit/1063b16571aef6ba67b203910b762acfbae5e09f))
+* **ffe-icons:** legg til 400 variant og nye ikoner ([3638932](https://github.com/SpareBank1/designsystem/commit/3638932efbe364323e0c0f4d7e35e0859dcd59a9))
+* **ffe-icons:** legg til filter ikon ([be3cdb4](https://github.com/SpareBank1/designsystem/commit/be3cdb42300cc7e998e0d47fb8d14a24ca2708f0))
+* **ffe-icons:** legg til scripts for å hente svger fra material symbols ([03fba30](https://github.com/SpareBank1/designsystem/commit/03fba30d4a48a9bd5edd13c702cb731d1d5b127b))
+* **ffe-icons:** legge til hus-tommer-ikon.svg og hus-hammer-ikon.svg ([838162d](https://github.com/SpareBank1/designsystem/commit/838162dba31dd26c13fbf1c77758bd6bee799542))
+* **ffe-icons:** nye hus-ikoner ([5e1aca9](https://github.com/SpareBank1/designsystem/commit/5e1aca97d5d667424997ed40b75d88c4c679e159))
+* **ffe-icons:** nytt avtalegiro ikon ([f7a4bbd](https://github.com/SpareBank1/designsystem/commit/f7a4bbd62c7a0ec017981140b1ccaea19981db88))
+* **ffe-icons:** regard-color-scheme-preference for darkmode ([5140c69](https://github.com/SpareBank1/designsystem/commit/5140c6912bdfec2ac6a5af2682f481e423980def))
+* **ffe-icons:** Ruller tilbake "legg til 400 variant og nye ikoner" ([0af46ed](https://github.com/SpareBank1/designsystem/commit/0af46ed4fc3813554460438ac12d55bb1d585293))
+* **ffe-icons:** tilbyr kompilert css i tillegg til less ([cfbead9](https://github.com/SpareBank1/designsystem/commit/cfbead91e867ca4da702dbfe76ba4126dfd9a833))
+* **ffe-icons:** update lg and xl sizes of icons ([1f81bf9](https://github.com/SpareBank1/designsystem/commit/1f81bf92ee3675660207ab1677bb3de881b57dac))
+* **ffe-icons:** updated copy icon to new approved version ([5f91cb0](https://github.com/SpareBank1/designsystem/commit/5f91cb0b300320004952cb05b0ebbbc4e004e3f9))
+* **ffe-icons:** updated icon size according to spec ([b59315a](https://github.com/SpareBank1/designsystem/commit/b59315a1f71ed74a46351f45aa4cafd1717f3642))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([a9d5741](https://github.com/SpareBank1/designsystem/commit/a9d5741bb4da444b345c695c127c31cd94efe318))
+
+
+### BREAKING CHANGES
+
+* oppdaterte icon farger til semantiske farger
+* **ffe-icons:** The lg size of icons is now 32px, and the xl size is 40px (was 48px).
+* **ffe-icons:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-icons:** Endret mappe struktur, nå er open/filled første mappe under icons og ikke weight
+filled ikonene har nå kun 1 tilgjengelig weight
+* **ffe-icons:** sletter alle gamle svg'er
+* **ffe-icons:** The following icons have had their width and height
+attributes removed and replaced with viewBox. This may or may not cause
+a visual regression - please confirm these icons look like they should
+after you upgrade:
+
+* hus-stjerne
+* koffert
+* kr-klokke
+* moped
+* **ffe-icons:** Since the tool used to build the sprite has changed
+the `config` field in the configuration file is no longer available.
+
+The sprite is no longer put in a `symbols/` folder automatically. If
+you want to preserve the current folder structure you have to add
+`symbols/` to `dest` in your config like so:
+
+```diff
+  {
+-   "dest": "dist/assets/",
++   "dest": "dist/assets/symbol/",
+    "icons": ["*"]
+  }
+```
+
+This breaking change is introduced to get rid of PhantomJS from our
+dependency tree. You should see a significant reduction in installation
+time and disk usage from this change.
+* **ffe-icons:** This commit makes the build script use built-in
+functionality of `yargs` and lets the parameter `--opts` to be handled
+as a relative path to `process.cwd()`.
+
+See commit 5cfba06d493a0d70ca41babe3e71d8a71042dbed for an example on
+how to migrate.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-icons:** Rename two icons that begins with numbers in order
+to allow named exports in react package.
+
+The following icons have been renamed:
+
+- `1-2-3-sirkel-ikon` is now named `sirkel-1-2-3-ikon`
+- `1-2-3-understrek-ikon` is now named `understrek-1-2-3-ikon`
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
+
 ## [17.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@17.0.3...@sb1/ffe-icons@17.0.4) (2025-05-19)
 
 

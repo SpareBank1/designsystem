@@ -3,6 +3,161 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-formatters
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-formatters
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-formatters
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-formatters:** allow non commadash-postfixes ([1b6cc52](https://github.com/SpareBank1/designsystem/commit/1b6cc52d3228da39660e1b482ccbab90071f37a2))
+* **ffe-formatters:** formatCurrency also accepts a number ([306c4b8](https://github.com/SpareBank1/designsystem/commit/306c4b8b36408372fcb5039ef490b555a10d20a3))
+* **ffe-formatters:** formatter kontonummer mens man skriver ([d1ad119](https://github.com/SpareBank1/designsystem/commit/d1ad119956e606945a69131f514bfd756473a448))
+* **ffe-formatters:** Make sure formatters are transpiled also ([659d143](https://github.com/SpareBank1/designsystem/commit/659d14397eb9310e2333ddf35497005ddb0914d1))
+* **ffe-formatters:** minor fix of typescript declarations ([ec9614a](https://github.com/SpareBank1/designsystem/commit/ec9614a2d41c2683523c7423d4a885b3ad156987))
+* **ffe-formatters:** reduce vulnerabilities ([d07213f](https://github.com/SpareBank1/designsystem/commit/d07213fd7c223612efcec50818c14330f9726385))
+* **ffe-formatters:** use buildtool for transpiling ([c164f5d](https://github.com/SpareBank1/designsystem/commit/c164f5dd4989993d7532c4489f4faac28163a43c)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-formatters:** use nb or en in parseNumber ([dafa44d](https://github.com/SpareBank1/designsystem/commit/dafa44d692a6ffea94a62717a968356394de6983))
+* packages/ffe-formatters/package.json to reduce vulnerabilities ([8b90ace](https://github.com/SpareBank1/designsystem/commit/8b90ace5def900bd093f75269f116caf4cc04db2))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+### Code Refactoring
+
+* **ffe-formatters:** input to formatDate not validet ([8316286](https://github.com/SpareBank1/designsystem/commit/83162869c6bed8860b2830bb7b1a4ee17759c43e))
+
+
+### Features
+
+* **ffe-formatters:** add foreign account number formating ([72995b3](https://github.com/SpareBank1/designsystem/commit/72995b3359fb0f02cb184d8cac0f6fa51ed6aa3d))
+* **ffe-formatters:** Add minDecimals option to formatPercentage. ([07cd558](https://github.com/SpareBank1/designsystem/commit/07cd558175dd412d7c429783412bba9fea6c859e))
+* **ffe-formatters:** added types ([a26264d](https://github.com/SpareBank1/designsystem/commit/a26264d1fa4e80939ed45ceccb6f4997d6ed2abb))
+* **ffe-formatters:** rewrite to ts ([0721b48](https://github.com/SpareBank1/designsystem/commit/0721b48a472af7b1aeccb0639ae00b4f911295ff))
+* **ffe-formatters:** support formating numbers in different locales ([5d2e59a](https://github.com/SpareBank1/designsystem/commit/5d2e59a43aef5d51e198da69adfddcb09720f984))
+
+
+### BREAKING CHANGES
+
+* **ffe-formatters:** Typescript users are not affected by
+this change but for js users the input to formateDate are
+not validated any more.
+* **ffe-formatters:** formatCurrency, formatDistance and formatNumber
+requires locale.
+* **ffe-formatters:** formatDate does not accept moment any more.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [5.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@5.0.11...@sb1/ffe-formatters@5.0.12) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-formatters
+
+
+
+
+
 ## [5.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@5.0.10...@sb1/ffe-formatters@5.0.11) (2025-05-14)
 
 **Note:** Version bump only for package @sb1/ffe-formatters

@@ -3,6 +3,210 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-header:** Add container element to menu toggle buttons ([e0f4b87](https://github.com/SpareBank1/designsystem/commit/e0f4b876ea02aec9c9d959444156adcab398aa0a))
+* **ffe-header:** added peerDependency to ffe-core@^13.0.0 ([a05a694](https://github.com/SpareBank1/designsystem/commit/a05a6948a0471244e9772db9b52f407f24a70821))
+* **ffe-header:** arrow on wrong side user nav button ([da8f304](https://github.com/SpareBank1/designsystem/commit/da8f3048080ec0be89c3b0b79d1221eaa80a3a8a))
+* **ffe-header:** broadens version of peer dependencies ([5afcf8b](https://github.com/SpareBank1/designsystem/commit/5afcf8be76bd2867b1b43052bc50b19d4d3dbf69))
+* **ffe-header:** bytter ut museo sans med ny sparebank1-font ([bc71779](https://github.com/SpareBank1/designsystem/commit/bc717799a537d94b0870b5117274b440737531b9))
+* **ffe-header:** Change accordingly to ffe-buttons ([d748e14](https://github.com/SpareBank1/designsystem/commit/d748e1416a37ae15f0039aed5c1a5f557c99c674))
+* **ffe-header:** change text values to rem ([76ed245](https://github.com/SpareBank1/designsystem/commit/76ed2455569f27306996683d6d69fd123d49c40c))
+* **ffe-header:** endre fra svg til ffe-symbols ([504612e](https://github.com/SpareBank1/designsystem/commit/504612ea4550c6fbda1f7e9c50b0bd6ad0a143fc))
+* **ffe-header:** endre notification bubble bakgrunnsfarge til skog ([c643f7d](https://github.com/SpareBank1/designsystem/commit/c643f7df902422b94e8a572f1d1cb2d634256a36))
+* **ffe-header:** erstatter moerkgraa-wcag med moerkgraa i lenker ([bf4885c](https://github.com/SpareBank1/designsystem/commit/bf4885c795f4511e7844e27445f27c9ab6d32964))
+* **ffe-header:** Extend all necessary modifiers in order to render logout button correctly ([d4a78a0](https://github.com/SpareBank1/designsystem/commit/d4a78a0266a525b21c2073a03db490c23a60453c))
+* **ffe-header:** fargerna fra buttons mangler i wtf ([3072315](https://github.com/SpareBank1/designsystem/commit/30723159b7e44ff0d0132062d61b418efec6305f))
+* **ffe-header:** fix fill ([c73f2c5](https://github.com/SpareBank1/designsystem/commit/c73f2c5a6d2a714f778df41335e0870454360c55))
+* **ffe-header:** Fix lint errors ([350fd75](https://github.com/SpareBank1/designsystem/commit/350fd75d4d94e5087b12b060d5a789ecb790bfb2))
+* **ffe-header:** Fix logo position to ensure it is properly horizontally centered ([aba0c4e](https://github.com/SpareBank1/designsystem/commit/aba0c4e7a46d50edf695c7251cc92f01d17d8bc4))
+* **ffe-header:** Fix new header design bugs ([00ae7d9](https://github.com/SpareBank1/designsystem/commit/00ae7d9194b8278b31869348c4bf8ee7ed98b57b))
+* **ffe-header:** fix text zoom and empty nav ([7f7fb53](https://github.com/SpareBank1/designsystem/commit/7f7fb53deb0d2084f36a3d5336ceb29ec32035b6))
+* **ffe-header:** fjern museo sans som fallback font ([75a5c3e](https://github.com/SpareBank1/designsystem/commit/75a5c3e18b70150e34cf1d4c923c2e7d2735f000))
+* **ffe-header:** focus state i tråd med visuell identitet ([9043bd0](https://github.com/SpareBank1/designsystem/commit/9043bd0276fed5a5e12247a1c13eca0e73ae603f))
+* **ffe-header:** hovering styles only when using pointer/mouse ([e61b8ce](https://github.com/SpareBank1/designsystem/commit/e61b8ce65d73aa37bf29ab2c17214930b2919a90))
+* **ffe-header:** Increase z-index in order to overlap other positioned elements ([3410ce1](https://github.com/SpareBank1/designsystem/commit/3410ce1240e71e71a6395291dd264cfebc2c9dec))
+* **ffe-header:** increased  margin between secondary nav links ([0abe4a4](https://github.com/SpareBank1/designsystem/commit/0abe4a4ca7db18b80b03612cab2ddcbdeb26cd59))
+* **ffe-header:** La til rotasjon på expand-more ikon ([22bb035](https://github.com/SpareBank1/designsystem/commit/22bb035df1b8ce25d473bd7e3f3bed718c1ba5b0))
+* **ffe-header:** make label work with different versions of ffe-buttons ([ecb9fcd](https://github.com/SpareBank1/designsystem/commit/ecb9fcdbfab4b1236b5fbcc977e40e33c6394a71))
+* **ffe-header:** Make logout button properly centered on small screens ([9bcc151](https://github.com/SpareBank1/designsystem/commit/9bcc151c4965f9b523091c28826e840466972d01))
+* **ffe-header:** missing notification on desktop ([02adc34](https://github.com/SpareBank1/designsystem/commit/02adc34d46535ffa80d832b80a7ba6a34bfcaec6))
+* **ffe-header:** reduce vulnerabilities ([041d79f](https://github.com/SpareBank1/designsystem/commit/041d79f3fd30f9a9a62ff409b392e59094e9c8cc))
+* **ffe-header:** remove button dependencies ([2aaf192](https://github.com/SpareBank1/designsystem/commit/2aaf192754528e22cc151683e1121f8ac22e4143))
+* **ffe-header:** Remove fading from transition, set z-index for expanded menu ([3cfd105](https://github.com/SpareBank1/designsystem/commit/3cfd105c069a550c3bc6254e0944a7ca6372eaf3))
+* **ffe-header:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([1206ea0](https://github.com/SpareBank1/designsystem/commit/1206ea0ba1b5ecf910e90607b7777ba5bd19601b))
+* **ffe-header:** remove unvanted padding desktop ([fd62606](https://github.com/SpareBank1/designsystem/commit/fd62606cb62ef6b6a0142cf0ef85d5ac9f43a992))
+* **ffe-header:** remove unwanted space when no notification ([6d05569](https://github.com/SpareBank1/designsystem/commit/6d055695cddcc5deff8576957481f81e707704e0))
+* **ffe-header:** replace hardcoded spacing with variables ([b822137](https://github.com/SpareBank1/designsystem/commit/b8221371a04135440a9d05fa8de7936ce3ba6186))
+* **ffe-header:** replace hover color with frost-30 ([72a21e6](https://github.com/SpareBank1/designsystem/commit/72a21e67d75ce6744390f47ebfc3aa4b67b52196))
+* **ffe-header:** revert downgrade of less ([cead6ef](https://github.com/SpareBank1/designsystem/commit/cead6ef67a6659a26b9ed7ab2e03ec3520da4258))
+* **ffe-header:** revert upgrade of less ([841fc2a](https://github.com/SpareBank1/designsystem/commit/841fc2ae1171d6e5898bb64e1aabfd9aabbdc77b))
+* **ffe-header:** set z-index on `.ffe-header` root ([75ad09d](https://github.com/SpareBank1/designsystem/commit/75ad09d423d9eaa2abaf13456f13b4c84087802a)), closes [#436](https://github.com/SpareBank1/designsystem/issues/436)
+* **ffe-header:** transition kun på aktuelle properties ([9929279](https://github.com/SpareBank1/designsystem/commit/99292790308b54e41ac2921e7de300890d48cd4b))
+* **ffe-header:** update colours to improve UU ([4ac7ad4](https://github.com/SpareBank1/designsystem/commit/4ac7ad4277fc195f8632a8070dedac3392412256))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* **ffe-header:** bump less ([5ba1d3d](https://github.com/SpareBank1/designsystem/commit/5ba1d3d65e992dfb2bf2551a1602e97dc5214185))
+
+
+* feat(ffe-header)!: nye fargevariabler ([9e0f8d8](https://github.com/SpareBank1/designsystem/commit/9e0f8d83b9f724d48c9eb02dc8851c1ae9f4d371))
+
+
+### Features
+
+* **ffe-header:** add :host for shadow dom support ([51ba249](https://github.com/SpareBank1/designsystem/commit/51ba249ba9ae8fc69c116ec51eb79d5cfbe2b9f5))
+* **ffe-header:** Add disabled link modifier ([3a70710](https://github.com/SpareBank1/designsystem/commit/3a707102dd6aba4b6a747b8aec8c7e6f3373e0f2))
+* **ffe-header:** Add new styling of header. ([d1621bf](https://github.com/SpareBank1/designsystem/commit/d1621bfae7ac5a9b597d4cfa3cd116e119ddceef))
+* **ffe-header:** adds MuseoSans font as fallback font ([f217fa7](https://github.com/SpareBank1/designsystem/commit/f217fa7f248b5c9b2722325acf951acc7666632c))
+* **ffe-header:** Include transpiled css in npm package ([393725e](https://github.com/SpareBank1/designsystem/commit/393725ed649ebccef5cafb9c6298882be523a2fa))
+* **ffe-header:** legg til darkmode styling og fix [#1516](https://github.com/SpareBank1/designsystem/issues/1516) ([4ce4c4b](https://github.com/SpareBank1/designsystem/commit/4ce4c4b63cb2b687825cde69c9b0171a6b7fbafb))
+* **ffe-header:** legge til semantiske farger ([05129d5](https://github.com/SpareBank1/designsystem/commit/05129d5dc4d1cba0d9ac703ed03493e8e5e0e01c))
+* **ffe-header:** Make logout button look like secondary button ([8c433f0](https://github.com/SpareBank1/designsystem/commit/8c433f054134babe72b75a734c9b679dc5c3f7f0))
+* **ffe-header:** oppdaterte farger iht ny profil ([9729c51](https://github.com/SpareBank1/designsystem/commit/9729c518c70b9c8ed58c7818cd9184f70e46417b))
+* **ffe-header:** print styles ([1fd828d](https://github.com/SpareBank1/designsystem/commit/1fd828d7503d2b7df4eba1709b7fad88ec4f9d4a))
+* **ffe-header:** regard-color-scheme-preference for darkmode ([19bf59d](https://github.com/SpareBank1/designsystem/commit/19bf59d989db92328797ae7e10741f2e9554f123))
+* **ffe-header:** remove internal dependencies ([e9ae5e7](https://github.com/SpareBank1/designsystem/commit/e9ae5e728f37eec70d494d7f53e02e7ffdb1a653))
+* **ffe-header:** Removes unused search area ([2a141d6](https://github.com/SpareBank1/designsystem/commit/2a141d6bac83a6473876db81338a2f2e107ea937))
+* **ffe-header:** Use ffe-webfonts package ([e707099](https://github.com/SpareBank1/designsystem/commit/e70709918beca4d2f7b38699e9cba178af66dc24))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* **ffe-header:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-header:** different html and css structure
+* **ffe-header:** fjerner svg-ikoner og bytter de ut med ffe-symbols
+ikon font-filene må derfor importeres før bruk
+* **ffe-header:** legger til darkmode styling så sjekk om alt ser riktig ut
+* **ffe-header:** Remove internal styling packages as peer dependencies.
+* **ffe-header:** visuelle endringer i komponenten kan medføre regresjonsfeil
+* **ffe-header:** ny font i alt innhold
+* **ffe-header:** Requires less ^4.0.0
+* **ffe-header:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+* **ffe-header:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [23.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@23.0.3...@sb1/ffe-header@23.0.4) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+
+
+
+
 ## [23.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@23.0.2...@sb1/ffe-header@23.0.3) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-header

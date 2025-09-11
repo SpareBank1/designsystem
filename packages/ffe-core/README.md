@@ -14,9 +14,9 @@ npm install --save-dev less less-plugin-npm-import    # less-plugin is optional,
 
 Full documentation on usage is available at:
 
-* https://design.sparebank1.no/komponenter/typografi/
-* https://design.sparebank1.no/profil/farger/
-* https://design.sparebank1.no/profil/spacing/
+- https://design.sparebank1.no/komponenter/typografi/
+- https://design.sparebank1.no/profil/farger/
+- https://design.sparebank1.no/profil/spacing/
 
 ```less
 /* Your project's main .less import file */
@@ -66,11 +66,11 @@ If your project uses the core styling, you're probably good to go. If not, make 
 
 This package provides a set of less files containing variables for colors and other reusable constants. These files are:
 
--   less/breakpoints.less
--   less/colors.less
--   less/dimensions.less
--   less/motion.less
--   less/spacing.less
+- less/breakpoints.less
+- less/colors.less
+- less/dimensions.less
+- less/motion.less
+- less/spacing.less
 
 The less variables specified in this package are also available as named JavaScript imports. This can be useful for consumers that use CSS-in-JS, or that need access to these values in their JavaScript for other reasons. They are named the same as their LESS siblings, but are camelCased, and do not have the `@ffe-` prefix.
 

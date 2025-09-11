@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-core",
-    "version": "33.1.0",
+    "version": "100.0.3",
     "description": "Rammeverk for Felles Front End",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -9,7 +9,9 @@
         "lib",
         "es",
         "less",
-        "css"
+        "css",
+        "scripts",
+        "tokens"
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -35,7 +37,7 @@
         "build-colors": "./scripts/build-colors.cjs"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.10.1",
+        "@sb1/ffe-buildtool": "^100.0.3",
         "case": "^1.5.5",
         "less": "^4.1.2",
         "postcss": "^8.3.6"

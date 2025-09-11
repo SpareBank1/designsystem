@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-shapes
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-shapes
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-shapes
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-shapes:** Add shapes file for more general import ([84ce15b](https://github.com/SpareBank1/designsystem/commit/84ce15b14181d88ad4e0bb9d28ec937317c4f4e2))
+* **ffe-shapes:** fikser darkmode ([6e278ea](https://github.com/SpareBank1/designsystem/commit/6e278ea9cd4eeef3f0398b5aa7ade4a2947037fc))
+* **ffe-shapes:** fjerner hideindarkmode og endrer flipped-funksjonalitet ([44f68d3](https://github.com/SpareBank1/designsystem/commit/44f68d3625f8a6652aa78b055fea125d0d8031bb))
+
+
+### Features
+
+* **ffe-shapes:** legger til bølgen som en egen pakke, pluss oppdatert med semantiske farger ([db6c721](https://github.com/SpareBank1/designsystem/commit/db6c721e08ea536b5bc6b98e98d8be8f9b0dbb38))
+
+
+
+
+
+## [1.1.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes@1.1.18...@sb1/ffe-shapes@1.1.19) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-shapes
+
+
+
+
+
 ## [1.1.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-shapes@1.1.17...@sb1/ffe-shapes@1.1.18) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-shapes

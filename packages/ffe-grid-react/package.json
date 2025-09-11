@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-grid-react",
-    "version": "16.0.32",
+    "version": "100.0.3",
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
@@ -24,11 +24,11 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-grid": "^16.0.28",
+        "@sb1/ffe-grid": "^100.0.3",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.10.1",
+        "@sb1/ffe-buildtool": "^100.0.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

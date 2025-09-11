@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-feedback-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-feedback-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-feedback-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-feedback-react:** endrer bgColor og oppdaterer farger ([840bffe](https://github.com/SpareBank1/designsystem/commit/840bffe210fb33ac4cd69f815f06fff57bf71732))
+* **ffe-feedback-react:** fiks typeeksportering ([46088b7](https://github.com/SpareBank1/designsystem/commit/46088b761648aa763e64b3fe9c593033df3663ff))
+* **ffe-feedback-react:** fix missing label textbox ([81ff1ab](https://github.com/SpareBank1/designsystem/commit/81ff1ab0387ed073325bb568a4f211df1a0aa316))
+* **ffe-feedback-react:** fix text centring in thunbs heading ([af2cd8b](https://github.com/SpareBank1/designsystem/commit/af2cd8b66e3390886ed320db35698f8d1ebd9c04))
+* **ffe-feedback-react:** fjerner undefined fra typedefinisjon til onclick ([89ac2ec](https://github.com/SpareBank1/designsystem/commit/89ac2ec7f7936700b4345f5ec7a94c21d5f3b461))
+* **ffe-feedback-react:** focus managment ([19526f1](https://github.com/SpareBank1/designsystem/commit/19526f13fdf8ecc6456444028b969c4dd66dfa6b))
+* **ffe-feedback-react:** Legg til ny tekst for feedback med samtykkeboks ([cc2977e](https://github.com/SpareBank1/designsystem/commit/cc2977ee5d5885b316ace3f92f269d673eb5eac8))
+* **ffe-feedback-react:** legger til manglende dep ffe-icons-react ([8727ab3](https://github.com/SpareBank1/designsystem/commit/8727ab32ea37b0ffa947e79865ba0c3f96aca648))
+* **ffe-feedback-react:** lottie animation loaded twice in strict mode ([a84b51c](https://github.com/SpareBank1/designsystem/commit/a84b51c644bc6e00adc53aab5a655705919ab921))
+* **ffe-feedback-react:** remove default props ([9e20404](https://github.com/SpareBank1/designsystem/commit/9e204043763ab7e291d981b9ac52bdcb676c12b1))
+* **ffe-feedback-react:** samkjør semantiske HTML-overskrifter med LESS-klasser ([1efd574](https://github.com/SpareBank1/designsystem/commit/1efd574e7f5a89e582f8c064e07c4199142d2a0e))
+
+
+### Features
+
+* **ffe-feedback-react:** add headingLevel prop ([438328e](https://github.com/SpareBank1/designsystem/commit/438328e669a5ee6d8b7f1fa24d7293670914e91c))
+* **ffe-feedback-react:** add required aria label to button group ([887c5f0](https://github.com/SpareBank1/designsystem/commit/887c5f037fbc7f67d37cbc2660e6fad86573419e))
+* **ffe-feedback-react:** bytter ut lottie animasjon mot vanlig bilde ([9e00b11](https://github.com/SpareBank1/designsystem/commit/9e00b11f7dfcd30d7711056338223a75e9464a80))
+* **ffe-feedback-react:** export props type ([bf42822](https://github.com/SpareBank1/designsystem/commit/bf4282244bda4f25268d63610b5a86b1f853c7dc))
+* **ffe-feedback-react:** forbedring i stegene. Nye knapper, forbedret ([e06e2ae](https://github.com/SpareBank1/designsystem/commit/e06e2ae012a37f698fef84b2576131f22ebb3bc4))
+* **ffe-feedback-react:** legg til className prop ([39bce9c](https://github.com/SpareBank1/designsystem/commit/39bce9cfd9ff617b6c2e6a24fdd07044dbefbcb6))
+* **ffe-feedback-react:** mulighet att bruke egen heading ([138e0f2](https://github.com/SpareBank1/designsystem/commit/138e0f21ebada03ad74750924cec36c50685abc3))
+* **ffe-feedback-react:** oppretter felles tilbakemeldingskomponent ([35260d2](https://github.com/SpareBank1/designsystem/commit/35260d25d12575ff18b8926014e823a5438d2e31))
+* **ffe-feedback-react:** rewrite to ts ([9f2baeb](https://github.com/SpareBank1/designsystem/commit/9f2baeb19784249eab2f2ab09865814d6e2f01fe))
+* **ffe-feedback-react:** semantiske farger i feedback ([e78718a](https://github.com/SpareBank1/designsystem/commit/e78718a6395095ed54f3f4824a82b505f88dc011))
+* **ffe-feedback-react:** tomler direkte fra svg som react-komponenter ([f31b968](https://github.com/SpareBank1/designsystem/commit/f31b96845e3049ffb2623e4387d29cd0b2a83234))
+* **ffe-feedback-react:** upgrade react to >=18.2.0 ([9c0a0f0](https://github.com/SpareBank1/designsystem/commit/9c0a0f035f1fa4d88120500a67472f14b5f92cfc))
+
+
+### BREAKING CHANGES
+
+* **ffe-feedback-react:** bgColor støtter nå kun semantiske farger
+* **ffe-feedback-react:** noe endringer i farger og styling
+* **ffe-feedback-react:** Dropped support for React <18.2.0
+* **ffe-feedback-react:** see above
+* **ffe-feedback-react:** headingLevel is now required
+
+
+
+
+
+## [6.1.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.33...@sb1/ffe-feedback-react@6.1.34) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-feedback-react
+
+
+
+
+
 ## [6.1.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@6.1.32...@sb1/ffe-feedback-react@6.1.33) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

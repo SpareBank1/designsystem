@@ -3,6 +3,326 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea21d82115b6db7b050e0b5138b780ec705))
+* **ffe-buttons-react:** a11y improvements to `ExpandButton` ([a0bfbb8](https://github.com/SpareBank1/designsystem/commit/a0bfbb81abf6c0ca4d7e4c55075ec1af54c7eb4c)), closes [#619](https://github.com/SpareBank1/designsystem/issues/619)
+* **ffe-buttons-react:** add children type on ButtonGruop ([e151283](https://github.com/SpareBank1/designsystem/commit/e15128302c2fd5b45a8f038a69e36070bb7c9728))
+* **ffe-buttons-react:** Add space for inline expand button icon ([30234e2](https://github.com/SpareBank1/designsystem/commit/30234e2adab7db39ec131afac7d705811a4c0d64))
+* **ffe-buttons-react:** Added defaultProps false for dark variant. ([98660c9](https://github.com/SpareBank1/designsystem/commit/98660c9a157c8ab6c4d3ef74e8c11db65abbacef))
+* **ffe-buttons-react:** broadens version of peer dependencies ([2ab2e5c](https://github.com/SpareBank1/designsystem/commit/2ab2e5cf784c2444b692a248d8f117712860631c))
+* **ffe-buttons-react:** bump prop-types ([49aa321](https://github.com/SpareBank1/designsystem/commit/49aa3219e8c1ce272aba2b1c0dc0aa32e3c2a014))
+* **ffe-buttons-react:** element type for type script ([b889371](https://github.com/SpareBank1/designsystem/commit/b8893712997641d01f78aaf3e500f7f9d530ce80))
+* **ffe-buttons-react:** elementType prop type ([f692c7f](https://github.com/SpareBank1/designsystem/commit/f692c7fde4c57e1f9b9cb6d06efb81b852889b79))
+* **ffe-buttons-react:** ensuring typedefinition for the to prop for BaseButtonProps ([9f22db6](https://github.com/SpareBank1/designsystem/commit/9f22db6102f24cfbb2989e06ab42a4398b145693))
+* **ffe-buttons-react:** erstatter fragment i expandbutton med span ([f4ebf37](https://github.com/SpareBank1/designsystem/commit/f4ebf379e4c7f4eac284c453dd1905c79b9adef2))
+* **ffe-buttons-react:** fikser [#1382](https://github.com/SpareBank1/designsystem/issues/1382) og [#1386](https://github.com/SpareBank1/designsystem/issues/1386) ([e61ec8f](https://github.com/SpareBank1/designsystem/commit/e61ec8f30935dc96f279e39869cffa86d064aa3e))
+* **ffe-buttons-react:** Fix console error in example ([4a1796f](https://github.com/SpareBank1/designsystem/commit/4a1796fd431e4156071d09f8c8687bc722545790)), closes [#356](https://github.com/SpareBank1/designsystem/issues/356)
+* **ffe-buttons-react:** fix InlineExpandButton types ([88877ba](https://github.com/SpareBank1/designsystem/commit/88877ba95bf85be1868b829d15d9d22674397c1a))
+* **ffe-buttons-react:** fix MinimalBaseButtonProps ([8853839](https://github.com/SpareBank1/designsystem/commit/8853839b5d5860b1471662823f099b25c0fa8fc8))
+* **ffe-buttons-react:** fix ts types ([e7e11bd](https://github.com/SpareBank1/designsystem/commit/e7e11bd7a784b3ec133e469279246d23d5dc9427))
+* **ffe-buttons-react:** fix using wrong property in docs ([3ab38aa](https://github.com/SpareBank1/designsystem/commit/3ab38aa951066ff70250cacfe83f64bfd2d6c72a))
+* **ffe-buttons-react:** fixed async issues with setState ([d800bcb](https://github.com/SpareBank1/designsystem/commit/d800bcb1fccde27c6fb322ff695a407820eeeec6))
+* **ffe-buttons-react:** fixed broken icons ([2fd8e82](https://github.com/SpareBank1/designsystem/commit/2fd8e82abf25770371743504cb613aa1666c4bf0))
+* **ffe-buttons-react:** Fixed path to chevron icon ([0eb4b1b](https://github.com/SpareBank1/designsystem/commit/0eb4b1b5ac5cbe79dfd7d9ee3f5bae5cb152f9ac))
+* **ffe-buttons-react:** fixed type definition of innerref ([f5c234d](https://github.com/SpareBank1/designsystem/commit/f5c234d9cb6ff5b4d16c8b1ca2edeb12e95f11fd))
+* **ffe-buttons-react:** fixing incorrect types ([654a24f](https://github.com/SpareBank1/designsystem/commit/654a24f5d3136b331d345d596117f7b22e99e759))
+* **ffe-buttons-react:** fjern left/right ikon på ExpandButton ([5eff4e0](https://github.com/SpareBank1/designsystem/commit/5eff4e0c56ceca350f393459f57663ecf0b3d40f))
+* **ffe-buttons-react:** fjerner --ghost ([428cbf7](https://github.com/SpareBank1/designsystem/commit/428cbf7cd642701a5683390d9af7d2cf181a0588))
+* **ffe-buttons-react:** fjerner gjenglemte referanser til --dark ([8728a6b](https://github.com/SpareBank1/designsystem/commit/8728a6ba7657f21e9a4bd10b8c419eb9e21532dc))
+* **ffe-buttons-react:** invalid markup ([a447232](https://github.com/SpareBank1/designsystem/commit/a4472328c9cd365a890e74a007d1033bee701cef))
+* **ffe-buttons-react:** justering av utseende og transition ([d192089](https://github.com/SpareBank1/designsystem/commit/d19208944424551ebeb5e03efbff09e933132337))
+* **ffe-buttons-react:** legg til aria-hidden på inline og expand button ikoner ([9aa7b59](https://github.com/SpareBank1/designsystem/commit/9aa7b59203d9bb4b89b2e5d44f215c3b4aa7221b))
+* **ffe-buttons-react:** legg til aria-hidden på kryssikon ([7ed2dc7](https://github.com/SpareBank1/designsystem/commit/7ed2dc7bb824cf06204c902e3d8dc7abb06e380d))
+* **ffe-buttons-react:** legg til role på span som inneholder loading ikon ([a987d11](https://github.com/SpareBank1/designsystem/commit/a987d11911a66c70d08737d91b2aa6af11f2152a))
+* **ffe-buttons-react:** Loadable shortcut-buttons ([2c2fe3d](https://github.com/SpareBank1/designsystem/commit/2c2fe3da38d6254c3f4f6748ccd7934f6f8b2f4c))
+* **ffe-buttons-react:** minimal base button props ([4a29230](https://github.com/SpareBank1/designsystem/commit/4a2923065f759cafb4a2cf3108b42bfc719a0aba))
+* **ffe-buttons-react:** minor refactoring ([222cc5f](https://github.com/SpareBank1/designsystem/commit/222cc5fdba0fe7fcb50ff1c803ab645237e5846a))
+* **ffe-buttons-react:** øker størrelsen på ikoner i knapper ([0ac454e](https://github.com/SpareBank1/designsystem/commit/0ac454e4194b37cd8c179fb00b4da45e6902a24a))
+* **ffe-buttons-react:** oppdater Symbol implementering ([3e91fba](https://github.com/SpareBank1/designsystem/commit/3e91fbaaa6d0c9fd01625b687944d68566a78c30))
+* **ffe-buttons-react:** possible to add extra classes to inline expand button ([8816e02](https://github.com/SpareBank1/designsystem/commit/8816e0222a7f96909ae87b85a3ef5002f66b2ee5))
+* **ffe-buttons-react:** reduce vulnerabilities ([414cf6f](https://github.com/SpareBank1/designsystem/commit/414cf6fea3d75ca95c321ee65342f2d140642cf5))
+* **ffe-buttons-react:** remove default props ([24e531e](https://github.com/SpareBank1/designsystem/commit/24e531edb5bcdd687fe988793df537d2d08d9aef))
+* **ffe-buttons-react:** remove disabled attribute when is-loading ([d666aa1](https://github.com/SpareBank1/designsystem/commit/d666aa1716756e4f878695b5455a09d3b3cd4ecb))
+* **ffe-buttons-react:** Remove type propType check ([005890a](https://github.com/SpareBank1/designsystem/commit/005890a22fe918dcd899c364d31f93de58adea43))
+* **ffe-buttons-react:** Restrict isLoading prop ([946d6ba](https://github.com/SpareBank1/designsystem/commit/946d6bac3f1852207f37d601408b9ac5126c940c))
+* **ffe-buttons-react:** Revert some small changes in previous commit that should not have been included. ([e37b868](https://github.com/SpareBank1/designsystem/commit/e37b8686728dbccecc972debfedd1d6c9fee5809))
+* **ffe-buttons-react:** set InlineExpandButton type to "button" ([0a02a57](https://github.com/SpareBank1/designsystem/commit/0a02a575790fed4fa178a5f3379d31c5ed7dcddc))
+* **ffe-buttons-react:** stop spreading icon prop to Button ([d152176](https://github.com/SpareBank1/designsystem/commit/d1521762d0571da2238520f817f2d9a1689bec9f))
+* **ffe-buttons-react:** swallow klicks when button is loading ([6daa3b8](https://github.com/SpareBank1/designsystem/commit/6daa3b89a13d21976880d0514edd5b8ab7384c79))
+* **ffe-buttons-react:** tillater classname på slutten av inlinebasebutton ([49c7b41](https://github.com/SpareBank1/designsystem/commit/49c7b41f7268fc6bcf541b589ba3c937a6a4e538))
+* **ffe-buttons-react:** to property when usin react router can be object ([8162b32](https://github.com/SpareBank1/designsystem/commit/8162b32fe7b581297060548520471acb84963ca9))
+* **ffe-buttons-react:** types on icons ([b3c2e59](https://github.com/SpareBank1/designsystem/commit/b3c2e59d15d4bcde0cc8674aa612e7b6e8439bf1))
+* **ffe-buttons-react:** use buildtool for transpiling ([0510533](https://github.com/SpareBank1/designsystem/commit/0510533dd523920e1805855e7c35778ca24e524b)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+* **ffe-buttons-react:** use react.componentsprops instead of react.htmlprops ([6639e09](https://github.com/SpareBank1/designsystem/commit/6639e092f63aa20ed06566b2c8c582b39dde2c6c))
+* **ffe-buttons-react:** use react.htmlprops instead of react.componentprops ([8cd93e5](https://github.com/SpareBank1/designsystem/commit/8cd93e5897f211baf0d79b086561acc91d17c739))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-icons-react:** Change hardcoded path of npm run build target ([f271067](https://github.com/SpareBank1/designsystem/commit/f2710673ce11d2eba128a3c911a356cabbb45ec7))
+* Fix a few issues with the documentation ([ab3d579](https://github.com/SpareBank1/designsystem/commit/ab3d579778052fd23d72320316f1059b72bc06d7))
+* packages/ffe-buttons-react/package.json to reduce vulnerabilities ([7b4412e](https://github.com/SpareBank1/designsystem/commit/7b4412e5adafeba5dc699a34602cab212f4c471e))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6fb6810627395250aee5c9c6ae164183871))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+* bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f101f0448d7d2b4100976926849b956555c))
+* **ffe-buttons-react:** use ffe-icons-react instad og ffe-symbols-react ([ecbaec0](https://github.com/SpareBank1/designsystem/commit/ecbaec06bf936e9dbff626ec78e3520831481cba))
+
+
+### Code Refactoring
+
+* **ffe-icons-react:** Improve API ([e9b88a4](https://github.com/SpareBank1/designsystem/commit/e9b88a4399caa44f4b5a2f729911a4267acd6f3d))
+
+
+### Features
+
+* **ffe-buttons-react:** accept refs created by useRef ([3a1d6e6](https://github.com/SpareBank1/designsystem/commit/3a1d6e63cb2b64d92a6a089d54e54028cf212b3e))
+* **ffe-buttons-react:** Add ButtonGroup ([ed9e2a6](https://github.com/SpareBank1/designsystem/commit/ed9e2a66482c6496455164d7c362d7ad101c9e19))
+* **ffe-buttons-react:** Add contribute.md link to readme ([5474772](https://github.com/SpareBank1/designsystem/commit/5474772f009c7fb7ca17c4f4120aab4600801af1))
+* **ffe-buttons-react:** Add dark style back button ([444dcd7](https://github.com/SpareBank1/designsystem/commit/444dcd7eb549c9b1c446b4df295d995bac52d917))
+* **ffe-buttons-react:** Add element prop ([c7d3c96](https://github.com/SpareBank1/designsystem/commit/c7d3c96915942b20db6b24ac02457ab78e33a8e9))
+* **ffe-buttons-react:** add inline prop to ButtonGroup ([386670c](https://github.com/SpareBank1/designsystem/commit/386670c7440abd14b62a6f7c39ce9ebb4b682dd2)), closes [#213](https://github.com/SpareBank1/designsystem/issues/213)
+* **ffe-buttons-react:** Added dark property for ActionButton, PrimaryButton, SecondaryButton, TertiaryButton with documentation ([a7b68e9](https://github.com/SpareBank1/designsystem/commit/a7b68e97eb1fbe8c0936ffe2bf6deccc85828865))
+* **ffe-buttons-react:** Added type definitions for typescript ([28f1208](https://github.com/SpareBank1/designsystem/commit/28f120884bfe2ace02f8b4137903343a106b1f60))
+* **ffe-buttons-react:** ariaLabel er ikke lenger en påkrevd prop ([499c305](https://github.com/SpareBank1/designsystem/commit/499c3054fc6db94d7d9b671931cb9fbd104e90b9))
+* **ffe-buttons-react:** bytt ikoner til material symbols ([1f56628](https://github.com/SpareBank1/designsystem/commit/1f5662869f60c2b444744b4ee46aeae5edc691cf))
+* **ffe-buttons-react:** fix button type ([5017312](https://github.com/SpareBank1/designsystem/commit/50173123a257ff7903c3c1163c998bdafe5e54d4))
+* **ffe-buttons-react:** flere knappestørrelser ([dbac04d](https://github.com/SpareBank1/designsystem/commit/dbac04d9d6c2cdc562af84005f2e698fb7a4222e))
+* **ffe-buttons-react:** IconButtons ([32d68c4](https://github.com/SpareBank1/designsystem/commit/32d68c4702e4841905e285cbf9ddf6d2cbd916d4))
+* **ffe-buttons-react:** import icons without need for tree shaking ([f856288](https://github.com/SpareBank1/designsystem/commit/f8562889018e6f47ecbae1953b1752bcdb362f8f))
+* **ffe-buttons-react:** Inline expand button ([c22ce20](https://github.com/SpareBank1/designsystem/commit/c22ce208245345f2322adbaf408889002ac1f894))
+* **ffe-buttons-react:** legger til knappestørrelser og icononly for tertiaryknapp ([bcc986f](https://github.com/SpareBank1/designsystem/commit/bcc986f401dfa25137ed54c719cdcf8a997dff6f))
+* **ffe-buttons-react:** remove condensed variant of buttons ([c0df577](https://github.com/SpareBank1/designsystem/commit/c0df57709d751589e4c60db9eee10e0661ff2160)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
+* **ffe-buttons-react:** role="group" with aria label ([3cab616](https://github.com/SpareBank1/designsystem/commit/3cab616ad2740924bf29f902834b72bf35ae1eab))
+* **ffe-buttons-react:** Simplify implementation ([e26caf6](https://github.com/SpareBank1/designsystem/commit/e26caf673474fd5ae7e0c5988b02c8e092c9ff31))
+* **ffe-buttons-react:** update internal dependencies ([961e579](https://github.com/SpareBank1/designsystem/commit/961e5790318bf3fe27bdcc79ae610df18a76ad6b))
+* **ffe-buttons-react:** upgrade react to >=18.2.0 ([920d2d5](https://github.com/SpareBank1/designsystem/commit/920d2d5227370d5a0d6ffe3eb2f35bb98eae9319))
+* **ffe-buttons-react:** Upgrade to React 16 ([2dc5dd9](https://github.com/SpareBank1/designsystem/commit/2dc5dd948d5a313ac8972dfb5cdc5c24696e32eb))
+* **ffe-buttons-react:** use typescript ([946d225](https://github.com/SpareBank1/designsystem/commit/946d225af2d194e3a9b46f69490652a7c53fe190))
+* **ffe-system-message-react:** stop using deprecated lifecycle methods ([940e0f8](https://github.com/SpareBank1/designsystem/commit/940e0f8d516eeaec85f08cbe7019b29a6e8b36cf))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([a9d5741](https://github.com/SpareBank1/designsystem/commit/a9d5741bb4da444b345c695c127c31cd94efe318))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons-react:** Dropped support for React <18.2.0
+* **ffe-buttons-react:** You will need to provide an ariaLabel
+* **ffe-buttons-react:** No more manuel types so be aware. Generics are now inferred.
+* **ffe-buttons-react:** Endring krever nå at man sender med element og ikke string navn på ikon
+* **ffe-buttons-react:** fjerner leftIcon og rightIcon prop på ExpandButton
+* **ffe-buttons-react:** endrer hvordan man sender med ikon. Fjerner leftIcon på shortcutbutton
+* **ffe-buttons-react:** "to" prop is removed. To use react router props
+or similar a generic must be provided.
+
+import { LinkProps } from "react-router-dom";
+
+return <PrimaryButton<LinkProps>  to={'somUrl'}  />
+* **ffe-buttons-react:** Makes the styling package @sb1/ffe-buttons a required
+dependency and removes it as peer dependency.
+* **ffe-buttons-react:** remove condensed variant of buttons, i.e. the prop `condensed`.
+* **ffe-buttons-react:** sletter --ghost og tilhørende prop i react-implementasjonen
+* **ffe-buttons-react:** chevron animeres nå i Z-aksen
+* peerDep of React is raised to 16.9. While this in itself
+isn't a breaking change, it allows for the use of hooks in later releases.
+Such changes would just be a minor version, or even a patch, but without
+this major version bump it would result in a runtime error for consumers.
+* **ffe-buttons-react:** Removed support for `isLoading` from any button
+other than ActionButton, PrimaryButton and SecondaryButton.
+
+This commit removes support for the `isLoading` prop for all other
+buttons, meaning they will not be disabled or act any differently
+if given an `isLoading` prop of true or false.
+
+If you are using `isLoading` with any other kind of button you need
+to sit down with design/ux and either start using one of those
+three button types or figure out another way to show a loading indicator.
+* **ffe-buttons-react:** This commit re-implements the ffe-buttons-react
+implementation so that it's easier to maintain for future developers.
+
+A missing implementation, `TaskButton`, is also added in this commit.
+
+The opportunity was taken to do some minor API changes as well, since
+the prior implementation had some deprecated fields that could be
+removed.
+
+With this change, buttons are now much more similar, and follows
+(mostly) the same API across button types. There are some differences
+between them (some does not support loading indicators, while others
+might not support right or left icons. Please refer to the relevant
+documentation to learn more about the new APIs.
+
+**Changes in props:**
+
+- `action` prop is removed.
+- `simpleContent` prop is removed (only used internally)
+- `label` prop is removed. Use `children` instead
+- `isTabbable` prop is removed. Use `tabIndex` instead
+- `disableButton` prop is renamed to its DOM cousin - `disabled`
+
+**Other changes:**
+All buttons support `leftIcon` and `rightIcon` props now - with the
+following exceptions:
+
+- `BackButton` does not support any icons by design
+- `InlineExpandButton` does not support `rightIcon` by design
+- `ShortcutButton` does not support `rightIcon` by design
+- `TaskButton` does not support `rightIcon` by design
+
+All buttons now support the `element` prop, which lets you override what
+component or DOM element is used to render the button.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-icons-react:** Improve the API of ffe-icons-react.
+
+This commit changes the API of the ffe-icons-react package to take
+advantage of dead code eliminination and tree shaking in
+Webpack >= 2.
+
+Previously, you imported one and one icon from the corresponding
+JSX file. Now all icons are available as named exports from the
+root level of `ffe-icons-react`.
+
+If you're using webpack@>=2.0.0,  please make the following changes
+to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import { ChevronIkon, FamilieIkon } from 'ffe-icons-react';
+```
+
+If you're not using a build tool that enables dead code elimination
+and tree shaking, please make the following changes to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
++ import FamilieIkon from 'ffe-icons-react/lib/familie-ikon';
+```
+
+This API change allows for cleaner usage and better documentation.
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
+
+## [24.4.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.4.9...@sb1/ffe-buttons-react@24.4.10) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+
+
+
+
 ## [24.4.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@24.4.8...@sb1/ffe-buttons-react@24.4.9) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

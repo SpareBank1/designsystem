@@ -3,6 +3,186 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-context-message:** add padding to compact context message ([9e5db9d](https://github.com/SpareBank1/designsystem/commit/9e5db9daba5661a95c1c413df5118915b312bd07))
+* **ffe-context-message:** added peerDependency to ffe-core@^13.0.0 ([1f00885](https://github.com/SpareBank1/designsystem/commit/1f0088535d5325f0cf2a4e47222feb569e4f79ef))
+* **ffe-context-message:** alltid bruk liten ikon på condensed versonen ([3dad047](https://github.com/SpareBank1/designsystem/commit/3dad047ff240224e5c38d63a3094f7f4a056e72f))
+* **ffe-context-message:** broadens version of peer dependencies ([1167b98](https://github.com/SpareBank1/designsystem/commit/1167b98ab163a75178e172a1d87e4c353a81d386))
+* **ffe-context-message:** colour update to match new profile ([#1128](https://github.com/SpareBank1/designsystem/issues/1128)) ([3218c6c](https://github.com/SpareBank1/designsystem/commit/3218c6c408a03d26931d3ba47223ca694b64c5c3))
+* **ffe-context-message:** contrast issue ([ead4fb5](https://github.com/SpareBank1/designsystem/commit/ead4fb50626c5bf9b1d837c60a72da256243ea73))
+* **ffe-context-message:** endre lukke-knapp posisjonering fra absolute til flex ([3edefd0](https://github.com/SpareBank1/designsystem/commit/3edefd04fec362eb25b6dd991c1f8bd529ae4a3a))
+* **ffe-context-message:** endre suksess ikon farge til skog ([6a38a0c](https://github.com/SpareBank1/designsystem/commit/6a38a0c2075b6937b147a6692c8c07b734f2e365))
+* **ffe-context-message:** Fikser at tittel endrer seg når det er h-element ([0a8d011](https://github.com/SpareBank1/designsystem/commit/0a8d011cd1b6e2092975b8c70fd8e59d65f4a5c8))
+* **ffe-context-message:** Fix icons with wrong colors and dimensions ([aad18c6](https://github.com/SpareBank1/designsystem/commit/aad18c6a7f9289748da80c11999899e8da3d1667))
+* **ffe-context-message:** fjerne padding rundt ikonet og justere størrelsen ([cf28e75](https://github.com/SpareBank1/designsystem/commit/cf28e753a8e3ad5709a91e027e09e99a83108bef))
+* **ffe-context-message:** fjerner overstyring av linkfarge samt oppdaterte farger ([1b4bda8](https://github.com/SpareBank1/designsystem/commit/1b4bda8e2163a687453094b3c0a980b01ca0e1f6))
+* **ffe-context-message:** flytt ikon på mindre skjerm til toppen ([3c522f2](https://github.com/SpareBank1/designsystem/commit/3c522f2f7efcdc7a721d06893868946e71e111e5))
+* **ffe-context-message:** gjør ikon mindre på mobil ([770f70d](https://github.com/SpareBank1/designsystem/commit/770f70d9f2d37af1c2c1dfc88eb4cf78cfa63fda))
+* **ffe-context-message:** gjør sirkel sort og justere ikon farger i darkmode ([65e5648](https://github.com/SpareBank1/designsystem/commit/65e56484a29b073ff526a7087ba0b5f92ef84bcc))
+* **ffe-context-message:** hovering styles only when using pointer/mouse ([c744d0e](https://github.com/SpareBank1/designsystem/commit/c744d0e93ff911f92246bc4f1e2d69848e4ded3f))
+* **ffe-context-message:** Now supports using Paragraphs in darkmode ([d06716b](https://github.com/SpareBank1/designsystem/commit/d06716bc0da781e1ef8b020d6ee2a9de13df8e01))
+* **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
+* **ffe-context-message:** oppdater klassenavn til å passe ny meldingstype verdi ([99b3006](https://github.com/SpareBank1/designsystem/commit/99b300651f23f3b9dba1ddb9ed04007221110f5b))
+* **ffe-context-message:** overstyrer lenkefarge i dark mode ([6a82643](https://github.com/SpareBank1/designsystem/commit/6a8264337d7b2de84d3d30199fe025e1947500bf))
+* **ffe-context-message:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([7c8ceb6](https://github.com/SpareBank1/designsystem/commit/7c8ceb620903054934bc70a6cc70713f80ab4310))
+* **ffe-context-message:** Removed dependency on React ([3741665](https://github.com/SpareBank1/designsystem/commit/3741665deabec45961f958f44e7460dc92701312))
+* **ffe-context-message:** replace hardcoded spacing with variables ([ffa0ca5](https://github.com/SpareBank1/designsystem/commit/ffa0ca535a14a331bdcd2e576aa266f67b4ef969))
+* **ffe-context-message:** rett navn på less filer ([6534041](https://github.com/SpareBank1/designsystem/commit/6534041de6a1de93e0c4523be57e023c0c398375))
+* **ffe-context-message:** stil endringer for å passe nye ikoner ([14e98cb](https://github.com/SpareBank1/designsystem/commit/14e98cb1ace9cd5041e5e35ef03817d4bc8db838))
+* **ffe-context-message:** unngå å overstyre default farge på focus ([7c709a6](https://github.com/SpareBank1/designsystem/commit/7c709a6767fe340f2c132aea4e8ff00cfcf83878))
+* **ffe-context-message:** use `break-all` to wrap words ([ad8b47a](https://github.com/SpareBank1/designsystem/commit/ad8b47abbf32b3de824dece17a4125434b95190b))
+* **ffe-context-message:** use overflow-wrap:anywhere with word-break:normal ([8231332](https://github.com/SpareBank1/designsystem/commit/8231332b63eda08c0ada52493c60b6fa8fe1949b))
+* **ffe-context-message:** word-break content ([3c7bf7d](https://github.com/SpareBank1/designsystem/commit/3c7bf7d5fd0504b812dd3b106442ee30164878e9))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340368528b953e69155f80a2497b1c100575))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+### Features
+
+* **ffe-context-message-react:** deprecate package ([c3f810c](https://github.com/SpareBank1/designsystem/commit/c3f810c9ba667ae880b29aee670ad85a23f0dc60))
+* **ffe-context-message:** add :host for shadow dom support ([16f3f4d](https://github.com/SpareBank1/designsystem/commit/16f3f4df8f5c02efe1e82f906b21fd54a1f1e74f))
+* **ffe-context-message:** add darmode styling overrides ([afaa866](https://github.com/SpareBank1/designsystem/commit/afaa866344ee2c4fdfdae57616faffc9d45ebccc))
+* **ffe-context-message:** add theming ([b597b07](https://github.com/SpareBank1/designsystem/commit/b597b070326ca10453e8876c9b3dc0bd61139eb8))
+* **ffe-context-message:** farge tweaks og styling for bruk på farget bakgrunn ([c470f0a](https://github.com/SpareBank1/designsystem/commit/c470f0ab5ffb8d20d537b3a884457d5c9dbcaf5e))
+* **ffe-context-message:** legge til støtte for darkmode i small-text ([a237391](https://github.com/SpareBank1/designsystem/commit/a23739181517d85cc574878bf108ce3cff655b10))
+* **ffe-context-message:** make border radius more round ([6ca6de5](https://github.com/SpareBank1/designsystem/commit/6ca6de51aaa11dd665c31a98369c5916e4d76db1))
+* **ffe-context-message:** regard-color-scheme-preference for darkmode ([79ff13d](https://github.com/SpareBank1/designsystem/commit/79ff13d01ef4cd1e9b0606ede816c4e61ba122b3))
+* **ffe-context-message:** update internal dependencies ([4c75032](https://github.com/SpareBank1/designsystem/commit/4c7503226c5843bd347c11fb99bc73bbf60e719f))
+
+
+### BREAKING CHANGES
+
+* **ffe-context-message:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-context-message-react:** package is now deprecated
+* **ffe-context-message:** endrer måten vi setter farge på ikon fra fill til color
+* **ffe-context-message:** Makes the styling package @sb1/ffe-core a required
+dependency and removes it as peer dependency.
+* **ffe-context-message:** klassenavn for tips meldinger har nå tips og ikke tip i navnet.
+* **ffe-context-message:** dersom man bruker lenker i en kontekstmelding må fargen på disse spesifiseres
+* **ffe-context-message:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [10.0.41](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@10.0.40...@sb1/ffe-context-message@10.0.41) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+
+
+
+
 ## [10.0.40](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@10.0.39...@sb1/ffe-context-message@10.0.40) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

@@ -3,6 +3,201 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+
+
+
+
+## [100.0.2](https://github.com/SpareBank1/designsystem/compare/v100.0.1...v100.0.2) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+
+
+
+
+## [100.0.1](https://github.com/SpareBank1/designsystem/compare/v100.0.0...v100.0.1) (2025-09-10)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+
+
+
+
+# 100.0.0 (2025-09-09)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59cedf4a76e30880305ed06ca165dce707920))
+* **ffe-core:** remove kv type module to fix build errors among consumers ([6ea36b4](https://github.com/SpareBank1/designsystem/commit/6ea36b44d434b5d8b7ad7816f027b19a191d9d15))
+* **ffe-datepicker:** add cursor pointer to button ([0b8713f](https://github.com/SpareBank1/designsystem/commit/0b8713f8a05d3881f10658b64cd36c5d735c51b0))
+* **ffe-datepicker:** added peerDependency to ffe-core@^13.0.0 ([4375fa6](https://github.com/SpareBank1/designsystem/commit/4375fa649c70b51243015c4314b1d92aea3083a1))
+* **ffe-datepicker:** broadens version of peer dependencies ([5a53025](https://github.com/SpareBank1/designsystem/commit/5a53025fe3eda027b70ca9cda04cd58c64c2764b))
+* **ffe-datepicker:** bytter ut ffe-icons med ffe-symbols ([13900f2](https://github.com/SpareBank1/designsystem/commit/13900f2799719657b429471292f970f51f860e30))
+* **ffe-datepicker:** bytter ut utfaset farge ([4c4d6d5](https://github.com/SpareBank1/designsystem/commit/4c4d6d5fce5f94e545f9467a46ed7068ddb9d85b))
+* **ffe-datepicker:** change text values to rem ([bb279c1](https://github.com/SpareBank1/designsystem/commit/bb279c139ea99b122e8f046199eae1ad271df9f6))
+* **ffe-datepicker:** datepicker semantiske farger styling ([de7ba70](https://github.com/SpareBank1/designsystem/commit/de7ba70ad14078efc19fc4c454f5ca66b5defe2d))
+* **ffe-datepicker:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c946db4](https://github.com/SpareBank1/designsystem/commit/c946db4367d61ba3e695dbdc1051aefa6cf30c2f))
+* **ffe-datepicker:** escape / in less ([4d9ef8a](https://github.com/SpareBank1/designsystem/commit/4d9ef8a3cf50d7690ca1795916a56d609bd418de))
+* **ffe-datepicker:** ffe-form compat ([e518895](https://github.com/SpareBank1/designsystem/commit/e518895892b9fdb9a116cd3494d822a05de7d8ea))
+* **ffe-datepicker:** fiks disabled styling ([6e154bc](https://github.com/SpareBank1/designsystem/commit/6e154bc06782d0cd5ecaefe5a9885b7b5b46d9ef))
+* **ffe-datepicker:** fix date input error styling on aria-invalid="true" ([dc51cd1](https://github.com/SpareBank1/designsystem/commit/dc51cd114aadfcfc18125d98049c2d227ec59174))
+* **ffe-datepicker:** fix pseudo-class ([cd38334](https://github.com/SpareBank1/designsystem/commit/cd3833475f7bdfb1832120807f16119c80627748)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
+* **ffe-datepicker:** fix text zoom ([ca319a7](https://github.com/SpareBank1/designsystem/commit/ca319a7a4d2ee3b3ef9dbfbe2b86bf8673b8433e))
+* **ffe-datepicker:** Fjern unødvendig z-index ([68152f1](https://github.com/SpareBank1/designsystem/commit/68152f18f6305f995e1d3aaa3fd7cd61e2a514b3))
+* **ffe-datepicker:** fjerner ubrukt import ([dca23e4](https://github.com/SpareBank1/designsystem/commit/dca23e4e57a121629f10309e50272034e3bc91fa))
+* **ffe-datepicker:** Highlight active datefield ([364b068](https://github.com/SpareBank1/designsystem/commit/364b06809018209e75600483b4cd78caad83c1fc))
+* **ffe-datepicker:** hovering styles only when using pointer/mouse ([010d540](https://github.com/SpareBank1/designsystem/commit/010d540e19daa3ea0774414e85dcd5d59beaa82c))
+* **ffe-datepicker:** icons colors and text contrast ([61aa942](https://github.com/SpareBank1/designsystem/commit/61aa94276b21ccfa811f59156a8cc48d3de4b207))
+* **ffe-datepicker:** legg til min-høyde ([fa59c22](https://github.com/SpareBank1/designsystem/commit/fa59c2226b0d66b65da95a8d8a0310c66a8410b1))
+* **ffe-datepicker:** legger til tom linje for å fikse stylelint-feil ([d631d37](https://github.com/SpareBank1/designsystem/commit/d631d374232a1b1d2d4583706dce037a08baec18))
+* **ffe-datepicker:** Make calendar icon clickable on Android ([0c884b4](https://github.com/SpareBank1/designsystem/commit/0c884b480ac74d1b354a0015006cce3ea3821838))
+* **ffe-datepicker:** remove import of ffe-form ([b759db0](https://github.com/SpareBank1/designsystem/commit/b759db0f38152b47121f59b6547d5e43fd7510b6))
+* **ffe-datepicker:** remove main entry field from package.json ([59a8935](https://github.com/SpareBank1/designsystem/commit/59a89358ebec652b3bd82ea74f99934ff4d62d3b))
+* **ffe-datepicker:** replace hardcoded spacing with variables ([3f51706](https://github.com/SpareBank1/designsystem/commit/3f51706b69491cd5b545cf6be494f790f3cee740))
+* **ffe-datepicker:** retter farger på datepicker-input ([9a8f706](https://github.com/SpareBank1/designsystem/commit/9a8f7068f2265e72df0a6642025f45e04aee7fa9))
+* **ffe-datepicker:** Revert changes to z-index, and add pointer-events: none to fix issues with Android ([6f7ac39](https://github.com/SpareBank1/designsystem/commit/6f7ac394e7d9b33c33b6934103adcf5a68d7d3a3))
+* **ffe-datepicker:** riktig border på hover når knapp har fokus ([f5b719b](https://github.com/SpareBank1/designsystem/commit/f5b719bd9675fcd381cbdf6568383a4ab54a1ac3))
+
+
+### chore
+
+* add @sb1/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4a5f8f0b0d881dc126764478e82533e873))
+
+
+* feat(ffe-datepicker)!: nye fargevariabler ([28d62b7](https://github.com/SpareBank1/designsystem/commit/28d62b706aa34e5d96f1837caf3437db78e7ede9))
+* feat(ffe-datepicker)!: add semantic colors to components ([d07bae8](https://github.com/SpareBank1/designsystem/commit/d07bae8600284a2014c3768ec80f34347ef5aa46))
+
+
+### Features
+
+* **ffe-datepciker:** modernisering av datepicker utseende ([e513a2f](https://github.com/SpareBank1/designsystem/commit/e513a2f14c171aff218d9e667700886ab350f36d))
+* **ffe-datepicker-react:** add dropdown for year and month in calendar ([8a5f826](https://github.com/SpareBank1/designsystem/commit/8a5f8262faa0587e1cb7972ce48bad69e4fd5b32))
+* **ffe-datepicker:** add :host for shadow dom support ([83fed60](https://github.com/SpareBank1/designsystem/commit/83fed60f275cbcb1a463d6e5923133211f72c1b4))
+* **ffe-datepicker:** Add full width style for datepicker and dateinput ([df2f356](https://github.com/SpareBank1/designsystem/commit/df2f356c1b1ed63f34421127214012e40b4ad352))
+* **ffe-datepicker:** add semantic colors to components ([e736678](https://github.com/SpareBank1/designsystem/commit/e7366780b5cce353dd9676024769b64d0ed45c50))
+* **ffe-datepicker:** added darkmode styling overrides ([5d95a2b](https://github.com/SpareBank1/designsystem/commit/5d95a2bfd2d1aece731483fb9f16a2e37969ff4d))
+* **ffe-datepicker:** Make calendar readable for screenreaders ([6a9d416](https://github.com/SpareBank1/designsystem/commit/6a9d4166d31a1fd86c563c6cf2f7555746547ee7))
+* **ffe-datepicker:** nye darkmodefarger fra core, nye fargevariabler og hvit bakgrunn på accent context. Oppdatert styling. ([f40c680](https://github.com/SpareBank1/designsystem/commit/f40c6805bad3dcf6b813e735d79b0dbed4ef94ee))
+* **ffe-datepicker:** nytt format på datepicker input ([111330d](https://github.com/SpareBank1/designsystem/commit/111330d7b36678efad4b5d150c37ef8c3cf1f4ed))
+* **ffe-datepicker:** oppdaterte farger iht ny profil ([40be92e](https://github.com/SpareBank1/designsystem/commit/40be92eeda6efbe645009607ff610e88711b8bae))
+* **ffe-datepicker:** regard-color-scheme-preference for darkmode ([9ce7e54](https://github.com/SpareBank1/designsystem/commit/9ce7e549d8e5c3b133774288b0f6acf640387c12))
+* **ffe-datepicker:** revert semantic colors to components ([a05c5ee](https://github.com/SpareBank1/designsystem/commit/a05c5ee2cedc18624174aeb544e9e01608815380))
+* **ffe-datepicker:** støtte for theming ([039288b](https://github.com/SpareBank1/designsystem/commit/039288be69d54a21c24c8d624443785a073a8cc0))
+* **ffe-datepicker:** tilbyr kompilert css i tillegg til less ([ef1f6a9](https://github.com/SpareBank1/designsystem/commit/ef1f6a9feeed44bba1077c700a51a02fac744c7e))
+* **ffe-datepicker:** update internal dependencies ([54ac0d4](https://github.com/SpareBank1/designsystem/commit/54ac0d40eb3fe5d96340682fef95738c8d1290d1))
+
+
+### BREAKING CHANGES
+
+* Breaking pga. oppdateringer i ffe-core som fjerner noen fargevariabler og legger til nye fargevariabler. Se change log
+https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs
+* Add semantic colors
+* **ffe-datepicker:** "native" class to get dark mode
+is not supported anymore.
+
+Use class "regard-color-scheme-preference" on an
+element wrapping the components.
+* **ffe-datepicker:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+* **ffe-datepicker:** Makes the styling packages @sb1/ffe-form and
+@sb1/ffe-datepicker required dependencies and removes these as peer
+dependencies.
+* **ffe-datepicker:** visuelle endringer i komponenten kan medføre regresjonsfeil
+* **ffe-datepicker:** Improve usability of datepicker.
+
+This commit separates date-input and calendar-button to improve accessibility
+* **ffe-datepicker:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+* **ffe-datepicker:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+
+
+
+
+
+## [15.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@15.0.7...@sb1/ffe-datepicker@15.0.8) (2025-09-08)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+
+
+
+
 ## [15.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@15.0.6...@sb1/ffe-datepicker@15.0.7) (2025-08-29)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
