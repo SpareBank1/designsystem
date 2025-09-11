@@ -8,6 +8,10 @@ Denne siden lister breaking changes og større endringer i designsystemet. For a
 
 F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
 
+## 2025 - September - Ny komponent: TextField
+
+Vi har laget en ny komponent, `<TextField>`. Dette er en avart av `<Input>`, som er laget for å støtte affikser (prefix og suffix) i input-feltet - funksjonalitet som har vært etterspurt av flere team. Dette er ikke er mulig å legge til i dagens implementasjon av `<Input>` uten en større omskrivning med breaking changes, noe som i tillegg ville påvirket andre komponenter som avhenger av `<Input>`.
+
 ## 2025 - September - Ett versjonsnummer for alle pakker og justering av darkmode bakgrunnsfarger
 Fra og med denne versjonen (100.0.0) vil alle pakker i designsystemet ha samme versjonsnummer.
 Dette er et mellomsteg før vi går over til én pakke for hele designsystemet.
@@ -24,7 +28,6 @@ Det er ikke gjort noen endringer i koden eller på variabelnavn, det er kun farg
     src="./images/background-colors.png"
     style={{ maxHeight: '400px', marginBottom: '50px' }}
 />
-
 
 ## 2025 - Juli - Oppdatering av semantiske farger
 
@@ -54,23 +57,23 @@ Disse må skiftes ut med farger fra context laget som dere finner på [siden om 
 
 #### Foreground
 
-`--ffe-color-foreground-on-fill-default` erstattes med `--ffe-color-foreground-inverse` <br/>
+`--ffe-color-foreground-on-fill-default` erstattes med `--ffe-color-foreground-inverse`
 `--ffe-color-foreground-on-fill-inverse` erstattes med `--ffe-color-foreground-default`
 
 #### Fill
 
-`--ffe-color-fill-primary-hover` erstattes med `--ffe-color-fill-primary-default-hover` <br/>
+`--ffe-color-fill-primary-hover` erstattes med `--ffe-color-fill-primary-default-hover`
 `--ffe-color-fill-primary-pressed` erstattes med `--ffe-color-fill-primary-default-pressed`
 
 #### Border
 
-Fjernet: <br/>
-`--ffe-color-border-secondary-*` <br/>
+Fjernet: 
+`--ffe-color-border-secondary-*` 
 `--ffe-color-border-tertiary-*`
 
-bruk <br/>
-`--ffe-color-border-primary-default` <br/>
-`--ffe-color-border-primary-subtle` <br/>
+bruk 
+`--ffe-color-border-primary-default` 
+`--ffe-color-border-primary-subtle` 
 `--ffe-color-border-primary-emphasis`
 i stedet
 
@@ -78,10 +81,10 @@ i stedet
 
 Alle skjemaelementer har nå fått en gul focus-border. Komponentene blir nå lettere å se for brukere med nedsatt synsevne, og fokus-stilen fungerer på både hvit og blå bakgrunn (accent context).
 
-Alle skjemaelementer bruker også nå egne input-farger <br />
-`--ffe-color-component-form-input-fill-default` <br />
-`--ffe-color-component-form-input-foreground-default` <br />
-`--ffe-color-component-form-input-foreground-subtle` <br />
+Alle skjemaelementer bruker også nå egne input-farger
+`--ffe-color-component-form-input-fill-default`
+`--ffe-color-component-form-input-foreground-default`
+`--ffe-color-component-form-input-foreground-subtle`
 `--ffe-color-component-form-input-border-active`
 
 Checkbox (Ved keyboard focus)
@@ -166,7 +169,7 @@ Tooltip (ny farge)
 />
 
 
-Obs: `--ffe-color-border-interactive-focus` får ny farge, og kan ikke brukes til active-states lenger.  <br/>
+Obs: `--ffe-color-border-interactive-focus` får ny farge, og kan ikke brukes til active-states lenger. 
 `component-input-border-active` kan brukes til det.
 
 
@@ -184,24 +187,24 @@ Obs: `--ffe-color-border-interactive-focus` får ny farge, og kan ikke brukes ti
     alt="image"
     src="https://github.com/user-attachments/assets/c1b8ef7e-da7e-440a-b87f-b8509a4dfb2e"
 />
-<br/>
-<br/>
+
+
 
 ### Nye fargevariabler
-Vi har også lagt til flere farger. Det har blitt flere neutral-varianter:  <br/>
-`--ffe-color-surface-neutral-*` <br/>
-`--ffe-color-fill-neutral-default-*`  <br/>
-`--ffe-color-fill-neutral-subtle-*`  <br/>
-`--ffe-color-fill-neutral-extra-subtle-*`  <br/>
+Vi har også lagt til flere farger. Det har blitt flere neutral-varianter:  
+`--ffe-color-surface-neutral-*` 
+`--ffe-color-fill-neutral-default-*`  
+`--ffe-color-fill-neutral-subtle-*`  
+`--ffe-color-fill-neutral-extra-subtle-*`  
 i tillegg til input-variabler som nevnt over. 
- <br/>
+ 
 
  ## 2025 - Mars - Bølgen trukket ut i egen pakke
  Bølgen, `Wave`, som tidligere har ligget i `ffe-core-react` er nå deprecated fra core 
  og flyttet ut i egne pakker - `ffe-shapes-react` og `ffe-shapes`.
  Dette gjør det lettere å vedlikeholde og oppdatere komponenten. 
  Den har også fått noen nye endringer i forbindelse med oppdatering av de semantiske fargene: 
- <br/>
+ 
  Ikke lenger tilgjengelig: 
 - `color`
 - `darkModeColor`
