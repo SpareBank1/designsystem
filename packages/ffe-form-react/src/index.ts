@@ -24,5 +24,6 @@ export {
 } from './RadioButtonInputGroup';
 export { RadioSwitch, RadioSwitchProps } from './RadioSwitch';
 export { TextArea, TextAreaProps } from './TextArea';
+export { TextField, TextFieldProps } from './TextField';
 export { Tooltip, TooltipProps } from './Tooltip';
 export { ToggleSwitch, ToggleSwitchProps } from './ToggleSwitch';
