@@ -19,6 +19,7 @@ import {
     RadioSwitch,
     TextArea,
     ToggleSwitch,
+    TextField,
 } from '@sb1/ffe-form-react';
 import { formatNumber } from '@sb1/ffe-formatters';
 import { GridCol, GridRow } from '@sb1/ffe-grid-react';
@@ -146,7 +147,7 @@ export const PaymentForm = () => {
                     </GridRow>
 
                     <GridRow>
-                        <GridCol sm={12} md={8} lg={6}>
+                        <GridCol sm={12} md={8} lg={12}>
                             <InputGroup
                                 label="Mottakers kontonummer"
                                 fieldMessage={isAllError ? <ErrorFieldMessage>Kontonummer må fylles ut</ErrorFieldMessage> : undefined}
@@ -162,13 +163,14 @@ export const PaymentForm = () => {
                                 />
                             </InputGroup>
                         </GridCol>
-                        <GridCol sm={12} md={8} lg={6}>
+                        <GridCol sm={12} md={8} lg={3}>
                             <InputGroup
                                 label="Mottakers navn"
                                 fieldMessage={isAllError ? <ErrorFieldMessage>Navn må fylles ut</ErrorFieldMessage> : undefined}
                                 tooltip="Navnet på mottakeren av betalingen. Dette kan være en person eller en bedrift."
                             >
                                 <Input
+                                    id="mottaker-navn"
                                     type="text"
                                     value={name}
                                     onChange={e => {
@@ -177,6 +179,14 @@ export const PaymentForm = () => {
                                     }}
                                     aria-invalid={isAllError}
                                 />
+                            </InputGroup>
+                        </GridCol>
+                        <GridCol sm={12} lg={4}>
+                            <InputGroup
+                                label="Hvor mye penger vil du ha?"
+                                fieldMessage={isAllError ? <ErrorFieldMessage>Du må ha litt penger i alle fall</ErrorFieldMessage> : undefined}
+                            >
+                                <TextField suffix="kr" textRightAlign={true} />
                             </InputGroup>
                         </GridCol>
                     </GridRow>
@@ -265,6 +275,25 @@ export const PaymentForm = () => {
                                     dropdownAttributes={['label']}
                                     searchAttributes={['value', 'label']}
                                 />
+                            </InputGroup>
+                        </GridCol>
+                    </GridRow>
+
+                    <GridRow>
+                        <GridCol sm={12} md={8} lg={3}>
+                            <InputGroup
+                                label="Din egen nettside"
+                                fieldMessage={isAllError ? <ErrorFieldMessage>Du må ha en nettside</ErrorFieldMessage> : undefined}
+                            >
+                                <TextField prefix="https://" />
+                            </InputGroup>
+                        </GridCol>
+                        <GridCol sm={12} md={8} lg={3}>
+                            <InputGroup
+                                label="Hvor mye penger vil du ha?"
+                                fieldMessage={isAllError ? <ErrorFieldMessage>Du må ha litt penger i alle fall</ErrorFieldMessage> : undefined}
+                            >
+                                <TextField suffix="kr" textRightAlign={true} />
                             </InputGroup>
                         </GridCol>
                     </GridRow>
@@ -426,7 +455,7 @@ export const PaymentForm = () => {
                     <GridRow>
                         <GridCol>
                             <SmallText>Fremgang</SmallText>
-                            <Progressbar value="50" max={100} success={true} aria-label='Fremgang'/>
+                            <Progressbar value="50" max={100} success={true} aria-label='Fremgang' />
                         </GridCol>
                         <GridCol>
                             <ButtonGroup className="mt-4" ariaLabel="Betalingshandlinger">
