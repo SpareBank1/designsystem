@@ -21,6 +21,7 @@
         border: var(--ffe-g-border-width) solid var(--ffe-v-accordion-border-color);
         outline: var(--ffe-g-outline-width) solid transparent;
         outline-offset: var(--ffe-g-outline-offset);
+        overflow: hidden;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
@@ -59,12 +60,7 @@
             cursor: pointer;
             outline: none;
             color: var(--ffe-v-accordion-header-text-color);
-            border-radius: 16px;
             transition: background-color var(--ffe-transition-duration) var(--ffe-ease);
-
-            &--open {
-                border-radius: 16px 16px 0 0;
-            }
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
