@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-vite-less",
-  "version": "100.0.3",
+  "version": "100.0.4",
   "description": "Vite plugin for automatically injecting FFE LESS imports",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.0.4](https://github.com/SpareBank1/designsystem/compare/v100.0.3...v100.0.4) (2025-09-18)
+
+
+### Bug Fixes
+
+* **ffe-accordion:** Unngå plutselig endring av border-radius på heading-button ([ba16dc1](https://github.com/SpareBank1/designsystem/commit/ba16dc1465446c48324630f61f488fdb921229c5))
+
+
+
+
+
 ## [100.0.3](https://github.com/SpareBank1/designsystem/compare/v100.0.2...v100.0.3) (2025-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
