@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.1.0](https://github.com/SpareBank1/designsystem/compare/v100.0.4...v100.1.0) (2025-09-19)
+
+
+### Bug Fixes
+
+* **ffe-chips:** legger til transition på outline ([60ce92a](https://github.com/SpareBank1/designsystem/commit/60ce92a4573a5e861c8fdf18843fdf5b9d3bdae6))
+* **ffe-datepicker:** smoothere transition på outline ([6c8065a](https://github.com/SpareBank1/designsystem/commit/6c8065a37778d061cb63c0c1116e43f62f611230))
+* **ffe-searchable-dropdown-react:** legger til transition på outline ([11e02bf](https://github.com/SpareBank1/designsystem/commit/11e02bff8deddfc4c69825febccc5b106be46444))
+
+
+### Features
+
+* **ffe-form-react:** ny TextField-komponent ([23f10b4](https://github.com/SpareBank1/designsystem/commit/23f10b4a9f5fb152cbc76fc60292eac86c535936))
+* **ffe-form:** ny TextField-komponent ([91ec94f](https://github.com/SpareBank1/designsystem/commit/91ec94fdd746b3a16a37db08340e82457876de10))
+
+
+
+
+
 ## [100.0.4](https://github.com/SpareBank1/designsystem/compare/v100.0.3...v100.0.4) (2025-09-18)
 
 

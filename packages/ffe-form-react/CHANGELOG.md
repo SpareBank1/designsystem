@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.1.0](https://github.com/SpareBank1/designsystem/compare/v100.0.4...v100.1.0) (2025-09-19)
+
+
+### Features
+
+* **ffe-form-react:** ny TextField-komponent ([23f10b4](https://github.com/SpareBank1/designsystem/commit/23f10b4a9f5fb152cbc76fc60292eac86c535936))
+
+
+
+
+
 ## [100.0.4](https://github.com/SpareBank1/designsystem/compare/v100.0.3...v100.0.4) (2025-09-18)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

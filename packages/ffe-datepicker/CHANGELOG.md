@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.1.0](https://github.com/SpareBank1/designsystem/compare/v100.0.4...v100.1.0) (2025-09-19)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** smoothere transition på outline ([6c8065a](https://github.com/SpareBank1/designsystem/commit/6c8065a37778d061cb63c0c1116e43f62f611230))
+
+
+
+
+
 ## [100.0.4](https://github.com/SpareBank1/designsystem/compare/v100.0.3...v100.0.4) (2025-09-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
