@@ -9,11 +9,9 @@
         var(--ffe-color-border-primary-default);
     background-color: var(--ffe-color-surface-primary-default);
     color: var(--ffe-color-foreground-default);
-    transition:
-        color var(--ffe-transition-duration) var(--ffe-ease),
-        border var(--ffe-transition-duration) var(--ffe-ease),
-        box-shadow var(--ffe-transition-duration) var(--ffe-ease),
-        background-color var(--ffe-transition-duration) var(--ffe-ease);
+    outline: var(--ffe-g-outline-width) solid transparent;
+    outline-offset: var(--ffe-g-outline-offset);
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     font-size: var(--ffe-fontsize-form-input);
 
     @media (hover: hover) and (pointer: fine) {
@@ -30,9 +28,7 @@
             var(--ffe-color-component-form-input-border-active);
         box-shadow: var(--ffe-g-border-focus-box-shadow)
             var(--ffe-color-component-form-input-border-active);
-        outline: var(--ffe-g-outline-width) solid
-            var(--ffe-color-border-interactive-focus);
-        outline-offset: var(--ffe-g-outline-offset);
+        outline-color: var(--ffe-color-border-interactive-focus);
     }
 
     &::placeholder {
