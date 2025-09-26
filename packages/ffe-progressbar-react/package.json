@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-progressbar-react",
-    "version": "100.1.0",
+    "version": "100.1.1",
     "description": "React implementation of ffe-progressbar component",
     "keywords": [
         "ffe",
@@ -31,7 +31,7 @@
     },
     "dependencies": {
         "@sb1/ffe-core": "^32.0.5",
-        "@sb1/ffe-progressbar": "^100.1.0",
+        "@sb1/ffe-progressbar": "^100.1.1",
         "classnames": "^2.5.1"
     },
     "peerDependencies": {
