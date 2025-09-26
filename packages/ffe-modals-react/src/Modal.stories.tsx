@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import { Modal, type ModalHandle } from './Modal';
-import { ModalBlock } from './ModalBlock';
-import type { StoryObj, Meta } from '@storybook/react';
 import {
     ActionButton,
     ButtonGroup,
     SecondaryButton,
 } from '@sb1/ffe-buttons-react';
 import { Heading2, Paragraph } from '@sb1/ffe-core-react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useRef } from 'react';
+import { Modal, type ModalHandle } from './Modal';
+import { ModalBlock } from './ModalBlock';
 
 const meta: Meta<typeof Modal> = {
     title: 'Komponenter/Modals/Modal',
@@ -93,7 +93,7 @@ export const Custom: Story = {
                         style={{
                             height: 150,
                             width: '100%',
-                            background: '#d8e9f2',
+                            background: 'var(--ffe-color-surface-secondary-default)',
                         }}
                     />
                     <ModalBlock>

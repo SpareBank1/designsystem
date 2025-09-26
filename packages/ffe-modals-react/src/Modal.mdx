@@ -1,7 +1,7 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
-import * as ModalStories from './Modal.stories.tsx';
+import { Canvas, Controls, Meta } from '@storybook/blocks';
 import { InstallImport } from '../../../documentation/components/InstallImport';
 import dependencies from '../ffe-dependencies';
+import * as ModalStories from './Modal.stories.tsx';
 
 <Meta of={ModalStories} />
 
@@ -29,15 +29,26 @@ For å lukke eller åpne en modal brukes `ModalHandle`. Innhold kan plasseres i 
 <Canvas of={ModalStories.Standard} />
 <Controls of={ModalStories.Standard} />
 
-## Tilpasset bakgrunn
+## Dark mode
 
-<Canvas of={ModalStories.Custom} />
+Modalen legger seg utenfor resten av sidens innhold og må derfor håndteres separat om man ønsker å støtte dark mode.
+Legg til classen `regard-color-scheme-preference` i `className` på `<Modal/>` der du ønsker at modalen skal følge brukerens fargepreferanse.
 
-## Utsene i dark modalen
-
-Modalen følger css classen `regard-color-scheme-preference` og vil se slik ut i dark mode.
+``` 
+<Modal
+    ariaLabelledby="modal-heading"
+    className="regard-color-scheme-preference"
+>
+...
+</Modal>
+```
 
 <Canvas of={ModalStories.DarkMode} />
+
+## Tilpasset bakgrunn
+Her er et eksempel på en modal med en egen bakgrunnsfarge.
+
+<Canvas of={ModalStories.Custom} />
 
 ## Veiledning for bruk
 
