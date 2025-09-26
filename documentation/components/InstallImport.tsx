@@ -77,6 +77,9 @@ const packageStyles = {
     '@sb1/ffe-tags': {
         less: '@sb1/ffe-tags/less/tag',
     },
+    '@sb1/ffe-progressbar': {
+        less: '@sb1/ffe-progressbar/less/progressbar',
+    },
 };
 
 type Props = {
