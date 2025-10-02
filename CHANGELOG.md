@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.2.0](https://github.com/SpareBank1/designsystem/compare/v100.1.1...v100.2.0) (2025-10-02)
+
+
+### Features
+
+* **ffe-feedback-react:** new callback: onFinish ([7b1da42](https://github.com/SpareBank1/designsystem/commit/7b1da42052dc0e25a9e973db40ebcda70e424ba5))
+
+
+
+
+
 ## [100.1.1](https://github.com/SpareBank1/designsystem/compare/v100.1.0...v100.1.1) (2025-09-26)
 
 **Note:** Version bump only for package @sb1/ffe

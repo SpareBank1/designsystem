@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-symbols-react",
-    "version": "100.1.1",
+    "version": "100.2.0",
     "description": "React-komponenter for Material Symbols tilpasset Sb1 sine behov",
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -23,12 +23,12 @@
     },
     "homepage": "https://github.com/SpareBank1/designsystem#readme",
     "dependencies": {
-        "@sb1/ffe-symbols": "^100.1.1",
+        "@sb1/ffe-symbols": "^100.2.0",
         "classnames": "^2.3.2",
         "react": "^18.2.0"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.1.1",
+        "@sb1/ffe-buildtool": "^100.2.0",
         "eslint": "^9.22.0"
     },
     "publishConfig": {
