@@ -15,6 +15,7 @@ export interface FeedbackProps {
     locale?: Locale;
     onThumbClick: (thumb: Thumb) => void;
     onFeedbackSend: (feedbackText: string, consent?: boolean) => void;
+    onFinish?: () => void;
     bgColor?: BgColor;
     contactLink?: FeedbackExpandedProps['contactLink'];
     texts?: {
@@ -30,6 +31,7 @@ export const Feedback = ({
     locale = 'nb',
     onThumbClick,
     onFeedbackSend,
+    onFinish,
     bgColor,
     contactLink,
     texts,
@@ -68,6 +70,8 @@ export const Feedback = ({
         feedbackSentRef.current?.focus();
         if (feedbackText && feedbackText.length > 0) {
             onFeedbackSend(feedbackText, consentGiven);
+        } else if (onFinish) {
+            onFinish();
         }
     };
 

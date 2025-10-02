@@ -143,6 +143,27 @@ describe('Feedback Component', () => {
         expect(onFeedbackSendMock).toHaveBeenCalledWith('Test feedback', true);
     });
 
+    it('should trigger onFinish if no text', () => {
+        const onFeedbackSendMock = jest.fn();
+        const onFinishMock = jest.fn();
+        render(
+            <Feedback
+                onThumbClick={() => {}}
+                onFeedbackSend={onFeedbackSendMock}
+                onFinish={onFinishMock}
+            />,
+        );
+
+        const thumbButton = screen.getByLabelText('Gi tommel opp');
+        fireEvent.click(thumbButton);
+
+        const finishButton = screen.getByText('Avslutt');
+        fireEvent.click(finishButton);
+
+        expect(onFeedbackSendMock).not.toHaveBeenCalled();
+        expect(onFinishMock).toHaveBeenCalled()
+    });
+
     it('should render with custom heading', () => {
         render(
             <Feedback
