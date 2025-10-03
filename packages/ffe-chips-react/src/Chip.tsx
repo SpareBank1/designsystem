@@ -45,7 +45,7 @@ function ChipWithForwardRef<As extends ElementType>(
         <span
             className={classNames(
                 'ffe-chip__label',
-                size === 'sm' ? 'ffe-small-text' : 'ffe-body-paragraph',
+                size === 'sm' && 'ffe-chip__label--sm',
             )}
         >
             {children}
