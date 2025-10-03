@@ -7,7 +7,7 @@ import { CellContent } from './CellContent';
 
 export interface TableRowExpandableProps
     extends Omit<React.ComponentPropsWithoutRef<'tr'>, 'onClick'> {
-    expandContent: React.ReactNode;
+    expandContent: React.ReactNode | ((setIsOpen: React.Dispatch<React.SetStateAction<boolean>>) => React.ReactNode);
     locale?: 'nb' | 'nn' | 'en';
     isDefaultOpen?: boolean;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -104,7 +104,7 @@ export const TableRowExpandable = React.forwardRef<
                             onRest={() => setIsAnimating(false)}
                         >
                             <CellContent className="ffe-table__expand-content">
-                                {!expandIdHidden && expandContent}
+                                {!expandIdHidden && (typeof expandContent === "function" ? expandContent(setIsOpen) : expandContent)}
                             </CellContent>
                         </Collapse>
                     </td>

@@ -83,4 +83,34 @@ describe('<TableRowExpandable />', () => {
         expect(onClick).toHaveBeenCalledTimes(1);
         jest.useRealTimers();
     });
+
+    it('should set open from parent', async () => {
+        const onClick = jest.fn();
+        const user = userEvent.setup({ delay: null });
+        jest.useFakeTimers();
+
+        const expandContent = (setIsOpen : React.Dispatch<React.SetStateAction<boolean>> ) => {
+            return <div>expand - <button onClick={() => setIsOpen(false)}>close</button></div>;
+        }
+
+        render(
+            <table>
+                <tbody>
+                <TableRowExpandable
+                    onClick={onClick}
+                    expandContent={(setIsOpen) => expandContent(setIsOpen)}
+                    isDefaultOpen={true}
+                />
+                </tbody>
+            </table>
+        );
+
+        const expandButton = screen.getByRole('button', { name: 'Vis mindre' });
+        expect(expandButton.getAttribute('aria-expanded')).toBe('true');
+
+        await user.click(screen.getByRole('button', { name: 'close' }));
+
+        expect(expandButton.getAttribute('aria-expanded')).toBe('false');
+        jest.useRealTimers();
+    });
 });
