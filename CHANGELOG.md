@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.3.0](https://github.com/SpareBank1/designsystem/compare/v100.2.1...v100.3.0) (2025-10-06)
+
+
+### Features
+
+* **ffe-tables-react:** expandContent kan sendes inn som en funksjon som får tilgang til setIsOpen fra TableRowExpandable ([1e1963e](https://github.com/SpareBank1/designsystem/commit/1e1963eb1ebd045bedd1fa946da3d922b332851c))
+
+
+
+
+
 ## [100.2.1](https://github.com/SpareBank1/designsystem/compare/v100.2.0...v100.2.1) (2025-10-06)
 
 
