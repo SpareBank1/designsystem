@@ -6,7 +6,7 @@ import { getUniqueFileName } from './getUniqueFileName';
 import { Checkbox, Input, InputGroup } from '@sb1/ffe-form-react';
 
 const meta: Meta<typeof FileUpload> = {
-    title: 'Komponenter/File-upload/FileUpload',
+    title: 'Komponenter/FileUpload/FileUpload',
     component: FileUpload,
 };
 export default meta;

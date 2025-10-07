@@ -6,7 +6,7 @@ import type { Account } from '../types';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
 
 const meta: Meta<typeof AccountSelectorMulti> = {
-    title: 'Komponenter/Account-selector/AccountSelectorMulti',
+    title: 'Komponenter/AccountSelector/AccountSelectorMulti',
     component: AccountSelectorMulti,
 };
 export default meta;
