@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.3.1](https://github.com/SpareBank1/designsystem/compare/v100.3.0...v100.3.1) (2025-10-16)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Bruk className fra props ([ad2ac39](https://github.com/SpareBank1/designsystem/commit/ad2ac39ecd2ba43014de0e6e11a00f6b89d7180f))
+
+
+
+
+
 # [100.3.0](https://github.com/SpareBank1/designsystem/compare/v100.2.1...v100.3.0) (2025-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
