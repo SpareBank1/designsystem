@@ -95,6 +95,7 @@ export const AccountSelectorMulti = <T extends Account = Account>({
         <SearchableDropdownMultiSelect<T>
             id={id}
             labelledById={labelledById}
+            className={className}
             inputProps={inputProps}
             dropdownAttributes={
                 showBalance
