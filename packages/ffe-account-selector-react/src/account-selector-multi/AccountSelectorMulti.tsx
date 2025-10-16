@@ -64,6 +64,12 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
      * Use the `ffe-accent-color` class on the component or on the container of the component instead
      * [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) */
     onColoredBg?: never;
+    /**
+     * Using this will give a text "X selected" instead of chips,
+     * after a certain number of selected items.
+     * If you always want "X selected" showing, pass in 0
+     */
+    showNumberSelectedAfter?: number;
 }
 
 export const AccountSelectorMulti = <T extends Account = Account>({
@@ -85,6 +91,7 @@ export const AccountSelectorMulti = <T extends Account = Account>({
     onOpen,
     onClose,
     maxRenderedDropdownElements,
+    showNumberSelectedAfter,
     ...rest
 }: AccountSelectorMultiProps<T>) => {
     const formatter = formatAccountNumber
@@ -134,6 +141,7 @@ export const AccountSelectorMulti = <T extends Account = Account>({
             onOpen={onOpen}
             onClose={onClose}
             maxRenderedDropdownElements={maxRenderedDropdownElements}
+            showNumberSelectedAfter={showNumberSelectedAfter}
             isEqual={(accountA, accountB) =>
                 accountA.accountNumber === accountB.accountNumber
             }
