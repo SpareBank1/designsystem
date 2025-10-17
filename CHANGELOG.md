@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.4.0](https://github.com/SpareBank1/designsystem/compare/v100.3.1...v100.4.0) (2025-10-17)
+
+
+### Features
+
+* **account-selector-multi:** Legg til showNumberSelectedAfter ([1d36dee](https://github.com/SpareBank1/designsystem/commit/1d36dee83b25c84176f0effe4fcdb0bde65e3531))
+
+
+
+
+
 ## [100.3.1](https://github.com/SpareBank1/designsystem/compare/v100.3.0...v100.3.1) (2025-10-16)
 
 

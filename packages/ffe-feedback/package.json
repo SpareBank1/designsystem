@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-feedback",
-    "version": "100.3.1",
+    "version": "100.4.0",
     "description": "Feedback component for ffe",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -20,11 +20,11 @@
         "build": "lessc less/feedback.less css/feedback.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.3.1",
+        "@sb1/ffe-core": "^100.4.0",
         "@sb1/ffe-form": "^25.0.2"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.3.1"
+        "@sb1/ffe-buildtool": "^100.4.0"
     },
     "publishConfig": {
         "access": "public"
