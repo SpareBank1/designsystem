@@ -103,7 +103,7 @@
         "secondary": {
           "subtlest": {
             "$type": "color",
-            "$value": "{color.frost.25}",
+            "$value": "{color.frost.50}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -115,7 +115,7 @@
           },
           "subtler": {
             "$type": "color",
-            "$value": "{color.frost.50}",
+            "$value": "{color.frost.75}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -201,7 +201,7 @@
         "tertiary": {
           "subtlest": {
             "$type": "color",
-            "$value": "{color.syrin.25}",
+            "$value": "{color.syrin.50}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -213,7 +213,7 @@
           },
           "subtler": {
             "$type": "color",
-            "$value": "{color.syrin.50}",
+            "$value": "{color.syrin.75}",
             "$description": "",
             "$extensions": {
               "com.figma": {

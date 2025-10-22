@@ -399,7 +399,7 @@
         },
         "subtle": {
           "$type": "color",
-          "$value": "{color.default.brand.primary.subtlest}",
+          "$value": "{color.default.brand.primary.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -414,7 +414,7 @@
         },
         "subtle-hover": {
           "$type": "color",
-          "$value": "{color.default.brand.primary.subtler}",
+          "$value": "{color.default.brand.primary.subtle}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -429,7 +429,7 @@
         },
         "subtle-pressed": {
           "$type": "color",
-          "$value": "{color.default.brand.primary.subtle}",
+          "$value": "{color.default.brand.primary.default}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -797,7 +797,7 @@
         },
         "info-subtle": {
           "$type": "color",
-          "$value": "{color.default.feedback.info.subtlest}",
+          "$value": "{color.default.feedback.info.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -827,7 +827,7 @@
         },
         "success-subtle": {
           "$type": "color",
-          "$value": "{color.default.feedback.success.subtlest}",
+          "$value": "{color.default.feedback.success.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -857,7 +857,7 @@
         },
         "warning-subtle": {
           "$type": "color",
-          "$value": "{color.default.feedback.warning.subtlest}",
+          "$value": "{color.default.feedback.warning.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -887,7 +887,7 @@
         },
         "critical-subtle": {
           "$type": "color",
-          "$value": "{color.default.feedback.critical.subtlest}",
+          "$value": "{color.default.feedback.critical.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {
@@ -917,7 +917,7 @@
         },
         "tip-subtle": {
           "$type": "color",
-          "$value": "{color.default.feedback.tip.sublest}",
+          "$value": "{color.default.feedback.tip.subtler}",
           "$description": "",
           "$extensions": {
             "com.figma": {

@@ -3886,9 +3886,7 @@
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": true,
-            "scopes": [
-              "ALL_FILLS"
-            ],
+            "scopes": [],
             "codeSyntax": {}
           }
         }
@@ -3900,9 +3898,7 @@
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": true,
-            "scopes": [
-              "ALL_FILLS"
-            ],
+            "scopes": [],
             "codeSyntax": {}
           }
         }
@@ -3914,9 +3910,7 @@
         "$extensions": {
           "com.figma": {
             "hiddenFromPublishing": true,
-            "scopes": [
-              "ALL_FILLS"
-            ],
+            "scopes": [],
             "codeSyntax": {}
           }
         }
