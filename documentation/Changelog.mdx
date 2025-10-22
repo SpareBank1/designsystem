@@ -8,6 +8,84 @@ Denne siden lister breaking changes og større endringer i designsystemet. For a
 
 F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
 
+## 2025 - Oktober - Justeringer i noen farger (liten endring) - 100.4.1
+Vi har gjort noen justeringer i fargene for å bedre kontrasten i enkelte tilfeller. I fargesystemet nå har vi et primitivt lag, et semantisk lag og et kontekstlag. 
+Det er fargene i kontekstlaget som brukes i komponentene og som dere har tilgang til. 
+
+Fargeendringene som er gjort i det semantiske laget (se nederst) får følger for disse variablene i kontekstlaget: 
+`--ffe-color-fill-secondary-subtle` og `--ffe-color-fill-tertiary-subtle`
+
+I tillegg er det gjort justeringer på disse fargene i kontekst-laget: 
+
+<table>
+<thead>
+<tr>
+<th>Variabel</th>
+<th>Endret fra</th>
+<th>Endret til</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ffe-color-fill-feedback-info-subtle</code></td>
+<td><code>default-feedback-info-subtlest</code></td>
+<td><code>-subtler</code></td>
+</tr>
+<tr>
+<td><code>--ffe-color-fill-feedback-success-subtle</code></td>
+<td><code>default-feedback-success-subtlest</code></td>
+<td><code>-subtler</code></td>
+</tr>
+<tr>
+<td><code>--ffe-color-fill-warning-info-subtle</code></td>
+<td><code>default-warning-info-subtlest</code></td>
+<td><code>-subtler</code></td>
+</tr>
+<tr>
+<td><code>--ffe-color-fill-critical-success-subtle</code></td>
+<td><code>default-feedback-critical-subtlest</code></td>
+<td><code>-subtler</code></td>
+</tr>
+<tr>
+<td><code>--ffe-color-fill-tip-success-subtle</code></td>
+<td><code>default-feedback-tip-subtlest</code></td>
+<td><code>-subtler</code></td>
+</tr>
+<tr>
+<td><code>ffe-color-fill-primary-subtle</code></td>
+<td><code>default-brand-primary-subtlest</code></td>
+<td><code>-subtler</code></td>
+</tr>
+<tr>
+<td><code>ffe-color-fill-primary-subtle-hover</code></td>
+<td><code>default-brand-primary-subtler</code></td>
+<td><code>-subtle</code></td>
+</tr>
+<tr>
+<td><code>ffe-color-fill-primary-subtle-pressed</code></td>
+<td><code>default-brand-primary-subtle</code></td>
+<td><code>-default</code></td>
+</tr>
+</tbody>
+</table>
+
+Dette får en veldig liten justering i disse komponentene:
+- Chips hover og pressed
+- Tabs hover og pressed
+- Spinner bakgrunnsfarge
+- Progressbar bar
+- Tags subtle
+- Datepicker bakgrunnsfarge på dato i inputfeltet
+- Tooltip bakgrunnsfarge
+
+Fargeendringene som er gjort i det semantsike laget er gjort på:
+- `ffe-color-default-brand-secondary-subtlest`
+- `ffe-color-default-brand-secondary-subtler`
+- `ffe-color-default-brand-tertiary-subtlest`
+- `ffe-color-default-brand-tertiary-subtler`
+
+Alle verdiene er veldig små justeringer, stort sett endret 25 hakk opp eller ned på en skala fra 0-1000.
+
 ## 2025 - September - Ny komponent: TextField
 
 Vi har laget en ny komponent, `<TextField>`. Dette er en avart av `<Input>`, som er laget for å støtte affikser (prefix og suffix) i input-feltet - funksjonalitet som har vært etterspurt av flere team. Dette er ikke er mulig å legge til i dagens implementasjon av `<Input>` uten en større omskrivning med breaking changes, noe som i tillegg ville påvirket andre komponenter som avhenger av `<Input>`.
