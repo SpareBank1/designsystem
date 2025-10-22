@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tags-react",
-    "version": "100.4.0",
+    "version": "100.4.1",
     "description": "React implementation of ffe-tags component",
     "keywords": [
         "ffe",
@@ -32,9 +32,9 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.4.0",
-        "@sb1/ffe-icons-react": "^100.4.0",
-        "@sb1/ffe-tags": "^100.4.0",
+        "@sb1/ffe-core": "^100.4.1",
+        "@sb1/ffe-icons-react": "^100.4.1",
+        "@sb1/ffe-tags": "^100.4.1",
         "classnames": "^2.5.1"
     },
     "peerDependencies": {

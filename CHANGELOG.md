@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.4.1](https://github.com/SpareBank1/designsystem/compare/v100.4.0...v100.4.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* **ffe-core:** fargejusteringer i noen få variabler ([04ed2a9](https://github.com/SpareBank1/designsystem/commit/04ed2a9b5bd11f6d4972b144f5fae18bc60e1364))
+* **ffe-datepicker:** oppdaterer date selected disabled farge ([eff7346](https://github.com/SpareBank1/designsystem/commit/eff73463a9626465f7903c631cb4aab1a4e8b2dc))
+
+
+
+
+
 # [100.4.0](https://github.com/SpareBank1/designsystem/compare/v100.3.1...v100.4.0) (2025-10-17)
 
 
