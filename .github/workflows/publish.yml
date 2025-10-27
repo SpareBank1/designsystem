@@ -9,6 +9,9 @@ jobs:
     publish:
         name: Build and publish npm packages with lerna
         runs-on: ubuntu-latest
+        permissions:
+          id-token: write  # Required for OIDC
+          contents: read
         steps:
             - uses: actions/checkout@v3
               with:
@@ -26,6 +29,10 @@ jobs:
               with:
                   node-version: 20
                   registry-url: 'https://registry.npmjs.org'
+
+            - name: Update npm
+              # npm 11.5.1 or later is necessary for trusted publishing with OIDC
+              run: npm install -g npm@latest
 
             - run: |
                   npm ci
