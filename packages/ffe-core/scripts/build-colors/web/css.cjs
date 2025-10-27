@@ -22,7 +22,7 @@ function generateCssColorFileContent(colors) {
 }
 
 
-/* dark mode accent når en overstyrer os/nettleser light/dark preferanse*/
+/* dark mode accent når en overstyrer os/nettleser light/dark preferanse */
 .ffe-dark,
 .ffe-dark .ffe-default-mode {
 ${Object.entries(colors.dark)
@@ -39,7 +39,7 @@ ${Object.entries(colors.dark)
     }
 }
 
-/* dark mode accent når en overstyrer os/nettleser light/dark preferanser*/
+/* dark mode accent når en overstyrer os/nettleser light/dark preferanser */
 .ffe-dark .ffe-accent-mode, .ffe-dark.ffe-accent-mode {
 ${Object.entries(colors.darkAccent)
     .map(([name, value]) => transformToCssProperty(name, value))
