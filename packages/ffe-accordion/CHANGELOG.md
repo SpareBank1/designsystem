@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.4.3](https://github.com/SpareBank1/designsystem/compare/v100.4.2...v100.4.3) (2025-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+
+
+
+
 ## [100.4.2](https://github.com/SpareBank1/designsystem/compare/v100.4.1...v100.4.2) (2025-10-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-grid",
-    "version": "100.4.2",
+    "version": "100.4.3",
     "description": "A grid component for use within the FFE framework",
     "keywords": [
         "ffe"
@@ -23,10 +23,10 @@
         "build": "lessc less/ffe-grid.less css/ffe-grid.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.4.2"
+        "@sb1/ffe-core": "^100.4.3"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.4.2"
+        "@sb1/ffe-buildtool": "^100.4.3"
     },
     "publishConfig": {
         "access": "public"
