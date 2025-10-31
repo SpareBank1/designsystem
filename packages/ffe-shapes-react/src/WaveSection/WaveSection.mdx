@@ -1,0 +1,93 @@
+import { CheckList, CheckListItem } from '@sb1/ffe-lists-react';
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks';
+import * as WaveSectionStories from './WaveSection.stories.tsx';
+
+<Meta of={WaveSectionStories} />
+
+# Bølge-seksjon
+
+Bølge-seksjonen er en komponent som legger til en bølgeformet dekorasjon mellom to seksjoner på en nettside.
+Bølge-seksjonen bidrar til å skape en mykere overgang mellom seksjoner og gir et mer organisk utseende.
+
+
+## Retningslinjer for bruk 
+Gjør: 
+<CheckList>
+    <CheckListItem>
+        Bruk `WaveSection` for å skille seksjoner på en side.
+    </CheckListItem>
+    <CheckListItem>
+        Hver side må ha en balanse av rette linjer og bølge. Unngå at man blir sjøsyk, men unngå for mange rette linjer. Forsøk 
+        å bevare en organisk følelse.
+    </CheckListItem>
+    <CheckListItem>
+        Hold deg til 1-3 bakgrunnsfarger per side. En typisk side kan ha 
+        bakgrunnsfarge `bg-subtle` og en `WaveSection` med farge `bg-default`.
+    </CheckListItem>
+    <CheckListItem>
+       Bølgen ser best ut når seksjonen har litt høyde, slik at man ikke ser topp og bunn samtidig. 
+       Se hva som passer best i ditt tilfelle. 
+    </CheckListItem>
+</CheckList>
+
+Ikke: 
+<CheckList>
+    <CheckListItem isCross={true}>
+        Ikke bruk for mange forskjellige farger i kombinasjon. Bakgrunnsfargen skal ikke være forstyrrende. Bruk `bg-default` eller `bg-subtle` 
+        som hovedbakgrunnsfarge, og bruk bølge-seksjon for å skille mellom forskjellige typer innhold. 
+    </CheckListItem>
+    <CheckListItem isCross={true}>
+        Ikke bruk bølgen på topp eller bunn av siden med fargen `accent`. Det er for å tilrettelegge for Liquid glass design på iOS 26.0.0.
+    </CheckListItem>
+    <CheckListItem isCross={true}>
+        Unngå å ha en seksjon som kun består av komponenter uten kontekst. 
+        En typisk seksjon består av overskrift, tekst og annet innhold.  
+    </CheckListItem>
+</CheckList>
+
+## Farger
+
+Bølge-seksjonen støtter 3 fargevarianter: `default`, `accent` og `subtle`. 
+Hvis du ønsker å bruke `subtle` som bakgrunnsfarge på seksjonen over eller under bølge-seksjonen,
+må du wrappe `WaveSection` i en container med samme bakgrunnsfarge, slik: 
+
+```
+<div style={{
+        backgroundColor: 'var(--ffe-color-background-subtle)',
+    }}>
+    <div> 
+        {innhold}
+    </div>
+    <WaveSection wavePosition='top'>{innhold}</WaveSection>
+</div>
+```
+
+<Canvas of={WaveSectionStories.Subtle} />
+<Controls of={WaveSectionStories.Subtle} include={['backgroundColor']}/>
+
+## Section skal ha en heading
+For å gjøre opplevelsen bedre med skjermleser, anbefales det alltid å ha en heading som hører til seksjonen.
+Headingen kan settes i innholdet med en id, og refereres til med `aria-labelledby` eller `aria-label` på WaveSection-komponenten.
+
+<Source of={WaveSectionStories.WithHeading} />
+
+## Eksempel på bruk
+
+Her er et eksempel på hvordan bølge-seksjonen kan brukes for å gruppere innhold på en side.
+
+```
+<WaveSection>
+    <Heading2>Dette er en overskrift</Heading2>
+    <Paragraph>
+        Her er litt innhold over bølgen
+    </Paragraph>
+</WaveSection>
+<div>
+    <Heading2>Innholdet fortsetter her</Heading2>
+    <Paragraph>
+        Her er litt innhold under bølgen
+    </Paragraph>
+</div>
+```
+
+<Canvas of={WaveSectionStories.Example} sourceState='shown'/>

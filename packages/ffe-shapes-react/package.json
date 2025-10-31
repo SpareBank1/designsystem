@@ -30,7 +30,9 @@
     "devDependencies": {
         "@sb1/ffe-buildtool": "^100.4.3",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "@sb1/ffe-cards-react": "^100.4.1",
+        "@sb1/ffe-lists-react": "^100.4.1"
     },
     "peerDependencies": {
         "react": ">=18.2.0"
