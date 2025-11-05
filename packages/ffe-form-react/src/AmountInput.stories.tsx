@@ -49,10 +49,12 @@ export const Controlled: Story = {
                 >
                     Øk beløpet med 1
                 </PrimaryButton>
-                <Paragraph>
-                    Indre verdi:{' '}
-                    <pre style={{ display: 'inline-block' }}>{amount}</pre>
-                </Paragraph>
+                <span style={{ display: 'block', marginTop: '8px' }}>
+                    <Paragraph style={{ display: 'inline' }}>
+                        Indre verdi:{' '}
+                    </Paragraph>
+                    <pre style={{ display: 'inline' }}>{amount}</pre>
+                </span>
             </div>
         );
     },
