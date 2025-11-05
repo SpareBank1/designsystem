@@ -12,6 +12,7 @@ type BgColor = 'primary' | 'secondary' | 'tertiary';
 
 export interface FeedbackProps {
     headingLevel?: HeadingLevel;
+    headingLookLike?: HeadingLevel;
     locale?: Locale;
     onThumbClick: (thumb: Thumb) => void;
     onFeedbackSend: (feedbackText: string, consent?: boolean) => void;
@@ -28,6 +29,7 @@ export interface FeedbackProps {
 
 export const Feedback = ({
     headingLevel = 4,
+    headingLookLike,
     locale = 'nb',
     onThumbClick,
     onFeedbackSend,
@@ -83,13 +85,14 @@ export const Feedback = ({
             tabIndex?: number;
             id?: string;
             textCenter?: boolean;
+            lookLike?: HeadingLevel;
         },
     ) => {
         const { ref, tabIndex, id, textCenter } = options || {};
 
         const headingClassName = classNames(
-            `ffe-h${level}`,
-            { [`ffe-h${level}--text-center`]: textCenter },
+            `ffe-h${options?.lookLike ?? level}`,
+            { [`ffe-h${options?.lookLike ?? level}--text-center`]: textCenter },
             'ffe-feedback__heading',
         );
 
@@ -112,7 +115,11 @@ export const Feedback = ({
                     {renderHeading(
                         headingLevel,
                         txt[locale].FEEDBACK_SENT_HEADING,
-                        { ref: feedbackSentRef, tabIndex: -1 },
+                        {
+                            ref: feedbackSentRef,
+                            tabIndex: -1,
+                            lookLike: headingLookLike,
+                        },
                     )}
                     <HighFive />
                 </div>
@@ -127,7 +134,11 @@ export const Feedback = ({
                     {renderHeading(
                         headingLevel,
                         txt[locale].FEEDBACK_SENT_HEADING,
-                        { ref: expandedRef, tabIndex: -1 },
+                        {
+                            ref: expandedRef,
+                            tabIndex: -1,
+                            lookLike: headingLookLike,
+                        },
                     )}
                     <FeedbackExpanded
                         locale={locale}
@@ -147,7 +158,11 @@ export const Feedback = ({
                     headingLevel,
                     texts?.feedbackNotSentHeading ??
                         txt[locale].FEEDBACK_NOT_SENT_HEADING,
-                    { id: headingId, textCenter: true },
+                    {
+                        id: headingId,
+                        textCenter: true,
+                        lookLike: headingLookLike,
+                    },
                 )}
                 <FeedbackThumbs
                     onClick={handleThumbClicked}
