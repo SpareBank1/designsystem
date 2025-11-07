@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.5.0](https://github.com/SpareBank1/designsystem/compare/v100.4.3...v100.5.0) (2025-11-07)
+
+
+### Features
+
+* **ffe-feedback-react:** Tilbakemeldingskomponent godtar headingLookLike ([753656f](https://github.com/SpareBank1/designsystem/commit/753656f896ca6fbb656f06aae51f8e383128fee5))
+
+
+
+
+
 ## [100.4.3](https://github.com/SpareBank1/designsystem/compare/v100.4.2...v100.4.3) (2025-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
