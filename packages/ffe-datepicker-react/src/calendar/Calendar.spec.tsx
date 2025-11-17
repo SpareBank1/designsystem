@@ -177,4 +177,27 @@ describe('Calendar', () => {
         const inRange = screen.getByRole('button', { name: '12. januar 2025' });
         expect(inRange).toHaveAttribute('aria-disabled', 'false');
     });
+
+    it('disables dates in disable dates', () => {
+        render(
+            <Calendar
+                {...defaultProps}
+                selectedDate="12.01.2025"
+                disabledDates={['14.01.2025', '17.01.2025']}
+            />,
+        );
+
+        const disabled1 = screen.getByRole('button', {
+            name: '14. januar 2025',
+        });
+        expect(disabled1).toHaveAttribute('aria-disabled', 'true');
+
+        const disabled2 = screen.getByRole('button', {
+            name: '17. januar 2025',
+        });
+        expect(disabled2).toHaveAttribute('aria-disabled', 'true');
+
+        const inRange = screen.getByRole('button', { name: '12. januar 2025' });
+        expect(inRange).toHaveAttribute('aria-disabled', 'false');
+    });
 });
