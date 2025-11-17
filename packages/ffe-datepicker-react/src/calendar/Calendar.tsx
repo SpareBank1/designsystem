@@ -23,6 +23,8 @@ export interface CalendarProps {
     minDate?: string | null;
     /** Seneste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown */
     maxDate?: string | null;
+    /** Array av datoer i format 'dd.mm.yyyy' som skal være deaktivert */
+    disabledDates?: string[];
 }
 
 interface State {
@@ -41,6 +43,7 @@ export class Calendar extends Component<CalendarProps, State> {
                 getSimpleDateFromString(props?.selectedDate),
                 props.minDate,
                 props.maxDate,
+                props.disabledDates,
                 props.locale,
             ),
             isFocusingHeader: false,
@@ -72,6 +75,7 @@ export class Calendar extends Component<CalendarProps, State> {
                         getSimpleDateFromString(this.props.selectedDate),
                         this.props.minDate,
                         this.props.maxDate,
+                        this.props.disabledDates,
                         this.props.locale,
                     ),
                 },
@@ -316,7 +320,9 @@ export class Calendar extends Component<CalendarProps, State> {
                         monthNumber={calendar.focusedDate.month + 1} // Convert to 1-indexed month
                         locale={this.props.locale}
                         dropdownCaption={this.props.dropdownCaption}
-                        onMonthYearChange={(month, year) => this.navigateToMonthYear(month, year)}
+                        onMonthYearChange={(month, year) =>
+                            this.navigateToMonthYear(month, year)
+                        }
                         minDate={this.props.minDate}
                         maxDate={this.props.maxDate}
                     />
