@@ -23,6 +23,14 @@ describe('<Checkbox />', () => {
         expect(spy).toHaveBeenCalledTimes(1);
     });
 
+    it('should not call onChange when disabled and clicked', () => {
+        const spy = jest.fn();
+        renderCheckbox({ onChange: spy, disabled: true });
+        const checkbox = screen.getByRole('checkbox');
+        fireEvent.click(checkbox);
+        expect(spy).toHaveBeenCalledTimes(0);
+    });
+
     it('should render a default value if passed', () => {
         const { rerender } = render(
             <Checkbox onChange={() => {}} checked={false}>
