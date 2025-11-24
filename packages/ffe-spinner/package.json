@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-spinner",
-    "version": "100.5.0",
+    "version": "100.5.1",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -19,10 +19,10 @@
         "build": "lessc less/spinner.less css/spinner.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.5.0"
+        "@sb1/ffe-core": "^100.5.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.5.0"
+        "@sb1/ffe-buildtool": "^100.5.1"
     },
     "publishConfig": {
         "access": "public"

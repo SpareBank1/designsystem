@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.5.1](https://github.com/SpareBank1/designsystem/compare/v100.5.0...v100.5.1) (2025-11-24)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** Fikser så checkbox ikke trigger onChange når disabled ([01922a4](https://github.com/SpareBank1/designsystem/commit/01922a4cea4381d67ce83e3078b42dd228912378))
+
+
+
+
+
 # [100.5.0](https://github.com/SpareBank1/designsystem/compare/v100.4.3...v100.5.0) (2025-11-07)
 
 
