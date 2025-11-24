@@ -31,6 +31,8 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             noMargins,
             id,
             checked,
+            onChange,
+            disabled,
             ...rest
         },
         ref,
@@ -55,6 +57,8 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                     id={inputId}
                     type="checkbox"
                     checked={checked}
+                    disabled={disabled}
+                    onChange={!disabled ? onChange : undefined}
                     {...rest}
                 />
                 {typeof children === 'function' ? (
