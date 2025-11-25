@@ -1,0 +1,15 @@
+name: PR Safety Check
+
+on:
+    pull_request:
+        branches:
+            - develop
+
+jobs:
+    check-workflow-npm-usage:
+        runs-on: ubuntu-latest
+        if: github.event.pull_request.head.repo.fork == false
+        steps:
+            - uses: actions/checkout@v4.3
+            - name: Run workflow npm usage check
+              run: node scripts/check-workflow-npm-usage.js

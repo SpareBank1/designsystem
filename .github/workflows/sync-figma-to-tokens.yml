@@ -19,9 +19,6 @@ jobs:
               with:
                   node-version: 22
 
-            # - name: Set NPM version
-            #   run: npm install -g npm@9.5.1
-
             - name: Clone repo
               uses: actions/checkout@v4.3.0
 
