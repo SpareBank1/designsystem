@@ -33,5 +33,7 @@ bidrag. Ta en titt på [Bidra-seksjonen](https://design.sparebank1.no/bidra/alle
 
 ## Licenses
 
--   Source code is licensed under MIT
--   The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.
+- Source code is licensed under MIT
+- The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.
+
+.
