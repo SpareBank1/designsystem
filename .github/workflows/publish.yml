@@ -10,10 +10,10 @@ jobs:
         name: Build and publish npm packages with lerna
         runs-on: ubuntu-latest
         permissions:
-          id-token: write  # Required for OIDC
-          contents: read
+            id-token: write # Required for OIDC
+            contents: read
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4.3.0
               with:
                   fetch-depth: '0'
                   ref: 'main'
@@ -25,17 +25,17 @@ jobs:
                   git config user.email "designsystem@sparebank1.no"
                   git config user.name "sb1-designsystem"
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v6
               with:
-                  node-version: 20
+                  node-version: 22
                   registry-url: 'https://registry.npmjs.org'
 
-            - name: Update npm
-              # npm 11.5.1 or later is necessary for trusted publishing with OIDC
-              run: npm install -g npm@latest
+            # - name: Update npm
+            #   # npm 11.5.1 or later is necessary for trusted publishing with OIDC
+            #   run: npm install -g npm@latest
 
             - run: |
-                  npm ci
+                  npm ci --ignore-scripts
                   echo "$GITHUB_WORKSPACE/node_modules/.bin/" >> $GITHUB_PATH
 
             - name: lerna changed

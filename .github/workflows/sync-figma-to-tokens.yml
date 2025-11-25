@@ -15,18 +15,18 @@ jobs:
             pull-requests: write
         steps:
             - name: Install Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v6
               with:
-                  node-version: 20
+                  node-version: 22
 
-            - name: Set NPM version
-              run: npm install -g npm@9.5.1
+            # - name: Set NPM version
+            #   run: npm install -g npm@9.5.1
 
             - name: Clone repo
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4.3.0
 
             - name: Install dependencies
-              run: npm ci
+              run: npm ci --ignore-scripts
 
             - name: Sync variables in Figma file to tokens
               run: npm run sync-figma-to-tokens -- --output packages/ffe-core/tokens
