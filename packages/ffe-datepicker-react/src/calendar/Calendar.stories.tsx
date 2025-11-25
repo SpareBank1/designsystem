@@ -47,19 +47,21 @@ export const WithDropdownCaption: Story = {
         const [selectedDate, setSelectedDate] = useState<
             string | null | undefined
         >(args.selectedDate);
-        
+
         return (
             <div>
                 <h3>Kalender med nedtrekksliste for måned og år</h3>
                 <p>
-                    Denne kalenderen viser måned og år som nedtrekkslister, slik at brukeren enkelt kan navigere til ønsket dato
-                    uten å klikke gjennom flere måneder. Spesielt nyttig når man ønsker å velge datoer langt frem eller tilbake i tid.
+                    Denne kalenderen viser måned og år som nedtrekkslister, slik
+                    at brukeren enkelt kan navigere til ønsket dato uten å
+                    klikke gjennom flere måneder. Spesielt nyttig når man ønsker
+                    å velge datoer langt frem eller tilbake i tid.
                 </p>
                 <div style={{ marginTop: '20px' }}>
                     <Calendar
                         {...args}
                         selectedDate={selectedDate}
-                        onDatePicked={(date) => {
+                        onDatePicked={date => {
                             setSelectedDate(date);
                             console.log('Valgt dato:', date);
                         }}
@@ -71,6 +73,32 @@ export const WithDropdownCaption: Story = {
                     </p>
                 )}
             </div>
+        );
+    },
+};
+
+export const WithDisabledDates: Story = {
+    args: {
+        calendarClassName: undefined,
+        escKeyHandler: () => null,
+        locale: 'nb',
+        onDatePicked: (date: string) => null,
+        selectedDate: '18.12.2025',
+        focusOnMount: false,
+        minDate: '10.11.2025',
+        maxDate: '15.01.2026',
+        disabledDates: ['24.12.2025', '25.12.2025', '31.12.2025'],
+    },
+    render: function Render(args) {
+        const [selectedDate, setSelectedDate] = useState<
+            string | null | undefined
+        >(args.selectedDate);
+        return (
+            <Calendar
+                {...args}
+                selectedDate={selectedDate}
+                onDatePicked={setSelectedDate}
+            />
         );
     },
 };
