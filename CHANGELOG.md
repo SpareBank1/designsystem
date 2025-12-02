@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.6.0](https://github.com/SpareBank1/designsystem/compare/v100.5.2...v100.6.0) (2025-12-02)
+
+
+### Features
+
+* **ffe-datepicker-react:** legg til feature for å disable dates i kalenderen ([e97809f](https://github.com/SpareBank1/designsystem/commit/e97809ff39900fafd11805f285d8ccf3a01d9fad))
+
+
+
+
+
 ## [100.5.2](https://github.com/SpareBank1/designsystem/compare/v100.5.1...v100.5.2) (2025-12-02)
 
 
