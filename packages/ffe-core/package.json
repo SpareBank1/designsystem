@@ -11,7 +11,8 @@
         "less",
         "css",
         "scripts",
-        "tokens"
+        "tokens",
+        "ai-context"
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -31,10 +32,12 @@
         "build": "npm run build-semantic-colors && ./scripts/build.cjs tokens.config.cjs && ./scripts/build-custom-mq.cjs less/breakpoints.less css/custom-media-queries.css && ffe-buildtool tsc && lessc less/ffe.less css/ffe.css --autoprefix",
         "build:colors:android": "node ./scripts/build-colors.cjs platform=android androidPaths=./test/android/colors",
         "build:colors:ios": "node ./scripts/build-colors.cjs platform=ios iosPaths=./test/ios/colors",
-        "build:colors:json": "node ./scripts/build-colors.cjs platform=json jsonPaths=./test/json/colors"
+        "build:colors:json": "node ./scripts/build-colors.cjs platform=json jsonPaths=./test/json/colors",
+        "update:ai": "node scripts/update-ai.js"
     },
     "bin": {
-        "build-colors": "./scripts/build-colors.cjs"
+        "build-colors": "./scripts/build-colors.cjs",
+        "update-ai": "./scripts/update-ai.js"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^100.5.2",
