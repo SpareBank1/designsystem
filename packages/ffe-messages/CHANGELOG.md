@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.5.2](https://github.com/SpareBank1/designsystem/compare/v100.5.1...v100.5.2) (2025-12-02)
+
+**Note:** Version bump only for package @sb1/ffe-messages
+
+
+
+
+
 ## [100.5.1](https://github.com/SpareBank1/designsystem/compare/v100.5.0...v100.5.1) (2025-11-24)
 
 **Note:** Version bump only for package @sb1/ffe-messages

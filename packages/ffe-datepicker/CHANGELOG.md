@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.5.2](https://github.com/SpareBank1/designsystem/compare/v100.5.1...v100.5.2) (2025-12-02)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** Fjerner bruk av ffe-input-field i datepicker ([c62c9ed](https://github.com/SpareBank1/designsystem/commit/c62c9ed0f215a6bca186b183bed4f93204f99a85))
+
+
+
+
+
 ## [100.5.1](https://github.com/SpareBank1/designsystem/compare/v100.5.0...v100.5.1) (2025-11-24)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
