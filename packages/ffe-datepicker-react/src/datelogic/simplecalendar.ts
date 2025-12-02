@@ -55,11 +55,13 @@ export class SimpleCalendar {
     firstDay: number;
     minDate: SimpleDate | null;
     maxDate: SimpleDate | null;
+    disabledDates: string[] = [];
 
     constructor(
         initialDate?: SimpleDate | null,
         minDate?: string | null,
         maxDate?: string | null,
+        disabledDates?: string[],
         locale: Locale = 'nb',
     ) {
         this.locale = locale;
@@ -69,6 +71,7 @@ export class SimpleCalendar {
         this.selectedDate = initialDate ? initialDate.clone() : initialDate;
         this.minDate = minDate ? getSimpleDateFromString(minDate) : null;
         this.maxDate = maxDate ? getSimpleDateFromString(maxDate) : null;
+        this.disabledDates = disabledDates ? disabledDates : [];
 
         // Settings
         this.firstDay = i18n[locale].FIRST_DAY_OF_WEEK;
@@ -206,11 +209,15 @@ export class SimpleCalendar {
                     isSelected:
                         !!this.selectedDate &&
                         currentDate.equal(this.selectedDate),
-                    isEnabled: isDateWithinMinMax(
-                        currentDate,
-                        this.minDate,
-                        this.maxDate,
-                    ),
+                    isEnabled:
+                        isDateWithinMinMax(
+                            currentDate,
+                            this.minDate,
+                            this.maxDate,
+                        ) &&
+                        (this.disabledDates
+                            ? !this.disabledDates.includes(currentDate.format())
+                            : true),
                 };
                 week.dates.push(date);
                 currentDate.adjust({ period: 'D', offset: 1 });

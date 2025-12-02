@@ -10,7 +10,7 @@ const meta: Meta<typeof Datepicker> = {
     argTypes: {
         minDate: { control: 'text' },
         maxDate: { control: 'text' },
-    }
+    },
 };
 export default meta;
 
@@ -114,7 +114,10 @@ export const WithDropdownCaption: Story = {
         const [date, setDate] = useState('01.12.2024');
 
         return (
-            <InputGroup label="Dato med dropdowns for måned og år" labelId={Standard?.args?.labelId}>
+            <InputGroup
+                label="Dato med dropdowns for måned og år"
+                labelId={Standard?.args?.labelId}
+            >
                 <Datepicker
                     value={value ?? date}
                     onChange={date => {
@@ -231,9 +234,35 @@ export const WithDescription: Story = {
         const [date, setDate] = useState('01.12.2024');
 
         return (
-            <InputGroup label="Dato"
+            <InputGroup
+                label="Dato"
                 labelId={Standard?.args?.labelId}
-                description="Dette er en beskrivelse av Datepicker-komponenten. Den gir ekstra informasjon om hvordan den skal brukes.">
+                description="Dette er en beskrivelse av Datepicker-komponenten. Den gir ekstra informasjon om hvordan den skal brukes."
+            >
+                <Datepicker
+                    value={value ?? date}
+                    onChange={date => {
+                        setDate(date);
+                        console.log('Datepicker value:', date);
+                    }}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const WithDisabledDates: Story = {
+    args: {
+        ...Standard.args,
+        maxDate: '31.12.2024',
+        disabledDates: ['24.12.2024', '25.12.2024', '31.12.2024'],
+    },
+    render: function Render({ value, onChange, ...args }: DatepickerProps) {
+        const [date, setDate] = useState('01.12.2024');
+
+        return (
+            <InputGroup label="Dato" labelId={Standard?.args?.labelId}>
                 <Datepicker
                     value={value ?? date}
                     onChange={date => {

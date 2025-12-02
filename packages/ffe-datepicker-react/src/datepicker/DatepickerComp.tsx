@@ -32,17 +32,17 @@ export interface DatepickerCompProps {
     onBlur?: (evt: React.FocusEvent<HTMLElement>) => void;
     calendarAbove?: boolean;
     id?: string;
-    /** 
+    /**
      * Seneste tillatte dato. Format: 'dd.mm.yyyy'
-     * 
+     *
      * Merk: For å holde år-dropdownen håndterbar, begrenses årsintervallet automatisk til
      * maksimalt 10 år bakover eller fremover fra inneværende år, selv om minDate/maxDate
      * tillater et bredere intervall.
      */
     maxDate?: string | null;
-    /** 
+    /**
      * Tidligste tillatte dato. Format: 'dd.mm.yyyy'
-     * 
+     *
      * Merk: For å holde år-dropdownen håndterbar, begrenses årsintervallet automatisk til
      * maksimalt 10 år bakover eller fremover fra inneværende år, selv om minDate/maxDate
      * tillater et bredere intervall.
@@ -55,6 +55,8 @@ export interface DatepickerCompProps {
     labelId: string;
     /** Om måned- og år-dropdown skal vises i kalenderen */
     dropdownCaption?: boolean;
+    /** Liste over datoer som skal deaktiveres i kalenderen */
+    disabledDates?: string[];
 }
 
 export const DatepickerComp: React.FC<DatepickerCompProps> = ({
@@ -72,6 +74,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
     fieldMessage,
     labelId,
     dropdownCaption,
+    disabledDates,
 }) => {
     const {
         day,
@@ -429,6 +432,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     dropdownCaption={dropdownCaption}
                     minDate={minDate}
                     maxDate={maxDate}
+                    disabledDates={disabledDates}
                 />
             )}
 
