@@ -1,12 +1,9 @@
-.ffe-input-group {
-    > .ffe-form-label {
-        color: var(--ffe-color-foreground-default) !important;
-    }
-}
 .ffe-datepicker {
     position: relative;
+    height: 2.8125rem; //Etterlikner ffe-input-field
     display: grid;
     grid-template-columns: 1fr auto;
+    background-color: var(--ffe-color-surface-primary-default);
     width: fit-content;
     border: var(--ffe-g-border-width) solid
         var(--ffe-color-border-primary-default);
@@ -74,6 +71,11 @@
     }
 
     .ffe-dateinput {
+        display: flex;
+        align-items: center;
+        height: 2.7495rem; //Litt mindre enn parent for å unngå hopping ved åpning av kalenderen
+        border: none;
+        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-sm);
         position: relative;
         grid-column: 1 e('/') 3;
         grid-row: 1 e('/') -1;
@@ -82,12 +84,6 @@
 
         &--full-width {
             display: block;
-        }
-
-        &.ffe-input-field {
-            display: flex;
-            align-items: center;
-            border: none;
         }
 
         &__field {
@@ -135,27 +131,15 @@
         }
 
         &:focus-within {
-            outline: none;
             box-shadow: var(--ffe-g-border-focus-box-shadow)
                 var(--ffe-color-border-feedback-critical);
-        }
-
-        .ffe-input-field {
-            &:focus-within {
-                border-color: var(--ffe-color-border-feedback-critical);
-                box-shadow: var(--ffe-g-border-focus-box-shadow)
-                    var(--ffe-color-border-feedback-critical);
-                background-color: var(--ffe-color-surface-primary-default);
-            }
+            border: var(--ffe-g-border-width) solid
+                var(--ffe-color-border-feedback-critical);
         }
 
         .ffe-dateinput,
         .ffe-dateinput__field {
             color: var(--ffe-color-foreground-feedback-critical);
-        }
-
-        .ffe-input-field:has(~ .ffe-datepicker__button:hover) {
-            background-color: var(--ffe-color-surface-primary-default);
         }
     }
 }

@@ -313,9 +313,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
         >
             {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/no-noninteractive-element-interactions */}
             <div
-                className={classNames('ffe-input-field', 'ffe-dateinput', {
-                    'ffe-input-field--invalid': ariaInvalid(),
-                })}
+                className={classNames('ffe-dateinput')}
                 onBlur={evt => {
                     const elementReceivingFocus = evt.relatedTarget;
 
