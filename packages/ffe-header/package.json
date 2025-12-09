@@ -25,9 +25,12 @@
         "@sb1/ffe-core": "^100.5.2",
         "@sb1/ffe-webfonts": "^100.5.2",
         "less": "^4.1.2",
-        "less-plugin-autoprefix": "^2.0.0"
+        "less-plugin-autoprefix": "^1.4.1"
     },
     "publishConfig": {
         "access": "public"
+    },
+    "dependencies": {
+        "parcel": "^2.16.3"
     }
 }
