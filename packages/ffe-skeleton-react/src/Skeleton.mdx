@@ -1,0 +1,45 @@
+import { InstallImport } from '../../../documentation/components/InstallImport';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as SkeletonStories from './Skeleton.stories';
+import * as SkeletonCircleStories from './SkeletonCircle.stories';
+import * as SkeletonIconCardExampleStories from './SkeletonIconCardExample.stories';
+import dependencies from '../ffe-dependencies';
+
+<Meta title="Komponenter/Skeleton" />
+
+# Skeleton
+Skeleton kan brukes for å illustrere lastende innhold, og gi brukeren en indikasjon på at innhold er på vei, og hvor mye som kommer til å vises.
+Skeleton bør kun brukes i situasjoner der innlastingstiden er lengre enn hva som oppleves som umiddelbart.
+
+<InstallImport
+    packageName="@sb1/ffe-skeleton-react"
+    dependencies={dependencies}
+/>
+
+
+## Universell utforming
+For å sikre en bedre brukeropplevelse bør man sette `aria-busy="true"` på det elementet som representerer hele innholdet som lastes.
+Det vil si at dersom man laster inn ett kort med flere skeleton-komponenter, bør `aria-busy="true"` settes på kort-elementet, og ikke på hver enkelt skeleton-komponent.
+
+### Eksempel på bruk i IconCard og med aria-busy
+<Canvas of={SkeletonIconCardExampleStories.Standard} />
+
+
+### Skeleton
+Skeleton-komponenten kan brukes til å vise lastende innhold i form av rektangler og streker.
+Den kan for eksempel brukes til å illustrere lastende tekst og/eller bilder.
+
+For å gi brukerne en god indikasjon på hva som kommer, bør størrelsen på Skeleton-komponenten tilpasses det innholdet som skal lastes inn.
+Standardhøyden er `1em` som tilsvarer høyden på standard brødtekst.
+
+<Canvas of={SkeletonStories.Standard} />
+<Controls of={SkeletonStories.Standard} />
+
+
+### SkeletonCircle
+SkeletonCircle-komponenten kan brukes til å vise lastende innhold i form av sirkler.
+Den kan for eksempel brukes til å illustrere lastende illustrasjoner eller ikoner.
+Komponenten finnes i de samme 4 størrelsene som `ffe-icons` ikonene har.
+
+<Canvas of={SkeletonCircleStories.Standard} />
+<Controls of={SkeletonCircleStories.Standard} />
