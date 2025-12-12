@@ -61,6 +61,8 @@ module.exports = {
                 'ffe-progressbar-react',
                 'ffe-sb1-logos',
                 'ffe-searchable-dropdown-react',
+                'ffe-skeleton',
+                'ffe-skeleton-react',
                 'ffe-spinner',
                 'ffe-spinner-react',
                 'ffe-system-message',
