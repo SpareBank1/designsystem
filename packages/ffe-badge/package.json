@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-badge",
-    "version": "100.6.0",
+    "version": "100.6.1",
     "description": "En badge er en liten visuell indikator som viser antall uleste varsler, meldinger eller oppgaver.",
     "keywords": [
         "ffe",
@@ -27,10 +27,10 @@
         "build": "lessc less/badge.less css/badge.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.6.0"
+        "@sb1/ffe-core": "^100.6.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.6.0"
+        "@sb1/ffe-buildtool": "^100.6.1"
     },
     "publishConfig": {
         "access": "public"
