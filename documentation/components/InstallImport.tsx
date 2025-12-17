@@ -80,6 +80,9 @@ const packageStyles = {
     '@sb1/ffe-progressbar': {
         less: '@sb1/ffe-progressbar/less/progressbar',
     },
+    '@sb1/ffe-skeleton': {
+        less: '@sb1/ffe-skeleton/less/skeleton',
+    },
 };
 
 type Props = {
@@ -93,27 +96,29 @@ export const InstallImport: React.FC<Props> = ({
 }) => {
     const [activeTabId, setActiveTabId] = useState('all');
     const [activeStyling, setActiveStyling] = useState('less');
-    const [styleDependencies] = useState([packageName, ...dependencies || []]);
+    const [styleDependencies] = useState([
+        packageName,
+        ...(dependencies || []),
+    ]);
     const installCodeDirect = `npm install ${packageName}`;
     const installCodeAll = `npm install ${packageName} ${dependencies ? dependencies?.join(' ') : ''}`;
     const innstallStyling = styleDependencies
-              //@ts-expect-error kan vurdere å type denne opp riktig på sikt, men ikke verdt det nå
-              .map(dep => packageStyles[dep])
-              .filter(Boolean)
-              .sort((a, b) =>
-                  a.less === '@sb1/ffe-core/less/ffe'
-                      ? -1
-                      : b.less === '@sb1/ffe-core/less/ffe'
-                        ? 1
-                        : a.less.localeCompare(b.less),
-              )
-              .map(dep =>
-                  activeStyling === 'less'
-                      ? `@import '${dep.less}';`
-                      : `@import '${dep.less.replace('less', 'css')}.css';`,
-              )
-              .join('\n')
-        ;
+        //@ts-expect-error kan vurdere å type denne opp riktig på sikt, men ikke verdt det nå
+        .map(dep => packageStyles[dep])
+        .filter(Boolean)
+        .sort((a, b) =>
+            a.less === '@sb1/ffe-core/less/ffe'
+                ? -1
+                : b.less === '@sb1/ffe-core/less/ffe'
+                  ? 1
+                  : a.less.localeCompare(b.less),
+        )
+        .map(dep =>
+            activeStyling === 'less'
+                ? `@import '${dep.less}';`
+                : `@import '${dep.less.replace('less', 'css')}.css';`,
+        )
+        .join('\n');
     return (
         <>
             <Heading2>Installasjon</Heading2>
