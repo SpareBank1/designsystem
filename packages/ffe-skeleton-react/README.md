@@ -6,7 +6,7 @@ npm install --save @sb1/ffe-skeleton-react
 
 ## Usage
 
-Full documentation on tabs usage is available at https://design.sparebank1.no/komponenter/skeleton/.
+Full documentation on skeleton usage is available at https://design.sparebank1.no/komponenter/skeleton/.
 
 ## Development
 
