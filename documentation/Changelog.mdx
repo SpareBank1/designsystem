@@ -8,68 +8,133 @@ Denne siden lister breaking changes og større endringer i designsystemet. For a
 
 F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
 
-## 2025 - Oktober - Justeringer i noen farger (liten endring) - 100.4.1
-Vi har gjort noen justeringer i fargene for å bedre kontrasten i enkelte tilfeller. I fargesystemet nå har vi et primitivt lag, et semantisk lag og et kontekstlag. 
-Det er fargene i kontekstlaget som brukes i komponentene og som dere har tilgang til. 
+Eller se [releasesiden på GitHub](https://github.com/SpareBank1/designsystem/releases) for en oversikt over alle versjoner.
 
-Fargeendringene som er gjort i det semantiske laget (se nederst) får følger for disse variablene i kontekstlaget: 
+## 100.7.0
+
+- ffe-skeleton-react: Legg til skeleton komponent
+- ffe-skeleton: Legg til skeleton komponent
+
+## 100.6.0
+
+- ffe-datepicker-react: legg til feature for å disable dates i kalenderen
+
+## 100.5.0
+
+- ffe-feedback-react: Tilbakemeldingskomponent godtar headingLookLike
+
+## 2025 - Oktober - Justeringer i noen farger (liten endring) - 100.4.1
+
+Vi har gjort noen justeringer i fargene for å bedre kontrasten i enkelte tilfeller. I fargesystemet nå har vi et primitivt lag, et semantisk lag og et kontekstlag.
+Det er fargene i kontekstlaget som brukes i komponentene og som dere har tilgang til.
+
+Fargeendringene som er gjort i det semantiske laget (se nederst) får følger for disse variablene i kontekstlaget:
 `--ffe-color-fill-secondary-subtle` og `--ffe-color-fill-tertiary-subtle`
 
-I tillegg er det gjort justeringer på disse fargene i kontekst-laget: 
+I tillegg er det gjort justeringer på disse fargene i kontekst-laget:
 
 <table>
-<thead>
-<tr>
-<th>Variabel</th>
-<th>Endret fra</th>
-<th>Endret til</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--ffe-color-fill-feedback-info-subtle</code></td>
-<td><code>default-feedback-info-subtlest</code></td>
-<td><code>-subtler</code></td>
-</tr>
-<tr>
-<td><code>--ffe-color-fill-feedback-success-subtle</code></td>
-<td><code>default-feedback-success-subtlest</code></td>
-<td><code>-subtler</code></td>
-</tr>
-<tr>
-<td><code>--ffe-color-fill-warning-info-subtle</code></td>
-<td><code>default-warning-info-subtlest</code></td>
-<td><code>-subtler</code></td>
-</tr>
-<tr>
-<td><code>--ffe-color-fill-critical-success-subtle</code></td>
-<td><code>default-feedback-critical-subtlest</code></td>
-<td><code>-subtler</code></td>
-</tr>
-<tr>
-<td><code>--ffe-color-fill-tip-success-subtle</code></td>
-<td><code>default-feedback-tip-subtlest</code></td>
-<td><code>-subtler</code></td>
-</tr>
-<tr>
-<td><code>ffe-color-fill-primary-subtle</code></td>
-<td><code>default-brand-primary-subtlest</code></td>
-<td><code>-subtler</code></td>
-</tr>
-<tr>
-<td><code>ffe-color-fill-primary-subtle-hover</code></td>
-<td><code>default-brand-primary-subtler</code></td>
-<td><code>-subtle</code></td>
-</tr>
-<tr>
-<td><code>ffe-color-fill-primary-subtle-pressed</code></td>
-<td><code>default-brand-primary-subtle</code></td>
-<td><code>-default</code></td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th>Variabel</th>
+            <th>Endret fra</th>
+            <th>Endret til</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <code>--ffe-color-fill-feedback-info-subtle</code>
+            </td>
+            <td>
+                <code>default-feedback-info-subtlest</code>
+            </td>
+            <td>
+                <code>-subtler</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>--ffe-color-fill-feedback-success-subtle</code>
+            </td>
+            <td>
+                <code>default-feedback-success-subtlest</code>
+            </td>
+            <td>
+                <code>-subtler</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>--ffe-color-fill-warning-info-subtle</code>
+            </td>
+            <td>
+                <code>default-warning-info-subtlest</code>
+            </td>
+            <td>
+                <code>-subtler</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>--ffe-color-fill-critical-success-subtle</code>
+            </td>
+            <td>
+                <code>default-feedback-critical-subtlest</code>
+            </td>
+            <td>
+                <code>-subtler</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>--ffe-color-fill-tip-success-subtle</code>
+            </td>
+            <td>
+                <code>default-feedback-tip-subtlest</code>
+            </td>
+            <td>
+                <code>-subtler</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>ffe-color-fill-primary-subtle</code>
+            </td>
+            <td>
+                <code>default-brand-primary-subtlest</code>
+            </td>
+            <td>
+                <code>-subtler</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>ffe-color-fill-primary-subtle-hover</code>
+            </td>
+            <td>
+                <code>default-brand-primary-subtler</code>
+            </td>
+            <td>
+                <code>-subtle</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>ffe-color-fill-primary-subtle-pressed</code>
+            </td>
+            <td>
+                <code>default-brand-primary-subtle</code>
+            </td>
+            <td>
+                <code>-default</code>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 Dette får en veldig liten justering i disse komponentene:
+
 - Chips hover og pressed
 - Tabs hover og pressed
 - Spinner bakgrunnsfarge
@@ -79,6 +144,7 @@ Dette får en veldig liten justering i disse komponentene:
 - Tooltip bakgrunnsfarge
 
 Fargeendringene som er gjort i det semantsike laget er gjort på:
+
 - `ffe-color-default-brand-secondary-subtlest`
 - `ffe-color-default-brand-secondary-subtler`
 - `ffe-color-default-brand-tertiary-subtlest`
@@ -91,12 +157,13 @@ Alle verdiene er veldig små justeringer, stort sett endret 25 hakk opp eller ne
 Vi har laget en ny komponent, `<TextField>`. Dette er en avart av `<Input>`, som er laget for å støtte affikser (prefix og suffix) i input-feltet - funksjonalitet som har vært etterspurt av flere team. Dette er ikke er mulig å legge til i dagens implementasjon av `<Input>` uten en større omskrivning med breaking changes, noe som i tillegg ville påvirket andre komponenter som avhenger av `<Input>`.
 
 ## 2025 - September - Ett versjonsnummer for alle pakker og justering av darkmode bakgrunnsfarger
+
 Fra og med denne versjonen (100.0.0) vil alle pakker i designsystemet ha samme versjonsnummer.
 Dette er et mellomsteg før vi går over til én pakke for hele designsystemet.
 Vi tror det kan gjøre det enklere å holde oversikt over hvilke versjoner som fungerer sammen og at det blir lettere å oppdatere.
 
 I tillegg har vi gjort noen justeringer på bakgrunnsfargene i darkmode, slik at
-`background-subtle` i både default og accent har blitt mørkere. 
+`background-subtle` i både default og accent har blitt mørkere.
 Vi har justert fargene til å være litt mørkere slik at de oppleves bedre i bruk.
 
 Det er ikke gjort noen endringer i koden eller på variabelnavn, det er kun fargene som er justert.
@@ -145,13 +212,13 @@ Disse må skiftes ut med farger fra context laget som dere finner på [siden om 
 
 #### Border
 
-Fjernet: 
-`--ffe-color-border-secondary-*` 
+Fjernet:
+`--ffe-color-border-secondary-*`
 `--ffe-color-border-tertiary-*`
 
-bruk 
-`--ffe-color-border-primary-default` 
-`--ffe-color-border-primary-subtle` 
+bruk
+`--ffe-color-border-primary-default`
+`--ffe-color-border-primary-subtle`
 `--ffe-color-border-primary-emphasis`
 i stedet
 
@@ -239,6 +306,7 @@ Textarea
 />
 
 Tooltip (ny farge)
+
 <img
     width="40"
     height="41"
@@ -246,10 +314,8 @@ Tooltip (ny farge)
     src="https://github.com/user-attachments/assets/06fd0637-0f3d-4e31-abd1-a717641cee7e"
 />
 
-
-Obs: `--ffe-color-border-interactive-focus` får ny farge, og kan ikke brukes til active-states lenger. 
+Obs: `--ffe-color-border-interactive-focus` får ny farge, og kan ikke brukes til active-states lenger.
 `component-input-border-active` kan brukes til det.
-
 
 ### Label og button label - tykkere font
 
@@ -266,40 +332,57 @@ Obs: `--ffe-color-border-interactive-focus` får ny farge, og kan ikke brukes ti
     src="https://github.com/user-attachments/assets/c1b8ef7e-da7e-440a-b87f-b8509a4dfb2e"
 />
 
-
-
 ### Nye fargevariabler
+
 Vi har også lagt til flere farger. Det har blitt flere neutral-varianter:  
-`--ffe-color-surface-neutral-*` 
+`--ffe-color-surface-neutral-*`
 `--ffe-color-fill-neutral-default-*`  
 `--ffe-color-fill-neutral-subtle-*`  
 `--ffe-color-fill-neutral-extra-subtle-*`  
-i tillegg til input-variabler som nevnt over. 
- 
+i tillegg til input-variabler som nevnt over.
 
- ## 2025 - Mars - Bølgen trukket ut i egen pakke
- Bølgen, `Wave`, som tidligere har ligget i `ffe-core-react` er nå deprecated fra core 
- og flyttet ut i egne pakker - `ffe-shapes-react` og `ffe-shapes`.
- Dette gjør det lettere å vedlikeholde og oppdatere komponenten. 
- Den har også fått noen nye endringer i forbindelse med oppdatering av de semantiske fargene: 
- 
- Ikke lenger tilgjengelig: 
+## 2025 - Mars - Bølgen trukket ut i egen pakke
+
+Bølgen, `Wave`, som tidligere har ligget i `ffe-core-react` er nå deprecated fra core
+og flyttet ut i egne pakker - `ffe-shapes-react` og `ffe-shapes`.
+Dette gjør det lettere å vedlikeholde og oppdatere komponenten.
+Den har også fått noen nye endringer i forbindelse med oppdatering av de semantiske fargene:
+
+Ikke lenger tilgjengelig:
+
 - `color`
 - `darkModeColor`
 - `bgDarkmodeColor`
 
-`bgColor` tilbyr nå kun `default` og `subtle`. 
+`bgColor` tilbyr nå kun `default` og `subtle`.
 
 Bølgen tilbys nå kun med blå bakgrunn og kun i `default` kontekst, altså ikke i `accent` kontekst.
 
-<img width="902" height="259" alt="image" src="https://github.com/user-attachments/assets/e229cc4c-8179-44cb-bc84-690d500e8f20" />
+<img
+    width="902"
+    height="259"
+    alt="image"
+    src="https://github.com/user-attachments/assets/e229cc4c-8179-44cb-bc84-690d500e8f20"
+/>
 
-`flip` kan fortsatt brukes til å snu bølgen opp ned, hvis du skal bruke den i toppen av siden. 
-<img width="906" height="231" alt="image" src="https://github.com/user-attachments/assets/392c606f-ec51-440d-8e2b-9cb18704ef78" />
+`flip` kan fortsatt brukes til å snu bølgen opp ned, hvis du skal bruke den i toppen av siden.
+
+<img
+    width="906"
+    height="231"
+    alt="image"
+    src="https://github.com/user-attachments/assets/392c606f-ec51-440d-8e2b-9cb18704ef78"
+/>
 
 Høyden kan justeres ved å sende inn en CSS-klasse som justerer paddingen.
 `<Wave className="pt-5"/>`
-<img width="907" height="321" alt="image" src="https://github.com/user-attachments/assets/634dcb23-50c7-471f-88a0-3e472774e626" />
+
+<img
+    width="907"
+    height="321"
+    alt="image"
+    src="https://github.com/user-attachments/assets/634dcb23-50c7-471f-88a0-3e472774e626"
+/>
 
 ## 2025 - februar - Semantiske Farger
 

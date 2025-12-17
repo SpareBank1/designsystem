@@ -8,7 +8,7 @@ npm install --save @sb1/ffe-skeleton
 
 ## Usage
 
-Full documentation on tabs usage is available at https://design.sparebank1.no/komponenter/skeleton/.
+Full documentation on skeleton usage is available at https://design.sparebank1.no/komponenter/skeleton/.
 
 ```less
 @import 'path/to/node_modules/@sb1/ffe-skeleton/less/skeleton';
