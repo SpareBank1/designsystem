@@ -1,5 +1,6 @@
 {
     "name": "@sb1/ffe-skeleton",
+    "description": "Skeleton loading in ffe",
     "version": "100.7.0",
     "license": "MIT",
     "author": "SpareBank1",
