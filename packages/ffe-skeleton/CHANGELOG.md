@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.7.1](https://github.com/SpareBank1/designsystem/compare/v100.7.0...v100.7.1) (2025-12-18)
+
+
+### Bug Fixes
+
+* **ffe-skeleton:** fiks bug i dokumentsajon ([607e45c](https://github.com/SpareBank1/designsystem/commit/607e45c6e6cd16a5879fb5db13488bf2216a9b73))
+* **ffe-skeleton:** fix publisering ([bddd0f9](https://github.com/SpareBank1/designsystem/commit/bddd0f94e9574acce062e9f3831d6bd9b1833fcc))
+
+
+
+
+
 # [100.7.0](https://github.com/SpareBank1/designsystem/compare/v100.6.1...v100.7.0) (2025-12-17)
 
 

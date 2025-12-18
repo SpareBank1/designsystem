@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.7.1](https://github.com/SpareBank1/designsystem/compare/v100.7.0...v100.7.1) (2025-12-18)
+
+**Note:** Version bump only for package @sb1/ffe-pagination
+
+
+
+
+
 # [100.7.0](https://github.com/SpareBank1/designsystem/compare/v100.6.1...v100.7.0) (2025-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-pagination

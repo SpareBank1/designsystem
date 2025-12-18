@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-progressbar",
-    "version": "100.7.0",
+    "version": "100.7.1",
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
@@ -22,7 +22,7 @@
         "@sb1/ffe-core": "^32.0.5"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.7.0"
+        "@sb1/ffe-buildtool": "^100.7.1"
     },
     "publishConfig": {
         "access": "public"

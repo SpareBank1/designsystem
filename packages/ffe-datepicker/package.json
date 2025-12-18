@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-datepicker",
-    "version": "100.7.0",
+    "version": "100.7.1",
     "description": "FFE Datepicker",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -20,11 +20,11 @@
         "build": "lessc less/datepicker.less css/datepicker.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.7.0",
-        "@sb1/ffe-form": "^100.7.0"
+        "@sb1/ffe-core": "^100.7.1",
+        "@sb1/ffe-form": "^100.7.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.7.0"
+        "@sb1/ffe-buildtool": "^100.7.1"
     },
     "publishConfig": {
         "access": "public"
