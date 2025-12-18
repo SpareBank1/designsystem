@@ -1,7 +1,7 @@
 {
     "name": "@sb1/ffe-skeleton-react",
     "version": "100.6.1",
-    "description": "React implementation of ffe-skeleton component",
+    "description": "React implementation of ffe-skeleton loading",
     "keywords": [
         "ffe",
         "skeleton",
