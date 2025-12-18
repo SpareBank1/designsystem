@@ -1,0 +1,190 @@
+{
+  "resources": [
+    {
+      "uri": "ffe://overview",
+      "name": "FFE Design System Overview",
+      "description": "Complete overview of the SpareBank 1 FFE Design System",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/accordion",
+      "name": "@sb1/ffe-accordion-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/account-selector",
+      "name": "@sb1/ffe-account-selector-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/badge",
+      "name": "@sb1/ffe-badge-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/buttons",
+      "name": "@sb1/ffe-buttons-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/cards",
+      "name": "@sb1/ffe-cards-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/chart-donut",
+      "name": "@sb1/ffe-chart-donut-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/chips",
+      "name": "@sb1/ffe-chips-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/collapse",
+      "name": "@sb1/ffe-collapse-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/context-message",
+      "name": "@sb1/ffe-context-message-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/core",
+      "name": "@sb1/ffe-core-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/datepicker",
+      "name": "@sb1/ffe-datepicker-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/dropdown",
+      "name": "@sb1/ffe-dropdown-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/feedback",
+      "name": "@sb1/ffe-feedback-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/file-upload",
+      "name": "@sb1/ffe-file-upload-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/form",
+      "name": "@sb1/ffe-form-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/icons",
+      "name": "@sb1/ffe-icons-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/lists",
+      "name": "@sb1/ffe-lists-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/message-box",
+      "name": "@sb1/ffe-message-box-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/messages",
+      "name": "@sb1/ffe-messages-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/modals",
+      "name": "@sb1/ffe-modals-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/pagination",
+      "name": "@sb1/ffe-pagination-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/progressbar",
+      "name": "@sb1/ffe-progressbar-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/searchable-dropdown",
+      "name": "@sb1/ffe-searchable-dropdown-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/shapes",
+      "name": "@sb1/ffe-shapes-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/spinner",
+      "name": "@sb1/ffe-spinner-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/symbols",
+      "name": "@sb1/ffe-symbols-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/system-message",
+      "name": "@sb1/ffe-system-message-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/tables",
+      "name": "@sb1/ffe-tables-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/tabs",
+      "name": "@sb1/ffe-tabs-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "ffe://component/tags",
+      "name": "@sb1/ffe-tags-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    }
+  ]
+}
