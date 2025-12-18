@@ -8,7 +8,6 @@ on:
 jobs:
     check-workflow-npm-usage:
         runs-on: ubuntu-latest
-        if: github.event.pull_request.head.repo.fork == false
         steps:
             - uses: actions/checkout@v5
             - name: Run workflow npm usage check
