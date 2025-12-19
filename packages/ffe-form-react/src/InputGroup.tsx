@@ -38,7 +38,7 @@ export interface InputGroupProps
           }>
         | null;
     /** To just render a static, always visible tooltip, use this. */
-    description?: string;
+    description?: string | React.ReactElement;
     /** Use the Label component if you need more flexibility in how the content is rendered. */
     label?:
         | string
