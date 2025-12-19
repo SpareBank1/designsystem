@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.8.0](https://github.com/SpareBank1/designsystem/compare/v100.7.1...v100.8.0) (2025-12-19)
+
+
+### Features
+
+* **ffe-form-react:** Allow InputGroup description to be a ReactElement ([ef16970](https://github.com/SpareBank1/designsystem/commit/ef169706cd69297bb8641cff8deaa330231b2f00))
+
+
+
+
+
 ## [100.7.1](https://github.com/SpareBank1/designsystem/compare/v100.7.0...v100.7.1) (2025-12-18)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
