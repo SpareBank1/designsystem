@@ -1,6 +1,16 @@
 import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
 import { SecondaryButton, ShortcutButton } from '@sb1/ffe-buttons-react';
-import { GroupCard, GroupCardElement, GroupCardFooter, GroupCardTitle, IconCard, IllustrationCard, ImageCard, StippledCard, TextCard } from '@sb1/ffe-cards-react';
+import {
+    GroupCard,
+    GroupCardElement,
+    GroupCardFooter,
+    GroupCardTitle,
+    IconCard,
+    IllustrationCard,
+    ImageCard,
+    StippledCard,
+    TextCard,
+} from '@sb1/ffe-cards-react';
 import { Heading2, Heading3, Paragraph, SmallText } from '@sb1/ffe-core-react';
 import { GridCol, GridRow } from '@sb1/ffe-grid-react';
 import { Icon } from '@sb1/ffe-icons-react';
@@ -18,11 +28,10 @@ import {
     TableRow,
     TableRowExpandable,
 } from '@sb1/ffe-tables-react';
+import { Tag } from '@sb1/ffe-tags-react';
 import { clsx } from 'clsx';
 import { useId, useRef, useState } from 'react';
 import utvalgte from './utvalgte.svg';
-import { Tag } from '@sb1/ffe-tags-react';
-
 
 interface Transaction {
     date: string;
@@ -84,19 +93,25 @@ export const AccountOverview = () => {
     return (
         <>
             <GridRow>
-                <GridCol sm={12} className='mt-4'>
+                <GridCol sm={12} className="mt-4">
                     <Heading2 noMargin={true}>Brukskonto</Heading2>
                     <SmallText>Bruk av Cards, Accordion og Table</SmallText>
+                    <div className="flex items-center gap-1">
+                        <Tag type="subtle" size="lg" variant="warning">
+                            Bruk
+                        </Tag>
+                        <Tag type="subtle" size="lg" variant="warning">
+                            Kontoer
+                        </Tag>
+                        <Tag type="subtle" size="lg" variant="warning">
+                            Tag
+                        </Tag>
+                    </div>
                 </GridCol>
-                <div className='flex items-center gap-1'>
-                    <Tag type='subtle' size="lg" variant='warning'>Bruk</Tag>
-                    <Tag type='subtle' size="lg" variant='warning'>Kontoer</Tag>
-                    <Tag type='subtle' size="lg" variant='warning'>Tag</Tag>
-                </div>
             </GridRow>
 
             <GridRow>
-                <GridCol className='mt-4'>
+                <GridCol className="mt-4">
                     <Paragraph>Kontonummer: 1234 56 78910</Paragraph>
                 </GridCol>
                 <GridCol sm={12} md={4}>
@@ -104,7 +119,6 @@ export const AccountOverview = () => {
                         icon={<Icon fileUrl={moneyIcon} size="sm" />}
                         title="Disponibel saldo"
                         condensed={true}
-
                     >
                         {({ Title, Subtext }) => (
                             <>
@@ -119,7 +133,6 @@ export const AccountOverview = () => {
                         icon={<Icon fileUrl={arrowOutwardIcon} size="sm" />}
                         title="Utgående i dag"
                         condensed={true}
-
                     >
                         {({ Title, Subtext }) => (
                             <>
@@ -134,12 +147,13 @@ export const AccountOverview = () => {
                         icon={<Icon fileUrl={arrowInwardIcon} size="sm" />}
                         title="Innkommende i dag"
                         condensed={true}
-
                     >
                         {({ Title, Subtext, CardAction }) => (
                             <>
                                 <Title>
-                                    <CardAction href="/kontoer">1224,9kr</CardAction>
+                                    <CardAction href="/kontoer">
+                                        1224,9kr
+                                    </CardAction>
                                 </Title>
                                 <Subtext>Innkommende i dag, klikkbart</Subtext>
                             </>
@@ -154,31 +168,37 @@ export const AccountOverview = () => {
                         {({ Title, Subtext, Text }) => (
                             <>
                                 <Title>Du er på god vei</Title>
-                                <div className='mb-2 mt-2'>
-                                    <Tag type='subtle' variant='success'>Utmerket</Tag>
+                                <div className="mb-2 mt-2">
+                                    <Tag type="subtle" variant="success">
+                                        Utmerket
+                                    </Tag>
                                 </div>
-                                <Subtext as="span">Status så langt i år</Subtext>
+                                <Subtext as="span">
+                                    Status så langt i år
+                                </Subtext>
                                 <Text>
                                     Vi har vurdert at du har en god økonomi og
-                                    at du er på god vei til å nå dine økonomiske mål.
+                                    at du er på god vei til å nå dine økonomiske
+                                    mål.
                                 </Text>
                             </>
                         )}
                     </TextCard>
                 </GridCol>
                 <GridCol sm={12} md={6}>
-                    <StippledCard >
+                    <StippledCard>
                         {({ CardName, Title, Subtext, Text }) => (
                             <>
                                 <CardName>CardName</CardName>
                                 <Title>Tittel</Title>
                                 <Subtext as="span">Subtext er grå</Subtext>
                                 <Text>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat.
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat.
                                 </Text>
                             </>
                         )}
@@ -193,31 +213,28 @@ export const AccountOverview = () => {
                             <Heading2 lookLike={5}>Andre kontoer</Heading2>
                         </GroupCardTitle>
                         <GroupCardElement>
-                            {({
-                                CardName,
-                                Text
-                            }) => <div className='flex justify-between items-center'>
+                            {({ CardName, Text }) => (
+                                <div className="flex justify-between items-center">
                                     <CardName>Feriesparing</CardName>
                                     <Text>3000</Text>
-                                </div>}
+                                </div>
+                            )}
                         </GroupCardElement>
                         <GroupCardElement>
-                            {({
-                                CardName,
-                                Text
-                            }) => <div className='flex justify-between items-center'>
+                            {({ CardName, Text }) => (
+                                <div className="flex justify-between items-center">
                                     <CardName>Hytta</CardName>
                                     <Text>5400</Text>
-                                </div>}
+                                </div>
+                            )}
                         </GroupCardElement>
                         <GroupCardElement>
-                            {({
-                                CardName,
-                                Text
-                            }) => <div className='flex justify-between items-center'>
+                            {({ CardName, Text }) => (
+                                <div className="flex justify-between items-center">
                                     <CardName>Felles</CardName>
                                     <Text>981</Text>
-                                </div>}
+                                </div>
+                            )}
                         </GroupCardElement>
                         <GroupCardFooter>
                             {({ CardAction }) => (
@@ -229,7 +246,12 @@ export const AccountOverview = () => {
                     </GroupCard>
                 </GridCol>
                 <GridCol sm={12} md={6} className="mt-8">
-                    <IllustrationCard className="mb-1" img={<img src={utvalgte} alt="" />} condensed={true} noMargin={true}>
+                    <IllustrationCard
+                        className="mb-1"
+                        img={<img src={utvalgte} alt="" />}
+                        condensed={true}
+                        noMargin={true}
+                    >
                         {({ CardName, Text }) => (
                             <>
                                 <CardName>Kortnavn</CardName>
@@ -237,11 +259,16 @@ export const AccountOverview = () => {
                             </>
                         )}
                     </IllustrationCard>
-                    <IllustrationCard className="mb-1" img={<img src={utvalgte} alt="" />} condensed={true} noMargin={true}>
+                    <IllustrationCard
+                        className="mb-1"
+                        img={<img src={utvalgte} alt="" />}
+                        condensed={true}
+                        noMargin={true}
+                    >
                         {({ CardName, Text, CardAction }) => (
                             <>
                                 <CardName>
-                                    <CardAction as="a" href='/kontoer'>
+                                    <CardAction as="a" href="/kontoer">
                                         Kortnavn
                                     </CardAction>
                                 </CardName>
@@ -249,11 +276,15 @@ export const AccountOverview = () => {
                             </>
                         )}
                     </IllustrationCard>
-                    <IllustrationCard img={<img src={utvalgte} alt="" />} condensed={true} noMargin={true}>
+                    <IllustrationCard
+                        img={<img src={utvalgte} alt="" />}
+                        condensed={true}
+                        noMargin={true}
+                    >
                         {({ CardName, Text, CardAction }) => (
                             <>
                                 <CardName>
-                                    <CardAction as="a" href='/kontoer'>
+                                    <CardAction as="a" href="/kontoer">
                                         Kortnavn
                                     </CardAction>
                                 </CardName>
@@ -294,18 +325,21 @@ export const AccountOverview = () => {
                                 {transactions.map((tx, i) => (
                                     <TableRowExpandable
                                         key={i}
-                                        expandContent={<>
-                                            Mer info om transaksjonen:
-                                            <SecondaryButton
-                                                onClick={() =>
-                                                    handleTransactionClick(
-                                                        tx,
-                                                    )
-                                                }
-                                                className="ml-2">
-                                                Åpne mer info
-                                            </SecondaryButton>
-                                        </>}
+                                        expandContent={
+                                            <>
+                                                Mer info om transaksjonen:
+                                                <SecondaryButton
+                                                    onClick={() =>
+                                                        handleTransactionClick(
+                                                            tx,
+                                                        )
+                                                    }
+                                                    className="ml-2"
+                                                >
+                                                    Åpne mer info
+                                                </SecondaryButton>
+                                            </>
+                                        }
                                     >
                                         <TableDataCell columnHeader="Dato">
                                             {tx.date}
@@ -318,9 +352,9 @@ export const AccountOverview = () => {
                                             className={clsx(
                                                 'text-right',
                                                 tx.type === 'income' &&
-                                                'text-ffe-green-700',
+                                                    'text-ffe-green-700',
                                                 tx.type === 'expense' &&
-                                                'text-ffe-red-700',
+                                                    'text-ffe-red-700',
                                             )}
                                         >
                                             {tx.amount.toFixed(2)} kr
@@ -373,7 +407,7 @@ export const AccountOverview = () => {
             <GridRow>
                 <GridCol className="mt-8">
                     <Heading3>Liknende artikler</Heading3>
-                    <div className='flex flex-wrap gap-4'>
+                    <div className="flex flex-wrap gap-4">
                         <ImageCard
                             imageSrc="https://design.sparebank1.no/static/familie-leker-ddcc1a0dacd2f6bafba6a9abb10e901c.jpg"
                             imageAltText="To jenter som går å snakker sammen"
@@ -381,21 +415,27 @@ export const AccountOverview = () => {
                             {({ CardAction, Title, Subtext, Text }) => (
                                 <>
                                     <CardAction href="/felles-forsikringer">
-                                        <Title>Hva skjer med felles forsikringer i samlivsbrudd?</Title>
+                                        <Title>
+                                            Hva skjer med felles forsikringer i
+                                            samlivsbrudd?
+                                        </Title>
                                     </CardAction>
-                                    <Subtext>
-                                        En liten undertekst
-                                    </Subtext>
-                                    <div className='flex items-center justify-center gap-1'>
-                                        <Tag variant="info" size="sm">Samlivsbrudd</Tag>
-                                        <Tag variant="success" size="sm">Flytting</Tag>
+                                    <Subtext>En liten undertekst</Subtext>
+                                    <div className="flex items-center justify-center gap-1">
+                                        <Tag variant="info" size="sm">
+                                            Samlivsbrudd
+                                        </Tag>
+                                        <Tag variant="success" size="sm">
+                                            Flytting
+                                        </Tag>
                                     </div>
                                     <Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua. De nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. De nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo
+                                        consequat.
                                     </Text>
                                 </>
                             )}
@@ -407,15 +447,19 @@ export const AccountOverview = () => {
                             {({ CardAction, Title, Subtext, Text }) => (
                                 <>
                                     <CardAction href="/felles-forsikringer">
-                                        <Title>Slik sørger du for at barna får en trygg skolevei</Title>
+                                        <Title>
+                                            Slik sørger du for at barna får en
+                                            trygg skolevei
+                                        </Title>
                                     </CardAction>
                                     <Subtext>En liten undertekst</Subtext>
                                     <Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat.
                                     </Text>
                                 </>
                             )}
@@ -431,9 +475,10 @@ export const AccountOverview = () => {
                                     </CardAction>
                                     <Subtext>En liten undertekst</Subtext>
                                     <Text>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua.
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua.
                                     </Text>
                                 </>
                             )}
@@ -460,9 +505,9 @@ export const AccountOverview = () => {
                             <span
                                 className={clsx(
                                     selectedTransaction.type === 'income' &&
-                                    'text-ffe-green-700',
+                                        'text-ffe-green-700',
                                     selectedTransaction.type === 'expense' &&
-                                    'text-ffe-red-700',
+                                        'text-ffe-red-700',
                                 )}
                             >
                                 {selectedTransaction.amount.toFixed(2)} kr

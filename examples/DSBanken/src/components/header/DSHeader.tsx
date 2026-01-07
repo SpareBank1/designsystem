@@ -112,7 +112,7 @@ const DSHeader: React.FC<Props> = ({ menuItems }) => {
                 </nav>
             </div>
             <ToggleSwitch description="Darkmode" checked={darkMode}
-                onChange={(e) => setDarkMode(e.target.checked)} className='float-right' />
+                onChange={(e) => setDarkMode(e.target.checked)} className='flex justify-end' />
         </header>
     );
 };
