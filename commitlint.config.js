@@ -8,7 +8,6 @@ module.exports = {
             [
                 '.storybook',
                 'release',
-                'component-overview',
                 'eslint-config-ffe',
                 'eslint-config-ffe-base',
                 'stylelint-config-ffe',
