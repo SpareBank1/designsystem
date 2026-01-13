@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.8.1](https://github.com/SpareBank1/designsystem/compare/v100.8.0...v100.8.1) (2026-01-13)
+
+
+### Bug Fixes
+
+* **ffe-form:** fjerner z-index fra radio-block-sirkelen ([bdd6373](https://github.com/SpareBank1/designsystem/commit/bdd63735c06293027480963762f5b2581c5d4690))
+
+
+
+
+
 # [100.8.0](https://github.com/SpareBank1/designsystem/compare/v100.7.1...v100.8.0) (2025-12-19)
 
 
