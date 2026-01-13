@@ -1,5 +1,5 @@
 {
-    "packages": ["packages/*", "linting/*", "buildtool", "component-overview"],
+    "packages": ["packages/*", "linting/*", "buildtool"],
     "npmClient": "npm",
     "version": "100.8.0",
     "command": {
