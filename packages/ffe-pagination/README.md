@@ -44,6 +44,6 @@ npm run build
 npm start
 ```
 
-A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
+A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
 
 Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
