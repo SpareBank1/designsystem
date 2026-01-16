@@ -30,7 +30,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^32.0.5",
+        "@sb1/ffe-core": "^100.8.1",
         "@sb1/ffe-progressbar": "^100.8.1",
         "classnames": "^2.5.1"
     },
