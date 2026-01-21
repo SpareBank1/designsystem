@@ -29,8 +29,5 @@
     },
     "publishConfig": {
         "access": "public"
-    },
-    "dependencies": {
-        "parcel": "^2.16.3"
     }
 }
