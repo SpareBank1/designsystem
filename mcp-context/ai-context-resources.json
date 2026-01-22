@@ -151,6 +151,12 @@
       "mimeType": "text/markdown"
     },
     {
+      "uri": "ffe://component/skeleton",
+      "name": "@sb1/ffe-skeleton-react",
+      "description": "",
+      "mimeType": "text/markdown"
+    },
+    {
       "uri": "ffe://component/spinner",
       "name": "@sb1/ffe-spinner-react",
       "description": "",

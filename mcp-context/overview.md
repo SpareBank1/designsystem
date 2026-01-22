@@ -29,89 +29,87 @@ Below is a complete list of all React component packages in the FFE design syste
 
 **Components:** AccountSelector, AccountSelectorMulti
 
-[View detailed documentation](./packages/ffe-account-selector-react/ai-context.md)
+[View detailed documentation](./components/account-selector.md)
 
 #### @sb1/ffe-datepicker-react
 
+Komponenter for dato-inntasting og kalender i FFE. `DateInput` er feltet for manuell inntasting og parsing, `Calendar` viser datoer med tastaturnavigasjon, og `Datepicker` kombinerer input + kalender i én komponent.
+
 **Components:** Datepicker, getDatepickerByLabelText, DateInput, Calendar
 
-[View detailed documentation](./packages/ffe-datepicker-react/ai-context.md)
+[View detailed documentation](./components/datepicker.md)
 
 #### @sb1/ffe-dropdown-react
 
-Dropdown er en vanlig nedtrekksliste som kan brukes man når man har 5-10 valg å velge mellom. Har du mindre enn 5 valg, bruk `RadioButtons` istedenfor.
+Enkel nedtrekksliste-komponent (`Dropdown`) for valg fra en liste. Brukes for korte, flate lister der brukeren skal velge ett alternativ.
 
 **Components:** Dropdown
 
-[View detailed documentation](./packages/ffe-dropdown-react/ai-context.md)
+[View detailed documentation](./components/dropdown.md)
 
 #### @sb1/ffe-file-upload-react
 
-En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokumentasjon.
-
 **Components:** FileUpload, getFileContent, getUniqueFileName
 
-[View detailed documentation](./packages/ffe-file-upload-react/ai-context.md)
+[View detailed documentation](./components/file-upload.md)
 
 #### @sb1/ffe-form-react
 
-Checkbox brukes der du har 4 eller færre valgalternativer, og du vil gi brukeren muligheten til å velge mer enn ett alternativ.
+Skjemaelementer og støttekomponenter for input, valg og meldinger i FFE. Bruk disse for å bygge tilgjengelige, konsistente skjemaer med riktige etiketter, hjelpetekster og validering.
 
 **Components:** ErrorFieldMessage, InfoFieldMessage, SuccessFieldMessage, Checkbox, Input, ...
 
-[View detailed documentation](./packages/ffe-form-react/ai-context.md)
+[View detailed documentation](./components/form.md)
 
 #### @sb1/ffe-searchable-dropdown-react
 
-@sb1/ffe-searchable-dropdown-react
+Søkbar nedtrekksliste for store eller dynamiske lister. Tilgjengelig som enkeltvalg (`SearchableDropdown`) og flervalg (`SearchableDropdownMultiSelect`). Støtter tastaturnavigasjon, lastestatus, tom-liste og egendefinert render av elementer.
 
 **Components:** SearchableDropdown, SearchableDropdownMultiSelect
 
-[View detailed documentation](./packages/ffe-searchable-dropdown-react/ai-context.md)
+[View detailed documentation](./components/searchable-dropdown.md)
 
 ### Buttons & Actions
 
 #### @sb1/ffe-buttons-react
 
-@sb1/ffe-buttons-react
+Reaktive knapp-komponenter i FFE for handlinger med korrekt visuell hierarki og tilgjengelighetsstøtte. Bruk disse for å kommunisere prioritet (Action, Primary, Secondary, Tertiary), navigasjon (BackButton), utvidelse/visning (Expand/InlineExpand), grupperte knapper og snarveier.
 
 **Components:** ActionButton, BackButton, ButtonGroup, ExpandButton, InlineExpandButton, ...
 
-[View detailed documentation](./packages/ffe-buttons-react/ai-context.md)
+[View detailed documentation](./components/buttons.md)
 
 ### Layout & Structure
 
 #### @sb1/ffe-accordion-react
 
-Accordion brukes der du har mye informasjon som du ønsker å gjøre tilgjengelig for brukere, uten at alt er visuelt synlig samtidig. En accordion er bygget opp av en «header» og et «panel», og i SpareBank 1 er hele «headeren» klikkbar.
+Kollapsbare seksjoner for å organisere innhold som kan åpnes og lukkes. `Accordion` håndterer gruppeatferd, mens `AccordionItem` representerer hver seksjon.
 
 **Components:** Accordion, AccordionItem
 
-[View detailed documentation](./packages/ffe-accordion-react/ai-context.md)
+[View detailed documentation](./components/accordion.md)
 
 #### @sb1/ffe-cards-react
 
-@sb1/ffe-cards-react
+Kort-komponenter for presentasjon av innhold med visuelle elementer: tekstkort, ikon-kort, bilde/illustrasjon, grupperte kort og prikkede/stippled kort. `CardBase` er grunnlaget som spesialiserte kortvarianter bygger på.
 
 **Components:** CardBase, TextCard, IconCard, GroupCard, GroupCardElement, ...
 
-[View detailed documentation](./packages/ffe-cards-react/ai-context.md)
+[View detailed documentation](./components/cards.md)
 
 #### @sb1/ffe-collapse-react
 
-Komponent for å enkelt lage ekspanderbart område. Hvorvidt området er ekspandert eller ikke styres av konsumenten via property `isOpen`.
-
 **Components:** Collapse
 
-[View detailed documentation](./packages/ffe-collapse-react/ai-context.md)
+[View detailed documentation](./components/collapse.md)
 
 #### @sb1/ffe-tabs-react
 
-Faner kan være nyttige for å dele opp innholdet på siden i logiske «blokker» og forenkle navigasjonen for brukerne.
+Fanekomponenter for å organisere innhold i seksjoner der brukeren kan bytte mellom faner uten å forlate siden. `TabGroup` styrer valgt fane og tilhørende panel, `Tab` representerer hver fane.
 
 **Components:** Tab, TabGroup
 
-[View detailed documentation](./packages/ffe-tabs-react/ai-context.md)
+[View detailed documentation](./components/tabs.md)
 
 ### Feedback & Messages
 
@@ -119,147 +117,135 @@ Faner kan være nyttige for å dele opp innholdet på siden i logiske «blokker�
 
 **Components:** ContextInfoMessage, ContextTipsMessage, ContextSuccessMessage, ContextErrorMessage
 
-[View detailed documentation](./packages/ffe-context-message-react/ai-context.md)
+[View detailed documentation](./components/context-message.md)
 
 #### @sb1/ffe-feedback-react
 
-Komponenten består av en tekst og tommel opp/ned-knapper som ved klikk viser et tilbakemeldingsskjema.
-
 **Components:** Feedback
 
-[View detailed documentation](./packages/ffe-feedback-react/ai-context.md)
+[View detailed documentation](./components/feedback.md)
 
 #### @sb1/ffe-message-box-react
 
+Deprecated package. Use `@sb1/ffe-messages-react` for system and context messages, headers, message lists, and message boxes. See the Messages component documentation for up-to-date APIs and examples.
+
 **Components:** SuccessMessage, ErrorMessage, InfoMessage, TipsMessage, InfoMessageList, ...
 
-[View detailed documentation](./packages/ffe-message-box-react/ai-context.md)
+[View detailed documentation](./components/message-box.md)
 
 #### @sb1/ffe-messages-react
 
-@sb1/ffe-messages-react
+Unified message components for communicating status, tips, and alerts. Use `SystemMessage` for global status, `ContextMessage` for contextual inline feedback (with optional header and close button), and `MessageBox` for framed messages. Compose `MessageHeader` and `MessageList`/`MessageListItem` to structure content. Choose `type` (`info`, `success`, `tips`, `warning`, `error`) to control icon, color, and accessibility roles.
 
 **Components:** SystemMessage, ContextMessage, MessageBox, MessageHeader, MessageList, ...
 
-[View detailed documentation](./packages/ffe-messages-react/ai-context.md)
+[View detailed documentation](./components/messages.md)
 
 #### @sb1/ffe-modals-react
 
-Modalvindu brukes for å vise informasjon, bruksspesifikke funksjoner, meldinger eller bekreftelser som brukeren må respondere på før de kan fortsette å bruke nettsiden.
+Modal-komponenter for korte, fokuserte interaksjoner i webapplikasjoner. Bruk modaler når du trenger å fange brukerens oppmerksomhet for en enkel oppgave, bekreftelse eller informasjon. Ikke bruk modaler på mobil—bruk ark/sheets.
 
 **Components:** Modal, ModalHandle, ModalBlock
 
-[View detailed documentation](./packages/ffe-modals-react/ai-context.md)
+[View detailed documentation](./components/modals.md)
 
 #### @sb1/ffe-system-message-react
 
 **Components:** SystemErrorMessage, SystemInfoMessage, SystemNewsMessage, SystemSuccessMessage
 
-[View detailed documentation](./packages/ffe-system-message-react/ai-context.md)
+[View detailed documentation](./components/system-message.md)
 
 ### Navigation & Controls
 
 #### @sb1/ffe-chips-react
 
-Bruk Chips for elementer der brukeren trenger å filtrere eller organisere innhold.
-
 **Components:** Chip, ChipRemovable, ChipSelectable
 
-[View detailed documentation](./packages/ffe-chips-react/ai-context.md)
+[View detailed documentation](./components/chips.md)
 
 #### @sb1/ffe-pagination-react
 
-Paginering benyttes til søkeresultater og lignende presentasjon av store mengder informasjon som ikke får plass på en enkelt side.
-
 **Components:** Pagination, usePagination
 
-[View detailed documentation](./packages/ffe-pagination-react/ai-context.md)
+[View detailed documentation](./components/pagination.md)
 
 #### @sb1/ffe-tags-react
 
-En Tag er en liten, fleksibel komponent som brukes til å kategorisere, merke eller gi ekstra kontekst til innhold.
-
 **Components:** Tag
 
-[View detailed documentation](./packages/ffe-tags-react/ai-context.md)
+[View detailed documentation](./components/tags.md)
 
 ### Data Display
 
 #### @sb1/ffe-chart-donut-react
 
-Diagram i SpareBank 1-drakt.
-
 **Components:** ChartDonut
 
-[View detailed documentation](./packages/ffe-chart-donut-react/ai-context.md)
+[View detailed documentation](./components/chart-donut.md)
 
 #### @sb1/ffe-lists-react
 
+Accessible list components for presenting items, steps, and key–value details. Use bullet, check, or numbered lists for sequences; use description lists for terms and definitions; and use `DetailListCard` for compact card-style summaries. Prefer lists when information benefits from scannability and structure rather than paragraph text.
+
 **Components:** BulletList, BulletListItem, CheckList, CheckListItem, NumberedList, ...
 
-[View detailed documentation](./packages/ffe-lists-react/ai-context.md)
+[View detailed documentation](./components/lists.md)
 
 #### @sb1/ffe-progressbar-react
 
-Progressbar brukes for å vise fremgangen i en prosess.
-
 **Components:** Progressbar
 
-[View detailed documentation](./packages/ffe-progressbar-react/ai-context.md)
+[View detailed documentation](./components/progressbar.md)
 
 #### @sb1/ffe-spinner-react
 
-Det er mye som skjer i bakgrunnen i et system når innholdet lastes inn. Med spinnere kan vi kommunisere tydelig til brukeren at innholdet er i ferd med å vises snart. Det er best practice å benytte seg av spinnere dersom ventetiden varer lengre enn tre sekunder. Dersom siden bruker mer enn 10 sekunder på å laste inn innholdet, vurder å bruke en notifikasjon med forklarende tekst.
-
 **Components:** Spinner
 
-[View detailed documentation](./packages/ffe-spinner-react/ai-context.md)
+[View detailed documentation](./components/spinner.md)
 
 #### @sb1/ffe-tables-react
 
-Tabeller brukes når vi vil vise strukturert informasjon under en felles overskrift.
+Komponenter for tabeller med semantiske deler (`Table`, `TableHead`, `TableBody`, `TableRow`, `TableHeaderCell`, `TableDataCell`, `TableFoot`, `TableCaption`) og utvidbare rader (`TableRowExpandable`). Brukes for strukturert visning av data i rader og kolonner.
 
 **Components:** Table, TableBody, TableDataCell, TableFoot, TableHead, ...
 
-[View detailed documentation](./packages/ffe-tables-react/ai-context.md)
+[View detailed documentation](./components/tables.md)
 
 ### Visual Elements
 
 #### @sb1/ffe-badge-react
 
-En Badge er en liten visuell indikator som viser antall uleste varsler, meldinger eller oppgaver.
-
 **Components:** Badge
 
-[View detailed documentation](./packages/ffe-badge-react/ai-context.md)
+[View detailed documentation](./components/badge.md)
 
 #### @sb1/ffe-icons-react
 
-Ikoner skal gjøre det enkelt for kunden å navigere i de digitale flatene våre. Ikonene representerer funksjoner, verktøy eller handlinger og visualiserer funksjonalitet.
+Ikonkomponenter for å vise vektorikoner konsistent i FFE. `Icon` støtter valg av ikonnavn, størrelse og dekorasjon, og integreres med ikonsettet i `@sb1/ffe-icons`.
 
-[View detailed documentation](./packages/ffe-icons-react/ai-context.md)
+[View detailed documentation](./components/icons.md)
 
 #### @sb1/ffe-shapes-react
 
-@sb1/ffe-shapes-react
-
 **Components:** Wave
 
-[View detailed documentation](./packages/ffe-shapes-react/ai-context.md)
+[View detailed documentation](./components/shapes.md)
 
 #### @sb1/ffe-symbols-react
 
 **Components:** Symbol
 
-[View detailed documentation](./packages/ffe-symbols-react/ai-context.md)
+[View detailed documentation](./components/symbols.md)
 
 ### Core & Utilities
 
 #### @sb1/ffe-core-react
 
+React-komponenter for typografi og grunnleggende tekstmønstre i FFE. Bruk disse komponentene når du skal rendere overskrifter, avsnitt, lenker og annet tekstinnhold med riktig visuell stil, spacing og semantikk i tråd med SpareBank 1 sitt designsystem.
+
 **Components:** BodyText, DividerLine, EmphasizedText, Heading1, Heading2, ...
 
-[View detailed documentation](./packages/ffe-core-react/ai-context.md)
+[View detailed documentation](./components/core.md)
 
 ## Installation Guidelines
 
@@ -327,7 +313,7 @@ npm install @sb1/ffe-buttons-react @sb1/ffe-buttons @sb1/ffe-icons-react @sb1/ff
 For detailed information about a specific component:
 
 1. Look up the component in the list above
-2. Navigate to its package-specific ai-context.md file
+2. Navigate to its component documentation in the components/ folder
 3. Review installation, usage, and guidelines
 
 ## Additional Resources
