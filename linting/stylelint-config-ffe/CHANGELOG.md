@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.8.1](https://github.com/SpareBank1/designsystem/compare/v100.8.0...v100.8.1) (2026-01-13)
+
+**Note:** Version bump only for package @sb1/stylelint-config-ffe
+
+
+
+
+
+# [100.8.0](https://github.com/SpareBank1/designsystem/compare/v100.7.1...v100.8.0) (2025-12-19)
+
+**Note:** Version bump only for package @sb1/stylelint-config-ffe
+
+
+
+
+
+## [100.7.1](https://github.com/SpareBank1/designsystem/compare/v100.7.0...v100.7.1) (2025-12-18)
+
+**Note:** Version bump only for package @sb1/stylelint-config-ffe
+
+
+
+
+
+# [100.7.0](https://github.com/SpareBank1/designsystem/compare/v100.6.1...v100.7.0) (2025-12-17)
+
+**Note:** Version bump only for package @sb1/stylelint-config-ffe
+
+
+
+
+
+## [100.6.1](https://github.com/SpareBank1/designsystem/compare/v100.6.0...v100.6.1) (2025-12-15)
+
+**Note:** Version bump only for package @sb1/stylelint-config-ffe
+
+
+
+
+
+# [100.6.0](https://github.com/SpareBank1/designsystem/compare/v100.5.2...v100.6.0) (2025-12-02)
+
+**Note:** Version bump only for package @sb1/stylelint-config-ffe
+
+
+
+
+
 ## [100.5.2](https://github.com/SpareBank1/designsystem/compare/v100.5.1...v100.5.2) (2025-12-02)
 
 **Note:** Version bump only for package @sb1/stylelint-config-ffe

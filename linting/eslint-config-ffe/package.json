@@ -1,6 +1,6 @@
 {
     "name": "@sb1/eslint-config-ffe",
-    "version": "100.5.2",
+    "version": "100.8.1",
     "description": "",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -18,7 +18,7 @@
         "lint:fix": "echo \"Skipping lint:fix for linting config\" && true"
     },
     "dependencies": {
-        "@sb1/eslint-config-ffe-base": "^100.5.2"
+        "@sb1/eslint-config-ffe-base": "^100.8.1"
     },
     "devDependencies": {
         "eslint": "^9.22.0",

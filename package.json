@@ -25,8 +25,6 @@
     "lint:style": "lerna run lint:style --stream --parallel",
     "lint:style:fix": "lerna run lint:style:fix --stream --parallel",
     "start": "npm run build && npm run storybook",
-    "watch:component-overview": "lerna run watch --scope='@sb1/ffe-component-index'",
-    "start:component-overview": "lerna run start --scope='@sb1/ffe-component-index'",
     "test": "./buildtool/bin/cli.js jest",
     "test:watch": "./buildtool/bin/cli.js jest --watch",
     "test:playwright": "playwright test --config ./test/playwright.config.ts",
@@ -42,14 +40,14 @@
     "update:ai-context": "node scripts/generate-enhanced-ai-context.js"
   },
   "lint-staged": {
-    "{packages,buildtool,component-overview,test,.storybook}/**/*.{js,jsx,ts,tsx}": [
+    "{packages,buildtool,test,.storybook}/**/*.{js,jsx,ts,tsx}": [
       "oxlint --fix"
     ],
-    "{packages,buildtool,component-overview,test,.storybook}/**/*.less": [
+    "{packages,buildtool,test,.storybook}/**/*.less": [
       "./buildtool/bin/cli.js stylelint --fix",
       "prettier --write"
     ],
-    "{packages,buildtool,component-overview,test,.storybook}/**/*.{json,css,md}": [
+    "{packages,buildtool,test,.storybook}/**/*.{json,css,md}": [
       "prettier --write"
     ]
   },
@@ -57,8 +55,7 @@
     ".storybook/*",
     "packages/*",
     "linting/*",
-    "buildtool",
-    "component-overview"
+    "buildtool"
   ],
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",

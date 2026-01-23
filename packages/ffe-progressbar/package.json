@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-progressbar",
-    "version": "100.5.2",
+    "version": "100.8.1",
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
@@ -19,10 +19,10 @@
         "build": "lessc less/progressbar.less css/progressbar.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^32.0.5"
+        "@sb1/ffe-core": "^100.8.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.5.2"
+        "@sb1/ffe-buildtool": "^100.8.1"
     },
     "publishConfig": {
         "access": "public"

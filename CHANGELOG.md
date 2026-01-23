@@ -3,6 +3,77 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.8.1](https://github.com/SpareBank1/designsystem/compare/v100.8.0...v100.8.1) (2026-01-13)
+
+
+### Bug Fixes
+
+* **ffe-form:** fjerner z-index fra radio-block-sirkelen ([bdd6373](https://github.com/SpareBank1/designsystem/commit/bdd63735c06293027480963762f5b2581c5d4690))
+
+
+
+
+
+# [100.8.0](https://github.com/SpareBank1/designsystem/compare/v100.7.1...v100.8.0) (2025-12-19)
+
+
+### Features
+
+* **ffe-form-react:** Allow InputGroup description to be a ReactElement ([ef16970](https://github.com/SpareBank1/designsystem/commit/ef169706cd69297bb8641cff8deaa330231b2f00))
+
+
+
+
+
+## [100.7.1](https://github.com/SpareBank1/designsystem/compare/v100.7.0...v100.7.1) (2025-12-18)
+
+
+### Bug Fixes
+
+* **ffe-skeleton-react:** fiks bug i dokumentsajon ([1c1d438](https://github.com/SpareBank1/designsystem/commit/1c1d438e899fb47ceb54ca1309bb9fdaf0dffdcc))
+* **ffe-skeleton-react:** fix publisering ([cfd6a38](https://github.com/SpareBank1/designsystem/commit/cfd6a384ccf4dfeb910d1fbd3d3c08f03c07bffd))
+* **ffe-skeleton:** fiks bug i dokumentsajon ([607e45c](https://github.com/SpareBank1/designsystem/commit/607e45c6e6cd16a5879fb5db13488bf2216a9b73))
+* **ffe-skeleton:** fix publisering ([bddd0f9](https://github.com/SpareBank1/designsystem/commit/bddd0f94e9574acce062e9f3831d6bd9b1833fcc))
+
+
+
+
+
+# [100.7.0](https://github.com/SpareBank1/designsystem/compare/v100.6.1...v100.7.0) (2025-12-17)
+
+
+### Features
+
+* **.storybook:** Legg til skeleton komponent ([1775972](https://github.com/SpareBank1/designsystem/commit/1775972ad25b63064b010f3b088ff402ec9dd062))
+* **ffe-skeleton-react:** Legg til skeleton komponent ([ee17f28](https://github.com/SpareBank1/designsystem/commit/ee17f281a4b7c22456ef1ed192b773936778843f))
+* **ffe-skeleton:** Legg til skeleton komponent ([43fcbf9](https://github.com/SpareBank1/designsystem/commit/43fcbf96fbd660947bde242dc53a4b1099105a5c))
+
+
+
+
+
+## [100.6.1](https://github.com/SpareBank1/designsystem/compare/v100.6.0...v100.6.1) (2025-12-15)
+
+
+### Bug Fixes
+
+* **ffe-header:** fix so that the line under menu items in header is visible when clicked (not after clicking somewhere else on the page), but not visible when tabbing (as probably intended). ([a44fa19](https://github.com/SpareBank1/designsystem/commit/a44fa19bd3c4667413cbf823e359590325db58ab))
+
+
+
+
+
+# [100.6.0](https://github.com/SpareBank1/designsystem/compare/v100.5.2...v100.6.0) (2025-12-02)
+
+
+### Features
+
+* **ffe-datepicker-react:** legg til feature for å disable dates i kalenderen ([e97809f](https://github.com/SpareBank1/designsystem/commit/e97809ff39900fafd11805f285d8ccf3a01d9fad))
+
+
+
+
+
 ## [100.5.2](https://github.com/SpareBank1/designsystem/compare/v100.5.1...v100.5.2) (2025-12-02)
 
 

@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-system-message-react",
-    "version": "100.5.2",
+    "version": "100.8.1",
     "description": "SpareBank 1 System Message komponent",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -24,14 +24,14 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-collapse-react": "^100.5.2",
-        "@sb1/ffe-grid-react": "^100.5.2",
-        "@sb1/ffe-icons-react": "^100.5.2",
-        "@sb1/ffe-system-message": "^100.5.2",
+        "@sb1/ffe-collapse-react": "^100.8.1",
+        "@sb1/ffe-grid-react": "^100.8.1",
+        "@sb1/ffe-icons-react": "^100.8.1",
+        "@sb1/ffe-system-message": "^100.8.1",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.5.2",
+        "@sb1/ffe-buildtool": "^100.8.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

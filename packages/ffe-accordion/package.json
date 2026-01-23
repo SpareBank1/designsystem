@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-accordion",
-    "version": "100.5.2",
+    "version": "100.8.1",
     "description": "Accordion component for FFE.",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -20,10 +20,10 @@
         "build": "lessc less/ffe-accordion.less css/ffe-accordion.css --autoprefix"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.5.2"
+        "@sb1/ffe-core": "^100.8.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.5.2"
+        "@sb1/ffe-buildtool": "^100.8.1"
     },
     "publishConfig": {
         "access": "public"

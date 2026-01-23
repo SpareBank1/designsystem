@@ -1,0 +1,31 @@
+{
+    "name": "@sb1/ffe-skeleton",
+    "description": "Skeleton loading in ffe",
+    "version": "100.8.1",
+    "license": "MIT",
+    "author": "SpareBank1",
+    "files": [
+        "less",
+        "css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "lint": "echo `Linting handled at root level with oxlint`",
+        "lint:style": "ffe-buildtool stylelint less/*.less",
+        "lint:style:fix": "ffe-buildtool stylelint --fix less/*.less",
+        "test": "npm run lint",
+        "build": "lessc less/skeleton.less css/skeleton.css --autoprefix"
+    },
+    "dependencies": {
+        "@sb1/ffe-core": "^100.8.1"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^100.8.1"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

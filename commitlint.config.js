@@ -8,7 +8,6 @@ module.exports = {
             [
                 '.storybook',
                 'release',
-                'component-overview',
                 'eslint-config-ffe',
                 'eslint-config-ffe-base',
                 'stylelint-config-ffe',
@@ -61,6 +60,8 @@ module.exports = {
                 'ffe-progressbar-react',
                 'ffe-sb1-logos',
                 'ffe-searchable-dropdown-react',
+                'ffe-skeleton',
+                'ffe-skeleton-react',
                 'ffe-spinner',
                 'ffe-spinner-react',
                 'ffe-system-message',
