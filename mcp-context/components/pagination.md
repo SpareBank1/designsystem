@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Pagination component for navigating through pages of content.
 
 ## Components
 
@@ -67,6 +67,26 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 ### usePagination Props
 
 No component-specific props beyond native HTML attributes.
+
+## Manual Examples (from README)
+
+```tsx
+import { Pagination } from '@sb1/ffe-pagination-react';
+import { useState } from 'react';
+
+function MyComponent() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = 10;
+
+    return (
+        <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={page => setCurrentPage(page)}
+        />
+    );
+}
+```
 
 ## Documentation
 

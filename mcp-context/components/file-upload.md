@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Upload file button with validation and list of uploaded files.
 
 ## Components
 
@@ -73,6 +73,32 @@ No component-specific props beyond native HTML attributes.
 ### getUniqueFileName Props
 
 No component-specific props beyond native HTML attributes.
+
+## Manual Examples (from README)
+
+```tsx
+import { FileUpload } from '@sb1/ffe-file-upload-react';
+import { useState } from 'react';
+
+function MyComponent() {
+    const [files, setFiles] = useState([]);
+
+    return (
+        <FileUpload
+            id="file-upload"
+            label="Last opp dokument"
+            accept=".pdf,.jpg,.png"
+            multiple
+            onFilesSelected={selectedFiles => {
+                setFiles([...files, ...selectedFiles]);
+            }}
+            onFileDeleted={index => {
+                setFiles(files.filter((_, i) => i !== index));
+            }}
+        />
+    );
+}
+```
 
 ## Documentation
 

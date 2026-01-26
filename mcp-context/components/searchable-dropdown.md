@@ -99,38 +99,38 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 ```tsx
 import React from 'react';
 import {
-	SearchableDropdown,
-	SearchableDropdownMultiSelect,
+    SearchableDropdown,
+    SearchableDropdownMultiSelect,
 } from '@sb1/ffe-searchable-dropdown-react';
 
 export function SearchableDropdownDemo() {
-	const [value, setValue] = React.useState<string | null>(null);
-	const [values, setValues] = React.useState<string[]>([]);
-	const items = [
-		{ value: '1', label: 'Alternativ 1' },
-		{ value: '2', label: 'Alternativ 2' },
-		{ value: '3', label: 'Alternativ 3' },
-	];
+    const [value, setValue] = React.useState<string | null>(null);
+    const [values, setValues] = React.useState<string[]>([]);
+    const items = [
+        { value: '1', label: 'Alternativ 1' },
+        { value: '2', label: 'Alternativ 2' },
+        { value: '3', label: 'Alternativ 3' },
+    ];
 
-	return (
-		<div>
-			<SearchableDropdown
-				items={items}
-				value={value}
-				onChange={setValue}
-				placeholder="Søk og velg"
-				noMatchText="Ingen treff"
-			/>
+    return (
+        <div>
+            <SearchableDropdown
+                items={items}
+                value={value}
+                onChange={setValue}
+                placeholder="Søk og velg"
+                noMatchText="Ingen treff"
+            />
 
-			<SearchableDropdownMultiSelect
-				items={items}
-				values={values}
-				onChange={setValues}
-				placeholder="Velg flere"
-				noMatchText="Ingen treff"
-			/>
-		</div>
-	);
+            <SearchableDropdownMultiSelect
+                items={items}
+                values={values}
+                onChange={setValues}
+                placeholder="Velg flere"
+                noMatchText="Ingen treff"
+            />
+        </div>
+    );
 }
 ```
 

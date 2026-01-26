@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Progress bar component for showing task completion.
 
 ## Components
 
@@ -43,6 +43,22 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
 | `success` | `boolean` | No | - |
+
+## Manual Examples (from README)
+
+```tsx
+import { ProgressBar } from '@sb1/ffe-progressbar-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <ProgressBar percentage={50} />
+            <ProgressBar percentage={75} label="75% fullført" />
+            <ProgressBar percentage={100} variant="success" />
+        </div>
+    );
+}
+```
 
 ## Documentation
 

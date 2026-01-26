@@ -93,19 +93,27 @@ import React from 'react';
 import { Datepicker, DateInput, Calendar } from '@sb1/ffe-datepicker-react';
 
 export function DatepickerDemo() {
-	const [value, setValue] = React.useState('');
-	return (
-		<div>
-			{/* Kombinert input + kalender */}
-			<Datepicker value={value} onChange={setValue} label="Velg dato" />
+    const [value, setValue] = React.useState('');
+    return (
+        <div>
+            {/* Kombinert input + kalender */}
+            <Datepicker value={value} onChange={setValue} label="Velg dato" />
 
-			{/* Kun input-felt */}
-			<DateInput value={value} onChange={setValue} label="Dato" placeholder="dd.mm.åååå" />
+            {/* Kun input-felt */}
+            <DateInput
+                value={value}
+                onChange={setValue}
+                label="Dato"
+                placeholder="dd.mm.åååå"
+            />
 
-			{/* Frittstående kalender */}
-			<Calendar selectedDate={new Date()} onDateSelected={(d) => console.log('Valgt', d)} />
-		</div>
-	);
+            {/* Frittstående kalender */}
+            <Calendar
+                selectedDate={new Date()}
+                onDateSelected={d => console.log('Valgt', d)}
+            />
+        </div>
+    );
 }
 ```
 

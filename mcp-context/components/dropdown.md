@@ -53,15 +53,19 @@ import React from 'react';
 import { Dropdown } from '@sb1/ffe-dropdown-react';
 
 export function DropdownDemo() {
-	const [value, setValue] = React.useState('');
-	return (
-		<Dropdown value={value} onChange={e => setValue(e.target.value)} aria-label="Velg alternativ">
-			<option value="">Velg …</option>
-			<option value="a">Alternativ A</option>
-			<option value="b">Alternativ B</option>
-			<option value="c">Alternativ C</option>
-		</Dropdown>
-	);
+    const [value, setValue] = React.useState('');
+    return (
+        <Dropdown
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            aria-label="Velg alternativ"
+        >
+            <option value="">Velg …</option>
+            <option value="a">Alternativ A</option>
+            <option value="b">Alternativ B</option>
+            <option value="c">Alternativ C</option>
+        </Dropdown>
+    );
 }
 ```
 

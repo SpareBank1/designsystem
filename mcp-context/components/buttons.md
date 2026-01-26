@@ -158,59 +158,71 @@ Ikke sånn:
 ```tsx
 import React from 'react';
 import {
-	ActionButton,
-	BackButton,
-	ButtonGroup,
-	ExpandButton,
-	InlineExpandButton,
-	PrimaryButton,
-	SecondaryButton,
-	ShortcutButton,
-	TaskButton,
-	TertiaryButton,
+    ActionButton,
+    BackButton,
+    ButtonGroup,
+    ExpandButton,
+    InlineExpandButton,
+    PrimaryButton,
+    SecondaryButton,
+    ShortcutButton,
+    TaskButton,
+    TertiaryButton,
 } from '@sb1/ffe-buttons-react';
 
 export function ButtonsDemo() {
-	const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = React.useState(false);
 
-	return (
-		<div>
-			{/* Action: én per side, den viktigste handlingen */}
-			<ActionButton onClick={() => alert('Send søknad')}>Send søknad</ActionButton>
+    return (
+        <div>
+            {/* Action: én per side, den viktigste handlingen */}
+            <ActionButton onClick={() => alert('Send søknad')}>
+                Send søknad
+            </ActionButton>
 
-			{/* Primary/Secondary/Tertiary: hierarki av handlinger */}
-			<PrimaryButton onClick={() => alert('Lagre')}>Lagre</PrimaryButton>
-			<SecondaryButton onClick={() => alert('Avbryt')}>Avbryt</SecondaryButton>
-			<TertiaryButton onClick={() => alert('Mer info')}>Mer info</TertiaryButton>
+            {/* Primary/Secondary/Tertiary: hierarki av handlinger */}
+            <PrimaryButton onClick={() => alert('Lagre')}>Lagre</PrimaryButton>
+            <SecondaryButton onClick={() => alert('Avbryt')}>
+                Avbryt
+            </SecondaryButton>
+            <TertiaryButton onClick={() => alert('Mer info')}>
+                Mer info
+            </TertiaryButton>
 
-			{/* BackButton: navigasjon bakover */}
-			<BackButton onClick={() => window.history.back()}>Tilbake</BackButton>
+            {/* BackButton: navigasjon bakover */}
+            <BackButton onClick={() => window.history.back()}>
+                Tilbake
+            </BackButton>
 
-			{/* Expand/InlineExpand: vis/skjul innhold */}
-			<ExpandButton
-				expanded={expanded}
-				onClick={() => setExpanded(!expanded)}
-			>
-				{expanded ? 'Skjul detaljer' : 'Vis detaljer'}
-			</ExpandButton>
-			<InlineExpandButton
-				expanded={expanded}
-				onClick={() => setExpanded(!expanded)}
-			>
-				{expanded ? 'Skjul' : 'Vis'}
-			</InlineExpandButton>
+            {/* Expand/InlineExpand: vis/skjul innhold */}
+            <ExpandButton
+                expanded={expanded}
+                onClick={() => setExpanded(!expanded)}
+            >
+                {expanded ? 'Skjul detaljer' : 'Vis detaljer'}
+            </ExpandButton>
+            <InlineExpandButton
+                expanded={expanded}
+                onClick={() => setExpanded(!expanded)}
+            >
+                {expanded ? 'Skjul' : 'Vis'}
+            </InlineExpandButton>
 
-			{/* ButtonGroup: gruppering og mellomrom */}
-			<ButtonGroup>
-				<PrimaryButton>Fortsett</PrimaryButton>
-				<SecondaryButton>Avbryt</SecondaryButton>
-			</ButtonGroup>
+            {/* ButtonGroup: gruppering og mellomrom */}
+            <ButtonGroup>
+                <PrimaryButton>Fortsett</PrimaryButton>
+                <SecondaryButton>Avbryt</SecondaryButton>
+            </ButtonGroup>
 
-			{/* Shortcut/Task: snarveier og oppgavehandlinger */}
-			<ShortcutButton onClick={() => alert('Snarvei')}>Snarvei</ShortcutButton>
-			<TaskButton onClick={() => alert('Start oppgave')}>Start oppgave</TaskButton>
-		</div>
-	);
+            {/* Shortcut/Task: snarveier og oppgavehandlinger */}
+            <ShortcutButton onClick={() => alert('Snarvei')}>
+                Snarvei
+            </ShortcutButton>
+            <TaskButton onClick={() => alert('Start oppgave')}>
+                Start oppgave
+            </TaskButton>
+        </div>
+    );
 }
 ```
 

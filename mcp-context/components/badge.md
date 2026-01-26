@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Badge component for displaying small labels or notification counts.
 
 ## Components
 
@@ -44,6 +44,33 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 |------|------|----------|-------------|
 | `className` | `string` | No | - |
 | `children` | `React.ReactNode` | Yes | - |
+
+## Manual Examples (from README)
+
+```tsx
+import { Badge } from '@sb1/ffe-badge-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Badge>5</Badge>
+            <Badge>Ny</Badge>
+        </div>
+    );
+}
+```
+
+```tsx
+import { Badge } from '@sb1/ffe-badge-react';
+
+function MyComponent() {
+    return <Badge className="my-custom-badge">Custom badge</Badge>;
+}
+```
+
+```css
+@import '~@sb1/ffe-badge/css/badge.css';
+```
 
 ## Documentation
 

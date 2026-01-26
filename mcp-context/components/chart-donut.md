@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Donut chart component for visualizing data with circular graphs.
 
 ## Components
 
@@ -49,12 +49,18 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 
 ## Manual Examples (from README)
 
-```css
-@import 'path/to/node_modules/@sb1/ffe-chart-donut-react/less/ffe-chart-donut';
-```
+```tsx
+import { DonutChart } from '@sb1/ffe-chart-donut-react';
 
-```css
-@import '~@sb1/ffe-chart-donut-react/css/ffe-chart-donut.css';
+function MyComponent() {
+    const data = [
+        { label: 'Kategori A', value: 30, color: '#007272' },
+        { label: 'Kategori B', value: 50, color: '#00C9C9' },
+        { label: 'Kategori C', value: 20, color: '#CCFDEC' },
+    ];
+
+    return <DonutChart data={data} centerText="100%" centerSubText="Total" />;
+}
 ```
 
 ## Documentation

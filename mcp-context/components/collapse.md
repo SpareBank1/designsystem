@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+React component for expand/collapse functionality.
 
 ## Components
 
@@ -46,8 +46,24 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 
 ## Manual Examples (from README)
 
-```css
-@import '~@sb1/ffe-collapse-react/css/collapse.css';
+```tsx
+import { Collapse } from '@sb1/ffe-collapse-react';
+import { useState } from 'react';
+
+function MyComponent() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? 'Skjul' : 'Vis'} innhold
+            </button>
+            <Collapse isOpen={isOpen}>
+                <p>Dette innholdet kan vises og skjules</p>
+            </Collapse>
+        </div>
+    );
+}
 ```
 
 ## Documentation

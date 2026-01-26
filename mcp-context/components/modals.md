@@ -79,25 +79,27 @@ import React, { useRef } from 'react';
 import { Modal, ModalHandle, ModalBlock } from '@sb1/ffe-modals-react';
 
 export function ModalDemo() {
-	const modalRef = useRef<ModalHandle>(null);
+    const modalRef = useRef<ModalHandle>(null);
 
-	return (
-		<div>
-			<button onClick={() => modalRef.current?.open()}>Åpne modal</button>
+    return (
+        <div>
+            <button onClick={() => modalRef.current?.open()}>Åpne modal</button>
 
-			<Modal
-				ref={modalRef}
-				ariaLabelledby="modal-title"
-				onClose={() => console.log('Closed')}
-			>
-				<h2 id="modal-title">Tittel</h2>
-				<p>Innhold i modal.</p>
-				<ModalBlock>
-					<button onClick={() => modalRef.current?.close()}>Lukk</button>
-				</ModalBlock>
-			</Modal>
-		</div>
-	);
+            <Modal
+                ref={modalRef}
+                ariaLabelledby="modal-title"
+                onClose={() => console.log('Closed')}
+            >
+                <h2 id="modal-title">Tittel</h2>
+                <p>Innhold i modal.</p>
+                <ModalBlock>
+                    <button onClick={() => modalRef.current?.close()}>
+                        Lukk
+                    </button>
+                </ModalBlock>
+            </Modal>
+        </div>
+    );
 }
 ```
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Loading spinner component for indicating ongoing processes.
 
 ## Components
 
@@ -47,6 +47,24 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 | `loadingText` | `React.ReactNode` | No | - |
 | `locale` | `'nb' | 'nn' | 'en'` | No | - |
 | `onColoredBg` | `never` | No | - |
+
+## Manual Examples (from README)
+
+```tsx
+import { Spinner } from '@sb1/ffe-spinner-react';
+
+function MyComponent() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    return (
+        <div>
+            {isLoading && <Spinner />}
+            <Spinner size="large" />
+            <Spinner size="small" ariaLabel="Laster innhold..." />
+        </div>
+    );
+}
+```
 
 ## Documentation
 

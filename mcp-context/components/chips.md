@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Chip components for creating interactive, compact elements with optional icons.
 
 ## Components
 
@@ -59,6 +59,74 @@ No component-specific props beyond native HTML attributes.
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
 | `isSelected` | `boolean` | No | - |
+
+## Manual Examples (from README)
+
+```tsx
+import { Chip } from '@sb1/ffe-chips-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Chip size="md" onClick={() => console.log('Clicked')}>
+                Click me
+            </Chip>
+            <Chip size="lg" onClick={() => console.log('Large chip')}>
+                Large chip
+            </Chip>
+        </div>
+    );
+}
+```
+
+```tsx
+import { Chip } from '@sb1/ffe-chips-react';
+import { Icon } from '@sb1/ffe-icons-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Chip
+                size="md"
+                leftIcon={
+                    <Icon
+                        fileUrl="icons/open/300/notifications.svg"
+                        size="md"
+                    />
+                }
+                onClick={() => console.log('With left icon')}
+            >
+                With left icon
+            </Chip>
+            <Chip
+                size="md"
+                rightIcon={
+                    <Icon fileUrl="icons/open/300/close.svg" size="md" />
+                }
+                onClick={() => console.log('With right icon')}
+            >
+                With right icon
+            </Chip>
+        </div>
+    );
+}
+```
+
+```tsx
+import { Chip } from '@sb1/ffe-chips-react';
+
+function MyComponent() {
+    return (
+        <Chip as="a" href="/page" size="md">
+            Navigate
+        </Chip>
+    );
+}
+```
+
+```css
+@import '~@sb1/ffe-chips/css/chip.css';
+```
 
 ## Documentation
 

@@ -104,46 +104,46 @@ No component-specific props beyond native HTML attributes.
 ```tsx
 import React from 'react';
 import {
-	Table,
-	TableHead,
-	TableBody,
-	TableRow,
-	TableHeaderCell,
-	TableDataCell,
-	TableFoot,
-	TableCaption,
-	TableRowExpandable,
+    Table,
+    TableHead,
+    TableBody,
+    TableRow,
+    TableHeaderCell,
+    TableDataCell,
+    TableFoot,
+    TableCaption,
+    TableRowExpandable,
 } from '@sb1/ffe-tables-react';
 
 export function TableDemo() {
-	return (
-		<Table>
-			<TableCaption>Transaksjoner</TableCaption>
-			<TableHead>
-				<TableRow>
-					<TableHeaderCell>Dato</TableHeaderCell>
-					<TableHeaderCell>Beskrivelse</TableHeaderCell>
-					<TableHeaderCell align="right">Beløp</TableHeaderCell>
-				</TableRow>
-			</TableHead>
-			<TableBody>
-				<TableRow>
-					<TableDataCell>01.12.2025</TableDataCell>
-					<TableDataCell>Kortkjøp</TableDataCell>
-					<TableDataCell align="right">-199,00</TableDataCell>
-				</TableRow>
-				<TableRowExpandable>
-					<TableDataCell colSpan={3}>Flere detaljer …</TableDataCell>
-				</TableRowExpandable>
-			</TableBody>
-			<TableFoot>
-				<TableRow>
-					<TableDataCell colSpan={2}>Sum</TableDataCell>
-					<TableDataCell align="right">-199,00</TableDataCell>
-				</TableRow>
-			</TableFoot>
-		</Table>
-	);
+    return (
+        <Table>
+            <TableCaption>Transaksjoner</TableCaption>
+            <TableHead>
+                <TableRow>
+                    <TableHeaderCell>Dato</TableHeaderCell>
+                    <TableHeaderCell>Beskrivelse</TableHeaderCell>
+                    <TableHeaderCell align="right">Beløp</TableHeaderCell>
+                </TableRow>
+            </TableHead>
+            <TableBody>
+                <TableRow>
+                    <TableDataCell>01.12.2025</TableDataCell>
+                    <TableDataCell>Kortkjøp</TableDataCell>
+                    <TableDataCell align="right">-199,00</TableDataCell>
+                </TableRow>
+                <TableRowExpandable>
+                    <TableDataCell colSpan={3}>Flere detaljer …</TableDataCell>
+                </TableRowExpandable>
+            </TableBody>
+            <TableFoot>
+                <TableRow>
+                    <TableDataCell colSpan={2}>Sum</TableDataCell>
+                    <TableDataCell align="right">-199,00</TableDataCell>
+                </TableRow>
+            </TableFoot>
+        </Table>
+    );
 }
 ```
 

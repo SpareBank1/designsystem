@@ -4,6 +4,13 @@
 
 React component library for SpareBank 1 Design System.
 
+## Components
+
+This package exports the following components:
+
+- `Skeleton`
+- `SkeletonCircle`
+
 ## Installation
 
 Install the package and all its dependencies:
@@ -11,6 +18,22 @@ Install the package and all its dependencies:
 ```bash
 npm install @sb1/ffe-skeleton-react
 ```
+
+## API Reference
+
+### Skeleton Props
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `width` | `string` | No | - |
+| `height` | `string` | No | - |
+| `className` | `string` | No | - |
+
+### SkeletonCircle Props
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `size` | `'sm' | 'md' | 'lg' | 'xl'` | No | - |
 
 ## Documentation
 

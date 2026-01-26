@@ -94,36 +94,46 @@ No component-specific props beyond native HTML attributes.
 
 ```tsx
 import {
-	SystemMessage,
-	ContextMessage,
-	MessageBox,
-	MessageHeader,
-	MessageList,
-	MessageListItem,
+    SystemMessage,
+    ContextMessage,
+    MessageBox,
+    MessageHeader,
+    MessageList,
+    MessageListItem,
 } from '@sb1/ffe-messages-react';
 
 export function MessagesExamples() {
-	return (
-		<div>
-			{/* SystemMessage: global status with close button */}
-			<SystemMessage type="success" locale="nb" onClose={() => {}}>
-				Kontoen ble oppdatert.
-			</SystemMessage>
+    return (
+        <div>
+            {/* SystemMessage: global status with close button */}
+            <SystemMessage type="success" locale="nb" onClose={() => {}}>
+                Kontoen ble oppdatert.
+            </SystemMessage>
 
-			{/* ContextMessage: inline message with header and optional close button */}
-			<ContextMessage type="warning" header="Sjekk opplysningene" closeButton compact>
-				<MessageList>
-					<MessageListItem>Personnummer mangler</MessageListItem>
-					<MessageListItem>Adresse er ugyldig</MessageListItem>
-				</MessageList>
-			</ContextMessage>
+            {/* ContextMessage: inline message with header and optional close button */}
+            <ContextMessage
+                type="warning"
+                header="Sjekk opplysningene"
+                closeButton
+                compact
+            >
+                <MessageList>
+                    <MessageListItem>Personnummer mangler</MessageListItem>
+                    <MessageListItem>Adresse er ugyldig</MessageListItem>
+                </MessageList>
+            </ContextMessage>
 
-			{/* MessageBox: framed message area with header */}
-			<MessageBox type="info" header={<MessageHeader as="h3">Viktig informasjon</MessageHeader>}>
-				Husk å lagre endringer før du går videre.
-			</MessageBox>
-		</div>
-	);
+            {/* MessageBox: framed message area with header */}
+            <MessageBox
+                type="info"
+                header={
+                    <MessageHeader as="h3">Viktig informasjon</MessageHeader>
+                }
+            >
+                Husk å lagre endringer før du går videre.
+            </MessageBox>
+        </div>
+    );
 }
 ```
 

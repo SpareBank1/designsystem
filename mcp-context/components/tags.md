@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Tag components for labeling and categorizing content with different colors and sizes.
 
 ## Components
 
@@ -50,6 +50,66 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 | `variant` | `'info' | 'success' | 'warning' | 'critical' | 'neutral' | 'tip'` | No | - |
 | `size` | `'sm' | 'md' | 'lg'` | No | - |
 | `children` | `React.ReactNode` | Yes | - |
+
+## Manual Examples (from README)
+
+```tsx
+import { Tag } from '@sb1/ffe-tags-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Tag variant="info">Info</Tag>
+            <Tag variant="success">Success</Tag>
+            <Tag variant="warning">Warning</Tag>
+            <Tag variant="critical">Critical</Tag>
+            <Tag variant="neutral">Neutral</Tag>
+            <Tag variant="tip">Tip</Tag>
+        </div>
+    );
+}
+```
+
+```tsx
+import { Tag } from '@sb1/ffe-tags-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Tag type="emphasis" variant="info">
+                Emphasized
+            </Tag>
+            <Tag type="subtle" variant="info">
+                Subtle
+            </Tag>
+        </div>
+    );
+}
+```
+
+```tsx
+import { Tag } from '@sb1/ffe-tags-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Tag size="sm" variant="neutral">
+                Small
+            </Tag>
+            <Tag size="md" variant="neutral">
+                Medium
+            </Tag>
+            <Tag size="lg" variant="neutral">
+                Large
+            </Tag>
+        </div>
+    );
+}
+```
+
+```css
+@import '~@sb1/ffe-tags/css/tag.css';
+```
 
 ## Documentation
 

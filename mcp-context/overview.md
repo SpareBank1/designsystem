@@ -27,6 +27,8 @@ Below is a complete list of all React component packages in the FFE design syste
 
 #### @sb1/ffe-account-selector-react
 
+A combobox with autocomplete tailored for bank accounts.
+
 **Components:** AccountSelector, AccountSelectorMulti
 
 [View detailed documentation](./components/account-selector.md)
@@ -48,6 +50,8 @@ Enkel nedtrekksliste-komponent (`Dropdown`) for valg fra en liste. Brukes for ko
 [View detailed documentation](./components/dropdown.md)
 
 #### @sb1/ffe-file-upload-react
+
+Upload file button with validation and list of uploaded files.
 
 **Components:** FileUpload, getFileContent, getUniqueFileName
 
@@ -99,6 +103,8 @@ Kort-komponenter for presentasjon av innhold med visuelle elementer: tekstkort, 
 
 #### @sb1/ffe-collapse-react
 
+React component for expand/collapse functionality.
+
 **Components:** Collapse
 
 [View detailed documentation](./components/collapse.md)
@@ -120,6 +126,8 @@ Fanekomponenter for å organisere innhold i seksjoner der brukeren kan bytte mel
 [View detailed documentation](./components/context-message.md)
 
 #### @sb1/ffe-feedback-react
+
+React component for collecting user feedback with forms.
 
 **Components:** Feedback
 
@@ -159,17 +167,23 @@ Modal-komponenter for korte, fokuserte interaksjoner i webapplikasjoner. Bruk mo
 
 #### @sb1/ffe-chips-react
 
+Chip components for creating interactive, compact elements with optional icons.
+
 **Components:** Chip, ChipRemovable, ChipSelectable
 
 [View detailed documentation](./components/chips.md)
 
 #### @sb1/ffe-pagination-react
 
+Pagination component for navigating through pages of content.
+
 **Components:** Pagination, usePagination
 
 [View detailed documentation](./components/pagination.md)
 
 #### @sb1/ffe-tags-react
+
+Tag components for labeling and categorizing content with different colors and sizes.
 
 **Components:** Tag
 
@@ -179,13 +193,13 @@ Modal-komponenter for korte, fokuserte interaksjoner i webapplikasjoner. Bruk mo
 
 #### @sb1/ffe-chart-donut-react
 
+Donut chart component for visualizing data with circular graphs.
+
 **Components:** ChartDonut
 
 [View detailed documentation](./components/chart-donut.md)
 
 #### @sb1/ffe-lists-react
-
-Accessible list components for presenting items, steps, and key–value details. Use bullet, check, or numbered lists for sequences; use description lists for terms and definitions; and use `DetailListCard` for compact card-style summaries. Prefer lists when information benefits from scannability and structure rather than paragraph text.
 
 **Components:** BulletList, BulletListItem, CheckList, CheckListItem, NumberedList, ...
 
@@ -193,11 +207,15 @@ Accessible list components for presenting items, steps, and key–value details.
 
 #### @sb1/ffe-progressbar-react
 
+Progress bar component for showing task completion.
+
 **Components:** Progressbar
 
 [View detailed documentation](./components/progressbar.md)
 
 #### @sb1/ffe-spinner-react
+
+Loading spinner component for indicating ongoing processes.
 
 **Components:** Spinner
 
@@ -215,6 +233,8 @@ Komponenter for tabeller med semantiske deler (`Table`, `TableHead`, `TableBody`
 
 #### @sb1/ffe-badge-react
 
+Badge component for displaying small labels or notification counts.
+
 **Components:** Badge
 
 [View detailed documentation](./components/badge.md)
@@ -226,6 +246,8 @@ Ikonkomponenter for å vise vektorikoner konsistent i FFE. `Icon` støtter valg 
 [View detailed documentation](./components/icons.md)
 
 #### @sb1/ffe-shapes-react
+
+Decorative shape components for visual interest.
 
 **Components:** Wave
 

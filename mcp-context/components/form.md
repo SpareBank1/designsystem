@@ -215,85 +215,94 @@ No component-specific props beyond native HTML attributes.
 ```tsx
 import React from 'react';
 import {
-	Checkbox,
-	Input,
-	InputTextLike,
-	InputGroup,
-	Label,
-	PhoneNumber,
-	RadioBlock,
-	RadioButton,
-	RadioButtonInputGroup,
-	RadioSwitch,
-	TextArea,
-	TextField,
-	Tooltip,
-	ToggleSwitch,
-	ErrorFieldMessage,
-	InfoFieldMessage,
-	SuccessFieldMessage,
+    Checkbox,
+    Input,
+    InputTextLike,
+    InputGroup,
+    Label,
+    PhoneNumber,
+    RadioBlock,
+    RadioButton,
+    RadioButtonInputGroup,
+    RadioSwitch,
+    TextArea,
+    TextField,
+    Tooltip,
+    ToggleSwitch,
+    ErrorFieldMessage,
+    InfoFieldMessage,
+    SuccessFieldMessage,
 } from '@sb1/ffe-form-react';
 
 export function FormDemo() {
-	const [value, setValue] = React.useState('');
-	const [checked, setChecked] = React.useState(false);
-	const [selected, setSelected] = React.useState('a');
-	const [toggle, setToggle] = React.useState(false);
+    const [value, setValue] = React.useState('');
+    const [checked, setChecked] = React.useState(false);
+    const [selected, setSelected] = React.useState('a');
+    const [toggle, setToggle] = React.useState(false);
 
-	return (
-		<form>
-			<Label htmlFor="felt">Feltetikett</Label>
-			<Input id="felt" value={value} onChange={e => setValue(e.target.value)} />
-			<ErrorFieldMessage>Dette feltet er obligatorisk</ErrorFieldMessage>
+    return (
+        <form>
+            <Label htmlFor="felt">Feltetikett</Label>
+            <Input
+                id="felt"
+                value={value}
+                onChange={e => setValue(e.target.value)}
+            />
+            <ErrorFieldMessage>Dette feltet er obligatorisk</ErrorFieldMessage>
 
-			<TextField
-				label="Navn"
-				value={value}
-				onChange={e => setValue(e.target.value)}
-				helpText="Skriv inn fullt navn"
-			/>
+            <TextField
+                label="Navn"
+                value={value}
+                onChange={e => setValue(e.target.value)}
+                helpText="Skriv inn fullt navn"
+            />
 
-			<InputGroup label="Kontaktinformasjon">
-				<PhoneNumber label="Telefon" onChange={() => {}} />
-				<InputTextLike as="span">+47</InputTextLike>
-			</InputGroup>
+            <InputGroup label="Kontaktinformasjon">
+                <PhoneNumber label="Telefon" onChange={() => {}} />
+                <InputTextLike as="span">+47</InputTextLike>
+            </InputGroup>
 
-			<Checkbox checked={checked} onChange={e => setChecked(e.target.checked)}>
-				Godta vilkår
-			</Checkbox>
+            <Checkbox
+                checked={checked}
+                onChange={e => setChecked(e.target.checked)}
+            >
+                Godta vilkår
+            </Checkbox>
 
-			<RadioButtonInputGroup label="Velg ett">
-				<RadioButton
-					value="a"
-					checked={selected === 'a'}
-					onChange={() => setSelected('a')}
-				>
-					Alternativ A
-				</RadioButton>
-				<RadioButton
-					value="b"
-					checked={selected === 'b'}
-					onChange={() => setSelected('b')}
-				>
-					Alternativ B
-				</RadioButton>
-			</RadioButtonInputGroup>
+            <RadioButtonInputGroup label="Velg ett">
+                <RadioButton
+                    value="a"
+                    checked={selected === 'a'}
+                    onChange={() => setSelected('a')}
+                >
+                    Alternativ A
+                </RadioButton>
+                <RadioButton
+                    value="b"
+                    checked={selected === 'b'}
+                    onChange={() => setSelected('b')}
+                >
+                    Alternativ B
+                </RadioButton>
+            </RadioButtonInputGroup>
 
-			<RadioSwitch
-				leftLabel="Av"
-				rightLabel="På"
-				checked={toggle}
-				onChange={e => setToggle(e.target.checked)}
-			/>
+            <RadioSwitch
+                leftLabel="Av"
+                rightLabel="På"
+                checked={toggle}
+                onChange={e => setToggle(e.target.checked)}
+            />
 
-			<TextArea label="Beskrivelse" rows={3} />
+            <TextArea label="Beskrivelse" rows={3} />
 
-			<Tooltip content="Hjelpetekst">Hold over meg</Tooltip>
+            <Tooltip content="Hjelpetekst">Hold over meg</Tooltip>
 
-			<InfoFieldMessage>Vi lagrer ikke sensitiv informasjon</InfoFieldMessage>
-			<SuccessFieldMessage>Lagret!</SuccessFieldMessage>
-		</form>
-	);
+            <InfoFieldMessage>
+                Vi lagrer ikke sensitiv informasjon
+            </InfoFieldMessage>
+            <SuccessFieldMessage>Lagret!</SuccessFieldMessage>
+        </form>
+    );
 }
 ```
 

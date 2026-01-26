@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+React component for collecting user feedback with forms.
 
 ## Components
 
@@ -65,6 +65,29 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 | `texts` | `{` | No | - |
 | `feedbackNotSentHeading` | `string` | No | - |
 | `consentText` | `string` | No | - |
+
+## Manual Examples (from README)
+
+```tsx
+import { Feedback } from '@sb1/ffe-feedback-react';
+import { useState } from 'react';
+
+function MyComponent() {
+    const [feedback, setFeedback] = useState('');
+
+    return (
+        <Feedback
+            title="Hva synes du om denne siden?"
+            onSubmit={value => {
+                console.log('Feedback:', value);
+                setFeedback(value);
+            }}
+            placeholder="Skriv din tilbakemelding her..."
+            submitButtonText="Send inn"
+        />
+    );
+}
+```
 
 ## Documentation
 

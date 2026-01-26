@@ -59,20 +59,20 @@ import React from 'react';
 import { TabGroup, Tab } from '@sb1/ffe-tabs-react';
 
 export function TabsDemo() {
-	const [active, setActive] = React.useState(0);
-	return (
-		<>
-			<TabGroup activeTab={active} onChange={setActive}>
-				<Tab id="tab-0">Oversikt</Tab>
-				<Tab id="tab-1">Detaljer</Tab>
-				<Tab id="tab-2">Historikk</Tab>
-			</TabGroup>
+    const [active, setActive] = React.useState(0);
+    return (
+        <>
+            <TabGroup activeTab={active} onChange={setActive}>
+                <Tab id="tab-0">Oversikt</Tab>
+                <Tab id="tab-1">Detaljer</Tab>
+                <Tab id="tab-2">Historikk</Tab>
+            </TabGroup>
 
-			{active === 0 && <div>Innhold for oversikt</div>}
-			{active === 1 && <div>Innhold for detaljer</div>}
-			{active === 2 && <div>Innhold for historikk</div>}
-		</>
-	);
+            {active === 0 && <div>Innhold for oversikt</div>}
+            {active === 1 && <div>Innhold for detaljer</div>}
+            {active === 2 && <div>Innhold for historikk</div>}
+        </>
+    );
 }
 ```
 

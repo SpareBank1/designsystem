@@ -69,20 +69,20 @@ import React from 'react';
 import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
 
 export function AccordionDemo() {
-	const [open, setOpen] = React.useState<number | null>(0);
-	return (
-		<Accordion openItem={open} onChange={setOpen}>
-			<AccordionItem title="Seksjon 1" id="acc-1">
-				Innhold for seksjon 1
-			</AccordionItem>
-			<AccordionItem title="Seksjon 2" id="acc-2">
-				Innhold for seksjon 2
-			</AccordionItem>
-			<AccordionItem title="Seksjon 3" id="acc-3">
-				Innhold for seksjon 3
-			</AccordionItem>
-		</Accordion>
-	);
+    const [open, setOpen] = React.useState<number | null>(0);
+    return (
+        <Accordion openItem={open} onChange={setOpen}>
+            <AccordionItem title="Seksjon 1" id="acc-1">
+                Innhold for seksjon 1
+            </AccordionItem>
+            <AccordionItem title="Seksjon 2" id="acc-2">
+                Innhold for seksjon 2
+            </AccordionItem>
+            <AccordionItem title="Seksjon 3" id="acc-3">
+                Innhold for seksjon 3
+            </AccordionItem>
+        </Accordion>
+    );
 }
 ```
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-React component library for SpareBank 1 Design System.
+Decorative shape components for visual interest.
 
 ## Components
 
@@ -47,6 +47,22 @@ Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base 
 | `bgColor` | `Color` | No | - |
 | `className` | `string` | No | - |
 | `children` | `React.ReactNode` | No | - |
+
+## Manual Examples (from README)
+
+```tsx
+import { Circle, Triangle, Square } from '@sb1/ffe-shapes-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Circle size="large" color="blue" />
+            <Triangle size="medium" />
+            <Square size="small" color="green" />
+        </div>
+    );
+}
+```
 
 ## Documentation
 

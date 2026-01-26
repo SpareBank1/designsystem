@@ -35,18 +35,22 @@ import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 
 export function IconsDemo() {
-	return (
-		<div>
-			{/* Standard ikon */}
-			<Icon name="check" aria-label="Fullført" />
+    return (
+        <div>
+            {/* Standard ikon */}
+            <Icon name="check" aria-label="Fullført" />
 
-			{/* Dekorativt ikon (skjult fra skjermleser) */}
-			<Icon name="arrow-right" aria-hidden />
+            {/* Dekorativt ikon (skjult fra skjermleser) */}
+            <Icon name="arrow-right" aria-hidden />
 
-			{/* Størrelse og farge styres via CSS-klasser */}
-			<Icon name="info" className="ffe-icon--large ffe-text-color--vann" aria-label="Info" />
-		</div>
-	);
+            {/* Størrelse og farge styres via CSS-klasser */}
+            <Icon
+                name="info"
+                className="ffe-icon--large ffe-text-color--vann"
+                aria-label="Info"
+            />
+        </div>
+    );
 }
 ```
 
