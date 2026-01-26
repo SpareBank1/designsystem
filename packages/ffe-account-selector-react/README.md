@@ -1,6 +1,10 @@
 # @sb1/ffe-account-selector-react
 
+## Description
+
 A combobox with autocomplete tailored for bank accounts.
+
+En kombinasjonsboks med autofullføring spesielt tilpasset for bankkontoer.
 
 ## Install
 
@@ -19,6 +23,29 @@ For styling the account-selector use:
 
 ```css
 @import 'path/to/node_modules/@sb1/ffe-account-selector-react/less/ffe-account-selector';
+```
+
+## Examples
+
+```tsx
+import { AccountSelector } from '@sb1/ffe-account-selector-react';
+
+function MyComponent() {
+    const [selectedAccount, setSelectedAccount] = useState(null);
+    const accounts = [
+        { accountNumber: '12345678901', name: 'Brukskonto', balance: 1234.56 },
+        { accountNumber: '98765432109', name: 'Sparekonto', balance: 50000.0 },
+    ];
+
+    return (
+        <AccountSelector
+            accounts={accounts}
+            selectedAccount={selectedAccount}
+            onChange={account => setSelectedAccount(account)}
+            locale="nb"
+        />
+    );
+}
 ```
 
 ### Importing compiled CSS

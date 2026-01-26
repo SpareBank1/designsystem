@@ -1,5 +1,11 @@
 # @sb1/ffe-grid-react
 
+## Description
+
+Grid system for responsive layouts (deprecated - use CSS Grid or Flexbox instead).
+
+Grid-system for responsive layouts (foreldet - bruk CSS Grid eller Flexbox i stedet).
+
 ## Install
 
 ```

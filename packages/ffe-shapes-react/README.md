@@ -1,5 +1,11 @@
 # @sb1/ffe-shapes-react
 
+## Description
+
+Decorative shape components for visual interest.
+
+Dekorative form-komponenter for visuell interesse.
+
 ## Install
 
 ```bash
@@ -8,7 +14,23 @@ npm install --save @sb1/ffe-shapes-react
 
 ## Usage
 
-Full documentation on shapes usage is available at https://design.sparebank1.no/komponenter/shapess/.
+Full documentation on shapes usage is available at https://design.sparebank1.no/komponenter/shapes/.
+
+## Examples
+
+```tsx
+import { Circle, Triangle, Square } from '@sb1/ffe-shapes-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Circle size="large" color="blue" />
+            <Triangle size="medium" />
+            <Square size="small" color="green" />
+        </div>
+    );
+}
+```
 
 ## Development
 

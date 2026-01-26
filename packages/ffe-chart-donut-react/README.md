@@ -1,5 +1,11 @@
 # @sb1/ffe-chart-donut-react
 
+## Description
+
+Donut chart component for visualizing data with circular graphs.
+
+Ringdiagram-komponenten brukes for å visualisere data med sirkeldiagrammer.
+
 ## Install
 
 ```bash
@@ -22,6 +28,22 @@ If your project does not use Less, you can import the compiled styling:
 
 ```css
 @import '~@sb1/ffe-chart-donut-react/css/ffe-chart-donut.css';
+```
+
+## Examples
+
+```tsx
+import { DonutChart } from '@sb1/ffe-chart-donut-react';
+
+function MyComponent() {
+    const data = [
+        { label: 'Kategori A', value: 30, color: '#007272' },
+        { label: 'Kategori B', value: 50, color: '#00C9C9' },
+        { label: 'Kategori C', value: 20, color: '#CCFDEC' },
+    ];
+
+    return <DonutChart data={data} centerText="100%" centerSubText="Total" />;
+}
 ```
 
 ## Theming with CSS custom properties

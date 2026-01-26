@@ -1,6 +1,10 @@
 # @sb1/ffe-collapse-react
 
-React component for expand/collapse
+## Description
+
+React component for expand/collapse functionality.
+
+React-komponent for å vise og skjule innhold med animasjon.
 
 ## Install
 
@@ -25,6 +29,28 @@ If your project does not use Less, you can import the compiled styling:
 
 ```css
 @import '~@sb1/ffe-collapse-react/css/collapse.css';
+```
+
+## Examples
+
+```tsx
+import { Collapse } from '@sb1/ffe-collapse-react';
+import { useState } from 'react';
+
+function MyComponent() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? 'Skjul' : 'Vis'} innhold
+            </button>
+            <Collapse isOpen={isOpen}>
+                <p>Dette innholdet kan vises og skjules</p>
+            </Collapse>
+        </div>
+    );
+}
 ```
 
 ## Development

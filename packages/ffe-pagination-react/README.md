@@ -1,5 +1,11 @@
 # @sb1/ffe-pagination-react
 
+## Description
+
+Pagination component for navigating through pages of content.
+
+Pagineringskomponent for å navigere gjennom sider med innhold.
+
 ## Install
 
 ```
@@ -12,6 +18,26 @@ Full documentation on lists usage is available at https://design.sparebank1.no/k
 
 This package depends on `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` and `@sb1/ffe-icons-react`.
 Make sure you import the less-files.
+
+## Examples
+
+```tsx
+import { Pagination } from '@sb1/ffe-pagination-react';
+import { useState } from 'react';
+
+function MyComponent() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = 10;
+
+    return (
+        <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={page => setCurrentPage(page)}
+        />
+    );
+}
+```
 
 ## Development
 

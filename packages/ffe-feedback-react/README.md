@@ -1,6 +1,10 @@
 # @sb1/ffe-feedback-react
 
-React module for FFE feedback element.
+## Description
+
+React component for collecting user feedback with forms.
+
+React-komponent for å samle inn tilbakemeldinger fra brukere med skjemaer.
 
 ## Install
 
@@ -14,6 +18,29 @@ Full documentation is not yet available, but will be added to https://design.spa
 
 This package depends on `@sb1/ffe-buttons-react`, `@sb1/ffe-icons-react` and `@sb1/ffe-form-react`.
 Make sure you import the less-files.
+
+## Examples
+
+```tsx
+import { Feedback } from '@sb1/ffe-feedback-react';
+import { useState } from 'react';
+
+function MyComponent() {
+    const [feedback, setFeedback] = useState('');
+
+    return (
+        <Feedback
+            title="Hva synes du om denne siden?"
+            onSubmit={value => {
+                console.log('Feedback:', value);
+                setFeedback(value);
+            }}
+            placeholder="Skriv din tilbakemelding her..."
+            submitButtonText="Send inn"
+        />
+    );
+}
+```
 
 ## Development
 
