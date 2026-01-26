@@ -26,6 +26,30 @@ npm run build          # Bygg alle pakker
 npm run clean          # Fjern node_modules fra pakkene (ikke root)
 ```
 
+## :robot: AI Context for MCP Servere
+
+FFE designsystemet genererer automatisk AI-kontekst dokumentasjon som kan brukes av Model Context Protocol (MCP) servere. Dette gjør det enkelt for AI-assistenter å forstå og bruke komponentene.
+
+```bash
+npm run update:ai-context  # Generer AI kontekst dokumentasjon
+```
+
+Scriptet `scripts/generate-enhanced-ai-context.js` genererer strukturert dokumentasjon i `/mcp-context/` mappen:
+
+- `overview.md` - Overordnet oversikt over designsystemet
+- `components/*.md` - Detaljert dokumentasjon for hver komponent
+- `ai-context-resources.json` - Manifest for MCP servere
+
+Informasjonen hentes automatisk fra:
+
+- `README.md` filer i hver pakke (beskrivelser og eksempler)
+- `.mdx` filer i `src/` mapper (bruksanvisninger på norsk)
+- `src/index.ts` (eksporterte komponenter)
+- `.tsx` filer (TypeScript type-informasjon)
+- `ffe-dependencies.json` (pakkeavhengigheter)
+
+Denne dokumentasjonen kan lastes som ressurser av en MCP server for å gi AI-assistenter tilgang til oppdatert informasjon om alle FFE komponenter, hvordan de installeres, brukes, og hvilke avhengigheter de har.
+
 ## :sparkles: Bidra!
 
 Vi oppfordrer alle, både rutinerte og ferske, til å opprette en oppgave (issue), sende inn fletteforespørsel (pull request) og kommentere på andres
