@@ -1,29 +1,24 @@
 import { Canvas, Meta } from '@storybook/blocks';
+import { SmallText } from '@sb1/ffe-core-react';
 
 <Meta title="Introduksjon/Changelog" />
 
 # Changelog
 
-Denne siden lister breaking changes og større endringer i designsystemet. For alle oppdateringer på en komponent kan en se historikken i hver enkelt komponent.
+Denne siden lister breaking changes og større endringer i designsystemet. Du finner fullstendig changelog på [releasesiden på GitHub](https://github.com/SpareBank1/designsystem/releases).
 
-F.eks: https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/CHANGELOG.md
+### 100.7.0 Skeleton komponent (des 2025)
+Vi tilbyr nå en ny komponent, `<Skeleton>`, som kan brukes som plassholder mens innhold laster. Den kan brukes til å lage forskjellige former og størrelser. 
+Fullstendig dokumentasjon finner du på [siden for Skeleton](/?path=/docs/komponenter-skeleton--docs).
 
-Eller se [releasesiden på GitHub](https://github.com/SpareBank1/designsystem/releases) for en oversikt over alle versjoner.
+### 100.6.0 Deaktivering av spesifikke datoer i Datepicker (nov 2025)
+Lagt til propen `disabledDates?: string[]` i Datepicker-komponenten som gjør det mulig å deaktivere spesifikke datoer.
 
-## 100.7.0
+### 100.5.0 Tilbakemeldingskomponent godtar headingLookLike (nov 2025)
+Det er nå mulig å sette `headingLookLike` på `<Feedback>`-komponenten for å endre utseendet på overskriften i tilbakemeldingsboksen. Dette gjør det enklere å tilpasse komponenten til ulike designbehov.
 
-- ffe-skeleton-react: Legg til skeleton komponent
-- ffe-skeleton: Legg til skeleton komponent
 
-## 100.6.0
-
-- ffe-datepicker-react: legg til feature for å disable dates i kalenderen
-
-## 100.5.0
-
-- ffe-feedback-react: Tilbakemeldingskomponent godtar headingLookLike
-
-## 2025 - Oktober - Justeringer i noen farger (liten endring) - 100.4.1
+### 100.4.1 Justeringer i noen farger (liten endring) (okt 2025)
 
 Vi har gjort noen justeringer i fargene for å bedre kontrasten i enkelte tilfeller. I fargesystemet nå har vi et primitivt lag, et semantisk lag og et kontekstlag.
 Det er fargene i kontekstlaget som brukes i komponentene og som dere har tilgang til.
@@ -152,7 +147,7 @@ Fargeendringene som er gjort i det semantsike laget er gjort på:
 
 Alle verdiene er veldig små justeringer, stort sett endret 25 hakk opp eller ned på en skala fra 0-1000.
 
-## 2025 - September - Ny komponent: TextField
+## Ny komponent: TextField (sept 2025)
 
 Vi har laget en ny komponent, `<TextField>`. Dette er en avart av `<Input>`, som er laget for å støtte affikser (prefix og suffix) i input-feltet - funksjonalitet som har vært etterspurt av flere team. Dette er ikke er mulig å legge til i dagens implementasjon av `<Input>` uten en større omskrivning med breaking changes, noe som i tillegg ville påvirket andre komponenter som avhenger av `<Input>`.
 
