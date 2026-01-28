@@ -1,7 +1,7 @@
 # @sb1/ffe-symbols-react
 
-## Deprecated package
+## Foreldet pakke
 
-This package is deprecated, and will be removed from the designsystem repo.
+Denne pakken er foreldet og vil bli fjernet fra designsystem-repoet.
 
-To use the new set of icons, please refer to [ffe-icons](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-icons) and/or [ffe-icons-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-icons-react).
+For å bruke det nye ikonsettet, se [ffe-icons](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-icons) og/eller [ffe-icons-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-icons-react).

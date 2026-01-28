@@ -1,51 +1,91 @@
-# ffe-searchable-dropdown-react
+# @sb1/ffe-searchable-dropdown-react
 
-React dropdown component with search.
+## Beskrivelse
 
-## Install
+Søkbar nedtrekksliste for store eller dynamiske lister. Tilgjengelig som enkeltvalg (`SearchableDropdown`) og flervalg (`SearchableDropdownMultiSelect`). Støtter tastaturnavigasjon, lastestatus, tom-liste og egendefinert render av elementer.
+
+## Installasjon
 
 ```bash
-npm install --save ffe-searchable-dropdown-react
+npm install --save @sb1/ffe-searchable-dropdown-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on searchable dropdown usage is available at https://design.sparebank1.no/komponenter/dropdown/#searchabledropdown.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/dropdown/#searchabledropdown.
 
-This package depends on `@sb1/ffe-form-react`, `@sb1/ffe-icons-react`, `@sb1/ffe-chips-react` and `@sb1/ffe-spinner-react`.
-Make sure you import the less-files.
+Denne pakken er avhengig av `@sb1/ffe-form-react`, `@sb1/ffe-icons-react`, `@sb1/ffe-chips-react` og `@sb1/ffe-spinner-react`.
+Husk å importere less-filene.
 
-```javascript
-import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
-```
-
-styling:
-
-```
-@import "npm://ffe-searchable-dropdown-react/less/searchable-dropdown";
-```
-
-### Importing compiled CSS
-
-If your project does not use Less, you can import the compiled styling:
+### Importere kompilert CSS
 
 ```css
-@import '~@sb1/ffe-searchable-dropdown-react/css/searchable-dropdown.css';
+@import '@sb1/ffe-searchable-dropdown-react/css/searchable-dropdown.css';
 ```
 
-## FFE less Dependencies
+## Eksempler
 
+### Enkeltvalg
+
+```tsx
+import { useState } from 'react';
+import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
+
+function MyComponent() {
+    const [selected, setSelected] = useState(null);
+    const items = [
+        { value: '1', label: 'Alternativ 1' },
+        { value: '2', label: 'Alternativ 2' },
+        { value: '3', label: 'Alternativ 3' },
+    ];
+
+    return (
+        <SearchableDropdown
+            id="my-dropdown"
+            labelledById="dropdown-label"
+            dropdownList={items}
+            selectedItem={selected}
+            onChange={setSelected}
+            searchAttributes={['label']}
+            noMatch={{ text: 'Ingen treff' }}
+            locale="nb"
+        />
+    );
+}
 ```
-@import "~ffe-core/less/colors";
+
+### Flervalg
+
+```tsx
+import { useState } from 'react';
+import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
+
+function MyComponent() {
+    const [selected, setSelected] = useState([]);
+    const items = [
+        { value: '1', label: 'Filter 1' },
+        { value: '2', label: 'Filter 2' },
+        { value: '3', label: 'Filter 3' },
+    ];
+
+    return (
+        <SearchableDropdownMultiSelect
+            id="my-multiselect"
+            labelledById="multiselect-label"
+            dropdownList={items}
+            selectedItems={selected}
+            onChange={setSelected}
+            searchAttributes={['label']}
+            noMatch={{ text: 'Ingen treff' }}
+            locale="nb"
+        />
+    );
+}
 ```
 
-## Available props
+## Utvikling
 
-See propTypes in [SearchableDropdown.js](src/SearchableDropdown.js)
-
-## Development
-
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -53,6 +93,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.
