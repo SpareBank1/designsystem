@@ -17,6 +17,7 @@ Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/
 ## Eksempler
 
 ```tsx
+import { useState } from 'react';
 import { Spinner } from '@sb1/ffe-spinner-react';
 
 function MyComponent() {

@@ -17,14 +17,13 @@ Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/
 ## Eksempler
 
 ```tsx
-import { ProgressBar } from '@sb1/ffe-progressbar-react';
+import { Progressbar } from '@sb1/ffe-progressbar-react';
 
 function MyComponent() {
     return (
         <div>
-            <ProgressBar percentage={50} />
-            <ProgressBar percentage={75} label="75% fullført" />
-            <ProgressBar percentage={100} variant="success" />
+            <Progressbar value={50} max={100} />
+            <Progressbar value={75} max={100} ariaLabel="75% fullført" />
         </div>
     );
 }

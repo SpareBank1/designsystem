@@ -2,7 +2,7 @@
 
 ## Beskrivelse
 
-Komponenter for dato-inntasting og kalender i FFE. `DateInput` er feltet for manuell inntasting og parsing, `Calendar` viser datoer med tastaturnavigasjon, og `Datepicker` kombinerer input + kalender i én komponent.
+Komponenter for dato-inntasting og kalender. `Datepicker` kombinerer input-felt med kalender, `DateInput` er kun input-feltet for manuell inntasting, og `Calendar` er en frittstående kalenderkomponent.
 
 ## Komponenter
 
@@ -89,30 +89,53 @@ Ingen komponentspesifikke props utover native HTML-attributter.
 ## Eksempler (fra README)
 
 ```tsx
-import React from 'react';
-import { Datepicker, DateInput, Calendar } from '@sb1/ffe-datepicker-react';
+import { useState } from 'react';
+import { Datepicker } from '@sb1/ffe-datepicker-react';
 
-export function DatepickerDemo() {
-    const [value, setValue] = React.useState('');
+function MyComponent() {
+    const [value, setValue] = useState('');
+
     return (
-        <div>
-            {/* Kombinert input + kalender */}
-            <Datepicker value={value} onChange={setValue} label="Velg dato" />
+        <Datepicker
+            value={value}
+            onChange={setValue}
+            locale="nb"
+            label="Velg dato"
+        />
+    );
+}
+```
 
-            {/* Kun input-felt */}
-            <DateInput
-                value={value}
-                onChange={setValue}
-                label="Dato"
-                placeholder="dd.mm.åååå"
-            />
+```tsx
+import { useState } from 'react';
+import { DateInput } from '@sb1/ffe-datepicker-react';
 
-            {/* Frittstående kalender */}
-            <Calendar
-                selectedDate={new Date()}
-                onDateSelected={d => console.log('Valgt', d)}
-            />
-        </div>
+function MyComponent() {
+    const [value, setValue] = useState('');
+
+    return (
+        <DateInput
+            value={value}
+            onChange={setValue}
+            label="Dato"
+        />
+    );
+}
+```
+
+```tsx
+import { useState } from 'react';
+import { Calendar } from '@sb1/ffe-datepicker-react';
+
+function MyComponent() {
+    const [selectedDate, setSelectedDate] = useState(new Date());
+
+    return (
+        <Calendar
+            selectedDate={selectedDate}
+            onDateSelected={setSelectedDate}
+            locale="nb"
+        />
     );
 }
 ```

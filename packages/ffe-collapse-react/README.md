@@ -23,7 +23,7 @@ Alternativt kan du legge til stil på klassen `.ffe-collapse-transition`, legge 
 Hvis prosjektet ditt ikke bruker Less, kan du importere den kompilerte stylingen:
 
 ```css
-@import '~@sb1/ffe-collapse-react/css/collapse.css';
+@import '@sb1/ffe-collapse-react/css/collapse.css';
 ```
 
 ## Eksempler

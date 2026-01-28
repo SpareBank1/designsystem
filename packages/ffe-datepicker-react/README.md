@@ -1,5 +1,9 @@
 # @sb1/ffe-datepicker-react
 
+## Beskrivelse
+
+Komponenter for dato-inntasting og kalender. `Datepicker` kombinerer input-felt med kalender, `DateInput` er kun input-feltet for manuell inntasting, og `Calendar` er en frittstående kalenderkomponent.
+
 ## Installasjon
 
 ```bash
@@ -13,65 +17,59 @@ Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/
 Denne pakken er avhengig av `@sb1/ffe-form-react` og `@sb1/ffe-icons-react`.
 Husk å importere less-filene fra disse pakkene.
 
-## Beskrivelse
-
-Komponenter for dato-inntasting og kalender i FFE. `DateInput` er feltet for manuell inntasting og parsing, `Calendar` viser datoer med tastaturnavigasjon, og `Datepicker` kombinerer input + kalender i én komponent.
-
 ## Eksempler
 
+### Datepicker (input + kalender)
+
 ```tsx
-import React from 'react';
-import { Datepicker, DateInput, Calendar } from '@sb1/ffe-datepicker-react';
+import { useState } from 'react';
+import { Datepicker } from '@sb1/ffe-datepicker-react';
 
-export function DatepickerDemo() {
-    const [value, setValue] = React.useState('');
+function MyComponent() {
+    const [value, setValue] = useState('');
+
     return (
-        <div>
-            {/* Kombinert input + kalender */}
-            <Datepicker value={value} onChange={setValue} label="Velg dato" />
-
-            {/* Kun input-felt */}
-            <DateInput
-                value={value}
-                onChange={setValue}
-                label="Dato"
-                placeholder="dd.mm.åååå"
-            />
-
-            {/* Frittstående kalender */}
-            <Calendar
-                selectedDate={new Date()}
-                onDateSelected={d => console.log('Valgt', d)}
-            />
-        </div>
+        <Datepicker
+            value={value}
+            onChange={setValue}
+            locale="nb"
+            label="Velg dato"
+        />
     );
 }
 ```
 
-## Krav
+### DateInput (kun input-felt)
 
-- ~~i18n~~
-- ~~Vis kalender ved fokus~~
-- ~~Håndter ulike input-formater (se simpledate.test.js)~~
-- Valider ved blur på hele komponenten (både input og kalender)
+```tsx
+import { useState } from 'react';
+import { DateInput } from '@sb1/ffe-datepicker-react';
 
-### Tilgjengelighet (a11y)
+function MyComponent() {
+    const [value, setValue] = useState('');
 
-Krav for full a11y-samsvar:
+    return <DateInput value={value} onChange={setValue} label="Dato" />;
+}
+```
 
-- https://www.w3.org/TR/wai-aria-practices/#datepicker
+### Calendar (frittstående kalender)
 
-Eksempler:
+```tsx
+import { useState } from 'react';
+import { Calendar } from '@sb1/ffe-datepicker-react';
 
-- https://hanshillen.github.io/jqtest/#goto_datepicker
+function MyComponent() {
+    const [selectedDate, setSelectedDate] = useState(new Date());
 
-## Annet
-
-Evaluerte implementasjoner:
-
-- Pickaday (eller varianter av den): Ikke a11y-samsvarende. Mangler ARIA-roller og tastaturnavigasjon
-- http://jquense.github.io/react-widgets/docs/#/datetime-picker: Mangler tastaturnavigasjon
-- https://hacker0x01.github.io/react-datepicker/: Mangler tastaturnavigasjon
+    return (
+        <Calendar
+            selectedDate={selectedDate}
+            onDateSelected={setSelectedDate}
+            locale="nb"
+        />
+    );
+}
+```
 
 ## Utvikling
 

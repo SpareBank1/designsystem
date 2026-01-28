@@ -2,7 +2,7 @@
 
 ## Beskrivelse
 
-Chip-komponenten brukes for å lage interaktive, kompakte elementer med valgfrie ikoner.
+Chip-komponenter for å lage interaktive, kompakte elementer. Tilgjengelig i tre varianter: `Chip` (standard), `ChipRemovable` (med fjern-knapp) og `ChipSelectable` (kan velges/avvelges).
 
 ## Installasjon
 
@@ -14,76 +14,73 @@ npm install --save @sb1/ffe-chips-react
 
 Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/chip/.
 
-```tsx
-import { Chip } from '@sb1/ffe-chips-react';
-
-function MyComponent() {
-    return (
-        <div>
-            <Chip size="md" onClick={() => console.log('Klikket')}>
-                Klikk meg
-            </Chip>
-            <Chip size="lg" onClick={() => console.log('Stor chip')}>
-                Stor chip
-            </Chip>
-        </div>
-    );
-}
-```
-
-### Med ikoner
-
-```tsx
-import { Chip } from '@sb1/ffe-chips-react';
-import { Icon } from '@sb1/ffe-icons-react';
-
-function MyComponent() {
-    return (
-        <div>
-            <Chip
-                size="md"
-                leftIcon={
-                    <Icon
-                        fileUrl="icons/open/300/notifications.svg"
-                        size="md"
-                    />
-                }
-                onClick={() => console.log('Med venstre ikon')}
-            >
-                Med venstre ikon
-            </Chip>
-            <Chip
-                size="md"
-                rightIcon={
-                    <Icon fileUrl="icons/open/300/close.svg" size="md" />
-                }
-                onClick={() => console.log('Med høyre ikon')}
-            >
-                Med høyre ikon
-            </Chip>
-        </div>
-    );
-}
-```
-
-### Som lenke
-
-```tsx
-import { Chip } from '@sb1/ffe-chips-react';
-
-function MyComponent() {
-    return (
-        <Chip as="a" href="/side" size="md">
-            Naviger
-        </Chip>
-    );
-}
-```
-
 ### Importere CSS
 
 ```css
-@import '~@sb1/ffe-chips/css/chip.css';
+@import '@sb1/ffe-chips/css/chip.css';
+```
+
+## Eksempler
+
+### Standard Chip
+
+```tsx
+import { Chip } from '@sb1/ffe-chips-react';
+
+function MyComponent() {
+    return (
+        <div>
+            <Chip onClick={() => console.log('Klikket')}>Klikk meg</Chip>
+            <Chip as="a" href="/side">
+                Som lenke
+            </Chip>
+        </div>
+    );
+}
+```
+
+### ChipRemovable
+
+```tsx
+import { useState } from 'react';
+import { ChipRemovable } from '@sb1/ffe-chips-react';
+
+function MyComponent() {
+    const [items, setItems] = useState(['Filter 1', 'Filter 2', 'Filter 3']);
+
+    return (
+        <div>
+            {items.map(item => (
+                <ChipRemovable
+                    key={item}
+                    onRemove={() => setItems(items.filter(i => i !== item))}
+                >
+                    {item}
+                </ChipRemovable>
+            ))}
+        </div>
+    );
+}
+```
+
+### ChipSelectable
+
+```tsx
+import { useState } from 'react';
+import { ChipSelectable } from '@sb1/ffe-chips-react';
+
+function MyComponent() {
+    const [selected, setSelected] = useState(false);
+
+    return (
+        <ChipSelectable
+            selected={selected}
+            onClick={() => setSelected(!selected)}
+        >
+            {selected ? 'Valgt' : 'Velg meg'}
+        </ChipSelectable>
+    );
+}
 ```
 
 ## Utvikling

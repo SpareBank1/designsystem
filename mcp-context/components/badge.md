@@ -60,18 +60,6 @@ function MyComponent() {
 }
 ```
 
-```tsx
-import { Badge } from '@sb1/ffe-badge-react';
-
-function MyComponent() {
-    return <Badge className="my-custom-badge">Tilpasset badge</Badge>;
-}
-```
-
-```css
-@import '~@sb1/ffe-badge/css/badge.css';
-```
-
 ## Dokumentasjon
 
 Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/

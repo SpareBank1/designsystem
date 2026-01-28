@@ -25,13 +25,13 @@ Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/
 Hvis prosjektet ditt ikke bruker Less, kan du importere den kompilerte stylingen:
 
 ```css
-@import '~@sb1/ffe-chart-donut-react/css/ffe-chart-donut.css';
+@import '@sb1/ffe-chart-donut-react/css/ffe-chart-donut.css';
 ```
 
 ## Eksempler
 
 ```tsx
-import { DonutChart } from '@sb1/ffe-chart-donut-react';
+import { ChartDonut } from '@sb1/ffe-chart-donut-react';
 
 function MyComponent() {
     const data = [
@@ -40,7 +40,7 @@ function MyComponent() {
         { label: 'Kategori C', value: 20, color: '#CCFDEC' },
     ];
 
-    return <DonutChart data={data} centerText="100%" centerSubText="Total" />;
+    return <ChartDonut data={data} />;
 }
 ```
 
@@ -51,7 +51,7 @@ For å støtte theming av komponenter, inneholder denne pakken styling som er av
 Hvis prosjektet ditt bruker `ffe-core`, er du sannsynligvis klar. Hvis ikke, sørg for å importere core-egenskapene i `theme.less`:
 
 ```css
-@import '~@sb1/ffe-core/less/theme';
+@import '@sb1/ffe-core/less/theme';
 ```
 
 ## Utvikling

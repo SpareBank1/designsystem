@@ -14,6 +14,14 @@ npm install --save @sb1/ffe-badge-react
 
 Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/badge/.
 
+### Importere CSS
+
+```css
+@import '@sb1/ffe-badge/css/badge.css';
+```
+
+## Eksempler
+
 ```tsx
 import { Badge } from '@sb1/ffe-badge-react';
 
@@ -25,22 +33,6 @@ function MyComponent() {
         </div>
     );
 }
-```
-
-### Med tilpasset styling
-
-```tsx
-import { Badge } from '@sb1/ffe-badge-react';
-
-function MyComponent() {
-    return <Badge className="my-custom-badge">Tilpasset badge</Badge>;
-}
-```
-
-### Importere CSS
-
-```css
-@import '~@sb1/ffe-badge/css/badge.css';
 ```
 
 ## Utvikling

@@ -108,7 +108,7 @@ function MyComponent() {
 ```
 
 ```css
-@import '~@sb1/ffe-tags/css/tag.css';
+@import '@sb1/ffe-tags/css/tag.css';
 ```
 
 ## Dokumentasjon

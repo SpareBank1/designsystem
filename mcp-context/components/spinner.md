@@ -50,6 +50,7 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 ## Eksempler (fra README)
 
 ```tsx
+import { useState } from 'react';
 import { Spinner } from '@sb1/ffe-spinner-react';
 
 function MyComponent() {

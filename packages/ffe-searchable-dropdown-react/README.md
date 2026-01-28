@@ -1,6 +1,8 @@
 # @sb1/ffe-searchable-dropdown-react
 
-React-nedtrekkskomponent med søk.
+## Beskrivelse
+
+Søkbar nedtrekksliste for store eller dynamiske lister. Tilgjengelig som enkeltvalg (`SearchableDropdown`) og flervalg (`SearchableDropdownMultiSelect`). Støtter tastaturnavigasjon, lastestatus, tom-liste og egendefinert render av elementer.
 
 ## Installasjon
 
@@ -15,46 +17,22 @@ Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/
 Denne pakken er avhengig av `@sb1/ffe-form-react`, `@sb1/ffe-icons-react`, `@sb1/ffe-chips-react` og `@sb1/ffe-spinner-react`.
 Husk å importere less-filene.
 
-```javascript
-import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
-```
-
-Styling:
-
-```less
-@import 'npm://ffe-searchable-dropdown-react/less/searchable-dropdown';
-```
-
 ### Importere kompilert CSS
 
-Hvis prosjektet ditt ikke bruker Less, kan du importere den kompilerte stylingen:
-
 ```css
-@import '~@sb1/ffe-searchable-dropdown-react/css/searchable-dropdown.css';
+@import '@sb1/ffe-searchable-dropdown-react/css/searchable-dropdown.css';
 ```
-
-## FFE Less-avhengigheter
-
-```less
-@import '~ffe-core/less/colors';
-```
-
-## Beskrivelse
-
-Søkbar nedtrekksliste for store eller dynamiske lister. Tilgjengelig som enkeltvalg (`SearchableDropdown`) og flervalg (`SearchableDropdownMultiSelect`). Støtter tastaturnavigasjon, lastestatus, tom-liste og egendefinert render av elementer.
 
 ## Eksempler
 
-```tsx
-import React from 'react';
-import {
-    SearchableDropdown,
-    SearchableDropdownMultiSelect,
-} from '@sb1/ffe-searchable-dropdown-react';
+### Enkeltvalg
 
-export function SearchableDropdownDemo() {
-    const [value, setValue] = React.useState<string | null>(null);
-    const [values, setValues] = React.useState<string[]>([]);
+```tsx
+import { useState } from 'react';
+import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
+
+function MyComponent() {
+    const [selected, setSelected] = useState(null);
     const items = [
         { value: '1', label: 'Alternativ 1' },
         { value: '2', label: 'Alternativ 2' },
@@ -62,30 +40,48 @@ export function SearchableDropdownDemo() {
     ];
 
     return (
-        <div>
-            <SearchableDropdown
-                items={items}
-                value={value}
-                onChange={setValue}
-                placeholder="Søk og velg"
-                noMatchText="Ingen treff"
-            />
-
-            <SearchableDropdownMultiSelect
-                items={items}
-                values={values}
-                onChange={setValues}
-                placeholder="Velg flere"
-                noMatchText="Ingen treff"
-            />
-        </div>
+        <SearchableDropdown
+            id="my-dropdown"
+            labelledById="dropdown-label"
+            dropdownList={items}
+            selectedItem={selected}
+            onChange={setSelected}
+            searchAttributes={['label']}
+            noMatch={{ text: 'Ingen treff' }}
+            locale="nb"
+        />
     );
 }
 ```
 
-## Tilgjengelige props
+### Flervalg
 
-Se propTypes i [SearchableDropdown.js](src/SearchableDropdown.js)
+```tsx
+import { useState } from 'react';
+import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
+
+function MyComponent() {
+    const [selected, setSelected] = useState([]);
+    const items = [
+        { value: '1', label: 'Filter 1' },
+        { value: '2', label: 'Filter 2' },
+        { value: '3', label: 'Filter 3' },
+    ];
+
+    return (
+        <SearchableDropdownMultiSelect
+            id="my-multiselect"
+            labelledById="multiselect-label"
+            dropdownList={items}
+            selectedItems={selected}
+            onChange={setSelected}
+            searchAttributes={['label']}
+            noMatch={{ text: 'Ingen treff' }}
+            locale="nb"
+        />
+    );
+}
+```
 
 ## Utvikling
 

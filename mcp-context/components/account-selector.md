@@ -108,6 +108,7 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 ## Eksempler (fra README)
 
 ```tsx
+import { useState } from 'react';
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
 
 function MyComponent() {
@@ -119,9 +120,11 @@ function MyComponent() {
 
     return (
         <AccountSelector
+            id="account-selector"
             accounts={accounts}
             selectedAccount={selectedAccount}
-            onChange={account => setSelectedAccount(account)}
+            onAccountSelected={account => setSelectedAccount(account)}
+            onReset={() => setSelectedAccount(null)}
             locale="nb"
         />
     );
@@ -129,7 +132,7 @@ function MyComponent() {
 ```
 
 ```css
-@import '~@sb1/ffe-account-selector-react/css/ffe-account-selector.css';
+@import '@sb1/ffe-account-selector-react/css/ffe-account-selector.css';
 ```
 
 ## Dokumentasjon

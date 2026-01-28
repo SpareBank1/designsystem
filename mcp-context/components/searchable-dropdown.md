@@ -110,15 +110,11 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 ## Eksempler (fra README)
 
 ```tsx
-import React from 'react';
-import {
-    SearchableDropdown,
-    SearchableDropdownMultiSelect,
-} from '@sb1/ffe-searchable-dropdown-react';
+import { useState } from 'react';
+import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 
-export function SearchableDropdownDemo() {
-    const [value, setValue] = React.useState<string | null>(null);
-    const [values, setValues] = React.useState<string[]>([]);
+function MyComponent() {
+    const [selected, setSelected] = useState(null);
     const items = [
         { value: '1', label: 'Alternativ 1' },
         { value: '2', label: 'Alternativ 2' },
@@ -126,23 +122,43 @@ export function SearchableDropdownDemo() {
     ];
 
     return (
-        <div>
-            <SearchableDropdown
-                items={items}
-                value={value}
-                onChange={setValue}
-                placeholder="Søk og velg"
-                noMatchText="Ingen treff"
-            />
+        <SearchableDropdown
+            id="my-dropdown"
+            labelledById="dropdown-label"
+            dropdownList={items}
+            selectedItem={selected}
+            onChange={setSelected}
+            searchAttributes={['label']}
+            noMatch={{ text: 'Ingen treff' }}
+            locale="nb"
+        />
+    );
+}
+```
 
-            <SearchableDropdownMultiSelect
-                items={items}
-                values={values}
-                onChange={setValues}
-                placeholder="Velg flere"
-                noMatchText="Ingen treff"
-            />
-        </div>
+```tsx
+import { useState } from 'react';
+import { SearchableDropdownMultiSelect } from '@sb1/ffe-searchable-dropdown-react';
+
+function MyComponent() {
+    const [selected, setSelected] = useState([]);
+    const items = [
+        { value: '1', label: 'Filter 1' },
+        { value: '2', label: 'Filter 2' },
+        { value: '3', label: 'Filter 3' },
+    ];
+
+    return (
+        <SearchableDropdownMultiSelect
+            id="my-multiselect"
+            labelledById="multiselect-label"
+            dropdownList={items}
+            selectedItems={selected}
+            onChange={setSelected}
+            searchAttributes={['label']}
+            noMatch={{ text: 'Ingen treff' }}
+            locale="nb"
+        />
     );
 }
 ```

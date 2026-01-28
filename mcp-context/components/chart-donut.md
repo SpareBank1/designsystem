@@ -50,7 +50,7 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 ## Eksempler (fra README)
 
 ```tsx
-import { DonutChart } from '@sb1/ffe-chart-donut-react';
+import { ChartDonut } from '@sb1/ffe-chart-donut-react';
 
 function MyComponent() {
     const data = [
@@ -59,7 +59,7 @@ function MyComponent() {
         { label: 'Kategori C', value: 20, color: '#CCFDEC' },
     ];
 
-    return <DonutChart data={data} centerText="100%" centerSubText="Total" />;
+    return <ChartDonut data={data} />;
 }
 ```
 

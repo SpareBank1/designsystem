@@ -35,7 +35,7 @@ En kombinasjonsboks med autofullføring spesielt tilpasset for bankkontoer.
 
 #### @sb1/ffe-datepicker-react
 
-Komponenter for dato-inntasting og kalender i FFE. `DateInput` er feltet for manuell inntasting og parsing, `Calendar` viser datoer med tastaturnavigasjon, og `Datepicker` kombinerer input + kalender i én komponent.
+Komponenter for dato-inntasting og kalender. `Datepicker` kombinerer input-felt med kalender, `DateInput` er kun input-feltet for manuell inntasting, og `Calendar` er en frittstående kalenderkomponent.
 
 **Komponenter:** Datepicker, getDatepickerByLabelText, DateInput, Calendar
 
@@ -167,7 +167,7 @@ Modal-komponenter for korte, fokuserte interaksjoner i webapplikasjoner. Bruk mo
 
 #### @sb1/ffe-chips-react
 
-Chip-komponenten brukes for å lage interaktive, kompakte elementer med valgfrie ikoner.
+Chip-komponenter for å lage interaktive, kompakte elementer. Tilgjengelig i tre varianter: `Chip` (standard), `ChipRemovable` (med fjern-knapp) og `ChipSelectable` (kan velges/avvelges).
 
 **Komponenter:** Chip, ChipRemovable, ChipSelectable
 
@@ -201,7 +201,7 @@ Ringdiagram-komponenten brukes for å visualisere data med sirkeldiagrammer.
 
 #### @sb1/ffe-lists-react
 
-Liste-komponenter for punktlister, nummererte lister og beskrivelseslister i FFE.
+Liste-komponenter for punktlister, nummererte lister, sjekklister og beskrivelseslister. Inkluderer også stylede varianter og detaljkort-lister.
 
 **Komponenter:** BulletList, BulletListItem, CheckList, CheckListItem, NumberedList, ...
 
@@ -249,7 +249,7 @@ Ikonkomponenter for å vise vektorikoner konsistent i FFE. `Icon` støtter valg 
 
 #### @sb1/ffe-shapes-react
 
-Dekorative form-komponenter for visuell interesse.
+Dekorative form-komponenter for visuell interesse. Inneholder `Wave`-komponenten for bølgeformer som bakgrunnselementer.
 
 **Komponenter:** Wave
 

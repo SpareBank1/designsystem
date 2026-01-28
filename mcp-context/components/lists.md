@@ -2,7 +2,7 @@
 
 ## Beskrivelse
 
-Liste-komponenter for punktlister, nummererte lister og beskrivelseslister i FFE.
+Liste-komponenter for punktlister, nummererte lister, sjekklister og beskrivelseslister. Inkluderer også stylede varianter og detaljkort-lister.
 
 ## Komponenter
 
@@ -126,6 +126,69 @@ Ingen komponentspesifikke props utover native HTML-attributter.
 |------|------|---------|-------------|
 | `label` | `React.ReactNode` | Ja | Content of the label / left column |
 | `value` | `React.ReactNode` | Ja | Content of the value / right column |
+
+## Eksempler (fra README)
+
+```tsx
+import { BulletList, BulletListItem } from '@sb1/ffe-lists-react';
+
+function MyComponent() {
+    return (
+        <BulletList>
+            <BulletListItem>Første punkt</BulletListItem>
+            <BulletListItem>Andre punkt</BulletListItem>
+            <BulletListItem>Tredje punkt</BulletListItem>
+        </BulletList>
+    );
+}
+```
+
+```tsx
+import { NumberedList, NumberedListItem } from '@sb1/ffe-lists-react';
+
+function MyComponent() {
+    return (
+        <NumberedList>
+            <NumberedListItem>Steg 1</NumberedListItem>
+            <NumberedListItem>Steg 2</NumberedListItem>
+            <NumberedListItem>Steg 3</NumberedListItem>
+        </NumberedList>
+    );
+}
+```
+
+```tsx
+import { CheckList, CheckListItem } from '@sb1/ffe-lists-react';
+
+function MyComponent() {
+    return (
+        <CheckList>
+            <CheckListItem>Inkludert i pakken</CheckListItem>
+            <CheckListItem>Også inkludert</CheckListItem>
+            <CheckListItem isCross>Ikke inkludert</CheckListItem>
+        </CheckList>
+    );
+}
+```
+
+```tsx
+import {
+    DescriptionList,
+    DescriptionListTerm,
+    DescriptionListDescription,
+} from '@sb1/ffe-lists-react';
+
+function MyComponent() {
+    return (
+        <DescriptionList>
+            <DescriptionListTerm>Kontonummer</DescriptionListTerm>
+            <DescriptionListDescription>1234 56 78901</DescriptionListDescription>
+            <DescriptionListTerm>Saldo</DescriptionListTerm>
+            <DescriptionListDescription>10 000 kr</DescriptionListDescription>
+        </DescriptionList>
+    );
+}
+```
 
 ## Dokumentasjon
 

@@ -2,7 +2,7 @@
 
 ## Beskrivelse
 
-Dekorative form-komponenter for visuell interesse.
+Dekorative form-komponenter for visuell interesse. Inneholder `Wave`-komponenten for bølgeformer som bakgrunnselementer.
 
 ## Komponenter
 
@@ -51,14 +51,15 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 ## Eksempler (fra README)
 
 ```tsx
-import { Circle, Triangle, Square } from '@sb1/ffe-shapes-react';
+import { Wave } from '@sb1/ffe-shapes-react';
 
 function MyComponent() {
     return (
-        <div>
-            <Circle size="large" color="blue" />
-            <Triangle size="medium" />
-            <Square size="small" color="green" />
+        <div style={{ position: 'relative' }}>
+            <Wave color="frost-30" />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+                Innhold over bølgen
+            </div>
         </div>
     );
 }
