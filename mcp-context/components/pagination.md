@@ -1,27 +1,27 @@
 # @sb1/ffe-pagination-react
 
-## Description
+## Beskrivelse
 
-Pagination component for navigating through pages of content.
+Pagineringskomponent for å navigere gjennom sider med innhold.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Pagination`
 - `usePagination`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-pagination-react @sb1/ffe-buttons-react @sb1/ffe-core @sb1/ffe-core-react @sb1/ffe-dropdown-react @sb1/ffe-icons-react @sb1/ffe-pagination @sb1/ffe-buttons @sb1/ffe-icons @sb1/ffe-form
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-buttons-react`
 - `@sb1/ffe-core`
@@ -33,9 +33,9 @@ This package depends on:
 - `@sb1/ffe-icons`
 - `@sb1/ffe-form`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -45,30 +45,30 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-pagination/css/pagination.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Pagination Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `className` | `string` | No | - |
-| `locale` | `Locale` | No | - |
-| `showRowsPerPageText` | `boolean` | No | - |
-| `paginationControls` | `PaginationControls` | Yes | - |
-| `rowsPerPageOptions` | `number[]` | No | - |
-| `navigationButtonText` | `boolean` | No | - |
-| `ariaLabel` | `string` | Yes | - |
-| `onClickPrev` | `() => void` | No | - |
-| `onClickNext` | `() => void` | No | - |
-| `onClickPage` | `(page: number) => void` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `className` | `string` | Nei | - |
+| `locale` | `Locale` | Nei | - |
+| `showRowsPerPageText` | `boolean` | Nei | - |
+| `paginationControls` | `PaginationControls` | Ja | - |
+| `rowsPerPageOptions` | `number[]` | Nei | - |
+| `navigationButtonText` | `boolean` | Nei | - |
+| `ariaLabel` | `string` | Ja | - |
+| `onClickPrev` | `() => void` | Nei | - |
+| `onClickNext` | `() => void` | Nei | - |
+| `onClickPage` | `(page: number) => void` | Nei | - |
 
 ### usePagination Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import { Pagination } from '@sb1/ffe-pagination-react';
@@ -88,11 +88,11 @@ function MyComponent() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

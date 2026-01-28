@@ -1,12 +1,12 @@
 # @sb1/ffe-cards-react
 
-## Description
+## Beskrivelse
 
 Kort-komponenter for presentasjon av innhold med visuelle elementer: tekstkort, ikon-kort, bilde/illustrasjon, grupperte kort og prikkede/stippled kort. `CardBase` er grunnlaget som spesialiserte kortvarianter bygger på.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `CardBase`
 - `TextCard`
@@ -19,26 +19,26 @@ This package exports the following components:
 - `ImageCard`
 - `StippledCard`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-cards-react @sb1/ffe-cards @sb1/ffe-icons-react @sb1/ffe-core @sb1/ffe-icons
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-cards`
 - `@sb1/ffe-icons-react`
 - `@sb1/ffe-core`
 - `@sb1/ffe-icons`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -46,105 +46,111 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### CardBase Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `noMargin` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
-| `bgColor` | `BackgroundColor` | No | - |
-| `bgDarkmodeColor` | `never` | No | - |
-| `noPadding` | `boolean` | No | - |
-| `appearance` | `'default' | 'accent'` | No | - |
-| `children` | `WithCardActionProps['children'] | React.ReactNode` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `noMargin` | `boolean` | Nei | No margin on card |
+| `textCenter` | `boolean` | Nei | - |
+| `bgColor` | `BackgroundColor` | Nei | Property has new values that work with dark and accent mode as part of the Semantic Color update Possible values: `primary` `secondary` `tertiary` [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) |
+| `noPadding` | `boolean` | Nei | - |
+| `appearance` | `'default' | 'accent'` | Nei | Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' |
+| `children` | `WithCardActionProps['children'] | React.ReactNode` | Ja | - |
 
 ### TextCard Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `leftAlign` | `boolean` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `appearance` | `'default' | 'accent'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `leftAlign` | `boolean` | Nei | Left-aligned text on the card |
+| `noMargin` | `boolean` | Nei | No margin on card |
+| `appearance` | `'default' | 'accent'` | Nei | Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' |
+| `children` | `function` | Ja | Function that's passed available subcomponents as arguments, or regular children |
 
 ### IconCard Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `icon` | `ReactElement` | No | - |
-| `rightIcon` | `ReactElement` | No | - |
-| `condensed` | `boolean` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `appearance` | `'default' | 'accent'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `icon` | `ReactElement` | Nei | Element of icon |
+| `rightIcon` | `ReactElement` | Nei | - |
+| `condensed` | `boolean` | Nei | Smaller icon and less space |
+| `noMargin` | `boolean` | Nei | No margin on card |
+| `appearance` | `'default' | 'accent'` | Nei | Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' |
+| `children` | `function` | Ja | - |
 
 ### GroupCard Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `children` | `React.ReactNode` | Yes | - |
-| `bgColor` | `BackgroundColor` | No | - |
-| `bgDarkmodeColor` | `never` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `appearance` | `'default' | 'accent'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | Ja | The children of the GroupCard component |
+| `bgColor` | `BackgroundColor` | Nei | The background color of the whole groupcard element Property has new values that work with dark and accent mode as part of the Semantic Color update Possible values: `primary` `secondary` `tertiary` [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) |
+| `noMargin` | `boolean` | Nei | No margin on card |
+| `appearance` | `'default' | 'accent'` | Nei | Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' |
 
 ### GroupCardElement Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `noPadding` | `boolean` | No | - |
-| `noSeparator` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `noPadding` | `boolean` | Nei | No padding on the element |
+| `noSeparator` | `boolean` | Nei | Visible border between the elements |
+| `children` | `function` | Ja | - |
 
 ### GroupCardTitle Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `noPadding` | `boolean` | No | - |
-| `noSeparator` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `noPadding` | `boolean` | Nei | No padding on the element |
+| `noSeparator` | `boolean` | Nei | Visible border underneath title |
+| `children` | `function` | Ja | - |
 
 ### GroupCardFooter Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `noPadding` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `noPadding` | `boolean` | Nei | No padding on the element |
+| `children` | `function` | Ja | - |
 
 ### IllustrationCard Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `img` | `ReactElement` | Yes | - |
-| `condensed` | `boolean` | No | - |
-| `illustrationPosition` | `'right' | 'left'` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `appearance` | `'default' | 'accent'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `img` | `ReactElement` | Ja | Element of illustration |
+| `condensed` | `boolean` | Nei | Smaller illustration and less space |
+| `illustrationPosition` | `'right' | 'left'` | Nei | Position illustration at left (default) or right of the card content |
+| `noMargin` | `boolean` | Nei | No margin on card |
+| `appearance` | `'default' | 'accent'` | Nei | Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' |
+| `children` | `function` | Ja | - |
 
 ### ImageCard Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `imageSrc` | `string` | Yes | - |
-| `imageAltText` | `string` | Yes | - |
-| `noMargin` | `boolean` | No | - |
-| `appearance` | `'default' | 'accent'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `imageSrc` | `string` | Ja | The src for the image |
+| `imageAltText` | `string` | Ja | The alt text for the image |
+| `noMargin` | `boolean` | Nei | No margin on card |
+| `appearance` | `'default' | 'accent'` | Nei | Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' |
+| `children` | `function` | Ja | - |
 
 ### StippledCard Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `condensed` | `boolean` | No | - |
-| `img` | `Img` | No | - |
-| `rightImg` | `Img` | No | - |
-| `noMargin` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `condensed` | `boolean` | Nei | Smaller icon and less space |
+| `img` | `Img` | Nei | Image to be rendered |
+| `rightImg` | `Img` | Nei | - |
+| `noMargin` | `boolean` | Nei | No margin on card |
+| `children` | `function` | Ja | - |
 
-## When to Use
+## Når bør du bruke
 
 Bruk av kort
 
 Kortene skal hjelpe brukerne med å navigere seg til riktig side. De skal gi en kort og tydelig oppsummering av hva slags informasjon som finnes på undersiden.
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -194,11 +200,11 @@ export function CardsDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

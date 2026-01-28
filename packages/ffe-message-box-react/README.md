@@ -1,11 +1,11 @@
 # @sb1/ffe-message-box-react
 
-## Description
+## Beskrivelse
 
-Deprecated package. Use `@sb1/ffe-messages-react` for system and context messages, headers, message lists, and message boxes. See the Messages component documentation for up-to-date APIs and examples.
+Foreldet pakke. Bruk `@sb1/ffe-messages-react` for system- og kontekstmeldinger, overskrifter, meldingslister og meldingsbokser. Se Messages-komponentdokumentasjonen for oppdaterte API-er og eksempler.
 
-## Deprecated package
+## Foreldet pakke
 
-This package is deprecated, and will be removed from the designsystem repo.
+Denne pakken er foreldet og vil bli fjernet fra designsystem-repoet.
 
-Use the new packages for messages, please refer to [ffe-messages](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages) and/or [ffe-messages-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages-react).
+Bruk de nye pakkene for meldinger, se [ffe-messages](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages) og/eller [ffe-messages-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages-react).

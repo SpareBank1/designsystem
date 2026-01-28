@@ -1,27 +1,25 @@
 # @sb1/ffe-file-upload-react
 
-## Description
-
-Upload file button with validation and list of uploaded files.
+## Beskrivelse
 
 Filopplastingsknapp med validering og liste over opplastede filer.
 
-_NB! `FileReader` is not supported in IE9 or below so this component will not work for older browsers(http://caniuse.com/#search=filereader)_
+_Merk: `FileReader` støttes ikke i IE9 eller eldre, så denne komponenten vil ikke fungere i eldre nettlesere (http://caniuse.com/#search=filereader)_
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-file-upload-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on file upload usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#fileupload.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/skjemaelementer/#fileupload.
 
-This package depends on `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` and `@sb1/ffe-form-react`.
-Make sure you import the less-files.
+Denne pakken er avhengig av `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` og `@sb1/ffe-form-react`.
+Husk å importere less-filene.
 
-## Examples
+## Eksempler
 
 ```tsx
 import { FileUpload } from '@sb1/ffe-file-upload-react';
@@ -47,9 +45,9 @@ function MyComponent() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -57,6 +55,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

@@ -1,34 +1,34 @@
 # @sb1/ffe-icons-react
 
-## Description
+## Beskrivelse
 
 Ikonkomponenter for å vise vektorikoner konsistent i FFE. `Icon` støtter valg av ikonnavn, størrelse og dekorasjon, og integreres med ikonsettet i `@sb1/ffe-icons`.
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-icons-react @sb1/ffe-icons
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-icons`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -54,11 +54,11 @@ export function IconsDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

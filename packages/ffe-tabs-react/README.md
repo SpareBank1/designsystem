@@ -1,20 +1,22 @@
-## Install
+# @sb1/ffe-tabs-react
+
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-tabs-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on tabs usage is available at https://design.sparebank1.no/komponenter/faner/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/faner/.
 
-## Description
+## Beskrivelse
 
 Fanekomponenter for å organisere innhold i seksjoner der brukeren kan bytte mellom faner uten å forlate siden. `TabGroup` styrer valgt fane og tilhørende panel, `Tab` representerer hver fane.
 
 Bruk faner for parallelt, beslektet innhold som ikke krever ny side, og når antallet seksjoner er håndterbart.
 
-## Examples
+## Eksempler
 
 ```tsx
 import React from 'react';
@@ -38,9 +40,9 @@ export function TabsDemo() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -48,6 +50,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

@@ -1,25 +1,23 @@
 # @sb1/ffe-pagination-react
 
-## Description
-
-Pagination component for navigating through pages of content.
+## Beskrivelse
 
 Pagineringskomponent for å navigere gjennom sider med innhold.
 
-## Install
+## Installasjon
 
+```bash
+npm install --save @sb1/ffe-pagination-react
 ```
-npm install --save @sb1/ffe-modals-react
-```
 
-## Usage
+## Bruk
 
-Full documentation on lists usage is available at https://design.sparebank1.no/komponenter/paginering/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/paginering/.
 
-This package depends on `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` and `@sb1/ffe-icons-react`.
-Make sure you import the less-files.
+Denne pakken er avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` og `@sb1/ffe-icons-react`.
+Husk å importere less-filene.
 
-## Examples
+## Eksempler
 
 ```tsx
 import { Pagination } from '@sb1/ffe-pagination-react';
@@ -39,9 +37,9 @@ function MyComponent() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -49,6 +47,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

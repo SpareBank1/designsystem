@@ -1,29 +1,29 @@
 # @sb1/ffe-datepicker-react
 
-## Description
+## Beskrivelse
 
 Komponenter for dato-inntasting og kalender i FFE. `DateInput` er feltet for manuell inntasting og parsing, `Calendar` viser datoer med tastaturnavigasjon, og `Datepicker` kombinerer input + kalender i én komponent.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Datepicker`
 - `getDatepickerByLabelText`
 - `DateInput`
 - `Calendar`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-datepicker-react @sb1/ffe-datepicker @sb1/ffe-dropdown-react @sb1/ffe-form @sb1/ffe-form-react @sb1/ffe-icons-react @sb1/ffe-core @sb1/ffe-buttons @sb1/ffe-collapse-react @sb1/ffe-icons
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-datepicker`
 - `@sb1/ffe-dropdown-react`
@@ -35,9 +35,9 @@ This package depends on:
 - `@sb1/ffe-collapse-react`
 - `@sb1/ffe-icons`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -48,45 +48,45 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Datepicker Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `value` | `string` | Yes | - |
-| `locale` | `Locale` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `value` | `string` | Ja | - |
+| `locale` | `Locale` | Ja | - |
 
 ### getDatepickerByLabelText Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### DateInput Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `ariaInvalid` | `string` | Yes | - |
-| `value` | `string` | Yes | - |
-| `locale` | `'nb' | 'nn' | 'en'` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `ariaInvalid` | `string` | Ja | - |
+| `value` | `string` | Ja | - |
+| `locale` | `'nb' | 'nn' | 'en'` | Ja | - |
 
 ### Calendar Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `calendarClassName` | `string` | No | - |
-| `escKeyHandler` | `React.KeyboardEventHandler<HTMLDivElement>` | No | - |
-| `locale` | `'nb' | 'nn' | 'en'` | Yes | - |
-| `onDatePicked` | `(date: string) => void` | Yes | - |
-| `selectedDate` | `string | null` | No | - |
-| `focusOnMount` | `boolean` | No | - |
-| `dropdownCaption` | `boolean` | No | - |
-| `minDate` | `string | null` | No | - |
-| `maxDate` | `string | null` | No | - |
-| `disabledDates` | `string[]` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `calendarClassName` | `string` | Nei | - |
+| `escKeyHandler` | `React.KeyboardEventHandler<HTMLDivElement>` | Nei | - |
+| `locale` | `'nb' | 'nn' | 'en'` | Ja | - |
+| `onDatePicked` | `(date: string) => void` | Ja | - |
+| `selectedDate` | `string | null` | Nei | - |
+| `focusOnMount` | `boolean` | Nei | - |
+| `dropdownCaption` | `boolean` | Nei | Om måned- og år-dropdown skal vises i kalenderen |
+| `minDate` | `string | null` | Nei | Tidligste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown |
+| `maxDate` | `string | null` | Nei | Seneste tillatte dato (format: 'dd.mm.yyyy') - brukes kun til å bestemme år-intervall i dropdown |
+| `disabledDates` | `string[]` | Nei | Array av datoer i format 'dd.mm.yyyy' som skal være deaktivert |
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -117,11 +117,11 @@ export function DatepickerDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

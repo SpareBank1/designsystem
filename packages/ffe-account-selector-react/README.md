@@ -1,31 +1,29 @@
 # @sb1/ffe-account-selector-react
 
-## Description
-
-A combobox with autocomplete tailored for bank accounts.
+## Beskrivelse
 
 En kombinasjonsboks med autofullføring spesielt tilpasset for bankkontoer.
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-account-selector-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on account selector usage is available at https://design.sparebank1.no/komponenter/kontovelger/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/kontovelger/.
 
-This package depends on `@sb1/ffe-searchable-dropdown-react`.
-Make sure you import the less-files.
+Denne pakken er avhengig av `@sb1/ffe-searchable-dropdown-react`.
+Husk å importere less-filene.
 
-For styling the account-selector use:
+For styling av kontovelgeren, bruk:
 
 ```css
 @import 'path/to/node_modules/@sb1/ffe-account-selector-react/less/ffe-account-selector';
 ```
 
-## Examples
+## Eksempler
 
 ```tsx
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
@@ -48,17 +46,17 @@ function MyComponent() {
 }
 ```
 
-### Importing compiled CSS
+### Importere kompilert CSS
 
-If your project does not use Less, you can import the compiled styling:
+Hvis prosjektet ditt ikke bruker Less, kan du importere den kompilerte stylingen:
 
 ```css
 @import '~@sb1/ffe-account-selector-react/css/ffe-account-selector.css';
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -66,4 +64,4 @@ npm run build
 npm start
 ```
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

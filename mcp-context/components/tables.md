@@ -1,12 +1,12 @@
 # @sb1/ffe-tables-react
 
-## Description
+## Beskrivelse
 
 Komponenter for tabeller med semantiske deler (`Table`, `TableHead`, `TableBody`, `TableRow`, `TableHeaderCell`, `TableDataCell`, `TableFoot`, `TableCaption`) og utvidbare rader (`TableRowExpandable`). Brukes for strukturert visning av data i rader og kolonner.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Table`
 - `TableBody`
@@ -18,17 +18,17 @@ This package exports the following components:
 - `TableCaption`
 - `TableRowExpandable`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-tables-react @sb1/ffe-collapse-react @sb1/ffe-core-react @sb1/ffe-icons-react @sb1/ffe-tables @sb1/ffe-core @sb1/ffe-icons
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-collapse-react`
 - `@sb1/ffe-core-react`
@@ -37,9 +37,9 @@ This package depends on:
 - `@sb1/ffe-core`
 - `@sb1/ffe-icons`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -48,58 +48,60 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-tables/css/tables.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Table Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `initialSort` | `InitialSort` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `initialSort` | `InitialSort` | Nei | - |
+| `children` | `function` | Ja | - |
+| `breakPoint` | `'none' | 'sm' | 'md'` | Nei | - |
 
 ### TableBody Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### TableDataCell Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `columnHeader` | `React.ReactNode` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `columnHeader` | `React.ReactNode` | Ja | - |
 
 ### TableFoot Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### TableHead Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### TableHeaderCell Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `sortKey` | `string` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `sortKey` | `string` | Nei | - |
 
 ### TableRow Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### TableCaption Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### TableRowExpandable Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `expandContent` | `React.ReactNode | ((setIsOpen: React.Dispatch<React.SetStateAction<boolean>>) => React.ReactNode)` | Yes | - |
-| `locale` | `'nb' | 'nn' | 'en'` | No | - |
-| `isDefaultOpen` | `boolean` | No | - |
-| `onClick` | `React.MouseEventHandler<HTMLButtonElement>` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `expandContent` | `function` | Ja | - |
+| `locale` | `'nb' | 'nn' | 'en'` | Nei | - |
+| `isDefaultOpen` | `boolean` | Nei | - |
+| `onClick` | `React.MouseEventHandler<HTMLButtonElement>` | Nei | - |
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -147,11 +149,11 @@ export function TableDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

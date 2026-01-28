@@ -1,19 +1,19 @@
 # @sb1/ffe-buttons-react
 
-## Install
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-buttons-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on button usage is available at https://design.sparebank1.no/komponenter/knapper/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/knapper/.
 
-This package depends on `@sb1/ffe-icons-react`.
-Make sure you import the less-files.
+Denne pakken er avhengig av `@sb1/ffe-icons-react`.
+Husk å importere less-filene.
 
-## Description
+## Beskrivelse
 
 Reaktive knapp-komponenter i FFE for handlinger med korrekt visuell hierarki og tilgjengelighetsstøtte. Bruk disse for å kommunisere prioritet (Action, Primary, Secondary, Tertiary), navigasjon (BackButton), utvidelse/visning (Expand/InlineExpand), grupperte knapper og snarveier.
 
@@ -26,7 +26,7 @@ Når bør du ikke bruke pakken:
 
 - For lenker som ser ut som knapper—bruk `LinkText` i `ffe-core-react` eller semantisk `<a>` med riktig stil.
 
-## Examples
+## Eksempler
 
 ```tsx
 import React from 'react';
@@ -99,9 +99,9 @@ export function ButtonsDemo() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -109,6 +109,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

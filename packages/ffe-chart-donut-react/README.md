@@ -1,36 +1,34 @@
 # @sb1/ffe-chart-donut-react
 
-## Description
-
-Donut chart component for visualizing data with circular graphs.
+## Beskrivelse
 
 Ringdiagram-komponenten brukes for å visualisere data med sirkeldiagrammer.
 
-## Install
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-chart-donut-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on chart donut usage is available at https://design.sparebank1.no/komponenter/diagram/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/diagram/.
 
-### Styling import
+### Importere styling
 
 ```css
 @import 'path/to/node_modules/@sb1/ffe-chart-donut-react/less/ffe-chart-donut';
 ```
 
-### Importing compiled CSS
+### Importere kompilert CSS
 
-If your project does not use Less, you can import the compiled styling:
+Hvis prosjektet ditt ikke bruker Less, kan du importere den kompilerte stylingen:
 
 ```css
 @import '~@sb1/ffe-chart-donut-react/css/ffe-chart-donut.css';
 ```
 
-## Examples
+## Eksempler
 
 ```tsx
 import { DonutChart } from '@sb1/ffe-chart-donut-react';
@@ -46,19 +44,19 @@ function MyComponent() {
 }
 ```
 
-## Theming with CSS custom properties
+## Theming med CSS custom properties
 
-In order to support theming of components, this package contains styling that depends on a set of custom properties, defined in `less/theme.less`. These properties in turn depend on a base theme defined in `ffe-core`.
+For å støtte theming av komponenter, inneholder denne pakken styling som er avhengig av et sett med custom properties, definert i `less/theme.less`. Disse egenskapene er igjen avhengige av et base-tema definert i `ffe-core`.
 
-If your project uses the `ffe-core`, you're probably good to go. If not, make sure to import the core properties in `theme.less`:
+Hvis prosjektet ditt bruker `ffe-core`, er du sannsynligvis klar. Hvis ikke, sørg for å importere core-egenskapene i `theme.less`:
 
 ```css
 @import '~@sb1/ffe-core/less/theme';
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -66,6 +64,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

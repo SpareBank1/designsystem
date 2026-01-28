@@ -1,23 +1,23 @@
 # @sb1/ffe-datepicker-react
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-datepicker-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on datepicker usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#datepicker.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/skjemaelementer/#datepicker.
 
-This package depends on `@sb1/ffe-form-react` and `@sb1/ffe-icons-react`.
-Make sure you import the less-files from these packages.
+Denne pakken er avhengig av `@sb1/ffe-form-react` og `@sb1/ffe-icons-react`.
+Husk å importere less-filene fra disse pakkene.
 
-## Description
+## Beskrivelse
 
 Komponenter for dato-inntasting og kalender i FFE. `DateInput` er feltet for manuell inntasting og parsing, `Calendar` viser datoer med tastaturnavigasjon, og `Datepicker` kombinerer input + kalender i én komponent.
 
-## Examples
+## Eksempler
 
 ```tsx
 import React from 'react';
@@ -48,34 +48,34 @@ export function DatepickerDemo() {
 }
 ```
 
-## Requirements
+## Krav
 
 - ~~i18n~~
-- ~~Show calendar on focus~~
-- ~~Handle various input-formats (see simpledate.test.js)~~
-- Validate on blur on the whole component (both the input and the calendar)
+- ~~Vis kalender ved fokus~~
+- ~~Håndter ulike input-formater (se simpledate.test.js)~~
+- Valider ved blur på hele komponenten (både input og kalender)
 
-### a11y
+### Tilgjengelighet (a11y)
 
-Requirements for full a11y-compliance:
+Krav for full a11y-samsvar:
 
 - https://www.w3.org/TR/wai-aria-practices/#datepicker
 
-Examples:
+Eksempler:
 
 - https://hanshillen.github.io/jqtest/#goto_datepicker
 
-## Other
+## Annet
 
-Evaluated implementations:
+Evaluerte implementasjoner:
 
-- Pickaday (or variants of it): Not a11y compliant. Lacks ARIA-roles and keyboard navigation
-- http://jquense.github.io/react-widgets/docs/#/datetime-picker : Lacks keyboard navigation
-- https://hacker0x01.github.io/react-datepicker/ : Lacks keyboard navigation
+- Pickaday (eller varianter av den): Ikke a11y-samsvarende. Mangler ARIA-roller og tastaturnavigasjon
+- http://jquense.github.io/react-widgets/docs/#/datetime-picker: Mangler tastaturnavigasjon
+- https://hacker0x01.github.io/react-datepicker/: Mangler tastaturnavigasjon
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -83,6 +83,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

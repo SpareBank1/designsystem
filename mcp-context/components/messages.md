@@ -1,12 +1,12 @@
 # @sb1/ffe-messages-react
 
-## Description
+## Beskrivelse
 
-Unified message components for communicating status, tips, and alerts. Use `SystemMessage` for global status, `ContextMessage` for contextual inline feedback (with optional header and close button), and `MessageBox` for framed messages. Compose `MessageHeader` and `MessageList`/`MessageListItem` to structure content. Choose `type` (`info`, `success`, `tips`, `warning`, `error`) to control icon, color, and accessibility roles.
+Samlede meldingskomponenter for å kommunisere status, tips og varsler. Bruk `SystemMessage` for global status, `ContextMessage` for kontekstuell inline tilbakemelding (med valgfri overskrift og lukkeknapp), og `MessageBox` for innrammede meldinger. Komponer `MessageHeader` og `MessageList`/`MessageListItem` for å strukturere innhold. Velg `type` (`info`, `success`, `tips`, `warning`, `error`) for å styre ikon, farge og tilgjengelighetsroller.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `SystemMessage`
 - `ContextMessage`
@@ -15,26 +15,26 @@ This package exports the following components:
 - `MessageList`
 - `MessageListItem`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-messages-react @sb1/ffe-icons-react @sb1/ffe-messages @sb1/ffe-icons @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-icons-react`
 - `@sb1/ffe-messages`
 - `@sb1/ffe-icons`
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -42,55 +42,53 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-messages/css/messages.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### SystemMessage Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `type` | `MessageType` | Yes | - |
-| `iconFileUrl` | `string` | No | - |
-| `locale` | `Locale` | No | - |
-| `onClose` | `() => void` | No | - |
-| `onColoredBg` | `never` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `type` | `MessageType` | Ja | info, success, tips, warning or error |
+| `iconFileUrl` | `string` | Nei | url to svg icon to override default |
+| `locale` | `Locale` | Nei | nn, nb or en |
+| `onClose` | `() => void` | Nei | Called when closed |
 
 ### ContextMessage Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `compact` | `boolean` | No | - |
-| `iconFileUrl` | `string` | No | - |
-| `locale` | `Locale` | No | - |
-| `type` | `MessageType` | Yes | - |
-| `onClose` | `() => void` | No | - |
-| `closeButton` | `boolean` | No | - |
-| `header` | `React.ReactElement<MessageHeaderProps> | string` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `compact` | `boolean` | Nei | Renders a more compact version of the context message |
+| `iconFileUrl` | `string` | Nei | url to svg icon to override default |
+| `locale` | `Locale` | Nei | Decides the language of the aria-label for the close icon |
+| `type` | `MessageType` | Ja | info, success, tips, warning or error |
+| `onClose` | `() => void` | Nei | Called when closed |
+| `closeButton` | `boolean` | Nei | Show close button |
+| `header` | `React.ReactElement<MessageHeaderProps> | string` | Nei | The header |
 
 ### MessageBox Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `iconFileUrl` | `string` | No | - |
-| `header` | `React.ReactElement<MessageHeaderProps> | string` | No | - |
-| `type` | `MessageType` | Yes | - |
-| `locale` | `Locale` | No | - |
-| `onColoredBg` | `never` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `iconFileUrl` | `string` | Nei | url to svg icon to override default |
+| `header` | `React.ReactElement<MessageHeaderProps> | string` | Nei | The header |
+| `type` | `MessageType` | Ja | info, success, tips, warning or error |
+| `locale` | `Locale` | Nei | Decides the language of the aria-label for the close icon |
 
 ### MessageHeader Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### MessageList Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### MessageListItem Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import {
@@ -105,12 +103,12 @@ import {
 export function MessagesExamples() {
     return (
         <div>
-            {/* SystemMessage: global status with close button */}
+            {/* SystemMessage: global status med lukkeknapp */}
             <SystemMessage type="success" locale="nb" onClose={() => {}}>
                 Kontoen ble oppdatert.
             </SystemMessage>
 
-            {/* ContextMessage: inline message with header and optional close button */}
+            {/* ContextMessage: inline melding med overskrift og valgfri lukkeknapp */}
             <ContextMessage
                 type="warning"
                 header="Sjekk opplysningene"
@@ -123,7 +121,7 @@ export function MessagesExamples() {
                 </MessageList>
             </ContextMessage>
 
-            {/* MessageBox: framed message area with header */}
+            {/* MessageBox: innrammet meldingsområde med overskrift */}
             <MessageBox
                 type="info"
                 header={
@@ -137,11 +135,11 @@ export function MessagesExamples() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

@@ -1,25 +1,25 @@
 # @sb1/ffe-dropdown-react
 
-React implementation of the dropdown found in FFE.
+React-implementasjon av nedtrekkslisten i FFE.
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-dropdown-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on dropdown usage is available at https://design.sparebank1.no/komponenter/dropdown/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/dropdown/.
 
-This package depends on `@sb1/ffe-form-react`.
-Make sure you import the less-files from these packages.
+Denne pakken er avhengig av `@sb1/ffe-form-react`.
+Husk å importere less-filene fra disse pakkene.
 
-## Description
+## Beskrivelse
 
 Enkel nedtrekksliste-komponent (`Dropdown`) for valg fra en liste. Brukes for korte, flate lister der brukeren skal velge ett alternativ.
 
-## Examples
+## Eksempler
 
 ```tsx
 import React from 'react';
@@ -42,9 +42,9 @@ export function DropdownDemo() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -52,6 +52,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

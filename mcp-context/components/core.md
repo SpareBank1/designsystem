@@ -1,12 +1,12 @@
 # @sb1/ffe-core-react
 
-## Description
+## Beskrivelse
 
-React-komponenter for typografi og grunnleggende tekstmønstre i FFE. Bruk disse komponentene når du skal rendere overskrifter, avsnitt, lenker og annet tekstinnhold med riktig visuell stil, spacing og semantikk i tråd med SpareBank 1 sitt designsystem.
+React-komponenter for typografi og grunnleggende tekstmønstre i FFE. Bruk disse komponentene når du skal rendere overskrifter, avsnitt, lenker og annet tekstinnhold med riktig visuell stil, spacing og semantikk i tråd med SpareBank 1 sitt designsystem.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `BodyText`
 - `DividerLine`
@@ -25,155 +25,155 @@ This package exports the following components:
 - `SmallText`
 - `StrongText`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-core-react @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### BodyText Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `as` | `As` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `as` | `As` | Nei | - |
 
 ### DividerLine Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### EmphasizedText Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### Heading1 Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `error` | `boolean` | No | - |
-| `inline` | `boolean` | No | - |
-| `lookLike` | `HeadingLevel` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `withBorder` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `error` | `boolean` | Nei | - |
+| `inline` | `boolean` | Nei | - |
+| `lookLike` | `HeadingLevel` | Nei | - |
+| `noMargin` | `boolean` | Nei | - |
+| `withBorder` | `boolean` | Nei | - |
+| `textCenter` | `boolean` | Nei | - |
 
 ### Heading2 Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `error` | `boolean` | No | - |
-| `inline` | `boolean` | No | - |
-| `lookLike` | `HeadingLevel` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `withBorder` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `error` | `boolean` | Nei | - |
+| `inline` | `boolean` | Nei | - |
+| `lookLike` | `HeadingLevel` | Nei | - |
+| `noMargin` | `boolean` | Nei | - |
+| `withBorder` | `boolean` | Nei | - |
+| `textCenter` | `boolean` | Nei | - |
 
 ### Heading3 Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `error` | `boolean` | No | - |
-| `inline` | `boolean` | No | - |
-| `lookLike` | `HeadingLevel` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `withBorder` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `error` | `boolean` | Nei | - |
+| `inline` | `boolean` | Nei | - |
+| `lookLike` | `HeadingLevel` | Nei | - |
+| `noMargin` | `boolean` | Nei | - |
+| `withBorder` | `boolean` | Nei | - |
+| `textCenter` | `boolean` | Nei | - |
 
 ### Heading4 Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `error` | `boolean` | No | - |
-| `inline` | `boolean` | No | - |
-| `lookLike` | `HeadingLevel` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `withBorder` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `error` | `boolean` | Nei | - |
+| `inline` | `boolean` | Nei | - |
+| `lookLike` | `HeadingLevel` | Nei | - |
+| `noMargin` | `boolean` | Nei | - |
+| `withBorder` | `boolean` | Nei | - |
+| `textCenter` | `boolean` | Nei | - |
 
 ### Heading5 Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `error` | `boolean` | No | - |
-| `inline` | `boolean` | No | - |
-| `lookLike` | `HeadingLevel` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `withBorder` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `error` | `boolean` | Nei | - |
+| `inline` | `boolean` | Nei | - |
+| `lookLike` | `HeadingLevel` | Nei | - |
+| `noMargin` | `boolean` | Nei | - |
+| `withBorder` | `boolean` | Nei | - |
+| `textCenter` | `boolean` | Nei | - |
 
 ### Heading6 Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `error` | `boolean` | No | - |
-| `inline` | `boolean` | No | - |
-| `lookLike` | `HeadingLevel` | No | - |
-| `noMargin` | `boolean` | No | - |
-| `withBorder` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `error` | `boolean` | Nei | - |
+| `inline` | `boolean` | Nei | - |
+| `lookLike` | `HeadingLevel` | Nei | - |
+| `noMargin` | `boolean` | Nei | - |
+| `withBorder` | `boolean` | Nei | - |
+| `textCenter` | `boolean` | Nei | - |
 
 ### LinkText Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `as` | `As` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `as` | `As` | Nei | - |
 
 ### LinkIcon Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `as` | `As` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `as` | `As` | Nei | - |
 
 ### MicroText Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `as` | `As` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `as` | `As` | Nei | - |
 
 ### Paragraph Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `lead` | `boolean` | No | - |
-| `subLead` | `boolean` | No | - |
-| `textCenter` | `boolean` | No | - |
-| `textLeft` | `boolean` | No | - |
-| `noMargin` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `lead` | `boolean` | Nei | Makes this paragraph a lead paragraph, typically used directly below a heading. |
+| `subLead` | `boolean` | Nei | Makes this paragraph a sub-lead paragraph, typically used directly below a lead paragraph. |
+| `textCenter` | `boolean` | Nei | Use if text alignment should override that of its container. |
+| `textLeft` | `boolean` | Nei | Use if text alignment should override that of its container. |
+| `noMargin` | `boolean` | Nei | Use if the paragraph should have no margin. |
 
 ### PreformattedText Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### SmallText Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `as` | `As` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `as` | `As` | Nei | - |
 
 ### StrongText Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -219,7 +219,7 @@ export function CoreTypographyDemo() {
             <DividerLine />
 
             {/* Lenker */}
-            <LinkText href="https://sparebank1.no">Gå til SpareBank 1</LinkText>
+            <LinkText href="https://sparebank1.no">Gå til SpareBank 1</LinkText>
             <LinkText href="#" underline={false}>
                 Lenke uten understrek
             </LinkText>
@@ -246,11 +246,11 @@ export function CoreTypographyDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

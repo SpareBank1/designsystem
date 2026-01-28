@@ -1,285 +1,287 @@
-# SpareBank 1 FFE (Felles Front End) Design System - AI Context
+# SpareBank 1 FFE (Felles Front End) Designsystem - AI-kontekst
 
-## Overview
+## Oversikt
 
-The FFE Design System is SpareBank 1's comprehensive component library for building consistent, accessible web applications. It provides React components with corresponding CSS styles following SpareBank 1's design guidelines.
+FFE-designsystemet er SpareBank 1s omfattende komponentbibliotek for å bygge konsistente, tilgjengelige webapplikasjoner. Det tilbyr React-komponenter med tilhørende CSS-stiler som følger SpareBank 1s designretningslinjer.
 
-## Architecture
+## Arkitektur
 
-The design system is organized into packages:
+Designsystemet er organisert i pakker:
 
-- **React packages** (ending in `-react`): Contain React components
-- **CSS packages**: Contain standalone CSS (some React packages include their own CSS)
-- **Core packages**: Provide foundational styles, icons, and utilities
+- **React-pakker** (slutter med `-react`): Inneholder React-komponenter
+- **CSS-pakker**: Inneholder frittstående CSS (noen React-pakker inkluderer egen CSS)
+- **Kjernepakker**: Tilbyr grunnleggende stiler, ikoner og verktøy
 
-### Key Packages
+### Viktige pakker
 
-- `@sb1/ffe-core` and `@sb1/ffe-core-react`: Base styles, typography, spacing
-- `@sb1/ffe-icons` and `@sb1/ffe-icons-react`: Icon library
+- `@sb1/ffe-core` og `@sb1/ffe-core-react`: Grunnstiler, typografi, spacing
+- `@sb1/ffe-icons` og `@sb1/ffe-icons-react`: Ikonbibliotek
 
-**Note:** The grid package (`@sb1/ffe-grid-react`) is deprecated and should not be used. Use modern CSS Grid or Flexbox instead.
+**Merk:** Grid-pakken (`@sb1/ffe-grid-react`) er foreldet og bør ikke brukes. Bruk moderne CSS Grid eller Flexbox i stedet.
 
-## Component Library
+## Komponentbibliotek
 
-Below is a complete list of all React component packages in the FFE design system.
+Nedenfor er en komplett liste over alle React-komponentpakker i FFE-designsystemet.
 
-### Form & Input
+### Skjema og input
 
 #### @sb1/ffe-account-selector-react
 
-A combobox with autocomplete tailored for bank accounts.
+En kombinasjonsboks med autofullføring spesielt tilpasset for bankkontoer.
 
-**Components:** AccountSelector, AccountSelectorMulti
+**Komponenter:** AccountSelector, AccountSelectorMulti
 
-[View detailed documentation](./components/account-selector.md)
+[Se detaljert dokumentasjon](./components/account-selector.md)
 
 #### @sb1/ffe-datepicker-react
 
 Komponenter for dato-inntasting og kalender i FFE. `DateInput` er feltet for manuell inntasting og parsing, `Calendar` viser datoer med tastaturnavigasjon, og `Datepicker` kombinerer input + kalender i én komponent.
 
-**Components:** Datepicker, getDatepickerByLabelText, DateInput, Calendar
+**Komponenter:** Datepicker, getDatepickerByLabelText, DateInput, Calendar
 
-[View detailed documentation](./components/datepicker.md)
+[Se detaljert dokumentasjon](./components/datepicker.md)
 
 #### @sb1/ffe-dropdown-react
 
 Enkel nedtrekksliste-komponent (`Dropdown`) for valg fra en liste. Brukes for korte, flate lister der brukeren skal velge ett alternativ.
 
-**Components:** Dropdown
+**Komponenter:** Dropdown
 
-[View detailed documentation](./components/dropdown.md)
+[Se detaljert dokumentasjon](./components/dropdown.md)
 
 #### @sb1/ffe-file-upload-react
 
-Upload file button with validation and list of uploaded files.
+Filopplastingsknapp med validering og liste over opplastede filer.
 
-**Components:** FileUpload, getFileContent, getUniqueFileName
+**Komponenter:** FileUpload, getFileContent, getUniqueFileName
 
-[View detailed documentation](./components/file-upload.md)
+[Se detaljert dokumentasjon](./components/file-upload.md)
 
 #### @sb1/ffe-form-react
 
 Skjemaelementer og støttekomponenter for input, valg og meldinger i FFE. Bruk disse for å bygge tilgjengelige, konsistente skjemaer med riktige etiketter, hjelpetekster og validering.
 
-**Components:** ErrorFieldMessage, InfoFieldMessage, SuccessFieldMessage, Checkbox, Input, ...
+**Komponenter:** ErrorFieldMessage, InfoFieldMessage, SuccessFieldMessage, Checkbox, Input, ...
 
-[View detailed documentation](./components/form.md)
+[Se detaljert dokumentasjon](./components/form.md)
 
 #### @sb1/ffe-searchable-dropdown-react
 
 Søkbar nedtrekksliste for store eller dynamiske lister. Tilgjengelig som enkeltvalg (`SearchableDropdown`) og flervalg (`SearchableDropdownMultiSelect`). Støtter tastaturnavigasjon, lastestatus, tom-liste og egendefinert render av elementer.
 
-**Components:** SearchableDropdown, SearchableDropdownMultiSelect
+**Komponenter:** SearchableDropdown, SearchableDropdownMultiSelect
 
-[View detailed documentation](./components/searchable-dropdown.md)
+[Se detaljert dokumentasjon](./components/searchable-dropdown.md)
 
-### Buttons & Actions
+### Knapper og handlinger
 
 #### @sb1/ffe-buttons-react
 
 Reaktive knapp-komponenter i FFE for handlinger med korrekt visuell hierarki og tilgjengelighetsstøtte. Bruk disse for å kommunisere prioritet (Action, Primary, Secondary, Tertiary), navigasjon (BackButton), utvidelse/visning (Expand/InlineExpand), grupperte knapper og snarveier.
 
-**Components:** ActionButton, BackButton, ButtonGroup, ExpandButton, InlineExpandButton, ...
+**Komponenter:** ActionButton, BackButton, ButtonGroup, ExpandButton, InlineExpandButton, ...
 
-[View detailed documentation](./components/buttons.md)
+[Se detaljert dokumentasjon](./components/buttons.md)
 
-### Layout & Structure
+### Layout og struktur
 
 #### @sb1/ffe-accordion-react
 
 Kollapsbare seksjoner for å organisere innhold som kan åpnes og lukkes. `Accordion` håndterer gruppeatferd, mens `AccordionItem` representerer hver seksjon.
 
-**Components:** Accordion, AccordionItem
+**Komponenter:** Accordion, AccordionItem
 
-[View detailed documentation](./components/accordion.md)
+[Se detaljert dokumentasjon](./components/accordion.md)
 
 #### @sb1/ffe-cards-react
 
 Kort-komponenter for presentasjon av innhold med visuelle elementer: tekstkort, ikon-kort, bilde/illustrasjon, grupperte kort og prikkede/stippled kort. `CardBase` er grunnlaget som spesialiserte kortvarianter bygger på.
 
-**Components:** CardBase, TextCard, IconCard, GroupCard, GroupCardElement, ...
+**Komponenter:** CardBase, TextCard, IconCard, GroupCard, GroupCardElement, ...
 
-[View detailed documentation](./components/cards.md)
+[Se detaljert dokumentasjon](./components/cards.md)
 
 #### @sb1/ffe-collapse-react
 
-React component for expand/collapse functionality.
+React-komponent for å vise og skjule innhold med animasjon.
 
-**Components:** Collapse
+**Komponenter:** Collapse
 
-[View detailed documentation](./components/collapse.md)
+[Se detaljert dokumentasjon](./components/collapse.md)
 
 #### @sb1/ffe-tabs-react
 
 Fanekomponenter for å organisere innhold i seksjoner der brukeren kan bytte mellom faner uten å forlate siden. `TabGroup` styrer valgt fane og tilhørende panel, `Tab` representerer hver fane.
 
-**Components:** Tab, TabGroup
+**Komponenter:** Tab, TabGroup
 
-[View detailed documentation](./components/tabs.md)
+[Se detaljert dokumentasjon](./components/tabs.md)
 
-### Feedback & Messages
+### Tilbakemelding og meldinger
 
 #### @sb1/ffe-context-message-react
 
-**Components:** ContextInfoMessage, ContextTipsMessage, ContextSuccessMessage, ContextErrorMessage
+**Komponenter:** ContextInfoMessage, ContextTipsMessage, ContextSuccessMessage, ContextErrorMessage
 
-[View detailed documentation](./components/context-message.md)
+[Se detaljert dokumentasjon](./components/context-message.md)
 
 #### @sb1/ffe-feedback-react
 
-React component for collecting user feedback with forms.
+React-komponent for å samle inn tilbakemeldinger fra brukere med skjemaer.
 
-**Components:** Feedback
+**Komponenter:** Feedback
 
-[View detailed documentation](./components/feedback.md)
+[Se detaljert dokumentasjon](./components/feedback.md)
 
 #### @sb1/ffe-message-box-react
 
-Deprecated package. Use `@sb1/ffe-messages-react` for system and context messages, headers, message lists, and message boxes. See the Messages component documentation for up-to-date APIs and examples.
+Foreldet pakke. Bruk `@sb1/ffe-messages-react` for system- og kontekstmeldinger, overskrifter, meldingslister og meldingsbokser. Se Messages-komponentdokumentasjonen for oppdaterte API-er og eksempler.
 
-**Components:** SuccessMessage, ErrorMessage, InfoMessage, TipsMessage, InfoMessageList, ...
+**Komponenter:** SuccessMessage, ErrorMessage, InfoMessage, TipsMessage, InfoMessageList, ...
 
-[View detailed documentation](./components/message-box.md)
+[Se detaljert dokumentasjon](./components/message-box.md)
 
 #### @sb1/ffe-messages-react
 
-Unified message components for communicating status, tips, and alerts. Use `SystemMessage` for global status, `ContextMessage` for contextual inline feedback (with optional header and close button), and `MessageBox` for framed messages. Compose `MessageHeader` and `MessageList`/`MessageListItem` to structure content. Choose `type` (`info`, `success`, `tips`, `warning`, `error`) to control icon, color, and accessibility roles.
+Samlede meldingskomponenter for å kommunisere status, tips og varsler. Bruk `SystemMessage` for global status, `ContextMessage` for kontekstuell inline tilbakemelding (med valgfri overskrift og lukkeknapp), og `MessageBox` for innrammede meldinger. Komponer `MessageHeader` og `MessageList`/`MessageListItem` for å strukturere innhold. Velg `type` (`info`, `success`, `tips`, `warning`, `error`) for å styre ikon, farge og tilgjengelighetsroller.
 
-**Components:** SystemMessage, ContextMessage, MessageBox, MessageHeader, MessageList, ...
+**Komponenter:** SystemMessage, ContextMessage, MessageBox, MessageHeader, MessageList, ...
 
-[View detailed documentation](./components/messages.md)
+[Se detaljert dokumentasjon](./components/messages.md)
 
 #### @sb1/ffe-modals-react
 
 Modal-komponenter for korte, fokuserte interaksjoner i webapplikasjoner. Bruk modaler når du trenger å fange brukerens oppmerksomhet for en enkel oppgave, bekreftelse eller informasjon. Ikke bruk modaler på mobil—bruk ark/sheets.
 
-**Components:** Modal, ModalHandle, ModalBlock
+**Komponenter:** Modal, ModalHandle, ModalBlock
 
-[View detailed documentation](./components/modals.md)
+[Se detaljert dokumentasjon](./components/modals.md)
 
 #### @sb1/ffe-system-message-react
 
-**Components:** SystemErrorMessage, SystemInfoMessage, SystemNewsMessage, SystemSuccessMessage
+**Komponenter:** SystemErrorMessage, SystemInfoMessage, SystemNewsMessage, SystemSuccessMessage
 
-[View detailed documentation](./components/system-message.md)
+[Se detaljert dokumentasjon](./components/system-message.md)
 
-### Navigation & Controls
+### Navigasjon og kontroller
 
 #### @sb1/ffe-chips-react
 
-Chip components for creating interactive, compact elements with optional icons.
+Chip-komponenten brukes for å lage interaktive, kompakte elementer med valgfrie ikoner.
 
-**Components:** Chip, ChipRemovable, ChipSelectable
+**Komponenter:** Chip, ChipRemovable, ChipSelectable
 
-[View detailed documentation](./components/chips.md)
+[Se detaljert dokumentasjon](./components/chips.md)
 
 #### @sb1/ffe-pagination-react
 
-Pagination component for navigating through pages of content.
+Pagineringskomponent for å navigere gjennom sider med innhold.
 
-**Components:** Pagination, usePagination
+**Komponenter:** Pagination, usePagination
 
-[View detailed documentation](./components/pagination.md)
+[Se detaljert dokumentasjon](./components/pagination.md)
 
 #### @sb1/ffe-tags-react
 
-Tag components for labeling and categorizing content with different colors and sizes.
+Tag-komponenten brukes for merking og kategorisering av innhold med ulike farger og størrelser.
 
-**Components:** Tag
+**Komponenter:** Tag
 
-[View detailed documentation](./components/tags.md)
+[Se detaljert dokumentasjon](./components/tags.md)
 
-### Data Display
+### Datavisning
 
 #### @sb1/ffe-chart-donut-react
 
-Donut chart component for visualizing data with circular graphs.
+Ringdiagram-komponenten brukes for å visualisere data med sirkeldiagrammer.
 
-**Components:** ChartDonut
+**Komponenter:** ChartDonut
 
-[View detailed documentation](./components/chart-donut.md)
+[Se detaljert dokumentasjon](./components/chart-donut.md)
 
 #### @sb1/ffe-lists-react
 
-**Components:** BulletList, BulletListItem, CheckList, CheckListItem, NumberedList, ...
+Liste-komponenter for punktlister, nummererte lister og beskrivelseslister i FFE.
 
-[View detailed documentation](./components/lists.md)
+**Komponenter:** BulletList, BulletListItem, CheckList, CheckListItem, NumberedList, ...
+
+[Se detaljert dokumentasjon](./components/lists.md)
 
 #### @sb1/ffe-progressbar-react
 
-Progress bar component for showing task completion.
+Fremdriftsindikator for å vise fremdrift i en oppgave.
 
-**Components:** Progressbar
+**Komponenter:** Progressbar
 
-[View detailed documentation](./components/progressbar.md)
+[Se detaljert dokumentasjon](./components/progressbar.md)
 
 #### @sb1/ffe-spinner-react
 
-Loading spinner component for indicating ongoing processes.
+Lasteindikator for å vise pågående prosesser.
 
-**Components:** Spinner
+**Komponenter:** Spinner
 
-[View detailed documentation](./components/spinner.md)
+[Se detaljert dokumentasjon](./components/spinner.md)
 
 #### @sb1/ffe-tables-react
 
 Komponenter for tabeller med semantiske deler (`Table`, `TableHead`, `TableBody`, `TableRow`, `TableHeaderCell`, `TableDataCell`, `TableFoot`, `TableCaption`) og utvidbare rader (`TableRowExpandable`). Brukes for strukturert visning av data i rader og kolonner.
 
-**Components:** Table, TableBody, TableDataCell, TableFoot, TableHead, ...
+**Komponenter:** Table, TableBody, TableDataCell, TableFoot, TableHead, ...
 
-[View detailed documentation](./components/tables.md)
+[Se detaljert dokumentasjon](./components/tables.md)
 
-### Visual Elements
+### Visuelle elementer
 
 #### @sb1/ffe-badge-react
 
-Badge component for displaying small labels or notification counts.
+Badge-komponenten brukes for å vise små merkelapper eller teller for notifikasjoner.
 
-**Components:** Badge
+**Komponenter:** Badge
 
-[View detailed documentation](./components/badge.md)
+[Se detaljert dokumentasjon](./components/badge.md)
 
 #### @sb1/ffe-icons-react
 
 Ikonkomponenter for å vise vektorikoner konsistent i FFE. `Icon` støtter valg av ikonnavn, størrelse og dekorasjon, og integreres med ikonsettet i `@sb1/ffe-icons`.
 
-[View detailed documentation](./components/icons.md)
+[Se detaljert dokumentasjon](./components/icons.md)
 
 #### @sb1/ffe-shapes-react
 
-Decorative shape components for visual interest.
+Dekorative form-komponenter for visuell interesse.
 
-**Components:** Wave
+**Komponenter:** Wave
 
-[View detailed documentation](./components/shapes.md)
+[Se detaljert dokumentasjon](./components/shapes.md)
 
 #### @sb1/ffe-symbols-react
 
-**Components:** Symbol
+**Komponenter:** Symbol
 
-[View detailed documentation](./components/symbols.md)
+[Se detaljert dokumentasjon](./components/symbols.md)
 
-### Core & Utilities
+### Kjerne og verktøy
 
 #### @sb1/ffe-core-react
 
-React-komponenter for typografi og grunnleggende tekstmønstre i FFE. Bruk disse komponentene når du skal rendere overskrifter, avsnitt, lenker og annet tekstinnhold med riktig visuell stil, spacing og semantikk i tråd med SpareBank 1 sitt designsystem.
+React-komponenter for typografi og grunnleggende tekstmønstre i FFE. Bruk disse komponentene når du skal rendere overskrifter, avsnitt, lenker og annet tekstinnhold med riktig visuell stil, spacing og semantikk i tråd med SpareBank 1 sitt designsystem.
 
-**Components:** BodyText, DividerLine, EmphasizedText, Heading1, Heading2, ...
+**Komponenter:** BodyText, DividerLine, EmphasizedText, Heading1, Heading2, ...
 
-[View detailed documentation](./components/core.md)
+[Se detaljert dokumentasjon](./components/core.md)
 
-## Installation Guidelines
+## Installasjonsveiledning
 
-### Installing Components
+### Installere komponenter
 
-When installing any FFE component:
+Når du installerer en FFE-komponent:
 
-1. Install the React package and all its FFE dependencies together
-2. Import the required CSS files in your main stylesheet
-3. Always import `@sb1/ffe-core/css/ffe.css` first (base styles)
+1. Installer React-pakken og alle dens FFE-avhengigheter sammen
+2. Importer de nødvendige CSS-filene i hovedstilarket ditt
+3. Importer alltid `@sb1/ffe-core/css/ffe.css` først (grunnstiler)
 
-Example:
+Eksempel:
 
 ```bash
 npm install @sb1/ffe-buttons-react @sb1/ffe-buttons @sb1/ffe-icons-react @sb1/ffe-core @sb1/ffe-icons
@@ -291,55 +293,55 @@ npm install @sb1/ffe-buttons-react @sb1/ffe-buttons @sb1/ffe-icons-react @sb1/ff
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-## Design Principles
+## Designprinsipper
 
-### Accessibility
-- All components follow WCAG 2.1 AA standards
-- Keyboard navigation is fully supported
-- Screen reader compatibility is tested
-- Proper ARIA attributes are included
+### Tilgjengelighet
+- Alle komponenter følger WCAG 2.1 AA-standarden
+- Tastaturnavigasjon er fullt støttet
+- Skjermleserkompatibilitet er testet
+- Korrekte ARIA-attributter er inkludert
 
-### Consistency
-- Components follow SpareBank 1's visual design language
-- Naming conventions are consistent across the system
-- Behavior patterns are predictable and standardized
+### Konsistens
+- Komponenter følger SpareBank 1s visuelle designspråk
+- Navnekonvensjoner er konsistente på tvers av systemet
+- Atferdsmønstre er forutsigbare og standardiserte
 
-### Best Practices
-- Use semantic HTML elements
-- Prefer composition over configuration
-- Keep components focused and single-purpose
-- Follow React best practices and patterns
+### Beste praksis
+- Bruk semantiske HTML-elementer
+- Foretrekk komposisjon fremfor konfigurasjon
+- Hold komponenter fokuserte og med ett formål
+- Følg Reacts beste praksis og mønstre
 
-## Common Patterns
+## Vanlige mønstre
 
-### Button Hierarchy
-- **ActionButton**: Highest priority call-to-action (one per page)
-- **PrimaryButton**: High priority actions
-- **SecondaryButton**: Medium priority actions
-- **TertiaryButton**: Low priority actions
+### Knapphierarki
+- **ActionButton**: Høyeste prioritet call-to-action (én per side)
+- **PrimaryButton**: Høy prioritet handlinger
+- **SecondaryButton**: Medium prioritet handlinger
+- **TertiaryButton**: Lav prioritet handlinger
 
-### Form Handling
-- Use controlled components for form inputs
-- Provide clear validation feedback
-- Show error messages inline near the input
-- Never disable buttons; show validation errors instead
+### Skjemahåndtering
+- Bruk kontrollerte komponenter for skjemainput
+- Gi tydelig valideringsfeedback
+- Vis feilmeldinger inline nær input-feltet
+- Aldri deaktiver knapper; vis valideringsfeil i stedet
 
-### Modal Usage
-- NOT for mobile applications (use sheets instead)
-- Only for short, focused interactions
-- Always provide multiple ways to close
-- Never use for multi-step processes
+### Modal-bruk
+- IKKE for mobilapplikasjoner (bruk sheets i stedet)
+- Kun for korte, fokuserte interaksjoner
+- Tilby alltid flere måter å lukke på
+- Aldri bruk for flerstegsprosesser
 
-## Quick Reference
+## Hurtigreferanse
 
-For detailed information about a specific component:
+For detaljert informasjon om en spesifikk komponent:
 
-1. Look up the component in the list above
-2. Navigate to its component documentation in the components/ folder
-3. Review installation, usage, and guidelines
+1. Finn komponenten i listen over
+2. Naviger til komponentdokumentasjonen i components/-mappen
+3. Gjennomgå installasjon, bruk og retningslinjer
 
-## Additional Resources
+## Tilleggsressurser
 
-- Official documentation: https://design.sparebank1.no/
-- GitHub repository: https://github.com/SpareBank1/designsystem
-- Component examples: https://sparebank1.github.io/designsystem
+- Offisiell dokumentasjon: https://design.sparebank1.no/
+- GitHub-repository: https://github.com/SpareBank1/designsystem
+- Komponenteksempler: https://sparebank1.github.io/designsystem

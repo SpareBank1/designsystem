@@ -1,58 +1,58 @@
 # @sb1/ffe-tabs-react
 
-## Description
+## Beskrivelse
 
 Fanekomponenter for å organisere innhold i seksjoner der brukeren kan bytte mellom faner uten å forlate siden. `TabGroup` styrer valgt fane og tilhørende panel, `Tab` representerer hver fane.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Tab`
 - `TabGroup`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-tabs-react @sb1/ffe-tabs @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-tabs`
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
 @import '@sb1/ffe-tabs/css/tabs.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Tab Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `selected` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `selected` | `boolean` | Nei | - |
 
 ### TabGroup Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `noBreak` | `boolean` | No | - |
-| `children` | `React.ReactElement<TabProps>[]` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `noBreak` | `boolean` | Nei | Applies the noBreak modifier to avoid it collapsing over multiple lines |
+| `children` | `React.ReactElement<TabProps>[]` | Ja | The children of the TabGroup component |
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -76,11 +76,11 @@ export function TabsDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

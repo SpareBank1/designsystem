@@ -1,50 +1,50 @@
 # @sb1/ffe-progressbar-react
 
-## Description
+## Beskrivelse
 
-Progress bar component for showing task completion.
+Fremdriftsindikator for å vise fremdrift i en oppgave.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Progressbar`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-progressbar-react @sb1/ffe-core @sb1/ffe-progressbar
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-core`
 - `@sb1/ffe-progressbar`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
 @import '@sb1/ffe-progressbar/css/progressbar.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Progressbar Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `success` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `success` | `boolean` | Nei | - |
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import { ProgressBar } from '@sb1/ffe-progressbar-react';
@@ -60,11 +60,11 @@ function MyComponent() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

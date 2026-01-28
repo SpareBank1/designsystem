@@ -1,37 +1,37 @@
 # @sb1/ffe-modals-react
 
-## Description
+## Beskrivelse
 
 Modal-komponenter for korte, fokuserte interaksjoner i webapplikasjoner. Bruk modaler når du trenger å fange brukerens oppmerksomhet for en enkel oppgave, bekreftelse eller informasjon. Ikke bruk modaler på mobil—bruk ark/sheets.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Modal`
 - `ModalHandle`
 - `ModalBlock`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-modals-react @sb1/ffe-icons-react @sb1/ffe-modals @sb1/ffe-icons @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-icons-react`
 - `@sb1/ffe-modals`
 - `@sb1/ffe-icons`
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -39,28 +39,28 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-modals/css/modal.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Modal Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `ariaLabelledby` | `string` | Yes | - |
-| `locale` | `Locale` | No | - |
-| `onClose` | `() => void` | No | - |
-| `portalContainer` | `Parameters<typeof createPortal>[1]` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `ariaLabelledby` | `string` | Ja | Id of modal heading |
+| `locale` | `Locale` | Nei | Locale used |
+| `onClose` | `() => void` | Nei | Called when dialog is closed |
+| `portalContainer` | `Parameters<typeof createPortal>[1]` | Nei | Container for portal, default is document.body |
 
 ### ModalHandle Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### ModalBlock Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
-## When to Use
+## Når bør du bruke
 
 Når skal komponenten brukes?
 
@@ -72,7 +72,7 @@ En modal skal alltid ha en heading nivå 2. Ikke bruk modalvinduer for funksjone
 
 For å lukke eller åpne en modal brukes `ModalHandle`. Innhold kan plasseres i en eller flere `<ModalBlock/>`.
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React, { useRef } from 'react';
@@ -88,7 +88,7 @@ export function ModalDemo() {
             <Modal
                 ref={modalRef}
                 ariaLabelledby="modal-title"
-                onClose={() => console.log('Closed')}
+                onClose={() => console.log('Lukket')}
             >
                 <h2 id="modal-title">Tittel</h2>
                 <p>Innhold i modal.</p>
@@ -103,11 +103,11 @@ export function ModalDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

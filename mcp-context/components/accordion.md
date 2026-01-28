@@ -1,27 +1,27 @@
 # @sb1/ffe-accordion-react
 
-## Description
+## Beskrivelse
 
 Kollapsbare seksjoner for å organisere innhold som kan åpnes og lukkes. `Accordion` håndterer gruppeatferd, mens `AccordionItem` representerer hver seksjon.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Accordion`
 - `AccordionItem`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-accordion-react @sb1/ffe-accordion @sb1/ffe-collapse-react @sb1/ffe-icons-react @sb1/ffe-core @sb1/ffe-icons
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-accordion`
 - `@sb1/ffe-collapse-react`
@@ -29,9 +29,9 @@ This package depends on:
 - `@sb1/ffe-core`
 - `@sb1/ffe-icons`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -40,29 +40,29 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Accordion Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `headingLevel` | `1 | 2 | 3 | 4 | 5 | 6` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `headingLevel` | `1 | 2 | 3 | 4 | 5 | 6` | Ja | - |
 
 ### AccordionItem Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `heading` | `NonNullable<React.ReactNode>` | Yes | - |
-| `children` | `NonNullable<React.ReactNode>` | Yes | - |
-| `defaultOpen` | `boolean` | No | - |
-| `isOpen` | `boolean` | No | - |
-| `onToggleOpen` | `(isOpen: boolean) => void` | No | - |
-| `ariaLabel` | `string` | No | - |
-| `noPadding` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `heading` | `NonNullable<React.ReactNode>` | Ja | The heading |
+| `children` | `NonNullable<React.ReactNode>` | Ja | The content to appear when expanded |
+| `defaultOpen` | `boolean` | Nei | Should it be open by default |
+| `isOpen` | `boolean` | Nei | Is the item open or collapsed? Used for overriding default behaviour |
+| `onToggleOpen` | `(isOpen: boolean) => void` | Nei | Callback when the item is open/closed |
+| `ariaLabel` | `string` | Nei | aria-label for the button |
+| `noPadding` | `boolean` | Nei | Ingen padding i body-elementet hvis man ønsker egen styling |
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -86,11 +86,11 @@ export function AccordionDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

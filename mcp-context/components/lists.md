@@ -1,12 +1,12 @@
 # @sb1/ffe-lists-react
 
-## Description
+## Beskrivelse
 
-React component library for SpareBank 1 Design System.
+Liste-komponenter for punktlister, nummererte lister og beskrivelseslister i FFE.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `BulletList`
 - `BulletListItem`
@@ -23,26 +23,26 @@ This package exports the following components:
 - `DetailListCard`
 - `DetailListCardItem`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-lists-react @sb1/ffe-icons-react @sb1/ffe-lists @sb1/ffe-icons @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-icons-react`
 - `@sb1/ffe-lists`
 - `@sb1/ffe-icons`
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -50,89 +50,88 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-lists/css/lists.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### BulletList Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `condensed` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `condensed` | `boolean` | Nei | Condensed modifier. Use in condensed designs |
 
 ### BulletListItem Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### CheckList Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `columns` | `1 | 2 | '1' | '2'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `columns` | `1 | 2 | '1' | '2'` | Nei | - |
 
 ### CheckListItem Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `isCross` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `isCross` | `boolean` | Nei | If true, render a red cross instead of a green checkmark |
 
 ### NumberedList Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `condensed` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `condensed` | `boolean` | Nei | Condensed modifier. Use in condensed designs |
 
 ### NumberedListItem Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### StylizedNumberedList Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### StylizedNumberedListItem Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### DescriptionList Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `size` | `'md' | 'lg'` | No | - |
-| `horizontal` | `boolean` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `size` | `'md' | 'lg'` | Nei | - |
+| `horizontal` | `boolean` | Nei | Displays dts and dds inline |
 
 ### DescriptionListMultiCol Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### DescriptionListTerm Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### DescriptionListDescription Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### DetailListCard Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `appearance` | `'default' | 'accent'` | No | - |
-| `bgColor` | `BackgroundColor` | No | - |
-| `bgDarkmodeColor` | `never` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `appearance` | `'default' | 'accent'` | Nei | Avgjør utseende i kontekst accent. Hvis man ønsker et blått utseende i kontekst accent, velg appearance: 'accent' |
+| `bgColor` | `BackgroundColor` | Nei | Property has new values that work with dark and accent mode as part of the Semantic Color update Possible values: `primary` `secondary` `tertiary` [Read more in the upgrade guide](https://sparebank1.github.io/designsystem/?path=/docs/introduksjon-changelog--docs#2025---februar---semantiske-farger) |
 
 ### DetailListCardItem Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `label` | `React.ReactNode` | Yes | - |
-| `value` | `React.ReactNode` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `label` | `React.ReactNode` | Ja | Content of the label / left column |
+| `value` | `React.ReactNode` | Ja | Content of the value / right column |
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

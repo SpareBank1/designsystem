@@ -1,12 +1,12 @@
 # @sb1/ffe-buttons-react
 
-## Description
+## Beskrivelse
 
 Reaktive knapp-komponenter i FFE for handlinger med korrekt visuell hierarki og tilgjengelighetsstøtte. Bruk disse for å kommunisere prioritet (Action, Primary, Secondary, Tertiary), navigasjon (BackButton), utvidelse/visning (Expand/InlineExpand), grupperte knapper og snarveier.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `ActionButton`
 - `BackButton`
@@ -19,26 +19,26 @@ This package exports the following components:
 - `TaskButton`
 - `TertiaryButton`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-buttons-react @sb1/ffe-buttons @sb1/ffe-icons-react @sb1/ffe-core @sb1/ffe-icons
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-buttons`
 - `@sb1/ffe-icons-react`
 - `@sb1/ffe-core`
 - `@sb1/ffe-icons`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -46,63 +46,63 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### ActionButton Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### BackButton Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### ButtonGroup Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `thin` | `boolean` | No | - |
-| `inline` | `boolean` | No | - |
-| `ariaLabel` | `string` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `thin` | `boolean` | Nei | Applies the thin modifier to remove margins |
+| `inline` | `boolean` | Nei | Applies the inline modifier to make all child buttons inline |
+| `ariaLabel` | `string` | Nei | Label for the group of buttons for users with screen reader |
 
 ### ExpandButton Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `closeLabel` | `string` | No | - |
-| `isExpanded` | `boolean` | Yes | - |
-| `size` | `'sm' | 'md' | 'lg'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `closeLabel` | `string` | Nei | An accessible label for the close-button, only shown in the "isExpanded" state |
+| `isExpanded` | `boolean` | Ja | When true the component will render a circle with an X indicating whatever is controlled is in an expanded state. |
+| `size` | `'sm' | 'md' | 'lg'` | Nei | - |
 
 ### InlineExpandButton Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `isExpanded` | `boolean` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `isExpanded` | `boolean` | Ja | When true it will indicate the button is in its open state |
 
 ### PrimaryButton Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### SecondaryButton Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### ShortcutButton Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### TaskButton Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `icon` | `ReactElement` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `icon` | `ReactElement` | Ja | icon element shown to the left of the label |
 
 ### TertiaryButton Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
-## When to Use
+## Når bør du bruke
 
 Bruk av knapper
 
@@ -133,7 +133,7 @@ Gjør sånn:
     <CheckListItem>Ha så kort tekst som mulig</CheckListItem>
 </CheckList>
 
-## When NOT to Use
+## Når bør du ikke bruke
 
 Ikke sånn:
 
@@ -153,7 +153,7 @@ Ikke sånn:
     </CheckListItem>
 </CheckList>
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import React from 'react';
@@ -226,11 +226,11 @@ export function ButtonsDemo() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

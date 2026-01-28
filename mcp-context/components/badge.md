@@ -1,51 +1,51 @@
 # @sb1/ffe-badge-react
 
-## Description
+## Beskrivelse
 
-Badge component for displaying small labels or notification counts.
+Badge-komponenten brukes for å vise små merkelapper eller teller for notifikasjoner.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Badge`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-badge-react @sb1/ffe-badge @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-badge`
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
 @import '@sb1/ffe-badge/css/badge.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Badge Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `className` | `string` | No | - |
-| `children` | `React.ReactNode` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `className` | `string` | Nei | - |
+| `children` | `React.ReactNode` | Ja | - |
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import { Badge } from '@sb1/ffe-badge-react';
@@ -64,7 +64,7 @@ function MyComponent() {
 import { Badge } from '@sb1/ffe-badge-react';
 
 function MyComponent() {
-    return <Badge className="my-custom-badge">Custom badge</Badge>;
+    return <Badge className="my-custom-badge">Tilpasset badge</Badge>;
 }
 ```
 
@@ -72,11 +72,11 @@ function MyComponent() {
 @import '~@sb1/ffe-badge/css/badge.css';
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

@@ -1,16 +1,22 @@
-## Install
+# @sb1/ffe-skeleton-react
+
+## Beskrivelse
+
+Skjelett-komponenter for å vise plassholdere mens innhold laster.
+
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-skeleton-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on skeleton usage is available at https://design.sparebank1.no/komponenter/skeleton/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/skeleton/.
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -18,6 +24,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

@@ -1,54 +1,54 @@
 # @sb1/ffe-shapes-react
 
-## Description
+## Beskrivelse
 
-Decorative shape components for visual interest.
+Dekorative form-komponenter for visuell interesse.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Wave`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-shapes-react @sb1/ffe-shapes @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-shapes`
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
 @import '@sb1/ffe-shapes/css/shapes.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### Wave Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `position` | `string` | No | - |
-| `flip` | `boolean` | No | - |
-| `bgColor` | `Color` | No | - |
-| `className` | `string` | No | - |
-| `children` | `React.ReactNode` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `position` | `string` | Nei | Sets the mask-position property, setting a px/rem value will move the starting position of the wave |
+| `flip` | `boolean` | Nei | Rotate the wave 180 degrees : |
+| `bgColor` | `Color` | Nei | Set the background color of the wave container. |
+| `className` | `string` | Nei | Adds additional class |
+| `children` | `React.ReactNode` | Nei | - |
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import { Circle, Triangle, Square } from '@sb1/ffe-shapes-react';
@@ -64,11 +64,11 @@ function MyComponent() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

@@ -1,12 +1,12 @@
 # @sb1/ffe-message-box-react
 
-## Description
+## Beskrivelse
 
-Deprecated package. Use `@sb1/ffe-messages-react` for system and context messages, headers, message lists, and message boxes. See the Messages component documentation for up-to-date APIs and examples.
+Foreldet pakke. Bruk `@sb1/ffe-messages-react` for system- og kontekstmeldinger, overskrifter, meldingslister og meldingsbokser. Se Messages-komponentdokumentasjonen for oppdaterte API-er og eksempler.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `SuccessMessage`
 - `ErrorMessage`
@@ -15,76 +15,76 @@ This package exports the following components:
 - `InfoMessageList`
 - `InfoMessageListItem`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-message-box-react @sb1/ffe-icons-react @sb1/ffe-message-box @sb1/ffe-icons @sb1/ffe-core
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-icons-react`
 - `@sb1/ffe-message-box`
 - `@sb1/ffe-icons`
 - `@sb1/ffe-core`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### SuccessMessage Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `locale` | `'nb' | 'nn' | 'en'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `locale` | `'nb' | 'nn' | 'en'` | Nei | - |
 
 ### ErrorMessage Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `alert` | `boolean` | No | - |
-| `locale` | `'nb' | 'nn' | 'en'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `alert` | `boolean` | Nei | When false, role is not set to alert, avoids message from being read up immediately after page load. Default value is true. |
+| `locale` | `'nb' | 'nn' | 'en'` | Nei | - |
 
 ### InfoMessage Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `locale` | `'nb' | 'nn' | 'en'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `locale` | `'nb' | 'nn' | 'en'` | Nei | - |
 
 ### TipsMessage Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `locale` | `'nb' | 'nn' | 'en'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `locale` | `'nb' | 'nn' | 'en'` | Nei | - |
 
 ### InfoMessageList Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `children` | `NonNullable<React.ReactNode>` | Yes | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `children` | `NonNullable<React.ReactNode>` | Ja | - |
 
 ### InfoMessageListItem Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

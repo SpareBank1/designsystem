@@ -1,25 +1,23 @@
 # @sb1/ffe-feedback-react
 
-## Description
-
-React component for collecting user feedback with forms.
+## Beskrivelse
 
 React-komponent for å samle inn tilbakemeldinger fra brukere med skjemaer.
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-feedback-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation is not yet available, but will be added to https://design.sparebank1.no/komponenter.
+Full dokumentasjon er ennå ikke tilgjengelig, men vil bli lagt til på https://design.sparebank1.no/komponenter.
 
-This package depends on `@sb1/ffe-buttons-react`, `@sb1/ffe-icons-react` and `@sb1/ffe-form-react`.
-Make sure you import the less-files.
+Denne pakken er avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-icons-react` og `@sb1/ffe-form-react`.
+Husk å importere less-filene.
 
-## Examples
+## Eksempler
 
 ```tsx
 import { Feedback } from '@sb1/ffe-feedback-react';
@@ -42,9 +40,9 @@ function MyComponent() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -52,6 +50,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

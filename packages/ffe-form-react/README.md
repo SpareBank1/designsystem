@@ -1,25 +1,25 @@
 # @sb1/ffe-form-react
 
-React module for using and creating FFE form elements.
+React-modul for å bruke og lage FFE-skjemaelementer.
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-form-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on form usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/skjemaelementer/.
 
-This package depends on `@sb1/ffe-icons-react`, `@sb1/ffe-collapse-react` and `@sb1/ffe-form-react`.
-Make sure you import the less-files.
+Denne pakken er avhengig av `@sb1/ffe-icons-react`, `@sb1/ffe-collapse-react` og `@sb1/ffe-form-react`.
+Husk å importere less-filene.
 
-## Description
+## Beskrivelse
 
 Skjemaelementer og støttekomponenter for input, valg og meldinger i FFE. Bruk disse for å bygge tilgjengelige, konsistente skjemaer med riktige etiketter, hjelpetekster og validering.
 
-## Examples
+## Eksempler
 
 ```tsx
 import React from 'react';
@@ -115,9 +115,9 @@ export function FormDemo() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -125,6 +125,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

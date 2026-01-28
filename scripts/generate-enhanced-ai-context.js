@@ -76,38 +76,110 @@ function extractTypeInfo(tsxContent, componentName) {
         deprecated: false,
     };
 
-    // Extract interface or type for component props
-    const propsPattern = new RegExp(
-        `(?:export\\s+)?(?:interface|type)\\s+${componentName}(?:Props|Prop)[^{]*{([^}]+)}`,
-        's',
+    // Find the start of the interface/type definition
+    const interfacePattern = new RegExp(
+        `(?:export\\s+)?(?:interface|type)\\s+${componentName}(?:Props|Prop)`,
     );
-    const propsMatch = tsxContent.match(propsPattern);
+    const interfaceMatch = tsxContent.match(interfacePattern);
 
-    if (propsMatch) {
-        info.interface = propsMatch[0];
+    if (interfaceMatch) {
+        const startIndex = interfaceMatch.index + interfaceMatch[0].length;
+        // Find the opening brace
+        const braceStart = tsxContent.indexOf('{', startIndex);
+        if (braceStart !== -1) {
+            // Balance braces to find the closing one
+            let depth = 1;
+            let i = braceStart + 1;
+            while (i < tsxContent.length && depth > 0) {
+                if (tsxContent[i] === '{') depth++;
+                else if (tsxContent[i] === '}') depth--;
+                i++;
+            }
+            const propsText = tsxContent.slice(braceStart + 1, i - 1);
+            info.interface = tsxContent.slice(interfaceMatch.index, i);
 
-        // Extract individual props with comments
-        const propsText = propsMatch[1];
-        const propLines = propsText.split('\n').filter(line => {
-            const t = line.trim();
-            if (!t) return false;
-            // skip pure comment lines
-            if (t.startsWith('/**') || t.startsWith('*') || t.startsWith('*/'))
-                return false;
-            // only consider lines that look like TS property declarations
-            return /:\s*/.test(t) && /^\w/.test(t);
-        });
+            // Extract individual props with their JSDoc comments
+            // First, split into prop chunks by finding top-level semicolons
+            const props = [];
+            let currentProp = '';
+            let braceDepth = 0;
+            let parenDepth = 0;
+            let angleDepth = 0;
 
-        for (const line of propLines) {
-            const propMatch = line.match(/^\s*(\w+)(\??)\s*:\s*([^;]+)/);
-            if (propMatch) {
-                const [, name, optional, type] = propMatch;
-                info.props.push({
-                    name,
-                    type: type.trim(),
-                    optional: !!optional,
-                    description: '',
-                });
+            for (let j = 0; j < propsText.length; j++) {
+                const char = propsText[j];
+                currentProp += char;
+
+                if (char === '{') braceDepth++;
+                else if (char === '}') braceDepth--;
+                else if (char === '(') parenDepth++;
+                else if (char === ')') parenDepth--;
+                else if (char === '<') angleDepth++;
+                else if (char === '>') angleDepth--;
+                else if (char === ';' && braceDepth === 0 && parenDepth === 0 && angleDepth <= 0) {
+                    props.push(currentProp.trim());
+                    currentProp = '';
+                }
+            }
+            if (currentProp.trim()) {
+                props.push(currentProp.trim());
+            }
+
+            // Now process each prop
+            let currentJsDoc = '';
+            for (const propChunk of props) {
+                // Extract JSDoc if present
+                const jsDocMatch = propChunk.match(/\/\*\*([\s\S]*?)\*\//);
+                if (jsDocMatch) {
+                    currentJsDoc = jsDocMatch[1]
+                        .split('\n')
+                        .map(l => l.replace(/^\s*\*\s?/, '').trim())
+                        .filter(l => l && !l.startsWith('@deprecated'))
+                        .join(' ')
+                        .trim();
+
+                    // Skip if deprecated
+                    if (jsDocMatch[1].includes('@deprecated')) {
+                        currentJsDoc = '';
+                        continue;
+                    }
+                }
+
+                // Extract the prop declaration (after JSDoc)
+                const propPart = propChunk.replace(/\/\*\*[\s\S]*?\*\//, '').trim();
+                if (!propPart) continue;
+
+                // Match property name and type
+                const propMatch = propPart.match(/^['"]?([a-zA-Z_][\w-]*)['"]?(\??)\s*:\s*([\s\S]+?);?$/);
+                if (propMatch) {
+                    let [, name, optional, type] = propMatch;
+                    type = type.trim();
+
+                    // Clean up type - remove newlines and extra whitespace
+                    type = type.replace(/\s+/g, ' ').trim();
+
+                    // Simplify complex types for display
+                    if (type.includes('{') || type.length > 60) {
+                        // Count braces to determine if it's an object type
+                        if (type.startsWith('{')) {
+                            type = 'object';
+                        } else if (type.includes('<{') || type.includes('ComponentType')) {
+                            type = 'React.ComponentType';
+                        } else if (type.includes('=>')) {
+                            type = 'function';
+                        } else {
+                            type = type.substring(0, 57) + '...';
+                        }
+                    }
+
+                    info.props.push({
+                        name,
+                        type,
+                        optional: !!optional,
+                        description: currentJsDoc,
+                    });
+                }
+                currentJsDoc = '';
             }
         }
     }
@@ -202,9 +274,9 @@ function extractUsageInfo(mdxContent, readmeContent) {
 
     // README: Source of truth for description and examples
     if (readmeContent) {
-        // Try explicit Description section
+        // Try explicit Beskrivelse section (Norwegian)
         const descSectionMatch = readmeContent.match(
-            /^##\s+Description\n([\s\S]*?)(?=^##\s+|\Z)/m,
+            /^##\s+Beskrivelse\n([\s\S]*?)(?=^##\s+|\Z)/m,
         );
         if (descSectionMatch) {
             const firstParagraph = descSectionMatch[1]
@@ -217,16 +289,16 @@ function extractUsageInfo(mdxContent, readmeContent) {
                     .trim();
             }
         }
-        // Description must come from README's `## Description` section only
+        // Description must come from README's `## Beskrivelse` section only
 
-        // Extract Examples: prefer explicit Examples section, else code blocks under Usage
+        // Extract Examples: prefer explicit Eksempler section, else code blocks under Bruk
         const examplesSectionMatch = readmeContent.match(
-            /^##\s+Examples\n([\s\S]*?)(?=^##\s+|\Z)/m,
+            /^##\s+Eksempler\n([\s\S]*?)(?=^##\s+|\Z)/m,
         );
         const sourceForExamples = examplesSectionMatch
             ? examplesSectionMatch[1]
             : readmeContent.match(
-                  /^##\s+Usage\n([\s\S]*?)(?=^##\s+|\Z)/m,
+                  /^##\s+Bruk\n([\s\S]*?)(?=^##\s+|\Z)/m,
               )?.[1] || '';
         if (sourceForExamples) {
             const codeBlocks = [
@@ -240,7 +312,7 @@ function extractUsageInfo(mdxContent, readmeContent) {
                 })
                 .join('');
             if (codeBlocks) {
-                manualExamples = `## Manual Examples (from README)${codeBlocks}\n\n`;
+                manualExamples = `## Eksempler (fra README)${codeBlocks}\n\n`;
             }
         }
     }
@@ -394,22 +466,22 @@ function generateAiContext(packageDir) {
 
     // Build the AI context document
     let content = `# ${packageName}\n\n`;
-    content += `## Description\n\n${description || 'React component library for SpareBank 1 Design System.'}\n\n`;
+    content += `## Beskrivelse\n\n${description || 'React-komponentbibliotek for SpareBank 1 sitt designsystem.'}\n\n`;
 
     if (mainComponentsFiltered.length > 0) {
-        content += `## Components\n\nThis package exports the following components:\n\n`;
+        content += `## Komponenter\n\nDenne pakken eksporterer følgende komponenter:\n\n`;
         mainComponentsFiltered.forEach(comp => {
             content += `- \`${comp}\`\n`;
         });
         content += '\n';
     }
 
-    content += `## Installation\n\n`;
-    content += `Install the package and all its dependencies:\n\n`;
+    content += `## Installasjon\n\n`;
+    content += `Installer pakken og alle dens avhengigheter:\n\n`;
     content += `\`\`\`bash\n${installCmd}\n\`\`\`\n\n`;
 
     if (dependencies.length > 0) {
-        content += `### Dependencies\n\nThis package depends on:\n\n`;
+        content += `### Avhengigheter\n\nDenne pakken er avhengig av:\n\n`;
         dependencies.forEach(dep => {
             content += `- \`${dep}\`\n`;
         });
@@ -417,10 +489,10 @@ function generateAiContext(packageDir) {
     }
 
     if (cssImports) {
-        content += `## CSS Import\n\n`;
-        content += `In your project's main CSS file, import the required styles:\n\n`;
+        content += `## CSS-import\n\n`;
+        content += `I prosjektets hoved-CSS-fil, importer de nødvendige stilene:\n\n`;
         content += `\`\`\`css\n${cssImports}\n\`\`\`\n\n`;
-        content += `Note: Make sure to import \`@sb1/ffe-core/css/ffe.css\` first as it contains base styles.\n\n`;
+        content += `Merk: Sørg for å importere \`@sb1/ffe-core/css/ffe.css\` først, da den inneholder grunnleggende stiler.\n\n`;
     }
 
     // Basic Usage section removed
@@ -436,33 +508,33 @@ function generateAiContext(packageDir) {
         return { name, info };
     });
     if (apiList.length > 0) {
-        content += `## API Reference\n\n`;
+        content += `## API-referanse\n\n`;
         for (const { name, info } of apiList) {
             content += `### ${name} Props\n\n`;
             if (info && info.jsdoc && !/@deprecated/i.test(info.jsdoc)) {
                 content += `${info.jsdoc}\n\n`;
             }
             if (info && info.props.length > 0) {
-                content += `| Prop | Type | Required | Description |\n`;
-                content += `|------|------|----------|-------------|\n`;
+                content += `| Prop | Type | Påkrevd | Beskrivelse |\n`;
+                content += `|------|------|---------|-------------|\n`;
                 for (const prop of info.props) {
-                    const required = prop.optional ? 'No' : 'Yes';
+                    const required = prop.optional ? 'Nei' : 'Ja';
                     const desc = prop.description || '-';
                     content += `| \`${prop.name}\` | \`${prop.type}\` | ${required} | ${desc} |\n`;
                 }
                 content += '\n';
             } else {
-                content += `No component-specific props beyond native HTML attributes.\n\n`;
+                content += `Ingen komponentspesifikke props utover native HTML-attributter.\n\n`;
             }
         }
     }
 
     if (whenToUse) {
-        content += `## When to Use\n\n${whenToUse.replace(/^#+\s*/gm, '').trim()}\n\n`;
+        content += `## Når bør du bruke\n\n${whenToUse.replace(/^#+\s*/gm, '').trim()}\n\n`;
     }
 
     if (whenNotToUse) {
-        content += `## When NOT to Use\n\n${whenNotToUse.replace(/^#+\s*/gm, '').trim()}\n\n`;
+        content += `## Når bør du ikke bruke\n\n${whenNotToUse.replace(/^#+\s*/gm, '').trim()}\n\n`;
     }
 
     // Append manual examples extracted from README at the bottom
@@ -470,12 +542,12 @@ function generateAiContext(packageDir) {
         content += `${manualExamples}`;
     }
 
-    content += `## Documentation\n\n`;
-    content += `Full documentation is available at https://design.sparebank1.no/\n\n`;
+    content += `## Dokumentasjon\n\n`;
+    content += `Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/\n\n`;
 
-    content += `## Additional Context\n\n`;
-    content += `This is part of the SpareBank 1 FFE (Felles Front End) design system.\n`;
-    content += `All components follow SpareBank 1's design guidelines and accessibility standards.\n`;
+    content += `## Tilleggskontekst\n\n`;
+    content += `Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.\n`;
+    content += `Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.\n`;
 
     return content;
 }
@@ -554,28 +626,28 @@ reactPackages.forEach(packageDir => {
 // Generate root ai-context.md
 console.log('\nGenerating root AI context...');
 
-let rootContent = `# SpareBank 1 FFE (Felles Front End) Design System - AI Context\n\n`;
-rootContent += `## Overview\n\n`;
-rootContent += `The FFE Design System is SpareBank 1's comprehensive component library for building consistent, accessible web applications. `;
-rootContent += `It provides React components with corresponding CSS styles following SpareBank 1's design guidelines.\n\n`;
+let rootContent = `# SpareBank 1 FFE (Felles Front End) Designsystem - AI-kontekst\n\n`;
+rootContent += `## Oversikt\n\n`;
+rootContent += `FFE-designsystemet er SpareBank 1s omfattende komponentbibliotek for å bygge konsistente, tilgjengelige webapplikasjoner. `;
+rootContent += `Det tilbyr React-komponenter med tilhørende CSS-stiler som følger SpareBank 1s designretningslinjer.\n\n`;
 
-rootContent += `## Architecture\n\n`;
-rootContent += `The design system is organized into packages:\n\n`;
-rootContent += `- **React packages** (ending in \`-react\`): Contain React components\n`;
-rootContent += `- **CSS packages**: Contain standalone CSS (some React packages include their own CSS)\n`;
-rootContent += `- **Core packages**: Provide foundational styles, icons, and utilities\n\n`;
+rootContent += `## Arkitektur\n\n`;
+rootContent += `Designsystemet er organisert i pakker:\n\n`;
+rootContent += `- **React-pakker** (slutter med \`-react\`): Inneholder React-komponenter\n`;
+rootContent += `- **CSS-pakker**: Inneholder frittstående CSS (noen React-pakker inkluderer egen CSS)\n`;
+rootContent += `- **Kjernepakker**: Tilbyr grunnleggende stiler, ikoner og verktøy\n\n`;
 
-rootContent += `### Key Packages\n\n`;
-rootContent += `- \`@sb1/ffe-core\` and \`@sb1/ffe-core-react\`: Base styles, typography, spacing\n`;
-rootContent += `- \`@sb1/ffe-icons\` and \`@sb1/ffe-icons-react\`: Icon library\n\n`;
-rootContent += `**Note:** The grid package (\`@sb1/ffe-grid-react\`) is deprecated and should not be used. Use modern CSS Grid or Flexbox instead.\n\n`;
+rootContent += `### Viktige pakker\n\n`;
+rootContent += `- \`@sb1/ffe-core\` og \`@sb1/ffe-core-react\`: Grunnstiler, typografi, spacing\n`;
+rootContent += `- \`@sb1/ffe-icons\` og \`@sb1/ffe-icons-react\`: Ikonbibliotek\n\n`;
+rootContent += `**Merk:** Grid-pakken (\`@sb1/ffe-grid-react\`) er foreldet og bør ikke brukes. Bruk moderne CSS Grid eller Flexbox i stedet.\n\n`;
 
-rootContent += `## Component Library\n\n`;
-rootContent += `Below is a complete list of all React component packages in the FFE design system.\n\n`;
+rootContent += `## Komponentbibliotek\n\n`;
+rootContent += `Nedenfor er en komplett liste over alle React-komponentpakker i FFE-designsystemet.\n\n`;
 
 // Group packages by category
 const categories = {
-    'Form & Input': [
+    'Skjema og input': [
         'form',
         'datepicker',
         'dropdown',
@@ -583,9 +655,9 @@ const categories = {
         'file-upload',
         'account-selector',
     ],
-    'Buttons & Actions': ['buttons'],
-    'Layout & Structure': ['cards', 'accordion', 'collapse', 'tabs'],
-    'Feedback & Messages': [
+    'Knapper og handlinger': ['buttons'],
+    'Layout og struktur': ['cards', 'accordion', 'collapse', 'tabs'],
+    'Tilbakemelding og meldinger': [
         'messages',
         'message-box',
         'context-message',
@@ -593,16 +665,16 @@ const categories = {
         'feedback',
         'modals',
     ],
-    'Navigation & Controls': ['pagination', 'chips', 'tags'],
-    'Data Display': [
+    'Navigasjon og kontroller': ['pagination', 'chips', 'tags'],
+    'Datavisning': [
         'tables',
         'lists',
         'progressbar',
         'spinner',
         'chart-donut',
     ],
-    'Visual Elements': ['badge', 'icons', 'shapes', 'symbols'],
-    'Core & Utilities': ['core', 'formatters'],
+    'Visuelle elementer': ['badge', 'icons', 'shapes', 'symbols'],
+    'Kjerne og verktøy': ['core', 'formatters'],
 };
 
 Object.entries(categories).forEach(([category, keywords]) => {
@@ -618,52 +690,52 @@ Object.entries(categories).forEach(([category, keywords]) => {
             rootContent += `${pkg.description}\n\n`;
         }
         if (pkg.components.length > 0) {
-            rootContent += `**Components:** ${pkg.components.slice(0, 5).join(', ')}${pkg.components.length > 5 ? ', ...' : ''}\n\n`;
+            rootContent += `**Komponenter:** ${pkg.components.slice(0, 5).join(', ')}${pkg.components.length > 5 ? ', ...' : ''}\n\n`;
         }
         const shortName = pkg.name
             .replace('@sb1/', '')
             .replace('ffe-', '')
             .replace('-react', '');
-        rootContent += `[View detailed documentation](./components/${shortName}.md)\n\n`;
+        rootContent += `[Se detaljert dokumentasjon](./components/${shortName}.md)\n\n`;
     });
 });
 
-rootContent += `## Installation Guidelines\n\n`;
-rootContent += `### Installing Components\n\n`;
-rootContent += `When installing any FFE component:\n\n`;
-rootContent += `1. Install the React package and all its FFE dependencies together\n`;
-rootContent += `2. Import the required CSS files in your main stylesheet\n`;
-rootContent += `3. Always import \`@sb1/ffe-core/css/ffe.css\` first (base styles)\n\n`;
+rootContent += `## Installasjonsveiledning\n\n`;
+rootContent += `### Installere komponenter\n\n`;
+rootContent += `Når du installerer en FFE-komponent:\n\n`;
+rootContent += `1. Installer React-pakken og alle dens FFE-avhengigheter sammen\n`;
+rootContent += `2. Importer de nødvendige CSS-filene i hovedstilarket ditt\n`;
+rootContent += `3. Importer alltid \`@sb1/ffe-core/css/ffe.css\` først (grunnstiler)\n\n`;
 
-rootContent += `Example:\n\n`;
+rootContent += `Eksempel:\n\n`;
 rootContent += `\`\`\`bash\nnpm install @sb1/ffe-buttons-react @sb1/ffe-buttons @sb1/ffe-icons-react @sb1/ffe-core @sb1/ffe-icons\n\`\`\`\n\n`;
 
 rootContent += `\`\`\`css\n@import '@sb1/ffe-core/css/ffe.css';\n@import '@sb1/ffe-buttons/css/buttons.css';\n@import '@sb1/ffe-icons/css/ffe-icons.css';\n\`\`\`\n\n`;
 
-rootContent += `## Design Principles\n\n`;
-rootContent += `### Accessibility\n- All components follow WCAG 2.1 AA standards\n- Keyboard navigation is fully supported\n- Screen reader compatibility is tested\n- Proper ARIA attributes are included\n\n`;
+rootContent += `## Designprinsipper\n\n`;
+rootContent += `### Tilgjengelighet\n- Alle komponenter følger WCAG 2.1 AA-standarden\n- Tastaturnavigasjon er fullt støttet\n- Skjermleserkompatibilitet er testet\n- Korrekte ARIA-attributter er inkludert\n\n`;
 
-rootContent += `### Consistency\n- Components follow SpareBank 1's visual design language\n- Naming conventions are consistent across the system\n- Behavior patterns are predictable and standardized\n\n`;
+rootContent += `### Konsistens\n- Komponenter følger SpareBank 1s visuelle designspråk\n- Navnekonvensjoner er konsistente på tvers av systemet\n- Atferdsmønstre er forutsigbare og standardiserte\n\n`;
 
-rootContent += `### Best Practices\n- Use semantic HTML elements\n- Prefer composition over configuration\n- Keep components focused and single-purpose\n- Follow React best practices and patterns\n\n`;
+rootContent += `### Beste praksis\n- Bruk semantiske HTML-elementer\n- Foretrekk komposisjon fremfor konfigurasjon\n- Hold komponenter fokuserte og med ett formål\n- Følg Reacts beste praksis og mønstre\n\n`;
 
-rootContent += `## Common Patterns\n\n`;
-rootContent += `### Button Hierarchy\n- **ActionButton**: Highest priority call-to-action (one per page)\n- **PrimaryButton**: High priority actions\n- **SecondaryButton**: Medium priority actions\n- **TertiaryButton**: Low priority actions\n\n`;
+rootContent += `## Vanlige mønstre\n\n`;
+rootContent += `### Knapphierarki\n- **ActionButton**: Høyeste prioritet call-to-action (én per side)\n- **PrimaryButton**: Høy prioritet handlinger\n- **SecondaryButton**: Medium prioritet handlinger\n- **TertiaryButton**: Lav prioritet handlinger\n\n`;
 
-rootContent += `### Form Handling\n- Use controlled components for form inputs\n- Provide clear validation feedback\n- Show error messages inline near the input\n- Never disable buttons; show validation errors instead\n\n`;
+rootContent += `### Skjemahåndtering\n- Bruk kontrollerte komponenter for skjemainput\n- Gi tydelig valideringsfeedback\n- Vis feilmeldinger inline nær input-feltet\n- Aldri deaktiver knapper; vis valideringsfeil i stedet\n\n`;
 
-rootContent += `### Modal Usage\n- NOT for mobile applications (use sheets instead)\n- Only for short, focused interactions\n- Always provide multiple ways to close\n- Never use for multi-step processes\n\n`;
+rootContent += `### Modal-bruk\n- IKKE for mobilapplikasjoner (bruk sheets i stedet)\n- Kun for korte, fokuserte interaksjoner\n- Tilby alltid flere måter å lukke på\n- Aldri bruk for flerstegsprosesser\n\n`;
 
-rootContent += `## Quick Reference\n\n`;
-rootContent += `For detailed information about a specific component:\n\n`;
-rootContent += `1. Look up the component in the list above\n`;
-rootContent += `2. Navigate to its component documentation in the components/ folder\n`;
-rootContent += `3. Review installation, usage, and guidelines\n\n`;
+rootContent += `## Hurtigreferanse\n\n`;
+rootContent += `For detaljert informasjon om en spesifikk komponent:\n\n`;
+rootContent += `1. Finn komponenten i listen over\n`;
+rootContent += `2. Naviger til komponentdokumentasjonen i components/-mappen\n`;
+rootContent += `3. Gjennomgå installasjon, bruk og retningslinjer\n\n`;
 
-rootContent += `## Additional Resources\n\n`;
-rootContent += `- Official documentation: https://design.sparebank1.no/\n`;
-rootContent += `- GitHub repository: https://github.com/SpareBank1/designsystem\n`;
-rootContent += `- Component examples: https://sparebank1.github.io/designsystem\n`;
+rootContent += `## Tilleggsressurser\n\n`;
+rootContent += `- Offisiell dokumentasjon: https://design.sparebank1.no/\n`;
+rootContent += `- GitHub-repository: https://github.com/SpareBank1/designsystem\n`;
+rootContent += `- Komponenteksempler: https://sparebank1.github.io/designsystem\n`;
 
 const rootOutputPath = path.join(mcpContextDir, 'overview.md');
 fs.writeFileSync(rootOutputPath, rootContent, 'utf-8');

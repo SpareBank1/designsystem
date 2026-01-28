@@ -1,28 +1,28 @@
 # @sb1/ffe-file-upload-react
 
-## Description
+## Beskrivelse
 
-Upload file button with validation and list of uploaded files.
+Filopplastingsknapp med validering og liste over opplastede filer.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `FileUpload`
 - `getFileContent`
 - `getUniqueFileName`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-file-upload-react @sb1/ffe-buttons-react @sb1/ffe-file-upload @sb1/ffe-form @sb1/ffe-icons-react @sb1/ffe-buttons @sb1/ffe-core @sb1/ffe-icons
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-buttons-react`
 - `@sb1/ffe-file-upload`
@@ -32,9 +32,9 @@ This package depends on:
 - `@sb1/ffe-core`
 - `@sb1/ffe-icons`
 
-## CSS Import
+## CSS-import
 
-In your project's main CSS file, import the required styles:
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
 
 ```css
 @import '@sb1/ffe-core/css/ffe.css';
@@ -44,37 +44,37 @@ In your project's main CSS file, import the required styles:
 @import '@sb1/ffe-icons/css/ffe-icons.css';
 ```
 
-Note: Make sure to import `@sb1/ffe-core/css/ffe.css` first as it contains base styles.
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
 
-## API Reference
+## API-referanse
 
 ### FileUpload Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `id` | `string` | Yes | - |
-| `label` | `string` | Yes | - |
-| `files` | `Record<string, FileItemProps<Document>['file']>` | Yes | - |
-| `multiple` | `boolean` | No | - |
-| `title` | `string` | Yes | - |
-| `infoText` | `string` | Yes | - |
-| `infoSubText` | `string` | No | - |
-| `cancelText` | `string` | No | - |
-| `deleteText` | `string` | No | - |
-| `uploadTitle` | `string` | Yes | - |
-| `uploadMicroText` | `string` | Yes | - |
-| `uploadSubText` | `string` | Yes | - |
-| `accept` | `string` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `id` | `string` | Ja | ID for the input field. The ID is used as a base for the label ID as well. |
+| `label` | `string` | Ja | Label for the button to trigger native upload handling. |
+| `files` | `Record<string, FileItemProps<Document>['file']>` | Ja | A map of files, indexed by file name (check file-shape on FileItem.js propTypes), that the user has uploaded. Must be maintained outside of `FileUpload`. It is up to the implementation to deny or accept file types, sizes, etc, and it is important that duplicates are not allowed. |
+| `multiple` | `boolean` | Nei | Whether or not uploading multiple files at once via the native file handler is allowed |
+| `title` | `string` | Ja | Title module |
+| `infoText` | `string` | Ja | Text on the info-section |
+| `infoSubText` | `string` | Nei | Subtext on the info-section |
+| `cancelText` | `string` | Nei | Label for the cancel button |
+| `deleteText` | `string` | Nei | Label for the delete button |
+| `uploadTitle` | `string` | Ja | Title on the upload-section |
+| `uploadMicroText` | `string` | Ja | MicroText on the upload-section |
+| `uploadSubText` | `string` | Ja | SubText on the upload-section |
+| `accept` | `string` | Nei | Unique file type specifier that describes a type of file that may be selected by the user, e.g. ".pdf" See MDN for documentation on [Unique file type specifiers](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers) |
 
 ### getFileContent Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
 ### getUniqueFileName Props
 
-No component-specific props beyond native HTML attributes.
+Ingen komponentspesifikke props utover native HTML-attributter.
 
-## Manual Examples (from README)
+## Eksempler (fra README)
 
 ```tsx
 import { FileUpload } from '@sb1/ffe-file-upload-react';
@@ -100,11 +100,11 @@ function MyComponent() {
 }
 ```
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

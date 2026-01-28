@@ -1,20 +1,18 @@
 # @sb1/ffe-chips-react
 
-## Description
-
-Chip components for creating interactive, compact elements with optional icons.
+## Beskrivelse
 
 Chip-komponenten brukes for å lage interaktive, kompakte elementer med valgfrie ikoner.
 
-## Install
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-chips-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on chip usage is available at https://design.sparebank1.no/komponenter/chip/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/chip/.
 
 ```tsx
 import { Chip } from '@sb1/ffe-chips-react';
@@ -22,18 +20,18 @@ import { Chip } from '@sb1/ffe-chips-react';
 function MyComponent() {
     return (
         <div>
-            <Chip size="md" onClick={() => console.log('Clicked')}>
-                Click me
+            <Chip size="md" onClick={() => console.log('Klikket')}>
+                Klikk meg
             </Chip>
-            <Chip size="lg" onClick={() => console.log('Large chip')}>
-                Large chip
+            <Chip size="lg" onClick={() => console.log('Stor chip')}>
+                Stor chip
             </Chip>
         </div>
     );
 }
 ```
 
-### With icons
+### Med ikoner
 
 ```tsx
 import { Chip } from '@sb1/ffe-chips-react';
@@ -50,47 +48,47 @@ function MyComponent() {
                         size="md"
                     />
                 }
-                onClick={() => console.log('With left icon')}
+                onClick={() => console.log('Med venstre ikon')}
             >
-                With left icon
+                Med venstre ikon
             </Chip>
             <Chip
                 size="md"
                 rightIcon={
                     <Icon fileUrl="icons/open/300/close.svg" size="md" />
                 }
-                onClick={() => console.log('With right icon')}
+                onClick={() => console.log('Med høyre ikon')}
             >
-                With right icon
+                Med høyre ikon
             </Chip>
         </div>
     );
 }
 ```
 
-### As a link
+### Som lenke
 
 ```tsx
 import { Chip } from '@sb1/ffe-chips-react';
 
 function MyComponent() {
     return (
-        <Chip as="a" href="/page" size="md">
-            Navigate
+        <Chip as="a" href="/side" size="md">
+            Naviger
         </Chip>
     );
 }
 ```
 
-### Importing CSS
+### Importere CSS
 
 ```css
 @import '~@sb1/ffe-chips/css/chip.css';
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -98,6 +96,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

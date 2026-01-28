@@ -1,5 +1,5 @@
 # @sb1/ffe-context-message-react
 
-This package is deprecated, and will be removed from the designsystem repo.
+Denne pakken er utdatert og vil bli fjernet fra designsystem-repoet.
 
-Use the new packages for messages, please refer to [ffe-messages](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages) and/or [ffe-messages-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages-react).
+Bruk de nye pakkene for meldinger, se [ffe-messages](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages) og/eller [ffe-messages-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages-react).

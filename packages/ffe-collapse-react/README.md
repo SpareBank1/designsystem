@@ -1,37 +1,32 @@
 # @sb1/ffe-collapse-react
 
-## Description
-
-React component for expand/collapse functionality.
+## Beskrivelse
 
 React-komponent for å vise og skjule innhold med animasjon.
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-collapse-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on collapse usage is available at https://design.sparebank1.no/komponenter/collapse/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/collapse/.
 
-Please note the component depends on transition styling for `height`.\
-This can preferably be done by importing the less-file from the less-folder
-in the package.\
-Alternatively you can do it by adding style to the class
-`.ffe-collapse-transition`\, adding it to your own class and provide the class
-through the `className` property or by styling it directly through the `style` property.
+Merk at komponenten er avhengig av overgangs-styling for `height`.
+Dette kan gjøres ved å importere less-filen fra less-mappen i pakken.
+Alternativt kan du legge til stil på klassen `.ffe-collapse-transition`, legge den til din egen klasse og sende klassen via `className`-propertyen, eller style den direkte via `style`-propertyen.
 
-### Importing compiled CSS
+### Importere kompilert CSS
 
-If your project does not use Less, you can import the compiled styling:
+Hvis prosjektet ditt ikke bruker Less, kan du importere den kompilerte stylingen:
 
 ```css
 @import '~@sb1/ffe-collapse-react/css/collapse.css';
 ```
 
-## Examples
+## Eksempler
 
 ```tsx
 import { Collapse } from '@sb1/ffe-collapse-react';
@@ -53,9 +48,9 @@ function MyComponent() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -63,6 +58,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

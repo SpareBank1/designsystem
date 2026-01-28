@@ -1,20 +1,18 @@
 # @sb1/ffe-tags-react
 
-## Description
-
-Tag components for labeling and categorizing content with different colors and sizes.
+## Beskrivelse
 
 Tag-komponenten brukes for merking og kategorisering av innhold med ulike farger og størrelser.
 
-## Install
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-tags-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on tag usage is available at https://design.sparebank1.no/komponenter/tag/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/tag/.
 
 ```tsx
 import { Tag } from '@sb1/ffe-tags-react';
@@ -23,17 +21,17 @@ function MyComponent() {
     return (
         <div>
             <Tag variant="info">Info</Tag>
-            <Tag variant="success">Success</Tag>
-            <Tag variant="warning">Warning</Tag>
-            <Tag variant="critical">Critical</Tag>
-            <Tag variant="neutral">Neutral</Tag>
-            <Tag variant="tip">Tip</Tag>
+            <Tag variant="success">Suksess</Tag>
+            <Tag variant="warning">Advarsel</Tag>
+            <Tag variant="critical">Kritisk</Tag>
+            <Tag variant="neutral">Nøytral</Tag>
+            <Tag variant="tip">Tips</Tag>
         </div>
     );
 }
 ```
 
-### Different types
+### Ulike typer
 
 ```tsx
 import { Tag } from '@sb1/ffe-tags-react';
@@ -42,17 +40,17 @@ function MyComponent() {
     return (
         <div>
             <Tag type="emphasis" variant="info">
-                Emphasized
+                Fremhevet
             </Tag>
             <Tag type="subtle" variant="info">
-                Subtle
+                Subtil
             </Tag>
         </div>
     );
 }
 ```
 
-### Different sizes
+### Ulike størrelser
 
 ```tsx
 import { Tag } from '@sb1/ffe-tags-react';
@@ -61,28 +59,28 @@ function MyComponent() {
     return (
         <div>
             <Tag size="sm" variant="neutral">
-                Small
+                Liten
             </Tag>
             <Tag size="md" variant="neutral">
                 Medium
             </Tag>
             <Tag size="lg" variant="neutral">
-                Large
+                Stor
             </Tag>
         </div>
     );
 }
 ```
 
-### Importing CSS
+### Importere CSS
 
 ```css
 @import '~@sb1/ffe-tags/css/tag.css';
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -90,6 +88,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

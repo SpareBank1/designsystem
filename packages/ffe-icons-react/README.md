@@ -1,22 +1,22 @@
 # @sb1/ffe-icons-react
 
-## Install
+## Installasjon
 
-```
+```bash
 npm install --save @sb1/ffe-icons-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on icon usage is available at https://design.sparebank1.no/komponenter/ikoner/.
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/ikoner/.
 
-## Description
+## Beskrivelse
 
 Ikonkomponenter for å vise vektorikoner konsistent i FFE. `Icon` støtter valg av ikonnavn, størrelse og dekorasjon, og integreres med ikonsettet i `@sb1/ffe-icons`.
 
 Bruk ikoner for å understøtte mening, ikke erstatte tekst. Sett passende `aria-label` eller skjul dekorative ikoner fra skjermlesere.
 
-## Examples
+## Eksempler
 
 ```tsx
 import React from 'react';
@@ -42,9 +42,9 @@ export function IconsDemo() {
 }
 ```
 
-## Development
+## Utvikling
 
-To start a local development server, run the following from the designsystem root folder:
+For å starte en lokal utviklingsserver, kjør følgende fra designsystem-rotmappen:
 
 ```bash
 npm install
@@ -52,6 +52,6 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+En lokal Storybook-instans med live reloading vil kjøre på http://localhost:6006/.
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Eksempelimplementasjoner med de nyeste versjonene av alle komponentene er også tilgjengelige på https://sparebank1.github.io/designsystem.

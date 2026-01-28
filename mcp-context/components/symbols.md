@@ -1,46 +1,46 @@
 # @sb1/ffe-symbols-react
 
-## Description
+## Beskrivelse
 
-React component library for SpareBank 1 Design System.
+React-komponentbibliotek for SpareBank 1 sitt designsystem.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Symbol`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-symbols-react @sb1/ffe-symbols
 ```
 
-### Dependencies
+### Avhengigheter
 
-This package depends on:
+Denne pakken er avhengig av:
 
 - `@sb1/ffe-symbols`
 
-## API Reference
+## API-referanse
 
 ### Symbol Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `fill` | `boolean` | No | - |
-| `icon` | `SymbolName` | Yes | - |
-| `size` | `'sm' | 'md' | 'lg' | 'xl'` | No | - |
-| `weight` | `300 | 500` | No | - |
-| `ariaLabel` | `React.ComponentProps<'span'>['aria-label'] | null` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `fill` | `boolean` | Nei | Fills the icon with color |
+| `icon` | `SymbolName` | Ja | The name of the icon that should be shown |
+| `size` | `'sm' | 'md' | 'lg' | 'xl'` | Nei | Size of the icon, default is the closest defined font-size |
+| `weight` | `300 | 500` | Nei | Symbols stroke weight. This can affect overall size of symbol, 400 is default |
+| `ariaLabel` | `React.ComponentProps<'span'>['aria-label'] | null` | Nei | Aria label text. If null/undefined, aria-hidden is automatically set to true |
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.

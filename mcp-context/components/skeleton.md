@@ -1,45 +1,45 @@
 # @sb1/ffe-skeleton-react
 
-## Description
+## Beskrivelse
 
-React component library for SpareBank 1 Design System.
+Skjelett-komponenter for å vise plassholdere mens innhold laster.
 
-## Components
+## Komponenter
 
-This package exports the following components:
+Denne pakken eksporterer følgende komponenter:
 
 - `Skeleton`
 - `SkeletonCircle`
 
-## Installation
+## Installasjon
 
-Install the package and all its dependencies:
+Installer pakken og alle dens avhengigheter:
 
 ```bash
 npm install @sb1/ffe-skeleton-react
 ```
 
-## API Reference
+## API-referanse
 
 ### Skeleton Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `width` | `string` | No | - |
-| `height` | `string` | No | - |
-| `className` | `string` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `width` | `string` | Nei | - |
+| `height` | `string` | Nei | - |
+| `className` | `string` | Nei | - |
 
 ### SkeletonCircle Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `size` | `'sm' | 'md' | 'lg' | 'xl'` | No | - |
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `size` | `'sm' | 'md' | 'lg' | 'xl'` | Nei | - |
 
-## Documentation
+## Dokumentasjon
 
-Full documentation is available at https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
 
-## Additional Context
+## Tilleggskontekst
 
-This is part of the SpareBank 1 FFE (Felles Front End) design system.
-All components follow SpareBank 1's design guidelines and accessibility standards.
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.
