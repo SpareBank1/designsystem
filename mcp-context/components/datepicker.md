@@ -113,13 +113,7 @@ import { DateInput } from '@sb1/ffe-datepicker-react';
 function MyComponent() {
     const [value, setValue] = useState('');
 
-    return (
-        <DateInput
-            value={value}
-            onChange={setValue}
-            label="Dato"
-        />
-    );
+    return <DateInput value={value} onChange={setValue} label="Dato" />;
 }
 ```
 
@@ -142,7 +136,7 @@ function MyComponent() {
 
 ## Dokumentasjon
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/
 
 ## Tilleggskontekst
 

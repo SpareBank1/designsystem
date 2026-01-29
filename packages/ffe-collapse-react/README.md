@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-collapse-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/collapse/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/collapse/.
 
 Merk at komponenten er avhengig av overgangs-styling for `height`.
 Dette kan gjøres ved å importere less-filen fra less-mappen i pakken.

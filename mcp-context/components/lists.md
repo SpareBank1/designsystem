@@ -182,7 +182,9 @@ function MyComponent() {
     return (
         <DescriptionList>
             <DescriptionListTerm>Kontonummer</DescriptionListTerm>
-            <DescriptionListDescription>1234 56 78901</DescriptionListDescription>
+            <DescriptionListDescription>
+                1234 56 78901
+            </DescriptionListDescription>
             <DescriptionListTerm>Saldo</DescriptionListTerm>
             <DescriptionListDescription>10 000 kr</DescriptionListDescription>
         </DescriptionList>
@@ -192,7 +194,7 @@ function MyComponent() {
 
 ## Dokumentasjon
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/
 
 ## Tilleggskontekst
 

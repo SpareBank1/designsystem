@@ -12,9 +12,9 @@ npm install --save @sb1/ffe-core-react
 
 Full dokumentasjon er tilgjengelig på:
 
-- https://design.sparebank1.no/komponenter/typografi/
-- https://design.sparebank1.no/profil/farger/
-- https://design.sparebank1.no/profil/spacing/
+- https://sparebank1.github.io/designsystem/komponenter/typografi/
+- https://sparebank1.github.io/designsystem/profil/farger/
+- https://sparebank1.github.io/designsystem/profil/spacing/
 
 ## Beskrivelse
 

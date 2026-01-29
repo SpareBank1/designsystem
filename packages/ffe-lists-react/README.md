@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-lists-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/lister/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/lister/.
 
 ## Eksempler
 

@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-grid-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/grid/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/grid/.
 
 ## DevTool: Grid overlay
 

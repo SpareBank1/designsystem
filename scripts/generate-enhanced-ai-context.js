@@ -543,7 +543,7 @@ function generateAiContext(packageDir) {
     }
 
     content += `## Dokumentasjon\n\n`;
-    content += `Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/\n\n`;
+    content += `Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/\n\n`;
 
     content += `## Tilleggskontekst\n\n`;
     content += `Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.\n`;
@@ -733,7 +733,7 @@ rootContent += `2. Naviger til komponentdokumentasjonen i components/-mappen\n`;
 rootContent += `3. Gjennomgå installasjon, bruk og retningslinjer\n\n`;
 
 rootContent += `## Tilleggsressurser\n\n`;
-rootContent += `- Offisiell dokumentasjon: https://design.sparebank1.no/\n`;
+rootContent += `- Offisiell dokumentasjon: https://sparebank1.github.io/designsystem/\n`;
 rootContent += `- GitHub-repository: https://github.com/SpareBank1/designsystem\n`;
 rootContent += `- Komponenteksempler: https://sparebank1.github.io/designsystem\n`;
 

@@ -1,5 +1,11 @@
 # @sb1/ffe-accordion-react
 
+## Beskrivelse
+
+Kollapsbare seksjoner for å organisere innhold som kan åpnes og lukkes. `Accordion` er wrapper-komponenten som definerer overskriftsnivå, `AccordionItem` representerer hver seksjon.
+
+Bruk accordion når innholdet er sekundært eller detaljert, og når brukeren trenger å fokusere på én del om gangen.
+
 ## Installasjon
 
 ```bash
@@ -8,35 +14,73 @@ npm install --save @sb1/ffe-accordion-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/accordion/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/accordion/.
 
 Denne pakken er avhengig av `@sb1/ffe-collapse-react` og `@sb1/ffe-icons-react`.
 Husk å importere less-filene.
 
-## Beskrivelse
-
-Kollapsbare seksjoner for å organisere innhold som kan åpnes og lukkes. `Accordion` håndterer gruppeatferd, mens `AccordionItem` representerer hver seksjon.
-
-Bruk accordeon når innholdet er sekundært eller detaljert, og når brukeren trenger å fokusere på én del om gangen.
-
 ## Eksempler
 
+### Enkel bruk
+
 ```tsx
-import React from 'react';
 import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
 
-export function AccordionDemo() {
-    const [open, setOpen] = React.useState<number | null>(0);
+function MyComponent() {
     return (
-        <Accordion openItem={open} onChange={setOpen}>
-            <AccordionItem title="Seksjon 1" id="acc-1">
-                Innhold for seksjon 1
+        <Accordion headingLevel={2}>
+            <AccordionItem heading="Første seksjon">
+                Innhold for første seksjon
             </AccordionItem>
-            <AccordionItem title="Seksjon 2" id="acc-2">
-                Innhold for seksjon 2
+            <AccordionItem heading="Andre seksjon">
+                Innhold for andre seksjon
             </AccordionItem>
-            <AccordionItem title="Seksjon 3" id="acc-3">
-                Innhold for seksjon 3
+            <AccordionItem heading="Tredje seksjon" defaultOpen>
+                Denne seksjonen er åpen som standard
+            </AccordionItem>
+        </Accordion>
+    );
+}
+```
+
+### Med callback ved åpning/lukking
+
+```tsx
+import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
+
+function MyComponent() {
+    return (
+        <Accordion headingLevel={3}>
+            <AccordionItem
+                heading="Vilkår og betingelser"
+                onToggleOpen={isOpen =>
+                    console.log('Seksjon er nå:', isOpen ? 'åpen' : 'lukket')
+                }
+            >
+                Her er vilkårene...
+            </AccordionItem>
+        </Accordion>
+    );
+}
+```
+
+### Kontrollert modus
+
+```tsx
+import { useState } from 'react';
+import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
+
+function MyComponent() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <Accordion headingLevel={2}>
+            <AccordionItem
+                heading="Kontrollert seksjon"
+                isOpen={isOpen}
+                onToggleOpen={setIsOpen}
+            >
+                Denne seksjonen styres av ekstern state
             </AccordionItem>
         </Accordion>
     );

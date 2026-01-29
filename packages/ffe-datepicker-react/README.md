@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-datepicker-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/skjemaelementer/#datepicker.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/skjemaelementer/#datepicker.
 
 Denne pakken er avhengig av `@sb1/ffe-form-react` og `@sb1/ffe-icons-react`.
 Husk å importere less-filene fra disse pakkene.

@@ -10,7 +10,7 @@ npm install --save @sb1/ffe-tables-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/tabeller/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/tabeller/.
 
 Denne pakken er avhengig av `@sb1/ffe-collapse-react` og `@sb1/ffe-icons-react`.
 Husk å importere less-filene.

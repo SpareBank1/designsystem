@@ -67,9 +67,7 @@ import { Chip } from '@sb1/ffe-chips-react';
 function MyComponent() {
     return (
         <div>
-            <Chip onClick={() => console.log('Klikket')}>
-                Klikk meg
-            </Chip>
+            <Chip onClick={() => console.log('Klikket')}>Klikk meg</Chip>
             <Chip as="a" href="/side">
                 Som lenke
             </Chip>
@@ -120,7 +118,7 @@ function MyComponent() {
 
 ## Dokumentasjon
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/
 
 ## Tilleggskontekst
 

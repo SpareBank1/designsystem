@@ -248,7 +248,7 @@ export function CoreTypographyDemo() {
 
 ## Dokumentasjon
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/
 
 ## Tilleggskontekst
 

@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-chart-donut-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/diagram/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/diagram/.
 
 ### Importere styling
 

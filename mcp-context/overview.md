@@ -87,7 +87,7 @@ Reaktive knapp-komponenter i FFE for handlinger med korrekt visuell hierarki og 
 
 #### @sb1/ffe-accordion-react
 
-Kollapsbare seksjoner for å organisere innhold som kan åpnes og lukkes. `Accordion` håndterer gruppeatferd, mens `AccordionItem` representerer hver seksjon.
+Kollapsbare seksjoner for å organisere innhold som kan åpnes og lukkes. `Accordion` er wrapper-komponenten som definerer overskriftsnivå, `AccordionItem` representerer hver seksjon.
 
 **Komponenter:** Accordion, AccordionItem
 
@@ -342,6 +342,6 @@ For detaljert informasjon om en spesifikk komponent:
 
 ## Tilleggsressurser
 
-- Offisiell dokumentasjon: https://design.sparebank1.no/
+- Offisiell dokumentasjon: https://sparebank1.github.io/designsystem/
 - GitHub-repository: https://github.com/SpareBank1/designsystem
 - Komponenteksempler: https://sparebank1.github.io/designsystem

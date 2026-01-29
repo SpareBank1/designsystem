@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-account-selector-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/kontovelger/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/kontovelger/.
 
 Denne pakken er avhengig av `@sb1/ffe-searchable-dropdown-react`.
 Husk å importere less-filene.

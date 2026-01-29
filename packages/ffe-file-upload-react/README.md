@@ -14,7 +14,7 @@ npm install --save @sb1/ffe-file-upload-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/skjemaelementer/#fileupload.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/skjemaelementer/#fileupload.
 
 Denne pakken er avhengig av `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` og `@sb1/ffe-form-react`.
 Husk å importere less-filene.

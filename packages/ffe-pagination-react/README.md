@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-pagination-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/paginering/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/paginering/.
 
 Denne pakken er avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` og `@sb1/ffe-icons-react`.
 Husk å importere less-filene.

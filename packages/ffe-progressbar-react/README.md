@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-progressbar-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/progressbar/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/progressbar/.
 
 ## Eksempler
 

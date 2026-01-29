@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-searchable-dropdown-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/dropdown/#searchabledropdown.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/dropdown/#searchabledropdown.
 
 Denne pakken er avhengig av `@sb1/ffe-form-react`, `@sb1/ffe-icons-react`, `@sb1/ffe-chips-react` og `@sb1/ffe-spinner-react`.
 Husk å importere less-filene.

@@ -8,7 +8,7 @@ npm install --save @sb1/ffe-buttons-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/knapper/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/knapper/.
 
 Denne pakken er avhengig av `@sb1/ffe-icons-react`.
 Husk å importere less-filene.

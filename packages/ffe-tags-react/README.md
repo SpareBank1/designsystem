@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-tags-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/tag/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/tag/.
 
 ```tsx
 import { Tag } from '@sb1/ffe-tags-react';

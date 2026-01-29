@@ -8,7 +8,7 @@ npm install --save @sb1/ffe-icons-react
 
 ## Bruk
 
-Full dokumentasjon er tilgjengelig på https://design.sparebank1.no/komponenter/ikoner/.
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/komponenter/ikoner/.
 
 ## Beskrivelse
 
