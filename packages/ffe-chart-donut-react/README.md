@@ -12,6 +12,8 @@ npm install --save @sb1/ffe-chart-donut-react
 
 ## Bruk
 
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
 ### Importere styling
 
 ```css
@@ -58,3 +60,11 @@ Krever base-tema fra `ffe-core`:
 ```css
 @import '@sb1/ffe-core/less/theme';
 ```
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Storybook kjorer pa http://localhost:6006/.

@@ -12,7 +12,13 @@ npm install --save @sb1/ffe-accordion-react
 
 ## Bruk
 
-Avhengig av `@sb1/ffe-collapse-react` og `@sb1/ffe-icons-react`. Husk å importere less-filene.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Avhengig av `@sb1/ffe-collapse-react` og `@sb1/ffe-icons-react`. Importer styling:
+
+```css
+@import '@sb1/ffe-accordion/css/accordion.css';
+```
 
 ## Eksempler
 

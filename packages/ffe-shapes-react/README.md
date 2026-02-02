@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-shapes-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/shapes/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ## Eksempler
 

@@ -1,5 +1,9 @@
 # @sb1/ffe-icons-react
 
+## Beskrivelse
+
+Ikonkomponenter som bruker CSS mask-image for SVG-ikoner som kan farges med CSS. Sett `ariaLabel` for meningsbærende ikoner, utelat den for dekorative ikoner (skjules automatisk).
+
 ## Installasjon
 
 ```bash
@@ -8,11 +12,13 @@ npm install --save @sb1/ffe-icons-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/ikoner/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Beskrivelse
+Importer CSS:
 
-Ikonkomponenter som bruker CSS mask-image for SVG-ikoner som kan farges med CSS. Sett `ariaLabel` for meningsbærende ikoner, utelat den for dekorative ikoner (skjules automatisk).
+```css
+@import url('@sb1/ffe-icons/css/ffe-icons.css');
+```
 
 ## Eksempler
 

@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-spinner-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/spinner/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ### Importering
 

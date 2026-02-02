@@ -16,7 +16,16 @@ npm install --save @sb1/ffe-file-upload-react
 
 ## Bruk
 
-Avhengig av `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` og `@sb1/ffe-form-react`. Husk å importere less-filene.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Avhengig av `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` og `@sb1/ffe-form-react`. Importer CSS:
+
+```css
+@import url('@sb1/ffe-file-upload/css/ffe-file-upload.css');
+@import url('@sb1/ffe-icons/css/ffe-icons.css');
+@import url('@sb1/ffe-buttons/css/ffe-buttons.css');
+@import url('@sb1/ffe-form/css/ffe-form.css');
+```
 
 ## Eksempler
 

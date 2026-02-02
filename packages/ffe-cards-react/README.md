@@ -1,5 +1,9 @@
 # @sb1/ffe-cards-react
 
+## Beskrivelse
+
+Kort-komponenter for presentasjon av innhold. Alle bruker render prop-monster der innholdskomponenter (`Title`, `Text`, `Subtext`, `CardName`, `CardAction`) gis som funksjonargumenter.
+
 ## Installasjon
 
 ```bash
@@ -8,11 +12,13 @@ npm install --save @sb1/ffe-cards-react
 
 ## Bruk
 
-Avhengig av `@sb1/ffe-icons-react`. Husk a importere less-filene.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Beskrivelse
+Avhengig av `@sb1/ffe-icons-react`. Importer styling:
 
-Kort-komponenter for presentasjon av innhold. Alle bruker render prop-monster der innholdskomponenter (`Title`, `Text`, `Subtext`, `CardName`, `CardAction`) gis som funksjonargumenter.
+```css
+@import '@sb1/ffe-cards/css/cards.css';
+```
 
 ## Eksporterte komponenter
 

@@ -91,11 +91,15 @@ import { MessageList, MessageListItem } from '@sb1/ffe-messages-react';
 npm install --save @sb1/ffe-messages-react
 ```
 
-Krever at `@sb1/ffe-messages` (CSS) er installert og importert.
+Krever CSS fra `@sb1/ffe-messages`:
+
+```css
+@import '@sb1/ffe-messages/css/messages.css';
+```
 
 ## Bruk
 
-Dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/meldinger
+Dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ## Utvikling
 

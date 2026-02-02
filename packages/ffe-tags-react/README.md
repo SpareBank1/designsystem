@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-tags-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/tag/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ### Grunnleggende eksempel
 

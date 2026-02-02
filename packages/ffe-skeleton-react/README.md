@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-skeleton-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/skeleton/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ### Tilgjengelige komponenter
 

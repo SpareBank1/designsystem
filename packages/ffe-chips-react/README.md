@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-chips-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/chip/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ### Importere CSS
 

@@ -24,7 +24,13 @@ npm install --save @sb1/ffe-lists-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/lister/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Importer CSS:
+
+```css
+@import url('@sb1/ffe-lists/css/ffe-lists.css');
+```
 
 ## Eksempler
 

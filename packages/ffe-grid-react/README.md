@@ -16,7 +16,15 @@ npm install --save @sb1/ffe-grid-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/grid/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Importer CSS:
+
+```css
+@import url('@sb1/ffe-grid/css/ffe-grid.css');
+```
+
+## Eksempler
 
 ### Import
 

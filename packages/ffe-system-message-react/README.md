@@ -2,6 +2,10 @@
 
 > **Denne pakken er foreldet** - Bruk [ffe-messages-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages-react) i stedet.
 
+## Beskrivelse
+
+Systemmelding-komponenter for feil, info, suksess og nyheter.
+
 ## Installasjon
 
 ```bash
@@ -60,3 +64,11 @@ import '@sb1/ffe-system-message/less/ffe-system-message.less';
 
 - `SystemErrorMessage` bruker `role="alert"` som standard
 - Lukkeknappen har lokalisert `aria-label`
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Storybook kjorer pa http://localhost:6006/

@@ -12,6 +12,8 @@ npm install --save @sb1/ffe-searchable-dropdown-react
 
 ## Bruk
 
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
 Avhengigheter: `@sb1/ffe-form-react`, `@sb1/ffe-icons-react`, `@sb1/ffe-chips-react`, `@sb1/ffe-spinner-react`.
 
 ### Importere kompilert CSS

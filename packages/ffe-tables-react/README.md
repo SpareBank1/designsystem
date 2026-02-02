@@ -1,6 +1,8 @@
 # @sb1/ffe-tables-react
 
-Komponent for tabelldata med responsiv visning, sortering og utvidbare rader.
+## Beskrivelse
+
+Tabellkomponenter med responsiv visning, sortering og utvidbare rader. Inkluderer `Table`, `TableHead`, `TableBody`, `TableRow`, `TableHeaderCell`, `TableDataCell`, `TableFoot`, `TableCaption` og `TableRowExpandable`.
 
 ## Installasjon
 
@@ -10,11 +12,13 @@ npm install --save @sb1/ffe-tables-react
 
 ## Bruk
 
-Avhengig av `@sb1/ffe-collapse-react` og `@sb1/ffe-icons-react`. Husk a importere less-filene.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Beskrivelse
+Avhengig av `@sb1/ffe-collapse-react` og `@sb1/ffe-icons-react`.
 
-Komponenter for tabeller med semantiske deler (`Table`, `TableHead`, `TableBody`, `TableRow`, `TableHeaderCell`, `TableDataCell`, `TableFoot`, `TableCaption`) og utvidbare rader (`TableRowExpandable`).
+```css
+@import '@sb1/ffe-tables/less/ffe-tables.less';
+```
 
 ## Eksempler
 
@@ -170,3 +174,11 @@ const data = [
 - Bruk `scope="col"` pa kolonneoverskrifter, `scope="row"` pa radoverskrifter
 - Sorterbare kolonner har automatisk `aria-sort`
 - Utvidbare rader har automatisk `aria-expanded` og `aria-controls`
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Storybook kjorer pa http://localhost:6006/

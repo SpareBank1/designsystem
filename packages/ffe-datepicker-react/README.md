@@ -12,9 +12,15 @@ npm install --save @sb1/ffe-datepicker-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/skjemaelementer/#datepicker
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-Avhengig av `@sb1/ffe-form-react` og `@sb1/ffe-icons-react`. Husk å importere less-filene fra disse pakkene.
+### Importere CSS
+
+```css
+@import '@sb1/ffe-datepicker/css/datepicker.css';
+@import '@sb1/ffe-form/css/form.css';
+@import '@sb1/ffe-icons/css/ffe-icons.css';
+```
 
 ## Eksempler
 

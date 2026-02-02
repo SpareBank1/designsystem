@@ -15,7 +15,7 @@ npm install --save @sb1/ffe-account-selector-react
 
 ## Bruk
 
-Dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/kontovelger/
+Dokumentasjon: https://sparebank1.github.io/designsystem/
 
 Importer styling:
 
@@ -159,3 +159,5 @@ interface PrettyAccount extends Account {
 ```bash
 npm install && npm run build && npm start
 ```
+
+Storybook kjorer pa http://localhost:6006/.

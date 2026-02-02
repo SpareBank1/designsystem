@@ -1,6 +1,10 @@
 # @sb1/ffe-core-react
 
-React-implementasjon av komponentene i `ffe-core`.
+## Beskrivelse
+
+React-komponenter for typografi og grunnleggende tekstmønstre. Bruk for overskrifter, avsnitt, lenker og tekstinnhold med riktig stil og semantikk.
+
+Merk: `Wave` er deprecated, bruk varianten i `@sb1/ffe-shapes-react`.
 
 ## Installasjon
 
@@ -10,13 +14,13 @@ npm install --save @sb1/ffe-core-react
 
 ## Bruk
 
-Dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/typografi/
+Dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Beskrivelse
+### Importere CSS
 
-React-komponenter for typografi og grunnleggende tekstmønstre. Bruk for overskrifter, avsnitt, lenker og tekstinnhold med riktig stil og semantikk.
-
-Merk: `Wave` er deprecated, bruk varianten i `@sb1/ffe-shapes-react`.
+```css
+@import '@sb1/ffe-core/css/ffe.css';
+```
 
 ## Eksempler
 

@@ -1,6 +1,8 @@
 # @sb1/ffe-form-react
 
-React-modul for FFE-skjemaelementer.
+## Beskrivelse
+
+Skjemaelementer for input, valg og meldinger. Bygger tilgjengelige skjemaer med etiketter, hjelpetekster og validering.
 
 ## Installasjon
 
@@ -10,11 +12,15 @@ npm install --save @sb1/ffe-form-react
 
 ## Bruk
 
-Avhengigheter: `@sb1/ffe-icons-react`, `@sb1/ffe-collapse-react`, `@sb1/ffe-form`. Husk less-filer.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Beskrivelse
+Avhengigheter: `@sb1/ffe-icons-react`, `@sb1/ffe-collapse-react`. Importer CSS:
 
-Skjemaelementer for input, valg og meldinger. Bygger tilgjengelige skjemaer med etiketter, hjelpetekster og validering.
+```css
+@import url('@sb1/ffe-form/css/ffe-form.css');
+@import url('@sb1/ffe-icons/css/ffe-icons.css');
+@import url('@sb1/ffe-collapse/css/ffe-collapse.css');
+```
 
 ### Eksporterte komponenter
 

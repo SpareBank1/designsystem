@@ -12,7 +12,15 @@ npm install --save @sb1/ffe-feedback-react
 
 ## Bruk
 
-Avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-icons-react` og `@sb1/ffe-form-react`. Importer LESS-filene fra disse pakkene.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-icons-react` og `@sb1/ffe-form-react`. Importer CSS:
+
+```css
+@import url('@sb1/ffe-buttons/css/ffe-buttons.css');
+@import url('@sb1/ffe-icons/css/ffe-icons.css');
+@import url('@sb1/ffe-form/css/ffe-form.css');
+```
 
 ## Eksempler
 

@@ -12,7 +12,13 @@ npm install --save @sb1/ffe-pagination-react
 
 ## Bruk
 
-Avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` og `@sb1/ffe-icons-react`. Husk å importere less-filene.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` og `@sb1/ffe-icons-react`.
+
+```css
+@import '@sb1/ffe-pagination/css/pagination.css';
+```
 
 ### Eksporterte komponenter og hooks
 

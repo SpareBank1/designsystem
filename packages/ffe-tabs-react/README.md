@@ -1,5 +1,9 @@
 # @sb1/ffe-tabs-react
 
+## Beskrivelse
+
+Fanekomponenter for innhold i seksjoner. `TabGroup` styrer layout og tastaturnavigasjon, `Tab` representerer hver fane.
+
 ## Installasjon
 
 ```bash
@@ -8,11 +12,11 @@ npm install --save @sb1/ffe-tabs-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/faner/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Beskrivelse
-
-Fanekomponenter for innhold i seksjoner. `TabGroup` styrer layout og tastaturnavigasjon, `Tab` representerer hver fane.
+```css
+@import '@sb1/ffe-tabs/less/tabs.less';
+```
 
 ## Eksempler
 

@@ -1,6 +1,8 @@
 # @sb1/ffe-dropdown-react
 
-React-implementasjon av nedtrekkslisten i FFE.
+## Beskrivelse
+
+Nedtrekksliste for valg av ett alternativ fra en liste. Wrapper rundt HTML `<select>` som videresender alle standard attributter.
 
 ## Installasjon
 
@@ -10,13 +12,13 @@ npm install --save @sb1/ffe-dropdown-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/dropdown/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-Avhenger av `@sb1/ffe-form-react`. Husk å importere less-filene.
+### Importere CSS
 
-## Beskrivelse
-
-Nedtrekksliste for valg av ett alternativ fra en liste. Wrapper rundt HTML `<select>` som videresender alle standard attributter.
+```css
+@import '@sb1/ffe-form/css/form.css';
+```
 
 ## Eksempler
 

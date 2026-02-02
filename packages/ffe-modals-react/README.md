@@ -8,9 +8,13 @@ npm install --save @sb1/ffe-modals-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/modal/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-Avhengig av `@sb1/ffe-icons-react` og `@sb1/ffe-buttons-react`. Husk å importere less-filene.
+Avhengig av `@sb1/ffe-icons-react` og `@sb1/ffe-buttons-react`.
+
+```css
+@import '@sb1/ffe-modals/css/modals.css';
+```
 
 ## Beskrivelse
 

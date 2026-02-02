@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-badge-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/badge/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ### Importere CSS
 
@@ -53,3 +53,11 @@ function IconWithIndicator() {
     );
 }
 ```
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Storybook kjorer pa http://localhost:6006/.

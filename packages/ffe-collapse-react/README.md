@@ -12,7 +12,7 @@ npm install --save @sb1/ffe-collapse-react
 
 ## Bruk
 
-Dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/collapse/
+Dokumentasjon: https://sparebank1.github.io/designsystem/
 
 ### Importere CSS
 

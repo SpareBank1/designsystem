@@ -1,5 +1,11 @@
 # @sb1/ffe-buttons-react
 
+## Beskrivelse
+
+Knapp-komponenter for handlinger med visuell hierarki og tilgjengelighet. Bruk for prioritet (Action > Primary > Secondary > Tertiary), navigasjon (BackButton), utvidelse (Expand/InlineExpand), gruppering og snarveier.
+
+Bruk lenker (`LinkText` fra `ffe-core-react`) for navigasjon som ser ut som lenker.
+
 ## Installasjon
 
 ```bash
@@ -8,15 +14,13 @@ npm install --save @sb1/ffe-buttons-react
 
 ## Bruk
 
-Full dokumentasjon: https://sparebank1.github.io/designsystem/komponenter/knapper/
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-Avhengig av `@sb1/ffe-icons-react`. Husk å importere less-filene.
+Avhengig av `@sb1/ffe-icons-react`. Importer styling:
 
-## Beskrivelse
-
-Knapp-komponenter for handlinger med visuell hierarki og tilgjengelighet. Bruk for prioritet (Action > Primary > Secondary > Tertiary), navigasjon (BackButton), utvidelse (Expand/InlineExpand), gruppering og snarveier.
-
-Bruk lenker (`LinkText` fra `ffe-core-react`) for navigasjon som ser ut som lenker.
+```css
+@import '@sb1/ffe-buttons/css/buttons.css';
+```
 
 ## Eksempler
 

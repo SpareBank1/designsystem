@@ -4,6 +4,8 @@
 
 Foreldet pakke. Bruk `@sb1/ffe-messages-react` i stedet.
 
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
 ## Foreldet pakke
 
 Bruk de nye pakkene: [ffe-messages-react](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-messages-react).

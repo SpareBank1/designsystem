@@ -12,7 +12,11 @@ React-komponenter for kontekstuelle meldinger (info, tips, suksess, feil).
 npm install @sb1/ffe-context-message-react @sb1/ffe-context-message
 ```
 
-## Avhengigheter
+## Bruk
+
+Dokumentasjon: https://sparebank1.github.io/designsystem/
+
+### Importere CSS
 
 ```js
 import '@sb1/ffe-context-message/less/context-message.less';
