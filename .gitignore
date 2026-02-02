@@ -40,3 +40,6 @@ coverage
 
 scripts/*.json
 **/ffe-dependencies.json
+
+# Generated MCP context (published to mcp branch)
+mcp-context/
