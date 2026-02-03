@@ -1,32 +1,126 @@
 # @sb1/ffe-file-upload-react
 
-Upload file button with validation and list of uploaded files.
+## Beskrivelse
 
-_NB! `FileReader` is not supported in IE9 or below so this component will not work for older browsers(http://caniuse.com/#search=filereader)_
+Filopplastingskomponent med dropzone, validering og filliste. Filer vises i tre tilstander:
 
-## Install
+- **Laster** - Viser skeleton
+- **Ferdig** - Viser filnavn med slett-knapp
+- **Feil** - Viser feilmelding
 
-```
+## Installasjon
+
+```bash
 npm install --save @sb1/ffe-file-upload-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on file upload usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#fileupload.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-This package depends on `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` and `@sb1/ffe-form-react`.
-Make sure you import the less-files.
+Avhengig av `@sb1/ffe-icons-react`, `@sb1/ffe-buttons-react` og `@sb1/ffe-form-react`. Importer CSS:
 
-## Development
-
-To start a local development server, run the following from the designsystem root folder:
-
-```bash
-npm install
-npm run build
-npm start
+```css
+@import url('@sb1/ffe-file-upload/css/ffe-file-upload.css');
+@import url('@sb1/ffe-icons/css/ffe-icons.css');
+@import url('@sb1/ffe-buttons/css/ffe-buttons.css');
+@import url('@sb1/ffe-form/css/ffe-form.css');
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+## Eksempler
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+### Grunnleggende eksempel
+
+```tsx
+import {
+    FileUpload,
+    getFileContent,
+    getUniqueFileName,
+} from '@sb1/ffe-file-upload-react';
+import { useState } from 'react';
+
+type FileItem = {
+    name: string;
+    document?: { content: unknown };
+    error?: string;
+};
+
+function FileUploadExample() {
+    const [files, setFiles] = useState<Record<string, FileItem>>({});
+
+    const uploadFiles = async (fileList: FileList | null) => {
+        if (!fileList) return;
+
+        for (const file of Array.from(fileList)) {
+            const name = getUniqueFileName(file.name, files);
+            setFiles(prev => ({ ...prev, [name]: { name } }));
+
+            try {
+                const content = await getFileContent(file);
+                // Erstatt med faktisk API-kall
+                await fetch('/api/upload', {
+                    method: 'POST',
+                    body: JSON.stringify({ name, content }),
+                });
+                setFiles(prev => ({
+                    ...prev,
+                    [name]: { name, document: { content } },
+                }));
+            } catch {
+                setFiles(prev => ({
+                    ...prev,
+                    [name]: { name, error: 'Opplasting feilet' },
+                }));
+            }
+        }
+    };
+
+    const deleteFile = (file: FileItem) => {
+        setFiles(prev => {
+            const next = { ...prev };
+            delete next[file.name];
+            return next;
+        });
+    };
+
+    return (
+        <FileUpload
+            id="dokumenter"
+            label="Velg filer"
+            title="Last opp dokumenter"
+            infoText="Legg ved relevant dokumentasjon."
+            uploadTitle="Dra filene hit"
+            uploadMicroText="Eller"
+            uploadSubText="PDF, JPG eller PNG, maks 50 MB"
+            files={files}
+            onFilesSelected={uploadFiles}
+            onFilesDropped={uploadFiles}
+            onFileDeleted={deleteFile}
+            cancelText="Avbryt"
+            deleteText="Slett"
+            accept=".pdf,.jpg,.png"
+            multiple={true}
+        />
+    );
+}
+```
+
+### Hjelpefunksjoner
+
+```typescript
+import { getFileContent, getUniqueFileName } from '@sb1/ffe-file-upload-react';
+
+// Les filinnhold som base64 data URL
+const content = await getFileContent(file);
+
+// Generer unikt filnavn (legger til -1, -2 etc. ved duplikater)
+const uniqueName = getUniqueFileName('dokument.pdf', existingFiles);
+```
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Storybook kjører på http://localhost:6006/

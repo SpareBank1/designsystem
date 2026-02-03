@@ -1,18 +1,46 @@
 # @sb1/ffe-shapes-react
 
-## Install
+## Beskrivelse
+
+Dekorative form-komponenter. Inneholder `Wave` for bølgeformer som visuell overgang mellom seksjoner.
+
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-shapes-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on shapes usage is available at https://design.sparebank1.no/komponenter/shapess/.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Development
+## Eksempler
 
-To start a local development server, run the following from the designsystem root folder:
+### Standard bølge med innhold
+
+```tsx
+import { Wave } from '@sb1/ffe-shapes-react';
+
+function SectionWithWave() {
+    return (
+        <Wave bgColor="subtle">
+            <p>Innhold inne i bølgeseksjonen</p>
+        </Wave>
+    );
+}
+```
+
+### Rotert bølge (flip)
+
+```tsx
+import { Wave } from '@sb1/ffe-shapes-react';
+
+function FlippedWaveExample() {
+    return <Wave flip={true} position="100px" />;
+}
+```
+
+## Utvikling
 
 ```bash
 npm install
@@ -20,6 +48,4 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
-
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Lokal Storybook kjører på http://localhost:6006/.

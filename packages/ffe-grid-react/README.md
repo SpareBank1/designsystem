@@ -1,38 +1,106 @@
 # @sb1/ffe-grid-react
 
-## Install
+## Beskrivelse
 
-```
+Grid-system for responsive layouts (foreldet - bruk CSS Grid eller Flexbox i stedet).
+
+- `Grid` - Ytterste container som definerer grid-gapet
+- `GridRow` - Rad-container med støtte for bakgrunnsfarge, margin og padding
+- `GridCol` - Kolonne-container med responsiv bredde (12-kolonners system)
+
+## Installasjon
+
+```bash
 npm install --save @sb1/ffe-grid-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on grid usage is available at https://design.sparebank1.no/komponenter/grid/.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Importer CSS:
+
+```css
+@import url('@sb1/ffe-grid/css/ffe-grid.css');
+```
+
+## Eksempler
+
+### Import
+
+```tsx
+import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
+```
+
+### Grunnleggende eksempel
+
+```tsx
+<Grid>
+    <GridRow>
+        <GridCol sm={6}>Venstre kolonne</GridCol>
+        <GridCol sm={6}>Høyre kolonne</GridCol>
+    </GridRow>
+</Grid>
+```
+
+### Responsiv layout med breakpoints
+
+```tsx
+<Grid>
+    <GridRow>
+        <GridCol sm={12} md={6} lg={4}>
+            Responsiv kolonne
+        </GridCol>
+    </GridRow>
+</Grid>
+```
+
+### Offset (forskyvning av kolonner)
+
+```tsx
+<GridCol
+    sm={{ cols: 10, offset: 1 }}
+    md={{ cols: 8, offset: 2 }}
+    lg={{ cols: 6, offset: 3 }}
+>
+    Sentert innhold
+</GridCol>
+```
+
+### Grid med spacing
+
+```tsx
+<Grid gap="lg">
+    <GridRow margin="md" padding="sm" bgColor="secondary">
+        <GridCol sm={6}>Kolonne 1</GridCol>
+        <GridCol sm={6}>Kolonne 2</GridCol>
+    </GridRow>
+</Grid>
+```
+
+### Responsiv spacing på GridRow
+
+```tsx
+<GridRow
+    sm={{ margin: 'sm', padding: 'xs' }}
+    md={{ margin: 'md', padding: 'sm' }}
+    lg={{ margin: 'lg', padding: 'md' }}
+>
+    <GridCol sm={12}>Rad med responsiv spacing</GridCol>
+</GridRow>
+```
 
 ## DevTool: Grid overlay
 
-For å lettere inspisere hvordan innholdet legger seg i kolonner, eller for å se hvordan gridden vil kunne passe inn på en eksisterende webside eksporteres det et separat util som vil lage en full-skjerm overlay med kolonner på en eksisterende side. Fra denne modulen eksporteres bare en funksjon som lager en fixed positioned div og det er opp til applikasjonen hvordan man ønsker å bruke den.
-
-Et eksempel er
-
 ```javascript
 import showGrid from '@sb1/ffe-grid-react/lib/show-grid';
-window.showGrid = showGrid;
+window.showGrid = showGrid; // Toggle funksjon for grid overlay
 ```
 
-Funksjonen man importerer fra `ffe-grid-react/lib/show-grid` fungerer som en toggle.
-
-## Development
-
-To start a local development server, run the following from the designsystem root folder:
+## Utvikling
 
 ```bash
-npm install
-npm run build
-npm start
+npm install && npm run build && npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
-
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Lokal Storybook på http://localhost:6006/

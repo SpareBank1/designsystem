@@ -1,28 +1,73 @@
 # @sb1/ffe-accordion-react
 
-## Install
+## Beskrivelse
+
+Kollapsbare seksjoner for å organisere innhold. `Accordion` er wrapper-komponenten, `AccordionItem` representerer hver seksjon.
+
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-accordion-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on accordion usage is available at https://design.sparebank1.no/komponenter/accordion/.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-This package depends on `@sb1/ffe-collapse-react` and `@sb1/ffe-icons-react`.
-Make sure you import the less-files.
+Avhengig av `@sb1/ffe-collapse-react` og `@sb1/ffe-icons-react`. Importer styling:
 
-## Development
-
-To start a local development server, run the following from the designsystem root folder:
-
-```bash
-npm install
-npm run build
-npm start
+```css
+@import '@sb1/ffe-accordion/css/accordion.css';
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+## Eksempler
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+### Enkel bruk
+
+```tsx
+import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
+
+function MyComponent() {
+    return (
+        <Accordion headingLevel={2}>
+            <AccordionItem heading="Første seksjon">
+                Innhold for første seksjon
+            </AccordionItem>
+            <AccordionItem heading="Andre seksjon" defaultOpen>
+                Denne seksjonen er åpen som standard
+            </AccordionItem>
+        </Accordion>
+    );
+}
+```
+
+### Kontrollert modus
+
+```tsx
+import { useState } from 'react';
+import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
+
+function MyComponent() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <Accordion headingLevel={2}>
+            <AccordionItem
+                heading="Kontrollert seksjon"
+                isOpen={isOpen}
+                onToggleOpen={setIsOpen}
+            >
+                Denne seksjonen styres av ekstern state
+            </AccordionItem>
+        </Accordion>
+    );
+}
+```
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Storybook kjører på http://localhost:6006/.

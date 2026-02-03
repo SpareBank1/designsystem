@@ -1,42 +1,87 @@
 # @sb1/ffe-collapse-react
 
-React component for expand/collapse
+## Beskrivelse
 
-## Install
+React-komponent for å vise og skjule innhold med animasjon. Bruker CSS grid-animasjon for jevn overgang mellom åpent og lukket tilstand.
 
-```
+## Installasjon
+
+```bash
 npm install --save @sb1/ffe-collapse-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on collapse usage is available at https://design.sparebank1.no/komponenter/collapse/.
+Dokumentasjon: https://sparebank1.github.io/designsystem/
 
-Please note the component depends on transition styling for `height`.\
-This can preferably be done by importing the less-file from the less-folder
-in the package.\
-Alternatively you can do it by adding style to the class
-`.ffe-collapse-transition`\, adding it to your own class and provide the class
-through the `className` property or by styling it directly through the `style` property.
-
-### Importing compiled CSS
-
-If your project does not use Less, you can import the compiled styling:
+### Importere CSS
 
 ```css
-@import '~@sb1/ffe-collapse-react/css/collapse.css';
+@import '@sb1/ffe-collapse-react/css/collapse.css';
 ```
 
-## Development
+Merk: CSS-variablene `--ffe-transition-duration` og `--ffe-ease` må være definert (tilgjengelig via `@sb1/ffe-core`).
 
-To start a local development server, run the following from the designsystem root folder:
+## Eksempler
+
+### Grunnleggende bruk
+
+```tsx
+import { Collapse } from '@sb1/ffe-collapse-react';
+import { useState } from 'react';
+
+function BasicExample() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? 'Skjul' : 'Vis'} innhold
+            </button>
+            <Collapse isOpen={isOpen}>
+                <p>Dette innholdet kan vises og skjules</p>
+            </Collapse>
+        </div>
+    );
+}
+```
+
+### Med ExpandButton
+
+```tsx
+import { Collapse } from '@sb1/ffe-collapse-react';
+import { ExpandButton } from '@sb1/ffe-buttons-react';
+import { useState } from 'react';
+
+function ExpandButtonExample() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div>
+            <ExpandButton
+                isExpanded={isOpen}
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {isOpen ? 'Skjul' : 'Vis'} detaljer
+            </ExpandButton>
+            <Collapse isOpen={isOpen}>
+                <p>Detaljert informasjon her</p>
+            </Collapse>
+        </div>
+    );
+}
+```
+
+## TypeScript
+
+```typescript
+import type { CollapseProps } from '@sb1/ffe-collapse-react';
+```
+
+## Utvikling
 
 ```bash
-npm install
-npm run build
-npm start
+npm install && npm run build && npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
-
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Storybook kjører på http://localhost:6006/.

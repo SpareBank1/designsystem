@@ -1,23 +1,93 @@
 # @sb1/ffe-dropdown-react
 
-React implementation of the dropdown found in FFE.
+## Beskrivelse
 
-## Install
+Nedtrekksliste for valg av ett alternativ fra en liste. Wrapper rundt HTML `<select>` som videresender alle standard attributter.
 
-```
+## Installasjon
+
+```bash
 npm install --save @sb1/ffe-dropdown-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on dropdown usage is available at https://design.sparebank1.no/komponenter/dropdown/.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-This package depends on `@sb1/ffe-form-react`.
-Make sure you import the less-files from these packages.
+### Importere CSS
 
-## Development
+```css
+@import '@sb1/ffe-form/css/form.css';
+```
 
-To start a local development server, run the following from the designsystem root folder:
+## Eksempler
+
+### Grunnleggende bruk med InputGroup (anbefalt)
+
+```tsx
+import { Dropdown } from '@sb1/ffe-dropdown-react';
+import { InputGroup } from '@sb1/ffe-form-react';
+
+function DropdownMedLabel() {
+    const [value, setValue] = React.useState('jan');
+
+    return (
+        <InputGroup label="Velg måned">
+            <Dropdown value={value} onChange={e => setValue(e.target.value)}>
+                <option value="jan">Januar</option>
+                <option value="feb">Februar</option>
+                <option value="mar">Mars</option>
+            </Dropdown>
+        </InputGroup>
+    );
+}
+```
+
+### Inline-modus
+
+```tsx
+<InputGroup label="Antall">
+    <Dropdown inline={true} defaultValue="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </Dropdown>
+</InputGroup>
+```
+
+### Validering med feilmelding
+
+```tsx
+import { Dropdown } from '@sb1/ffe-dropdown-react';
+import { InputGroup } from '@sb1/ffe-form-react';
+
+function DropdownMedFeil() {
+    const [value, setValue] = React.useState('');
+    const hasError = value === '';
+
+    return (
+        <InputGroup
+            label="Velg måned"
+            fieldMessage={hasError ? 'Du må velge en måned' : undefined}
+        >
+            {inputProps => (
+                <Dropdown
+                    {...inputProps}
+                    value={value}
+                    onChange={e => setValue(e.target.value)}
+                    aria-invalid={hasError ? 'true' : undefined}
+                >
+                    <option value="">Velg ...</option>
+                    <option value="jan">Januar</option>
+                    <option value="feb">Februar</option>
+                </Dropdown>
+            )}
+        </InputGroup>
+    );
+}
+```
+
+## Utvikling
 
 ```bash
 npm install
@@ -25,6 +95,4 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
-
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Lokal Storybook kjører på http://localhost:6006/.

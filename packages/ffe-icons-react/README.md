@@ -1,25 +1,64 @@
 # @sb1/ffe-icons-react
 
-## Install
+## Beskrivelse
 
-```
+Ikonkomponenter som bruker CSS mask-image for SVG-ikoner som kan farges med CSS. Sett `ariaLabel` for meningsbærende ikoner, utelat den for dekorative ikoner (skjules automatisk).
+
+## Installasjon
+
+```bash
 npm install --save @sb1/ffe-icons-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on icon usage is available at https://design.sparebank1.no/komponenter/ikoner/.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Development
+Importer CSS:
 
-To start a local development server, run the following from the designsystem root folder:
-
-```bash
-npm install
-npm run build
-npm start
+```css
+@import url('@sb1/ffe-icons/css/ffe-icons.css');
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+## Eksempler
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+```tsx
+import { Icon } from '@sb1/ffe-icons-react';
+
+// Med tilgjengelighetstekst
+<Icon fileUrl="./icons/open/300/md/house.svg" ariaLabel="Hjem" />
+
+// Dekorativt ikon (skjules fra skjermleser)
+<Icon fileUrl="./icons/open/300/md/arrow-right.svg" />
+
+// Med størrelse og fargeklasse
+<Icon
+    fileUrl="./icons/open/300/sm/star.svg"
+    size="sm"
+    className="ffe-text-color--vann"
+    ariaLabel="Favoritt"
+/>
+```
+
+### Ikonsti-format
+
+```
+./icons/{variant}/{weight}/{size}/{icon-name}.svg
+```
+
+- **variant**: `open` eller `filled`
+- **weight**: `300`, `400`, eller `500`
+- **size**: `sm`, `md`, `lg`, eller `xl`
+
+### Tilgjengelighet
+
+- Sett `ariaLabel` for meningsbærende ikoner
+- Utelat `ariaLabel` for dekorative ikoner (setter automatisk `aria-hidden="true"`)
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Lokal Storybook kjører på http://localhost:6006/.

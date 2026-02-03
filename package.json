@@ -10,6 +10,7 @@
     "not ie >= 0"
   ],
   "scripts": {
+    "ai": "npx @modelcontextprotocol/inspector node ~/git/mcp-designsystem/build/index.js",
     "clean": "run-s clean:lib clean:lerna:clean clean:lerna",
     "clean:lib": "rimraf packages/*/lib packages/*/es packages/*/types",
     "clean:lerna": "lerna clean --yes",
@@ -35,7 +36,8 @@
     "build-storybook": "run-s build storybook:build",
     "sync-figma-to-tokens": "tsx packages/ffe-core/scripts/figma-api/sync_figma_to_tokens.ts",
     "count": "node count-stories.js",
-    "ready": "npm run build && npm run lint:fix && npm run test"
+    "ready": "npm run build && npm run lint:fix && npm run test",
+    "update:ai-context": "node scripts/generate-enhanced-ai-context.js"
   },
   "lint-staged": {
     "{packages,buildtool,test,.storybook}/**/*.{js,jsx,ts,tsx}": [

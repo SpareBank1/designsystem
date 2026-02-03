@@ -1,0 +1,58 @@
+name: Generate MCP Context
+
+on:
+    release:
+        types: [published]
+    workflow_dispatch: # Allow manual trigger
+
+jobs:
+    generate-mcp:
+        name: Generate and publish MCP context
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v5
+              with:
+                  ref: develop
+                  fetch-depth: 0
+                  token: ${{ secrets.GH_USER_PAT }}
+
+            - uses: actions/setup-node@v6
+              with:
+                  node-version: 24
+
+            - name: Install dependencies
+              run: npm ci --ignore-scripts
+
+            - name: Generate MCP context
+              run: node scripts/generate-enhanced-ai-context.js
+
+            - name: Deploy to mcp branch
+              env:
+                  RELEASE_REF: ${{ github.event.release.tag_name || github.sha }}
+              run: |
+                  git config user.email "designsystem@sparebank1.no"
+                  git config user.name "sb1-designsystem"
+
+                  # Save generated content
+                  cp -r mcp-context /tmp/mcp-context
+
+                  # Create or switch to mcp branch (orphan)
+                  git fetch origin mcp:mcp 2>/dev/null || true
+                  if git show-ref --verify --quiet refs/heads/mcp; then
+                      git checkout mcp
+                      # Remove old content
+                      git rm -rf . 2>/dev/null || true
+                  else
+                      git checkout --orphan mcp
+                      git rm -rf . 2>/dev/null || true
+                  fi
+
+                  # Copy generated content to root
+                  cp -r /tmp/mcp-context/* .
+
+                  # Commit and push
+                  git add -A
+                  git commit -m "chore: update MCP context for ${RELEASE_REF}" || echo "No changes to commit"
+                  git push origin mcp --force

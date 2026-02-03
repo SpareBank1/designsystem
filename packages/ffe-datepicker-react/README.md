@@ -1,46 +1,169 @@
 # @sb1/ffe-datepicker-react
 
-## Install
+## Beskrivelse
 
-```
+Komponenter for dato-inntasting og kalender. `Datepicker` kombinerer input-felt med kalender, `DateInput` er kun input-feltet, og `Calendar` er en frittstående kalenderkomponent.
+
+## Installasjon
+
+```bash
 npm install --save @sb1/ffe-datepicker-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on datepicker usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#datepicker.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-This package depends on `@sb1/ffe-form-react` and `@sb1/ffe-icons-react`.
-Make sure you import the less-files from these packages.
+### Importere CSS
 
-## Requirements
+```css
+@import '@sb1/ffe-datepicker/css/datepicker.css';
+@import '@sb1/ffe-form/css/form.css';
+@import '@sb1/ffe-icons/css/ffe-icons.css';
+```
 
-- ~~i18n~~
-- ~~Show calendar on focus~~
-- ~~Handle various input-formats (see simpledate.test.js)~~
-- Validate on blur on the whole component (both the input and the calendar)
+## Eksempler
 
-### a11y
+### Datepicker (input + kalender)
 
-Requirements for full a11y-compliance:
+Krever `labelId`-prop som peker til en ekstern label. Bruk `InputGroup` fra `@sb1/ffe-form-react`.
 
-- https://www.w3.org/TR/wai-aria-practices/#datepicker
+```tsx
+import { useState } from 'react';
+import { Datepicker } from '@sb1/ffe-datepicker-react';
+import { InputGroup } from '@sb1/ffe-form-react';
 
-Examples:
+function MyComponent() {
+    const [value, setValue] = useState('01.12.2024');
 
-- https://hanshillen.github.io/jqtest/#goto_datepicker
+    return (
+        <InputGroup label="Velg dato" labelId="datepicker-label">
+            <Datepicker
+                value={value}
+                onChange={setValue}
+                locale="nb"
+                labelId="datepicker-label"
+            />
+        </InputGroup>
+    );
+}
+```
 
-## Other
+#### Datepicker med validering og begrensninger
 
-Evaluated implementations:
+```tsx
+import { useState } from 'react';
+import { Datepicker } from '@sb1/ffe-datepicker-react';
+import { InputGroup } from '@sb1/ffe-form-react';
 
-- Pickaday (or variants of it): Not a11y compliant. Lacks ARIA-roles and keyboard navigation
-- http://jquense.github.io/react-widgets/docs/#/datetime-picker : Lacks keyboard navigation
-- https://hacker0x01.github.io/react-datepicker/ : Lacks keyboard navigation
+function MyComponent() {
+    const [value, setValue] = useState('');
+    const [error, setError] = useState<string | null>(null);
 
-## Development
+    return (
+        <InputGroup
+            label="Fødselsdato"
+            labelId="fodselsdato-label"
+            aria-invalid={!!error}
+            fieldMessage={error}
+        >
+            <Datepicker
+                value={value}
+                onChange={setValue}
+                locale="nb"
+                labelId="fodselsdato-label"
+                minDate="01.01.1900"
+                maxDate="31.12.2024"
+                disabledDates={['24.12.2024', '25.12.2024']}
+                dropdownCaption={true}
+            />
+        </InputGroup>
+    );
+}
+```
 
-To start a local development server, run the following from the designsystem root folder:
+### DateInput (kun input-felt)
+
+Lavnivå-komponent som kun tilbyr et formatert input-felt. For de fleste bruksområder bør du bruke `Datepicker`.
+
+```tsx
+import { useState, ChangeEvent } from 'react';
+import { DateInput } from '@sb1/ffe-datepicker-react';
+
+function MyComponent() {
+    const [value, setValue] = useState('');
+
+    return (
+        <div>
+            <label htmlFor="date-input">Dato</label>
+            <DateInput
+                id="date-input"
+                value={value}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    setValue(e.target.value)
+                }
+                locale="nb"
+                ariaInvalid="false"
+            />
+        </div>
+    );
+}
+```
+
+### Calendar (frittstående kalender)
+
+Frittstående kalenderkomponent. Datoer representeres som strenger i format 'dd.mm.yyyy'.
+
+```tsx
+import { useState } from 'react';
+import { Calendar } from '@sb1/ffe-datepicker-react';
+
+function MyComponent() {
+    const [selectedDate, setSelectedDate] = useState<string | null>(
+        '17.12.2024',
+    );
+
+    return (
+        <Calendar
+            selectedDate={selectedDate}
+            onDatePicked={setSelectedDate}
+            locale="nb"
+            minDate="01.01.2024"
+            maxDate="31.12.2025"
+            disabledDates={['01.05.2025', '17.05.2025']}
+        />
+    );
+}
+```
+
+## Testing
+
+```tsx
+import { render } from '@testing-library/react';
+import {
+    Datepicker,
+    getDatepickerByLabelText,
+} from '@sb1/ffe-datepicker-react';
+import { InputGroup } from '@sb1/ffe-form-react';
+
+test('kan sette dato', async () => {
+    render(
+        <InputGroup label="Dato" labelId="test-label">
+            <Datepicker
+                value=""
+                onChange={jest.fn()}
+                locale="nb"
+                labelId="test-label"
+            />
+        </InputGroup>,
+    );
+
+    const datepicker = getDatepickerByLabelText('Dato');
+    // Bruk datepicker.day, datepicker.month, datepicker.year for å interagere med feltene
+});
+```
+
+## Utvikling
 
 ```bash
 npm install
@@ -48,6 +171,4 @@ npm run build
 npm start
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
-
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Storybook kjører på http://localhost:6006/. Dokumentasjon: https://sparebank1.github.io/designsystem

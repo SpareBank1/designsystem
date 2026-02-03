@@ -1,23 +1,78 @@
-## Install
+# @sb1/ffe-tabs-react
+
+## Beskrivelse
+
+Fanekomponenter for innhold i seksjoner. `TabGroup` styrer layout og tastaturnavigasjon, `Tab` representerer hver fane.
+
+## Installasjon
 
 ```bash
 npm install --save @sb1/ffe-tabs-react
 ```
 
-## Usage
+## Bruk
 
-Full documentation on tabs usage is available at https://design.sparebank1.no/komponenter/faner/.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
 
-## Development
-
-To start a local development server, run the following from the designsystem root folder:
-
-```bash
-npm install
-npm run build
-npm start
+```css
+@import '@sb1/ffe-tabs/less/tabs.less';
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+## Eksempler
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+### Grunnleggende bruk med tilstandshåndtering
+
+```tsx
+import React, { useState } from 'react';
+import { TabGroup, Tab } from '@sb1/ffe-tabs-react';
+
+export function TabsDemo() {
+    const [activeTab, setActiveTab] = useState<string>('oversikt');
+
+    return (
+        <>
+            <TabGroup>
+                <Tab
+                    selected={activeTab === 'oversikt'}
+                    onClick={() => setActiveTab('oversikt')}
+                    aria-controls="panel-oversikt"
+                >
+                    Oversikt
+                </Tab>
+                <Tab
+                    selected={activeTab === 'detaljer'}
+                    onClick={() => setActiveTab('detaljer')}
+                    aria-controls="panel-detaljer"
+                >
+                    Detaljer
+                </Tab>
+            </TabGroup>
+
+            {activeTab === 'oversikt' && (
+                <div id="panel-oversikt" role="tabpanel">
+                    Innhold for oversikt
+                </div>
+            )}
+            {activeTab === 'detaljer' && (
+                <div id="panel-detaljer" role="tabpanel">
+                    Innhold for detaljer
+                </div>
+            )}
+        </>
+    );
+}
+```
+
+### Tilgjengelighet (a11y)
+
+- `TabGroup` rendres som `<div role="tablist">` med tastaturnavigasjon
+- `Tab` har automatisk `aria-selected` og `tabindex` basert på `selected`
+- Bruk `aria-controls` for å koble fane til panel med `role="tabpanel"`
+
+## Utvikling
+
+```bash
+npm install && npm run build && npm start
+```
+
+Lokal Storybook kjorer pa http://localhost:6006/

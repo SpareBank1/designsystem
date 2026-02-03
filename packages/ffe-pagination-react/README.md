@@ -1,28 +1,82 @@
 # @sb1/ffe-pagination-react
 
-## Install
+## Beskrivelse
 
-```
-npm install --save @sb1/ffe-modals-react
-```
+Pagineringskomponent for navigering gjennom sider med innhold.
 
-## Usage
-
-Full documentation on lists usage is available at https://design.sparebank1.no/komponenter/paginering/.
-
-This package depends on `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` and `@sb1/ffe-icons-react`.
-Make sure you import the less-files.
-
-## Development
-
-To start a local development server, run the following from the designsystem root folder:
+## Installasjon
 
 ```bash
-npm install
-npm run build
-npm start
+npm install --save @sb1/ffe-pagination-react
 ```
 
-A local instance of `Storybook` with live reloading will run at http://localhost:6006/.
+## Bruk
 
-Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
+Full dokumentasjon: https://sparebank1.github.io/designsystem/
+
+Avhengig av `@sb1/ffe-buttons-react`, `@sb1/ffe-dropdown-react` og `@sb1/ffe-icons-react`.
+
+```css
+@import '@sb1/ffe-pagination/css/pagination.css';
+```
+
+### Eksporterte komponenter og hooks
+
+```tsx
+import { Pagination, usePagination } from '@sb1/ffe-pagination-react';
+import type { PaginationProps } from '@sb1/ffe-pagination-react';
+```
+
+## Eksempler
+
+### Grunnleggende bruk med usePagination hook
+
+```tsx
+import { Pagination, usePagination } from '@sb1/ffe-pagination-react';
+
+function MyComponent() {
+    const paginationControls = usePagination(134, 10);
+
+    return (
+        <Pagination
+            ariaLabel="Paginering av innhold"
+            paginationControls={paginationControls}
+            rowsPerPageOptions={[10, 20, 50, 100]}
+        />
+    );
+}
+```
+
+### Bruk med tabell og datafiltrering
+
+```tsx
+import { Pagination, usePagination } from '@sb1/ffe-pagination-react';
+
+function TableWithPagination() {
+    const data = [
+        { id: 1, name: 'Anders' },
+        { id: 2, name: 'Erik' },
+    ];
+    const paginationControls = usePagination(data.length, 10);
+
+    const currentPageData = data.slice(
+        paginationControls.pageStart,
+        paginationControls.pageStart + paginationControls.currentPageSize,
+    );
+
+    return (
+        <>
+            <ul>
+                {currentPageData.map(item => (
+                    <li key={item.id}>{item.name}</li>
+                ))}
+            </ul>
+            <Pagination
+                ariaLabel="Paginering av tabell"
+                paginationControls={paginationControls}
+                rowsPerPageOptions={[10, 20, 50]}
+            />
+        </>
+    );
+}
+```
