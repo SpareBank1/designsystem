@@ -1,0 +1,73 @@
+# @sb1/ffe-chart-donut-react
+
+## Beskrivelse
+
+Ringdiagram som viser prosentvis fordeling mellom to verdier. Viser alltid to segmenter: `percentage` (hoyre) og `100 - percentage` (venstre).
+
+## Komponenter
+
+Denne pakken eksporterer følgende komponenter:
+
+- `ChartDonut`
+
+## Installasjon
+
+Installer pakken og alle dens avhengigheter:
+
+```bash
+npm install @sb1/ffe-chart-donut-react
+```
+
+## CSS-import
+
+I prosjektets hoved-CSS-fil, importer de nødvendige stilene:
+
+```css
+@import '@sb1/ffe-chart-donut-react/css/ffe-chart-donut.css';
+```
+
+Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den inneholder grunnleggende stiler.
+
+## API-referanse
+
+### ChartDonut Props
+
+| Prop | Type | Påkrevd | Beskrivelse |
+|------|------|---------|-------------|
+| `firstLabel` | `string` | Nei | Short text labeling left value, like "empty", "said yes" etc |
+| `lastLabel` | `string` | Nei | Short text labeling right value, like "full", "said` no" etc |
+| `label` | `React.ReactNode` | Nei | React node to be inserted directly under the chart's name, alternative to first/last label |
+| `name` | `string` | Ja | Short text labeling the graph in total, like "percentage", "voted this year" etc |
+| `percentage` | `number` | Ja | The percentage for the right-most value |
+
+## Eksempler (fra README)
+
+```tsx
+import { ChartDonut } from '@sb1/ffe-chart-donut-react';
+
+<ChartDonut
+    name="Avstemning"
+    percentage={42}
+    firstLabel="Sa nei"
+    lastLabel="Sa ja"
+/>;
+```
+
+```tsx
+import { ChartDonut } from '@sb1/ffe-chart-donut-react';
+
+<ChartDonut
+    name="Prosjektstatus"
+    percentage={75}
+    label={<span>75% fullfort</span>}
+/>;
+```
+
+## Dokumentasjon
+
+Full dokumentasjon er tilgjengelig på https://sparebank1.github.io/designsystem/
+
+## Tilleggskontekst
+
+Dette er en del av SpareBank 1 FFE (Felles Front End) designsystem.
+Alle komponenter følger SpareBank 1s designretningslinjer og tilgjengelighetsstandarder.
