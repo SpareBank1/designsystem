@@ -15,8 +15,14 @@ jobs:
             - uses: actions/checkout@v5
               with:
                   ref: develop
-                  fetch-depth: 0
+                  fetch-depth: 1
                   token: ${{ secrets.GH_USER_PAT }}
+                  sparse-checkout: |
+                      scripts/generate-enhanced-ai-context.js
+                      packages/*-react
+                      package.json
+                      package-lock.json
+                  sparse-checkout-cone-mode: false
 
             - uses: actions/setup-node@v6
               with:
@@ -35,14 +41,21 @@ jobs:
                   git config user.email "designsystem@sparebank1.no"
                   git config user.name "sb1-designsystem"
 
-                  # Save generated content
+                  # Verify and save generated content
+                  if [ ! -d "mcp-context" ] || [ -z "$(ls -A mcp-context)" ]; then
+                      echo "Error: mcp-context directory is missing or empty"
+                      exit 1
+                  fi
                   cp -r mcp-context /tmp/mcp-context
+
+                  # Clean working directory completely (including untracked files like node_modules)
+                  git sparse-checkout disable
+                  find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
 
                   # Create or switch to mcp branch (orphan)
                   git fetch origin mcp:mcp 2>/dev/null || true
                   if git show-ref --verify --quiet refs/heads/mcp; then
                       git checkout mcp
-                      # Remove old content
                       git rm -rf . 2>/dev/null || true
                   else
                       git checkout --orphan mcp
