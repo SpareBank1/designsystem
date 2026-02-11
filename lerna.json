@@ -1,7 +1,7 @@
 {
     "packages": ["packages/*", "linting/*", "buildtool"],
     "npmClient": "npm",
-    "version": "100.8.3",
+    "version": "100.9.0",
     "command": {
         "publish": {
             "allowBranch": "main",

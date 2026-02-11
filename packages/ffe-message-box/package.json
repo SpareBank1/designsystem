@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-message-box",
-    "version": "100.8.3",
+    "version": "100.9.0",
     "description": "Meldingsboks",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -18,10 +18,10 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.8.3"
+        "@sb1/ffe-core": "^100.9.0"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^100.8.3"
+        "@sb1/ffe-buildtool": "^100.9.0"
     },
     "publishConfig": {
         "access": "public"

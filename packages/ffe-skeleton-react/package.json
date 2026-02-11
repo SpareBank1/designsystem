@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-skeleton-react",
-    "version": "100.8.3",
+    "version": "100.9.0",
     "description": "React implementation of ffe-skeleton loading",
     "keywords": [
         "ffe",
@@ -30,8 +30,8 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^100.8.3",
-        "@sb1/ffe-skeleton": "^100.8.3",
+        "@sb1/ffe-core": "^100.9.0",
+        "@sb1/ffe-skeleton": "^100.9.0",
         "classnames": "^2.5.1"
     },
     "peerDependencies": {

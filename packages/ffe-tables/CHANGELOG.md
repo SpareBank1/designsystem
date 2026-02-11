@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.9.0](https://github.com/SpareBank1/designsystem/compare/v100.8.3...v100.9.0) (2026-02-11)
+
+
+### Features
+
+* **ffe-tables:** update background color on expand content ([cc02eaf](https://github.com/SpareBank1/designsystem/commit/cc02eaf37ade522d395ef645d2eae9279c4715ff))
+
+
+
+
+
 ## [100.8.3](https://github.com/SpareBank1/designsystem/compare/v100.8.2...v100.8.3) (2026-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-tables
