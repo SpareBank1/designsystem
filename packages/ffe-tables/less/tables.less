@@ -175,7 +175,21 @@
     }
 
     &__tr--expand-open {
-        background: var(--ffe-color-surface-primary-default-hover);
+        background: var(--ffe-color-fill-primary-selected-default);
+
+        .ffe-table__cell-content {
+            color: var(--ffe-color-foreground-inverse);
+        }
+
+        .ffe-table__expand-button .ffe-icons {
+            color: var(--ffe-color-foreground-inverse);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--ffe-color-fill-primary-selected-default);
+            }
+        }
     }
 
     &__column-header {
