@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-buildtool",
-    "version": "100.9.0",
+    "version": "100.10.0",
     "private": true,
     "description": "FFE build tool",
     "author": "SpareBank 1 Utvikling",
@@ -17,7 +17,7 @@
         "test": "jest"
     },
     "dependencies": {
-        "@sb1/stylelint-config-ffe": "^100.9.0",
+        "@sb1/stylelint-config-ffe": "^100.10.0",
         "@testing-library/jest-dom": "^6.5.0",
         "commander": "^12.1.0",
         "copyfiles": "^2.4.1",

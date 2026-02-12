@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.10.0](https://github.com/SpareBank1/designsystem/compare/v100.9.0...v100.10.0) (2026-02-12)
+
+
+### Features
+
+* **ffe-tables:** update colors in table ([d602b97](https://github.com/SpareBank1/designsystem/commit/d602b97ab151e18596e254ea54359c26cc476214))
+
+
+
+
+
 # [100.9.0](https://github.com/SpareBank1/designsystem/compare/v100.8.3...v100.9.0) (2026-02-11)
 
 
