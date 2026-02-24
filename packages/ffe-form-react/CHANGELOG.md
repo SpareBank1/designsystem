@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.10.1](https://github.com/SpareBank1/designsystem/compare/v100.10.0...v100.10.1) (2026-02-24)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** endret div til legend for label i RadioButtonInputGroup ([788eb2e](https://github.com/SpareBank1/designsystem/commit/788eb2ef72badf744c880c4fa04b4810099aee5c))
+
+
+
+
+
 # [100.10.0](https://github.com/SpareBank1/designsystem/compare/v100.9.0...v100.10.0) (2026-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
