@@ -107,7 +107,7 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
             {...rest}
         >
             {label && (
-                <div
+                <legend
                     id={id}
                     className={classNames(
                         'ffe-form-label',
@@ -119,7 +119,7 @@ export const RadioButtonInputGroup: React.FC<RadioButtonInputGroupProps> = ({
                         <Tooltip>{tooltip}</Tooltip>
                     )}
                     {React.isValidElement(tooltip) && tooltip}
-                </div>
+                </legend>
             )}
 
             {description && (
