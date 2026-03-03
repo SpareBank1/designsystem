@@ -61,6 +61,6 @@ export const getListToRender = <Item extends Record<string, any>>({
 
     return {
         listToRender: listToRender(),
-        noMatch: !dropdownListFiltered?.length,
+        noMatch: !showAllItemsInDropdown && !dropdownListFiltered?.length,
     };
 };
