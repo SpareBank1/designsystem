@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.11.0](https://github.com/SpareBank1/designsystem/compare/v100.10.1...v100.11.0) (2026-03-04)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Fikser bug som gjør at noMatch teksten vises selv om den ikke burde ([8990b23](https://github.com/SpareBank1/designsystem/commit/8990b2340828470849d81d039a7a95cf69802bee))
+
+
+
+
+
 ## [100.10.1](https://github.com/SpareBank1/designsystem/compare/v100.10.0...v100.10.1) (2026-02-24)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
