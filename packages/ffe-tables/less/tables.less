@@ -94,7 +94,7 @@
     }
 
     &__expand-content {
-        background: var(--ffe-color-surface-neutral-default);
+        background: var(--ffe-color-fill-primary-subtle);
     }
 
     &__th,
@@ -124,23 +124,6 @@
 
         &:active {
             background: var(--ffe-color-surface-primary-default-pressed);
-        }
-
-        &-ascending,
-        &-descending {
-            background: var(--ffe-color-fill-primary-selected-default);
-            color: var(--ffe-color-foreground-inverse);
-
-            @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    background: var(--ffe-color-fill-primary-selected-hover);
-                    color: var(--ffe-color-foreground-inverse);
-                }
-            }
-
-            &:active {
-                background: var(--ffe-color-fill-primary-selected-pressed);
-            }
         }
 
         @media (hover: hover) and (pointer: fine) {
@@ -175,19 +158,10 @@
     }
 
     &__tr--expand-open {
-        background: var(--ffe-color-fill-primary-selected-default);
-
-        .ffe-table__cell-content {
-            color: var(--ffe-color-foreground-inverse);
-        }
-
-        .ffe-table__expand-button .ffe-icons {
-            color: var(--ffe-color-foreground-inverse);
-        }
-
+        background: var(--ffe-color-fill-primary-default);
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                background: var(--ffe-color-fill-primary-selected-default);
+                background: var(--ffe-color-fill-primary-default-hover);
             }
         }
     }
