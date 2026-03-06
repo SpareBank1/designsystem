@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.12.0](https://github.com/SpareBank1/designsystem/compare/v100.11.0...v100.12.0) (2026-03-06)
+
+
+### Bug Fixes
+
+* **ffe-tables:** fikser lint-feil ([4064e00](https://github.com/SpareBank1/designsystem/commit/4064e00d18321a6bde1472f8832c75bfe0bf41bc))
+
+
+### Features
+
+* **ffe-tables:** oppdaterer farger i expandable og sortable ([0debdcf](https://github.com/SpareBank1/designsystem/commit/0debdcf3dd2c01eea8ae5dbb746fa294e3dd35da))
+
+
+
+
+
 # [100.11.0](https://github.com/SpareBank1/designsystem/compare/v100.10.1...v100.11.0) (2026-03-04)
 
 **Note:** Version bump only for package @sb1/ffe-tables

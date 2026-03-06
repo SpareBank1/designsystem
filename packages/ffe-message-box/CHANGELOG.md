@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [100.12.0](https://github.com/SpareBank1/designsystem/compare/v100.11.0...v100.12.0) (2026-03-06)
+
+**Note:** Version bump only for package @sb1/ffe-message-box
+
+
+
+
+
 # [100.11.0](https://github.com/SpareBank1/designsystem/compare/v100.10.1...v100.11.0) (2026-03-04)
 
 **Note:** Version bump only for package @sb1/ffe-message-box
