@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.12.1](https://github.com/SpareBank1/designsystem/compare/v100.12.0...v100.12.1) (2026-03-23)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** fiks bug hvor en ikke kan bruke dateinput hvis en har voiceover aktivert i safari ([35295e9](https://github.com/SpareBank1/designsystem/commit/35295e9a4c1350a11e2ae9d7e8b771223599b761))
+
+
+
+
+
 # [100.12.0](https://github.com/SpareBank1/designsystem/compare/v100.11.0...v100.12.0) (2026-03-06)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
