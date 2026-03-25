@@ -14,6 +14,8 @@ interface HeaderProps {
     year: number;
     prevMonthButtonElement: React.RefObject<HTMLButtonElement>;
     nextMonthButtonElement: React.RefObject<HTMLButtonElement>;
+    monthSelectRef?: React.RefObject<HTMLSelectElement>;
+    yearSelectRef?: React.RefObject<HTMLSelectElement>;
     /** Nåværende månedsnummer (1-12) */
     monthNumber: number;
     /** Om måned- og år-dropdown skal vises i kalenderen */
@@ -44,6 +46,8 @@ export const Header: React.FC<HeaderProps> = ({
     onMonthYearChange,
     minDate,
     maxDate,
+    monthSelectRef,
+    yearSelectRef,
 }) => {
     const arrowBackIosIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0zNjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzZxLTExLjkyMiAxMS45MjMtMjguMDc2IDExLjkyM3QtMjguMDc2LTExLjkyM0wzMDUuMDc4LTQyOC43N3EtMTAuODQ3LTEwLjg0Ni0xNi4wNzctMjQuMzA3LTUuMjMxLTEzLjQ2Mi01LjIzMS0yNi45MjMgMC0xMy40NjEgNS4yMzEtMjYuOTIzIDUuMjMtMTMuNDYxIDE2LjA3Ny0yNC4zMDdsMzA2Ljg0Ni0zMDYuODQ2cTExLjkyMi0xMS45MjMgMjguMzg0LTExLjYxNiAxNi40NjEuMzA4IDI4LjM4NCAxMi4yMzEgMTEuOTIzIDExLjkyMyAxMS45MjMgMjguMDc2IDAgMTYuMTU0LTExLjkyMyAyOC4wNzdMMzY3LjM4NC00ODBaIi8+PC9zdmc+';
@@ -106,6 +110,7 @@ export const Header: React.FC<HeaderProps> = ({
                                     aria-label={`${month} ${year}`}
                                     onClick={handleDropdownClick}
                                     onFocus={handleDropdownFocus}
+                                    ref={monthSelectRef}
                                 >
                                     {monthOptions.map(option => (
                                         <option key={option.value} value={option.value}>
@@ -123,6 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
                                     aria-label={`${year}`}
                                     onClick={handleDropdownClick}
                                     onFocus={handleDropdownFocus}
+                                    ref={yearSelectRef}
                                 >
                                     {yearOptions.map(option => (
                                         <option key={option.value} value={option.value}>

@@ -65,6 +65,8 @@ export class Calendar extends Component<CalendarProps, State> {
     clickableDateRef = React.createRef<HTMLTableCellElement>();
     prevMonthButtonElementRef = React.createRef<HTMLButtonElement>();
     nextMonthButtonElementRef = React.createRef<HTMLButtonElement>();
+    monthSelectRef = React.createRef<HTMLSelectElement>();
+    yearSelectRef = React.createRef<HTMLSelectElement>();
 
     /* eslint-disable react/no-did-update-set-state */
     componentDidUpdate(prevProps: CalendarProps) {
@@ -243,15 +245,23 @@ export class Calendar extends Component<CalendarProps, State> {
 
         if (event.key === 'Tab') {
             event.preventDefault();
+            const { dropdownCaption } = this.props;
+
             if (event.shiftKey) {
                 if (activeElement === this.clickableDateRef.current) {
                     this.nextMonthButtonElementRef.current?.focus();
                     this.setState({ isFocusingHeader: true });
-                }
-                if (activeElement === this.nextMonthButtonElementRef.current) {
+                } else if (activeElement === this.nextMonthButtonElementRef.current) {
+                    if (dropdownCaption) {
+                        this.yearSelectRef.current?.focus();
+                    } else {
+                        this.prevMonthButtonElementRef.current?.focus();
+                    }
+                } else if (dropdownCaption && activeElement === this.yearSelectRef.current) {
+                    this.monthSelectRef.current?.focus();
+                } else if (dropdownCaption && activeElement === this.monthSelectRef.current) {
                     this.prevMonthButtonElementRef.current?.focus();
-                }
-                if (activeElement === this.prevMonthButtonElementRef.current) {
+                } else if (activeElement === this.prevMonthButtonElementRef.current) {
                     this.clickableDateRef.current?.focus();
                     this.setState({ isFocusingHeader: false });
                     this.forceUpdate();
@@ -260,11 +270,17 @@ export class Calendar extends Component<CalendarProps, State> {
                 if (activeElement === this.clickableDateRef.current) {
                     this.prevMonthButtonElementRef.current?.focus();
                     this.setState({ isFocusingHeader: true });
-                }
-                if (activeElement === this.prevMonthButtonElementRef.current) {
+                } else if (activeElement === this.prevMonthButtonElementRef.current) {
+                    if (dropdownCaption) {
+                        this.monthSelectRef.current?.focus();
+                    } else {
+                        this.nextMonthButtonElementRef.current?.focus();
+                    }
+                } else if (dropdownCaption && activeElement === this.monthSelectRef.current) {
+                    this.yearSelectRef.current?.focus();
+                } else if (dropdownCaption && activeElement === this.yearSelectRef.current) {
                     this.nextMonthButtonElementRef.current?.focus();
-                }
-                if (activeElement === this.nextMonthButtonElementRef.current) {
+                } else if (activeElement === this.nextMonthButtonElementRef.current) {
                     this.clickableDateRef.current?.focus();
                     this.setState({ isFocusingHeader: false });
                     this.forceUpdate();
@@ -333,6 +349,8 @@ export class Calendar extends Component<CalendarProps, State> {
                         }
                         minDate={this.props.minDate}
                         maxDate={this.props.maxDate}
+                        monthSelectRef={this.monthSelectRef}
+                        yearSelectRef={this.yearSelectRef}
                     />
                     <table
                         className="ffe-calendar__grid"
