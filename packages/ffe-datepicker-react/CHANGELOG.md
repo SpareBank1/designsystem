@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.12.2](https://github.com/SpareBank1/designsystem/compare/v100.12.1...v100.12.2) (2026-03-25)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** fikser bug i tastaturnavigasjon med dropdown caption ([d377a14](https://github.com/SpareBank1/designsystem/commit/d377a14f7ec9577d427b22305a145986a1169183))
+
+
+
+
+
 ## [100.12.1](https://github.com/SpareBank1/designsystem/compare/v100.12.0...v100.12.1) (2026-03-23)
 
 
