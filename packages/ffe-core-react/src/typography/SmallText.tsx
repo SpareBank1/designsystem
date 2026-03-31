@@ -11,8 +11,15 @@ export type SmallTextProps<As extends ElementType = 'span'> = {
 > & { underline?: boolean };
 
 export function SmallText<As extends ElementType>(props: SmallTextProps<As>) {
-    const { as: Comp = 'span', className, ...rest } = props;
+    const { as: Comp = 'span', className, underline = false, ...rest } = props;
     return (
-        <Comp className={classNames('ffe-small-text', className)} {...rest} />
+        <Comp
+            className={classNames(
+                'ffe-small-text',
+                { 'ffe-small-text--underline': underline },
+                className,
+            )}
+            {...rest}
+        />
     );
 }
