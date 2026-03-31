@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.12.3](https://github.com/SpareBank1/designsystem/compare/v100.12.2...v100.12.3) (2026-03-31)
+
+
+### Bug Fixes
+
+* **ffe-core:** Add underline to SmallText and fix LinkIcon component ([61b7541](https://github.com/SpareBank1/designsystem/commit/61b7541af47666ea76a1dc130dea3eda8dcbc9a0))
+
+
+
+
+
 ## [100.12.2](https://github.com/SpareBank1/designsystem/compare/v100.12.1...v100.12.2) (2026-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-core
