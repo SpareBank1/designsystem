@@ -42,6 +42,10 @@
 
 .ffe-small-text {
     font-size: var(--ffe-fontsize-small-text);
+
+    &--underline {
+        border-bottom: var(--ffe-g-border-width) solid currentColor;
+    }
 }
 
 .ffe-micro-text {
@@ -194,16 +198,25 @@
 }
 
 .ffe-link-icon {
-    fill: var(--ffe-color-foreground-interactive-link);
+    color: var(--ffe-color-foreground-interactive-link);
     display: inline-flex;
     border-radius: 1.5rem;
     border: 2px solid transparent;
     outline: 0;
     padding: var(--ffe-spacing-2xs);
 
+    &:is(button) {
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .ffe-icons {
+        color: currentColor;
+    }
+
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            fill: var(--ffe-color-foreground-interactive-link-hover);
+            color: var(--ffe-color-foreground-interactive-link-hover);
         }
     }
 
