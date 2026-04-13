@@ -166,7 +166,7 @@ function variableValueFromToken(
 }
 
 function compareVariableValues(a: VariableValue, b: VariableValue) {
-    if (typeof a === 'object' && typeof b === 'object') {
+    if (a !== null && b !== null && typeof a === 'object' && typeof b === 'object') {
         if (
             'type' in a &&
             'type' in b &&
