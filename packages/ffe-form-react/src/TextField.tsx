@@ -1,15 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export interface TextFieldProps extends React.ComponentPropsWithoutRef<'input'> {
+export interface TextFieldProps extends Omit<React.ComponentPropsWithoutRef<'input'>, 'prefix' | 'suffix'> {
     /** Text fields default to `display: block;`. Set this to `true` to apply the inline modifier. */
     inline?: boolean;
     /** Make the text right aligned */
     textRightAlign?: boolean;
     /** Add a prefix inside the input */
-    prefix?: string;
+    prefix?: React.ReactNode;
     /** Add a suffix inside the input */
-    suffix?: string;
+    suffix?: React.ReactNode;
 }
 
 export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
