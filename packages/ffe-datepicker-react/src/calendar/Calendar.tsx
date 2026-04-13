@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { v4 as uuid } from 'uuid';
+
 import { ClickableDate } from './ClickableDate';
 import { NonClickableDate } from './NonClickableDate';
 import { Header } from './Header';
@@ -49,7 +49,7 @@ export class Calendar extends Component<CalendarProps, State> {
             isFocusingHeader: false,
         };
 
-        this.datepickerId = `ffe-calendar-${uuid()}`;
+        this.datepickerId = `ffe-calendar-${Math.random().toString(36).slice(2)}`;
 
         this.keyDown = this.keyDown.bind(this);
         this.mouseClick = this.mouseClick.bind(this);
