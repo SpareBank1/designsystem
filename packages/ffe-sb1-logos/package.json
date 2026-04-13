@@ -20,6 +20,6 @@
         "access": "public"
     },
     "devDependencies": {
-        "handlebars": "^4.7.0"
+        "handlebars": "^4.7.9"
     }
 }
