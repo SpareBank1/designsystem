@@ -171,8 +171,8 @@ Ingen komponentspesifikke props utover native HTML-attributter.
 | Prop | Type | Påkrevd | Beskrivelse |
 |------|------|---------|-------------|
 | `textRightAlign` | `boolean` | Nei | Make the text right aligned |
-| `prefix` | `string` | Nei | Add a prefix inside the input |
-| `suffix` | `string` | Nei | Add a suffix inside the input |
+| `prefix` | `React.ReactNode` | Nei | Add a prefix inside the input |
+| `suffix` | `React.ReactNode` | Nei | Add a suffix inside the input |
 
 ### Tooltip Props
 
