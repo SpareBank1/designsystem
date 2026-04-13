@@ -6,6 +6,8 @@
         "moduleResolution": "node",
         "strict": true,
         "jsx": "react",
+        "target": "ES2019",
+        "module": "ES2020",
         "lib": ["dom", "es2019"]
     }
 }
