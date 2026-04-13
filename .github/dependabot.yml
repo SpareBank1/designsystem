@@ -1,0 +1,43 @@
+version: 2
+updates:
+    - package-ecosystem: 'npm'
+      directory: '/'
+      schedule:
+          interval: 'weekly'
+          day: 'monday'
+          time: '06:00'
+          timezone: 'Europe/Oslo'
+      cooldown:
+          semver-patch-days: 7
+          semver-minor-days: 7
+          semver-major-days: 30
+      labels:
+          - 'dependencies'
+      ignore:
+          - dependency-name: '@sb1/*'
+      groups:
+          minor-and-patch:
+              update-types:
+                  - 'minor'
+                  - 'patch'
+          major:
+              update-types:
+                  - 'major'
+
+    - package-ecosystem: 'github-actions'
+      directory: '/'
+      schedule:
+          interval: 'weekly'
+          day: 'monday'
+          time: '06:00'
+          timezone: 'Europe/Oslo'
+      labels:
+          - 'dependencies'
+      groups:
+          minor-and-patch:
+              update-types:
+                  - 'minor'
+                  - 'patch'
+          major:
+              update-types:
+                  - 'major'
