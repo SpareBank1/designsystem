@@ -32,12 +32,7 @@ module.exports = {
                 ],
                 'at-rule-prelude-no-invalid': null,
                 'declaration-property-value-no-unknown': null,
-                'property-no-deprecated': [
-                    true,
-                    {
-                        ignoreProperties: ['clip'],
-                    },
-                ],
+                'property-no-deprecated': null,
             },
         },
     ],
