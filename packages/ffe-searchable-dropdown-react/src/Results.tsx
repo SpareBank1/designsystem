@@ -1,5 +1,4 @@
 import React from 'react';
-import { Scrollbars } from 'react-custom-scrollbars-4';
 import { Option } from './Option';
 import { NoMatch } from './NoMatch';
 import { Locale } from './types';
@@ -54,7 +53,7 @@ export function Results<Item extends Record<string, any>>({
     isEqual,
 }: ResultProps<Item>) {
     return (
-        <Scrollbars autoHeight={true} autoHeightMax={335}>
+        <div style={{ maxHeight: 335, overflowY: 'auto' }}>
             {noMatch && (
                 <NoMatch
                     noMatch={noMatch}
@@ -89,6 +88,6 @@ export function Results<Item extends Record<string, any>>({
                     </Option>
                 );
             })}
-        </Scrollbars>
+        </div>
     );
 }
