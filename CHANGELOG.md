@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [100.12.4](https://github.com/SpareBank1/designsystem/compare/v100.12.3...v100.12.4) (2026-04-13)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** allow ReactNode for TextField prefix and suffix ([9d66e8e](https://github.com/SpareBank1/designsystem/commit/9d66e8e63dd9a1617b514ea7beec55f43a68a667))
+
+
+
+
+
 ## [100.12.3](https://github.com/SpareBank1/designsystem/compare/v100.12.2...v100.12.3) (2026-03-31)
 
 
