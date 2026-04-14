@@ -30,6 +30,7 @@
     }
 
     &__button {
+        height: calc(2.8125rem - var(--ffe-g-border-width) * 2);
         background: transparent;
         border: none;
         grid-column: 2 e('/') 3;
@@ -40,6 +41,10 @@
         width: 56px;
         cursor: pointer;
         isolation: isolate;
+
+        &:focus-visible {
+            background-color: var(--ffe-color-fill-primary-subtle);
+        }
     }
 
     .ffe-input-field:focus {
