@@ -13,6 +13,7 @@ program
         'Watch files for changes and rerun tests. Same as jest --watchAll',
     )
     .allowUnknownOption()
+    .allowExcessArguments()
     .action((options, { args }) => {
         if (options.watch) {
             args.push('--watchAll');
@@ -25,6 +26,7 @@ program
     .command('stylelint')
     .description('lint code with stylelint')
     .allowUnknownOption()
+    .allowExcessArguments()
     .action((options, { args }) => {
         stylelintCommand(args);
     });

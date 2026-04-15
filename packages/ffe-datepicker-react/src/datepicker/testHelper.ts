@@ -1,5 +1,6 @@
+import { act } from 'react';
+
 async function simulateTyping(element: HTMLElement, text: string, delay = 100) {
-    const { act } = await import('@testing-library/react');
     let _text = text;
     if (text.length === 0) {
         _text = '0';
@@ -72,17 +73,18 @@ export async function getDatepickerByLabelText(
     label: string,
     index = 0,
 ): Promise<DatepickerTestHelper> {
-    const { screen } = await import('@testing-library/react');
-    const elements = screen
-        .getAllByText(label)
-        .map(element =>
-            element.parentElement?.parentElement?.querySelector(
+    const elements = Array.from(document.querySelectorAll<HTMLElement>('*'))
+        .filter(
+            el =>
+                el.children.length === 0 &&
+                el.textContent?.trim() === label,
+        )
+        .map(el =>
+            el.parentElement?.parentElement?.querySelector<HTMLElement>(
                 '.ffe-datepicker',
             ),
         )
-        .filter(
-            element => element !== null && element !== undefined,
-        ) as HTMLElement[];
+        .filter((el): el is HTMLElement => el !== null && el !== undefined);
 
     function getValue(element: Element): string {
         const [dayElement, monthElement, yearElement] = Array.from(
@@ -103,7 +105,6 @@ export async function getDatepickerByLabelText(
     }
 
     async function setValue(element: HTMLElement, value: string) {
-        const { act } = await import('@testing-library/react');
         const [dayElement, monthElement, yearElement] = Array.from(
             element.querySelectorAll('[role="spinbutton"]'),
         ) as HTMLElement[];

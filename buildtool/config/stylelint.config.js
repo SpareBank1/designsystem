@@ -1,4 +1,5 @@
 module.exports = {
+    plugins: ['stylelint-no-unsupported-browser-features'],
     extends: ['stylelint-config-standard', '@sb1/stylelint-config-ffe'],
     ignoreFiles: ['**/colors-semantic.less'],
     overrides: [
@@ -15,6 +16,7 @@ module.exports = {
             customSyntax: 'postcss-less',
             rules: {
                 'color-function-notation': null,
+                'color-function-alias-notation': null,
                 'import-notation': 'string',
                 '@sb1/ffe-no-deprecated-color-vars': [
                     true,
@@ -28,6 +30,9 @@ module.exports = {
                         ignoreFunctions: ['extend', 'fade', 'data-uri', 'e'],
                     },
                 ],
+                'at-rule-prelude-no-invalid': null,
+                'declaration-property-value-no-unknown': null,
+                'property-no-deprecated': null,
             },
         },
     ],
@@ -92,6 +97,25 @@ module.exports = {
             'complex',
             {
                 severity: 'warning',
+            },
+        ],
+        'plugin/no-unsupported-browser-features': [
+            true,
+            {
+                severity: 'warning',
+                ignore: [
+                    'css-sel3',
+                    'css-nesting',
+                    'css-overflow',
+                    'css-hyphens',
+                    'css-matches-pseudo',
+                    'css-not-sel-list',
+                    'css-masks',
+                    'intrinsic-width',
+                    'multicolumn',
+                    'css3-cursors',
+                    'css-grid-animation',
+                ],
             },
         ],
     },

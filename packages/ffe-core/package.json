@@ -38,9 +38,9 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^100.12.4",
-        "case": "^1.5.5",
-        "less": "^4.1.2",
-        "postcss": "^8.3.6"
+        "case": "^1.6.3",
+        "less": "^4.6.4",
+        "postcss": "^8.5.8"
     },
     "publishConfig": {
         "access": "public"
