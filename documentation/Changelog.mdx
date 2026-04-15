@@ -7,6 +7,31 @@ import { SmallText } from '@sb1/ffe-core-react';
 
 Denne siden lister breaking changes og større endringer i designsystemet. Du finner fullstendig changelog på [releasesiden på GitHub](https://github.com/SpareBank1/designsystem/releases).
 
+### 101.0.0 Avhengighetsopprydning og bugfikser (apr 2026)
+
+Denne versjonen er en **major** release primært drevet av oppgradering av interne avhengigheter til nye major-versjoner. Vi anbefaler å følge ekstra med på eventuelle feil etter oppdatering, slik som med alle major-versjoner.
+
+**Avhengighetsopprydning (alle pakker)**
+Mange pakker har fått ryddet opp i avhengighetslistene: unødvendige pakker er fjernet, og flere er flyttet fra `dependencies` til `devDependencies` eller `peerDependencies`. Dette reduserer størrelsen på `node_modules` og install-tid for konsumenter. Ingen API-endringer.
+
+**`ffe-searchable-dropdown-react`**
+Fjernet `react-custom-scrollbars-4` til fordel for en ren CSS-tilnærming for scroll-styling. Dette er en intern endring — konsumenter trenger ikke gjøre noe.
+
+**`ffe-datepicker-react`**
+- `keydown`-events bobler nå opp fra SpinButton-inputfelter. Dette er en bugfiks og bør ikke gi nye problemer.
+- `uuid`-avhengighet fjernet til fordel for `Math.random` for ID-generering.
+
+**`ffe-datepicker`**
+Visuell fokusindikator på kalenderknappen er nå synlig og korrekt.
+
+**`ffe-buttons`**
+Lagt til `-webkit-appearance: none` for bedre kompatibilitet på iOS/Safari.
+
+**Linting**
+`eslint-plugin-react-hooks` er oppgradert fra v5 til v7. Konsumenter som bruker denne pluginen direkte bør oppdatere peer dep til `^7.0.0`.
+
+Fullstendig liste over endringer finnes på [releasesiden på GitHub](https://github.com/SpareBank1/designsystem/releases/tag/v101.0.0).
+
 ### 100.7.0 Skeleton komponent (des 2025)
 Vi tilbyr nå en ny komponent, `<Skeleton>`, som kan brukes som plassholder mens innhold laster. Den kan brukes til å lage forskjellige former og størrelser. 
 Fullstendig dokumentasjon finner du på [siden for Skeleton](/?path=/docs/komponenter-skeleton--docs).
