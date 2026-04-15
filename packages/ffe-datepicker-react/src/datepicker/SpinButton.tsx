@@ -32,8 +32,6 @@ export const SpinButton = React.forwardRef<HTMLSpanElement, SpinButtonProps>(
         const history = useRef<number[]>([]);
 
         const handleKeyDown = (evt: React.KeyboardEvent) => {
-            evt.stopPropagation();
-
             if (/\d/.test(evt.key)) {
                 history.current =
                     history.current.length === maxLength
