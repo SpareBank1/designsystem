@@ -14,7 +14,7 @@ export interface CalendarProps {
     calendarClassName?: string;
     escKeyHandler?: React.KeyboardEventHandler<HTMLDivElement>;
     locale: 'nb' | 'nn' | 'en';
-    onDatePicked: (date: string) => void;
+    onDatePicked: (date: string, keepOpen?: boolean) => void;
     selectedDate?: string | null;
     focusOnMount?: boolean;
     /** Om måned- og år-dropdown skal vises i kalenderen */
@@ -102,6 +102,7 @@ export class Calendar extends Component<CalendarProps, State> {
             'ArrowUp',
             'ArrowRight',
             'ArrowDown',
+            ' ',
         ] as const;
         if (scrollableEvents.includes(event.key)) {
             event.preventDefault();
@@ -109,14 +110,18 @@ export class Calendar extends Component<CalendarProps, State> {
 
         switch (event.key) {
             case 'Enter':
+            case ' ':
                 if (
                     calendar.isDateWithinDateRange(calendar.focusedDate) &&
-                    this.props.disabledDates?.includes(
+                    !this.props.disabledDates?.includes(
                         calendar.focusedDate.toString(),
-                    ) === false
+                    )
                 ) {
                     calendar.selectFocusedDate();
-                    this.props.onDatePicked(calendar.selected());
+                    this.props.onDatePicked(
+                        calendar.selected(),
+                        event.key === ' ',
+                    );
                 }
                 event.preventDefault();
                 break;
@@ -178,13 +183,13 @@ export class Calendar extends Component<CalendarProps, State> {
     nextMonth(evt: React.MouseEvent<HTMLButtonElement>) {
         evt.preventDefault();
         this.state.calendar.nextMonth();
-        this.forceUpdate();
+        this.forceUpdate(() => this.nextMonthButtonElementRef.current?.focus());
     }
 
     previousMonth(evt: React.MouseEvent<HTMLButtonElement>) {
         evt.preventDefault();
         this.state.calendar.previousMonth();
-        this.forceUpdate();
+        this.forceUpdate(() => this.prevMonthButtonElementRef.current?.focus());
     }
 
     renderDate(calendarButtonState: CalendarButtonState, index: number) {

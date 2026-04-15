@@ -242,15 +242,17 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
         }
     };
 
-    const datePickedHandler = (date: string) => {
+    const datePickedHandler = (date: string, keepOpen?: boolean) => {
         const simpleDate = getSimpleDateFromString(date);
         if (simpleDate) {
             setDay([simpleDate.date]);
             setMonth([simpleDate.month + 1]);
             setYear([simpleDate.year]);
-            setDisplayDatePicker(false);
             setCalendarActiveDate(date);
-            buttonRef.current?.focus();
+            if (!keepOpen) {
+                setDisplayDatePicker(false);
+                buttonRef.current?.focus();
+            }
         }
     };
 
