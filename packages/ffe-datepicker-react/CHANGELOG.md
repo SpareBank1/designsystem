@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [101.0.0](https://github.com/SpareBank1/designsystem/compare/v100.12.4...v101.0.0) (2026-04-15)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** allow key events to bubble from SpinButton input fields ([39811ae](https://github.com/SpareBank1/designsystem/commit/39811aeb8fc9d1b80c28b97c94ad2a077c5818e4))
+
+
+* feat(ffe-datepicker-react)!: ([f6c3085](https://github.com/SpareBank1/designsystem/commit/f6c3085794c973740b61f9c4dab655405e313913))
+
+
+### BREAKING CHANGES
+
+* rydder opp i avhangigheter:
+- fjerner bruk av uuid til fordel for math.random
+- flytter avhengigheter til devDep og fjerner avhengighet
+
+
+
+
+
 ## [100.12.4](https://github.com/SpareBank1/designsystem/compare/v100.12.3...v100.12.4) (2026-04-13)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

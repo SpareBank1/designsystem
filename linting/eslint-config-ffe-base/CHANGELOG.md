@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [101.0.0](https://github.com/SpareBank1/designsystem/compare/v100.12.4...v101.0.0) (2026-04-15)
+
+
+### chore
+
+* **linting:** upgrade stylelint 16→17 and react-hooks plugin 5→7 ([e4e0500](https://github.com/SpareBank1/designsystem/commit/e4e0500e743c48652410d073c67d3936a16907d8))
+
+
+### BREAKING CHANGES
+
+* **linting:** eslint-plugin-react-hooks peer dependency bumped to ^7.0.0.
+Update this in consuming projects.
+
+
+
+
+
 ## [100.12.4](https://github.com/SpareBank1/designsystem/compare/v100.12.3...v100.12.4) (2026-04-13)
 
 **Note:** Version bump only for package @sb1/eslint-config-ffe-base

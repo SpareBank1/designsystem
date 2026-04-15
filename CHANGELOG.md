@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [101.0.0](https://github.com/SpareBank1/designsystem/compare/v100.12.4...v101.0.0) (2026-04-15)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** add -webkit-appearance: none for iOS/Safari compatibility ([0fa56af](https://github.com/SpareBank1/designsystem/commit/0fa56af0ca1567940e414b11503049ea5fa4b640))
+* **ffe-datepicker-react:** allow key events to bubble from SpinButton input fields ([39811ae](https://github.com/SpareBank1/designsystem/commit/39811aeb8fc9d1b80c28b97c94ad2a077c5818e4))
+* **ffe-datepicker:** visuell indikator for focus i kalenderknappen ([03f0896](https://github.com/SpareBank1/designsystem/commit/03f0896329fd2d1f89e757dcbbcb256051795845))
+
+
+### chore
+
+* **linting:** upgrade stylelint 16→17 and react-hooks plugin 5→7 ([e4e0500](https://github.com/SpareBank1/designsystem/commit/e4e0500e743c48652410d073c67d3936a16907d8))
+
+
+* feat(ffe-symbols-react)!: rydd opp i avhangigheter ([94c4bc3](https://github.com/SpareBank1/designsystem/commit/94c4bc373e0c2c0f8a764193a906328d64e78738))
+* feat(ffe-datepicker-react)!: ([f6c3085](https://github.com/SpareBank1/designsystem/commit/f6c3085794c973740b61f9c4dab655405e313913))
+
+
+### Features
+
+* **ffe-searchable-dropdown-react!:**  rydd og fjern avhangigheter ([e22de13](https://github.com/SpareBank1/designsystem/commit/e22de13c46c3559bfa5a1d67231f22c1ca89df0b))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react!:** Prøver å fjerne react-custom-scrollbars-4 til fordel for ren css approach
+* flytter avhengigheter til devDep og legger til manglende devDep
+* rydder opp i avhangigheter:
+- fjerner bruk av uuid til fordel for math.random
+- flytter avhengigheter til devDep og fjerner avhengighet
+* **linting:** eslint-plugin-react-hooks peer dependency bumped to ^7.0.0.
+Update this in consuming projects.
+
+
+
+
+
 ## [100.12.4](https://github.com/SpareBank1/designsystem/compare/v100.12.3...v100.12.4) (2026-04-13)
 
 

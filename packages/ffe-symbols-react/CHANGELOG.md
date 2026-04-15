@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [101.0.0](https://github.com/SpareBank1/designsystem/compare/v100.12.4...v101.0.0) (2026-04-15)
+
+
+* feat(ffe-symbols-react)!: rydd opp i avhangigheter ([94c4bc3](https://github.com/SpareBank1/designsystem/commit/94c4bc373e0c2c0f8a764193a906328d64e78738))
+
+
+### BREAKING CHANGES
+
+* flytter avhengigheter til devDep og legger til manglende devDep
+
+
+
+
+
 ## [100.12.4](https://github.com/SpareBank1/designsystem/compare/v100.12.3...v100.12.4) (2026-04-13)
 
 **Note:** Version bump only for package @sb1/ffe-symbols-react

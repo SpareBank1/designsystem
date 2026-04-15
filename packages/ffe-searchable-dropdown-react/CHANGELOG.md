@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [101.0.0](https://github.com/SpareBank1/designsystem/compare/v100.12.4...v101.0.0) (2026-04-15)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react!:**  rydd og fjern avhangigheter ([e22de13](https://github.com/SpareBank1/designsystem/commit/e22de13c46c3559bfa5a1d67231f22c1ca89df0b))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react!:** Prøver å fjerne react-custom-scrollbars-4 til fordel for ren css approach
+
+
+
+
+
 ## [100.12.4](https://github.com/SpareBank1/designsystem/compare/v100.12.3...v100.12.4) (2026-04-13)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
