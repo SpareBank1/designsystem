@@ -1,0 +1,1 @@
+import{R as o}from"./index-DQDNmYQF.js";import{c as r}from"./index-D2FocPV0.js";function i(e){const{as:t="a",className:n,underline:s=!0,...a}=e;return o.createElement(t,{className:r("ffe-link-text",{"ffe-link-text--no-underline":!s},n),...a})}i.__docgenInfo={description:"",methods:[],displayName:"LinkText"};export{i as L};

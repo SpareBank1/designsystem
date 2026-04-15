@@ -1,0 +1,1 @@
+import{R as e}from"./index-DQDNmYQF.js";import{c as f}from"./index-D2FocPV0.js";const s=e.forwardRef(({className:o,inline:r,...a},d)=>e.createElement("select",{className:f("ffe-dropdown","ffe-default-mode",{"ffe-dropdown--inline":r},o),ref:d,...a}));s.__docgenInfo={description:"",methods:[],displayName:"Dropdown"};export{s as D};

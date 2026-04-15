@@ -1,0 +1,1 @@
+import{R as e}from"./index-DQDNmYQF.js";import{B as n}from"./BaseButton-CXIlvryK.js";import{f as r}from"./fixedForwardRef-DqyCgkTx.js";function i(t,o){return e.createElement(n,{...t,ref:o,buttonType:"action"})}const a=r(i);a.__docgenInfo={description:"",methods:[],displayName:"ActionButton"};export{a as A};

@@ -1,0 +1,1 @@
+import{R as o}from"./index-DQDNmYQF.js";import{c as r}from"./index-D2FocPV0.js";function a(t){const{className:e,...s}=t;return o.createElement("strong",{className:r("ffe-strong-text",e),...s})}a.__docgenInfo={description:"",methods:[],displayName:"StrongText"};export{a as S};

@@ -1,0 +1,1 @@
+import{R as a}from"./index-DQDNmYQF.js";import{c as r}from"./index-D2FocPV0.js";const s=a.forwardRef(({className:e,...o},t)=>a.createElement("caption",{className:r("ffe-table__caption",e),ref:t,...o}));s.__docgenInfo={description:"",methods:[],displayName:"TableCaption"};export{s as T};

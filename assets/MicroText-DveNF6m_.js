@@ -1,0 +1,1 @@
+import{R as r}from"./index-DQDNmYQF.js";import{c}from"./index-D2FocPV0.js";function m(e){const{as:s="span",strong:t=!1,className:o,...a}=e;return r.createElement(s,{className:c("ffe-micro-text",{"ffe-micro-text--strong":t},o),...a})}m.__docgenInfo={description:"",methods:[],displayName:"MicroText"};export{m as M};
