@@ -49,7 +49,7 @@ Ingen komponentspesifikke props utover native HTML-attributter.
 | `calendarClassName` | `string` | Nei | - |
 | `escKeyHandler` | `React.KeyboardEventHandler<HTMLDivElement>` | Nei | - |
 | `locale` | `'nb' | 'nn' | 'en'` | Ja | - |
-| `onDatePicked` | `(date: string) => void` | Ja | - |
+| `onDatePicked` | `(date: string, keepOpen?: boolean) => void` | Ja | - |
 | `selectedDate` | `string | null` | Nei | - |
 | `focusOnMount` | `boolean` | Nei | - |
 | `dropdownCaption` | `boolean` | Nei | Om måned- og år-dropdown skal vises i kalenderen |
