@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [101.0.1](https://github.com/SpareBank1/designsystem/compare/v101.0.0...v101.0.1) (2026-04-17)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** fikser en alignment-bug mellom mnd og år i calendar header ([2d2af4a](https://github.com/SpareBank1/designsystem/commit/2d2af4a3894782b7fa5e0e62581e2b7b60b1d03b))
+
+
+
+
+
 # [101.0.0](https://github.com/SpareBank1/designsystem/compare/v100.12.4...v101.0.0) (2026-04-15)
 
 
