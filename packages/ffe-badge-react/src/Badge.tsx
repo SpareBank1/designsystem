@@ -3,7 +3,7 @@ import React from 'react';
 
 export type BadgeProps = {
     className?: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
 };
 
 export function Badge({ className, children, ...rest }: BadgeProps) {

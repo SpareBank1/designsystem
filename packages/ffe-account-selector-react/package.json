@@ -32,7 +32,7 @@
     "dependencies": {
         "@sb1/ffe-formatters": "^101.0.1",
         "@sb1/ffe-icons-react": "^101.0.1",
-        "@sb1/ffe-searchable-dropdown-react": "^100.12.4",
+        "@sb1/ffe-searchable-dropdown-react": "^101.0.1",
         "classnames": "^2.5.1"
     },
     "devDependencies": {
