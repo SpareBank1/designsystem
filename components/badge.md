@@ -25,7 +25,7 @@ npm install @sb1/ffe-badge-react
 | Prop | Type | Påkrevd | Beskrivelse |
 |------|------|---------|-------------|
 | `className` | `string` | Nei | - |
-| `children` | `React.ReactNode` | Ja | - |
+| `children` | `React.ReactNode` | Nei | - |
 
 ## Eksempler (fra README)
 
