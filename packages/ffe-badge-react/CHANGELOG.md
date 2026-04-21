@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [101.0.2](https://github.com/SpareBank1/designsystem/compare/v101.0.1...v101.0.2) (2026-04-21)
+
+
+### Bug Fixes
+
+* **ffe-badge-react:** gjør Badge children optional ([94e2d7a](https://github.com/SpareBank1/designsystem/commit/94e2d7a00560fce0b079e10f23ab7a9d6fa5b758))
+
+
+
+
+
 ## [101.0.1](https://github.com/SpareBank1/designsystem/compare/v101.0.0...v101.0.1) (2026-04-17)
 
 **Note:** Version bump only for package @sb1/ffe-badge-react
