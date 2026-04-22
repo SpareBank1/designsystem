@@ -1,0 +1,203 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design/Native/Utility-klasser" />
+
+# Native — utility-klasser
+
+Utility-klasser for å kontrollere tekstmarkering, berøring og dra-og-slipp-oppførsel i hybridapper der webinnhold vises i en native app sin WebView.
+
+Uten tilpasning vil WebView-innhold oppføre seg som en vanlig nettside: tekst kan markeres ved langt trykk, elementer kan dras, og trykk har en merkbar forsinkelse. Dette bryter med forventningene til en native app.
+
+## Klasser
+
+<table>
+    <thead>
+        <tr>
+            <th>CSS-klasse</th>
+            <th>Beskrivelse</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.ffe-native</code></td>
+            <td>Gjør at innholdet oppfører seg som native UI. Settes på <code>&lt;body&gt;</code> eller en wrapper.</td>
+        </tr>
+        <tr>
+            <td><code>.ffe-selectable</code></td>
+            <td>Lar brukeren markere og kopiere tekst. Overstyrer <code>.ffe-native</code>.</td>
+        </tr>
+        <tr>
+            <td><code>.ffe-selectable-all</code></td>
+            <td>Ett klikk markerer alt innhold i elementet. Overstyrer <code>.ffe-native</code>.</td>
+        </tr>
+    </tbody>
+</table>
+
+## CSS-egenskaper
+
+### `.ffe-native`
+
+Påvirker elementet selv og alle barn:
+
+<table>
+    <thead>
+        <tr>
+            <th>Egenskap</th>
+            <th>Verdi</th>
+            <th>Effekt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>user-select</code></td>
+            <td><code>none</code></td>
+            <td>Hindrer tekstmarkering</td>
+        </tr>
+        <tr>
+            <td><code>-webkit-touch-callout</code></td>
+            <td><code>none</code></td>
+            <td>Deaktiverer iOS long-press kontekstmeny</td>
+        </tr>
+        <tr>
+            <td><code>-webkit-user-drag</code></td>
+            <td><code>none</code></td>
+            <td>Hindrer dra-og-slipp av elementer (iOS Safari)</td>
+        </tr>
+        <tr>
+            <td><code>touch-action</code></td>
+            <td><code>manipulation</code></td>
+            <td>Fjerner 300ms tap-delay og dobbelttap-zoom</td>
+        </tr>
+    </tbody>
+</table>
+
+Input-felt, textarea og contenteditable-elementer inne i `.ffe-native` får automatisk `user-select: text`, slik at brukere kan redigere og markere tekst i skjemafelt som normalt.
+
+### `.ffe-selectable`
+
+Påvirker elementet selv og alle barn:
+
+<table>
+    <thead>
+        <tr>
+            <th>Egenskap</th>
+            <th>Verdi</th>
+            <th>Effekt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>user-select</code></td>
+            <td><code>text</code></td>
+            <td>Tillater vanlig tekstmarkering</td>
+        </tr>
+        <tr>
+            <td><code>-webkit-touch-callout</code></td>
+            <td><code>default</code></td>
+            <td>Gjenoppretter long-press kontekstmeny</td>
+        </tr>
+    </tbody>
+</table>
+
+### `.ffe-selectable-all`
+
+Påvirker elementet selv og alle barn:
+
+<table>
+    <thead>
+        <tr>
+            <th>Egenskap</th>
+            <th>Verdi</th>
+            <th>Effekt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>user-select</code></td>
+            <td><code>all</code> (fallback: <code>text</code>)</td>
+            <td>Ett klikk markerer alt innhold</td>
+        </tr>
+        <tr>
+            <td><code>-webkit-touch-callout</code></td>
+            <td><code>default</code></td>
+            <td>Gjenoppretter long-press kontekstmeny</td>
+        </tr>
+    </tbody>
+</table>
+
+`user-select: all` støttes i Chrome 53+, Safari 15+ og Firefox 121+. Eldre Firefox-versjoner får `user-select: text` som fallback.
+
+## Spesifisitet
+
+Alle klassene bruker vanlige klasseselektorer (spesifisitet `0,1,0`). `.ffe-selectable` og `.ffe-selectable-all` overstyrer `.ffe-native` via kildeorden.
+
+## Eksempler
+
+### Grunnleggende bruk
+
+Prøv å markere teksten i eksempelet under. Tekst innenfor `.ffe-native` kan ikke markeres, mens tekst med `.ffe-selectable` kan det.
+
+<div className="ffe-native" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
+    <h3>Mitt native grensesnitt</h3>
+    <p>Denne teksten kan ikke markeres.</p>
+    <button className="ffe-primary-button">Trykk meg</button>
+    <div className="ffe-selectable" style={{ marginTop: '1rem', padding: '0.75rem', background: '#f6f8fa', borderRadius: '4px' }}>
+        <p><strong>Vilkår:</strong> Denne teksten kan markeres og kopieres.</p>
+    </div>
+</div>
+
+```html
+<div class="ffe-native">
+    <h3>Mitt native grensesnitt</h3>
+    <p>Denne teksten kan ikke markeres.</p>
+    <button class="ffe-primary-button">Trykk meg</button>
+    <div class="ffe-selectable">
+        <p><strong>Vilkår:</strong> Denne teksten kan markeres og kopieres.</p>
+    </div>
+</div>
+```
+
+### Marker alt med ett klikk
+
+`.ffe-selectable-all` gjør at ett klikk markerer alt innhold i elementet. Praktisk for kontonummer, referanser og kodeblokker. Prøv å klikke på kontonummeret.
+
+<div className="ffe-native" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
+    <p>Kontonummer:</p>
+    <div className="ffe-selectable-all" style={{ padding: '0.75rem', background: '#f6f8fa', borderRadius: '4px', fontFamily: 'monospace' }}>
+        1232 56 78901
+    </div>
+</div>
+
+```html
+<div class="ffe-native">
+    <p>Kontonummer:</p>
+    <div class="ffe-selectable-all">1232 56 78901</div>
+</div>
+```
+
+### Skjemafelt fungerer alltid
+
+Input-felt, textarea og contenteditable-elementer unntas automatisk fra `.ffe-native`, slik at brukere alltid kan redigere tekst.
+
+<div className="ffe-native" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
+    <p>Tekst som ikke kan markeres.</p>
+    <label className="ffe-form-label" htmlFor="native-demo-input">Navn</label>
+    <input id="native-demo-input" className="ffe-input-field" type="text" placeholder="Skriv her — fungerer normalt" />
+</div>
+
+```html
+<div class="ffe-native">
+    <p>Tekst som ikke kan markeres.</p>
+    <label class="ffe-form-label">Navn</label>
+    <input class="ffe-input-field" type="text" placeholder="Skriv her — fungerer normalt" />
+</div>
+```
+
+## Tilgjengelighet
+
+Vær oppmerksom på at `user-select: none` kan påvirke brukere som er avhengige av å markere tekst for å kopiere det. Bruk `.ffe-selectable` på innhold brukeren kan ha behov for å kopiere, for eksempel:
+
+- Avtaletekst og vilkår
+- Kontaktinformasjon (telefonnummer, e-post, adresse)
+- Kontonummer, referansenummer og betalingsinformasjon
+- Feilmeldinger brukeren kan trenge å dele med kundeservice
