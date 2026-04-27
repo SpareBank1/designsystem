@@ -1,14 +1,19 @@
-.ffe-native,
-.ffe-native * {
+.ffe-native.ffe-native-ready,
+.ffe-native.ffe-native-ready *,
+.ffe-native .ffe-native-ready,
+.ffe-native .ffe-native-ready * {
     user-select: none;
     -webkit-touch-callout: none;
     -webkit-user-drag: none;
     touch-action: manipulation;
 }
 
-.ffe-native input,
-.ffe-native textarea,
-.ffe-native [contenteditable] {
+.ffe-native.ffe-native-ready input,
+.ffe-native.ffe-native-ready textarea,
+.ffe-native.ffe-native-ready [contenteditable],
+.ffe-native .ffe-native-ready input,
+.ffe-native .ffe-native-ready textarea,
+.ffe-native .ffe-native-ready [contenteditable] {
     user-select: text;
 }
 

@@ -1,0 +1,33 @@
+.ffe-copy-text {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1em;
+    min-height: 44px;
+    padding: 0 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    vertical-align: middle;
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px var(--ffe-color-border-interactive-focus);
+        border-radius: 2px;
+    }
+}
+
+.ffe-copy-text__feedback {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% - 8px);
+    font-size: 0.85em;
+    white-space: nowrap;
+    pointer-events: none;
+    background: var(--ffe-color-surface-primary-default);
+    padding: 2px 6px;
+    border-radius: 2px;
+}

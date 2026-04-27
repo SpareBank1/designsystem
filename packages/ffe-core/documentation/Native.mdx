@@ -8,6 +8,20 @@ Utility-klasser for å kontrollere tekstmarkering, berøring og dra-og-slipp-opp
 
 Uten tilpasning vil WebView-innhold oppføre seg som en vanlig nettside: tekst kan markeres ved langt trykk, elementer kan dras, og trykk har en merkbar forsinkelse. Dette bryter med forventningene til en native app.
 
+## Aktivering
+
+Native-oppførselen aktiveres bare når både `.ffe-native` og `.ffe-native-ready` er til stede. Det er bevisst:
+
+- **`.ffe-native`** settes av rammeverket rundt nettsiden (typisk på `<body>`) og markerer at siden kjører i en native WebView.
+- **`.ffe-native-ready`** settes av det enkelte team/applikasjonen når appen er testet og klar for native-oppførsel. Vanligvis plasseres den som et barn av `<body>` — f.eks. på rot-elementet for app-innholdet.
+
+Dette lar plattformen skru på `.ffe-native` globalt uten å knekke apper som ikke er verifisert. `.ffe-native-ready` er en **midlertidig opt-in-markør** og vil bli fjernet når alle apper er migrert.
+
+Begge oppsett fungerer:
+
+- `.ffe-native-ready` på samme element som `.ffe-native` (vanligvis `<body>`).
+- `.ffe-native-ready` som etterkommer av `.ffe-native` (vanligvis app-rot eller et område av siden).
+
 ## Klasser
 
 <table>
@@ -20,7 +34,11 @@ Uten tilpasning vil WebView-innhold oppføre seg som en vanlig nettside: tekst k
     <tbody>
         <tr>
             <td><code>.ffe-native</code></td>
-            <td>Gjør at innholdet oppfører seg som native UI. Settes på <code>&lt;body&gt;</code> eller en wrapper.</td>
+            <td>Markerer at innholdet vises i en native WebView. Settes av rammeverket på <code>&lt;body&gt;</code> eller en wrapper. Har ingen effekt alene.</td>
+        </tr>
+        <tr>
+            <td><code>.ffe-native-ready</code></td>
+            <td>Opt-in-markør som aktiverer native-oppførsel. Settes av det enkelte team når appen er testet og klar. Midlertidig — fjernes når alle apper er migrert.</td>
         </tr>
         <tr>
             <td><code>.ffe-selectable</code></td>
@@ -129,15 +147,15 @@ Påvirker elementet selv og alle barn:
 
 ## Spesifisitet
 
-Alle klassene bruker vanlige klasseselektorer (spesifisitet `0,1,0`). `.ffe-selectable` og `.ffe-selectable-all` overstyrer `.ffe-native` via kildeorden.
+`.ffe-native-ready` aktiverer oppførselen — enten på samme element som `.ffe-native` (selektor `.ffe-native.ffe-native-ready`, spesifisitet `0,2,0`) eller på et etterkommer-element (selektor `.ffe-native .ffe-native-ready`, spesifisitet `0,2,0`). `.ffe-selectable` og `.ffe-selectable-all` har spesifisitet `0,1,0`, men overstyrer via kildeorden og at `user-select` arves/kaskaderes riktig på barn.
 
 ## Eksempler
 
 ### Grunnleggende bruk
 
-Prøv å markere teksten i eksempelet under. Tekst innenfor `.ffe-native` kan ikke markeres, mens tekst med `.ffe-selectable` kan det.
+Prøv å markere teksten i eksempelet under. Tekst innenfor `.ffe-native-ready` kan ikke markeres, mens tekst med `.ffe-selectable` kan det.
 
-<div className="ffe-native" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
+<div className="ffe-native ffe-native-ready" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
     <h3>Mitt native grensesnitt</h3>
     <p>Denne teksten kan ikke markeres.</p>
     <button className="ffe-primary-button">Trykk meg</button>
@@ -147,7 +165,8 @@ Prøv å markere teksten i eksempelet under. Tekst innenfor `.ffe-native` kan ik
 </div>
 
 ```html
-<div class="ffe-native">
+<!-- .ffe-native settes av rammeverket, .ffe-native-ready av teamet -->
+<div class="ffe-native ffe-native-ready">
     <h3>Mitt native grensesnitt</h3>
     <p>Denne teksten kan ikke markeres.</p>
     <button class="ffe-primary-button">Trykk meg</button>
@@ -157,11 +176,27 @@ Prøv å markere teksten i eksempelet under. Tekst innenfor `.ffe-native` kan ik
 </div>
 ```
 
+### Gradvis aktivering — bare deler av siden
+
+`.ffe-native-ready` kan settes lenger ned i treet for å aktivere native-oppførsel bare i verifiserte deler.
+
+```html
+<body class="ffe-native">
+    <header>...</header>
+    <main class="ffe-native-ready">
+        <!-- verifisert område med native-oppførsel -->
+    </main>
+    <aside>
+        <!-- fortsatt vanlig nettside-oppførsel -->
+    </aside>
+</body>
+```
+
 ### Marker alt med ett klikk
 
 `.ffe-selectable-all` gjør at ett klikk markerer alt innhold i elementet. Praktisk for kontonummer, referanser og kodeblokker. Prøv å klikke på kontonummeret.
 
-<div className="ffe-native" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
+<div className="ffe-native ffe-native-ready" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
     <p>Kontonummer:</p>
     <div className="ffe-selectable-all" style={{ padding: '0.75rem', background: '#f6f8fa', borderRadius: '4px', fontFamily: 'monospace' }}>
         1232 56 78901
@@ -169,7 +204,7 @@ Prøv å markere teksten i eksempelet under. Tekst innenfor `.ffe-native` kan ik
 </div>
 
 ```html
-<div class="ffe-native">
+<div class="ffe-native ffe-native-ready">
     <p>Kontonummer:</p>
     <div class="ffe-selectable-all">1232 56 78901</div>
 </div>
@@ -177,16 +212,16 @@ Prøv å markere teksten i eksempelet under. Tekst innenfor `.ffe-native` kan ik
 
 ### Skjemafelt fungerer alltid
 
-Input-felt, textarea og contenteditable-elementer unntas automatisk fra `.ffe-native`, slik at brukere alltid kan redigere tekst.
+Input-felt, textarea og contenteditable-elementer unntas automatisk fra `.ffe-native-ready`, slik at brukere alltid kan redigere tekst.
 
-<div className="ffe-native" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
+<div className="ffe-native ffe-native-ready" style={{ padding: '1rem', border: '1px solid #dfe6eb', borderRadius: '4px' }}>
     <p>Tekst som ikke kan markeres.</p>
     <label className="ffe-form-label" htmlFor="native-demo-input">Navn</label>
     <input id="native-demo-input" className="ffe-input-field" type="text" placeholder="Skriv her — fungerer normalt" />
 </div>
 
 ```html
-<div class="ffe-native">
+<div class="ffe-native ffe-native-ready">
     <p>Tekst som ikke kan markeres.</p>
     <label class="ffe-form-label">Navn</label>
     <input class="ffe-input-field" type="text" placeholder="Skriv her — fungerer normalt" />
