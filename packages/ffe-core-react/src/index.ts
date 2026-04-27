@@ -29,3 +29,5 @@ export { StrongText } from './typography/StrongText';
 export type { StrongTextProps } from './typography/StrongText';
 export { Wave } from './Wave';
 export type { WaveProps } from './Wave';
+export { CopyText } from './CopyText';
+export type { CopyTextProps } from './CopyText';
