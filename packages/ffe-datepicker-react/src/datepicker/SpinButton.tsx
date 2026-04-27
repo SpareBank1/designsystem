@@ -33,31 +33,36 @@ export const SpinButton = React.forwardRef<HTMLSpanElement, SpinButtonProps>(
 
         const handleKeyDown = (evt: React.KeyboardEvent) => {
             if (/\d/.test(evt.key)) {
+                evt.preventDefault();
+                evt.nativeEvent.stopImmediatePropagation();
+                const digit = parseInt(evt.key);
                 history.current =
-                    history.current.length === maxLength
-                        ? (history.current = [parseInt(evt.key)])
-                        : history.current.concat(parseInt(evt.key));
+                    history.current.length >= maxLength
+                        ? [digit]
+                        : history.current.concat(digit);
                 onSpinButtonChange(history.current);
             } else if (evt.key === 'Backspace' || evt.key === 'Delete') {
-                history.current = [];
                 if (value === 0) {
+                    history.current = [];
                     prevSpinButton?.current?.focus();
                     return;
                 }
-                const newValue = value?.toString().slice(0, -1);
-                history.current = newValue
-                    ? newValue.split('').map(Number)
+                const truncated = value?.toString().slice(0, -1);
+                history.current = truncated
+                    ? truncated.split('').map(Number)
                     : [];
                 onSpinButtonChange(history.current);
             } else if (evt.key === 'ArrowUp') {
                 evt.preventDefault();
+                history.current = [];
                 let newValue = (value ?? 0) + 1;
-                if (newValue && newValue !== null && newValue > max) {
+                if (newValue > max) {
                     newValue = min;
                 }
                 onSpinButtonChange([newValue], false);
             } else if (evt.key === 'ArrowDown') {
                 evt.preventDefault();
+                history.current = [];
                 let newValue = (value ?? 0) - 1;
                 if (newValue < min) {
                     newValue = max;
@@ -85,8 +90,14 @@ export const SpinButton = React.forwardRef<HTMLSpanElement, SpinButtonProps>(
                 aria-valuemax={max}
                 aria-valuenow={value}
                 ref={ref}
-                onKeyDown={handleKeyDown}
                 {...rest}
+                onKeyDown={handleKeyDown}
+                onKeyUp={evt => {
+                    if (/\d/.test(evt.key)) {
+                        evt.preventDefault();
+                        evt.nativeEvent.stopImmediatePropagation();
+                    }
+                }}
             >
                 {children}
             </span>

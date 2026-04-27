@@ -356,7 +356,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     aria-describedby={ariaDescribedby()}
                     aria-labelledby={labelId}
                 >
-                    {day ? padZero(day) : 'dd'}
+                    {day != null ? padZero(day) : 'dd'}
                 </SpinButton>
                 .
                 <SpinButton
@@ -390,7 +390,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     aria-describedby={ariaDescribedby()}
                     aria-labelledby={labelId}
                 >
-                    {month ? padZero(month) : 'mm'}
+                    {month != null ? padZero(month) : 'mm'}
                 </SpinButton>
                 .
                 <SpinButton
@@ -412,7 +412,7 @@ export const DatepickerComp: React.FC<DatepickerCompProps> = ({
                     aria-describedby={ariaDescribedby()}
                     aria-labelledby={labelId}
                 >
-                    {year ? year : 'yyyy'}
+                    {year != null ? year : 'yyyy'}
                 </SpinButton>
             </div>
             <Button

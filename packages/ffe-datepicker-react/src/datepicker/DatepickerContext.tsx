@@ -80,34 +80,35 @@ export const DatepickerProvider: React.FC<Props> = ({
                 month,
                 year,
                 setDay: (newValue, focusNext = undefined) => {
-                    const numbers = newValue.slice(-2);
-                    const [first, second] = numbers;
-                    const total = toNumber(numbers);
+                    const digits = newValue.slice(-2);
+                    const [first, second] = digits;
+                    const total = toNumber(digits);
+                    const isSingleDigit = second === undefined;
                     if (total > MAX_DAYS) {
                         focusNext?.();
-                    } else if (first > 3) {
+                    } else if (isSingleDigit && first >= 4) {
                         setDay(total);
                         focusNext?.();
                     } else {
                         setDay(total);
-                        if (second !== undefined) {
+                        if (!isSingleDigit) {
                             focusNext?.();
                         }
                     }
                 },
                 setMonth: (newValue, focusNext = undefined) => {
-                    const numbers = newValue.slice(-2);
-                    const [first, second] = numbers;
-                    const total = toNumber(numbers);
-
+                    const digits = newValue.slice(-2);
+                    const [first, second] = digits;
+                    const total = toNumber(digits);
+                    const isSingleDigit = second === undefined;
                     if (total > MONTHS_PER_YEAR) {
                         focusNext?.();
-                    } else if (first > 1) {
+                    } else if (isSingleDigit && first >= 2) {
                         setMonth(total);
                         focusNext?.();
                     } else {
                         setMonth(total);
-                        if (second !== undefined) {
+                        if (!isSingleDigit) {
                             focusNext?.();
                         }
                     }
