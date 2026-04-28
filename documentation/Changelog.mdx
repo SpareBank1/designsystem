@@ -7,6 +7,10 @@ import { SmallText } from '@sb1/ffe-core-react';
 
 Denne siden lister breaking changes og større endringer i designsystemet. Du finner fullstendig changelog på [releasesiden på GitHub](https://github.com/SpareBank1/designsystem/releases).
 
+### 101.1.0 Utility-klasser for native (WebView) (apr 2026)
+
+Nye utility-klasser i `ffe-core` for hybridapper der webinnhold vises i native-appens WebView: `.ffe-native`, `.ffe-native-ready`, `.ffe-selectable` og `.ffe-selectable-all`. Klassene styrer tekstmarkering, long-press-kontekstmeny og tap-delay slik at webinnholdet oppleves som en naturlig del av den native appen. Native-oppførselen aktiveres bare når både `.ffe-native` (settes av rammeverket) og `.ffe-native-ready` (settes av teamet etter verifisering) er til stede — `.ffe-native-ready` er en midlertidig opt-in-markør som vil fjernes når alle apper er migrert. Se [Native — utility-klasser](/?path=/docs/design-native-utility-klasser--docs) for detaljer.
+
 ### 101.0.0 Avhengighetsopprydning og bugfikser (apr 2026)
 
 Denne versjonen er en **major** release primært drevet av oppgradering av interne avhengigheter til nye major-versjoner. Vi anbefaler å følge ekstra med på eventuelle feil etter oppdatering, slik som med alle major-versjoner.
