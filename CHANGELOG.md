@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [101.0.3](https://github.com/SpareBank1/designsystem/compare/v101.0.2...v101.0.3) (2026-04-28)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** tillat brukere å skrive dato med tastatur ([317d1fe](https://github.com/SpareBank1/designsystem/commit/317d1fef3d767d516a7f1e7185f5025374eec3cc))
+
+
+
+
+
 ## [101.0.2](https://github.com/SpareBank1/designsystem/compare/v101.0.1...v101.0.2) (2026-04-21)
 
 
