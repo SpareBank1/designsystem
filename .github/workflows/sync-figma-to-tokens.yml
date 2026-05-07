@@ -21,6 +21,17 @@ jobs:
 
             - name: Clone repo
               uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+              with:
+                  persist-credentials: false
+
+            - name: Validate inputs
+              env:
+                  FILE_KEY: ${{ github.event.inputs.file_key }}
+              run: |
+                  if [[ ! "$FILE_KEY" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+                      echo "Error: file_key contains invalid characters. Only a-z, A-Z, 0-9, _ and - are allowed."
+                      exit 1
+                  fi
 
             - name: Install dependencies
               run: npm ci --ignore-scripts

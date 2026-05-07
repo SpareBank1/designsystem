@@ -12,6 +12,9 @@ on:
         - cron: '0 8,11,13,15 * * 1-5'
     workflow_dispatch:
 
+permissions:
+    contents: write
+
 jobs:
     merge:
         name: Merge develop into main branch
