@@ -70,13 +70,13 @@ function BaseButtonWithForwardRef<As extends ElementType>(
                 {leftIcon &&
                     React.cloneElement(leftIcon, {
                         className: 'ffe-button__icon ffe-button__icon--left',
-                        size: size,
+                        size: leftIcon.props.size ?? size,
                     })}
                 {children}
                 {rightIcon &&
                     React.cloneElement(rightIcon, {
                         className: 'ffe-button__icon ffe-button__icon--right',
-                        size: size,
+                        size: rightIcon.props.size ?? size,
                     })}
             </span>
             {supportsSpinner && isLoading && (
