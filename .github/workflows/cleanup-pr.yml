@@ -6,6 +6,9 @@ on:
         branches:
             - develop
 
+permissions:
+    contents: read
+
 jobs:
     close_pull_request:
         if: github.event.repository.full_name == 'SpareBank1/designsystem' && github.event_name == 'pull_request' && github.event.action == 'closed' && !github.event.pull_request.head.repo.fork
@@ -14,7 +17,7 @@ jobs:
         steps:
             - name: Close Pull Request
               id: closepullrequest
-              uses: Azure/static-web-apps-deploy@v1
+              uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9 # v1
               with:
                   azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_BEACH_0D62D0D03 }}
                   action: 'close'

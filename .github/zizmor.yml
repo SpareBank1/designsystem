@@ -1,0 +1,12 @@
+rules:
+    artipacked:
+        ignore:
+            # generate-mcp-context.yml trenger git-credentials for å kjøre
+            # 'git push origin mcp --force' i shell-steget.
+            - generate-mcp-context.yml
+            # publish.yml trenger git-credentials for å kjøre
+            # 'git push origin develop' og 'git push --tags' i shell-steget.
+            - publish.yml
+            # update-main.yml trenger git-credentials for å kjøre
+            # 'git push origin main' i shell-steget.
+            - update-main.yml

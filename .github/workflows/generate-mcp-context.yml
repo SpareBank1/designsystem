@@ -12,7 +12,7 @@ jobs:
         permissions:
             contents: write
         steps:
-            - uses: actions/checkout@v6
+            - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
               with:
                   ref: develop
                   fetch-depth: 1
@@ -24,7 +24,7 @@ jobs:
                       package-lock.json
                   sparse-checkout-cone-mode: false
 
-            - uses: actions/setup-node@v6
+            - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
               with:
                   node-version: 24
 
@@ -38,6 +38,13 @@ jobs:
               env:
                   RELEASE_REF: ${{ github.event.release.tag_name || github.sha }}
               run: |
+                  # Sanitize RELEASE_REF to prevent shell injection via attacker-controlled tag names
+                  SAFE_REF="${RELEASE_REF//[^a-zA-Z0-9._-]/}"
+                  if [ -z "$SAFE_REF" ]; then
+                      echo "Error: RELEASE_REF is empty after sanitization"
+                      exit 1
+                  fi
+
                   git config user.email "designsystem@sparebank1.no"
                   git config user.name "sb1-designsystem"
 
@@ -67,5 +74,5 @@ jobs:
 
                   # Commit and push
                   git add -A
-                  git commit -m "chore: update MCP context for ${RELEASE_REF}" || echo "No changes to commit"
+                  git commit -m "chore: update MCP context for ${SAFE_REF}" || echo "No changes to commit"
                   git push origin mcp --force
