@@ -6,6 +6,9 @@ on:
         branches:
             - develop
 
+permissions:
+    contents: read
+
 jobs:
     test-ci:
         name: Build, test, and deploy preview of components
@@ -13,9 +16,11 @@ jobs:
         if: github.event.repository.full_name == 'SpareBank1/designsystem'
         steps:
             - name: Checkout code
-              uses: actions/checkout@v6
+              uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+              with:
+                  persist-credentials: false
             - name: Setup Node.js
-              uses: actions/setup-node@v6
+              uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
               with:
                   node-version: 24
             - name: Install dependencies
@@ -33,7 +38,7 @@ jobs:
                   GH_PUBLIC_URL: /
             - name: Build and deploy preview
               if: ${{ !github.event.pull_request.head.repo.fork }}
-              uses: Azure/static-web-apps-deploy@v1
+              uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9 # v1
               with:
                   azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_BEACH_0D62D0D03 }}
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
