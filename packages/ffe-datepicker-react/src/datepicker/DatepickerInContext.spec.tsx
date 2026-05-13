@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import { InputGroup } from '../../../ffe-form-react/src/InputGroup';
+import { InputGroup, Label } from '../../../ffe-form-react/src';
 import { Datepicker, DatepickerProps } from './Datepicker';
 import { getDatepickerByLabelText } from './testHelper';
 
@@ -20,6 +20,25 @@ const renderDatePicker = (props?: Partial<DatepickerProps>) =>
     );
 
 describe('<InputGroup><Datepicker /></InputGroup>', () => {
+    it('getDatepickerByLabelText fungerer når label-elementet har child-elementer', async () => {
+        render(
+            <InputGroup
+                label={
+                    <Label>
+                        Datovelger <span aria-hidden="true">*</span>
+                    </Label>
+                }
+            >
+                <Datepicker {...defaultProps} />
+            </InputGroup>,
+        );
+
+        const datepicker = await getDatepickerByLabelText('Datovelger *');
+        expect(
+            datepicker.element.classList.contains('ffe-datepicker'),
+        ).toBeTruthy();
+    });
+
     it('empty datepicker returns <empty string> from testing functions', async () => {
         renderDatePicker();
 
