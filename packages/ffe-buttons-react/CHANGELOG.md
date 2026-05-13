@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [101.0.4](https://github.com/SpareBank1/designsystem/compare/v101.0.3...v101.0.4) (2026-05-13)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** Ikon i knapp matcher knapp størrelse ([8235cd5](https://github.com/SpareBank1/designsystem/commit/8235cd548a020eff27826416ee0ece2f9a75601d))
+* **ffe-buttons-react:** setter incon buttons icons str til iconets med fallback til buttons size ([09ee8e1](https://github.com/SpareBank1/designsystem/commit/09ee8e1841fe4883df8267ddd9db995e1418774b))
+
+
+
+
+
 ## [101.0.3](https://github.com/SpareBank1/designsystem/compare/v101.0.2...v101.0.3) (2026-04-28)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
