@@ -62,29 +62,69 @@ export type DatepickerTestHelper = {
     setValue: (value: string) => Promise<void>;
 };
 
+function findDatepickerElement(
+    label: string,
+    index: number,
+): HTMLElement | undefined {
+    const labelElements = Array.from(
+        document.querySelectorAll<HTMLLabelElement>('label'),
+    ).filter(el => el.textContent?.trim() === label);
+
+    const elements = labelElements
+        .map(el => {
+            const forAttr = el.htmlFor;
+            if (forAttr) {
+                const labeled = document.getElementById(forAttr);
+                if (labeled) {
+                    if (labeled.classList.contains('ffe-datepicker')) {
+                        return labeled;
+                    }
+                    return labeled.querySelector<HTMLElement>('.ffe-datepicker');
+                }
+            }
+            return (
+                el.parentElement?.querySelector<HTMLElement>(
+                    '.ffe-datepicker',
+                ) ??
+                el.parentElement?.parentElement?.querySelector<HTMLElement>(
+                    '.ffe-datepicker',
+                ) ??
+                null
+            );
+        })
+        .filter((el): el is HTMLElement => el !== null && el !== undefined);
+
+    return elements[index];
+}
+
 /**
  * Get a datepicker with helper functions by label
  *
  * @param label label of the datepicker element you want to get
  * @param index if there are multiple datepicker elements with the same label, you can specify which one you want to get
+ * @param timeout how long to wait for the element to appear (ms), default 3000
  * @returns DatepickerTestHelper
  */
 export async function getDatepickerByLabelText(
     label: string,
     index = 0,
+    timeout = 3000,
 ): Promise<DatepickerTestHelper> {
-    const elements = Array.from(document.querySelectorAll<HTMLElement>('*'))
-        .filter(
-            el =>
-                el.children.length === 0 &&
-                el.textContent?.trim() === label,
-        )
-        .map(el =>
-            el.parentElement?.parentElement?.querySelector<HTMLElement>(
-                '.ffe-datepicker',
-            ),
-        )
-        .filter((el): el is HTMLElement => el !== null && el !== undefined);
+    const deadline = Date.now() + timeout;
+    let datepickerElement: HTMLElement | undefined;
+
+    while (true) {
+        datepickerElement = findDatepickerElement(label, index);
+        if (datepickerElement) break;
+        if (Date.now() >= deadline) {
+            throw new Error(
+                `getDatepickerByLabelText: datepicker with label "${label}" (index ${index}) not found within ${timeout}ms`,
+            );
+        }
+        await new Promise<void>(resolve => setTimeout(resolve, 50));
+    }
+
+    const element = datepickerElement;
 
     function getValue(element: Element): string {
         const [dayElement, monthElement, yearElement] = Array.from(
@@ -122,8 +162,8 @@ export async function getDatepickerByLabelText(
     }
 
     return {
-        element: elements[index],
-        getValue: () => getValue(elements[index]),
-        setValue: (value: string) => setValue(elements[index], value),
+        element,
+        getValue: () => getValue(element),
+        setValue: (value: string) => setValue(element, value),
     };
 }
