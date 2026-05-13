@@ -40,7 +40,7 @@
         "@sb1/ffe-buildtool": "^101.0.4",
         "case": "^1.6.3",
         "less": "^4.6.4",
-        "postcss": "^8.5.8"
+        "postcss": "^8.5.14"
     },
     "publishConfig": {
         "access": "public"
