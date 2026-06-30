@@ -15,6 +15,10 @@ export type BaseButtonProps<As extends ElementType = 'button'> =
         size?: 'sm' | 'md' | 'lg';
         /** Using only an icon, no label */
         iconOnly?: boolean;
+        /** Determinate progress as a percentage (0–100), shown as a fill bar. Use `isLoading` for unknown durations. No effect on shortcut/task. */
+        progress?: number;
+        /** Plays a single sweep each time the value changes, e.g. on a received poll. No effect on shortcut/task. */
+        pulseKey?: string | number;
     };
 /**
  * Internal component
@@ -36,27 +40,54 @@ function BaseButtonWithForwardRef<As extends ElementType>(
         size = 'md',
         iconOnly = false,
         ariaLoadingMessage,
+        progress,
+        pulseKey,
+        style,
         children,
         ...rest
     } = props;
+    // The filled/spinner variants share the same set of button types.
     const supportsSpinner = ['action', 'primary', 'secondary'].includes(
         buttonType,
     );
+    const hasProgress = supportsSpinner && progress !== undefined;
+    const clampedProgress =
+        progress !== undefined
+            ? Math.min(100, Math.max(0, progress))
+            : undefined;
+    const hasPulse = supportsSpinner && pulseKey !== undefined;
 
     return (
         <Comp
-            aria-busy={isLoading && supportsSpinner}
+            aria-busy={(isLoading && supportsSpinner) || hasProgress}
             aria-disabled={isDisabled || (isLoading && supportsSpinner)}
+            {...(hasProgress
+                ? {
+                      role: 'progressbar',
+                      'aria-valuenow': Math.round(clampedProgress as number),
+                      'aria-valuemin': 0,
+                      'aria-valuemax': 100,
+                  }
+                : {})}
+            style={
+                hasProgress
+                    ? ({
+                          ...(style as React.CSSProperties),
+                          '--progress-fill-width': `${clampedProgress}%`,
+                      } as React.CSSProperties)
+                    : style
+            }
             className={classNames(
                 'ffe-button',
                 `ffe-button--${buttonType}`,
                 `ffe-button--${size}`,
                 { 'ffe-button--icon-only': iconOnly },
                 { 'ffe-button--loading': isLoading && supportsSpinner },
+                { 'ffe-button--progress': hasProgress },
                 className,
             )}
             onClick={(event: React.MouseEvent) => {
-                if (isLoading && supportsSpinner) {
+                if ((isLoading && supportsSpinner) || hasProgress) {
                     event.preventDefault();
                     event.stopPropagation();
                 } else if (onClick) {
@@ -84,6 +115,14 @@ function BaseButtonWithForwardRef<As extends ElementType>(
                     aria-label={ariaLoadingMessage}
                     role="img"
                     className="ffe-button__spinner"
+                />
+            )}
+            {hasPulse && (
+                // Remount on key change restarts the sweep animation.
+                <span
+                    key={pulseKey}
+                    className="ffe-button__pulse"
+                    aria-hidden="true"
                 />
             )}
         </Comp>

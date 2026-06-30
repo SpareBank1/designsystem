@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SecondaryButton } from './SecondaryButton';
 import type { StoryObj, Meta } from '@storybook/react';
 import { Icon } from '@sb1/ffe-icons-react';
@@ -65,6 +65,42 @@ export const DifferentSizes: Story = {
             </SecondaryButton>
         </div>
     ),
+};
+
+export const Progress: Story = {
+    args: {
+        progress: 40,
+    },
+    argTypes: {
+        progress: {
+            control: { type: 'range', min: 0, max: 100, step: 1 },
+            description:
+                'Determinate fremdrift i prosent (0–100). Viser en fyll-bar som vokser over knappen.',
+        },
+    },
+    render: args => <SecondaryButton {...args}>Lagrer …</SecondaryButton>,
+};
+
+export const Pulse: Story = {
+    render: function Render() {
+        const [progress, setProgress] = useState(0);
+        const [pulseKey, setPulseKey] = useState(0);
+        // Simulate polling: a tick every second advances progress and pulses.
+        useEffect(() => {
+            const id = setInterval(() => {
+                setProgress(p => (p >= 90 ? 0 : p + 15));
+                setPulseKey(k => k + 1);
+            }, 1000);
+            return () => clearInterval(id);
+        }, []);
+        return (
+            <div className="storybook-button-display-group">
+                <SecondaryButton progress={progress} pulseKey={pulseKey}>
+                    Henter status …
+                </SecondaryButton>
+            </div>
+        );
+    },
 };
 
 export const IconOnly: Story = {

@@ -66,4 +66,79 @@ describe('<BaseButton />', () => {
             expect(button.getAttribute('aria-disabled')).toBe('false');
         });
     });
+
+    describe('when showing progress', () => {
+        it('sets the correct class and fill width', () => {
+            renderBaseButton({ progress: 40 });
+            const button = screen.getByRole('progressbar');
+            expect(
+                button.classList.contains('ffe-button--progress'),
+            ).toBeTruthy();
+            expect(button.style.getPropertyValue('--progress-fill-width')).toBe(
+                '40%',
+            );
+        });
+
+        it('sets progressbar aria attributes', () => {
+            renderBaseButton({ progress: 40 });
+            const button = screen.getByRole('progressbar');
+            expect(button.getAttribute('aria-valuenow')).toBe('40');
+            expect(button.getAttribute('aria-valuemin')).toBe('0');
+            expect(button.getAttribute('aria-valuemax')).toBe('100');
+            expect(button.getAttribute('aria-busy')).toBe('true');
+        });
+
+        it('clamps the value to the 0–100 range', () => {
+            renderBaseButton({ progress: 140 });
+            const button = screen.getByRole('progressbar');
+            expect(button.getAttribute('aria-valuenow')).toBe('100');
+            expect(button.style.getPropertyValue('--progress-fill-width')).toBe(
+                '100%',
+            );
+        });
+
+        it('does nothing for unsupported button type', () => {
+            renderBaseButton({ progress: 40, buttonType: 'shortcut' });
+            const button = screen.getByRole('button');
+            expect(
+                button.classList.contains('ffe-button--progress'),
+            ).toBeFalsy();
+            expect(screen.queryByRole('progressbar')).toBeNull();
+        });
+    });
+
+    describe('when pulsing', () => {
+        it('renders the pulse element when pulseKey is set', () => {
+            renderBaseButton({ pulseKey: 1 });
+            const button = screen.getByRole('button');
+            expect(button.querySelector('.ffe-button__pulse')).toBeTruthy();
+        });
+
+        it('does not render the pulse element without pulseKey', () => {
+            renderBaseButton();
+            const button = screen.getByRole('button');
+            expect(button.querySelector('.ffe-button__pulse')).toBeFalsy();
+        });
+
+        it('remounts the pulse element when pulseKey changes', () => {
+            const { rerender } = render(
+                <BaseButton {...defaultProps} pulseKey={1} />,
+            );
+            const first = screen
+                .getByRole('button')
+                .querySelector('.ffe-button__pulse');
+            rerender(<BaseButton {...defaultProps} pulseKey={2} />);
+            const second = screen
+                .getByRole('button')
+                .querySelector('.ffe-button__pulse');
+            expect(second).toBeTruthy();
+            expect(second).not.toBe(first);
+        });
+
+        it('does nothing for unsupported button type', () => {
+            renderBaseButton({ pulseKey: 1, buttonType: 'shortcut' });
+            const button = screen.getByRole('button');
+            expect(button.querySelector('.ffe-button__pulse')).toBeFalsy();
+        });
+    });
 });

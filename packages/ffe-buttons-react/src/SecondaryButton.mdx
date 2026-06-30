@@ -21,6 +21,24 @@ sette `size`-propen til en av disse verdiene, altså `size="sm"`. Hvis du ikke s
 
 <Canvas of={SecondaryButtonStories.DifferentSizes} />
 
+## Fremdrift
+
+Når en handling har en kjent eller estimert varighet, kan du vise fremdrift direkte i knappen med `progress`-propen (0–100).
+Knappen tegner da en fyll-bar som vokser fra venstre, og får `role="progressbar"` med riktige `aria-value*`-attributter.
+Mens `progress` er satt er knappen ikke klikkbar.
+Bruk `isLoading` i stedet når varigheten er ukjent (da vises en spinner). `progress` støttes på `ActionButton`, `PrimaryButton` og `SecondaryButton`.
+
+<Canvas of={SecondaryButtonStories.Progress} />
+<Controls of={SecondaryButtonStories.Progress} />
+
+### Puls ved hendelser
+
+Skal du i tillegg signalisere en diskret hendelse mens fremdriften vises – for eksempel at en ny poll/heartbeat kom inn fra serveren –
+kan du sende inn `pulseKey`. Hver gang verdien endrer seg, spilles én feiing («sweep») over knappen. Send gjerne inn et tidsstempel eller en teller.
+Animasjonen respekterer `prefers-reduced-motion`.
+
+<Canvas of={SecondaryButtonStories.Pulse} />
+
 ## Ikon i stedet for tekst
 
 Hvis du kun vil bruke ikon på knappen, og ikke tekst, kan du sende inn `iconOnly="true"`. Det gjelder for alle størrelser,

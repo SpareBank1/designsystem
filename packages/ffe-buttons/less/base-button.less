@@ -390,11 +390,89 @@
         }
     }
 
+    &--progress {
+        pointer-events: none;
+        isolation: isolate;
+
+        // Fill colour per variant: light tint under the dark secondary label,
+        // a darker shade under the white primary/action label. Keeps contrast
+        // in both light and dark mode.
+        --progress-fill-color: var(--ffe-color-fill-primary-subtle);
+
+        &.ffe-button--primary {
+            --progress-fill-color: var(
+                --ffe-color-component-button-primary-fill-pressed
+            );
+        }
+
+        &.ffe-button--action {
+            --progress-fill-color: var(
+                --ffe-color-component-button-action-fill-pressed
+            );
+        }
+
+        // Determinate fill bar. The width is driven by the
+        // --progress-fill-width custom property, set inline by the React
+        // component (a clamped 0%–100% value).
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: var(--progress-fill-width, 0%);
+            background-color: var(--progress-fill-color);
+            z-index: 0;
+            pointer-events: none;
+            will-change: width;
+            transition: width var(--ffe-transition-duration) var(--ffe-ease);
+        }
+
+        .ffe-button__label {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            &::before {
+                transition: none;
+            }
+        }
+    }
+
     &__label {
         align-items: center;
         display: flex;
         transition: transform var(--ffe-transition-duration) var(--ffe-ease);
         gap: var(--ffe-spacing-xs);
+    }
+
+    &__pulse {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -20%;
+        width: 20%;
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0.5;
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            var(--progress-fill-color, var(--ffe-color-fill-primary-subtle)) 50%,
+            transparent 100%
+        );
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: button-pulse-sweep 600ms ease-out forwards;
+        }
+
+        @keyframes button-pulse-sweep {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(600%);
+            }
+        }
     }
 
     &__spinner {
