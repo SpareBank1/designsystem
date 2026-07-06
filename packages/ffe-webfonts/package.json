@@ -23,7 +23,7 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^101.0.5",
-        "less": "^4.6.4"
+        "less": "^4.6.7"
     },
     "publishConfig": {
         "access": "public"
