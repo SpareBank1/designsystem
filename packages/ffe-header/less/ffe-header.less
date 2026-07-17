@@ -425,7 +425,7 @@
     // === End override styles for new header ===
 }
 
-@media (max-width: (@breakpoint-md)) {
+@media not (min-width: @breakpoint-md) {
     .ffe-header {
         &__border {
             &:last-child {
