@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [101.0.6](https://github.com/SpareBank1/designsystem/compare/v101.0.5...v101.0.6) (2026-08-05)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** Ikon i inline knapp matcher knapp størrelse ([7f9ecab](https://github.com/SpareBank1/designsystem/commit/7f9ecabf05c3be67914e5c48f8e9e711b27f1f97))
+
+
+
+
+
 ## [101.0.5](https://github.com/SpareBank1/designsystem/compare/v101.0.4...v101.0.5) (2026-06-15)
 
 **Note:** Version bump only for package @sb1/ffe
