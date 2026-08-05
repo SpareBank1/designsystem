@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-formatters",
-    "version": "101.0.6",
+    "version": "101.0.7",
     "description": "JavaScript general use string formatters",
     "keywords": [
         "ffe"
@@ -27,7 +27,7 @@
         "test:watch": "jest --watch"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^101.0.6",
+        "@sb1/ffe-buildtool": "^101.0.7",
         "eslint": "^10.2.0"
     },
     "publishConfig": {

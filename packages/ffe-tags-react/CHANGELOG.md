@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [101.0.7](https://github.com/SpareBank1/designsystem/compare/v101.0.6...v101.0.7) (2026-08-05)
+
+**Note:** Version bump only for package @sb1/ffe-tags-react
+
+
+
+
+
 ## [101.0.6](https://github.com/SpareBank1/designsystem/compare/v101.0.5...v101.0.6) (2026-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-tags-react
