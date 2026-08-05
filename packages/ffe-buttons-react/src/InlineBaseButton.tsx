@@ -56,14 +56,14 @@ function InlineBaseButtonWithForwardRef<As extends ElementType>(
                 React.cloneElement(leftIcon, {
                     className:
                         'ffe-inline-button__icon ffe-inline-button__icon--left',
-                    size: 'md',
+                    size: leftIcon.props.size ?? size,
                 })}
             <span className="ffe-inline-button__label">{children}</span>
             {rightIcon &&
                 React.cloneElement(rightIcon, {
                     className:
                         'ffe-inline-button__icon ffe-inline-button__icon--right',
-                    size: 'md',
+                    size: rightIcon.props.size ?? size,
                 })}
         </Comp>
     );
