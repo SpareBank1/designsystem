@@ -161,7 +161,7 @@ describe('Feedback Component', () => {
         fireEvent.click(finishButton);
 
         expect(onFeedbackSendMock).not.toHaveBeenCalled();
-        expect(onFinishMock).toHaveBeenCalled()
+        expect(onFinishMock).toHaveBeenCalled();
     });
 
     it('should render with custom heading', () => {
@@ -237,5 +237,55 @@ describe('Feedback Component', () => {
 
         const heading = screen.getByText('What do you think of this page?');
         expect(heading).toBeInTheDocument();
+    });
+
+    it('should render texts about the page by default', () => {
+        render(<Feedback onThumbClick={() => {}} onFeedbackSend={() => {}} />);
+
+        expect(
+            screen.getByText('Hva synes du om denne siden?'),
+        ).toBeInTheDocument();
+
+        fireEvent.click(screen.getByLabelText('Gi tommel opp'));
+
+        expect(
+            screen.getByText(
+                'Svaret ditt blir brukt til å forbedre denne siden og blir ikke besvart.',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    describe('with isNative', () => {
+        it('should render heading about the app instead of the page', () => {
+            render(
+                <Feedback
+                    onThumbClick={() => {}}
+                    onFeedbackSend={() => {}}
+                    isNative={true}
+                />,
+            );
+
+            expect(
+                screen.getByText('Hva synes du om denne delen av appen?'),
+            ).toBeInTheDocument();
+        });
+
+        it('should render feedback text about the app instead of the page', () => {
+            render(
+                <Feedback
+                    onThumbClick={() => {}}
+                    onFeedbackSend={() => {}}
+                    isNative={true}
+                />,
+            );
+
+            fireEvent.click(screen.getByLabelText('Gi tommel opp'));
+
+            expect(
+                screen.getByText(
+                    'Svaret ditt blir brukt til å forbedre appen og blir ikke besvart.',
+                ),
+            ).toBeInTheDocument();
+        });
     });
 });
