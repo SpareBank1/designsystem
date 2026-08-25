@@ -1,6 +1,6 @@
 import React, { useState, useRef, useId } from 'react';
 import { flushSync } from 'react-dom';
-import { txt } from './i18n/texts';
+import { getLocaleTexts } from './i18n/getLocaleTexts';
 import { FeedbackThumbs, Thumb } from './FeedbackThumbs';
 import classNames from 'classnames';
 import { FeedbackExpanded, FeedbackExpandedProps } from './FeedbackExpanded';
@@ -25,6 +25,11 @@ export interface FeedbackProps {
     };
     className?: string;
     includeConsent?: boolean;
+    /**
+     * Bruk tekster som omtaler appen i stedet for siden. Settes når komponenten
+     * vises inne i en hybrid app.
+     */
+    isNative?: boolean;
 }
 
 export const Feedback = ({
@@ -39,7 +44,9 @@ export const Feedback = ({
     texts,
     className,
     includeConsent = false,
+    isNative = false,
 }: FeedbackProps) => {
+    const localeTexts = getLocaleTexts(locale, isNative);
     const feedbackSentRef = useRef<HTMLHeadingElement>(null);
     const expandedRef = useRef<HTMLHeadingElement>(null);
     const [expanded, setExpanded] = useState(false);
@@ -114,7 +121,7 @@ export const Feedback = ({
                 <div className="ffe-feedback__content">
                     {renderHeading(
                         headingLevel,
-                        txt[locale].FEEDBACK_SENT_HEADING,
+                        localeTexts.FEEDBACK_SENT_HEADING,
                         {
                             ref: feedbackSentRef,
                             tabIndex: -1,
@@ -133,7 +140,7 @@ export const Feedback = ({
                 <div className="ffe-feedback__expanded">
                     {renderHeading(
                         headingLevel,
-                        txt[locale].FEEDBACK_SENT_HEADING,
+                        localeTexts.FEEDBACK_SENT_HEADING,
                         {
                             ref: expandedRef,
                             tabIndex: -1,
@@ -145,6 +152,7 @@ export const Feedback = ({
                         handleFeedback={handleFeedbackSent}
                         contactLink={contactLink}
                         includeConsent={includeConsent}
+                        isNative={isNative}
                     />
                 </div>
             </div>
@@ -157,7 +165,7 @@ export const Feedback = ({
                 {renderHeading(
                     headingLevel,
                     texts?.feedbackNotSentHeading ??
-                        txt[locale].FEEDBACK_NOT_SENT_HEADING,
+                        localeTexts.FEEDBACK_NOT_SENT_HEADING,
                     {
                         id: headingId,
                         textCenter: true,
