@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import {
+    fireEvent,
+    render,
+    screen,
+    waitFor,
+    within,
+} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { SearchableDropdownMultiSelect } from './SearchableDropdownMultiSelect';
 import { SearchableDropdownMultiSelectProps } from '../../types';
@@ -109,7 +115,7 @@ describe('SearchableDropdownMultiSelect', () => {
 
         expect(onChangeMultiSelect).toHaveBeenCalledTimes(1);
         expect(onChangeMultiSelect).toHaveBeenCalledWith(
-            companies[0],
+            [companies[0]],
             'selected',
         );
 
@@ -142,7 +148,7 @@ describe('SearchableDropdownMultiSelect', () => {
 
         expect(onChangeMultiSelect).toHaveBeenCalledTimes(1);
         expect(onChangeMultiSelect).toHaveBeenCalledWith(
-            companies[0],
+            [companies[0]],
             'removed',
         );
 
@@ -176,7 +182,7 @@ describe('SearchableDropdownMultiSelect', () => {
 
         expect(onChangeMultiSelect).toHaveBeenCalledTimes(1);
         expect(onChangeMultiSelect).toHaveBeenCalledWith(
-            companies[1],
+            [companies[1]],
             'selected',
         );
         const elements = screen.getAllByText('Sønn & co');
@@ -518,7 +524,7 @@ describe('SearchableDropdownMultiSelect', () => {
         await user.click(screen.getByText('Beslag skytter'));
 
         expect(onChange).toHaveBeenCalledTimes(1);
-        expect(onChange).toHaveBeenCalledWith(companies[2], 'selected');
+        expect(onChange).toHaveBeenCalledWith([companies[2]], 'selected');
         expect(screen.getAllByText('Beslag skytter')).toHaveLength(2);
     });
 
@@ -619,12 +625,18 @@ describe('SearchableDropdownMultiSelect', () => {
                 <SearchableDropdownMultiSelectButton
                     id="id"
                     labelledById="labelId"
-                    dropdownAttributes={['organizationName', 'organizationNumber']}
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
                     dropdownList={companies}
                     onChange={onChange}
                     onOpen={onOpen}
                     onClose={onClose}
-                    searchAttributes={['organizationName', 'organizationNumber']}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
                     locale="nb"
                 />
             </>,
@@ -640,5 +652,301 @@ describe('SearchableDropdownMultiSelect', () => {
         // Unfocus combobox to close dropdown
         await user.click(button);
         expect(onClose).toHaveBeenCalledTimes(1);
+    });
+
+    describe('showSelectAll', () => {
+        type Company = (typeof companies)[0];
+        type Props = SearchableDropdownMultiSelectProps<Company>;
+
+        const renderSelectAll = ({
+            onChange,
+            ...props
+        }: {
+            onChange: Props['onChange'];
+            locale?: Props['locale'];
+            noMatch?: Props['noMatch'];
+            selectAllTexts?: Props['selectAllTexts'];
+            selectedItems?: Props['selectedItems'];
+            showSelectAll?: Props['showSelectAll'];
+        }) =>
+            render(
+                <SearchableDropdownMultiSelect
+                    id="id"
+                    labelledById="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    onChange={onChange}
+                    showSelectAll={true}
+                    {...props}
+                />,
+            );
+
+        /**
+         * The a11y live region is global and holds leftover announcements
+         * between tests, so all text lookups are scoped to the listbox.
+         */
+        const list = () => within(screen.getByRole('listbox'));
+
+        const getRow = (label: string) =>
+            list().getByText(label).closest('[role="option"]');
+
+        it('is not rendered unless showSelectAll is passed', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange, showSelectAll: undefined });
+
+            await user.click(screen.getByRole('combobox'));
+
+            expect(list().queryByText('Velg alle')).toBeNull();
+            expect(screen.getAllByRole('option')).toHaveLength(
+                companies.length,
+            );
+        });
+
+        it('selects every item when clicking the row', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.click(list().getByText('Velg alle'));
+
+            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(onChange).toHaveBeenCalledWith(companies, 'selected');
+            expect(list().getByText('Fjern alle')).toBeInTheDocument();
+            screen.getAllByRole('option').forEach(option => {
+                expect(option.getAttribute('aria-selected')).toEqual('true');
+            });
+        });
+
+        it('removes every item when toggling the row again', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.click(list().getByText('Velg alle'));
+            await user.click(list().getByText('Fjern alle'));
+
+            expect(onChange).toHaveBeenCalledTimes(2);
+            expect(onChange).toHaveBeenLastCalledWith(companies, 'removed');
+            expect(list().getByText('Velg alle')).toBeInTheDocument();
+            screen.getAllByRole('option').forEach(option => {
+                expect(option.getAttribute('aria-selected')).toEqual('false');
+            });
+        });
+
+        it('passes only the items that changed', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange, selectedItems: [companies[0]] });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.click(list().getByText('Velg alle'));
+
+            expect(onChange).toHaveBeenCalledWith(
+                [companies[1], companies[2]],
+                'selected',
+            );
+        });
+
+        it('only applies to the visible matches when searching', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            const input = screen.getByRole('combobox');
+            await user.type(input, 'Be');
+            await user.click(list().getByText('Velg alle'));
+
+            expect(onChange).toHaveBeenCalledWith(
+                [companies[0], companies[2]],
+                'selected',
+            );
+        });
+
+        it('keeps the search when toggling, so the same matches can be removed again', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            const input = screen.getByRole('combobox');
+            await user.type(input, 'Be');
+            await user.click(list().getByText('Velg alle'));
+
+            expect(input).toHaveValue('Be');
+
+            await user.click(list().getByText('Fjern alle'));
+
+            expect(onChange).toHaveBeenLastCalledWith(
+                [companies[0], companies[2]],
+                'removed',
+            );
+        });
+
+        it('selects the first match when pressing enter right after searching', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            const input = screen.getByRole('combobox');
+            await user.type(input, 'Be');
+            await user.type(input, '{enter}');
+
+            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(onChange).toHaveBeenCalledWith([companies[0]], 'selected');
+        });
+
+        it('is the first row when navigating with the keyboard', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            const input = screen.getByRole('combobox');
+            await user.click(input);
+            await user.type(input, '{arrowdown}');
+
+            expect(input.getAttribute('aria-activedescendant')).toEqual(
+                getRow('Velg alle')?.getAttribute('id'),
+            );
+
+            await user.type(input, '{enter}');
+
+            expect(onChange).toHaveBeenCalledWith(companies, 'selected');
+        });
+
+        it('leaves the first item on the second arrow down', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            const input = screen.getByRole('combobox');
+            await user.click(input);
+            await user.type(input, '{arrowdown}');
+            await user.type(input, '{arrowdown}');
+            await user.type(input, '{enter}');
+
+            expect(onChange).toHaveBeenCalledWith([companies[0]], 'selected');
+        });
+
+        it('wraps around between the row and the last item', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            const input = screen.getByRole('combobox');
+            await user.click(input);
+            await user.type(input, '{arrowup}');
+
+            expect(input.getAttribute('aria-activedescendant')).toEqual(
+                list()
+                    .getByText('Beslag skytter')
+                    .closest('[role="option"]')
+                    ?.getAttribute('id'),
+            );
+
+            await user.type(input, '{arrowdown}');
+
+            expect(input.getAttribute('aria-activedescendant')).toEqual(
+                getRow('Velg alle')?.getAttribute('id'),
+            );
+        });
+
+        it('is hidden when there are no matches', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            const { unmount } = renderSelectAll({ onChange });
+
+            await user.type(screen.getByRole('combobox'), 'zzz');
+            expect(list().queryByText('Velg alle')).toBeNull();
+
+            unmount();
+
+            renderSelectAll({
+                onChange,
+                noMatch: { text: 'Ingen treff', dropdownList: [companies[1]] },
+            });
+
+            await user.type(screen.getByRole('combobox'), 'zzz');
+            expect(list().getByText('Ingen treff')).toBeInTheDocument();
+            expect(list().queryByText('Velg alle')).toBeNull();
+        });
+
+        it('allows overriding both labels', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({
+                onChange,
+                selectAllTexts: {
+                    selectAll: 'Ta alle',
+                    removeAll: 'Nullstill',
+                },
+            });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.click(list().getByText('Ta alle'));
+
+            expect(list().getByText('Nullstill')).toBeInTheDocument();
+            expect(list().queryByText('Velg alle')).toBeNull();
+        });
+
+        it('translates the labels', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            const { unmount } = renderSelectAll({ onChange, locale: 'en' });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.click(list().getByText('Select all'));
+            expect(list().getByText('Remove all')).toBeInTheDocument();
+
+            unmount();
+
+            renderSelectAll({ onChange, locale: 'nn' });
+
+            await user.click(screen.getByRole('combobox'));
+            expect(list().getByText('Vel alle')).toBeInTheDocument();
+        });
+
+        it('announces the bulk change as a single a11y status message', async () => {
+            const user = userEvent.setup({ delay: null });
+            const onChange = jest.fn();
+            jest.useFakeTimers();
+
+            renderSelectAll({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.click(list().getByText('Velg alle'));
+
+            const a11yStatusMessage = await screen.findByRole('status');
+
+            await waitFor(() => {
+                expect(a11yStatusMessage).toHaveTextContent(
+                    '3 elementer er valgt. 3 valgt totalt.',
+                );
+            });
+
+            jest.useRealTimers();
+        });
     });
 });

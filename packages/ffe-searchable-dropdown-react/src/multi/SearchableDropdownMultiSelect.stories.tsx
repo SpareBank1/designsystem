@@ -210,12 +210,14 @@ export const PreselectedItems: Story = {
                         labelledById={labelledById}
                         {...args}
                         selectedItems={items}
-                        onChange={(item, actionType) => {
+                        onChange={(changedItems, actionType) => {
                             if (actionType === 'selected') {
-                                setItems([...(items ?? []), item]);
+                                setItems([...(items ?? []), ...changedItems]);
                             } else {
                                 setItems(
-                                    (items ?? []).filter(it => it !== item),
+                                    (items ?? []).filter(
+                                        it => !changedItems.includes(it),
+                                    ),
                                 );
                             }
                         }}
@@ -301,17 +303,20 @@ export const ControlledState: Story = {
                                 {...inputProps}
                                 {...args}
                                 selectedItems={selectedFruits}
-                                onChange={(fruit, actionType) => {
+                                onChange={(changedFruits, actionType) => {
                                     if (actionType === 'selected') {
                                         setSelectedFruits(prevFruits =>
-                                            prevFruits.concat(fruit),
+                                            prevFruits.concat(changedFruits),
                                         );
                                     } else {
                                         setSelectedFruits(prevFruits =>
                                             prevFruits.filter(
-                                                it =>
-                                                    it.displayName !==
-                                                    fruit.displayName,
+                                                prevFruit =>
+                                                    !changedFruits.some(
+                                                        it =>
+                                                            it.displayName ===
+                                                            prevFruit.displayName,
+                                                    ),
                                             ),
                                         );
                                     }
@@ -320,15 +325,55 @@ export const ControlledState: Story = {
                             <TertiaryButton
                                 type="button"
                                 onClick={() => {
-                                    setSelectedFruits(fruits);
+                                    setSelectedFruits([]);
                                 }}
                             >
-                                Velg alle
+                                Tøm listen
                             </TertiaryButton>
                         </>
                     )}
                 </InputGroup>
             </div>
+        );
+    },
+};
+
+export const SelectAll: Story = {
+    args: {
+        ...Standard.args,
+        showSelectAll: true,
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup label="Velg frukt" labelId={labelledById} inputId={id}>
+                <SearchableDropdownMultiSelect
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
+        );
+    },
+};
+
+export const SelectAllCustomTexts: Story = {
+    args: {
+        ...Standard.args,
+        showSelectAll: true,
+        selectAllTexts: {
+            selectAll: 'Velg all frukt',
+            removeAll: 'Fjern all frukt',
+        },
+    },
+    render: function Render({ id, labelledById, ...args }) {
+        return (
+            <InputGroup label="Velg frukt" labelId={labelledById} inputId={id}>
+                <SearchableDropdownMultiSelect
+                    id={id}
+                    labelledById={labelledById}
+                    {...args}
+                />
+            </InputGroup>
         );
     },
 };
@@ -370,7 +415,7 @@ export const WithDescription: Story = {
                     label="Velg frukt"
                     labelId={labelledById}
                     inputId={id}
-                    description='Velg de du liker aller best'
+                    description="Velg de du liker aller best"
                 >
                     {inputProps => (
                         <SearchableDropdownMultiSelect

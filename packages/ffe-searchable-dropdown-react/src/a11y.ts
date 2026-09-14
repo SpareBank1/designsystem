@@ -3,6 +3,7 @@ import {
     getIsLoadingItemsA11yStatus,
     getItemClearedA11yStatus,
     getItemSelectedA11yStatus,
+    getMultipleItemsChangedA11yStatus,
     getNoResultA11yStatus,
     getResultCountChangedA11yStatus,
 } from './translations';
@@ -97,6 +98,7 @@ export const useSetAllyMessageItemSelection = ({
     locale,
     resultCount,
     selectedValue,
+    selectedCount = 0,
 }: {
     hasFocus: boolean;
     isExpanded: boolean;
@@ -104,9 +106,12 @@ export const useSetAllyMessageItemSelection = ({
     locale: Locale;
     resultCount: number;
     selectedValue?: string;
+    /** Number of selected items. Used to announce bulk changes as one message */
+    selectedCount?: number;
 }) => {
     const isInitialMount = useRef(true);
     const prevSelectedValue = useRef<string>();
+    const prevSelectedCount = useRef(selectedCount);
 
     useEffect(() => {
         if (isLoading && hasFocus) {
@@ -118,6 +123,24 @@ export const useSetAllyMessageItemSelection = ({
 
         if (isInitialMount.current) {
             isInitialMount.current = false;
+            prevSelectedCount.current = selectedCount;
+            return;
+        }
+
+        const countDelta = selectedCount - prevSelectedCount.current;
+        prevSelectedCount.current = selectedCount;
+
+        if (Math.abs(countDelta) > 1) {
+            // Keep prevSelectedValue in sync so the item message below is not
+            // also announced on the next render
+            prevSelectedValue.current = selectedValue;
+            updateA11yStatus(() => {
+                return getMultipleItemsChangedA11yStatus(
+                    locale,
+                    countDelta,
+                    selectedCount,
+                );
+            });
             return;
         }
 
@@ -143,15 +166,25 @@ export const useSetAllyMessageItemSelection = ({
             updateA11yStatus.cancel();
             cleanupStatus.cancel();
         };
-    }, [selectedValue, locale, isExpanded, resultCount, hasFocus, isLoading]);
+    }, [
+        selectedValue,
+        selectedCount,
+        locale,
+        isExpanded,
+        resultCount,
+        hasFocus,
+        isLoading,
+    ]);
+};
+
+export const setAllyStatusMessage = (message: string) => {
+    getStatusDiv().textContent = message;
 };
 
 export const setArrowAllyMessage = <Item extends Record<string, any>>(
     highlightedValue: Item,
     dropdownAttributes: (keyof Item)[],
-) => {
-    const highlightedValueString = dropdownAttributes
-        .map(attr => highlightedValue[attr])
-        .join(' ');
-    getStatusDiv().textContent = `${highlightedValueString}`;
-};
+) =>
+    setAllyStatusMessage(
+        dropdownAttributes.map(attr => highlightedValue[attr]).join(' '),
+    );

@@ -2,12 +2,7 @@ import React from 'react';
 import { Option } from './Option';
 import { NoMatch } from './NoMatch';
 import { Locale } from './types';
-
-const isItemSelected = <Item extends Record<string, any>>(
-    isEqual: (itemA: Item, itemB: Item) => boolean,
-    item: Item,
-    selectedItems?: Item[],
-) => !!selectedItems?.some(selected => isEqual(item, selected));
+import { isItemSelected } from './isItemSelected';
 
 interface ResultProps<Item extends Record<string, any>> {
     noMatch?: {

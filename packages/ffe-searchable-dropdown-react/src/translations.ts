@@ -10,6 +10,54 @@ export const getSelectedLabel = (locale: Locale, amountSelected: number) => {
     }
 };
 
+export const getSelectAllLabel = (locale: Locale) => {
+    switch (locale) {
+        case 'nn':
+            return 'Vel alle';
+        case 'en':
+            return 'Select all';
+        default:
+            return 'Velg alle';
+    }
+};
+
+export const getRemoveAllLabel = (locale: Locale) => {
+    switch (locale) {
+        case 'nn':
+            return 'Fjern alle';
+        case 'en':
+            return 'Remove all';
+        default:
+            return 'Fjern alle';
+    }
+};
+
+export const getMultipleItemsChangedA11yStatus = (
+    locale: Locale,
+    countDelta: number,
+    totalSelected: number,
+) => {
+    const amount = Math.abs(countDelta);
+    if (countDelta > 0) {
+        switch (locale) {
+            case 'nn':
+                return `${amount} element er valde. ${totalSelected} valde totalt.`;
+            case 'en':
+                return `${amount} items selected. ${totalSelected} selected in total.`;
+            default:
+                return `${amount} elementer er valgt. ${totalSelected} valgt totalt.`;
+        }
+    }
+    switch (locale) {
+        case 'nn':
+            return `${amount} element er fjerna. ${totalSelected} valde totalt.`;
+        case 'en':
+            return `${amount} items removed. ${totalSelected} selected in total.`;
+        default:
+            return `${amount} elementer er fjernet. ${totalSelected} valgt totalt.`;
+    }
+};
+
 export const getNotMatchText = (locale: Locale) => {
     switch (locale) {
         case 'nn':

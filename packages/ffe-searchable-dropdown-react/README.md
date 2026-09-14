@@ -78,7 +78,7 @@ function MyComponent() {
 
 ### Flervalg
 
-Valgte elementer vises som chips. `onChange` kalles med elementet og `actionType` ('selected' | 'removed').
+Valgte elementer vises som chips. `onChange` kalles med de elementene som endret seg og `actionType` ('selected' | 'removed'). Med `showSelectAll` får du i tillegg en «Velg alle»-rad øverst i listen, og da kan flere elementer endres i samme kall.
 
 ```tsx
 import { useState } from 'react';
@@ -98,12 +98,17 @@ function MyComponent() {
         { displayName: 'Eple', color: 'Rød' },
     ];
 
-    const handleChange = (item: Fruit, actionType: 'selected' | 'removed') => {
+    const handleChange = (
+        items: Fruit[],
+        actionType: 'selected' | 'removed',
+    ) => {
         if (actionType === 'selected') {
-            setSelectedFruits(prev => [...prev, item]);
+            setSelectedFruits(prev => [...prev, ...items]);
         } else {
             setSelectedFruits(prev =>
-                prev.filter(f => f.displayName !== item.displayName),
+                prev.filter(
+                    f => !items.some(it => it.displayName === f.displayName),
+                ),
             );
         }
     };

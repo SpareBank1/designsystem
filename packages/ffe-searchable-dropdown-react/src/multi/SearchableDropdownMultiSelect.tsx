@@ -24,14 +24,24 @@ import { mergeRefs } from '../mergeRefs';
 import { fixedForwardRef } from '../fixedForwardRef';
 import { Chip, ChipRemovable } from '@sb1/ffe-chips-react';
 import { getActionType } from './getNewList';
-import { setArrowAllyMessage, useSetAllyMessageItemSelection } from '../a11y';
+import {
+    setAllyStatusMessage,
+    setArrowAllyMessage,
+    useSetAllyMessageItemSelection,
+} from '../a11y';
 import { addFlagOnEventHandler } from '../addFlagOnEventHandler';
 import { useHandleContainerFocus } from '../useHandleContainerFocus';
 import { useIsExpandedCallbacks } from '../useIsExpandedCallbacks';
 import { useRefs } from '../useRefs';
 import { ToggleButton } from '../ToggleButton';
 import { ListBox } from '../ListBox';
-import { getSelectedLabel } from '../translations';
+import {
+    getRemoveAllLabel,
+    getSelectAllLabel,
+    getSelectedLabel,
+} from '../translations';
+import { isItemSelected } from '../isItemSelected';
+import { SelectAllOption } from './SelectAllOption';
 import isDeepEqual from 'lodash.isequal';
 
 const ARROW_UP = 'ArrowUp';
@@ -62,8 +72,11 @@ export interface SearchableDropdownMultiSelectProps<
     inputProps?: React.ComponentProps<'input'>;
     /** Limits number of rendered dropdown elements */
     maxRenderedDropdownElements?: number;
-    /** Called when a value is selected */
-    onChange: (item: Item, actionType: 'selected' | 'removed') => void;
+    /**
+     * Called when the selection changes. `items` contains only the items that
+     * changed (the delta), never the full selection.
+     */
+    onChange: (items: Item[], actionType: 'selected' | 'removed') => void;
     /** Custom element to use for each item in dropDownList */
     optionBody?: React.ComponentType<{
         item: Item;
@@ -109,6 +122,16 @@ export interface SearchableDropdownMultiSelectProps<
     showNumberSelectedAfter?: number;
     /** Custom compare between objects. Default is deep equals*/
     isEqual?: (itemA: Item, itemB: Item) => boolean;
+    /**
+     * Shows a row at the top of the dropdown for selecting or removing all
+     * visible items. When a search is active it only applies to the matches.
+     */
+    showSelectAll?: boolean;
+    /** Overrides the default labels on the select all row, for all locales */
+    selectAllTexts?: {
+        selectAll?: string;
+        removeAll?: string;
+    };
 }
 
 function SearchableDropdownMultiSelectWithForwardRef<
@@ -137,6 +160,8 @@ function SearchableDropdownMultiSelectWithForwardRef<
         onClose,
         showNumberSelectedAfter,
         isEqual = isDeepEqual,
+        showSelectAll = false,
+        selectAllTexts,
         ...rest
     }: SearchableDropdownMultiSelectProps<Item>,
     ref: ForwardedRef<HTMLInputElement>,
@@ -149,6 +174,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             noMatchDropdownList: noMatch?.dropdownList,
             searchMatcher,
             isEqual,
+            showSelectAll,
         }),
         {
             isExpanded: false,
@@ -178,6 +204,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
 
     const OptionBody = CustomOptionBody || MultiselectOptionBody;
     const listBoxRef = useRef<HTMLDivElement>(null);
+    const selectAllRef = useRef<HTMLDivElement>(null);
     const noMatchMessageId = useId();
     const shouldFocusInput = useRef(false);
     const [showChips, setShowChips] = useState(true);
@@ -203,6 +230,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             state.selectedItems[state.selectedItems.length - 1]?.[
                 searchAttributes[0]
             ],
+        selectedCount: state.selectedItems.length,
     });
 
     useLayoutEffect(() => {
@@ -254,10 +282,74 @@ function SearchableDropdownMultiSelectWithForwardRef<
         handleFocusMovedOutside,
     });
 
+    /**
+     * When the select all row is shown it occupies row 0 of the listbox, and
+     * state.highlightedIndex refers to rows rather than items. The index of an
+     * item in listToRender is therefore highlightedIndex - rowOffset.
+     *
+     * Note that this must not depend on state.isExpanded: arrowing down from a
+     * closed dropdown sets isExpanded in the same dispatch that sets
+     * highlightedIndex, which would shift every index by one row.
+     */
+    const hasSelectAllRow =
+        showSelectAll && !state.noMatch && state.listToRender.length > 0;
+    const rowOffset = hasSelectAllRow ? 1 : 0;
+    const rowCount = state.listToRender.length + rowOffset;
+    const isSelectAllRow = (rowIndex: number) =>
+        hasSelectAllRow && rowIndex === 0;
+
+    const allVisibleSelected =
+        state.listToRender.length > 0 &&
+        state.listToRender.every(item =>
+            isItemSelected(isEqual, item, state.selectedItems),
+        );
+
+    const selectAllLabel = allVisibleSelected
+        ? (selectAllTexts?.removeAll ?? getRemoveAllLabel(locale))
+        : (selectAllTexts?.selectAll ?? getSelectAllLabel(locale));
+
+    const getRowElement = (rowIndex: number) =>
+        isSelectAllRow(rowIndex)
+            ? selectAllRef.current
+            : (refs[rowIndex - rowOffset]?.current ?? null);
+
+    const announceHighlightedRow = (rowIndex: number) => {
+        if (isSelectAllRow(rowIndex)) {
+            setAllyStatusMessage(selectAllLabel);
+        } else if (rowIndex >= 0) {
+            setArrowAllyMessage(
+                state.listToRender[rowIndex - rowOffset],
+                dropdownAttributes,
+            );
+        }
+    };
+
+    const toggleSelectAll = () => {
+        const actionType = allVisibleSelected ? 'removed' : 'selected';
+        const changedItems = allVisibleSelected
+            ? state.listToRender
+            : state.listToRender.filter(
+                  item => !isItemSelected(isEqual, item, state.selectedItems),
+              );
+        if (!changedItems.length) {
+            return;
+        }
+        dispatch({
+            type: 'SelectAllToggled',
+            payload: { items: changedItems, actionType },
+        });
+        onChange?.(changedItems, actionType);
+    };
+
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === ENTER && state.highlightedIndex >= 0) {
             event.preventDefault();
-            const clickedItem = state.listToRender[state.highlightedIndex];
+            if (isSelectAllRow(state.highlightedIndex)) {
+                toggleSelectAll();
+                return;
+            }
+            const clickedItem =
+                state.listToRender[state.highlightedIndex - rowOffset];
             const actionType = getActionType(
                 state.selectedItems,
                 clickedItem,
@@ -271,53 +363,43 @@ function SearchableDropdownMultiSelectWithForwardRef<
                     highlightedIndex: state.highlightedIndex,
                 },
             });
-            onChange?.(clickedItem, actionType);
+            onChange?.([clickedItem], actionType);
             return;
         } else if (event.key === ESCAPE) {
             dispatch({ type: 'InputKeyDownEscape' });
             return;
         } else if (event.key === ARROW_UP) {
             event.preventDefault();
-            if (state.listToRender.length) {
+            if (rowCount) {
                 const newHighlightedIndex = getNewHighlightedIndexUp(
                     state.highlightedIndex,
-                    state.listToRender.length,
+                    rowCount,
                 );
                 dispatch({
                     type: 'InputKeyDownArrowUp',
                     payload: { highlightedIndex: newHighlightedIndex },
                 });
-                if (newHighlightedIndex >= 0) {
-                    setArrowAllyMessage(
-                        state?.listToRender[newHighlightedIndex],
-                        dropdownAttributes,
-                    );
-                }
+                announceHighlightedRow(newHighlightedIndex);
                 scrollIntoView(
-                    refs[newHighlightedIndex].current,
+                    getRowElement(newHighlightedIndex),
                     listBoxRef.current,
                 );
             }
             return;
         } else if (event.key === ARROW_DOWN) {
             event.preventDefault();
-            if (state.listToRender.length) {
+            if (rowCount) {
                 const newHighlightedIndex = getNewHighlightedIndexDown(
                     state.highlightedIndex,
-                    state.listToRender.length,
+                    rowCount,
                 );
                 dispatch({
                     type: 'InputKeyDownArrowDown',
                     payload: { highlightedIndex: newHighlightedIndex },
                 });
-                if (newHighlightedIndex >= 0) {
-                    setArrowAllyMessage(
-                        state?.listToRender[newHighlightedIndex],
-                        dropdownAttributes,
-                    );
-                }
+                announceHighlightedRow(newHighlightedIndex);
                 scrollIntoView(
-                    refs[newHighlightedIndex].current,
+                    getRowElement(newHighlightedIndex),
                     listBoxRef.current,
                 );
             }
@@ -336,7 +418,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                         actionType: 'removed',
                     },
                 });
-                onChange?.(lastItem, 'removed');
+                onChange?.([lastItem], 'removed');
             }
         } else if (event.key === TAB) {
             dispatch({
@@ -384,7 +466,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                                             items: [item],
                                         },
                                     });
-                                    onChange?.(item, 'removed');
+                                    onChange?.([item], 'removed');
                                     shouldFocusInput.current = true;
                                 }}
                             >
@@ -444,16 +526,14 @@ function SearchableDropdownMultiSelectWithForwardRef<
                     aria-controls={
                         listBoxRef.current?.getAttribute('id') ?? undefined
                     }
-                    aria-expanded={
-                        state.isExpanded && !!state.listToRender.length
-                    }
+                    aria-expanded={state.isExpanded && !!rowCount}
                     aria-autocomplete="list"
                     aria-haspopup="listbox"
                     aria-activedescendant={
                         state.highlightedIndex >= 0
-                            ? (refs[
-                                  state.highlightedIndex
-                              ]?.current?.getAttribute('id') ?? undefined)
+                            ? (getRowElement(
+                                  state.highlightedIndex,
+                              )?.getAttribute('id') ?? undefined)
                             : undefined
                     }
                     aria-invalid={rest['aria-invalid'] ?? ariaInvalid}
@@ -469,12 +549,24 @@ function SearchableDropdownMultiSelectWithForwardRef<
                 isLoading={isLoading}
             />
             <ListBox ref={listBoxRef} isExpanded={state.isExpanded}>
+                {state.isExpanded && hasSelectAllRow && (
+                    <SelectAllOption
+                        ref={selectAllRef}
+                        label={selectAllLabel}
+                        isSelected={allVisibleSelected}
+                        isHighlighted={state.highlightedIndex === 0}
+                        onClick={() => {
+                            toggleSelectAll();
+                            shouldFocusInput.current = true;
+                        }}
+                    />
+                )}
                 {state.isExpanded && (
                     <Results
                         isEqual={isEqual}
                         listToRender={state.listToRender}
                         OptionBody={OptionBody}
-                        highlightedIndex={state.highlightedIndex}
+                        highlightedIndex={state.highlightedIndex - rowOffset}
                         dropdownAttributes={dropdownAttributes}
                         locale={locale}
                         refs={refs}
@@ -492,7 +584,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                                 },
                             });
                             shouldFocusInput.current = true;
-                            onChange?.(item, actionType);
+                            onChange?.([item], actionType);
                         }}
                         noMatch={state.noMatch ? noMatch : undefined}
                         noMatchMessageId={noMatchMessageId}
