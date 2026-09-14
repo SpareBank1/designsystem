@@ -10,7 +10,7 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^101.0.12",
-        "less": "^4.9.0"
+        "less": "^4.9.1"
     },
     "repository": {
         "type": "git",
