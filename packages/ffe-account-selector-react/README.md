@@ -87,13 +87,22 @@ function MyComponent() {
                 id="account-selector-multi"
                 accounts={accounts}
                 selectedAccounts={selectedAccounts}
-                onChange={(account, actionType) => {
+                showSelectAll={true}
+                onChange={(changedAccounts, actionType) => {
                     if (actionType === 'selected') {
-                        setSelectedAccounts(prev => [...prev, account]);
+                        setSelectedAccounts(prev => [
+                            ...prev,
+                            ...changedAccounts,
+                        ]);
                     } else {
                         setSelectedAccounts(prev =>
                             prev.filter(
-                                a => a.accountNumber !== account.accountNumber,
+                                a =>
+                                    !changedAccounts.some(
+                                        it =>
+                                            it.accountNumber ===
+                                            a.accountNumber,
+                                    ),
                             ),
                         );
                     }

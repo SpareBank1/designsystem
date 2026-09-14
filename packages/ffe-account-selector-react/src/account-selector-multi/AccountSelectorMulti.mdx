@@ -24,3 +24,23 @@ Kontovelger med støtte for å velge flere kontoer på én gang.
 Du kan bruke `description='tekst her'` på `InputGroup` for å legge til en beskrivelse mellom label og AccountSelectorMulti.
 
 <Canvas of={AccountSelectorMultiStories.WithDescription} />
+
+## Velg alle
+
+Med `showSelectAll` får du en rad øverst i nedtrekkslisten som velger alle kontoene.
+Teksten er «Velg alle», og bytter til «Fjern alle» når alle kontoene som vises er
+valgt. Begge tekstene kan overstyres med `selectAllTexts`, og overstyringen gjelder
+for alle språk.
+
+<Canvas of={AccountSelectorMultiStories.SelectAll} />
+
+Ting å være klar over:
+
+- `onChange` får **kun kontoene som endret seg** — ikke hele utvalget.
+- Ved aktivt søk gjelder raden **bare treffene**, ikke alle kontoene.
+- Søketeksten beholdes etter at du har brukt raden, så du kan toggle det samme
+  settet treff flere ganger.
+- Raden er første rad i listen, så piltast ned én gang lander på «Velg alle» og to
+  ganger lander på den første kontoen.
+- Bruker du `maxRenderedDropdownElements`, gjelder «Velg alle» kun de radene som
+  faktisk vises.

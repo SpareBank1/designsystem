@@ -28,8 +28,11 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
     };
     /** Props passed to the input field */
     inputProps?: React.ComponentPropsWithoutRef<'input'>;
-    /** Called when a value is selected */
-    onChange: (account: T, actionType: 'selected' | 'removed') => void;
+    /**
+     * Called when the selection changes. `accounts` contains only the accounts
+     * that changed (the delta), never the full selection.
+     */
+    onChange: (accounts: T[], actionType: 'selected' | 'removed') => void;
     /** Default false. */
     showBalance?: boolean;
     /** Default true. */
@@ -70,6 +73,16 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
      * If you always want "X selected" showing, pass in 0
      */
     showNumberSelectedAfter?: number;
+    /**
+     * Shows a row at the top of the dropdown for selecting or removing all
+     * visible accounts. When a search is active it only applies to the matches.
+     */
+    showSelectAll?: boolean;
+    /** Overrides the default labels on the select all row, for all locales */
+    selectAllTexts?: {
+        selectAll?: string;
+        removeAll?: string;
+    };
 }
 
 export const AccountSelectorMulti = <T extends Account = Account>({
@@ -92,6 +105,8 @@ export const AccountSelectorMulti = <T extends Account = Account>({
     onClose,
     maxRenderedDropdownElements,
     showNumberSelectedAfter,
+    showSelectAll,
+    selectAllTexts,
     ...rest
 }: AccountSelectorMultiProps<T>) => {
     const formatter = formatAccountNumber
@@ -143,6 +158,8 @@ export const AccountSelectorMulti = <T extends Account = Account>({
             onClose={onClose}
             maxRenderedDropdownElements={maxRenderedDropdownElements}
             showNumberSelectedAfter={showNumberSelectedAfter}
+            showSelectAll={showSelectAll}
+            selectAllTexts={selectAllTexts}
             isEqual={(accountA, accountB) =>
                 accountA.accountNumber === accountB.accountNumber
             }
