@@ -10,6 +10,23 @@ export const getSelectedLabel = (locale: Locale, amountSelected: number) => {
     }
 };
 
+/**
+ * Handlingsetiketten på chippen som oppsummerer utvalget. Bygget på
+ * getSelectedLabel, så synlig tekst og aria-label ikke kan divergere.
+ */
+export const getRemoveAllSelectedLabel = (
+    locale: Locale,
+    amountSelected: number,
+) => {
+    const selected = getSelectedLabel(locale, amountSelected);
+    switch (locale) {
+        case 'en':
+            return `${selected}, remove all`;
+        default:
+            return `${selected}, fjern alle`;
+    }
+};
+
 export const getSelectAllLabel = (locale: Locale) => {
     switch (locale) {
         case 'nn':

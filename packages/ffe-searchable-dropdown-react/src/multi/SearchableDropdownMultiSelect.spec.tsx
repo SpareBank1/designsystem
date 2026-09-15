@@ -1052,4 +1052,199 @@ describe('SearchableDropdownMultiSelect', () => {
             expect(box('Velg alle')).toHaveClass('ffe-checkbox--indeterminate');
         });
     });
+
+    describe('showNumberSelectedAfter', () => {
+        type Company = (typeof companies)[0];
+        type Props = SearchableDropdownMultiSelectProps<Company>;
+
+        const renderShowNumberSelected = ({
+            onChange,
+            ...props
+        }: {
+            onChange: Props['onChange'];
+            locale?: Props['locale'];
+            selectedItems?: Props['selectedItems'];
+            showNumberSelectedAfter?: Props['showNumberSelectedAfter'];
+        }) =>
+            render(
+                <SearchableDropdownMultiSelect
+                    id="id"
+                    labelledById="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    onChange={onChange}
+                    showNumberSelectedAfter={2}
+                    selectedItems={companies}
+                    {...props}
+                />,
+            );
+
+        const summaryChip = () =>
+            screen.getByRole('button', { name: '3 valgt, fjern alle' });
+
+        /* Slik at en feilende timer-test ikke drar de neste med seg. */
+        afterEach(() => jest.useRealTimers());
+
+        it('replaces the chips with a removable summary chip above the threshold', () => {
+            renderShowNumberSelected({ onChange: jest.fn() });
+
+            expect(summaryChip()).toHaveTextContent('3 valgt');
+            expect(summaryChip().tagName).toEqual('BUTTON');
+            // Krysset, altså at chippen ser fjernbar ut og ikke bare er det.
+            expect(summaryChip()).toHaveClass('ffe-chip--icon-right');
+            expect(
+                screen.queryByLabelText('Bedriften, fjern valg'),
+            ).toBeNull();
+        });
+
+        it('translates the summary chip label', () => {
+            renderShowNumberSelected({ onChange: jest.fn(), locale: 'en' });
+
+            expect(
+                screen.getByRole('button', {
+                    name: '3 selected, remove all',
+                }),
+            ).toHaveTextContent('3 selected');
+        });
+
+        it('removes every selected item when clicking the summary chip', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderShowNumberSelected({ onChange });
+
+            await user.click(summaryChip());
+
+            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(onChange).toHaveBeenCalledWith(companies, 'removed');
+            expect(
+                screen.queryByRole('button', { name: /valgt, fjern alle/ }),
+            ).toBeNull();
+        });
+
+        it('removes every selected item on backspace', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderShowNumberSelected({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.keyboard('{Backspace}');
+
+            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(onChange).toHaveBeenCalledWith(companies, 'removed');
+            expect(
+                screen.queryByRole('button', { name: /valgt, fjern alle/ }),
+            ).toBeNull();
+        });
+
+        it('moves focus to the input when the focused summary chip is removed', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderShowNumberSelected({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+            // The chip sits before the input, so shift+tab lands on it.
+            await user.tab({ shift: true });
+            expect(summaryChip()).toHaveFocus();
+
+            await user.keyboard('{Backspace}');
+
+            expect(screen.getByRole('combobox')).toHaveFocus();
+        });
+
+        it('leaves the selection alone when backspace edits the search text', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderShowNumberSelected({ onChange });
+
+            const input = screen.getByRole('combobox');
+            await user.type(input, 'Be{Backspace}');
+
+            expect(onChange).not.toHaveBeenCalled();
+            expect(input).toHaveValue('B');
+            expect(summaryChip()).toBeInTheDocument();
+        });
+
+        it('still removes only the last chip below the threshold', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderShowNumberSelected({
+                onChange,
+                selectedItems: [companies[0], companies[1]],
+            });
+
+            expect(screen.queryByText('2 valgt')).toBeNull();
+
+            await user.click(screen.getByRole('combobox'));
+            await user.keyboard('{Backspace}');
+
+            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(onChange).toHaveBeenCalledWith([companies[1]], 'removed');
+            expect(
+                screen.getByLabelText('Bedriften, fjern valg'),
+            ).toBeInTheDocument();
+        });
+
+        /**
+         * Focus starts in the input, as it does after selecting items. Removing
+         * from an unfocused chip instead moves focus into the input, which
+         * reopens the list and announces the result count — that announcement
+         * lands inside the same debounce window and wins.
+         */
+        it('announces the removal as a single a11y status message', async () => {
+            const user = userEvent.setup({ delay: null });
+            jest.useFakeTimers();
+
+            renderShowNumberSelected({ onChange: jest.fn() });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.keyboard('{Backspace}');
+
+            const a11yStatusMessage = await screen.findByRole('status');
+
+            await waitFor(() => {
+                expect(a11yStatusMessage).toHaveTextContent(
+                    '3 elementer er fjernet. 0 valgt totalt.',
+                );
+            });
+        });
+
+        /**
+         * With a threshold of 0 the summary chip is the only rendering, even for
+         * a single item. The delta is then -1, so the bulk announcement does not
+         * apply and the single-item message must still come through.
+         */
+        it('removes the one selected item when the threshold is 0', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderShowNumberSelected({
+                onChange,
+                showNumberSelectedAfter: 0,
+                selectedItems: [companies[0]],
+            });
+
+            const chip = screen.getByRole('button', {
+                name: '1 valgt, fjern alle',
+            });
+            expect(chip).toHaveTextContent('1 valgt');
+
+            await user.click(chip);
+
+            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(onChange).toHaveBeenCalledWith([companies[0]], 'removed');
+        });
+    });
 });

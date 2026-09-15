@@ -51,3 +51,16 @@ Begge tekstene kan overstyres med `selectAllTexts`. Overstyringen gjelder for al
 språk, så sender du inn tekster må du selv håndtere `locale`.
 
 <Canvas of={SearchableDropdownMultiSelect.SelectAllCustomTexts} />
+
+## Antall valgte i stedet for chips
+
+Med `showNumberSelectedAfter` byttes de enkelte chippene ut med én chip som
+oppsummerer utvalget — «12 valgt» — så snart antallet valgte er høyere enn tallet
+du sender inn. Sender du inn `0` vises oppsummeringen alltid.
+
+<Canvas of={SearchableDropdownMultiSelect.ShowNumberSelected} />
+
+Oppsummeringschippen er én enhet, og fjerner hele utvalget: både krysset på chippen
+og backspace i et tomt søkefelt tømmer den i én operasjon. `onChange` kalles én
+gang med alle elementene som ble fjernet og `'removed'`. Under terskelen er det som
+før — backspace fjerner den siste chippen, én av gangen.

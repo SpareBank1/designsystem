@@ -22,7 +22,7 @@ import { Results } from '../Results';
 import { Locale, SearchMatcher } from '../types';
 import { mergeRefs } from '../mergeRefs';
 import { fixedForwardRef } from '../fixedForwardRef';
-import { Chip, ChipRemovable } from '@sb1/ffe-chips-react';
+import { ChipRemovable } from '@sb1/ffe-chips-react';
 import { getActionType } from './getNewList';
 import {
     setAllyStatusMessage,
@@ -37,6 +37,7 @@ import { ToggleButton } from '../ToggleButton';
 import { ListBox } from '../ListBox';
 import {
     getRemoveAllLabel,
+    getRemoveAllSelectedLabel,
     getSelectAllLabel,
     getSelectedLabel,
 } from '../translations';
@@ -207,7 +208,16 @@ function SearchableDropdownMultiSelectWithForwardRef<
     const selectAllRef = useRef<HTMLDivElement>(null);
     const noMatchMessageId = useId();
     const shouldFocusInput = useRef(false);
-    const [showChips, setShowChips] = useState(true);
+
+    /**
+     * Over terskelen byttes de enkelte chippene ut med én chip som oppsummerer
+     * utvalget. Utledet, ikke state: lå den i en effekt ville den vært ett
+     * render bak, så backspace i renderen der terskelen krysses hadde fjernet
+     * siste element selv om det er oppsummeringschippen brukeren ser.
+     */
+    const showChips =
+        showNumberSelectedAfter === undefined ||
+        state.selectedItems.length <= showNumberSelectedAfter;
 
     const handleInputClick = () => {
         dispatch({ type: 'InputClick' });
@@ -255,17 +265,6 @@ function SearchableDropdownMultiSelectWithForwardRef<
             }),
         [],
     );
-
-    useEffect(() => {
-        if (showNumberSelectedAfter === undefined) {
-            return;
-        }
-        if (state.selectedItems.length > showNumberSelectedAfter) {
-            setShowChips(false);
-        } else {
-            setShowChips(true);
-        }
-    }, [state.selectedItems, showNumberSelectedAfter]);
 
     useEffect(() => {
         if (selectedItems !== undefined && selectedItems !== null) {
@@ -412,21 +411,26 @@ function SearchableDropdownMultiSelectWithForwardRef<
                 );
             }
         } else if (event.key === BACKSPACE) {
-            if (
-                state.inputValue === '' &&
-                state.selectedItems.length > 0 &&
-                showChips
-            ) {
-                const lastItem =
-                    state.selectedItems[state.selectedItems.length - 1];
+            if (state.inputValue === '' && state.selectedItems.length > 0) {
+                /* Oppsummeringschippen er én enhet: ett backspace tar hele
+                   utvalget, slik ett backspace tar hele den siste chippen. */
+                const removedItems = showChips
+                    ? [state.selectedItems[state.selectedItems.length - 1]]
+                    : [...state.selectedItems];
                 dispatch({
                     type: 'RemoveItem',
                     payload: {
-                        items: [lastItem],
+                        items: removedItems,
                         actionType: 'removed',
                     },
                 });
-                onChange?.([lastItem], 'removed');
+                onChange?.(removedItems, 'removed');
+                if (!showChips) {
+                    /* handleKeyDown ligger på containeren, så tasten fyrer også
+                       når chippen har fokus. Da forsvinner elementet under
+                       fokuset, og fokus må tas med til inputen. */
+                    shouldFocusInput.current = true;
+                }
             }
         } else if (event.key === TAB) {
             dispatch({
@@ -483,18 +487,28 @@ function SearchableDropdownMultiSelectWithForwardRef<
                         );
                     })
                 ) : (
-                    <Chip
+                    <ChipRemovable
+                        as="button"
+                        type="button"
                         size="sm"
-                        aria-label={getSelectedLabel(
+                        aria-label={getRemoveAllSelectedLabel(
                             locale,
                             state.selectedItems.length,
                         )}
-                        as="span"
-                        role="presentation"
                         className="ffe-chip--multiple-selected"
+                        onClick={e => {
+                            e.stopPropagation();
+                            const removedItems = [...state.selectedItems];
+                            dispatch({
+                                type: 'RemoveItem',
+                                payload: { items: removedItems },
+                            });
+                            onChange?.(removedItems, 'removed');
+                            shouldFocusInput.current = true;
+                        }}
                     >
                         {getSelectedLabel(locale, state.selectedItems.length)}
-                    </Chip>
+                    </ChipRemovable>
                 )}
                 <input
                     {...inputProps}
