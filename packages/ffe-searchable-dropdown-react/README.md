@@ -159,6 +159,29 @@ const CustomOptionBody = ({
 // For SearchableDropdownMultiSelect - har ekstra `isSelected`-prop
 ```
 
+I multiselect har standardkroppen en checkbox til venstre for teksten. En
+egendefinert `optionBody` er selv ansvarlig for å vise valgt-tilstanden — bruk
+`isSelected` til det. Vil du ha samme utseende som standardkroppen, sett
+`ffe-checkbox ffe-checkbox--no-margin` på et dekorativt element, pluss
+`ffe-checkbox--checked` når `isSelected` er sann:
+
+```tsx
+<span
+    aria-hidden="true"
+    className={`ffe-checkbox ffe-checkbox--no-margin${
+        isSelected ? ' ffe-checkbox--checked' : ''
+    }`}
+/>
+```
+
+Bruk **ikke** en ekte `<input type="checkbox">`: raden har `role="option"`, som
+har presentasjonelle barn, så en fokuserbar input ville brutt listboksens
+tastaturmodell og fått sin egen tilstand droppet fra tilgjengelighetstreet.
+Radens `aria-selected` er det som annonseres.
+
+Gjenbruker du `ffe-searchable-dropdown__list-item-body`, merk at griden i
+multiselect er `auto 1fr` med boksen i kolonne 1 og innholdet i kolonne 2.
+
 ### Egendefinert søkefunksjon
 
 ```tsx

@@ -5,7 +5,6 @@
     --detail-text-color: var(
         --ffe-color-component-form-input-foreground-subtle
     );
-    --selected-icon-color: var(--ffe-color-fill-primary-selected-default);
     --text-color: var(--ffe-color-foreground-default);
 
     min-height: 2.8125rem;
@@ -171,11 +170,6 @@
         justify-content: space-between;
     }
 
-    &__selected-icon {
-        color: var(--selected-icon-color);
-        visibility: hidden;
-    }
-
     &:has(input[aria-invalid='true']) {
         color: var(--ffe-color-foreground-feedback-critical);
         border: var(--ffe-g-border-width) solid
@@ -212,7 +206,7 @@
 
         .ffe-searchable-dropdown__list-item-body {
             display: grid;
-            grid-template-columns: 1fr auto;
+            grid-template-columns: auto 1fr;
             gap: var(--ffe-spacing-xs);
             align-items: center;
             padding: var(--ffe-spacing-sm);
@@ -222,14 +216,28 @@
             }
         }
 
-        [role='option'][aria-selected='true'] {
-            .ffe-searchable-dropdown__selected-icon {
-                visibility: visible;
-            }
+        /* Checkboxen er en tom span, så kolonne 2 i dens eget grid kollapser til
+           0 — men gapet mellom kolonnene består, og ville lagt seg oppå radens
+           eget gap. */
+        .ffe-checkbox {
+            column-gap: 0;
+        }
+
+        /* Bare «velg alle» har skillelinje: alternativene skilles av
+           checkboksene i stedet. Raden slipper unna resetten, så den beholder
+           basisregelens border-bottom uten å gjenta deklarasjonen. Den kan ikke
+           bli :last-child — den rendres bare når det finnes treff under. */
+        .ffe-searchable-dropdown__list-item-container:not(
+                :last-child,
+                .ffe-searchable-dropdown__select-all
+            ) {
+            border-bottom: none;
         }
 
         .ffe-searchable-dropdown__select-all
-            .ffe-searchable-dropdown__list-item-body-content {
+            .ffe-searchable-dropdown__list-item-title,
+        [role='option'][aria-selected='true']
+            .ffe-searchable-dropdown__list-item-title {
             font-family: var(--ffe-g-font-strong);
         }
 

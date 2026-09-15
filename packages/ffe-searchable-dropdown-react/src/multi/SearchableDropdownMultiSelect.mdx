@@ -39,6 +39,11 @@ Ting å være klar over:
 - Bruker du `maxRenderedDropdownElements`, gjelder «Velg alle» kun de radene som
   faktisk vises.
 - Raden vises ikke når søket ikke gir treff.
+- Checkboksen på raden har tre utseender: tom når ingenting er valgt, en strek når
+  noen — men ikke alle — av de synlige radene er valgt, og en hake når alle er.
+  Strek-tilstanden er kun visuell: raden er fortsatt `aria-selected="false"`, og
+  etiketten er fortsatt «Velg alle», som er riktig handlingsetikett, siden et klikk
+  velger resten. Hva som faktisk er valgt annonseres per rad og som løpende antall.
 
 ### Egne tekster
 

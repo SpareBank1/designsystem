@@ -948,5 +948,108 @@ describe('SearchableDropdownMultiSelect', () => {
 
             jest.useRealTimers();
         });
+
+        /**
+         * The box is a decorative span, not an <input>: role="option" has
+         * presentational children, so a real checkbox inside a row would trip
+         * axe's nested-interactive rule and have its state dropped from the
+         * accessibility tree anyway.
+         */
+        const box = (label: string) =>
+            getRow(label)?.querySelector('.ffe-checkbox');
+
+        it('shows a checkbox on the row and on every item', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+
+            screen.getAllByRole('option').forEach(option => {
+                expect(option.querySelector('.ffe-checkbox')).toBeTruthy();
+            });
+            expect(
+                document.querySelector(
+                    '.ffe-searchable-dropdown__selected-icon',
+                ),
+            ).toBeNull();
+        });
+
+        it('checks the box on a selected item', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange, selectedItems: [companies[0]] });
+
+            await user.click(screen.getByRole('combobox'));
+
+            expect(box(companies[0].organizationName)).toHaveClass(
+                'ffe-checkbox--checked',
+            );
+            expect(box(companies[1].organizationName)).not.toHaveClass(
+                'ffe-checkbox--checked',
+            );
+        });
+
+        it('shows the row as partially selected when only some items are selected', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange, selectedItems: [companies[0]] });
+
+            await user.click(screen.getByRole('combobox'));
+
+            expect(box('Velg alle')).toHaveClass('ffe-checkbox--indeterminate');
+            expect(getRow('Velg alle')).toHaveAttribute(
+                'aria-selected',
+                'false',
+            );
+        });
+
+        it('shows the row as empty when nothing is selected', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+
+            expect(box('Velg alle')).not.toHaveClass(
+                'ffe-checkbox--indeterminate',
+            );
+            expect(box('Velg alle')).not.toHaveClass('ffe-checkbox--checked');
+        });
+
+        it('shows the row as checked, never partially, when everything is selected', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange });
+
+            await user.click(screen.getByRole('combobox'));
+            await user.click(list().getByText('Velg alle'));
+
+            expect(box('Fjern alle')).toHaveClass('ffe-checkbox--checked');
+            expect(box('Fjern alle')).not.toHaveClass(
+                'ffe-checkbox--indeterminate',
+            );
+        });
+
+        it('scopes the partial state to the visible matches', async () => {
+            const user = userEvent.setup();
+            const onChange = jest.fn();
+
+            renderSelectAll({ onChange, selectedItems: [companies[0]] });
+
+            const input = screen.getByRole('combobox');
+            // Narrowing to the one selected company makes every visible item
+            // selected, so the row is checked rather than partial.
+            await user.type(input, companies[0].organizationName);
+            expect(box('Fjern alle')).toHaveClass('ffe-checkbox--checked');
+
+            await user.clear(input);
+            expect(box('Velg alle')).toHaveClass('ffe-checkbox--indeterminate');
+        });
     });
 });

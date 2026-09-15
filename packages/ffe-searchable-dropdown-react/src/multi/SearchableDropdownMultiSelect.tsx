@@ -304,6 +304,14 @@ function SearchableDropdownMultiSelectWithForwardRef<
             isItemSelected(isEqual, item, state.selectedItems),
         );
 
+    /* Skopet til det som vises, som allVisibleSelected og toggleSelectAll:
+       raden handler bare på treffene. */
+    const someVisibleSelected =
+        !allVisibleSelected &&
+        state.listToRender.some(item =>
+            isItemSelected(isEqual, item, state.selectedItems),
+        );
+
     const selectAllLabel = allVisibleSelected
         ? (selectAllTexts?.removeAll ?? getRemoveAllLabel(locale))
         : (selectAllTexts?.selectAll ?? getSelectAllLabel(locale));
@@ -554,6 +562,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                         ref={selectAllRef}
                         label={selectAllLabel}
                         isSelected={allVisibleSelected}
+                        isIndeterminate={someVisibleSelected}
                         isHighlighted={state.highlightedIndex === 0}
                         onClick={() => {
                             toggleSelectAll();
