@@ -2,11 +2,24 @@ import { Locale } from './types';
 
 export const getSelectedLabel = (locale: Locale, amountSelected: number) => {
     switch (locale) {
+        case 'nn':
+            return `${amountSelected} valde`;
         case 'en':
             return `${amountSelected} selected`;
-        case 'nn':
         default:
             return `${amountSelected} valgt`;
+    }
+};
+
+/** Handlingsetiketten på chippen for ett valgt element. */
+export const getRemoveSelectedLabel = (locale: Locale, item: string) => {
+    switch (locale) {
+        case 'nn':
+            return `${item}, fjern val`;
+        case 'en':
+            return `${item}, remove`;
+        default:
+            return `${item}, fjern valg`;
     }
 };
 
@@ -100,7 +113,7 @@ export const getItemClearedA11yStatus = (locale: Locale) => {
 export const getItemSelectedA11yStatus = (locale: Locale, item: string) => {
     switch (locale) {
         case 'nn':
-            return `Element ${item} er valgt.`;
+            return `Element ${item} er valt.`;
         case 'en':
             return `Item ${item} has been selected.`;
         default:

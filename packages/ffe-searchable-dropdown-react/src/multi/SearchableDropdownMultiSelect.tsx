@@ -38,6 +38,7 @@ import { ListBox } from '../ListBox';
 import {
     getRemoveAllLabel,
     getRemoveAllSelectedLabel,
+    getRemoveSelectedLabel,
     getSelectAllLabel,
     getSelectedLabel,
 } from '../translations';
@@ -469,7 +470,10 @@ function SearchableDropdownMultiSelectWithForwardRef<
                                 type="button"
                                 size="sm"
                                 key={index}
-                                aria-label={`${item[dropdownAttributes[0]]}, fjern valg`}
+                                aria-label={getRemoveSelectedLabel(
+                                    locale,
+                                    item[dropdownAttributes[0]],
+                                )}
                                 onClick={e => {
                                     e.stopPropagation();
                                     dispatch({
