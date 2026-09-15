@@ -127,6 +127,89 @@ describe('<Checkbox />', () => {
         expect(label?.textContent).toBe('Hello world');
     });
 
+    it('should support indeterminate', () => {
+        renderCheckbox({ indeterminate: true });
+
+        expect(screen.getByRole('checkbox')).toBePartiallyChecked();
+    });
+
+    it('should not be partially checked by default', () => {
+        renderCheckbox();
+
+        expect(screen.getByRole('checkbox')).not.toBePartiallyChecked();
+    });
+
+    it('should not set aria-checked when indeterminate', () => {
+        // The accessibility layer derives the mixed state from the DOM
+        // property. An aria-checked attribute would desynchronise as soon as
+        // the user clicks, since the browser updates the property but not the
+        // attribute.
+        renderCheckbox({ indeterminate: true });
+
+        expect(
+            screen.getByRole('checkbox').getAttribute('aria-checked'),
+        ).toBeNull();
+    });
+
+    it('should reapply indeterminate on re-render after the user clicks', () => {
+        // The browser clears the property when the user clicks, so it has to be
+        // reapplied on every render — not just when the prop changes. This fails
+        // if the effect gets a [indeterminate] dependency array, since the prop
+        // is unchanged across the re-render.
+        const { rerender } = render(
+            <Checkbox onChange={() => {}} indeterminate={true}>
+                children
+            </Checkbox>,
+        );
+        const checkbox = screen.getByRole('checkbox');
+
+        fireEvent.click(checkbox);
+        expect(checkbox).not.toBePartiallyChecked();
+
+        rerender(
+            <Checkbox onChange={() => {}} indeterminate={true}>
+                children
+            </Checkbox>,
+        );
+        expect(checkbox).toBePartiallyChecked();
+    });
+
+    it('should toggle indeterminate when the prop changes', () => {
+        const { rerender } = render(
+            <Checkbox onChange={() => {}} indeterminate={false}>
+                children
+            </Checkbox>,
+        );
+        const checkbox = screen.getByRole('checkbox');
+        expect(checkbox).not.toBePartiallyChecked();
+
+        rerender(
+            <Checkbox onChange={() => {}} indeterminate={true}>
+                children
+            </Checkbox>,
+        );
+        expect(checkbox).toBePartiallyChecked();
+
+        rerender(
+            <Checkbox onChange={() => {}} indeterminate={false}>
+                children
+            </Checkbox>,
+        );
+        expect(checkbox).not.toBePartiallyChecked();
+    });
+
+    it('should forward the ref to the input while setting indeterminate', () => {
+        const ref = React.createRef<HTMLInputElement>();
+        render(
+            <Checkbox onChange={() => {}} indeterminate={true} ref={ref}>
+                children
+            </Checkbox>,
+        );
+
+        expect(ref.current).toBe(screen.getByRole('checkbox'));
+        expect(ref.current).toBePartiallyChecked();
+    });
+
     it('should render with a hidden label', () => {
         const { container } = renderCheckbox({
             'aria-label': 'I am label',
