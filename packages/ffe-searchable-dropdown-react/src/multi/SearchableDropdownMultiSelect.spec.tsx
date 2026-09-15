@@ -156,6 +156,42 @@ describe('SearchableDropdownMultiSelect', () => {
         expect(elements).toHaveLength(1);
     });
 
+    /**
+     * Clicking the chip moves focus into the input, which opens the list and
+     * schedules the result count inside the same debounce window. The removal is
+     * the message the user needs, and outranks it — see queueA11yStatus in
+     * a11y.ts.
+     */
+    it('announces removing a chip, not the result count', async () => {
+        const user = userEvent.setup({ delay: null });
+        jest.useFakeTimers();
+
+        render(
+            <SearchableDropdownMultiSelect
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                onChange={jest.fn()}
+                selectedItems={[companies[0]]}
+            />,
+        );
+
+        await user.click(screen.getByLabelText('Bedriften, fjern valg'));
+
+        const a11yStatusMessage = await screen.findByRole('status');
+
+        await waitFor(() => {
+            expect(a11yStatusMessage).toHaveTextContent(
+                'Valgt element har blitt fjernet.',
+            );
+        });
+
+        jest.useRealTimers();
+    });
+
     it('should be possible to select item with keyboard', async () => {
         const user = userEvent.setup();
         const onChangeMultiSelect = jest.fn();
@@ -1198,10 +1234,10 @@ describe('SearchableDropdownMultiSelect', () => {
         });
 
         /**
-         * Focus starts in the input, as it does after selecting items. Removing
-         * from an unfocused chip instead moves focus into the input, which
-         * reopens the list and announces the result count — that announcement
-         * lands inside the same debounce window and wins.
+         * Clicking the chip moves focus into the input, which opens the list and
+         * schedules the result count inside the same debounce window. The
+         * removal is the message the user needs, and outranks it — see
+         * queueA11yStatus in a11y.ts.
          */
         it('announces the removal as a single a11y status message', async () => {
             const user = userEvent.setup({ delay: null });
@@ -1209,8 +1245,7 @@ describe('SearchableDropdownMultiSelect', () => {
 
             renderShowNumberSelected({ onChange: jest.fn() });
 
-            await user.click(screen.getByRole('combobox'));
-            await user.keyboard('{Backspace}');
+            await user.click(summaryChip());
 
             const a11yStatusMessage = await screen.findByRole('status');
 
