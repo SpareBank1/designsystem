@@ -62,4 +62,41 @@ describe('AccountSelectorMulti', () => {
         expect(onChange).toHaveBeenCalledWith(accounts, 'selected');
         expect(list.getByText('Fjern alle')).toBeInTheDocument();
     });
+
+    it('shows a checkbox on every account instead of a check icon', async () => {
+        const user = userEvent.setup();
+
+        render(
+            <AccountSelectorMulti
+                id="id"
+                accounts={accounts}
+                locale="nb"
+                onChange={jest.fn()}
+                onReset={jest.fn()}
+                selectedAccounts={[accounts[0]]}
+            />,
+        );
+
+        await user.click(screen.getByRole('combobox'));
+
+        const options = screen.getAllByRole('option');
+        options.forEach(option => {
+            expect(option.querySelector('.ffe-checkbox')).toBeTruthy();
+        });
+        expect(
+            document.querySelector('.ffe-searchable-dropdown__selected-icon'),
+        ).toBeNull();
+
+        // Scoped to the listbox: a selected account also shows up as a chip in
+        // the input field.
+        const list = within(screen.getByRole('listbox'));
+        const boxFor = (name: string) =>
+            list
+                .getByText(name)
+                .closest('[role="option"]')
+                ?.querySelector('.ffe-checkbox');
+
+        expect(boxFor('Brukskonto')).toHaveClass('ffe-checkbox--checked');
+        expect(boxFor('Sparekonto')).not.toHaveClass('ffe-checkbox--checked');
+    });
 });

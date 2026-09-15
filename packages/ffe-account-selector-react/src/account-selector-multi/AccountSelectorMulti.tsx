@@ -131,12 +131,18 @@ export const AccountSelectorMulti = <T extends Account = Account>({
             onChange={onChange}
             searchAttributes={['name', 'accountNumber']}
             locale={locale}
-            optionBody={({ item, isHighlighted, ...restOptionBody }) => {
+            optionBody={({
+                item,
+                isHighlighted,
+                isSelected,
+                ...restOptionBody
+            }) => {
                 if (OptionBody) {
                     return (
                         <OptionBody
                             item={item}
                             isHighlighted={isHighlighted}
+                            isSelected={isSelected}
                             {...restOptionBody}
                         />
                     );
@@ -146,6 +152,7 @@ export const AccountSelectorMulti = <T extends Account = Account>({
                     <AccountMultiselectOptionBody
                         item={item}
                         isHighlighted={isHighlighted}
+                        isSelected={isSelected}
                         locale={locale}
                         showBalance={showBalance}
                     />
