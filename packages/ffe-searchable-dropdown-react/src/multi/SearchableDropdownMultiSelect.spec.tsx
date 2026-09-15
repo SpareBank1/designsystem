@@ -372,6 +372,9 @@ describe('SearchableDropdownMultiSelect', () => {
 
         expect(input.getAttribute('aria-autocomplete')).toEqual('list');
         expect(input.getAttribute('autocomplete')).toEqual('off');
+        // Ikke bare like: begge må faktisk peke på noe.
+        expect(listBox).toHaveAttribute('id', 'id-listbox');
+        expect(listBox).toHaveAttribute('aria-labelledby', 'labelId');
         expect(input.getAttribute('aria-controls')).toEqual(
             listBox.getAttribute('id'),
         );

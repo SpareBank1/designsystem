@@ -549,9 +549,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
                     type="text"
                     role="combobox"
                     autoComplete="off"
-                    aria-controls={
-                        listBoxRef.current?.getAttribute('id') ?? undefined
-                    }
+                    aria-controls={`${id}-listbox`}
                     aria-expanded={state.isExpanded && !!rowCount}
                     aria-autocomplete="list"
                     aria-haspopup="listbox"
@@ -574,7 +572,12 @@ function SearchableDropdownMultiSelectWithForwardRef<
                 }
                 isLoading={isLoading}
             />
-            <ListBox ref={listBoxRef} isExpanded={state.isExpanded}>
+            <ListBox
+                ref={listBoxRef}
+                isExpanded={state.isExpanded}
+                id={`${id}-listbox`}
+                labelledById={labelledById}
+            >
                 {state.isExpanded && hasSelectAllRow && (
                     <SelectAllOption
                         ref={selectAllRef}
