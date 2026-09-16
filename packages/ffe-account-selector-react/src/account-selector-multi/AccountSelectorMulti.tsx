@@ -78,11 +78,8 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
      * visible accounts. When a search is active it only applies to the matches.
      */
     showSelectAll?: boolean;
-    /** Overrides the default labels on the select all row, for all locales */
-    selectAllTexts?: {
-        selectAll?: string;
-        removeAll?: string;
-    };
+    /** Overrides the default label on the select all row, for all locales */
+    selectAllText?: string;
 }
 
 export const AccountSelectorMulti = <T extends Account = Account>({
@@ -106,7 +103,7 @@ export const AccountSelectorMulti = <T extends Account = Account>({
     maxRenderedDropdownElements,
     showNumberSelectedAfter,
     showSelectAll,
-    selectAllTexts,
+    selectAllText,
     ...rest
 }: AccountSelectorMultiProps<T>) => {
     const formatter = formatAccountNumber
@@ -166,7 +163,7 @@ export const AccountSelectorMulti = <T extends Account = Account>({
             maxRenderedDropdownElements={maxRenderedDropdownElements}
             showNumberSelectedAfter={showNumberSelectedAfter}
             showSelectAll={showSelectAll}
-            selectAllTexts={selectAllTexts}
+            selectAllText={selectAllText}
             isEqual={(accountA, accountB) =>
                 accountA.accountNumber === accountB.accountNumber
             }

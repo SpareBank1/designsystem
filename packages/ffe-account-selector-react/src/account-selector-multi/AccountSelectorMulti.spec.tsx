@@ -60,7 +60,7 @@ describe('AccountSelectorMulti', () => {
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(accounts, 'selected');
-        expect(list.getByText('Fjern alle')).toBeInTheDocument();
+        expect(list.getByText('Velg alle')).toBeInTheDocument();
     });
 
     it('shows a checkbox on every account instead of a check icon', async () => {
