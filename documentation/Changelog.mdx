@@ -9,7 +9,7 @@ Denne siden lister breaking changes og større endringer i designsystemet. Du fi
 
 ### 102.0.0 Velg alle i multiselect (sep 2026)
 
-`SearchableDropdownMultiSelect` og `AccountSelectorMulti` har fått propen `showSelectAll`, som legger en «Velg alle»-rad øverst i nedtrekkslisten. Teksten bytter til «Fjern alle» når alt som vises er valgt, og begge tekstene kan overstyres med `selectAllTexts`. Ved aktivt søk gjelder raden kun treffene.
+`SearchableDropdownMultiSelect` og `AccountSelectorMulti` har fått propen `showSelectAll`, som legger en «Velg alle»-rad øverst i nedtrekkslisten. Raden har en checkbox som viser om alt, noe eller ingenting er valgt, og teksten kan overstyres med `selectAllText`. Ved aktivt søk gjelder raden kun treffene.
 
 **Breaking:** `onChange` i begge komponentene kalles nå med et array i stedet for ett enkelt element, siden én handling kan endre flere elementer. Arrayet inneholder **kun det som endret seg**, ikke hele utvalget.
 
