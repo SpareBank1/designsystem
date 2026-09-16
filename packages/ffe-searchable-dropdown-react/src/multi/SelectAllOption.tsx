@@ -2,14 +2,14 @@ import React, { useId } from 'react';
 import classNames from 'classnames';
 
 interface SelectAllOptionProps {
-    /** Text to show in the row, typically "Velg alle" or "Fjern alle" */
+    /** Text to show in the row, typically "Velg alle" */
     label: string;
     /** True when every visible item is selected */
     isSelected: boolean;
     /** True when some, but not every, visible item is selected. Shows the
      * checkbox with a dash. Visual only — the row's `aria-selected` is still
-     * false, and the label still reads "Velg alle", which is the correct action
-     * label in this state. */
+     * false. The label stays "Velg alle" regardless of selection state; the
+     * checkbox communicates whether all, some, or none are selected. */
     isIndeterminate: boolean;
     isHighlighted: boolean;
     onClick: () => void;

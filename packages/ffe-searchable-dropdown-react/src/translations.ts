@@ -51,17 +51,6 @@ export const getSelectAllLabel = (locale: Locale) => {
     }
 };
 
-export const getRemoveAllLabel = (locale: Locale) => {
-    switch (locale) {
-        case 'nn':
-            return 'Fjern alle';
-        case 'en':
-            return 'Remove all';
-        default:
-            return 'Fjern alle';
-    }
-};
-
 export const getMultipleItemsChangedA11yStatus = (
     locale: Locale,
     countDelta: number,

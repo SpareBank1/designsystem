@@ -360,10 +360,7 @@ export const SelectAllCustomTexts: Story = {
     args: {
         ...Standard.args,
         showSelectAll: true,
-        selectAllTexts: {
-            selectAll: 'Velg all frukt',
-            removeAll: 'Fjern all frukt',
-        },
+        selectAllText: 'Velg all frukt',
     },
     render: function Render({ id, labelledById, ...args }) {
         return (

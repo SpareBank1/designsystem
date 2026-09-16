@@ -704,7 +704,7 @@ describe('SearchableDropdownMultiSelect', () => {
             onChange: Props['onChange'];
             locale?: Props['locale'];
             noMatch?: Props['noMatch'];
-            selectAllTexts?: Props['selectAllTexts'];
+            selectAllText?: Props['selectAllText'];
             selectedItems?: Props['selectedItems'];
             showSelectAll?: Props['showSelectAll'];
         }) =>
@@ -762,7 +762,8 @@ describe('SearchableDropdownMultiSelect', () => {
 
             expect(onChange).toHaveBeenCalledTimes(1);
             expect(onChange).toHaveBeenCalledWith(companies, 'selected');
-            expect(list().getByText('Fjern alle')).toBeInTheDocument();
+            expect(list().getByText('Velg alle')).toBeInTheDocument();
+            expect(box('Velg alle')).toHaveClass('ffe-checkbox--checked');
             screen.getAllByRole('option').forEach(option => {
                 expect(option.getAttribute('aria-selected')).toEqual('true');
             });
@@ -776,7 +777,7 @@ describe('SearchableDropdownMultiSelect', () => {
 
             await user.click(screen.getByRole('combobox'));
             await user.click(list().getByText('Velg alle'));
-            await user.click(list().getByText('Fjern alle'));
+            await user.click(list().getByText('Velg alle'));
 
             expect(onChange).toHaveBeenCalledTimes(2);
             expect(onChange).toHaveBeenLastCalledWith(companies, 'removed');
@@ -829,7 +830,7 @@ describe('SearchableDropdownMultiSelect', () => {
 
             expect(input).toHaveValue('Be');
 
-            await user.click(list().getByText('Fjern alle'));
+            await user.click(list().getByText('Velg alle'));
 
             expect(onChange).toHaveBeenLastCalledWith(
                 [companies[0], companies[2]],
@@ -930,34 +931,34 @@ describe('SearchableDropdownMultiSelect', () => {
             expect(list().queryByText('Velg alle')).toBeNull();
         });
 
-        it('allows overriding both labels', async () => {
+        it('allows overriding the label', async () => {
             const user = userEvent.setup();
             const onChange = jest.fn();
 
             renderSelectAll({
                 onChange,
-                selectAllTexts: {
-                    selectAll: 'Ta alle',
-                    removeAll: 'Nullstill',
-                },
+                selectAllText: 'Ta alle',
             });
 
             await user.click(screen.getByRole('combobox'));
+
+            expect(list().getByText('Ta alle')).toBeInTheDocument();
+            expect(list().queryByText('Velg alle')).toBeNull();
+
             await user.click(list().getByText('Ta alle'));
 
-            expect(list().getByText('Nullstill')).toBeInTheDocument();
-            expect(list().queryByText('Velg alle')).toBeNull();
+            expect(onChange).toHaveBeenCalledWith(companies, 'selected');
+            expect(list().getByText('Ta alle')).toBeInTheDocument();
         });
 
-        it('translates the labels', async () => {
+        it('translates the label', async () => {
             const user = userEvent.setup();
             const onChange = jest.fn();
 
             const { unmount } = renderSelectAll({ onChange, locale: 'en' });
 
             await user.click(screen.getByRole('combobox'));
-            await user.click(list().getByText('Select all'));
-            expect(list().getByText('Remove all')).toBeInTheDocument();
+            expect(list().getByText('Select all')).toBeInTheDocument();
 
             unmount();
 
@@ -1069,8 +1070,8 @@ describe('SearchableDropdownMultiSelect', () => {
             await user.click(screen.getByRole('combobox'));
             await user.click(list().getByText('Velg alle'));
 
-            expect(box('Fjern alle')).toHaveClass('ffe-checkbox--checked');
-            expect(box('Fjern alle')).not.toHaveClass(
+            expect(box('Velg alle')).toHaveClass('ffe-checkbox--checked');
+            expect(box('Velg alle')).not.toHaveClass(
                 'ffe-checkbox--indeterminate',
             );
         });
@@ -1085,7 +1086,7 @@ describe('SearchableDropdownMultiSelect', () => {
             // Narrowing to the one selected company makes every visible item
             // selected, so the row is checked rather than partial.
             await user.type(input, companies[0].organizationName);
-            expect(box('Fjern alle')).toHaveClass('ffe-checkbox--checked');
+            expect(box('Velg alle')).toHaveClass('ffe-checkbox--checked');
 
             await user.clear(input);
             expect(box('Velg alle')).toHaveClass('ffe-checkbox--indeterminate');

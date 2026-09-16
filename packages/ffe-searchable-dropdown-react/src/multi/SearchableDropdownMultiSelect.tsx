@@ -36,7 +36,6 @@ import { useRefs } from '../useRefs';
 import { ToggleButton } from '../ToggleButton';
 import { ListBox } from '../ListBox';
 import {
-    getRemoveAllLabel,
     getRemoveAllSelectedLabel,
     getRemoveSelectedLabel,
     getSelectAllLabel,
@@ -129,11 +128,8 @@ export interface SearchableDropdownMultiSelectProps<
      * visible items. When a search is active it only applies to the matches.
      */
     showSelectAll?: boolean;
-    /** Overrides the default labels on the select all row, for all locales */
-    selectAllTexts?: {
-        selectAll?: string;
-        removeAll?: string;
-    };
+    /** Overrides the default label on the select all row, for all locales */
+    selectAllText?: string;
 }
 
 function SearchableDropdownMultiSelectWithForwardRef<
@@ -163,7 +159,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
         showNumberSelectedAfter,
         isEqual = isDeepEqual,
         showSelectAll = false,
-        selectAllTexts,
+        selectAllText,
         ...rest
     }: SearchableDropdownMultiSelectProps<Item>,
     ref: ForwardedRef<HTMLInputElement>,
@@ -312,9 +308,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             isItemSelected(isEqual, item, state.selectedItems),
         );
 
-    const selectAllLabel = allVisibleSelected
-        ? (selectAllTexts?.removeAll ?? getRemoveAllLabel(locale))
-        : (selectAllTexts?.selectAll ?? getSelectAllLabel(locale));
+    const selectAllLabel = selectAllText ?? getSelectAllLabel(locale);
 
     const getRowElement = (rowIndex: number) =>
         isSelectAllRow(rowIndex)
