@@ -7,6 +7,40 @@ import { SmallText } from '@sb1/ffe-core-react';
 
 Denne siden lister breaking changes og større endringer i designsystemet. Du finner fullstendig changelog på [releasesiden på GitHub](https://github.com/SpareBank1/designsystem/releases).
 
+### 102.0.0 Velg alle i multiselect (sep 2026)
+
+`SearchableDropdownMultiSelect` og `AccountSelectorMulti` har fått propen `showSelectAll`, som legger en «Velg alle»-rad øverst i nedtrekkslisten. Raden har en checkbox som viser om alt, noe eller ingenting er valgt, og teksten kan overstyres med `selectAllText`. Ved aktivt søk gjelder raden kun treffene.
+
+**Breaking:** `onChange` i begge komponentene kalles nå med et array i stedet for ett enkelt element, siden én handling kan endre flere elementer. Arrayet inneholder **kun det som endret seg**, ikke hele utvalget.
+
+Før:
+
+```tsx
+onChange={(item, actionType) => {
+    if (actionType === 'selected') {
+        setSelected(prev => [...prev, item]);
+    } else {
+        setSelected(prev => prev.filter(it => it.id !== item.id));
+    }
+}}
+```
+
+Etter:
+
+```tsx
+onChange={(items, actionType) => {
+    if (actionType === 'selected') {
+        setSelected(prev => [...prev, ...items]);
+    } else {
+        setSelected(prev =>
+            prev.filter(it => !items.some(item => item.id === it.id)),
+        );
+    }
+}}
+```
+
+I tillegg beholdes søketeksten når du bruker «Velg alle»-raden, slik at samme sett treff kan velges og fjernes flere ganger. Å klikke inn i søkefeltet med tekst i det utvider ikke lenger listen til alle elementer.
+
 ### 101.0.0 Avhengighetsopprydning og bugfikser (apr 2026)
 
 Denne versjonen er en **major** release primært drevet av oppgradering av interne avhengigheter til nye major-versjoner. Vi anbefaler å følge ekstra med på eventuelle feil etter oppdatering, slik som med alle major-versjoner.
