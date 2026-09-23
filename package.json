@@ -85,7 +85,7 @@
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.5",
         "husky": "^9.1.7",
-        "lerna": "^9.0.7",
+        "lerna": "^10.0.1",
         "lint-staged": "^16.4.0",
         "npm-run-all": "^4.1.5",
         "oxlint": "^0.9.3",
@@ -100,6 +100,12 @@
         "typescript": "^5.9.3"
     },
     "overrides": {
-        "flatted": "^3.4.2"
+        "tar": "^7.5.21",
+        "ws": "^8.21.3",
+        "sigstore": "^4.1.1",
+        "@sigstore/core": "^3.2.1",
+        "@sigstore/verify": "^3.1.1",
+        "smol-toml": "^1.7.1",
+        "vite": "^6.4.3"
     }
 }
