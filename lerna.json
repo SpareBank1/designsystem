@@ -6,6 +6,7 @@
         "publish": {
             "allowBranch": "main",
             "conventionalCommits": true,
+            "concurrency": 1,
             "ignoreChanges": [
                 ".eslintrc",
                 ".gitattributes",

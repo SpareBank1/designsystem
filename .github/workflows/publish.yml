@@ -45,11 +45,30 @@ jobs:
                   npm run build
                   npm test -- --ci
 
-            - name: lerna publish to registry.npmjs.org
+            - name: lerna version
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
-              run: lerna publish --yes --no-verify-access --force-git-tag --create-release github --force-publish
+              run: lerna version --yes --force-git-tag --create-release github --force-publish
               env:
                   GH_TOKEN: ${{ secrets.GH_USER_PAT }}
+
+            # Sigstore returnerer 409 hvis en signeringsforespørsel blir sendt på nytt
+            # etter at Rekor allerede har lagret den, og lerna behandler det som
+            # fatalt. `from-package` publiserer bare versjoner som mangler på
+            # registry, så et nytt forsøk plukker opp restene.
+            # https://github.com/sigstore/sigstore-js/issues/1708
+            - name: lerna publish to registry.npmjs.org
+              id: publish
+              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              continue-on-error: true
+              run: lerna publish from-package --yes
+
+            - name: Retry publish of remaining packages
+              if: ${{ steps.publish.outcome == 'failure' }}
+              run: lerna publish from-package --yes
+
+            - name: Verify all versions reached npm
+              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              run: node scripts/verify-published-versions.js
 
             - name: Merge back changes to development branch
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
