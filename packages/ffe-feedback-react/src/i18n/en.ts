@@ -2,6 +2,8 @@ export const en = {
     ARIA_LABEL_THUMB_UP: 'Give thumbs up',
     ARIA_LABEL_THUMB_DOWN: 'Give thumbs down',
     FEEDBACK_NOT_SENT_HEADING: 'What do you think of this page? ',
+    FEEDBACK_NOT_SENT_HEADING_NATIVE:
+        'What do you think of this part of the app? ',
     FEEDBACK_SENT_HEADING: 'Thank you!',
     FEEDBACK_BUTTON_SEND: 'Send feedback',
     FEEDBACK_BUTTON_CANCEL: 'Finish',
@@ -9,8 +11,12 @@ export const en = {
     FEEDBACK_IMPROVE: 'Do you have anything else on your mind?',
     FEEDBACK_ANSWER:
         'Your feedback will be used to improve this site and will not be answered.',
+    FEEDBACK_ANSWER_NATIVE:
+        'Your feedback will be used to improve the app and will not be answered.',
     FEEDBACK_ANSWER_INCLUDE_CONSENT:
         'Your feedback will be used to improve this site and will not be answered without consent.',
+    FEEDBACK_ANSWER_INCLUDE_CONSENT_NATIVE:
+        'Your feedback will be used to improve the app and will not be answered without consent.',
     FEEDBACK_CONSENT: 'I consent to be contacted regarding my feedback.',
     QUESTIONS: ' If you have questions, ',
     FEEDBACK_LINK_TEXT: 'contact customer services.',

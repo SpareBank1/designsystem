@@ -2,6 +2,7 @@ export const nn = {
     ARIA_LABEL_THUMB_UP: 'Gje tommel opp',
     ARIA_LABEL_THUMB_DOWN: 'Gje tommel ned',
     FEEDBACK_NOT_SENT_HEADING: 'Kva synest du om denne sida? ',
+    FEEDBACK_NOT_SENT_HEADING_NATIVE: 'Kva synest du om denne delen av appen? ',
     FEEDBACK_SENT_HEADING: 'Takk for tilbakemeldinga!',
     FEEDBACK_BUTTON_SEND: 'Send tilbakemelding',
     FEEDBACK_BUTTON_CANCEL: 'Avslutt',
@@ -9,8 +10,12 @@ export const nn = {
     FEEDBACK_IMPROVE: 'Har du noko meir på hjartet? (valfritt)',
     FEEDBACK_ANSWER:
         'Svaret ditt vert brukt til å betre denne sida og vert ikkje svart på.',
+    FEEDBACK_ANSWER_NATIVE:
+        'Svaret ditt vert brukt til å betre appen og vert ikkje svart på.',
     FEEDBACK_ANSWER_INCLUDE_CONSENT:
         'Svaret ditt vert brukt til å betre denne sida og vert ikkje svart på utan samtykke.',
+    FEEDBACK_ANSWER_INCLUDE_CONSENT_NATIVE:
+        'Svaret ditt vert brukt til å betre appen og vert ikkje svart på utan samtykke.',
     FEEDBACK_CONSENT:
         'Eg samtykkjer til at eg kan bli kontakta angåande tilbakemeldinga mi.',
     QUESTIONS: ' Har du spørsmål, ',

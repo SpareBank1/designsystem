@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LinkText, Paragraph } from '@sb1/ffe-core-react';
-import { txt } from './i18n/texts';
+import { getLocaleTexts } from './i18n/getLocaleTexts';
 import { InputGroup, TextArea, Checkbox } from '@sb1/ffe-form-react';
 import {
     ActionButton,
@@ -17,6 +17,7 @@ export interface FeedbackExpandedProps {
         linkText?: string;
     };
     includeConsent?: boolean;
+    isNative?: boolean;
 }
 
 export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
@@ -24,7 +25,9 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
     handleFeedback,
     contactLink,
     includeConsent = false,
+    isNative = false,
 }) => {
+    const localeTexts = getLocaleTexts(locale, isNative);
     const [feedbackText, setFeedbackText] = useState<string>();
     const [consentGiven, setConsentGiven] = useState<boolean>(false);
 
@@ -34,21 +37,23 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
             className="ffe-feedback__link-button"
             onClick={contactLink?.onClick}
         >
-            {contactLink.linkText ?? txt[locale].FEEDBACK_LINK_TEXT}
+            {contactLink.linkText ?? localeTexts.FEEDBACK_LINK_TEXT}
         </LinkText>
     ) : null;
 
     return (
         <>
             <Paragraph>
-                {includeConsent ? txt[locale].FEEDBACK_ANSWER_INCLUDE_CONSENT : txt[locale].FEEDBACK_ANSWER}
-                {contactLinkElement && txt[locale].QUESTIONS}
+                {includeConsent
+                    ? localeTexts.FEEDBACK_ANSWER_INCLUDE_CONSENT
+                    : localeTexts.FEEDBACK_ANSWER}
+                {contactLinkElement && localeTexts.QUESTIONS}
                 {contactLinkElement}
             </Paragraph>
             <InputGroup
                 className="ffe-feedback__textarea-container"
-                label={txt[locale].FEEDBACK_IMPROVE}
-                description={txt[locale].FEEDBACK_SENSITIVE}
+                label={localeTexts.FEEDBACK_IMPROVE}
+                description={localeTexts.FEEDBACK_SENSITIVE}
             >
                 <TextArea
                     data-testid="feedbackTextArea"
@@ -67,14 +72,14 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                             setConsentGiven(event.target.checked)
                         }
                     >
-                        {txt[locale].FEEDBACK_CONSENT}
+                        {localeTexts.FEEDBACK_CONSENT}
                     </Checkbox>
                 </div>
             )}
 
             <ButtonGroup
                 className="ffe-feedback__button-group"
-                ariaLabel={txt[locale].FEEDBACK_BUTTON_GROUP}
+                ariaLabel={localeTexts.FEEDBACK_BUTTON_GROUP}
                 thin={true}
             >
                 <ActionButton
@@ -87,10 +92,10 @@ export const FeedbackExpanded: React.FC<FeedbackExpandedProps> = ({
                         }
                     }}
                 >
-                    {txt[locale].FEEDBACK_BUTTON_SEND}
+                    {localeTexts.FEEDBACK_BUTTON_SEND}
                 </ActionButton>
                 <TertiaryButton onClick={() => handleFeedback()}>
-                    {txt[locale].FEEDBACK_BUTTON_CANCEL}
+                    {localeTexts.FEEDBACK_BUTTON_CANCEL}
                 </TertiaryButton>
             </ButtonGroup>
         </>

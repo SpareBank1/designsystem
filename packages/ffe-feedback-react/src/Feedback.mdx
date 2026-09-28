@@ -24,6 +24,30 @@ Du kan endre lenken i teksten ved å sende med `contactLink`-prop og element som
 Ved å bare sende inn `onClick` kan du overskrive hva som skjer når lenken blir trykket på.
 Hvis du vil sende med din egen tekst kan du legge til `linkText`.
 
+## isNative
+
+Standardtekstene spør hva du synes om «denne siden», noe som ikke passer inne i en hybrid app.
+Sender du med `isNative` bytter komponenten til tekster som omtaler appen i stedet:
+
+| `isNative={false}` (default)                                            | `isNative={true}`                                                 |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Hva synes du om denne siden?                                            | Hva synes du om denne delen av appen?                             |
+| Svaret ditt blir brukt til å forbedre denne siden og blir ikke besvart. | Svaret ditt blir brukt til å forbedre appen og blir ikke besvart. |
+
+Kjører appen din både i nettleser og i mobilbanken, kan du bruke `checks.isNative()` fra
+Mobilbank Communication til å finne ut hvilken av dem det er. Se
+[dokumentasjonen for `checks.isNative`](https://www.test.sparebank1.no/test/mbc-demo/static/docs/functions/checks.isNative.html).
+
+```jsx
+<Feedback
+    isNative={checks.isNative()}
+    onThumbClick={onThumbClick}
+    onFeedbackSend={onFeedbackSend}
+/>
+```
+
+Sender du inn `texts.feedbackNotSentHeading` vinner den fortsatt over begge variantene.
+
 ## Forhåndsvisning
 
 <Canvas of={FeedbackStories.Standard} />
