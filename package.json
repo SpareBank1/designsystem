@@ -106,6 +106,7 @@
         "@sigstore/core": "^3.2.1",
         "@sigstore/verify": "^3.1.1",
         "smol-toml": "^1.7.1",
-        "vite": "^6.4.3"
+        "vite": "^6.4.3",
+        "uuid": "^14.0.0"
     }
 }
