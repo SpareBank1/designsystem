@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [101.1.0](https://github.com/SpareBank1/designsystem/compare/v101.0.13...v101.1.0) (2026-09-28)
+
+### Features
+
+* **ffe-feedback-react:** isNative gir tekster som omtaler appen i stedet for siden ([1005947](https://github.com/SpareBank1/designsystem/commit/1005947dd169ca9400318931b44b10ba3e39e74b))
+
+
 ## [101.0.13](https://github.com/SpareBank1/designsystem/compare/v101.0.12...v101.0.13) (2026-09-14)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
