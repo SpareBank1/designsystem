@@ -35,6 +35,7 @@ npm install @sb1/ffe-feedback-react
 | `texts` | `object` | Nei | - |
 | `className` | `string` | Nei | - |
 | `includeConsent` | `boolean` | Nei | - |
+| `isNative` | `boolean` | Nei | Bruk tekster som omtaler appen i stedet for siden. Settes når komponenten vises inne i en hybrid app. |
 
 ## Eksempler (fra README)
 
