@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 // Globale mockdata eller oppsett kan legges til her
 window.matchMedia = window.matchMedia || function() {
