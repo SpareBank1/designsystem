@@ -124,11 +124,13 @@ export default defineConfig(async () => {
 
     build: {
       sourcemap: true,
-      rollupOptions: {
+      rolldownOptions: {
         output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
-            'sb1-core': ['@sb1/ffe-core', '@sb1/ffe-core-react'],
+          codeSplitting: {
+            groups: [
+              { name: 'react-vendor', test: /[\\/]node_modules[\\/]react(-dom)?[\\/]/ },
+              { name: 'sb1-core', test: /[\\/]packages[\\/]ffe-core(-react)?[\\/]/ },
+            ],
           },
         },
       },

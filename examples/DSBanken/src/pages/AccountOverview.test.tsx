@@ -6,16 +6,17 @@ import { toHaveNoViolations } from 'jest-axe';
 // Utvid jest med tilgjengelighetsjekker
 expect.extend(toHaveNoViolations);
 
+// Mock for useId for å unngå unike IDer i snapshots og queries
+vi.mock('react', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('react')>();
+  let idCounter = 0;
+  return {
+    ...actual,
+    useId: () => `mocked-id-${idCounter++}`,
+  };
+});
+
 describe('AccountOverview', () => {
-  // Mock for useId for å unngå unike IDer i snapshots og queries
-  vi.mock('react', async (importOriginal) => {
-    const actual = await importOriginal<typeof import('react')>();
-    let idCounter = 0;
-    return {
-      ...actual,
-      useId: () => `mocked-id-${idCounter++}`,
-    };
-  });
 
   it('renders the account title and number correctly', () => {
     render(<AccountOverview />);
