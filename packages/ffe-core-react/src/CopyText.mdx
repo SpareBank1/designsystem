@@ -1,0 +1,38 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as CopyTextStories from './CopyText.stories';
+
+<Meta of={CopyTextStories} />
+
+# CopyText
+
+Wrapper tekst som brukeren enkelt kan kopiere til utklippstavlen. Et kopier-ikon vises etter teksten og bytter til et hake-ikon i 2 sekunder etter kopiering.
+
+<Canvas of={CopyTextStories.Standard} />
+<Controls of={CopyTextStories.Standard} />
+
+## Kopier annet innhold enn det som vises
+
+Bruk `copyText`-prop når du vil kopiere noe annet enn den synlige teksten — f.eks. et kontonummer uten mellomrom.
+
+<Canvas of={CopyTextStories.MedCopyTextOverride} />
+
+## Inline i tekst
+
+<Canvas of={CopyTextStories.InlineITekst} />
+
+## I lengre tekst med ombrytning
+
+<Canvas of={CopyTextStories.FlereLinjer} />
+
+## Detaljliste
+
+Flere kopierbare felt i samme blokk.
+
+<Canvas of={CopyTextStories.Detaljliste} />
+
+## Tilgjengelighet
+
+-   `label`-prop er påkrevd og settes som `aria-label` på knappen. Bør beskrive hva som kopieres, f.eks. `"Kopier kontonummer"`.
+-   `copiedLabel` (standard `'Kopiert'`) settes som `aria-label` etter vellykket kopiering, slik at skjermleser annonserer bekreftelsen.
+-   Knappen har minst 44×44 px treffområde (WCAG 2.5.5) og en synlig fokusring.
+-   Hvis `navigator.clipboard` ikke er tilgjengelig (gamle Android WebView), brukes `document.execCommand('copy')` som fallback.
