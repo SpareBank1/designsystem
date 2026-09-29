@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [102.0.0](https://github.com/SpareBank1/designsystem/compare/v101.1.1...v102.0.0) (2026-09-29)
+
+### Features
+
+* **ffe-form:** delvis valgt og dekorativ tilstand på checkbox ([2bac824](https://github.com/SpareBank1/designsystem/commit/2bac824ba6347e92655328de7fb4835f6a5d57cd))
+
+
 ## [101.1.1](https://github.com/SpareBank1/designsystem/compare/v101.1.0...v101.1.1) (2026-09-29)
 
 ### Bug Fixes

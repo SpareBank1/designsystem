@@ -3,6 +3,90 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [102.0.0](https://github.com/SpareBank1/designsystem/compare/v101.1.1...v102.0.0) (2026-09-29)
+
+* feat(ffe-searchable-dropdown-react)!: fjern alle fra «N valgt»-chippen ([acdfcf0](https://github.com/SpareBank1/designsystem/commit/acdfcf08ca7bf3d0d35a793b4785f6c147020610))
+* feat(ffe-searchable-dropdown-react)!: checkbokser i multiselect ([950997f](https://github.com/SpareBank1/designsystem/commit/950997f4e6f114e73369b812e6e67b01b1790223))
+* feat(ffe-account-selector-react)!: velg alle i accountselectormulti ([a10009c](https://github.com/SpareBank1/designsystem/commit/a10009cc6cac369d89300df9836e16e11e2ecb04))
+* feat(ffe-searchable-dropdown-react)!: velg alle i multiselect ([7c9c631](https://github.com/SpareBank1/designsystem/commit/7c9c631fd528bb668dc27669dc0adc7f688fdb13))
+
+### Bug Fixes
+
+* **ci:** verifiser publisering mot lerna-loggen i stedet for npm ([23ce059](https://github.com/SpareBank1/designsystem/commit/23ce0599ae8ddbe87958564aa123fa849f9393ee))
+* **ffe-searchable-dropdown-react:** gi listboksen id og tilgjengelig navn ([5767e99](https://github.com/SpareBank1/designsystem/commit/5767e99db24eba1559a9d93d9a3c585186deddfa))
+* **ffe-searchable-dropdown-react:** la ikke resultatmeldingen overskrive handlingsmeldingen ([8b04605](https://github.com/SpareBank1/designsystem/commit/8b04605750b80cdde7ef04db1be8c16dc79852b7))
+* **ffe-searchable-dropdown-react:** oversett etikettene på chippene ([633da2d](https://github.com/SpareBank1/designsystem/commit/633da2d18d1c336224c7b6932330e4ee5b4a5075))
+
+### Features
+
+* **ffe-account-selector-react:** checkbokser i kontovelger-multi ([51fb865](https://github.com/SpareBank1/designsystem/commit/51fb865575aa63c8fa0178c5c5b9e71141a51ca8))
+* **ffe-form-react:** indeterminate-prop på Checkbox ([bfdda0f](https://github.com/SpareBank1/designsystem/commit/bfdda0f6daa20c9860ffdf8f272ce9b96124b83e))
+* **ffe-form:** delvis valgt og dekorativ tilstand på checkbox ([2bac824](https://github.com/SpareBank1/designsystem/commit/2bac824ba6347e92655328de7fb4835f6a5d57cd))
+
+### BREAKING CHANGES
+
+* `onChange` i `AccountSelectorMulti` kalles nå med et array av
+  kontoer i stedet for én enkelt konto, siden én handling kan endre flere kontoer.
+  Arrayet inneholder kun kontoene som endret seg, ikke hele utvalget. Se
+  changelogen for et før/etter-eksempel på migreringen.
+* `onChange` i `SearchableDropdownMultiSelect` kalles nå med et
+  array i stedet for ett enkelt element, siden én handling kan endre flere
+  elementer. Arrayet inneholder kun det som endret seg, ikke hele utvalget.
+
+  Før:
+
+      onChange={(item, actionType) => {
+          if (actionType === 'selected') {
+              setSelected(prev => [...prev, item]);
+          } else {
+              setSelected(prev => prev.filter(it => it.id !== item.id));
+          }
+      }}
+
+  Etter:
+
+      onChange={(items, actionType) => {
+          if (actionType === 'selected') {
+              setSelected(prev => [...prev, ...items]);
+          } else {
+              setSelected(prev =>
+                  prev.filter(it => !items.some(item => item.id === it.id)),
+              );
+          }
+      }}
+
+  I tillegg utvider ikke lenger et klikk i søkefeltet listen til alle elementer
+  når feltet har tekst i seg.
+* chippen som viser «N valgt» er ikke lenger en dekorativ
+  `<span role="presentation">`, men en `<button>` med kryss. Den er klikkbar,
+  ligger i tab-rekkefølgen, og `pointer-events: none` på
+  `.ffe-chip--multiple-selected` er borte. Klassen finnes fortsatt som krok for
+  egne overstyringer, men har ingen egne regler. Snapshot-tester som fanget
+  spanet, og CSS som traff `span.ffe-chip--multiple-selected`, må oppdateres.
+* chippens tilgjengelige navn er en handlingsetikett, ikke bare
+* CSS-klassen `ffe-searchable-dropdown__selected-icon` og
+  custom-propertyen `--selected-icon-color` er fjernet. Elementet de stylet finnes
+  ikke lenger. Har du overstyrt `--selected-icon-color` for å endre fargen på
+  haken, kommer fargen nå fra `--ffe-color-foreground-inverse` og
+  `--ffe-color-fill-primary-selected-default` på `.ffe-checkbox`.
+* griden i `ffe-searchable-dropdown__list-item-body` er snudd fra
+  `1fr auto` til `auto 1fr` i multiselect, siden checkboksen ligger først. Har du
+  en egen `optionBody` som gjenbruker den klassen med to barn, bytter de plass:
+  førstebarnet klemmes inn i den smale `auto`-kolonnen og andrebarnet strekkes over
+  `1fr`.
+
+  Før:
+
+      <div className="ffe-searchable-dropdown__list-item-body">
+          <div>{item.name}</div>   {/* 1fr */}
+          <div>{item.balance}</div>{/* auto */}
+      </div>
+* tittelen i standardkroppen ligger nå i en
+  `ffe-searchable-dropdown__list-item-title`-span, og det er den som gjøres fet.
+  Regelen som gjorde hele `__list-item-body-content` fet på «velg alle»-raden er
+  borte, så detaljteksten under tittelen er ikke lenger fet.
+
+
 ## [101.1.1](https://github.com/SpareBank1/designsystem/compare/v101.1.0...v101.1.1) (2026-09-29)
 
 ### Bug Fixes

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [102.0.0](https://github.com/SpareBank1/designsystem/compare/v101.1.1...v102.0.0) (2026-09-29)
+
+* feat(ffe-account-selector-react)!: velg alle i accountselectormulti ([a10009c](https://github.com/SpareBank1/designsystem/commit/a10009cc6cac369d89300df9836e16e11e2ecb04))
+
+### Features
+
+* **ffe-account-selector-react:** checkbokser i kontovelger-multi ([51fb865](https://github.com/SpareBank1/designsystem/commit/51fb865575aa63c8fa0178c5c5b9e71141a51ca8))
+
+### BREAKING CHANGES
+
+* `onChange` i `AccountSelectorMulti` kalles nå med et array av
+  kontoer i stedet for én enkelt konto, siden én handling kan endre flere kontoer.
+  Arrayet inneholder kun kontoene som endret seg, ikke hele utvalget. Se
+  changelogen for et før/etter-eksempel på migreringen.
+
+
 ## [101.1.1](https://github.com/SpareBank1/designsystem/compare/v101.1.0...v101.1.1) (2026-09-29)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
