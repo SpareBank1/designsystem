@@ -37,10 +37,11 @@
 
     &__header {
         margin: 0;
+    }
 
-        .ffe-tooltip__icon {
-            margin-left: var(--ffe-spacing-xs);
-            transform: translateY(var(--ffe-spacing-2xs));
-        }
+    &__header .ffe-tooltip__icon,
+    > .ffe-form-label .ffe-tooltip__icon {
+        margin-left: var(--ffe-spacing-xs);
+        transform: translateY(var(--ffe-spacing-2xs));
     }
 }
