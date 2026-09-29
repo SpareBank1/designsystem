@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [101.1.1](https://github.com/SpareBank1/designsystem/compare/v101.1.0...v101.1.1) (2026-09-29)
+
+### Bug Fixes
+
+* **ffe-form:** lik avstand for radioknapper og checkboxer ([509c235](https://github.com/SpareBank1/designsystem/commit/509c2354ff7371c3067a979a4c976a210b486b31))
+* **ffe-form:** radioknapper følger margin-reglene i input-group som checkboxer ([97d8f41](https://github.com/SpareBank1/designsystem/commit/97d8f41f9cbd2436cf914f0b2b4f6860a2af0d7e))
+* **ffe-form:** riktig plassering av tooltip i legend i input-group ([e79da59](https://github.com/SpareBank1/designsystem/commit/e79da5978ba713a8a53b32d0b740f989fdaea578))
+
+
 # [101.1.0](https://github.com/SpareBank1/designsystem/compare/v101.0.13...v101.1.0) (2026-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-form
