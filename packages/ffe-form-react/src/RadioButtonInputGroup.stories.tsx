@@ -93,6 +93,16 @@ export const FieldMessage: Story = {
     },
 };
 
+export const WithTooltip: Story = {
+    args: {
+        ...Standard.args,
+        inline: true,
+        name: 'med-tooltip',
+        tooltip: 'Lukten du liker best en varm sommerdag',
+    },
+    render: Standard.render,
+};
+
 export const WithRadioSwitch: Story = {
     args: { ...Standard.args, name: 'radio-switch' },
     render: function Render(args) {
