@@ -1,78 +1,40 @@
 #!/usr/bin/env node
-// verify-published-versions.js
-// Fails if any workspace package's local version is missing from the npm registry.
-// Guards against a partially published release, which lerna reports as a single
-// WARN line among tens of thousands of log lines.
+// verify-published-versions.js <publish.log>
+// Fails if lerna planned to publish a package but never reported it as published.
+// Guards against a partially published release: after a Sigstore 409, lerna
+// silently drops packages it had not started yet, without a single log line.
+//
+// Reads lerna's own output instead of querying npm, because the registry can
+// take several minutes before a freshly published version is readable.
 
 const fs = require('fs');
-const path = require('path');
 
-const REGISTRY = 'https://registry.npmjs.org';
-const REQUEST_CONCURRENCY = 10;
-const ATTEMPTS = 3;
+const ANSI = /\x1b\[[0-9;]*m/g;
+const FOUND = /^Found \d+ packages? to publish:$/;
+const PLANNED = /^ - (\S+) => (\S+)$/;
+const PUBLISHED = /^lerna success published (@?\S+) (\S+)$/;
 
-function resolvePackageDirs() {
-    const lernaConfig = JSON.parse(
-        fs.readFileSync(path.join(process.cwd(), 'lerna.json'), 'utf8'),
-    );
-    return lernaConfig.packages.flatMap(pattern => {
-        if (!pattern.endsWith('/*')) return [pattern];
-        const parent = pattern.slice(0, -2);
-        return fs
-            .readdirSync(path.join(process.cwd(), parent), {
-                withFileTypes: true,
-            })
-            .filter(entry => entry.isDirectory())
-            .map(entry => path.join(parent, entry.name));
-    });
-}
-
-function readPackages() {
-    return resolvePackageDirs()
-        .map(dir => {
-            const manifestPath = path.join(process.cwd(), dir, 'package.json');
-            if (!fs.existsSync(manifestPath)) return null;
-            const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-            if (manifest.private) return null;
-            return { dir, name: manifest.name, version: manifest.version };
-        })
-        .filter(Boolean);
-}
-
-// 'published' | 'missing' | 'unknown' — 'unknown' must not be reported as
-// missing, otherwise a network blip would look like a failed release.
-async function checkPackage({ name, version }) {
-    let lastError = 'unknown';
-    for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
-        try {
-            const response = await fetch(`${REGISTRY}/${name}/${version}`);
-            if (response.status === 200) return 'published';
-            if (response.status === 404) return 'missing';
-            lastError = `HTTP ${response.status}`;
-        } catch (error) {
-            lastError = error.message;
-        }
-        if (attempt < ATTEMPTS) {
-            await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
-        }
+// The first "Found" block is the full plan. A retry prints its own, shorter
+// block with only the packages that were left.
+function readPlanned(lines) {
+    const start = lines.findIndex(line => FOUND.test(line));
+    if (start === -1) return null;
+    const planned = [];
+    for (const line of lines.slice(start + 1)) {
+        const match = PLANNED.exec(line);
+        if (!match) break;
+        planned.push({ name: match[1], version: match[2] });
     }
-    console.error(`Could not verify ${name}@${version}: ${lastError}`);
-    return 'unknown';
+    return planned;
 }
 
-async function mapWithConcurrency(items, limit, mapper) {
-    const results = [];
-    let next = 0;
-    const workers = Array.from({ length: Math.min(limit, items.length) }, () =>
-        (async () => {
-            while (next < items.length) {
-                const index = next++;
-                results[index] = await mapper(items[index]);
-            }
-        })(),
+function readPublished(lines) {
+    return new Set(
+        lines
+            .map(line => PUBLISHED.exec(line))
+            .filter(Boolean)
+            .map(([, name, version]) => `${name}@${version}`),
     );
-    await Promise.all(workers);
-    return results;
 }
 
 function writeSummary(problems) {
@@ -81,45 +43,59 @@ function writeSummary(problems) {
         ? [
               '## Partially published release',
               '',
-              'The following packages were bumped but never reached the registry:',
+              'lerna planned to publish these packages but never reported them as published:',
               '',
-              '| Package | Version | Status |',
-              '| --- | --- | --- |',
+              '| Package | Version |',
+              '| --- | --- |',
               ...problems.map(
-                  ({ name, version, status }) =>
-                      `| \`${name}\` | ${version} | ${status} |`,
+                  ({ name, version }) => `| \`${name}\` | ${version} |`,
               ),
               '',
               'Run the `Republish` workflow to publish the missing versions.',
           ]
-        : ['## All package versions are present on npm'];
+        : ['## lerna published every planned package'];
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${lines.join('\n')}\n`);
 }
 
-async function main() {
-    const packages = readPackages();
-    const statuses = await mapWithConcurrency(
-        packages,
-        REQUEST_CONCURRENCY,
-        checkPackage,
-    );
-    const problems = packages
-        .map((pkg, index) => ({ ...pkg, status: statuses[index] }))
-        .filter(pkg => pkg.status !== 'published');
+function main() {
+    const logPath = process.argv[2];
+    if (!logPath) {
+        console.error('Usage: verify-published-versions.js <publish.log>');
+        process.exit(2);
+    }
 
-    writeSummary(problems);
+    const lines = fs
+        .readFileSync(logPath, 'utf8')
+        .replace(ANSI, '')
+        .split(/\r?\n/)
+        .map(line => line.trimEnd());
 
-    if (problems.length) {
-        problems.forEach(({ name, version, status }) =>
-            console.error(`${status}: ${name}@${version}`),
-        );
+    const planned = readPlanned(lines);
+    if (!planned) {
         console.error(
-            `\n${problems.length} of ${packages.length} packages are not confirmed on npm.`,
+            `No "Found N packages to publish" in ${logPath}; lerna did not get as far as publishing.`,
         );
         process.exit(1);
     }
 
-    console.log(`All ${packages.length} package versions are present on npm.`);
+    const published = readPublished(lines);
+    const problems = planned.filter(
+        ({ name, version }) => !published.has(`${name}@${version}`),
+    );
+
+    writeSummary(problems);
+
+    if (problems.length) {
+        problems.forEach(({ name, version }) =>
+            console.error(`not published: ${name}@${version}`),
+        );
+        console.error(
+            `\n${problems.length} of ${planned.length} packages were not published.`,
+        );
+        process.exit(1);
+    }
+
+    console.log(`lerna published all ${planned.length} planned packages.`);
 }
 
 main();
