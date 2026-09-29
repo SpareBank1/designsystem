@@ -57,7 +57,7 @@ npm install @sb1/ffe-account-selector-react
 | `locale` | `Locale` | Nei | - |
 | `noMatches` | `object` | Nei | Overrides default string for all locales. |
 | `inputProps` | `React.ComponentPropsWithoutRef<'input'>` | Nei | Props passed to the input field |
-| `onChange` | `(account: T, actionType: 'selected' | 'removed') => void` | Ja | Called when a value is selected |
+| `onChange` | `(accounts: T[], actionType: 'selected' | 'removed') => void` | Ja | Called when the selection changes. `accounts` contains only the accounts that changed (the delta), never the full selection. |
 | `showBalance` | `boolean` | Nei | Default false. |
 | `formatAccountNumber` | `boolean` | Nei | Default true. |
 | `labelledById` | `string` | Nei | id of element that labels input field |
@@ -71,6 +71,8 @@ npm install @sb1/ffe-account-selector-react
 | `onReset` | `() => void` | Ja | Called when emptying the input field and moving focus away from the account selector |
 | `maxRenderedDropdownElements` | `number` | Nei | Limits number of rendered dropdown elements |
 | `showNumberSelectedAfter` | `number` | Nei | Using this will give a text "X selected" instead of chips, after a certain number of selected items. If you always want "X selected" showing, pass in 0 |
+| `showSelectAll` | `boolean` | Nei | Shows a row at the top of the dropdown for selecting or removing all visible accounts. When a search is active it only applies to the matches. |
+| `selectAllText` | `string` | Nei | Overrides the default label on the select all row, for all locales |
 
 ## Eksempler (fra README)
 
@@ -130,13 +132,22 @@ function MyComponent() {
                 id="account-selector-multi"
                 accounts={accounts}
                 selectedAccounts={selectedAccounts}
-                onChange={(account, actionType) => {
+                showSelectAll={true}
+                onChange={(changedAccounts, actionType) => {
                     if (actionType === 'selected') {
-                        setSelectedAccounts(prev => [...prev, account]);
+                        setSelectedAccounts(prev => [
+                            ...prev,
+                            ...changedAccounts,
+                        ]);
                     } else {
                         setSelectedAccounts(prev =>
                             prev.filter(
-                                a => a.accountNumber !== account.accountNumber,
+                                a =>
+                                    !changedAccounts.some(
+                                        it =>
+                                            it.accountNumber ===
+                                            a.accountNumber,
+                                    ),
                             ),
                         );
                     }

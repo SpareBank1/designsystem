@@ -62,6 +62,7 @@ npm install @sb1/ffe-form-react
 | `noMargins` | `boolean` | Nei | Removes vertical margins from the checkbox |
 | `hiddenLabel` | `boolean` | Nei | If you plan to render the checkbox without a visible label |
 | `inline` | `boolean` | Nei | Display inline |
+| `indeterminate` | `boolean` | Nei | Shows the checkbox in a mixed state, for when it represents a set of checkboxes where only some are checked. Sets the `indeterminate` DOM property on the input, which is what makes screen readers announce the mixed state. Does not change `checked`. |
 | `children` | `function` | Ja | - |
 
 ### Input Props

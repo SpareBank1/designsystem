@@ -61,6 +61,163 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 
 ### SearchableDropdownMultiSelect Props
 
+Id of drop down */
+    id: string;
+    /** Id of element that labels input field */
+    labelledById?: string;
+    /** Extra class */
+    className?: string;
+    /** List of objects to be displayed in dropdown */
+    dropdownList: Item[];
+    /** The selected items to be displayed in the input field. If not specified, uses internal state to decide. */
+    selectedItems?: Item[] | null;
+    /** Array of attributes to be displayed in list. The first will be the title and the chip value */
+    dropdownAttributes: (keyof Item)[];
+    /** Array of attributes used when filtering search */
+    searchAttributes: (keyof Item)[];
+    /** Props used on input field */
+    inputProps?: React.ComponentProps<'input'>;
+    /** Limits number of rendered dropdown elements */
+    maxRenderedDropdownElements?: number;
+    /**
+Called when the selection changes. `items` contains only the items that
+changed (the delta), never the full selection.
+/
+    onChange: (items: Item[], actionType: 'selected' | 'removed') => void;
+    /** Custom element to use for each item in dropDownList */
+    optionBody?: React.ComponentType<{
+        item: Item;
+        dropdownAttributes: (keyof Item)[];
+        isHighlighted: boolean;
+        locale: Locale;
+        isSelected: boolean;
+    }>;
+    /** Element to be shown below dropDownList */
+    postListElement?: React.ReactNode;
+    /** Message and a dropdownList to use when no match */
+    noMatch?: {
+        text?: string;
+        dropdownList?: Item[];
+    };
+    /** Locale to use for translations */
+    locale?: Locale;
+    /** aria-invalid attribute  */
+    'aria-invalid'?: AriaAttributes['aria-invalid'];
+    ariaInvalid?: AriaAttributes['aria-invalid'];
+    /** Function used to format the input field value */
+    formatter?: (value: string) => string; //Hvordan brukes denne? må testes
+    /**
+Function used to decide if an item matches the input field value
+(inputValue: string, searchAttributes: string[]) => (item) => boolean
+/
+    searchMatcher?: SearchMatcher<Item>;
+    /**
+For situations where the dropdownList prop will be updated at a later point in time.
+That is, if the consumer first sends down an initial value before sending down data
+that has loaded.
+/
+    isLoading?: boolean;
+    /** Function used when dropdown opens */
+    onOpen?: () => void;
+    /**  Function used when dropdown closes */
+    onClose?: () => void;
+    /**
+Using this will give a text "X selected" instead of chips,
+after a certain number of selected items.
+If you always want "X selected" showing, pass in 0
+/
+    showNumberSelectedAfter?: number;
+    /** Custom compare between objects. Default is deep equals*/
+    isEqual?: (itemA: Item, itemB: Item) => boolean;
+    /**
+Shows a row at the top of the dropdown for selecting or removing all
+visible items. When a search is active it only applies to the matches.
+/
+    showSelectAll?: boolean;
+    /** Overrides the default label on the select all row, for all locales */
+    selectAllText?: string;
+}
+
+function SearchableDropdownMultiSelectWithForwardRef<
+    Item extends Record<string, any>,
+>(
+    {
+        id,
+        labelledById,
+        className,
+        dropdownList,
+        dropdownAttributes,
+        searchAttributes,
+        maxRenderedDropdownElements = Number.MAX_SAFE_INTEGER,
+        onChange,
+        inputProps,
+        optionBody: CustomOptionBody,
+        postListElement,
+        noMatch,
+        locale = 'nb',
+        ariaInvalid,
+        formatter = value => value,
+        searchMatcher,
+        selectedItems,
+        isLoading = false,
+        onOpen,
+        onClose,
+        showNumberSelectedAfter,
+        isEqual = isDeepEqual,
+        showSelectAll = false,
+        selectAllText,
+        ...rest
+    }: SearchableDropdownMultiSelectProps<Item>,
+    ref: ForwardedRef<HTMLInputElement>,
+) {
+    const [state, dispatch] = useReducer(
+        createReducer({
+            dropdownList,
+            searchAttributes,
+            maxRenderedDropdownElements,
+            noMatchDropdownList: noMatch?.dropdownList,
+            searchMatcher,
+            isEqual,
+            showSelectAll,
+        }),
+        {
+            isExpanded: false,
+            selectedItems: [],
+            highlightedIndex: -1,
+            inputValue: '',
+        },
+        initialState => {
+            return {
+                ...initialState,
+                ...getListToRender({
+                    inputValue: initialState.inputValue,
+                    searchAttributes,
+                    maxRenderedDropdownElements,
+                    dropdownList,
+                    noMatchDropdownList: noMatch?.dropdownList,
+                    searchMatcher,
+                    showAllItemsInDropdown: !!selectedItems?.length,
+                }),
+            };
+        },
+    );
+    const refs = useRefs({ listToRender: state.listToRender });
+    const [hasFocus, setHasFocus] = useState(false);
+    const inputRef = useRef<HTMLInputElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const OptionBody = CustomOptionBody || MultiselectOptionBody;
+    const listBoxRef = useRef<HTMLDivElement>(null);
+    const selectAllRef = useRef<HTMLDivElement>(null);
+    const noMatchMessageId = useId();
+    const shouldFocusInput = useRef(false);
+
+    /**
+Over terskelen byttes de enkelte chippene ut med én chip som oppsummerer
+utvalget. Utledet, ikke state: lå den i en effekt ville den vært ett
+render bak, så backspace i renderen der terskelen krysses hadde fjernet
+siste element selv om det er oppsummeringschippen brukeren ser.
+
 | Prop | Type | Påkrevd | Beskrivelse |
 |------|------|---------|-------------|
 | `id` | `string` | Ja | Id of drop down |
@@ -72,7 +229,7 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 | `searchAttributes` | `(keyof Item)[]` | Ja | Array of attributes used when filtering search |
 | `inputProps` | `React.ComponentProps<'input'>` | Nei | Props used on input field |
 | `maxRenderedDropdownElements` | `number` | Nei | Limits number of rendered dropdown elements |
-| `onChange` | `(item: Item, actionType: 'selected' | 'removed') => void` | Ja | Called when a value is selected |
+| `onChange` | `(items: Item[], actionType: 'selected' | 'removed') => void` | Ja | Called when the selection changes. `items` contains only the items that changed (the delta), never the full selection. |
 | `optionBody` | `React.ComponentType` | Nei | Custom element to use for each item in dropDownList |
 | `postListElement` | `React.ReactNode` | Nei | Element to be shown below dropDownList |
 | `noMatch` | `object` | Nei | Message and a dropdownList to use when no match |
@@ -85,6 +242,8 @@ Merk: Sørg for å importere `@sb1/ffe-core/css/ffe.css` først, da den innehold
 | `onClose` | `() => void` | Nei | Function used when dropdown closes |
 | `showNumberSelectedAfter` | `number` | Nei | Using this will give a text "X selected" instead of chips, after a certain number of selected items. If you always want "X selected" showing, pass in 0 |
 | `isEqual` | `(itemA: Item, itemB: Item) => boolean` | Nei | Custom compare between objects. Default is deep equals |
+| `showSelectAll` | `boolean` | Nei | Shows a row at the top of the dropdown for selecting or removing all visible items. When a search is active it only applies to the matches. |
+| `selectAllText` | `string` | Nei | Overrides the default label on the select all row, for all locales |
 
 ## Eksempler (fra README)
 
@@ -156,12 +315,17 @@ function MyComponent() {
         { displayName: 'Eple', color: 'Rød' },
     ];
 
-    const handleChange = (item: Fruit, actionType: 'selected' | 'removed') => {
+    const handleChange = (
+        items: Fruit[],
+        actionType: 'selected' | 'removed',
+    ) => {
         if (actionType === 'selected') {
-            setSelectedFruits(prev => [...prev, item]);
+            setSelectedFruits(prev => [...prev, ...items]);
         } else {
             setSelectedFruits(prev =>
-                prev.filter(f => f.displayName !== item.displayName),
+                prev.filter(
+                    f => !items.some(it => it.displayName === f.displayName),
+                ),
             );
         }
     };
@@ -208,6 +372,15 @@ const CustomOptionBody = ({
 );
 
 // For SearchableDropdownMultiSelect - har ekstra `isSelected`-prop
+```
+
+```tsx
+<span
+    aria-hidden="true"
+    className={`ffe-checkbox ffe-checkbox--no-margin${
+        isSelected ? ' ffe-checkbox--checked' : ''
+    }`}
+/>
 ```
 
 ```tsx
