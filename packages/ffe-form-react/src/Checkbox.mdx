@@ -27,3 +27,11 @@ Du kan merke at et felt er ugyldig ved å sette `aria-invalid="true"`.
 Du kan sende inn children som en funksjon, for å rendre din egen label. Funksjonen mottar props du kan spre på labelen.
 
 <Canvas of={CheckboxStories.RenderProps} />
+
+## Delvis valgt
+
+Med `indeterminate={true}` vises checkboxen med en strek i stedet for en hake. Bruk det når checkboxen representerer et sett der bare noen av valgene er gjort — typisk en «velg alle»-checkbox over en liste.
+
+`indeterminate` finnes bare som DOM-egenskap, ikke som attributt, og det er den egenskapen skjermlesere leser for å annonsere den delvise tilstanden. Komponenten setter den for deg. Propen endrer ikke `checked`: du styrer fortsatt `checked` selv, og setter `indeterminate` når noen — men ikke alle — av de underliggende valgene er gjort.
+
+<Canvas of={CheckboxStories.Indeterminate} />

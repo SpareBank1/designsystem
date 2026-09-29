@@ -3,6 +3,7 @@ import {
     getIsLoadingItemsA11yStatus,
     getItemClearedA11yStatus,
     getItemSelectedA11yStatus,
+    getMultipleItemsChangedA11yStatus,
     getNoResultA11yStatus,
     getResultCountChangedA11yStatus,
 } from './translations';
@@ -49,9 +50,35 @@ const setStatus = (status: string) => {
     cleanupStatus();
 };
 
-const updateA11yStatus = debounce(getA11yMessage => {
+/**
+ * Alle meldinger deler én debounce, så den siste innom vinduet vinner. Uten
+ * rangering taper handlingsmeldingen mot omgivelsesstøy: å fjerne en chip
+ * flytter fokus til inputen, som åpner lista og planlegger «N resultater er
+ * tilgjengelig» i samme vindu. Bekreftelsen brukeren trenger er den om det de
+ * nettopp gjorde.
+ */
+const AMBIENT = 1;
+const ACTION = 2;
+let pendingPriority = 0;
+
+const updateA11yStatus = debounce((getA11yMessage: () => string) => {
+    pendingPriority = 0;
     setStatus(getA11yMessage());
 }, 200);
+
+const queueA11yStatus = (priority: number, getA11yMessage: () => string) => {
+    if (priority < pendingPriority) {
+        return;
+    }
+    pendingPriority = priority;
+    updateA11yStatus(getA11yMessage);
+};
+
+const cancelA11yStatus = () => {
+    pendingPriority = 0;
+    updateA11yStatus.cancel();
+    cleanupStatus.cancel();
+};
 
 const getItemSelectedMessage = ({
     selectedValue,
@@ -97,6 +124,7 @@ export const useSetAllyMessageItemSelection = ({
     locale,
     resultCount,
     selectedValue,
+    selectedCount = 0,
 }: {
     hasFocus: boolean;
     isExpanded: boolean;
@@ -104,13 +132,16 @@ export const useSetAllyMessageItemSelection = ({
     locale: Locale;
     resultCount: number;
     selectedValue?: string;
+    /** Number of selected items. Used to announce bulk changes as one message */
+    selectedCount?: number;
 }) => {
     const isInitialMount = useRef(true);
     const prevSelectedValue = useRef<string>();
+    const prevSelectedCount = useRef(selectedCount);
 
     useEffect(() => {
         if (isLoading && hasFocus) {
-            updateA11yStatus(() => {
+            queueA11yStatus(AMBIENT, () => {
                 return getIsLoadingItemsMessage(locale);
             });
             return;
@@ -118,6 +149,24 @@ export const useSetAllyMessageItemSelection = ({
 
         if (isInitialMount.current) {
             isInitialMount.current = false;
+            prevSelectedCount.current = selectedCount;
+            return;
+        }
+
+        const countDelta = selectedCount - prevSelectedCount.current;
+        prevSelectedCount.current = selectedCount;
+
+        if (Math.abs(countDelta) > 1) {
+            // Keep prevSelectedValue in sync so the item message below is not
+            // also announced on the next render
+            prevSelectedValue.current = selectedValue;
+            queueA11yStatus(ACTION, () => {
+                return getMultipleItemsChangedA11yStatus(
+                    locale,
+                    countDelta,
+                    selectedCount,
+                );
+            });
             return;
         }
 
@@ -125,11 +174,11 @@ export const useSetAllyMessageItemSelection = ({
             selectedValue !== prevSelectedValue.current;
         if (selectedItemHasChanged) {
             prevSelectedValue.current = selectedValue;
-            updateA11yStatus(() => {
+            queueA11yStatus(ACTION, () => {
                 return getItemSelectedMessage({ selectedValue, locale });
             });
         } else {
-            updateA11yStatus(() => {
+            queueA11yStatus(AMBIENT, () => {
                 return getStateChangeMessage({
                     isExpanded,
                     resultCount,
@@ -137,21 +186,31 @@ export const useSetAllyMessageItemSelection = ({
                 });
             });
         }
+    }, [
+        selectedValue,
+        selectedCount,
+        locale,
+        isExpanded,
+        resultCount,
+        hasFocus,
+        isLoading,
+    ]);
 
-        return () => {
-            // Cancel debounce before component unmounts
-            updateA11yStatus.cancel();
-            cleanupStatus.cancel();
-        };
-    }, [selectedValue, locale, isExpanded, resultCount, hasFocus, isLoading]);
+    /* Debouncen er på modulnivå, så den må stoppes når komponenten forsvinner.
+       Den hører ikke hjemme i effekten over: med sju dependencies ville den
+       avbrutt en ventende melding hver gang et hvilket som helst felt i staten
+       endret seg. */
+    useEffect(() => cancelA11yStatus, []);
+};
+
+export const setAllyStatusMessage = (message: string) => {
+    getStatusDiv().textContent = message;
 };
 
 export const setArrowAllyMessage = <Item extends Record<string, any>>(
     highlightedValue: Item,
     dropdownAttributes: (keyof Item)[],
-) => {
-    const highlightedValueString = dropdownAttributes
-        .map(attr => highlightedValue[attr])
-        .join(' ');
-    getStatusDiv().textContent = `${highlightedValueString}`;
-};
+) =>
+    setAllyStatusMessage(
+        dropdownAttributes.map(attr => highlightedValue[attr]).join(' '),
+    );

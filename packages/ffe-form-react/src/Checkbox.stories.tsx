@@ -92,6 +92,70 @@ export const RenderProps: Story = {
     ),
 };
 
+export const Indeterminate: Story = {
+    args: {
+        ...Standard.args,
+        inline: false,
+    },
+    render: args => {
+        const [newspapers, setNewspapers] = React.useState({
+            vg: true,
+            dagbladet: false,
+        });
+        const values = Object.values(newspapers);
+        const allChecked = values.every(Boolean);
+
+        return (
+            <fieldset className="ffe-input-group">
+                <legend className="ffe-form-label ffe-form-label--block">
+                    Hvilke aviser leser du?
+                </legend>
+                <Checkbox
+                    {...args}
+                    checked={allChecked}
+                    indeterminate={!allChecked && values.some(Boolean)}
+                    onChange={() =>
+                        setNewspapers({
+                            vg: !allChecked,
+                            dagbladet: !allChecked,
+                        })
+                    }
+                >
+                    Alle aviser
+                </Checkbox>
+                {/* Innrykket ligger på en wrapper, ikke på checkboxen:
+                    resten av props-ene spres på den skjulte inputen. */}
+                <div style={{ paddingLeft: 'var(--ffe-spacing-lg)' }}>
+                    <Checkbox
+                        {...args}
+                        checked={newspapers.vg}
+                        onChange={event =>
+                            setNewspapers(prev => ({
+                                ...prev,
+                                vg: event.target.checked,
+                            }))
+                        }
+                    >
+                        VG
+                    </Checkbox>
+                    <Checkbox
+                        {...args}
+                        checked={newspapers.dagbladet}
+                        onChange={event =>
+                            setNewspapers(prev => ({
+                                ...prev,
+                                dagbladet: event.target.checked,
+                            }))
+                        }
+                    >
+                        Dagbladet
+                    </Checkbox>
+                </div>
+            </fieldset>
+        );
+    },
+};
+
 export const Description: Story = {
     args: {
         ...Standard.args,

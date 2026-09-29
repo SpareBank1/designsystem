@@ -30,6 +30,7 @@ export const createReducer =
         maxRenderedDropdownElements,
         searchMatcher,
         isEqual,
+        showSelectAll,
     }: {
         dropdownList: Item[];
         searchAttributes: Array<keyof Item>;
@@ -37,6 +38,7 @@ export const createReducer =
         maxRenderedDropdownElements: number;
         searchMatcher: SearchMatcher<Item> | undefined;
         isEqual: (itemA: Item, itemB: Item) => boolean;
+        showSelectAll: boolean;
     }) =>
     (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
@@ -56,7 +58,12 @@ export const createReducer =
                     dropdownList,
                     noMatchDropdownList,
                     searchMatcher,
-                    showAllItemsInDropdown: true,
+                    /**
+                     * An active search must survive the input regaining focus,
+                     * which happens after toggling select all. Same condition
+                     * as DropdownListPropUpdated below.
+                     */
+                    showAllItemsInDropdown: state.inputValue.trim() === '',
                 });
 
                 return {
@@ -93,6 +100,15 @@ export const createReducer =
                     showAllItemsInDropdown: false,
                 });
 
+                /**
+                 * When the select all row is visible it occupies row 0, so the
+                 * first item is at row 1. Without this offset pressing enter
+                 * right after searching would toggle all items instead of
+                 * selecting the first match.
+                 */
+                const hasSelectAllRow =
+                    showSelectAll && !noMatch && listToRender.length > 0;
+
                 return {
                     ...state,
                     isExpanded: true,
@@ -102,7 +118,9 @@ export const createReducer =
                         action.payload?.inputValue?.trim() === '' ||
                         listToRender.length === 0
                             ? -1
-                            : 0,
+                            : hasSelectAllRow
+                              ? 1
+                              : 0,
                     noMatch,
                 };
             }
@@ -119,6 +137,26 @@ export const createReducer =
                     };
                 }
                 return state;
+            case 'SelectAllToggled': {
+                if (!action.payload?.items) {
+                    return state;
+                }
+                return {
+                    ...state,
+                    isExpanded: true,
+                    selectedItems: getNewList(
+                        state.selectedItems,
+                        action.payload.items,
+                        action.payload.actionType ?? 'selected',
+                        isEqual,
+                    ),
+                    /**
+                     * inputValue, listToRender, noMatch and highlightedIndex are
+                     * kept on purpose, so the row can be toggled repeatedly
+                     * against the same filtered set of items.
+                     */
+                };
+            }
             case 'ItemOnClick':
             case 'InputKeyDownEnter':
                 if (action.payload?.items) {

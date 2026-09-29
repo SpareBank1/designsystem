@@ -213,3 +213,42 @@
 .ffe-checkbox__icon {
     color: var(--ffe-color-foreground-emphasis);
 }
+
+/* Avkrysset og delvis valgt uten en ekte <input>.
+ *
+ * `:indeterminate` settes av `indeterminate`-propen på Checkbox. Modifikatorene
+ * finnes fordi et element med `role="option"` har presentasjonelle barn: en ekte
+ * `<input type="checkbox"></input>` inne i en rad ville brutt listboksens
+ * tastaturmodell og fått sin egen tilstand droppet fra tilgjengelighetstreet.
+ * Se SearchableDropdownMultiSelect, som setter klassene på en dekorativ span. */
+.ffe-hidden-checkbox:indeterminate + .ffe-checkbox,
+.ffe-checkbox--indeterminate,
+.ffe-checkbox--checked {
+    &::before {
+        border-color: var(--ffe-color-border-interactive-selected);
+        box-shadow: var(--ffe-g-border-focus-box-shadow)
+            var(--ffe-color-border-interactive-selected);
+        background-color: var(--ffe-color-fill-primary-selected-default);
+    }
+
+    &::after {
+        border-color: var(--ffe-color-foreground-inverse);
+    }
+}
+
+/* Streken er samme border-teknikk som haken, bare annen geometri: `::after` har
+ * allerede `border-right`/`border-top: 2px solid transparent`, så det holder å
+ * nulle høyre kant og rette opp rotasjonen. Da farger regelen over både hake og
+ * strek med samme deklarasjon. Ligger sist i fila for at delvis valgt skal vinne
+ * over avkrysset når begge gjelder samtidig. */
+.ffe-hidden-checkbox:indeterminate + .ffe-checkbox,
+.ffe-checkbox--indeterminate {
+    &::after {
+        transform: none;
+        width: 10px;
+        height: 0;
+        margin-bottom: 0;
+        border-right-width: 0;
+        border-top-width: 2px;
+    }
+}

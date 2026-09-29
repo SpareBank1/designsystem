@@ -380,6 +380,9 @@ describe('SearchableDropdown', () => {
         expect(input.getAttribute('aria-activedescendant')).toEqual(
             options[1].getAttribute('id'),
         );
+        // Ikke bare like: begge må faktisk peke på noe.
+        expect(listBox).toHaveAttribute('id', 'id-listbox');
+        expect(listBox).toHaveAttribute('aria-labelledby', 'labelId');
         expect(input.getAttribute('aria-controls')).toEqual(
             listBox.getAttribute('id'),
         );

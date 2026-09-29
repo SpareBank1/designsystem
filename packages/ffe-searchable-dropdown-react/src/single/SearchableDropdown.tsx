@@ -348,9 +348,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                     type="text"
                     role="combobox"
                     autoComplete="off"
-                    aria-controls={
-                        listBoxRef.current?.getAttribute('id') ?? undefined
-                    }
+                    aria-controls={`${id}-listbox`}
                     aria-expanded={
                         state.isExpanded && !!state.listToRender.length
                     }
@@ -375,7 +373,12 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                 }}
                 isLoading={isLoading}
             />
-            <ListBox ref={listBoxRef} isExpanded={state.isExpanded}>
+            <ListBox
+                ref={listBoxRef}
+                isExpanded={state.isExpanded}
+                id={`${id}-listbox`}
+                labelledById={labelledById}
+            >
                 {state.isExpanded && (
                     <Results
                         isEqual={isEqual}

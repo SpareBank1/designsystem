@@ -69,17 +69,22 @@ export const ControlledState: Story = {
                                 {...inputProps}
                                 {...args}
                                 selectedAccounts={selectedAccounts}
-                                onChange={(account, actionType) => {
+                                onChange={(changedAccounts, actionType) => {
                                     if (actionType === 'selected') {
                                         setSelectedAccounts(prevAccounts =>
-                                            prevAccounts.concat(account),
+                                            prevAccounts.concat(
+                                                changedAccounts,
+                                            ),
                                         );
                                     } else {
                                         setSelectedAccounts(prevAccounts =>
                                             prevAccounts.filter(
-                                                it =>
-                                                    it.accountNumber !==
-                                                    account.accountNumber,
+                                                prevAccount =>
+                                                    !changedAccounts.some(
+                                                        it =>
+                                                            it.accountNumber ===
+                                                            prevAccount.accountNumber,
+                                                    ),
                                             ),
                                         );
                                     }
@@ -88,15 +93,26 @@ export const ControlledState: Story = {
                             <TertiaryButton
                                 type="button"
                                 onClick={() => {
-                                    setSelectedAccounts(accounts);
+                                    setSelectedAccounts([]);
                                 }}
                             >
-                                Velg alle
+                                Nullstill
                             </TertiaryButton>
                         </>
                     )}
                 </InputGroup>
             </div>
+        );
+    },
+};
+
+export const SelectAll: Story = {
+    args: { ...Standard.args, showSelectAll: true },
+    render: function Render(args) {
+        return (
+            <InputGroup label="Velg konto">
+                <AccountSelectorMulti {...args} />
+            </InputGroup>
         );
     },
 };
@@ -109,7 +125,10 @@ export const WithDescription: Story = {
     },
     render: function Render(args) {
         return (
-            <InputGroup label="Velg konto" description="Velg de kontoene du ønsker å bruke">
+            <InputGroup
+                label="Velg konto"
+                description="Velg de kontoene du ønsker å bruke"
+            >
                 <AccountSelectorMulti {...args} />
             </InputGroup>
         );
