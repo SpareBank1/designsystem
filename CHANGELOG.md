@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.1](https://github.com/SpareBank1/designsystem/compare/v102.0.0...v102.0.1) (2026-10-01)
+
+### Performance Improvements
+
+* **ffe-datepicker-react:** fjern unødvendig delay i testHelper sin simulateTyping ([cdbb9df](https://github.com/SpareBank1/designsystem/commit/cdbb9dfb45334e0571f84a8aa729166cd65ea5ea))
+
+
 # [102.0.0](https://github.com/SpareBank1/designsystem/compare/v101.1.1...v102.0.0) (2026-09-29)
 
 * feat(ffe-searchable-dropdown-react)!: fjern alle fra «N valgt»-chippen ([acdfcf0](https://github.com/SpareBank1/designsystem/commit/acdfcf08ca7bf3d0d35a793b4785f6c147020610))

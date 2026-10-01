@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.1](https://github.com/SpareBank1/designsystem/compare/v102.0.0...v102.0.1) (2026-10-01)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+
+
+
+
 # [102.0.0](https://github.com/SpareBank1/designsystem/compare/v101.1.1...v102.0.0) (2026-09-29)
 
 * feat(ffe-searchable-dropdown-react)!: fjern alle fra «N valgt»-chippen ([acdfcf0](https://github.com/SpareBank1/designsystem/commit/acdfcf08ca7bf3d0d35a793b4785f6c147020610))
