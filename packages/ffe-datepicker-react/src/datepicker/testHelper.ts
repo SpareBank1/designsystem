@@ -1,36 +1,19 @@
 import { act } from 'react';
 
-async function simulateTyping(element: HTMLElement, text: string, delay = 100) {
-    let _text = text;
-    if (text.length === 0) {
-        _text = '0';
-    }
-    return new Promise<void>(resolve => {
-        let index = 0;
+function simulateTyping(element: HTMLElement, text: string) {
+    const _text = text.length === 0 ? '0' : text;
 
-        function typeCharacter() {
-            if (index < _text.length) {
-                const char = _text[index];
-                const eventOptions = {
+    act(() => {
+        for (const char of _text) {
+            element.dispatchEvent(
+                new KeyboardEvent('keydown', {
                     key: char,
                     keyCode: char.charCodeAt(0),
                     which: char.charCodeAt(0),
                     bubbles: true,
-                };
-                act(() => {
-                    element.dispatchEvent(
-                        new KeyboardEvent('keydown', eventOptions),
-                    );
-                });
-
-                index++;
-                setTimeout(typeCharacter, delay);
-            } else {
-                resolve(); // Resolve the promise when done
-            }
+                }),
+            );
         }
-
-        typeCharacter();
     });
 }
 
@@ -155,9 +138,9 @@ export async function getDatepickerByLabelText(
         dayValue = dayValue.length === 1 ? `0${dayValue}` : dayValue;
         monthValue = monthValue.length === 1 ? `0${monthValue}` : monthValue;
 
-        await simulateTyping(dayElement, dayValue);
-        await simulateTyping(monthElement, monthValue);
-        await simulateTyping(yearElement, yearValue);
+        simulateTyping(dayElement, dayValue);
+        simulateTyping(monthElement, monthValue);
+        simulateTyping(yearElement, yearValue);
         act(() => yearElement.blur());
     }
 
