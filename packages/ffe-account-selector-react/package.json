@@ -30,6 +30,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@sb1/ffe-core-react": "^102.0.2",
         "@sb1/ffe-formatters": "^102.0.2",
         "@sb1/ffe-icons-react": "^102.0.2",
         "@sb1/ffe-searchable-dropdown-react": "^102.0.2",
