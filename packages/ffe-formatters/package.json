@@ -27,8 +27,7 @@
         "test:watch": "jest --watch"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^102.0.2",
-        "eslint": "^10.2.0"
+        "@sb1/ffe-buildtool": "^102.0.2"
     },
     "publishConfig": {
         "access": "public"
