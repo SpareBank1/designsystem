@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
     GetLocalVariablesResponse,
     PostVariablesRequestBody,
@@ -13,29 +12,39 @@ export default class FigmaApi {
         this.token = token;
     }
 
-    async getLocalVariables(fileKey: string) {
-        const resp = await axios.request<GetLocalVariablesResponse>({
-            url: `${this.baseUrl}/v1/files/${fileKey}/variables/local`,
+    private async request<T>(path: string, init: RequestInit = {}) {
+        const resp = await fetch(`${this.baseUrl}${path}`, {
+            ...init,
             headers: {
                 Accept: '*/*',
                 'X-Figma-Token': this.token,
+                ...init.headers,
             },
         });
 
-        return resp.data;
+        if (!resp.ok) {
+            throw new Error(
+                `Figma API ${init.method ?? 'GET'} ${path} failed: ${resp.status} ${await resp.text()}`,
+            );
+        }
+
+        return (await resp.json()) as T;
+    }
+
+    async getLocalVariables(fileKey: string) {
+        return this.request<GetLocalVariablesResponse>(
+            `/v1/files/${fileKey}/variables/local`,
+        );
     }
 
     async postVariables(fileKey: string, payload: PostVariablesRequestBody) {
-        const resp = await axios.request<PostVariablesResponse>({
-            url: `${this.baseUrl}/v1/files/${fileKey}/variables`,
-            method: 'POST',
-            headers: {
-                Accept: '*/*',
-                'X-Figma-Token': this.token,
+        return this.request<PostVariablesResponse>(
+            `/v1/files/${fileKey}/variables`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
             },
-            data: payload,
-        });
-
-        return resp.data;
+        );
     }
 }
