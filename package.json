@@ -107,6 +107,10 @@
         "@sigstore/verify": "^3.1.1",
         "smol-toml": "^1.7.1",
         "vite": "^6.4.3",
-        "uuid": "^11.1.1"
+        "uuid": "^11.1.1",
+        "less-plugin-autoprefix": {
+            "autoprefixer": "^10.6.1",
+            "postcss": "^8.5.28"
+        }
     }
 }
