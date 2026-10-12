@@ -4,6 +4,15 @@ on:
     push:
         branches:
             - main
+    # Kjøres manuelt for å publisere versjoner som ligger på main, men mangler på
+    # npm, uten å bumpe. Det må skje fra denne fila, fordi trusted publishing på
+    # npm bare godtar publish.yml.
+    workflow_dispatch:
+
+# En manuell kjøring skal ikke publisere samtidig med en release.
+concurrency:
+    group: publish
+    cancel-in-progress: false
 
 jobs:
     publish:
@@ -43,16 +52,30 @@ jobs:
               id: lerna-changed
               run: echo "CHANGED_COUNT=$(lerna changed|wc -l)" >> $GITHUB_OUTPUT
 
+            # En manuell kjøring publiserer koden på main under versjonen som står i
+            # package.json. Det er bare riktig når ingen pakker er endret siden siste
+            # release, ellers havner ny kode under en gammel versjon.
+            - name: Check that main matches the last release
+              if: ${{ github.event_name == 'workflow_dispatch' && steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              run: |
+                  echo "::error::main har pakkeendringer som ikke er releaset. Vent på neste release i stedet."
+                  exit 1
+
             - name: Build packages
-              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              if: ${{ github.event_name == 'push' && steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: |
                   npm run lint
                   npm run build
                   npm test -- --ci
 
+            # Pakkene publiserer byggresultatet, så tarballene må bygges på nytt.
+            - name: Build packages for republish
+              if: ${{ github.event_name == 'workflow_dispatch' }}
+              run: npm run build
+
             - name: lerna version
               id: version
-              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              if: ${{ github.event_name == 'push' && steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: lerna version --yes --force-git-tag --create-release github --force-publish
               env:
                   GH_TOKEN: ${{ secrets.GH_USER_PAT }}
@@ -62,7 +85,7 @@ jobs:
             # https://github.com/sigstore/sigstore-js/issues/1708
             - name: lerna publish to registry.npmjs.org
               id: publish
-              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              if: ${{ steps.version.outcome == 'success' || github.event_name == 'workflow_dispatch' }}
               continue-on-error: true
               shell: bash
               run: lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
@@ -77,8 +100,8 @@ jobs:
                   lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
 
             # Versjonsbumpen ligger allerede på main, så develop skal følge med
-            # selv om publiseringen feiler. Manglende pakker repareres med
-            # republish.yml.
+            # selv om publiseringen feiler. Manglende pakker repareres ved å kjøre
+            # denne workflowen manuelt.
             - name: Merge back changes to development branch
               if: ${{ !cancelled() && steps.version.outcome == 'success' }}
               run: |
@@ -90,17 +113,17 @@ jobs:
                   git push --tags
 
             - name: Verify lerna published every package
-              if: ${{ !cancelled() && steps.version.outcome == 'success' }}
+              if: ${{ !cancelled() && (steps.version.outcome == 'success' || github.event_name == 'workflow_dispatch') }}
               run: node scripts/verify-published-versions.js "$RUNNER_TEMP/publish.log"
 
             - name: Build storybook
-              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              if: ${{ steps.version.outcome == 'success' }}
               run: |
                   npm run build
                   npm run build-storybook
 
             - name: Deploy storybook as gh-pages
-              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              if: ${{ steps.version.outcome == 'success' }}
               uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4.9.0
               with:
                   folder: storybook-static
