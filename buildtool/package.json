@@ -20,7 +20,6 @@
         "@sb1/stylelint-config-ffe": "^102.0.5",
         "@testing-library/jest-dom": "^6.9.1",
         "commander": "^14.0.3",
-        "copyfiles": "^2.4.1",
         "jest": "^30.5.2",
         "jest-environment-jsdom": "^30.5.2",
         "postcss-less": "^6.0.0",
