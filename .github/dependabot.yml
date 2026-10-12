@@ -18,6 +18,12 @@ updates:
       ignore:
           - dependency-name: '@sb1/*'
       groups:
+          # Sikkerhetsoppdateringer følger ikke schedule og grupperes ikke av
+          # gruppene under. Uten denne kommer de som én PR per sårbar pakke.
+          security:
+              applies-to: security-updates
+              patterns:
+                  - '*'
           minor-and-patch:
               update-types:
                   - 'minor'
