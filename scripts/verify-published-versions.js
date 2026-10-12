@@ -13,6 +13,7 @@ const ANSI = /\x1b\[[0-9;]*m/g;
 const FOUND = /^Found \d+ packages? to publish:$/;
 const PLANNED = /^ - (\S+) => (\S+)$/;
 const PUBLISHED = /^lerna success published (@?\S+) (\S+)$/;
+const NOTHING_LEFT = /^lerna notice from-package No unpublished release found$/;
 
 // The first "Found" block is the full plan. A retry prints its own, shorter
 // block with only the packages that were left.
@@ -51,7 +52,7 @@ function writeSummary(problems) {
                   ({ name, version }) => `| \`${name}\` | ${version} |`,
               ),
               '',
-              'Run the `Republish` workflow to publish the missing versions.',
+              'Run the `Publish` workflow manually (Run workflow) to publish the missing versions.',
           ]
         : ['## lerna published every planned package'];
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${lines.join('\n')}\n`);
@@ -71,6 +72,11 @@ function main() {
         .map(line => line.trimEnd());
 
     const planned = readPlanned(lines);
+    // A manual republish when every version is already on npm.
+    if (!planned && lines.some(line => NOTHING_LEFT.test(line))) {
+        console.log('Every version on main is already published.');
+        return;
+    }
     if (!planned) {
         console.error(
             `No "Found N packages to publish" in ${logPath}; lerna did not get as far as publishing.`,
