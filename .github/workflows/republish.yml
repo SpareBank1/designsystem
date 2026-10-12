@@ -32,6 +32,9 @@ jobs:
                   npm ci --ignore-scripts
                   echo "$GITHUB_WORKSPACE/node_modules/.bin/" >> $GITHUB_PATH
 
+            - name: Patch sigstore to fetch existing Rekor entries on conflict
+              run: node scripts/patch-sigstore-fetch-on-conflict.js
+
             # Packages publish build output, so the tarballs must be rebuilt here.
             - name: Build packages
               run: npm run build
@@ -42,10 +45,14 @@ jobs:
               shell: bash
               run: lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
 
+            # Lerna rydder ikke opp gitHead i package.json når den feiler.
             - name: Retry publish of remaining packages
               if: ${{ steps.publish.outcome == 'failure' }}
               shell: bash
-              run: lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
+              run: |
+                  git checkout -- .
+                  lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
 
             - name: Verify lerna published every package
+              if: ${{ !cancelled() }}
               run: node scripts/verify-published-versions.js "$RUNNER_TEMP/publish.log"

@@ -34,6 +34,11 @@ jobs:
                   npm ci --ignore-scripts
                   echo "$GITHUB_WORKSPACE/node_modules/.bin/" >> $GITHUB_PATH
 
+            # Gjør en 409 fra Rekor ufarlig ved å hente oppføringen som allerede
+            # er lagret. Se kommentaren i skriptet.
+            - name: Patch sigstore to fetch existing Rekor entries on conflict
+              run: node scripts/patch-sigstore-fetch-on-conflict.js
+
             - name: lerna changed
               id: lerna-changed
               run: echo "CHANGED_COUNT=$(lerna changed|wc -l)" >> $GITHUB_OUTPUT
@@ -46,15 +51,14 @@ jobs:
                   npm test -- --ci
 
             - name: lerna version
+              id: version
               if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: lerna version --yes --force-git-tag --create-release github --force-publish
               env:
                   GH_TOKEN: ${{ secrets.GH_USER_PAT }}
 
-            # Sigstore returnerer 409 hvis en signeringsforespørsel blir sendt på nytt
-            # etter at Rekor allerede har lagret den, og lerna behandler det som
-            # fatalt. `from-package` publiserer bare versjoner som mangler på
-            # registry, så et nytt forsøk plukker opp restene.
+            # Hvis noen pakker likevel feiler, plukker et nytt forsøk opp restene:
+            # `from-package` publiserer bare versjoner som mangler på registry.
             # https://github.com/sigstore/sigstore-js/issues/1708
             - name: lerna publish to registry.npmjs.org
               id: publish
@@ -63,16 +67,22 @@ jobs:
               shell: bash
               run: lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
 
+            # Lerna skriver gitHead inn i package.json under publisering og rydder
+            # ikke opp når den feiler. Uten reset avbryter retryen med EUNCOMMIT.
             - name: Retry publish of remaining packages
               if: ${{ steps.publish.outcome == 'failure' }}
               shell: bash
-              run: lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
+              run: |
+                  git checkout -- .
+                  lerna publish from-package --yes 2>&1 | tee -a "$RUNNER_TEMP/publish.log"
 
             # Versjonsbumpen ligger allerede på main, så develop skal følge med
-            # selv om verify feiler. Manglende pakker repareres med republish.yml.
+            # selv om publiseringen feiler. Manglende pakker repareres med
+            # republish.yml.
             - name: Merge back changes to development branch
-              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              if: ${{ !cancelled() && steps.version.outcome == 'success' }}
               run: |
+                  git checkout -- .
                   git checkout develop
                   git pull
                   git merge -X theirs --no-edit main
@@ -80,7 +90,7 @@ jobs:
                   git push --tags
 
             - name: Verify lerna published every package
-              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              if: ${{ !cancelled() && steps.version.outcome == 'success' }}
               run: node scripts/verify-published-versions.js "$RUNNER_TEMP/publish.log"
 
             - name: Build storybook
