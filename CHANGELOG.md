@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.2](https://github.com/SpareBank1/designsystem/compare/v102.0.1...v102.0.2) (2026-10-12)
+
+### Bug Fixes
+
+* **ci:** flytt republish inn i publish.yml ([c7337ac](https://github.com/SpareBank1/designsystem/commit/c7337ac86645dbd05452fce0cd947f05c001d288))
+* **ci:** gjør provenance-signering tålelig for 409 fra Rekor ([9349c26](https://github.com/SpareBank1/designsystem/commit/9349c26839f457048d9077678312abbfd35e101d)), closes [sigstore-js#1709](https://github.com/sigstore-js/issues/1709)
+
+
+## [102.0.1](https://github.com/SpareBank1/designsystem/compare/v102.0.0...v102.0.1) (2026-10-01)
+
+### Performance Improvements
+
+* **ffe-datepicker-react:** fjern unødvendig delay i testHelper sin simulateTyping ([cdbb9df](https://github.com/SpareBank1/designsystem/commit/cdbb9dfb45334e0571f84a8aa729166cd65ea5ea))
+
+
 # [102.0.0](https://github.com/SpareBank1/designsystem/compare/v101.1.1...v102.0.0) (2026-09-29)
 
 * feat(ffe-searchable-dropdown-react)!: fjern alle fra «N valgt»-chippen ([acdfcf0](https://github.com/SpareBank1/designsystem/commit/acdfcf08ca7bf3d0d35a793b4785f6c147020610))
