@@ -30,7 +30,6 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^102.0.2",
-        "eslint": "^10.2.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

@@ -22,12 +22,6 @@
         "lint": "oxlint bin",
         "test": "npm run lint"
     },
-    "devDependencies": {
-        "eslint": "^10.2.0",
-        "husky": "^9.1.7",
-        "svgstore": "^3.0.1",
-        "yargs": "^18.2.0"
-    },
     "publishConfig": {
         "access": "public"
     }
