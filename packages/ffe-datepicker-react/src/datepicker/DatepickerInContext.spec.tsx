@@ -66,6 +66,24 @@ describe('<InputGroup><Datepicker /></InputGroup>', () => {
         expect(datepicker.getValue()).toStrictEqual('06.05.2024');
     });
 
+    it('datepicker can be updated without act warnings when IS_REACT_ACT_ENVIRONMENT is false', async () => {
+        renderDatePicker({ value: '01.01.2024' });
+        const consoleError = jest.spyOn(console, 'error');
+        const previous = Reflect.get(globalThis, 'IS_REACT_ACT_ENVIRONMENT');
+        Reflect.set(globalThis, 'IS_REACT_ACT_ENVIRONMENT', false);
+
+        try {
+            const datepicker = await getDatepickerByLabelText('Datovelger');
+            await datepicker.setValue('6.5.2024');
+
+            expect(datepicker.getValue()).toStrictEqual('06.05.2024');
+            expect(consoleError).not.toHaveBeenCalled();
+        } finally {
+            Reflect.set(globalThis, 'IS_REACT_ACT_ENVIRONMENT', previous);
+            consoleError.mockRestore();
+        }
+    });
+
     it('datepicker can be cleared by testing function', async () => {
         renderDatePicker({ value: '01.01.2024' });
 

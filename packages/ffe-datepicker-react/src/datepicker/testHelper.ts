@@ -1,9 +1,24 @@
 import { act } from 'react';
 
-function simulateTyping(element: HTMLElement, text: string) {
+const isReactActEnvironment = () =>
+    Reflect.get(globalThis, 'IS_REACT_ACT_ENVIRONMENT') === true;
+
+// Real browser environments (e.g. vitest-browser-react) turn the act environment off,
+// and act() then logs a warning
+async function runInTestEnvironment(callback: () => void) {
+    if (isReactActEnvironment()) {
+        act(callback);
+    } else {
+        callback();
+        // Lets React render and move focus to the next spinbutton, as act() would
+        await new Promise<void>(resolve => setTimeout(resolve, 0));
+    }
+}
+
+async function simulateTyping(element: HTMLElement, text: string) {
     const _text = text.length === 0 ? '0' : text;
 
-    act(() => {
+    await runInTestEnvironment(() => {
         for (const char of _text) {
             element.dispatchEvent(
                 new KeyboardEvent('keydown', {
@@ -62,7 +77,9 @@ function findDatepickerElement(
                     if (labeled.classList.contains('ffe-datepicker')) {
                         return labeled;
                     }
-                    return labeled.querySelector<HTMLElement>('.ffe-datepicker');
+                    return labeled.querySelector<HTMLElement>(
+                        '.ffe-datepicker',
+                    );
                 }
             }
             return (
@@ -138,10 +155,10 @@ export async function getDatepickerByLabelText(
         dayValue = dayValue.length === 1 ? `0${dayValue}` : dayValue;
         monthValue = monthValue.length === 1 ? `0${monthValue}` : monthValue;
 
-        simulateTyping(dayElement, dayValue);
-        simulateTyping(monthElement, monthValue);
-        simulateTyping(yearElement, yearValue);
-        act(() => yearElement.blur());
+        await simulateTyping(dayElement, dayValue);
+        await simulateTyping(monthElement, monthValue);
+        await simulateTyping(yearElement, yearValue);
+        await runInTestEnvironment(() => yearElement.blur());
     }
 
     return {
