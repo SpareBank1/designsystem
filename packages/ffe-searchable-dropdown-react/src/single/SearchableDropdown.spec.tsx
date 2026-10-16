@@ -583,6 +583,52 @@ describe('SearchableDropdown', () => {
         expect(input.getAttribute('value')).toEqual('');
     });
 
+    it('should not update parent state during render when emptying the input field and moving focus away', async () => {
+        const consoleError = jest.spyOn(console, 'error');
+        const user = userEvent.setup();
+
+        const Parent = () => {
+            const [selected, setSelected] = React.useState<
+                (typeof companies)[number] | null
+            >(null);
+            return (
+                <div>
+                    <button>Knapp</button>
+                    <span>Valgt: {selected?.organizationName ?? 'ingen'}</span>
+                    <SearchableDropdown
+                        id="id"
+                        labelledById="labelId"
+                        dropdownAttributes={[
+                            'organizationName',
+                            'organizationNumber',
+                        ]}
+                        dropdownList={companies}
+                        onChange={setSelected}
+                        searchAttributes={[
+                            'organizationName',
+                            'organizationNumber',
+                        ]}
+                        locale="nb"
+                    />
+                </div>
+            );
+        };
+
+        render(<Parent />);
+
+        const input = screen.getByRole('combobox');
+        await user.type(input, 'Be');
+        await user.click(screen.getByText('Bedriften'));
+        expect(screen.getByText('Valgt: Bedriften')).toBeInTheDocument();
+
+        await user.clear(input);
+        await user.click(screen.getByText('Knapp'));
+
+        expect(screen.getByText('Valgt: ingen')).toBeInTheDocument();
+        expect(consoleError).not.toHaveBeenCalled();
+        consoleError.mockRestore();
+    });
+
     it('should reset the input field value to the saved selected element when pressing Escape', async () => {
         const onChange = jest.fn();
         const user = userEvent.setup();
@@ -652,6 +698,77 @@ describe('SearchableDropdown', () => {
         await user.click(screen.getByText('Knapp'));
 
         expect(input.getAttribute('value')).toEqual('Beslag skytter');
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(companies[2]);
+    });
+
+    it('should call onChange(null) once when emptying the input field and pressing Tab', async () => {
+        const onChange = jest.fn();
+        const user = userEvent.setup();
+
+        render(
+            <div>
+                <SearchableDropdown
+                    id="id"
+                    labelledById="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                />
+                <button>Knapp</button>
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        await user.type(input, 'Be');
+        await user.click(screen.getByText('Bedriften'));
+        onChange.mockClear();
+
+        await user.clear(input);
+        await user.tab();
+        await user.tab();
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(null);
+    });
+
+    it('should select item once when closing with the toggle button if there is one single match', async () => {
+        const onChange = jest.fn();
+        const user = userEvent.setup();
+
+        render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        await user.type(input, 'Besla');
+
+        const toggleButton = document.getElementsByClassName(
+            'ffe-searchable-dropdown__button',
+        )[0];
+        await user.click(toggleButton);
+
+        expect(input.getAttribute('value')).toEqual('Beslag skytter');
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(companies[2]);
     });
 
     it('should format input value when passing formatter', async () => {

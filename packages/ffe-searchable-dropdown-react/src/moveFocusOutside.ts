@@ -1,6 +1,44 @@
 import { SearchMatcher, State } from './types';
 import { getListToRender } from './getListToRender';
 
+export const getSelectedItemOnFocusOutside = <
+    Item extends Record<string, any>,
+>({
+    state,
+    searchAttributes,
+}: {
+    state: State<Item>;
+    searchAttributes: Array<keyof Item>;
+}): {
+    selectedItem: Item | undefined;
+    hasSelectedItemChanged: boolean;
+} => {
+    const shouldEmptySelectedItem =
+        state.inputValue === '' && !!state.selectedItem;
+
+    const shouldAutomaticallySetSelectedItem =
+        state.listToRender.length === 1 &&
+        searchAttributes
+            .map(
+                searchAttribute =>
+                    state.listToRender[0][searchAttribute] ===
+                    state.selectedItem?.[searchAttribute],
+            )
+            .includes(false) &&
+        state.highlightedIndex !== -1;
+
+    if (shouldEmptySelectedItem) {
+        return { selectedItem: undefined, hasSelectedItemChanged: true };
+    }
+    if (shouldAutomaticallySetSelectedItem) {
+        return {
+            selectedItem: state.listToRender[0],
+            hasSelectedItemChanged: true,
+        };
+    }
+    return { selectedItem: state.selectedItem, hasSelectedItemChanged: false };
+};
+
 export const moveFocusOutside = <Item extends Record<string, any>>({
     state,
     searchAttributes,
@@ -9,7 +47,6 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
     noMatchDropdownList,
     searchMatcher,
     displayAttribute,
-    onChange,
 }: {
     state: State<Item>;
     searchAttributes: Array<keyof Item>;
@@ -18,7 +55,6 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
     noMatchDropdownList: Item[] | undefined;
     searchMatcher: SearchMatcher<Item> | undefined;
     displayAttribute: keyof Item;
-    onChange: ((item: Item | null) => void) | undefined;
 }): {
     inputValue: string;
     selectedItem: Item | undefined;
@@ -34,29 +70,10 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
         showAllItemsInDropdown: true,
     });
 
-    const shouldEmptySelectedItem =
-        state.inputValue === '' && !!state.selectedItem;
-
-    const shouldAutomaticallySetSelectedItem =
-        state.listToRender.length === 1 &&
-        searchAttributes
-            .map(
-                searchAttribute =>
-                    state.listToRender[0][searchAttribute] ===
-                    state.selectedItem?.[searchAttribute],
-            )
-            .includes(false) &&
-        state.highlightedIndex !== -1;
-
-    let selectedItem = state.selectedItem;
-
-    if (shouldEmptySelectedItem) {
-        onChange?.(null);
-        selectedItem = undefined;
-    } else if (shouldAutomaticallySetSelectedItem) {
-        onChange?.(state.listToRender[0]);
-        selectedItem = state.listToRender[0];
-    }
+    const { selectedItem } = getSelectedItemOnFocusOutside({
+        state,
+        searchAttributes,
+    });
 
     const inputValue = selectedItem ? selectedItem[displayAttribute] : '';
 

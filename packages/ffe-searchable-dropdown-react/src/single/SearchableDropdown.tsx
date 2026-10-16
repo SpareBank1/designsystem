@@ -13,6 +13,7 @@ import classNames from 'classnames';
 import { OptionBody } from './OptionBody';
 import { createReducer } from './reducer';
 import { getListToRender } from '../getListToRender';
+import { getSelectedItemOnFocusOutside } from '../moveFocusOutside';
 import { scrollIntoView } from '../scrollIntoView';
 import {
     getNewHighlightedIndexUp,
@@ -136,7 +137,6 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch?.dropdownList,
             searchMatcher,
-            onChange,
         }),
         {
             isExpanded: false,
@@ -211,13 +211,20 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
 
     useIsExpandedCallbacks({ isExpanded: state.isExpanded, onClose, onOpen });
 
-    const handleFocusMovedOutside = useCallback(
-        () =>
-            dispatch({
-                type: 'FocusMovedOutSide',
-            }),
-        [],
-    );
+    const notifyChangeOnFocusOutside = useCallback(() => {
+        const { selectedItem: newSelectedItem, hasSelectedItemChanged } =
+            getSelectedItemOnFocusOutside({ state, searchAttributes });
+        if (hasSelectedItemChanged) {
+            onChange?.(newSelectedItem ?? null);
+        }
+    }, [state, searchAttributes, onChange]);
+
+    const handleFocusMovedOutside = useCallback(() => {
+        notifyChangeOnFocusOutside();
+        dispatch({
+            type: 'FocusMovedOutSide',
+        });
+    }, [notifyChangeOnFocusOutside]);
 
     useHandleContainerFocus({
         id,
@@ -292,6 +299,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         }
 
         if (event.key === TAB) {
+            notifyChangeOnFocusOutside();
             dispatch({ type: 'FocusMovedOutSide' });
         }
     };
@@ -367,6 +375,9 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             <ToggleButton
                 isExpanded={state.isExpanded}
                 onClick={() => {
+                    if (state.isExpanded) {
+                        notifyChangeOnFocusOutside();
+                    }
                     dispatch({
                         type: 'ToggleButtonPressed',
                     });

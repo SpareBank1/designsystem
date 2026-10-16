@@ -19,7 +19,6 @@ export const createReducer =
         noMatchDropdownList,
         maxRenderedDropdownElements,
         searchMatcher,
-        onChange,
     }: {
         dropdownList: Item[];
         searchAttributes: Array<keyof Item>;
@@ -27,7 +26,6 @@ export const createReducer =
         noMatchDropdownList: Item[] | undefined;
         maxRenderedDropdownElements: number;
         searchMatcher: SearchMatcher<Item> | undefined;
-        onChange: ((item: Item | null) => void) | undefined;
     }) =>
     (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
@@ -95,7 +93,6 @@ export const createReducer =
                             noMatchDropdownList,
                             searchMatcher,
                             displayAttribute,
-                            onChange,
                         });
                     return {
                         ...state,
@@ -144,7 +141,6 @@ export const createReducer =
                         noMatchDropdownList,
                         searchMatcher,
                         displayAttribute,
-                        onChange,
                     });
 
                 return {
