@@ -136,7 +136,6 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch?.dropdownList,
             searchMatcher,
-            onChange,
         }),
         {
             isExpanded: false,
@@ -208,6 +207,13 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             type: 'DropdownListPropUpdated',
         });
     }, [dropdownList, dispatch]);
+
+    useEffect(() => {
+        if (state.selectedItemChangedOnFocusOutside) {
+            onChange?.(state.selectedItemChangedOnFocusOutside.item);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state.selectedItemChangedOnFocusOutside]);
 
     useIsExpandedCallbacks({ isExpanded: state.isExpanded, onClose, onOpen });
 

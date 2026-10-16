@@ -19,7 +19,6 @@ export const createReducer =
         noMatchDropdownList,
         maxRenderedDropdownElements,
         searchMatcher,
-        onChange,
     }: {
         dropdownList: Item[];
         searchAttributes: Array<keyof Item>;
@@ -27,7 +26,6 @@ export const createReducer =
         noMatchDropdownList: Item[] | undefined;
         maxRenderedDropdownElements: number;
         searchMatcher: SearchMatcher<Item> | undefined;
-        onChange: ((item: Item | null) => void) | undefined;
     }) =>
     (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
@@ -86,17 +84,20 @@ export const createReducer =
             }
             case 'ToggleButtonPressed': {
                 if (state.isExpanded) {
-                    const { listToRender, inputValue, selectedItem } =
-                        moveFocusOutside({
-                            state,
-                            searchAttributes,
-                            maxRenderedDropdownElements,
-                            dropdownList,
-                            noMatchDropdownList,
-                            searchMatcher,
-                            displayAttribute,
-                            onChange,
-                        });
+                    const {
+                        listToRender,
+                        inputValue,
+                        selectedItem,
+                        hasSelectedItemChanged,
+                    } = moveFocusOutside({
+                        state,
+                        searchAttributes,
+                        maxRenderedDropdownElements,
+                        dropdownList,
+                        noMatchDropdownList,
+                        searchMatcher,
+                        displayAttribute,
+                    });
                     return {
                         ...state,
                         isExpanded: false,
@@ -104,6 +105,10 @@ export const createReducer =
                         inputValue,
                         selectedItem,
                         listToRender,
+                        selectedItemChangedOnFocusOutside:
+                            hasSelectedItemChanged
+                                ? { item: selectedItem ?? null }
+                                : state.selectedItemChangedOnFocusOutside,
                     };
                 }
 
@@ -135,17 +140,20 @@ export const createReducer =
             }
 
             case 'FocusMovedOutSide': {
-                const { listToRender, inputValue, selectedItem } =
-                    moveFocusOutside({
-                        state,
-                        searchAttributes,
-                        maxRenderedDropdownElements,
-                        dropdownList,
-                        noMatchDropdownList,
-                        searchMatcher,
-                        displayAttribute,
-                        onChange,
-                    });
+                const {
+                    listToRender,
+                    inputValue,
+                    selectedItem,
+                    hasSelectedItemChanged,
+                } = moveFocusOutside({
+                    state,
+                    searchAttributes,
+                    maxRenderedDropdownElements,
+                    dropdownList,
+                    noMatchDropdownList,
+                    searchMatcher,
+                    displayAttribute,
+                });
 
                 return {
                     ...state,
@@ -154,6 +162,9 @@ export const createReducer =
                     inputValue,
                     selectedItem,
                     listToRender,
+                    selectedItemChangedOnFocusOutside: hasSelectedItemChanged
+                        ? { item: selectedItem ?? null }
+                        : state.selectedItemChangedOnFocusOutside,
                 };
             }
             case 'DropdownListPropUpdated': {

@@ -34,4 +34,6 @@ export type State<Item extends Record<string, any>> = {
     inputValue: string;
     listToRender: Item[];
     noMatchDropdownList?: Item[] | undefined;
+    // Reducers must be free of side effects, so onChange is called from an effect
+    selectedItemChangedOnFocusOutside?: { item: Item | null };
 };

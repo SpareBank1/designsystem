@@ -9,7 +9,6 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
     noMatchDropdownList,
     searchMatcher,
     displayAttribute,
-    onChange,
 }: {
     state: State<Item>;
     searchAttributes: Array<keyof Item>;
@@ -18,11 +17,11 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
     noMatchDropdownList: Item[] | undefined;
     searchMatcher: SearchMatcher<Item> | undefined;
     displayAttribute: keyof Item;
-    onChange: ((item: Item | null) => void) | undefined;
 }): {
     inputValue: string;
     selectedItem: Item | undefined;
     listToRender: Item[];
+    hasSelectedItemChanged: boolean;
 } => {
     const { listToRender } = getListToRender({
         inputValue: state.inputValue,
@@ -51,14 +50,18 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
     let selectedItem = state.selectedItem;
 
     if (shouldEmptySelectedItem) {
-        onChange?.(null);
         selectedItem = undefined;
     } else if (shouldAutomaticallySetSelectedItem) {
-        onChange?.(state.listToRender[0]);
         selectedItem = state.listToRender[0];
     }
 
     const inputValue = selectedItem ? selectedItem[displayAttribute] : '';
 
-    return { inputValue, selectedItem, listToRender };
+    return {
+        inputValue,
+        selectedItem,
+        listToRender,
+        hasSelectedItemChanged:
+            shouldEmptySelectedItem || shouldAutomaticallySetSelectedItem,
+    };
 };

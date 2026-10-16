@@ -583,6 +583,52 @@ describe('SearchableDropdown', () => {
         expect(input.getAttribute('value')).toEqual('');
     });
 
+    it('should not update parent state during render when emptying the input field and moving focus away', async () => {
+        const consoleError = jest.spyOn(console, 'error');
+        const user = userEvent.setup();
+
+        const Parent = () => {
+            const [selected, setSelected] = React.useState<
+                (typeof companies)[number] | null
+            >(null);
+            return (
+                <div>
+                    <button>Knapp</button>
+                    <span>Valgt: {selected?.organizationName ?? 'ingen'}</span>
+                    <SearchableDropdown
+                        id="id"
+                        labelledById="labelId"
+                        dropdownAttributes={[
+                            'organizationName',
+                            'organizationNumber',
+                        ]}
+                        dropdownList={companies}
+                        onChange={setSelected}
+                        searchAttributes={[
+                            'organizationName',
+                            'organizationNumber',
+                        ]}
+                        locale="nb"
+                    />
+                </div>
+            );
+        };
+
+        render(<Parent />);
+
+        const input = screen.getByRole('combobox');
+        await user.type(input, 'Be');
+        await user.click(screen.getByText('Bedriften'));
+        expect(screen.getByText('Valgt: Bedriften')).toBeInTheDocument();
+
+        await user.clear(input);
+        await user.click(screen.getByText('Knapp'));
+
+        expect(screen.getByText('Valgt: ingen')).toBeInTheDocument();
+        expect(consoleError).not.toHaveBeenCalled();
+        consoleError.mockRestore();
+    });
+
     it('should reset the input field value to the saved selected element when pressing Escape', async () => {
         const onChange = jest.fn();
         const user = userEvent.setup();
