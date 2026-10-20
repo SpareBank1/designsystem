@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.4](https://github.com/SpareBank1/designsystem/compare/v102.0.3...v102.0.4) (2026-10-20)
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** unngå act-advarsler fra testHelper i browser-tester ([26623ca](https://github.com/SpareBank1/designsystem/commit/26623ca5ef23448cbb223a2f20a2e2e3ae77da85))
+
+
 ## [102.0.3](https://github.com/SpareBank1/designsystem/compare/v102.0.2...v102.0.3) (2026-10-12)
 
 **Note:** Version bump only for package @sb1/ffe
