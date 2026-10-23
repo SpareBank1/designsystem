@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import * as fs from 'fs';
 
 import FigmaApi from './figma_api';
@@ -17,6 +16,12 @@ import { tokenFilesFromLocalVariables } from './token_export';
  */
 
 async function main() {
+    try {
+        process.loadEnvFile();
+    } catch {
+        // .env is optional, the variables can also be set in the environment
+    }
+
     if (!process.env.PERSONAL_ACCESS_TOKEN || !process.env.FILE_KEY) {
         throw new Error(
             'PERSONAL_ACCESS_TOKEN and FILE_KEY environemnt variables are required',
