@@ -38,6 +38,9 @@ jobs:
               with:
                   node-version: 24
                   registry-url: 'https://registry.npmjs.org'
+                  # Uten denne tar setup-node versjonen som ligger i verktøycachen på
+                  # runneren, og den kan være eldre enn siste sikkerhetsrelease.
+                  check-latest: true
 
             - run: |
                   npm ci --ignore-scripts
