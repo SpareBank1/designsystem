@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.5](https://github.com/SpareBank1/designsystem/compare/v102.0.4...v102.0.5) (2026-10-23)
+
+### Bug Fixes
+
+* oppdater autoprefixer fra 8 til 10 i Less-bygget ([1b7f7ad](https://github.com/SpareBank1/designsystem/commit/1b7f7ade1933e19f84a5145b75e095f7ef71ae69))
+
+
 ## [102.0.4](https://github.com/SpareBank1/designsystem/compare/v102.0.3...v102.0.4) (2026-10-20)
 
 ### Bug Fixes
