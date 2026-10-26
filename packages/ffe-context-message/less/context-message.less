@@ -25,12 +25,12 @@
     }
 
     .ffe-link-text {
-        border-bottom: 1px solid var(--ffe-v-context-message-link-color);
+        text-decoration-color: var(--ffe-v-context-message-link-color);
         color: var(--ffe-v-context-message-link-color);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                border-bottom-color: var(
+                text-decoration-color: var(
                     --ffe-v-context-message-link-color-hover
                 );
                 color: var(--ffe-v-context-message-link-color-hover);
@@ -38,14 +38,14 @@
         }
 
         &:visited {
-            border-bottom-color: var(
+            text-decoration-color: var(
                 --ffe-v-context-message-link-color-visited
             );
             color: var(--ffe-v-context-message-link-color-visited);
         }
 
         &:focus {
-            border-color: var(
+            text-decoration-color: var(
                 --ffe-v-context-message-link-color-focus
             ) !important;
             background-color: var(--ffe-v-context-message-link-color);

@@ -19,23 +19,27 @@
     }
 
     .ffe-link-text {
-        border-bottom: 1px solid var(--ffe-v-message-box-link-color);
+        text-decoration-color: var(--ffe-v-message-box-link-color);
         color: var(--ffe-v-message-box-link-color);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                border-bottom-color: var(--ffe-v-message-box-link-color-hover);
+                text-decoration-color: var(
+                    --ffe-v-message-box-link-color-hover
+                );
                 color: var(--ffe-v-message-box-link-color-hover);
             }
         }
 
         &:visited {
-            border-bottom-color: var(--ffe-v-message-box-link-color-visited);
+            text-decoration-color: var(--ffe-v-message-box-link-color-visited);
             color: var(--ffe-v-message-box-link-color-visited);
         }
 
         &:focus {
-            border-color: var(--ffe-v-message-box-link-color-focus) !important;
+            text-decoration-color: var(
+                --ffe-v-message-box-link-color-focus
+            ) !important;
             background-color: var(--ffe-v-message-box-link-color);
             box-shadow: 0 0 0 2px var(--ffe-v-message-box-link-color);
             color: var(--ffe-v-message-box-link-color-focus) !important;
