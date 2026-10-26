@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.6](https://github.com/SpareBank1/designsystem/compare/v102.0.5...v102.0.6) (2026-10-26)
+
+### Bug Fixes
+
+* **ffe-modals-react:** deklarer avhengigheten til ffe-buttons-react ([72fe1b5](https://github.com/SpareBank1/designsystem/commit/72fe1b5ee3395f8f7a0c1c250143828e11ced3e6))
+
+
 ## [102.0.5](https://github.com/SpareBank1/designsystem/compare/v102.0.4...v102.0.5) (2026-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-modals-react

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.6](https://github.com/SpareBank1/designsystem/compare/v102.0.5...v102.0.6) (2026-10-26)
+
+### Bug Fixes
+
+* **deps:** løft resten av storybook til 8.6.19 ([6c452c0](https://github.com/SpareBank1/designsystem/commit/6c452c0758ff88b848ff1ace5bb4375aea552cad)), closes [#3268](https://github.com/SpareBank1/designsystem/issues/3268)
+* **ffe-account-selector-react:** deklarer avhengigheten til ffe-core-react ([9927e3d](https://github.com/SpareBank1/designsystem/commit/9927e3d906ee05a5bbeec95db3635c48e99e77d4))
+* **ffe-modals-react:** deklarer avhengigheten til ffe-buttons-react ([72fe1b5](https://github.com/SpareBank1/designsystem/commit/72fe1b5ee3395f8f7a0c1c250143828e11ced3e6))
+* **ffe-searchable-dropdown-react:** deklarer avhengigheten til ffe-core-react ([e990869](https://github.com/SpareBank1/designsystem/commit/e99086908f6ee1a0f63cf44cfc042b966f092fa0))
+
+
 ## [102.0.5](https://github.com/SpareBank1/designsystem/compare/v102.0.4...v102.0.5) (2026-10-23)
 
 ### Bug Fixes

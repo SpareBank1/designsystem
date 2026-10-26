@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.6](https://github.com/SpareBank1/designsystem/compare/v102.0.5...v102.0.6) (2026-10-26)
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** deklarer avhengigheten til ffe-core-react ([e990869](https://github.com/SpareBank1/designsystem/commit/e99086908f6ee1a0f63cf44cfc042b966f092fa0))
+
+
 ## [102.0.5](https://github.com/SpareBank1/designsystem/compare/v102.0.4...v102.0.5) (2026-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

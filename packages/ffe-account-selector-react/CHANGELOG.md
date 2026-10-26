@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.6](https://github.com/SpareBank1/designsystem/compare/v102.0.5...v102.0.6) (2026-10-26)
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** deklarer avhengigheten til ffe-core-react ([9927e3d](https://github.com/SpareBank1/designsystem/commit/9927e3d906ee05a5bbeec95db3635c48e99e77d4))
+
+
 ## [102.0.5](https://github.com/SpareBank1/designsystem/compare/v102.0.4...v102.0.5) (2026-10-23)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
