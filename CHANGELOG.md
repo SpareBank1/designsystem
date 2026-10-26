@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.7](https://github.com/SpareBank1/designsystem/compare/v102.0.6...v102.0.7) (2026-10-26)
+
+### Bug Fixes
+
+* **deps:** løft js-yaml, @types/react og @types/node i lockfila ([96c3df1](https://github.com/SpareBank1/designsystem/commit/96c3df1f2f530d782ebc5d5111ce5f29363f93ef))
+* **ffe-core:** bruk text-decoration for understrek på lenker ([c5a5a3c](https://github.com/SpareBank1/designsystem/commit/c5a5a3c38c466143c47fc4a947cb692952c39a1c))
+* **ffe-messages:** gi lenker samme linjeavstand som brødteksten ([a01268f](https://github.com/SpareBank1/designsystem/commit/a01268f2309396d223ca7e1ab8217c469988db41))
+
+
 ## [102.0.6](https://github.com/SpareBank1/designsystem/compare/v102.0.5...v102.0.6) (2026-10-26)
 
 ### Bug Fixes

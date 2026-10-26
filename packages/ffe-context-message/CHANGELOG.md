@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.7](https://github.com/SpareBank1/designsystem/compare/v102.0.6...v102.0.7) (2026-10-26)
+
+### Bug Fixes
+
+* **ffe-core:** bruk text-decoration for understrek på lenker ([c5a5a3c](https://github.com/SpareBank1/designsystem/commit/c5a5a3c38c466143c47fc4a947cb692952c39a1c))
+
+
 ## [102.0.6](https://github.com/SpareBank1/designsystem/compare/v102.0.5...v102.0.6) (2026-10-26)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
