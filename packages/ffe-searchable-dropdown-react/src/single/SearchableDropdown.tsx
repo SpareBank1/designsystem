@@ -213,9 +213,9 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
 
     // Lytterne på document må ikke byttes ved hver render. Med legacy root
     // kommer focusin etter Tab før nye lyttere er registrert.
-    const stateRef = useRef(state);
+    const latestRef = useRef({ state, searchAttributes, onChange });
     useLayoutEffect(() => {
-        stateRef.current = state;
+        latestRef.current = { state, searchAttributes, onChange };
     });
 
     const handleFocusMovedOutside = useCallback(
@@ -224,17 +224,18 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
                 | 'FocusMovedOutSide'
                 | 'ToggleButtonPressed' = 'FocusMovedOutSide',
         ) => {
+            const latest = latestRef.current;
             const { selectedItem: newSelectedItem, hasSelectedItemChanged } =
                 getSelectedItemOnFocusOutside({
-                    state: stateRef.current,
-                    searchAttributes,
+                    state: latest.state,
+                    searchAttributes: latest.searchAttributes,
                 });
             if (hasSelectedItemChanged) {
-                onChange?.(newSelectedItem ?? null);
+                latest.onChange?.(newSelectedItem ?? null);
             }
             dispatch({ type, payload: { selectedItem: newSelectedItem } });
         },
-        [searchAttributes, onChange],
+        [],
     );
 
     useHandleContainerFocus({

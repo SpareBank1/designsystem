@@ -824,6 +824,37 @@ describe('SearchableDropdown', () => {
         expect(onChange).toHaveBeenCalledWith(companies[2]);
     });
 
+    it('should not re-register document listeners on every render with inline props', async () => {
+        const user = userEvent.setup();
+        const addSpy = jest.spyOn(document, 'addEventListener');
+        const ui = () => (
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName']}
+                dropdownList={companies}
+                onChange={() => {}}
+                searchAttributes={['organizationName']}
+                locale="nb"
+            />
+        );
+        try {
+            const { rerender } = render(ui());
+            await user.type(screen.getByRole('combobox'), 'Bes');
+            const before = addSpy.mock.calls.filter(
+                ([t]) => t === 'focusin',
+            ).length;
+            rerender(ui());
+            rerender(ui());
+            const after = addSpy.mock.calls.filter(
+                ([t]) => t === 'focusin',
+            ).length;
+            expect(after - before).toBe(0);
+        } finally {
+            addSpy.mockRestore();
+        }
+    });
+
     it('should format input value when passing formatter', async () => {
         const onChange = jest.fn();
         const user = userEvent.setup();
