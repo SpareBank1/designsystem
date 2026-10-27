@@ -40,7 +40,8 @@ export const getSelectedItemOnFocusOutside = <
 };
 
 export const moveFocusOutside = <Item extends Record<string, any>>({
-    state,
+    inputValue,
+    selectedItem,
     searchAttributes,
     maxRenderedDropdownElements,
     dropdownList,
@@ -48,7 +49,8 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
     searchMatcher,
     displayAttribute,
 }: {
-    state: State<Item>;
+    inputValue: string;
+    selectedItem: Item | undefined;
     searchAttributes: Array<keyof Item>;
     maxRenderedDropdownElements: number;
     dropdownList: Item[];
@@ -61,7 +63,7 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
     listToRender: Item[];
 } => {
     const { listToRender } = getListToRender({
-        inputValue: state.inputValue,
+        inputValue,
         searchAttributes,
         maxRenderedDropdownElements,
         dropdownList,
@@ -70,12 +72,9 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
         showAllItemsInDropdown: true,
     });
 
-    const { selectedItem } = getSelectedItemOnFocusOutside({
-        state,
-        searchAttributes,
-    });
-
-    const inputValue = selectedItem ? selectedItem[displayAttribute] : '';
-
-    return { inputValue, selectedItem, listToRender };
+    return {
+        inputValue: selectedItem ? selectedItem[displayAttribute] : '',
+        selectedItem,
+        listToRender,
+    };
 };

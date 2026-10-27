@@ -614,19 +614,22 @@ describe('SearchableDropdown', () => {
             );
         };
 
-        render(<Parent />);
+        try {
+            render(<Parent />);
 
-        const input = screen.getByRole('combobox');
-        await user.type(input, 'Be');
-        await user.click(screen.getByText('Bedriften'));
-        expect(screen.getByText('Valgt: Bedriften')).toBeInTheDocument();
+            const input = screen.getByRole('combobox');
+            await user.type(input, 'Be');
+            await user.click(screen.getByText('Bedriften'));
+            expect(screen.getByText('Valgt: Bedriften')).toBeInTheDocument();
 
-        await user.clear(input);
-        await user.click(screen.getByText('Knapp'));
+            await user.clear(input);
+            await user.click(screen.getByText('Knapp'));
 
-        expect(screen.getByText('Valgt: ingen')).toBeInTheDocument();
-        expect(consoleError).not.toHaveBeenCalled();
-        consoleError.mockRestore();
+            expect(screen.getByText('Valgt: ingen')).toBeInTheDocument();
+            expect(consoleError).not.toHaveBeenCalled();
+        } finally {
+            consoleError.mockRestore();
+        }
     });
 
     it('should reset the input field value to the saved selected element when pressing Escape', async () => {
@@ -736,6 +739,56 @@ describe('SearchableDropdown', () => {
         await user.clear(input);
         await user.tab();
         await user.tab();
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(null);
+    });
+
+    it('should call onChange(null) once when emptying the input field and pressing Tab with a legacy root', async () => {
+        const onChange = jest.fn();
+        const user = userEvent.setup();
+
+        render(
+            <div>
+                <SearchableDropdown
+                    id="id"
+                    labelledById="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                />
+                <button>Knapp</button>
+            </div>,
+            { legacyRoot: true },
+        );
+
+        const input = screen.getByRole('combobox');
+
+        await user.type(input, 'Be');
+        await user.click(screen.getByText('Bedriften'));
+        await user.clear(input);
+        onChange.mockClear();
+
+        // Utenfor act(), slik at React ikke kjører effektene mellom keydown og focusin
+        const actGlobal = globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean };
+        const actEnvironment = actGlobal.IS_REACT_ACT_ENVIRONMENT;
+        actGlobal.IS_REACT_ACT_ENVIRONMENT = false;
+        try {
+            input.dispatchEvent(
+                new KeyboardEvent('keydown', { key: 'Tab', bubbles: true }),
+            );
+            screen.getByText('Knapp').focus();
+        } finally {
+            actGlobal.IS_REACT_ACT_ENVIRONMENT = actEnvironment;
+        }
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(null);

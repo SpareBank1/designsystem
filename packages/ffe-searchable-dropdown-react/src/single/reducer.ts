@@ -86,7 +86,8 @@ export const createReducer =
                 if (state.isExpanded) {
                     const { listToRender, inputValue, selectedItem } =
                         moveFocusOutside({
-                            state,
+                            inputValue: state.inputValue,
+                            selectedItem: action.payload?.selectedItem,
                             searchAttributes,
                             maxRenderedDropdownElements,
                             dropdownList,
@@ -134,7 +135,8 @@ export const createReducer =
             case 'FocusMovedOutSide': {
                 const { listToRender, inputValue, selectedItem } =
                     moveFocusOutside({
-                        state,
+                        inputValue: state.inputValue,
+                        selectedItem: action.payload?.selectedItem,
                         searchAttributes,
                         maxRenderedDropdownElements,
                         dropdownList,
