@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.8](https://github.com/SpareBank1/designsystem/compare/v102.0.7...v102.0.8) (2026-10-28)
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** ikke kall onChange fra reduceren ([e83c9d7](https://github.com/SpareBank1/designsystem/commit/e83c9d7c1065eea67842191984cd9bf4fcbcfe55))
+* **ffe-searchable-dropdown-react:** les state fra ref når fokus flyttes ut ([b8f6df5](https://github.com/SpareBank1/designsystem/commit/b8f6df5d582520ed26d0c029f136e0a2f9dc8720))
+* **ffe-searchable-dropdown-react:** stabile lyttere ved inline props ([9fea0c7](https://github.com/SpareBank1/designsystem/commit/9fea0c714bfa73e080b9e854e38e62a41a6438b2))
+
+
 ## [102.0.7](https://github.com/SpareBank1/designsystem/compare/v102.0.6...v102.0.7) (2026-10-26)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
