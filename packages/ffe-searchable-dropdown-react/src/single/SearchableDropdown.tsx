@@ -13,6 +13,7 @@ import classNames from 'classnames';
 import { OptionBody } from './OptionBody';
 import { createReducer } from './reducer';
 import { getListToRender } from '../getListToRender';
+import { getSelectedItemOnFocusOutside } from '../moveFocusOutside';
 import { scrollIntoView } from '../scrollIntoView';
 import {
     getNewHighlightedIndexUp,
@@ -136,7 +137,6 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch?.dropdownList,
             searchMatcher,
-            onChange,
         }),
         {
             isExpanded: false,
@@ -211,11 +211,30 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
 
     useIsExpandedCallbacks({ isExpanded: state.isExpanded, onClose, onOpen });
 
+    // Lytterne på document må ikke byttes ved hver render. Med legacy root
+    // kommer focusin etter Tab før nye lyttere er registrert.
+    const latestRef = useRef({ state, searchAttributes, onChange });
+    useLayoutEffect(() => {
+        latestRef.current = { state, searchAttributes, onChange };
+    });
+
     const handleFocusMovedOutside = useCallback(
-        () =>
-            dispatch({
-                type: 'FocusMovedOutSide',
-            }),
+        (
+            type:
+                | 'FocusMovedOutSide'
+                | 'ToggleButtonPressed' = 'FocusMovedOutSide',
+        ) => {
+            const latest = latestRef.current;
+            const { selectedItem: newSelectedItem, hasSelectedItemChanged } =
+                getSelectedItemOnFocusOutside({
+                    state: latest.state,
+                    searchAttributes: latest.searchAttributes,
+                });
+            if (hasSelectedItemChanged) {
+                latest.onChange?.(newSelectedItem ?? null);
+            }
+            dispatch({ type, payload: { selectedItem: newSelectedItem } });
+        },
         [],
     );
 
@@ -292,7 +311,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
         }
 
         if (event.key === TAB) {
-            dispatch({ type: 'FocusMovedOutSide' });
+            handleFocusMovedOutside();
         }
     };
 
@@ -367,9 +386,11 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             <ToggleButton
                 isExpanded={state.isExpanded}
                 onClick={() => {
-                    dispatch({
-                        type: 'ToggleButtonPressed',
-                    });
+                    if (state.isExpanded) {
+                        handleFocusMovedOutside('ToggleButtonPressed');
+                    } else {
+                        dispatch({ type: 'ToggleButtonPressed' });
+                    }
                 }}
                 isLoading={isLoading}
             />

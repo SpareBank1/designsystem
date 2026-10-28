@@ -1,39 +1,18 @@
 import { SearchMatcher, State } from './types';
 import { getListToRender } from './getListToRender';
 
-export const moveFocusOutside = <Item extends Record<string, any>>({
+export const getSelectedItemOnFocusOutside = <
+    Item extends Record<string, any>,
+>({
     state,
     searchAttributes,
-    maxRenderedDropdownElements,
-    dropdownList,
-    noMatchDropdownList,
-    searchMatcher,
-    displayAttribute,
-    onChange,
 }: {
     state: State<Item>;
     searchAttributes: Array<keyof Item>;
-    maxRenderedDropdownElements: number;
-    dropdownList: Item[];
-    noMatchDropdownList: Item[] | undefined;
-    searchMatcher: SearchMatcher<Item> | undefined;
-    displayAttribute: keyof Item;
-    onChange: ((item: Item | null) => void) | undefined;
 }): {
-    inputValue: string;
     selectedItem: Item | undefined;
-    listToRender: Item[];
+    hasSelectedItemChanged: boolean;
 } => {
-    const { listToRender } = getListToRender({
-        inputValue: state.inputValue,
-        searchAttributes,
-        maxRenderedDropdownElements,
-        dropdownList,
-        noMatchDropdownList,
-        searchMatcher,
-        showAllItemsInDropdown: true,
-    });
-
     const shouldEmptySelectedItem =
         state.inputValue === '' && !!state.selectedItem;
 
@@ -48,17 +27,54 @@ export const moveFocusOutside = <Item extends Record<string, any>>({
             .includes(false) &&
         state.highlightedIndex !== -1;
 
-    let selectedItem = state.selectedItem;
-
     if (shouldEmptySelectedItem) {
-        onChange?.(null);
-        selectedItem = undefined;
-    } else if (shouldAutomaticallySetSelectedItem) {
-        onChange?.(state.listToRender[0]);
-        selectedItem = state.listToRender[0];
+        return { selectedItem: undefined, hasSelectedItemChanged: true };
     }
+    if (shouldAutomaticallySetSelectedItem) {
+        return {
+            selectedItem: state.listToRender[0],
+            hasSelectedItemChanged: true,
+        };
+    }
+    return { selectedItem: state.selectedItem, hasSelectedItemChanged: false };
+};
 
-    const inputValue = selectedItem ? selectedItem[displayAttribute] : '';
+export const moveFocusOutside = <Item extends Record<string, any>>({
+    inputValue,
+    selectedItem,
+    searchAttributes,
+    maxRenderedDropdownElements,
+    dropdownList,
+    noMatchDropdownList,
+    searchMatcher,
+    displayAttribute,
+}: {
+    inputValue: string;
+    selectedItem: Item | undefined;
+    searchAttributes: Array<keyof Item>;
+    maxRenderedDropdownElements: number;
+    dropdownList: Item[];
+    noMatchDropdownList: Item[] | undefined;
+    searchMatcher: SearchMatcher<Item> | undefined;
+    displayAttribute: keyof Item;
+}): {
+    inputValue: string;
+    selectedItem: Item | undefined;
+    listToRender: Item[];
+} => {
+    const { listToRender } = getListToRender({
+        inputValue,
+        searchAttributes,
+        maxRenderedDropdownElements,
+        dropdownList,
+        noMatchDropdownList,
+        searchMatcher,
+        showAllItemsInDropdown: true,
+    });
 
-    return { inputValue, selectedItem, listToRender };
+    return {
+        inputValue: selectedItem ? selectedItem[displayAttribute] : '',
+        selectedItem,
+        listToRender,
+    };
 };
