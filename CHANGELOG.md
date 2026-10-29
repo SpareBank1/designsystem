@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.9](https://github.com/SpareBank1/designsystem/compare/v102.0.8...v102.0.9) (2026-10-29)
+
+### Bug Fixes
+
+* ikke la webpack fjerne CSS-importer fra ffe-core og ffe-collapse-react ([519fdf3](https://github.com/SpareBank1/designsystem/commit/519fdf30d552789f45f22322a0eec7f4c7b186ea))
+
+
 ## [102.0.8](https://github.com/SpareBank1/designsystem/compare/v102.0.7...v102.0.8) (2026-10-28)
 
 ### Bug Fixes

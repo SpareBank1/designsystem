@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-collapse-react",
-    "version": "102.0.8",
+    "version": "102.0.9",
     "description": "React component for expand/collapse",
     "keywords": [
         "ffe"
@@ -17,7 +17,9 @@
     "main": "lib/index.js",
     "module": "es/index.js",
     "types": "types/index.d.ts",
-    "sideEffects": false,
+    "sideEffects": [
+        "*.css"
+    ],
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -30,11 +32,11 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^102.0.8",
+        "@sb1/ffe-core": "^102.0.9",
         "classnames": "^2.5.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^102.0.8",
+        "@sb1/ffe-buildtool": "^102.0.9",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
