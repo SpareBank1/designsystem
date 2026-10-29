@@ -16,7 +16,7 @@
     "main": "lib/index.js",
     "module": "es/index.js",
     "types": "types/index.d.ts",
-    "sideEffects": false,
+    "sideEffects": ["*.css"],
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
