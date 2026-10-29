@@ -13,6 +13,9 @@ jobs:
     test-ci:
         name: Build, test, and deploy preview of components
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
         if: github.event.repository.full_name == 'SpareBank1/designsystem'
         steps:
             - name: Checkout code
