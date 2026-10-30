@@ -967,6 +967,144 @@ describe('SearchableDropdown', () => {
         expect(input.getAttribute('value')).toBe('Beslag skytter');
     });
 
+    it('keeps the list open when rerendered with an equal selected item', async () => {
+        const user = userEvent.setup();
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[0]}
+            />,
+        );
+
+        await user.click(screen.getByRole('combobox'));
+        expect(screen.getAllByRole('option')).toHaveLength(3);
+
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies.map(company => ({ ...company }))}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={{ ...companies[0] }}
+            />,
+        );
+
+        expect(screen.getAllByRole('option')).toHaveLength(3);
+    });
+
+    it('keeps what the user is typing when rerendered with an equal selected item', async () => {
+        const user = userEvent.setup();
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[0]}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        await user.clear(input);
+        await user.type(input, 'Be');
+
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={{ ...companies[0] }}
+            />,
+        );
+
+        expect(input).toHaveValue('Be');
+        expect(screen.getAllByRole('option')).toHaveLength(2);
+    });
+
+    it('shows the new display value of an equal selected item when the list is closed', () => {
+        const isSameCompany = (
+            a: (typeof companies)[number],
+            b: (typeof companies)[number],
+        ) => a.organizationNumber === b.organizationNumber;
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[0]}
+                isEqual={isSameCompany}
+            />,
+        );
+
+        const renamed = { ...companies[0], organizationName: 'Bedriften AS' };
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={[renamed, companies[1], companies[2]]}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={renamed}
+                isEqual={isSameCompany}
+            />,
+        );
+
+        expect(screen.getByRole('combobox')).toHaveValue('Bedriften AS');
+    });
+
+    it('closes the list when rerendered with another selected item', async () => {
+        const user = userEvent.setup();
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[0]}
+            />,
+        );
+
+        await user.click(screen.getByRole('combobox'));
+        expect(screen.getAllByRole('option')).toHaveLength(3);
+
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[1]}
+            />,
+        );
+
+        expect(screen.queryAllByRole('option')).toHaveLength(0);
+        expect(screen.getByRole('combobox')).toHaveValue('Sønn & co');
+    });
+
     it('allows for writing and selecting even when passing selectedItem', async () => {
         const onChange = jest.fn();
         const user = userEvent.setup();
