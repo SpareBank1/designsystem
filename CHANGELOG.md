@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.10](https://github.com/SpareBank1/designsystem/compare/v102.0.9...v102.0.10) (2026-10-30)
+
+### Bug Fixes
+
+* **ci:** gi preview-deploy lov til å kommentere på PR ([7aada6d](https://github.com/SpareBank1/designsystem/commit/7aada6d1df406a6421b0a3d40d64a43d7df39f4d))
+
+
 ## [102.0.9](https://github.com/SpareBank1/designsystem/compare/v102.0.8...v102.0.9) (2026-10-29)
 
 ### Bug Fixes
