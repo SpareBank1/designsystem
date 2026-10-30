@@ -137,6 +137,7 @@ function SearchableDropdownWithForwardRef<Item extends Record<string, any>>(
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch?.dropdownList,
             searchMatcher,
+            isEqual,
         }),
         {
             isExpanded: false,
