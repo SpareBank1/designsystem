@@ -23,7 +23,7 @@
         "clean": "rm -rf lib"
     },
     "dependencies": {
-        "glob": "^13.0.6"
+        "glob": "^14.0.2"
     },
     "devDependencies": {
         "@types/node": "^25.9.1",
