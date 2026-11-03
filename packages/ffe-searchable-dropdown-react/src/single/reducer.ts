@@ -19,6 +19,7 @@ export const createReducer =
         noMatchDropdownList,
         maxRenderedDropdownElements,
         searchMatcher,
+        isEqual,
     }: {
         dropdownList: Item[];
         searchAttributes: Array<keyof Item>;
@@ -26,6 +27,7 @@ export const createReducer =
         noMatchDropdownList: Item[] | undefined;
         maxRenderedDropdownElements: number;
         searchMatcher: SearchMatcher<Item> | undefined;
+        isEqual: (itemA: Item, itemB: Item) => boolean;
     }) =>
     (state: State<Item>, action: Action<Item>): State<Item> => {
         switch (action.type) {
@@ -110,7 +112,32 @@ export const createReducer =
                     isExpanded: !state.isExpanded,
                 };
             }
-            case 'ItemSelectedProgrammatically':
+            case 'ItemSelectedProgrammatically': {
+                const selectedItem = action.payload?.selectedItem;
+                // Et nytt objekt for samme valg, for eksempel fra en map i hver
+                // render, skal ikke lukke en åpen liste eller nullstille det
+                // brukeren skriver.
+                if (
+                    selectedItem &&
+                    state.selectedItem &&
+                    isEqual(state.selectedItem, selectedItem)
+                ) {
+                    return {
+                        ...state,
+                        selectedItem,
+                        inputValue: state.isExpanded
+                            ? state.inputValue
+                            : selectedItem[displayAttribute] || '',
+                    };
+                }
+                return {
+                    ...state,
+                    isExpanded: false,
+                    highlightedIndex: -1,
+                    selectedItem,
+                    inputValue: selectedItem?.[displayAttribute] || '',
+                };
+            }
             case 'ItemOnClick':
             case 'InputKeyDownEnter': {
                 return {
@@ -155,6 +182,11 @@ export const createReducer =
                 };
             }
             case 'DropdownListPropUpdated': {
+                // Vis hele listen bare når feltet viser det valgte elementet.
+                // Har brukeren skrevet noe annet, skal filteret beholdes.
+                const showAllItemsInDropdown =
+                    !!state.selectedItem &&
+                    state.inputValue === state.selectedItem[displayAttribute];
                 return {
                     ...state,
                     ...getListToRender({
@@ -164,7 +196,7 @@ export const createReducer =
                         dropdownList,
                         noMatchDropdownList,
                         searchMatcher,
-                        showAllItemsInDropdown: !!state.selectedItem,
+                        showAllItemsInDropdown,
                     }),
                 };
             }

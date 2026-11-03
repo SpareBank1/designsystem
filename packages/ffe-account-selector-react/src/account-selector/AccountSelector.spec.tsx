@@ -442,6 +442,40 @@ describe('<AccountSelector/>', () => {
         expect(input.getAttribute('value')).toEqual('543216789101');
     });
 
+    it('should keep the list open when rerendered with new objects for the same accounts', () => {
+        const { rerender } = render(
+            <AccountSelector
+                id="id"
+                labelledById="labelId"
+                accounts={accounts}
+                locale="nb"
+                onAccountSelected={handleAccountSelected}
+                onReset={onReset}
+                selectedAccount={accounts[0]}
+                ariaInvalid={false}
+            />,
+        );
+
+        fireEvent.click(screen.getByRole('combobox'));
+        expect(screen.getAllByRole('option')).toHaveLength(4);
+
+        const newAccounts = accounts.map(account => ({ ...account }));
+        rerender(
+            <AccountSelector
+                id="id"
+                labelledById="labelId"
+                accounts={newAccounts}
+                locale="nb"
+                onAccountSelected={handleAccountSelected}
+                onReset={onReset}
+                selectedAccount={newAccounts[0]}
+                ariaInvalid={false}
+            />,
+        );
+
+        expect(screen.getAllByRole('option')).toHaveLength(4);
+    });
+
     it('should allow changing selectedAccount even if selectedAccount is defined on first render (initial value)', () => {
         selectedAccount = accounts[2];
 
