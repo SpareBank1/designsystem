@@ -92,13 +92,29 @@
         }
     }
 
+    // Skjules visuelt på små skjermer, men blir i accessibility-treet
+    // så knappen fortsatt har et navn.
     &__button-text {
-        display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
     }
 
     @media (min-width: @breakpoint-sm) {
         &__button-text {
-            display: block;
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
         }
     }
 
