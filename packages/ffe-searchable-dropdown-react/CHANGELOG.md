@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.11](https://github.com/SpareBank1/designsystem/compare/v102.0.10...v102.0.11) (2026-11-03)
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** behold filteret når dropdownList også er ny ([c3016b1](https://github.com/SpareBank1/designsystem/commit/c3016b18c2444643b48196bb9b3a59af0f88f84f))
+* **ffe-searchable-dropdown-react:** ikke lukk listen når valgt element er likt forrige ([c200a39](https://github.com/SpareBank1/designsystem/commit/c200a39b65f618f16eaf780f4b2e14f73479d87d))
+
+
 ## [102.0.10](https://github.com/SpareBank1/designsystem/compare/v102.0.9...v102.0.10) (2026-10-30)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
