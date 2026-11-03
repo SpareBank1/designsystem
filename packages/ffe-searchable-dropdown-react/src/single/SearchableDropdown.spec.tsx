@@ -1035,6 +1035,49 @@ describe('SearchableDropdown', () => {
         expect(screen.getAllByRole('option')).toHaveLength(2);
     });
 
+    it('keeps the filter when rerendered with a new dropdownList and an equal selected item', async () => {
+        const onChange = jest.fn();
+        const user = userEvent.setup();
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[0]}
+                onChange={onChange}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        await user.clear(input);
+        await user.type(input, 'Sø');
+        expect(screen.getAllByRole('option')).toHaveLength(1);
+
+        const newCompanies = companies.map(company => ({ ...company }));
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelledById="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={newCompanies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={newCompanies[0]}
+                onChange={onChange}
+            />,
+        );
+
+        expect(input).toHaveValue('Sø');
+        expect(screen.getAllByRole('option')).toHaveLength(1);
+
+        await user.keyboard('{Enter}');
+        expect(onChange).toHaveBeenLastCalledWith(newCompanies[1]);
+    });
+
     it('shows the new display value of an equal selected item when the list is closed', () => {
         const isSameCompany = (
             a: (typeof companies)[number],

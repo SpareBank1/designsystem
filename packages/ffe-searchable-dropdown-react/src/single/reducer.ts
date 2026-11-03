@@ -127,7 +127,7 @@ export const createReducer =
                         selectedItem,
                         inputValue: state.isExpanded
                             ? state.inputValue
-                            : selectedItem[displayAttribute],
+                            : selectedItem[displayAttribute] || '',
                     };
                 }
                 return {
@@ -182,6 +182,11 @@ export const createReducer =
                 };
             }
             case 'DropdownListPropUpdated': {
+                // Vis hele listen bare når feltet viser det valgte elementet.
+                // Har brukeren skrevet noe annet, skal filteret beholdes.
+                const showAllItemsInDropdown =
+                    !!state.selectedItem &&
+                    state.inputValue === state.selectedItem[displayAttribute];
                 return {
                     ...state,
                     ...getListToRender({
@@ -191,7 +196,7 @@ export const createReducer =
                         dropdownList,
                         noMatchDropdownList,
                         searchMatcher,
-                        showAllItemsInDropdown: !!state.selectedItem,
+                        showAllItemsInDropdown,
                     }),
                 };
             }
