@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.13](https://github.com/SpareBank1/designsystem/compare/v102.0.12...v102.0.13) (2026-11-04)
+
+### Bug Fixes
+
+* **ffe-pagination:** bruk sr-only-mixin og én klasse for knappeteksten ([084fa94](https://github.com/SpareBank1/designsystem/commit/084fa945fa34ca101a88d6f5c3c5bc17bca84279))
+* **ffe-pagination:** gi Neste/Forrige-knappene tilgjengelig navn på små skjermer ([1389fe9](https://github.com/SpareBank1/designsystem/commit/1389fe9af3e3209c00e095edd57fc199c5d1a160))
+
+
 ## [102.0.12](https://github.com/SpareBank1/designsystem/compare/v102.0.11...v102.0.12) (2026-11-03)
 
 **Note:** Version bump only for package @sb1/ffe-pagination
