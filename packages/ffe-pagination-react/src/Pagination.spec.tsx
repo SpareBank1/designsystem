@@ -46,6 +46,23 @@ describe('<Pagination />', () => {
         ).toBeInTheDocument();
     });
 
+    it('should give navigation buttons an accessible name without visible text', () => {
+        render(
+            <Pagination
+                ariaLabel="Pagination"
+                paginationControls={paginationControls}
+                navigationButtonText={false}
+            />,
+        );
+
+        expect(
+            screen.getByRole('button', { name: 'Neste' }),
+        ).toBeInTheDocument();
+        expect(
+            screen.getByRole('button', { name: 'Forrige' }),
+        ).toBeInTheDocument();
+    });
+
     it('should render rows per page dropdown', () => {
         render(
             <Pagination
