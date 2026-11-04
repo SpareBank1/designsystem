@@ -50,13 +50,7 @@ export const NavigationBlock: React.FC<NavigationBlockProps> = ({
                 }
                 onClick={onClick}
             >
-                <span
-                    className={
-                        buttonText
-                            ? 'ffe-pagination-navigation-block__button-text'
-                            : 'ffe-screenreader-only'
-                    }
-                >
+                <span className="ffe-pagination-navigation-block__button-text">
                     {direction === 'next'
                         ? txt[locale].next
                         : txt[locale].previous}
