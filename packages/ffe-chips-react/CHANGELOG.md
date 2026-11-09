@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.14](https://github.com/SpareBank1/designsystem/compare/v102.0.13...v102.0.14) (2026-11-09)
+
+**Note:** Version bump only for package @sb1/ffe-chips-react
+
+
+
+
+
 ## [102.0.13](https://github.com/SpareBank1/designsystem/compare/v102.0.12...v102.0.13) (2026-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-chips-react
