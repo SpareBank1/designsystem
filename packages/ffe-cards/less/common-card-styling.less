@@ -70,6 +70,20 @@
         }
     }
 
+    // Hele kortet er klikkflaten og har egen pressed-state.
+    // Fjern nettleserens grå boks rundt selve lenken.
+    .ffe-card__action {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    // I appen skal long-press og drag på kortet ikke gi nettleserens lenkemeny.
+    // .native settes av appen og er samme klasse som ffe-core bruker.
+    // stylelint-disable-next-line selector-class-pattern
+    .native & .ffe-card__action {
+        -webkit-touch-callout: none;
+        -webkit-user-drag: none;
+    }
+
     @media (pointer: fine) {
         &:focus-within {
             outline: var(--ffe-g-outline-width) solid
