@@ -46,15 +46,16 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
 
         useImperativeHandle(ref, () => ({
             open: () => {
-                // Prevent opening an already open modal
-                if (!isOpen && dialogRef.current) {
+                // Prevent opening an already open modal. Ask the dialog, not isOpen: isOpen becomes false
+                // only in the close event, and the browser fires that event in a later task than close().
+                if (dialogRef.current && !dialogRef.current.open) {
                     setIsOpen(true);
                     dialogRef.current.showModal();
                 }
             },
             close: () => {
                 // Prevent closing an already closed modal
-                if (isOpen && dialogRef.current) {
+                if (dialogRef.current?.open) {
                     dialogRef.current.close();
                 }
             },
@@ -123,8 +124,14 @@ export const Modal = React.forwardRef<ModalHandle, ModalProps>(
                           onClick?.(event);
                       }}
                       onClose={() => {
-                          onClose?.();
+                          // A close event from an earlier close() still fires when the dialog has been
+                          // opened again in the meantime. The dialog is not closed then.
+                          if (dialogRef.current?.open) {
+                              return;
+                          }
+                          // Before onClose, so that isOpen stays true when onClose opens the modal again.
                           setIsOpen(false);
+                          onClose?.();
                       }}
                   >
                       <div className="ffe-modal__body">
