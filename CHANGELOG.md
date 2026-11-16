@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.15](https://github.com/SpareBank1/designsystem/compare/v102.0.14...v102.0.15) (2026-11-16)
+
+### Bug Fixes
+
+* **ffe-modals-react:** open() rett etter close() åpner modalen ([9dabe0d](https://github.com/SpareBank1/designsystem/commit/9dabe0d30273a2a9842c3470397a28b9134974e9))
+
+
 ## [102.0.14](https://github.com/SpareBank1/designsystem/compare/v102.0.13...v102.0.14) (2026-11-09)
 
 **Note:** Version bump only for package @sb1/ffe
