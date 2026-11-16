@@ -1140,9 +1140,7 @@ describe('SearchableDropdownMultiSelect', () => {
             expect(summaryChip().tagName).toEqual('BUTTON');
             // Krysset, altså at chippen ser fjernbar ut og ikke bare er det.
             expect(summaryChip()).toHaveClass('ffe-chip--icon-right');
-            expect(
-                screen.queryByLabelText('Bedriften, fjern valg'),
-            ).toBeNull();
+            expect(screen.queryByLabelText('Bedriften, fjern valg')).toBeNull();
         });
 
         it('translates the summary chip label', () => {
@@ -1284,6 +1282,86 @@ describe('SearchableDropdownMultiSelect', () => {
 
             expect(onChange).toHaveBeenCalledTimes(1);
             expect(onChange).toHaveBeenCalledWith([companies[0]], 'removed');
+        });
+    });
+
+    describe('arrow keys', () => {
+        const optionId = (scope: HTMLElement, text: string) =>
+            within(scope)
+                .getByText(text)
+                .closest('[role="option"]')
+                ?.getAttribute('id');
+
+        it('moves the highlight when rendered inside a shadow root', () => {
+            const host = document.createElement('div');
+            document.body.appendChild(host);
+            const container = document.createElement('div');
+            host.attachShadow({ mode: 'open' }).appendChild(container);
+
+            render(
+                <SearchableDropdownMultiSelect
+                    id="id"
+                    labelledById="labelId"
+                    dropdownAttributes={['organizationName']}
+                    dropdownList={companies}
+                    searchAttributes={['organizationName']}
+                    locale="nb"
+                    onChange={jest.fn()}
+                />,
+                { container },
+            );
+
+            const input = within(container).getByRole('combobox');
+            fireEvent.click(input);
+            input.focus();
+            expect(document.activeElement).toBe(host);
+
+            fireEvent.keyDown(input, { key: 'ArrowDown' });
+            expect(input.getAttribute('aria-activedescendant')).toEqual(
+                optionId(container, 'Bedriften'),
+            );
+
+            fireEvent.keyDown(input, { key: 'ArrowDown' });
+            expect(input.getAttribute('aria-activedescendant')).toEqual(
+                optionId(container, 'Sønn & co'),
+            );
+
+            host.remove();
+        });
+
+        it('leaves the highlight and the announcement alone when a chip has focus', () => {
+            render(
+                <SearchableDropdownMultiSelect
+                    id="id"
+                    labelledById="labelId"
+                    dropdownAttributes={['organizationName']}
+                    dropdownList={companies}
+                    searchAttributes={['organizationName']}
+                    selectedItems={[companies[2]]}
+                    locale="nb"
+                    onChange={jest.fn()}
+                />,
+            );
+
+            const input = screen.getByRole('combobox');
+            fireEvent.click(input);
+            input.focus();
+            fireEvent.keyDown(input, { key: 'ArrowDown' });
+            const highlighted = input.getAttribute('aria-activedescendant');
+            const status = document.getElementById('a11y-status-message');
+            const announced = status?.textContent;
+
+            const chip = screen.getByRole('button', {
+                name: /Beslag skytter/,
+            });
+            chip.focus();
+            const notPrevented = fireEvent.keyDown(chip, { key: 'ArrowDown' });
+
+            expect(notPrevented).toBe(false);
+            expect(input.getAttribute('aria-activedescendant')).toEqual(
+                highlighted,
+            );
+            expect(status?.textContent).toEqual(announced);
         });
     });
 });

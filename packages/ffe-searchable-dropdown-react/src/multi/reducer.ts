@@ -190,16 +190,11 @@ export const createReducer =
                 return state;
             case 'InputKeyDownArrowDown':
             case 'InputKeyDownArrowUp': {
-                const focusedElement = document.activeElement;
-                if (focusedElement?.getAttribute('role') === 'combobox') {
-                    return {
-                        ...state,
-                        isExpanded: true,
-                        highlightedIndex:
-                            action.payload?.highlightedIndex ?? -1,
-                    };
-                }
-                return state;
+                return {
+                    ...state,
+                    isExpanded: true,
+                    highlightedIndex: action.payload?.highlightedIndex ?? -1,
+                };
             }
             case 'FocusMovedOutSide': {
                 return {

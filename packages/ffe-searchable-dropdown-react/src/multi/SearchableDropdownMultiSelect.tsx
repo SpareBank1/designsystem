@@ -372,7 +372,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             return;
         } else if (event.key === ARROW_UP) {
             event.preventDefault();
-            if (rowCount) {
+            if (rowCount && event.target === inputRef.current) {
                 const newHighlightedIndex = getNewHighlightedIndexUp(
                     state.highlightedIndex,
                     rowCount,
@@ -390,7 +390,7 @@ function SearchableDropdownMultiSelectWithForwardRef<
             return;
         } else if (event.key === ARROW_DOWN) {
             event.preventDefault();
-            if (rowCount) {
+            if (rowCount && event.target === inputRef.current) {
                 const newHighlightedIndex = getNewHighlightedIndexDown(
                     state.highlightedIndex,
                     rowCount,
