@@ -1140,7 +1140,9 @@ describe('SearchableDropdownMultiSelect', () => {
             expect(summaryChip().tagName).toEqual('BUTTON');
             // Krysset, altså at chippen ser fjernbar ut og ikke bare er det.
             expect(summaryChip()).toHaveClass('ffe-chip--icon-right');
-            expect(screen.queryByLabelText('Bedriften, fjern valg')).toBeNull();
+            expect(
+                screen.queryByLabelText('Bedriften, fjern valg'),
+            ).toBeNull();
         });
 
         it('translates the summary chip label', () => {
@@ -1355,9 +1357,11 @@ describe('SearchableDropdownMultiSelect', () => {
                 name: /Beslag skytter/,
             });
             chip.focus();
-            const notPrevented = fireEvent.keyDown(chip, { key: 'ArrowDown' });
+            const defaultAllowed = fireEvent.keyDown(chip, {
+                key: 'ArrowDown',
+            });
 
-            expect(notPrevented).toBe(false);
+            expect(defaultAllowed).toBe(false);
             expect(input.getAttribute('aria-activedescendant')).toEqual(
                 highlighted,
             );
