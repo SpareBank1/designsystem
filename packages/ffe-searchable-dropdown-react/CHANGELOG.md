@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [102.0.16](https://github.com/SpareBank1/designsystem/compare/v102.0.15...v102.0.16) (2026-11-18)
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** la piltastene virke i flervalg inne i shadow DOM ([b270327](https://github.com/SpareBank1/designsystem/commit/b270327c8be49a8cc20dc483720a9c33593115ad))
+
+
 ## [102.0.15](https://github.com/SpareBank1/designsystem/compare/v102.0.14...v102.0.15) (2026-11-16)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
