@@ -33,7 +33,7 @@
         "@sb1/ffe-icons-react": "^102.0.16",
         "@sb1/ffe-spinner-react": "^102.0.16",
         "classnames": "^2.5.1",
-        "compute-scroll-into-view": "^3.1.1",
+        "compute-scroll-into-view": "^3.2.2",
         "lodash.debounce": "^4.0.8",
         "lodash.isequal": "^4.5.0"
     },
