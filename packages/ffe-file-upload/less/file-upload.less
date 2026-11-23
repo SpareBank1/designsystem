@@ -1,13 +1,20 @@
 @import (reference) '@sb1/ffe-core/less/breakpoints';
 @import (reference) '@sb1/ffe-core/less/typography';
 
+// Layouten følger bredden komponenten får, ikke vinduet.
+// Tittel og «eller» i opplastingsfeltet styres fortsatt av vinduet,
+// fordi de handler om at man kan dra filer, ikke om plass.
+@file-upload-wide: 600px;
+
 .ffe-file-upload {
     margin-top: var(--ffe-spacing-2xl);
     display: grid;
     max-width: 400px;
     grid-template-columns: 1fr;
     font-family: var(--ffe-g-font);
+    container-type: inline-size;
 
+    // Gjelder selve containeren, som ikke kan spørre seg selv
     @media (min-width: @breakpoint-md) {
         max-width: 100%;
     }
@@ -29,7 +36,7 @@
         margin-bottom: var(--ffe-spacing-md);
         grid-row: 2;
 
-        @media (min-width: @breakpoint-md) {
+        @container (min-width: @file-upload-wide) {
             margin-right: var(--ffe-spacing-md);
             margin-bottom: 0;
             grid-column: 1;
@@ -45,7 +52,7 @@
         line-height: 2.1875rem;
         grid-row: 4;
 
-        @media (min-width: @breakpoint-md) {
+        @container (min-width: @file-upload-wide) {
             margin-top: 0;
             grid-row: 2;
         }
@@ -64,7 +71,7 @@
         padding: var(--ffe-spacing-2xs);
         grid-row: 3;
 
-        @media (min-width: @breakpoint-md) {
+        @container (min-width: @file-upload-wide) {
             margin-top: 0;
             min-height: 220px;
             width: 280px;
@@ -89,7 +96,7 @@
         right: 5px;
         bottom: 5px;
 
-        @media (min-width: @breakpoint-md) {
+        @container (min-width: @file-upload-wide) {
             width: 270px;
             min-height: 210px;
             right: 0;
@@ -149,7 +156,7 @@
         display: flex;
         align-items: center;
 
-        @media (min-width: @breakpoint-md) {
+        @container (min-width: @file-upload-wide) {
             margin-right: var(--ffe-spacing-sm);
         }
 
