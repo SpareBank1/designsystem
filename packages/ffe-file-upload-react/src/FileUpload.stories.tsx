@@ -32,6 +32,27 @@ export const Standard: Story = {
     render: args => <FileUpload {...args} />,
 };
 
+export const SmalKolonne: Story = {
+    args: {
+        ...Standard.args,
+        files: {
+            'kontoutskrift-januar.pdf': {
+                name: 'kontoutskrift-januar.pdf',
+                document: { content: '' },
+            },
+            'lonnsslipp.heic': {
+                name: 'lonnsslipp.heic',
+                error: 'Filtypen kan ikke lastes opp',
+            },
+        },
+    },
+    render: args => (
+        <div style={{ maxWidth: '540px' }}>
+            <FileUpload {...args} />
+        </div>
+    ),
+};
+
 export const WithXHR: Story = {
     args: {
         ...Standard.args,
